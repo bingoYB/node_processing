@@ -1,0 +1,37 @@
+name: Run Python
+
+# Controls when the action will run. 
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '* */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: 'Set up Python'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: 'Install requirements'
+        run: npm i
+      - name: 'Working'
+        run: 
+          node main.js
+
+      - name: commit
+        run: |
+          git config --global user.email actions@github.com
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "Auto Update by Action" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITACTION_TOKEN }}
