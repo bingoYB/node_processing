@@ -6,15 +6,35 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - type: vmess
-    name: 更新于:11-0612:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:11-0620:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
     alterId: 0
     cipher: auto
     network: auto
+  - type: trojan
+    name: github.com/freefq-香港Microsoft数据中心1
+    server: hk2.hktkcloud.cloud
+    port: 443
+    password: 83c66e32-1934-4b54-bd41-6f9908352162
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: github.com/freefq-美国11
+    name: github.com/freefq-美国22
+    ws-opts:
+      path: /m3
+      headers:
+        host: do-3.heicloud.cf
+    server: do-3.heicloud.cf
+    port: 443
+    uuid: 2757fd62-fcf0-4946-9b46-1b697741575b
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国33
     ws-opts:
       path: /vmess
     server: 137.184.164.233
@@ -23,75 +43,48 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: github.com/freefq-香港阿里云4
+    server: tj2.dalazhi.cyou
+    port: 443
+    password: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: github.com/freefq-英国社会保险安全部22
+    name: github.com/freefq-中国阿里云55
     ws-opts:
       path: /vmess
-    server: 51.83.97.167
-    port: 80
-    uuid: 6e7ef21f-4736-480e-93aa-1f7d54f28089
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点33
-    ws-opts:
-      path: /SCP-914
       headers:
-        host: us.kapok.buzz
-    server: us.kapok.buzz
+        host: p3.chigua.tk
+    server: 8.219.211.222
     port: 443
-    uuid: eb4550a1-bd63-4f9c-b4b6-fdd24b440728
+    uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点44
+    name: github.com/freefq-中国阿里云66
     ws-opts:
-      path: /ray
+      path: /vmess
       headers:
-        host: lg30.cfcdn3.xyz
-    server: 141.101.114.120
+        host: p3.chigua.tk
+    server: 8.219.214.240
     port: 443
-    uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+    uuid: ffffffff-ffff-ffff-ffff-ffffffffffff
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点55
+    name: github.com/freefq-美国PacificRack机房77
     ws-opts:
       path: /dongtaiwang.com
       headers:
-        host: clash1.trump2023.net
-    server: 198.41.203.2
+        host: v2ray2.ssr-free2.xyz
+    server: 66.212.20.3
     port: 443
-    uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-香港Microsoft数据中心66
-    ws-opts:
-      path: /v2ray
-    server: az.hk01.paopaocloud.cyou
-    port: 10035
-    uuid: d8c5b486-84bb-3887-a1d9-07455ea608f2
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点77
-    ws-opts:
-      path: /VHONOFZ3
-      headers:
-        host: lg1.cfcdn2.xyz
-    server: 141.101.115.100
-    port: 443
-    uuid: 267a9f38-40d8-4ed6-ab58-cafc67e9c933
+    uuid: 0479eb9d-999d-4bff-ae3f-4f7cc440ce46
     alterId: 0
     cipher: auto
     network: ws
@@ -110,33 +103,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国瓦尔帕索大学99
-    ws-opts:
-      path: /wmzmvws
-      headers:
-        host: goodfamily19.site
-    server: 152.228.191.232
-    port: 443
-    uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-法国格拉沃利纳OVH数据中心1010
-    ws-opts:
-      path: /wmzmvws
-      headers:
-        host: goodfamily19.site
-    server: 51.75.70.34
-    port: 443
-    uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1111
+    name: github.com/freefq-美国CloudFlare公司CDN节点99
     ws-opts:
       path: /dsadvcxvcx
     server: jp4.mayaa.cf
@@ -147,7 +114,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-新加坡OVH1212
+    name: github.com/freefq-新加坡OVH1010
     ws-opts:
       path: /fastssh/putdcbb/63500f2541b87/
     server: 51.79.164.146
@@ -157,83 +124,7 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1313
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        host: clash6.ssr-free.xyz
-    server: 172.64.152.150
-    port: 443
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国1414
-    ws-opts:
-      path: /
-    server: 150.230.234.195
-    port: 443
-    uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国PacificRack机房1515
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        host: v2ray2.ssr-free2.xyz
-    server: 66.212.20.3
-    port: 443
-    uuid: 0479eb9d-999d-4bff-ae3f-4f7cc440ce46
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国1616
-    ws-opts:
-      path: /m3
-      headers:
-        host: do-3.heicloud.cf
-    server: do-3.heicloud.cf
-    port: 443
-    uuid: a64e6d2e-fdaf-482b-b034-9b50abcfff67
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1717
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        host: lg1.cfcdn3.xyz
-    server: 198.41.203.3
-    port: 443
-    uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国1818
-    ws-opts:
-      path: /m3
-      headers:
-        host: do-3.heicloud.cf
-    server: do-3.heicloud.cf
-    port: 443
-    uuid: 2757fd62-fcf0-4946-9b46-1b697741575b
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1919
+    name: github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1111
     ws-opts:
       path: /dongtaiwang.com
       headers:
@@ -246,7 +137,124 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国2020
+    name: github.com/freefq-美国CloudFlare节点1212
+    ws-opts:
+      path: /VHONOFZ3
+      headers:
+        host: lg1.cfcdn2.xyz
+    server: 141.101.115.100
+    port: 443
+    uuid: 267a9f38-40d8-4ed6-ab58-cafc67e9c933
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国1313
+    ws-opts:
+      path: /
+      headers:
+        host: 140.238.249.80
+    server: 140.238.249.80
+    port: 443
+    uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: trojan
+    name: github.com/freefq-加拿大安大略省多伦多DigitalOcean数据中心14
+    server: ca.hktkcloud.cloud
+    port: 443
+    password: 83c66e32-1934-4b54-bd41-6f9908352162
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: github.com/freefq-美国1515
+    ws-opts:
+      path: /m2
+      headers:
+        host: do-2.heicloud.cf
+    server: do-2.heicloud.cf
+    port: 443
+    uuid: 2757fd62-fcf0-4946-9b46-1b697741575b
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-俄罗斯1616
+    ws-opts:
+      path: /vmess
+      headers:
+        host: 5.45.94.28
+    server: 5.45.94.28
+    port: 80
+    uuid: bd3d81c6-9d40-4e75-8a23-7c55d69bf801
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: github.com/freefq-美国17
+    server: sg.hktkcloud.cloud
+    port: 443
+    password: 83c66e32-1934-4b54-bd41-6f9908352162
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1818
+    ws-opts:
+      path: /ray
+      headers:
+        host: lg1.cfcdn1.xyz
+    server: 172.64.154.222
+    port: 443
+    uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1919
+    ws-opts:
+      path: /roewesu
+      headers:
+        host: suzhihan.eu.org
+    server: suzhihan.eu.org
+    port: 443
+    uuid: 0b873cff-11ab-4716-c41a-04f886135091
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点2020
+    ws-opts:
+      path: /ray
+      headers:
+        host: lg30.cfcdn3.xyz
+    server: 141.101.114.120
+    port: 443
+    uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-英国社会保险安全部2121
+    ws-opts:
+      path: /wmzmvws
+      headers:
+        host: goodfamily19.site
+    server: univstar.51.195.140.208.sslip.io
+    port: 443
+    uuid: 572126f8-5301-83c2-0a26-c30ced3db7c4
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国2222
     ws-opts:
       path: /m2
       headers:
@@ -259,40 +267,77 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国惠普公司2121
+    name: github.com/freefq-美国CloudFlare节点2323
     ws-opts:
-      path: /sshkit/Ertusg86/635014638c264/
+      path: /dongtaiwang.com
       headers:
-        host: 15.235.147.186
-    server: 15.235.147.186
-    port: 80
-    uuid: 6fea1649-425b-4092-bf53-29792152c925
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国DigitalOcean2222
-    ws-opts:
-      path: /
-    server: 157.245.150.105
-    port: 28256
-    uuid: 8b288b96-8351-4798-80b1-19abee46d087
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国2323
-    ws-opts:
-      path: /m2
-      headers:
-        host: do-2.heicloud.cf
-    server: do-2.heicloud.cf
+        host: clash1.trump2023.net
+    server: 198.41.203.2
     port: 443
-    uuid: 2757fd62-fcf0-4946-9b46-1b697741575b
+    uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a
     alterId: 0
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: github.com/freefq-广东省移动2424
+    ws-opts:
+      path: /
+      headers:
+        host: zfd-moble.gatknqh.cn
+    server: zfd-moble.gatknqh.cn
+    port: 16108
+    uuid: f1d39fe1-bfa3-34ff-86a2-29250af03183
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: github.com/freefq-美国2525
+    ws-opts:
+      path: /
+    server: 150.230.234.195
+    port: 443
+    uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点2626
+    ws-opts:
+      path: /znbtvws
+      headers:
+        host: tj2.dalazhi.cyou
+    server: cf.dalazhi.cyou
+    port: 443
+    uuid: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国2727
+    ws-opts:
+      path: /m3
+      headers:
+        host: do-3.heicloud.cf
+    server: do-3.heicloud.cf
+    port: 443
+    uuid: a64e6d2e-fdaf-482b-b034-9b50abcfff67
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-日本2828
+    ws-opts:
+      path: /
+    server: 43.201.106.220
+    port: 10480
+    uuid: 240bc573-ebbc-4455-db0e-bbb4ad7efe82
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: vmess
     name: 🇭🇰_HK_香港0
     ws-opts:
@@ -677,30 +722,35 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 更新于:11-0612:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国11
-      - github.com/freefq-英国社会保险安全部22
-      - github.com/freefq-美国CloudFlare公司CDN节点33
-      - github.com/freefq-美国CloudFlare节点44
-      - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-香港Microsoft数据中心66
-      - github.com/freefq-美国CloudFlare节点77
+      - 更新于:11-0620:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-香港Microsoft数据中心1
+      - github.com/freefq-美国22
+      - github.com/freefq-美国33
+      - github.com/freefq-香港阿里云4
+      - github.com/freefq-中国阿里云55
+      - github.com/freefq-中国阿里云66
+      - github.com/freefq-美国PacificRack机房77
       - github.com/freefq-美国CloudFlare节点88
-      - github.com/freefq-美国瓦尔帕索大学99
-      - github.com/freefq-法国格拉沃利纳OVH数据中心1010
-      - github.com/freefq-美国CloudFlare节点1111
-      - github.com/freefq-新加坡OVH1212
-      - github.com/freefq-美国CloudFlare节点1313
-      - github.com/freefq-美国1414
-      - github.com/freefq-美国PacificRack机房1515
-      - github.com/freefq-美国1616
-      - github.com/freefq-美国CloudFlare节点1717
-      - github.com/freefq-美国1818
-      - github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1919
-      - github.com/freefq-美国2020
-      - github.com/freefq-美国惠普公司2121
-      - github.com/freefq-美国DigitalOcean2222
-      - github.com/freefq-美国2323
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-新加坡OVH1010
+      - github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国1313
+      - github.com/freefq-加拿大安大略省多伦多DigitalOcean数据中心14
+      - github.com/freefq-美国1515
+      - github.com/freefq-俄罗斯1616
+      - github.com/freefq-美国17
+      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-美国CloudFlare节点1919
+      - github.com/freefq-美国CloudFlare节点2020
+      - github.com/freefq-英国社会保险安全部2121
+      - github.com/freefq-美国2222
+      - github.com/freefq-美国CloudFlare节点2323
+      - github.com/freefq-广东省移动2424
+      - github.com/freefq-美国2525
+      - github.com/freefq-美国CloudFlare节点2626
+      - github.com/freefq-美国2727
+      - github.com/freefq-日本2828
       - 🇭🇰_HK_香港0
       - 🇺🇸_US_美国3
       - 🇯🇵_US_美国->🇯🇵_JP_日本4
@@ -738,30 +788,35 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 更新于:11-0612:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国11
-      - github.com/freefq-英国社会保险安全部22
-      - github.com/freefq-美国CloudFlare公司CDN节点33
-      - github.com/freefq-美国CloudFlare节点44
-      - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-香港Microsoft数据中心66
-      - github.com/freefq-美国CloudFlare节点77
+      - 更新于:11-0620:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-香港Microsoft数据中心1
+      - github.com/freefq-美国22
+      - github.com/freefq-美国33
+      - github.com/freefq-香港阿里云4
+      - github.com/freefq-中国阿里云55
+      - github.com/freefq-中国阿里云66
+      - github.com/freefq-美国PacificRack机房77
       - github.com/freefq-美国CloudFlare节点88
-      - github.com/freefq-美国瓦尔帕索大学99
-      - github.com/freefq-法国格拉沃利纳OVH数据中心1010
-      - github.com/freefq-美国CloudFlare节点1111
-      - github.com/freefq-新加坡OVH1212
-      - github.com/freefq-美国CloudFlare节点1313
-      - github.com/freefq-美国1414
-      - github.com/freefq-美国PacificRack机房1515
-      - github.com/freefq-美国1616
-      - github.com/freefq-美国CloudFlare节点1717
-      - github.com/freefq-美国1818
-      - github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1919
-      - github.com/freefq-美国2020
-      - github.com/freefq-美国惠普公司2121
-      - github.com/freefq-美国DigitalOcean2222
-      - github.com/freefq-美国2323
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-新加坡OVH1010
+      - github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国1313
+      - github.com/freefq-加拿大安大略省多伦多DigitalOcean数据中心14
+      - github.com/freefq-美国1515
+      - github.com/freefq-俄罗斯1616
+      - github.com/freefq-美国17
+      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-美国CloudFlare节点1919
+      - github.com/freefq-美国CloudFlare节点2020
+      - github.com/freefq-英国社会保险安全部2121
+      - github.com/freefq-美国2222
+      - github.com/freefq-美国CloudFlare节点2323
+      - github.com/freefq-广东省移动2424
+      - github.com/freefq-美国2525
+      - github.com/freefq-美国CloudFlare节点2626
+      - github.com/freefq-美国2727
+      - github.com/freefq-日本2828
       - 🇭🇰_HK_香港0
       - 🇺🇸_US_美国3
       - 🇯🇵_US_美国->🇯🇵_JP_日本4
@@ -798,30 +853,35 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - 更新于:11-0612:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国11
-      - github.com/freefq-英国社会保险安全部22
-      - github.com/freefq-美国CloudFlare公司CDN节点33
-      - github.com/freefq-美国CloudFlare节点44
-      - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-香港Microsoft数据中心66
-      - github.com/freefq-美国CloudFlare节点77
+      - 更新于:11-0620:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-香港Microsoft数据中心1
+      - github.com/freefq-美国22
+      - github.com/freefq-美国33
+      - github.com/freefq-香港阿里云4
+      - github.com/freefq-中国阿里云55
+      - github.com/freefq-中国阿里云66
+      - github.com/freefq-美国PacificRack机房77
       - github.com/freefq-美国CloudFlare节点88
-      - github.com/freefq-美国瓦尔帕索大学99
-      - github.com/freefq-法国格拉沃利纳OVH数据中心1010
-      - github.com/freefq-美国CloudFlare节点1111
-      - github.com/freefq-新加坡OVH1212
-      - github.com/freefq-美国CloudFlare节点1313
-      - github.com/freefq-美国1414
-      - github.com/freefq-美国PacificRack机房1515
-      - github.com/freefq-美国1616
-      - github.com/freefq-美国CloudFlare节点1717
-      - github.com/freefq-美国1818
-      - github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1919
-      - github.com/freefq-美国2020
-      - github.com/freefq-美国惠普公司2121
-      - github.com/freefq-美国DigitalOcean2222
-      - github.com/freefq-美国2323
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-新加坡OVH1010
+      - github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国1313
+      - github.com/freefq-加拿大安大略省多伦多DigitalOcean数据中心14
+      - github.com/freefq-美国1515
+      - github.com/freefq-俄罗斯1616
+      - github.com/freefq-美国17
+      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-美国CloudFlare节点1919
+      - github.com/freefq-美国CloudFlare节点2020
+      - github.com/freefq-英国社会保险安全部2121
+      - github.com/freefq-美国2222
+      - github.com/freefq-美国CloudFlare节点2323
+      - github.com/freefq-广东省移动2424
+      - github.com/freefq-美国2525
+      - github.com/freefq-美国CloudFlare节点2626
+      - github.com/freefq-美国2727
+      - github.com/freefq-日本2828
       - 🇭🇰_HK_香港0
       - 🇺🇸_US_美国3
       - 🇯🇵_US_美国->🇯🇵_JP_日本4
@@ -890,30 +950,35 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 更新于:11-0612:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国11
-      - github.com/freefq-英国社会保险安全部22
-      - github.com/freefq-美国CloudFlare公司CDN节点33
-      - github.com/freefq-美国CloudFlare节点44
-      - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-香港Microsoft数据中心66
-      - github.com/freefq-美国CloudFlare节点77
+      - 更新于:11-0620:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-香港Microsoft数据中心1
+      - github.com/freefq-美国22
+      - github.com/freefq-美国33
+      - github.com/freefq-香港阿里云4
+      - github.com/freefq-中国阿里云55
+      - github.com/freefq-中国阿里云66
+      - github.com/freefq-美国PacificRack机房77
       - github.com/freefq-美国CloudFlare节点88
-      - github.com/freefq-美国瓦尔帕索大学99
-      - github.com/freefq-法国格拉沃利纳OVH数据中心1010
-      - github.com/freefq-美国CloudFlare节点1111
-      - github.com/freefq-新加坡OVH1212
-      - github.com/freefq-美国CloudFlare节点1313
-      - github.com/freefq-美国1414
-      - github.com/freefq-美国PacificRack机房1515
-      - github.com/freefq-美国1616
-      - github.com/freefq-美国CloudFlare节点1717
-      - github.com/freefq-美国1818
-      - github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1919
-      - github.com/freefq-美国2020
-      - github.com/freefq-美国惠普公司2121
-      - github.com/freefq-美国DigitalOcean2222
-      - github.com/freefq-美国2323
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-新加坡OVH1010
+      - github.com/freefq-美国加利福尼亚州洛杉矶Zenlayer数据中心1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国1313
+      - github.com/freefq-加拿大安大略省多伦多DigitalOcean数据中心14
+      - github.com/freefq-美国1515
+      - github.com/freefq-俄罗斯1616
+      - github.com/freefq-美国17
+      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-美国CloudFlare节点1919
+      - github.com/freefq-美国CloudFlare节点2020
+      - github.com/freefq-英国社会保险安全部2121
+      - github.com/freefq-美国2222
+      - github.com/freefq-美国CloudFlare节点2323
+      - github.com/freefq-广东省移动2424
+      - github.com/freefq-美国2525
+      - github.com/freefq-美国CloudFlare节点2626
+      - github.com/freefq-美国2727
+      - github.com/freefq-日本2828
       - 🇭🇰_HK_香港0
       - 🇺🇸_US_美国3
       - 🇯🇵_US_美国->🇯🇵_JP_日本4
