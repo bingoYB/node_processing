@@ -124,7 +124,7 @@ export function generateClashConf(nodeList) {
 
   const example = fs.readFileSync("./example.yaml");
   const conf = yaml.load(example);
-  const proxies = nodeList;
+  const proxies = nodeList.filter((node) => !Number.isNaN(node.prot));
   // .map((node) => JSON.stringify(node));
   const names = nodeList.map((node) => node.name);
 
