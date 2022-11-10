@@ -82,6 +82,7 @@ export function parseV2ray(content) {
           var [password, next] = node_info_str.split("@");
           var [server_str, name] = next.split("#");
           var [server, port] = server_str.split(":");
+          var [port, next] = port.split("?");
           port = +port;
           name = decodeURI(name).replace(/\s/g, "");
           // var param = strToParam(param_str);
@@ -124,7 +125,11 @@ export function generateClashConf(nodeList) {
 
   const example = fs.readFileSync("./example.yaml");
   const conf = yaml.load(example);
-  const proxies = nodeList.filter((node) => !Number.isNaN(node.prot));
+  const proxies = nodeList.filter((node) => {
+    console.log("generateClashConf - node.prot", node.port);
+    return !Number.isNaN(node.port);
+  });
+
   // .map((node) => JSON.stringify(node));
   const names = nodeList.map((node) => node.name);
 
