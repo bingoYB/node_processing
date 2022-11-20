@@ -6,7 +6,7 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - type: vmess
-    name: 更新于:11-2000:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -14,7 +14,19 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点11
+    name: github.com/freefq-美国AmazonEC2服务器11
+    ws-opts:
+      path: /
+      headers:
+        host: kr.idcloudhost.de
+    server: kr.idcloudhost.de
+    port: 80
+    uuid: a1e8f9a6-dee5-47fd-bbc9-e9307e0b0ee1
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点22
     ws-opts:
       path: /
       headers:
@@ -27,7 +39,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点22
+    name: github.com/freefq-美国CloudFlare节点33
     ws-opts:
       path: /aries
       headers:
@@ -38,21 +50,41 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点33
-    ws-opts:
-      path: /ray
-      headers:
-        host: lg1.cfcdn1.xyz
-    server: 172.64.154.222
+  - type: trojan
+    name: github.com/freefq-加拿大4
+    server: tw1111.tfzhc.top
     port: 443
-    uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
+    password: bd7b4308-a9b3-40cc-a674-1c35f2684549
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点55
+    ws-opts:
+      path: /
+      headers:
+        host: 35.72img.xyz
+    server: 35.72img.xyz
+    port: 443
+    uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-罗马尼亚44
+    name: github.com/freefq-美国CloudFlare节点66
+    ws-opts:
+      path: /dongtaiwang.com
+      headers:
+        host: clash1.trump2023.net
+    server: 141.101.115.20
+    port: 443
+    uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-罗马尼亚77
     server: 46.102.156.61
     port: 48080
     uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
@@ -61,20 +93,7 @@ proxies:
     network: auto
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点55
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        host: lg1.cfcdn3.xyz
-    server: 198.41.212.145
-    port: 443
-    uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国PacificRack机房66
+    name: github.com/freefq-美国PacificRack机房88
     ws-opts:
       path: /dongtaiwang.com
       headers:
@@ -87,14 +106,91 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点77
+    name: github.com/freefq-美国CloudFlare节点99
+    ws-opts:
+      path: /ray
+      headers:
+        host: lg1.cfcdn1.xyz
+    server: 172.64.154.222
+    port: 443
+    uuid: fcfaec91-6096-44d8-956c-7868d9e874b1
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1010
+    ws-opts:
+      path: /ray
+      headers:
+        host: lg30.cfcdn3.xyz
+    server: 141.101.114.25
+    port: 443
+    uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1111
     ws-opts:
       path: /dongtaiwang.com
       headers:
-        host: clash1.trump2023.net
-    server: 141.101.115.20
+        host: lg1.cfcdn3.xyz
+    server: 198.41.203.3
     port: 443
-    uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a
+    uuid: 33aa57df-1c93-4318-9fce-e850437ee781
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-香港1212
+    ws-opts:
+      path: /
+      headers:
+        host: hk4.996fb.top
+    server: hk4.996fb.top
+    port: 10443
+    uuid: 4c45b42e-9069-4c6d-85a5-b5eebd4d8a1d
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-巴西圣保罗CloudFlare节点1313
+    ws-opts:
+      path: /chcara
+      headers:
+        host: v2fly.samrt.website
+    server: 188.114.97.111
+    port: 443
+    uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点1414
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v02.asuka.buzz
+    server: http.download.yunzhongzhuan.com
+    port: 80
+    uuid: 0db0a479-8993-4e5b-a002-629e9e0b40e5
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1515
+    ws-opts:
+      path: /MokonaModokiMkv2Rentry
+      headers:
+        host: jm.jshsxxxy.top
+    server: jm.jshsxxxy.top
+    port: 443
+    uuid: ac29ef42-7100-4fdd-a5ee-5bb07b146e61
     alterId: 0
     cipher: auto
     network: ws
@@ -319,14 +415,22 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 更新于:11-2000:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国CloudFlare公司CDN节点11
+      - 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国AmazonEC2服务器11
       - github.com/freefq-美国CloudFlare公司CDN节点22
       - github.com/freefq-美国CloudFlare节点33
-      - github.com/freefq-罗马尼亚44
+      - github.com/freefq-加拿大4
       - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-美国PacificRack机房66
-      - github.com/freefq-美国CloudFlare节点77
+      - github.com/freefq-美国CloudFlare节点66
+      - github.com/freefq-罗马尼亚77
+      - github.com/freefq-美国PacificRack机房88
+      - github.com/freefq-美国CloudFlare节点99
+      - github.com/freefq-美国CloudFlare节点1010
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-香港1212
+      - github.com/freefq-巴西圣保罗CloudFlare节点1313
+      - github.com/freefq-美国CloudFlare公司CDN节点1414
+      - github.com/freefq-美国CloudFlare节点1515
       - 🇭🇰_HK_香港0
       - 🇺🇸_US_美国
       - 🇺🇸_US_美国->🇩🇪_DE_德国3
@@ -353,14 +457,22 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 更新于:11-2000:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国CloudFlare公司CDN节点11
+      - 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国AmazonEC2服务器11
       - github.com/freefq-美国CloudFlare公司CDN节点22
       - github.com/freefq-美国CloudFlare节点33
-      - github.com/freefq-罗马尼亚44
+      - github.com/freefq-加拿大4
       - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-美国PacificRack机房66
-      - github.com/freefq-美国CloudFlare节点77
+      - github.com/freefq-美国CloudFlare节点66
+      - github.com/freefq-罗马尼亚77
+      - github.com/freefq-美国PacificRack机房88
+      - github.com/freefq-美国CloudFlare节点99
+      - github.com/freefq-美国CloudFlare节点1010
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-香港1212
+      - github.com/freefq-巴西圣保罗CloudFlare节点1313
+      - github.com/freefq-美国CloudFlare公司CDN节点1414
+      - github.com/freefq-美国CloudFlare节点1515
       - 🇭🇰_HK_香港0
       - 🇺🇸_US_美国
       - 🇺🇸_US_美国->🇩🇪_DE_德国3
@@ -386,14 +498,22 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - 更新于:11-2000:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国CloudFlare公司CDN节点11
+      - 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国AmazonEC2服务器11
       - github.com/freefq-美国CloudFlare公司CDN节点22
       - github.com/freefq-美国CloudFlare节点33
-      - github.com/freefq-罗马尼亚44
+      - github.com/freefq-加拿大4
       - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-美国PacificRack机房66
-      - github.com/freefq-美国CloudFlare节点77
+      - github.com/freefq-美国CloudFlare节点66
+      - github.com/freefq-罗马尼亚77
+      - github.com/freefq-美国PacificRack机房88
+      - github.com/freefq-美国CloudFlare节点99
+      - github.com/freefq-美国CloudFlare节点1010
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-香港1212
+      - github.com/freefq-巴西圣保罗CloudFlare节点1313
+      - github.com/freefq-美国CloudFlare公司CDN节点1414
+      - github.com/freefq-美国CloudFlare节点1515
       - 🇭🇰_HK_香港0
       - 🇺🇸_US_美国
       - 🇺🇸_US_美国->🇩🇪_DE_德国3
@@ -451,14 +571,22 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 更新于:11-2000:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国CloudFlare公司CDN节点11
+      - 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国AmazonEC2服务器11
       - github.com/freefq-美国CloudFlare公司CDN节点22
       - github.com/freefq-美国CloudFlare节点33
-      - github.com/freefq-罗马尼亚44
+      - github.com/freefq-加拿大4
       - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-美国PacificRack机房66
-      - github.com/freefq-美国CloudFlare节点77
+      - github.com/freefq-美国CloudFlare节点66
+      - github.com/freefq-罗马尼亚77
+      - github.com/freefq-美国PacificRack机房88
+      - github.com/freefq-美国CloudFlare节点99
+      - github.com/freefq-美国CloudFlare节点1010
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-香港1212
+      - github.com/freefq-巴西圣保罗CloudFlare节点1313
+      - github.com/freefq-美国CloudFlare公司CDN节点1414
+      - github.com/freefq-美国CloudFlare节点1515
       - 🇭🇰_HK_香港0
       - 🇺🇸_US_美国
       - 🇺🇸_US_美国->🇩🇪_DE_德国3
