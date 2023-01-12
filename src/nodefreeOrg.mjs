@@ -1,5 +1,6 @@
 // nodefree.org‘s resource get function
 import fetch from "node-fetch";
+import { logger } from "./log.mjs";
 
 /**
  * get latest resource url
@@ -15,8 +16,7 @@ export function getNodeFreeOrgUrl(diffDay = 0, fileType = "txt") {
     month = month < 10 ? "0" + month : month;
     let day = date.getDate();
     day = day < 10 ? "0" + day : day;
-
-    return `https://nodefree.org/dy/${year}${month}/${year}${month}${day}.${fileType}`;
+    return `https://nodefree.org/dy/${year}/${month}/${year}${month}${day}.${fileType}`;
 }
 
 /**
@@ -24,16 +24,16 @@ export function getNodeFreeOrgUrl(diffDay = 0, fileType = "txt") {
  * @param {number} day 
  * @returns {Promise<string>}
  */
-export async function getNodeFreeOrg(day = 0) {
-    return fetch(getNodeFreeOrgUrl(day))
+export async function getNodeFreeOrg(day = 0, type="txt") {
+    return fetch(getNodeFreeOrgUrl(day, type))
         .then((res) => {
             if (res.status == 404) {
-                return getNodeFreeOrg(day - 1);
+                return getNodeFreeOrg(day - 1, type);
             }
             return res.text();
         })
         .catch((e) => {
             console.log("nodefree fetch error:", e);
-            return getNodeFreeOrg(day - 1);
+            return getNodeFreeOrg(day - 1, type);
         });
 }
