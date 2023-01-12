@@ -111,7 +111,7 @@ export function parseV2ray(content) {
 }
 
 /**
- *
+ * v2ray to clash
  * @param {string} content 内容
  * @param {json} module 模板
  */
