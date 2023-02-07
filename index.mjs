@@ -11,11 +11,15 @@ async function task1(){
    
    const freeNode = await getClashNodesByContent(freeNodeContent);
    console.log(freeNode);
-
    
    const configContent = generateClashConf([...nodeList, ...freeNode]);
 
-   generateFile("clashMerge", configContent);
+   const comments = `
+    # 更新时间 ${new Date().toISOString()}
+
+  `
+
+   generateFile("clashMerge", comments + configContent);
 }
 
 task1();
