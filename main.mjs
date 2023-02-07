@@ -52,7 +52,7 @@ async function parseAllFreeNodeList() {
   const comments = `
     # 更新时间 ${new Date().toISOString()}
 
-  `
+`
   writeFile("./dist/all.yaml", comments + conf, function (info) {
     console.log("writeFile - info", info);
   });

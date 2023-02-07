@@ -16,8 +16,7 @@ async function task1(){
 
    const comments = `
     # 更新时间 ${new Date().toISOString()}
-
-  `
+`
 
    generateFile("clashMerge", comments + configContent);
 }
