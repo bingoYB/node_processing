@@ -49,7 +49,11 @@ async function parseAllFreeNodeList() {
   ]);
   console.log("parseAllFreeNodeList - nodeSet", nodeSet);
   const conf = generateClashConf(_.flatten(nodeSet));
-  writeFile("./dist/all.yaml", conf, function (info) {
+  const comments = `
+    # 更新时间 ${new Date().toISOString()}
+
+`
+  writeFile("./dist/all.yaml", comments + conf, function (info) {
     console.log("writeFile - info", info);
   });
   //   console.log("parseAllFreeNodeList - nodeSet", _.flatten(nodeSet)[8])
