@@ -1,8 +1,11 @@
 import { clashList } from "./resource/clash.mjs"
+import { v2rayList } from "./resource/v2ray.mjs";
 import { generateClashConf, getClashNodesByContent, mergeClashNodes } from "./src/clash.mjs"
 import { logger } from "./src/log.mjs";
 import { getNodeFreeOrg } from "./src/nodefreeOrg.mjs";
 import { generateFile } from "./src/output.mjs";
+import { testSpeed } from "./src/speedTest.mjs";
+import { batchV2rayToClashNodes } from "./src/v2ray.mjs";
 
 async function task1(){
    const nodeList = await mergeClashNodes(clashList);
@@ -10,9 +13,19 @@ async function task1(){
    const freeNodeContent = await getNodeFreeOrg(0, "yaml");
    
    const freeNode = await getClashNodesByContent(freeNodeContent);
-   console.log(freeNode);
    
-   const configContent = generateClashConf([...nodeList, ...freeNode]);
+   const v2rayToClashNodes = await batchV2rayToClashNodes(v2rayList);
+
+   let allNodes = [...nodeList, ...freeNode, ...v2rayToClashNodes];
+   // for (let i = 0; i < allNodes.length; i++) {
+   //    const proxy = allNodes[i];
+   //    console.log(proxy);
+   //    await testSpeed(proxy).then(rs=>{
+   //       console.log(rs);
+   //    })
+   // }
+   
+   const configContent = generateClashConf(allNodes);
 
    const comments = `
     # 更新时间 ${new Date().toISOString()}
