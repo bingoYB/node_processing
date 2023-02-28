@@ -5,7 +5,7 @@ export const clashList = [
     // "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini",
     // "https://raw.githubusercontent.com/kxswa/k/k/clash",
     "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml",
-    "https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml",
+    // "https://raw.githubusercontent.com/openRunner/clash-freenode/main/clash.yaml",
     // "https://cdn.jsdelivr.net/gh/oslook/clash-freenode@main/clash.yaml",
     // "https://proxypool.toshiki.top/clash/proxies",
     // "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini",
