@@ -4,6 +4,8 @@ name: Run Task
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'dist/**'
   schedule:
     - cron: '* */6 * * *'
   workflow_dispatch:
