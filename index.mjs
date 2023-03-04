@@ -7,13 +7,13 @@ import { generateFile } from "./src/output.mjs";
 import { testSpeed } from "./src/speedTest.mjs";
 import { batchV2rayToClashNodes } from "./src/v2ray.mjs";
 
-async function task1(){
+async function task1() {
    const nodeList = await mergeClashNodes(clashList);
 
    const freeNodeContent = await getNodeFreeOrg(0, "yaml");
-   
+
    const freeNode = await getClashNodesByContent(freeNodeContent);
-   
+
    const v2rayToClashNodes = await batchV2rayToClashNodes(v2rayList);
 
    let allNodes = [...nodeList, ...freeNode, ...v2rayToClashNodes];
@@ -24,11 +24,10 @@ async function task1(){
    //       console.log(rs);
    //    })
    // }
-   
-   const configContent = generateClashConf(allNodes);
 
-   const comments = `
-    # 更新时间 ${new Date().toISOString()}
+   const configContent = generateClashConf(allNodes.filter(node => !node.name.includes("中国")).filter(node => !String(node.password).includes("<")));
+
+   const comments = `# 更新时间 ${new Date().toISOString()}
 `
 
    generateFile("clashMerge", comments + configContent);
