@@ -12,7 +12,7 @@ async function task1() {
 
    const freeNodeContent = await getNodeFreeOrg(0, "yaml");
 
-   const freeNode = await getClashNodesByContent(freeNodeContent);
+   const freeNode = await getClashNodesByContent(freeNodeContent.replaceAll("!<str>",""));
 
    const v2rayToClashNodes = await batchV2rayToClashNodes(v2rayList);
 

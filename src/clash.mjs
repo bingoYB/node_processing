@@ -51,6 +51,7 @@ export function getClashNodesByUrl(url) {
       return conf.proxies;
     }).catch(e => {
       logger.error(e);
+      return [];
     })
 }
 
