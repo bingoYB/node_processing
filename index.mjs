@@ -25,7 +25,7 @@ async function task1() {
    //    })
    // }
 
-   const configContent = generateClashConf(allNodes.filter(node => !node.name.includes("中国")).filter(node => !String(node.password).includes("<")));
+   const configContent = generateClashConf(allNodes.filter(node=>node).filter(node => !node.name.includes("中国")).filter(node => !String(node.password).includes("<")));
 
    const comments = `# 更新时间 ${new Date().toISOString()}
 `
