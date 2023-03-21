@@ -50,7 +50,7 @@ export function getClashNodesByUrl(url) {
       const conf = yaml.load(content);
       return conf.proxies;
     }).catch(e => {
-      logger.error(e);
+      logger.error("fetch fail at url: ", url, e);
       return [];
     })
 }
