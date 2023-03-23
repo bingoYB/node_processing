@@ -38,6 +38,7 @@ async function task1() {
       .filter((node) => !String(node.password).includes("<"))
       // 过滤不支持的vless协议
       .filter((node)=> node.type !== "vless")
+      .filter((node)=> !node.name.includes("🇨🇳 CN"))
   );
 
   const comments = `# 更新时间 ${new Date().toISOString()}

@@ -11,8 +11,9 @@ import { logger } from "./log.mjs"
  * @returns 
  */
 export function generateClashConf(nodeList) {
-  // todo:
+  // 去重
   nodeList = uniqBy(nodeList.filter(n=>n), (node) => node.name);
+  nodeList = uniqBy(nodeList, (node)=> node.server + ":" + node.port);
 
   const example = fs.readFileSync("./example.yaml");
   const conf = yaml.load(example);
