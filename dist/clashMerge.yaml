@@ -1,4 +1,4 @@
-# 更新时间 2023-03-29T11:49:14.116Z
+# 更新时间 2023-03-29T11:55:02.956Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -50,16 +50,13 @@ proxies:
     uuid: 115e915f-e5cb-42e2-99e4-e2da3ca52b9b
     alterId: 0
     cipher: auto
-    uuid: b2b591fc-0ea8-3c17-bb5e-c6b7c12d74a5
-    alterId: 0
     tls: false
-    skip-cert-verify: true
-  - name: speednode_0008
-    server: gzyd.jcnode.top
-    port: 21001
-    type: ss
-    cipher: aes-256-gcm
-    password: 158bfd19-1052-4e29-9dde-b9e68691b7d4
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzyd.jcnode.top
     udp: true
   - name: CN_speednode_0013
     server: gzyd.jcnode.top
@@ -174,7 +171,7 @@ proxies:
     udp: true
   - name: CN_speednode_0041
     server: gzyd.jcnode.top
-    port: 28000
+    port: 28001
     type: vmess
     uuid: 704ce337-f205-4c80-b801-91f276a03859
     alterId: 0
@@ -216,8 +213,6 @@ proxies:
     uuid: 115e915f-e5cb-42e2-99e4-e2da3ca52b9b
     alterId: 0
     cipher: auto
-    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
-    alterId: 0
     tls: false
     skip-cert-verify: false
     network: ws
@@ -424,35 +419,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     network: ws
-    ws-opts:
-      path: /filestreamingservice/files/20f813e2-036a-42a8-92e2-a3a55a0b239b
-      headers:
-        Host: sg10.microsoftjs.top
     udp: true
-  - name: speednode_0079
-    server: 54.37.185.148
-    port: 32894
-    type: trojan
-    password: HchlVCfnXB
-    sni: jamaran.ir
-    skip-cert-verify: true
-    udp: true
-  - name: speednode_0081
-    server: 13.115.133.207
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: speednode_0082
-    server: blog.itzjx.top
-    port: 3306
-    type: vmess
-    uuid: fdf7dcdc-96f0-4d36-a412-1866c737c3fe
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
     ws-opts:
       path: /tg:@hkaa0
       headers:
@@ -684,7 +651,7 @@ proxies:
     alterId: 64
     cipher: auto
     tls: true
-    skip-cert-verify: true
+    skip-cert-verify: false
     network: ws
     ws-opts:
       path: /sg8/getData
@@ -1127,9 +1094,6 @@ proxies:
     type: trojan
     password: cb43b7c2-b744-41c5-bcc2-fd7467b332cf
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
     udp: true
   - name: 🇨🇦 CA 1 → tg@nicevpn123
     server: 23.227.38.25
@@ -2262,11 +2226,6 @@ proxies:
     type: trojan
     password: xxoo
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: holyquran3.store
     udp: true
   - name: 🇺🇸 US 107 → tg@nicevpn123
     server: 3.36.118.190
@@ -4161,7 +4120,7 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /current_time
       headers:
         Host: cf-topspeedv4.uk
     udp: true
@@ -4398,14 +4357,14 @@ proxies:
     server: quranweb34.xyz
     port: 443
     type: vmess
-    uuid: d05d144a-71a9-4720-8c4e-565257953069
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /current_time
       headers:
         Host: quranweb34.xyz
     udp: true
@@ -4547,8 +4506,8 @@ proxies:
     server: 38.91.107.66
     port: 9102
     type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
+    cipher: aes-256-gcm
+    password: e4FCWrgpkji3QY
     udp: true
   - name: 🇺🇸 US 379 → tg@nicevpn123
     server: 38.91.102.74
@@ -4822,7 +4781,7 @@ proxies:
     uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
     alterId: 64
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     udp: true
   - name: 🇺🇸 US 55 → tg@nicevpn123
@@ -4850,17 +4809,9 @@ proxies:
   - name: 🇺🇸 US 57 → tg@nicevpn123
     server: 13.215.191.190
     port: 443
-    type: vmess
-    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: dp1.scproxy.top
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
     udp: true
   - name: 🇺🇸 US 58 → tg@nicevpn123
     server: wwwow.ir
@@ -4911,7 +4862,7 @@ proxies:
     server: cf-topspeed.uk
     port: 443
     type: vmess
-    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
     alterId: 0
     cipher: auto
     tls: true
@@ -4933,7 +4884,7 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /AUIKN8AU
+      path: /
       headers:
         Host: holyquran3.store
     udp: true
@@ -5015,7 +4966,7 @@ proxies:
     server: uk1.scproxy.top
     port: 443
     type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
     alterId: 0
     cipher: auto
     tls: true
@@ -5067,7 +5018,7 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /current_time
+      path: /
       headers:
         Host: quranweb12.xyz
     udp: true
@@ -5090,8 +5041,8 @@ proxies:
     server: quranweb17.xyz
     port: 443
     type: vmess
-    uuid: a529cf39-d753-41e5-a72a-64cf8d48f469
-    alterId: 64
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
@@ -5267,7 +5218,7 @@ proxies:
     uuid: db5d1aa3-908b-44d1-be0a-4e6a8d4e4cda
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
@@ -5581,6 +5532,21 @@ proxies:
       path: /9JZFDTKE
       headers:
         Host: fr1.trump2023.org
+    udp: true
+  - name: github.com/freefq - 欧盟  20
+    server: legenderyserversirn.ddns.net
+    port: 443
+    type: vmess
+    uuid: DDB05F7A-A4A3-4F34-B730-FCC7ACB3B17F
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /speedtest
+      headers:
+        Host: Amsterdam.kotick.site
     udp: true
   - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
     server: 77.v2ray1.xyz
@@ -5906,9 +5872,6 @@ proxy-groups:
       - UA 1 → tg@nicevpn123
       - UA 2 → tg@nicevpn123
       - 🇦🇺 AU 1 → tg@nicevpn123
-      - 🇦🇺 AU 10 → tg@nicevpn123
-      - 🇦🇺 AU 11 → tg@nicevpn123
-      - 🇦🇺 AU 12 → tg@nicevpn123
       - 🇦🇺 AU 2 → tg@nicevpn123
       - 🇦🇺 AU 3 → tg@nicevpn123
       - 🇦🇺 AU 4 → tg@nicevpn123
@@ -5990,9 +5953,9 @@ proxy-groups:
       - 🇯🇵 JP 4 → tg@nicevpn123
       - 🇯🇵 JP 40 → tg@nicevpn123
       - 🇯🇵 JP 5 → tg@nicevpn123
-      - 🇯🇵 JP 50 → tg@nicevpn123
       - 🇯🇵 JP 6 → tg@nicevpn123
       - 🇯🇵 JP 7 → tg@nicevpn123
+      - 🇯🇵 JP 8 → tg@nicevpn123
       - 🇯🇵 JP 9 → tg@nicevpn123
       - 🇰🇷 KR 1 → tg@nicevpn123
       - 🇰🇷 KR 2 → tg@nicevpn123
@@ -6427,6 +6390,7 @@ proxy-groups:
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
       - github.com/freefq - 欧盟  18
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
+      - github.com/freefq - 欧盟  20
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
       - 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
@@ -6563,9 +6527,6 @@ proxy-groups:
       - UA 1 → tg@nicevpn123
       - UA 2 → tg@nicevpn123
       - 🇦🇺 AU 1 → tg@nicevpn123
-      - 🇦🇺 AU 10 → tg@nicevpn123
-      - 🇦🇺 AU 11 → tg@nicevpn123
-      - 🇦🇺 AU 12 → tg@nicevpn123
       - 🇦🇺 AU 2 → tg@nicevpn123
       - 🇦🇺 AU 3 → tg@nicevpn123
       - 🇦🇺 AU 4 → tg@nicevpn123
@@ -6647,9 +6608,9 @@ proxy-groups:
       - 🇯🇵 JP 4 → tg@nicevpn123
       - 🇯🇵 JP 40 → tg@nicevpn123
       - 🇯🇵 JP 5 → tg@nicevpn123
-      - 🇯🇵 JP 50 → tg@nicevpn123
       - 🇯🇵 JP 6 → tg@nicevpn123
       - 🇯🇵 JP 7 → tg@nicevpn123
+      - 🇯🇵 JP 8 → tg@nicevpn123
       - 🇯🇵 JP 9 → tg@nicevpn123
       - 🇰🇷 KR 1 → tg@nicevpn123
       - 🇰🇷 KR 2 → tg@nicevpn123
@@ -7084,6 +7045,7 @@ proxy-groups:
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
       - github.com/freefq - 欧盟  18
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
+      - github.com/freefq - 欧盟  20
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
       - 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
@@ -7219,9 +7181,6 @@ proxy-groups:
       - UA 1 → tg@nicevpn123
       - UA 2 → tg@nicevpn123
       - 🇦🇺 AU 1 → tg@nicevpn123
-      - 🇦🇺 AU 10 → tg@nicevpn123
-      - 🇦🇺 AU 11 → tg@nicevpn123
-      - 🇦🇺 AU 12 → tg@nicevpn123
       - 🇦🇺 AU 2 → tg@nicevpn123
       - 🇦🇺 AU 3 → tg@nicevpn123
       - 🇦🇺 AU 4 → tg@nicevpn123
@@ -7303,9 +7262,9 @@ proxy-groups:
       - 🇯🇵 JP 4 → tg@nicevpn123
       - 🇯🇵 JP 40 → tg@nicevpn123
       - 🇯🇵 JP 5 → tg@nicevpn123
-      - 🇯🇵 JP 50 → tg@nicevpn123
       - 🇯🇵 JP 6 → tg@nicevpn123
       - 🇯🇵 JP 7 → tg@nicevpn123
+      - 🇯🇵 JP 8 → tg@nicevpn123
       - 🇯🇵 JP 9 → tg@nicevpn123
       - 🇰🇷 KR 1 → tg@nicevpn123
       - 🇰🇷 KR 2 → tg@nicevpn123
@@ -7740,6 +7699,7 @@ proxy-groups:
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
       - github.com/freefq - 欧盟  18
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
+      - github.com/freefq - 欧盟  20
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
       - 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
@@ -7907,9 +7867,6 @@ proxy-groups:
       - UA 1 → tg@nicevpn123
       - UA 2 → tg@nicevpn123
       - 🇦🇺 AU 1 → tg@nicevpn123
-      - 🇦🇺 AU 10 → tg@nicevpn123
-      - 🇦🇺 AU 11 → tg@nicevpn123
-      - 🇦🇺 AU 12 → tg@nicevpn123
       - 🇦🇺 AU 2 → tg@nicevpn123
       - 🇦🇺 AU 3 → tg@nicevpn123
       - 🇦🇺 AU 4 → tg@nicevpn123
@@ -7991,9 +7948,9 @@ proxy-groups:
       - 🇯🇵 JP 4 → tg@nicevpn123
       - 🇯🇵 JP 40 → tg@nicevpn123
       - 🇯🇵 JP 5 → tg@nicevpn123
-      - 🇯🇵 JP 50 → tg@nicevpn123
       - 🇯🇵 JP 6 → tg@nicevpn123
       - 🇯🇵 JP 7 → tg@nicevpn123
+      - 🇯🇵 JP 8 → tg@nicevpn123
       - 🇯🇵 JP 9 → tg@nicevpn123
       - 🇰🇷 KR 1 → tg@nicevpn123
       - 🇰🇷 KR 2 → tg@nicevpn123
@@ -8428,6 +8385,7 @@ proxy-groups:
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
       - github.com/freefq - 欧盟  18
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
+      - github.com/freefq - 欧盟  20
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
       - 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
       - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
