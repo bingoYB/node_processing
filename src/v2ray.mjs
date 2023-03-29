@@ -2,6 +2,8 @@ import _ from "lodash";
 import { logger } from "./log.mjs";
 import fetch from "node-fetch";
 import { Base64 } from "../utils.mjs";
+import { getNodesHooks as hooks } from "./hooks.mjs";
+
 /**
  * Parsing v2ray content into clash nodes list
  * @param {string} content v2ray content
@@ -99,6 +101,14 @@ export async function batchV2rayToClashNodes(urls) {
     fetch(url)
       .then((res) => res.text())
       .then((content) => parseV2rayToClashNodes(content))
+      .then(
+        (nodes) => {
+          if(hooks[url]){
+            return hooks[url](nodes)
+          }
+          return nodes
+        }
+      )
   );
 
   let nodeSet = await Promise.all(batch);

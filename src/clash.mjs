@@ -2,6 +2,7 @@ import fs from "fs";
 import yaml from "js-yaml";
 import _ from "lodash";
 import fetch from "node-fetch";
+import { getNodesHooks as hooks } from "./hooks.mjs";
 const { uniqBy, last } = _;
 import { logger } from "./log.mjs"
 
@@ -48,7 +49,10 @@ export function getClashNodesByUrl(url) {
     .then((res) => {
       return res.text();
     }).then(content => {
-      const conf = yaml.load(content);
+      const conf = yaml.load(content.replaceAll("!<str>", ""));
+      if(hooks[url]){
+        return hooks[url](conf.proxies);
+      }
       return conf.proxies;
     }).catch(e => {
       logger.error("fetch fail at url: ", url, e);
