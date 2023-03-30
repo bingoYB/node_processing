@@ -1,4 +1,4 @@
-# 更新时间 2023-03-30T12:30:53.218Z
+# 更新时间 2023-03-30T12:59:02.332Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -6,80 +6,14 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - name: HK_speednode_0001
-    server: 116.49.242.93
-    port: 443
-    type: ssr
-    protocol: auth_aes128_md5
-    cipher: chacha20-ietf
-    obfs: plain
-    password: mblank1port
-    obfs-param: t.me/vpnhat
-    protocol-param: 13717:guKKL98786890
-  - name: SG_speednode_0002
-    server: 54.169.201.129
-    port: 443
+  - name: SG_speednode_0001
+    server: 54.169.160.39
+    port: 801
     type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: SG_speednode_0003
-    server: sg-am3.eqsunshine.com
-    port: 32001
-    type: ssr
-    cipher: aes-256-cfb
-    password: 3g0dHlKME
-    protocol: origin
-    obfs: tls1.2_ticket_auth
-    protocol-param: ''
-    obfs-param: ''
+    cipher: chacha20-ietf-poly1305
+    password: tvX1v#NSFP_LG_bJ
     udp: true
-  - name: JP_speednode_0006
-    server: 43.200.6.15
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: JP_speednode_0007
-    server: 43.201.14.240
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: US_speednode_0008
-    server: 3.38.101.181
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: JP_speednode_0009
-    server: 43.201.33.242
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: ZA_speednode_0010
-    server: 156.225.67.73
-    port: 41008
-    type: vmess
-    uuid: 21155efd-8e29-43d2-95bc-fe3190ecb1c6
-    alterId: 64
-    cipher: auto
-    network: tcp
-  - name: US_speednode_0012
-    server: 13.212.38.125
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: ZA_speednode_0013
-    server: 156.225.67.146
-    port: 51948
-    type: vmess
-    uuid: 93503dd5-245a-4eb1-ae2a-57ab9f2b3c29
-    alterId: 64
-    cipher: auto
-    network: tcp
-  - name: ZA_speednode_0014
+  - name: ZA_speednode_0002
     server: 156.225.67.107
     port: 51234
     type: vmess
@@ -87,170 +21,69 @@ proxies:
     alterId: 64
     cipher: auto
     tls: false
-    skip-cert-verify: true
+    skip-cert-verify: false
     udp: true
-  - name: SE_speednode_0015
-    server: 13.49.175.238
-    port: 8080
+  - name: US_speednode_0003
+    server: singapore01.aws02cdn.xn--57q977p.com
+    port: 80
     type: vmess
-    http-opts:
-      path:
-        - /
+    ws-opts:
+      path: /images
       headers:
-        Host:
-          - 瑞典(youtube阿伟科技)
-    uuid: 33377c28-a710-4cd5-93f1-1c5dc2e1dfe0
+        host: shoutingtoutiao3.10010.com
+    uuid: 366cb5d1-333e-4fcb-a77d-51421281bb6d
     alterId: 0
     cipher: auto
-    network: http
-  - name: SG_speednode_0016
-    server: 54.255.128.51
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: US_speednode_0017
-    server: 13.213.17.234
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: CN_speednode_0018
-    server: oss-cn-shanghai.westdatacloud.top
-    port: 20048
-    type: trojan
-    password: 626351FA-3CA6-8118-FADF-CCDBCD620871
-    sni: oss-cn-shanghai.westdatacloud.top
-    allowInsecure: 1
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0019
-    server: 52.36.70.157
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: US_speednode_0020
-    server: 152.70.74.66
-    port: 443
-    type: trojan
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    allowInsecure: 1
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0021
-    server: 34.217.91.163
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: SG_speednode_0022
-    server: 13.229.73.249
-    port: 9002
+    network: ws
+  - name: US_speednode_0004
+    server: 64.32.20.91
+    port: 45809
     type: vmess
-    uuid: fb65977f-dc16-4e03-9564-8afed32ec7c5
-    alterId: 0
-    cipher: auto
-    network: tcp
-  - name: JP_speednode_0023
-    server: 43.207.160.88
-    port: 443
-    type: ss
-    client-fingerprint: chrome
-    cipher: aes-256-cfb
-    password: doub.io
-    tfo: false
-  - name: SG_speednode_0024
-    server: aliyun.imnibaba.app
-    port: 2052
-    type: vmess
-    uuid: 9ef0ae21-359a-4724-c77c-372f833898cb
-    alterId: 0
+    uuid: c1bad9a6-1482-4941-a0c4-e85f3cbbcb5a
+    alterId: 64
     cipher: auto
     tls: false
     skip-cert-verify: true
-    network: ws
     udp: true
-    ws-opts:
-      path: /tg@sudoxin
-      headers:
-        Host: woiden-de-1.imnibaba.wiki
-  - name: CN_speednode_0025
-    server: 120.198.71.183
-    port: 560
-    type: ssr
-    protocol: auth_aes128_md5
-    cipher: chacha20-ietf
-    obfs: plain
-    password: mblank1port
-    obfs-param: t.me/vpnhat
-    protocol-param: 13717:guKKL98786890
-  - name: SG_speednode_0026
-    server: 13.229.73.249
-    port: 9000
-    type: vmess
-    uuid: fb65977f-dc16-4e03-9564-8afed32ec7c5
-    alterId: 0
-    cipher: auto
-    network: tcp
-  - name: FR_speednode_0028
-    server: 54.37.185.148
-    port: 32894
-    type: trojan
-    network: tcp
-    password: HchlVCfnXB
-    skip-cert-verify: true
-  - name: FR_speednode_0029
-    server: a1.veryfastnet1.tk
-    port: 32894
-    type: trojan
-    password: HchlVCfnXB
-    sni: jamaran.ir
-    skip-cert-verify: true
-    udp: true
-  - name: CN_speednode_0030
-    server: 223.166.28.124
-    port: 568
-    type: ssr
-    protocol: auth_aes128_md5
-    cipher: chacha20-ietf
-    obfs: plain
-    password: mblank1port
-    obfs-param: t.me/vpnhat
-    protocol-param: 13717:guKKL98786890
-  - name: JP_speednode_0034
-    server: 18.176.60.233
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: CN_speednode_0035
-    server: in-jp-1.iivvppnn.info
-    port: 38301
+  - name: SG_speednode_0005
+    server: hongkong.aws04.ddns.xn--57q977p.com
+    port: 80
     type: vmess
     ws-opts:
-      path: /hls/cctv5phd.m3u8
+      path: /images
       headers:
-        host: in-jp-1.iivvppnn.info
-    uuid: 79386685-16da-327c-9e14-aa6d702d86bc
+        host: awkj
+    uuid: 366cb5d1-333e-4fcb-a77d-51421281bb6d
     alterId: 0
     cipher: auto
     network: ws
-  - name: US_speednode_0036
-    server: 170.187.134.190
-    port: 8443
-    type: trojan
-    network: tcp
-    password: cf4295378e209e70d12c5bdd017144dfd1c772d3
+  - name: ZA_speednode_0006
+    server: 156.225.67.102
+    port: 44331
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
     skip-cert-verify: true
-  - name: JP_speednode_0037
-    server: 54.150.253.142
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: CN_speednode_0039
+    udp: true
+  - name: ZA_speednode_0008
+    server: 156.225.67.73
+    port: 41008
+    type: vmess
+    uuid: 21155efd-8e29-43d2-95bc-fe3190ecb1c6
+    alterId: 64
+    cipher: auto
+    network: tcp
+  - name: ZA_speednode_0009
+    server: 156.225.67.146
+    port: 51948
+    type: vmess
+    uuid: 93503dd5-245a-4eb1-ae2a-57ab9f2b3c29
+    alterId: 64
+    cipher: auto
+    network: tcp
+  - name: CN_speednode_0011
     server: ingress-i2.iivvppnn.info
     port: 38102
     type: vmess
@@ -262,36 +95,266 @@ proxies:
     alterId: 1
     cipher: auto
     network: ws
-  - name: JP_speednode_0040
-    server: 43.207.221.161
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: JP_speednode_0041
-    server: 43.201.148.126
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: SG_speednode_0042
-    server: 52.221.242.53
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
+  - name: CN_speednode_0012
+    server: in02.my1188.org
+    port: 63078
+    type: vmess
+    uuid: e150c7fc-4297-3a40-a9d8-ff7e38bc1c63
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
     udp: true
-  - name: CN_speednode_0046
-    server: 8k2r01.abzoones.xyz
-    port: 36401
-    type: trojan
-    password: e955bcc9-3192-4eff-89a5-7c2b34a12cc4
-    sni: kr01.abpilot.xyz
+    ws-opts:
+      path: /
+      headers:
+        Host: hk-balancer.airport-v2.com
+  - name: CN_speednode_0013
+    server: gzdx.jcnode.top
+    port: 63000
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzdx.jcnode.top
+    udp: true
+  - name: CN_speednode_0014
+    server: gzdx.jcnode.top
+    port: 20000
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzdx.jcnode.top
+    udp: true
+  - name: CN_speednode_0015
+    server: gzdx.jcnode.top
+    port: 23001
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzdx.jcnode.top
+    udp: true
+  - name: US_speednode_0016
+    server: 142.4.97.71
+    port: 44942
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
     skip-cert-verify: true
     udp: true
-  - name: ZA_speednode_0047
-    server: 156.225.67.102
-    port: 44331
+  - name: US_speednode_0017
+    server: 142.4.112.10
+    port: 51091
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0018
+    server: 13.215.177.64
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - name: CN_speednode_0019
+    server: gzdx.jcnode.top
+    port: 25000
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzdx.jcnode.top
+    udp: true
+  - name: CN_speednode_0020
+    server: gzyd.jcnode.top
+    port: 20000
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzyd.jcnode.top
+    udp: true
+  - name: CN_speednode_0021
+    server: gzdx.jcnode.top
+    port: 65000
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzdx.jcnode.top
+    udp: true
+  - name: CN_speednode_0022
+    server: gzyd.jcnode.top
+    port: 24000
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzyd.jcnode.top
+    udp: true
+  - name: US_speednode_0023
+    server: 152.70.74.66
+    port: 443
+    type: trojan
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    allowInsecure: 1
+    skip-cert-verify: true
+    udp: true
+  - name: CN_speednode_0024
+    server: gzyd.jcnode.top
+    port: 21002
+    type: trojan
+    password: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    sni: jp02.ckcloud.info
+    skip-cert-verify: true
+    udp: true
+  - name: CN_speednode_0025
+    server: hn.xiaohouzi.club
+    port: 16013
+    type: trojan
+    password: ff8f2b3f-d3dd-3620-92ff-c4a6ac640d64
+    udp: true
+    skip-cert-verify: true
+    network: tcp
+  - name: US_speednode_0027
+    server: 50.116.5.120
+    port: 80
+    type: vmess
+    ws-opts:
+      path: /images
+      headers:
+        host: shoutingtoutiao3.10010.com
+    uuid: 366cb5d1-333e-4fcb-a77d-51421281bb6d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - name: JP_speednode_0028
+    server: 43.206.194.235
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: CN_speednode_0029
+    server: gzyd.jcnode.top
+    port: 28000
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzyd.jcnode.top
+    udp: true
+  - name: US_speednode_0031
+    server: singapore01.aws01cdn.xn--57q977p.com
+    port: 80
+    type: vmess
+    uuid: 366cb5d1-333e-4fcb-a77d-51421281bb6d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /images
+      headers:
+        Host: shoutingtoutiao3.10010.com
+    udp: true
+  - name: CN_speednode_0032
+    server: gzyd.jcnode.top
+    port: 25000
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzyd.jcnode.top
+    udp: true
+  - name: US_speednode_0033
+    server: hongkong.azure01.ddns.xn--57q977p.com
+    port: 80
+    type: vmess
+    uuid: 366cb5d1-333e-4fcb-a77d-51421281bb6d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /images
+      headers:
+        Host: shoutingtoutiao3.10010.com
+    udp: true
+  - name: US_speednode_0034
+    server: kh.mjt001.com
+    port: 443
+    type: trojan
+    password: ab0b21ff-53d1-4b02-800b-9d7db3aed104
+    udp: true
+    skip-cert-verify: true
+    network: tcp
+  - name: NL_speednode_0036
+    server: 154.84.1.80
+    port: 42902
     type: vmess
     alterId: 64
     cipher: auto
@@ -299,102 +362,246 @@ proxies:
     tls: 0
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     ws-opts:
-      path: /dp2.scproxy.top/shirker
+      path: /current_time
       headers:
-        host: irancelll.appsandhack2.tech
-  - name: US_speednode_0048
-    server: 54.185.52.218
+        host: quranweb6.xyz
+  - name: CN_speednode_0037
+    server: gzyd.jcnode.top
+    port: 23002
+    type: vmess
+    uuid: 21b2962e-bf74-41af-a6a2-343a0fb2b3c1
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: gzyd.jcnode.top
+    udp: true
+  - name: JP_speednode_0039
+    server: dl-hk6.steamdownload.top
     port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-  - name: FR_speednode_0051
-    server: 173.245.49.184
-    port: 2052
-    type: vmess
-    uuid: e782db8a-5f2d-47fc-aa19-9d42a54648f4
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /tg:@hkaa0
-      headers:
-        Host: sg.wyhkaa0.ml
-  - name: FR_speednode_0052
-    server: 173.245.49.65
-    port: 2052
-    type: vmess
-    uuid: e782db8a-5f2d-47fc-aa19-9d42a54648f4
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /tg:@hkaa0
-      headers:
-        Host: sg.wyhkaa0.ml
-  - name: CN_speednode_0053
-    server: 5a4u01.abzoones.xyz
-    port: 36821
     type: trojan
-    password: e955bcc9-3192-4eff-89a5-7c2b34a12cc4
-    sni: au01.abpilot.xyz
+    password: b3a7bc11-8971-44b6-9b49-ec0f229cb1dd
+    sni: data-hk.steamdownload.top
     skip-cert-verify: true
     udp: true
-  - name: FR_speednode_0054
-    server: 173.245.49.153
-    port: 2052
-    type: vmess
-    uuid: e782db8a-5f2d-47fc-aa19-9d42a54648f4
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /tg:@hkaa0
-      headers:
-        Host: sg.wyhkaa0.ml
-  - name: CN_speednode_0056
-    server: 5c1a01.abzoones.xyz
-    port: 36701
+  - name: US_speednode_0043
+    server: lux.mjt001.com
+    port: 443
     type: trojan
-    password: e955bcc9-3192-4eff-89a5-7c2b34a12cc4
-    sni: ca01.abpilot.xyz
-    skip-cert-verify: true
+    password: ab0b21ff-53d1-4b02-800b-9d7db3aed104
     udp: true
-  - name: FR_speednode_0057
-    server: 173.245.49.152
-    port: 2052
-    type: vmess
-    uuid: e782db8a-5f2d-47fc-aa19-9d42a54648f4
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /tg:@hkaa0
-      headers:
-        Host: sg.wyhkaa0.ml
-  - name: TW_speednode_0058
-    server: hinet1261.gfwisbest.xyz
-    port: 224
-    type: vmess
-    cipher: auto
-    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
-    alterId: 0
-    tls: false
     skip-cert-verify: true
     network: tcp
-  - name: TW_speednode_0059
+    ws-opts:
+      headers:
+        host: LU卢森堡_阿伟_
+  - name: ZA_speednode_0044
+    server: 156.225.67.151
+    port: 47160
+    type: vmess
+    uuid: a7fa8f14-4fb6-4280-9005-d6bbe99c5da9
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: HK_speednode_0045
+    server: 156.245.8.50
+    port: 54779
+    type: vmess
+    uuid: fe5f69e7-e183-439b-950b-9661ef0651f2
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0047
+    server: www.kuromi.eu.org
+    port: 33421
+    type: vmess
+    uuid: 94e56ff9-ccf1-414e-a114-46e0a79f6614
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: ZA_speednode_0048
+    server: 156.249.18.175
+    port: 42542
+    type: vmess
+    uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: HK_speednode_0049
+    server: 156.245.8.26
+    port: 42076
+    type: vmess
+    uuid: f9fa3a9c-f7d5-414f-88e6-6970585d9949
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: speednode_0050
+    server: cf-lt.sharecentre.online
+    port: 2095
+    type: vmess
+    uuid: fc9bd698-6e37-4330-f691-a3334f70b1d3
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    udp: true
+    ws-opts:
+      path: /live
+      headers:
+        Host: arm.juhaohuo.tk
+  - name: JP_speednode_0051
+    server: 43.155.101.165
+    port: 47333
+    type: vmess
+    uuid: bc32a4cb-734d-4f55-888b-704ca4950ce9
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hk13/getData
+    udp: true
+  - name: SG_speednode_0052
+    server: sg-am3.eqsunshine.com
+    port: 32001
+    type: ssr
+    protocol: origin
+    cipher: aes-256-cfb
+    obfs: tls1.2_ticket_auth
+    password: 3g0dHlKME
+    obfs-param: '===='
+    protocol-param: '===='
+  - name: US_speednode_0056
+    server: 142.4.99.68
+    port: 41169
+    type: vmess
+    alterId: 64
+    cipher: auto
+    network: tcp
+    tls: 0
+    uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
+    ws-opts:
+      path: /current_time
+      headers:
+        host: holyquran15.store
+  - name: US_speednode_0057
+    server: 198.2.198.11
+    port: 42288
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0058
+    server: 137.175.63.133
+    port: 50009
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0059
+    server: 142.4.101.19
+    port: 50222
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0060
+    server: sg.herofree66.tk
+    port: 443
+    type: vmess
+    uuid: 5e3d4757-1395-4843-d498-bf7317470085
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    udp: true
+    ws-opts:
+      path: /tg@herhero6
+      headers:
+        Host: sg.herofree66.tk
+  - name: JP_speednode_0062
+    server: 43.154.158.116
+    port: 34971
+    type: vmess
+    uuid: 6b6dd11a-798c-401e-ba46-d6272e29aca3
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /hk4/getData
+    udp: true
+  - name: US_speednode_0063
+    server: japam01.aws02cdn.xn--57q977p.com
+    port: 80
+    type: vmess
+    ws-opts:
+      path: /images
+      headers:
+        host: awkj
+    uuid: 366cb5d1-333e-4fcb-a77d-51421281bb6d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - name: NL_speednode_0064
+    server: 192.243.124.25
+    port: 27763
+    type: vmess
+    uuid: 1d638060-9665-42bf-8744-b7a2ecc608d4
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: JP_speednode_0065
+    server: 172.105.251.205
+    port: 443
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 0r91Aj1MeFRSvoy6
+    udp: true
+  - name: SG_speednode_0066
+    server: hongkong.aws03.ddns.xn--57q977p.com
+    port: 80
+    type: vmess
+    uuid: 366cb5d1-333e-4fcb-a77d-51421281bb6d
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /images
+      headers:
+        Host: shoutingtoutiao3.10010.com
+    udp: true
+  - name: TW_speednode_0067
     server: 45.121.51.103
     port: 20715
     type: vmess
@@ -405,21 +612,104 @@ proxies:
       path:
         - /
     network: http
-    skip-cert-verify: true
+    skip-cert-verify: false
+    tls: false
     uuid: f6406b6d-5487-46da-f793-46611269a306
-  - name: TW_speednode_0061
-    server: polotw1.applebench.tech
-    port: 56568
+  - name: JP_speednode_0068
+    server: 43.156.19.14
+    port: 56595
     type: vmess
+    uuid: 98821111-93ab-4562-946a-61ba95f472f1
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /sg8/getData
+    udp: true
+  - name: US_speednode_0069
+    server: 38.47.110.212
+    port: 31263
+    type: vmess
+    uuid: f5b19092-44aa-408f-8148-f11b9ddc04d8
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /jp2/getData
+    udp: true
+  - name: CN_speednode_0070
+    server: in04.my1188.org
+    port: 63078
+    type: vmess
+    uuid: e150c7fc-4297-3a40-a9d8-ff7e38bc1c63
     alterId: 0
     cipher: auto
-    network: tcp
-    tls: 0
-    uuid: 6af76bfd-b5bf-4646-8f8d-14ed3e044b22
+    tls: true
+    skip-cert-verify: true
+    network: ws
     ws-opts:
       path: /
       headers:
-        host: polotw1.applebench.tech
+        Host: in04.my1188.org
+    udp: true
+  - name: US_speednode_0071
+    server: 104.29.41.47
+    port: 80
+    type: vmess
+    uuid: 20f59967-c2e7-4bc9-bc59-d703457f21b9
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        Host: fl.6577617.xyz
+    udp: true
+  - name: JP_speednode_0072
+    server: 43.156.103.197
+    port: 34174
+    type: vmess
+    uuid: de482393-068d-4cb1-986e-680ff86d5d7d
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /sg9/getData
+    udp: true
+  - name: JP_speednode_0074
+    server: 43.156.111.144
+    port: 54415
+    type: vmess
+    uuid: ffd17b65-3ea1-42e6-a75a-9c90caebb530
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /sg5/getData
+    udp: true
+  - name: US_speednode_0075
+    server: 38.54.107.122
+    port: 52452
+    type: vmess
+    uuid: 6e28708e-60b5-4fda-aaa7-51940d3cc55b
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /tw2/getData
+    udp: true
   - name: IT 1 → tg@nicevpn123
     server: 188.114.99.0
     port: 443
@@ -443,17 +733,17 @@ proxies:
     udp: true
   - name: TR 1 → tg@nicevpn123
     server: 85.208.108.60
-    port: 8118
-    type: ss
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-    udp: true
-  - name: TR 2 → tg@nicevpn123
-    server: 85.208.108.60
     port: 4444
     type: ss
     cipher: aes-256-gcm
     password: pKEW8JPByTVTLtM
+    udp: true
+  - name: TR 2 → tg@nicevpn123
+    server: 85.208.108.60
+    port: 8118
+    type: ss
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
     udp: true
   - name: UA 1 → tg@nicevpn123
     server: afn.ircf.space
@@ -631,6 +921,58 @@ proxies:
     password: 26a663656e575c0b
     skip-cert-verify: true
     udp: true
+  - name: 🇫🇷 FR 1 → tg@nicevpn123
+    server: 173.245.49.65
+    port: 2052
+    type: vmess
+    uuid: e782db8a-5f2d-47fc-aa19-9d42a54648f4
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /tg:@hkaa0
+    udp: true
+  - name: 🇫🇷 FR 2 → tg@nicevpn123
+    server: 173.245.49.184
+    port: 2052
+    type: vmess
+    uuid: e782db8a-5f2d-47fc-aa19-9d42a54648f4
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /tg:@hkaa0
+    udp: true
+  - name: 🇫🇷 FR 3 → tg@nicevpn123
+    server: 173.245.49.153
+    port: 2052
+    type: vmess
+    uuid: e782db8a-5f2d-47fc-aa19-9d42a54648f4
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /tg:@hkaa0
+    udp: true
+  - name: 🇫🇷 FR 4 → tg@nicevpn123
+    server: 173.245.49.152
+    port: 2052
+    type: vmess
+    uuid: e782db8a-5f2d-47fc-aa19-9d42a54648f4
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /tg:@hkaa0
+    udp: true
   - name: 🇭🇰 HK 1 → tg@nicevpn123
     server: hkt4.amazonwebservicess.com
     port: 80
@@ -645,6 +987,13 @@ proxies:
       path: /aws-china-media/Y699Gjx2rNw.mp4
       headers:
         Host: hkt4.amazonwebservicess.com
+    udp: true
+  - name: 🇯🇵 JP 1 → tg@nicevpn123
+    server: 43.201.57.87
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
     udp: true
   - name: 🇯🇵 JP 10 → tg@nicevpn123
     server: 43.201.29.13
@@ -661,39 +1010,28 @@ proxies:
     password: amazonskr05
     udp: true
   - name: 🇯🇵 JP 12 → tg@nicevpn123
+    server: vin1.0bad.com
+    port: 443
+    type: vmess
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /chat
+      headers:
+        Host: vin1.0bad.com
+    udp: true
+  - name: 🇯🇵 JP 13 → tg@nicevpn123
     server: 43.200.244.234
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: 🇯🇵 JP 13 → tg@nicevpn123
-    server: 43.156.103.197
-    port: 34174
-    type: vmess
-    uuid: de482393-068d-4cb1-986e-680ff86d5d7d
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /sg9/getData
-    udp: true
-  - name: 🇯🇵 JP 14 → tg@nicevpn123
-    server: 43.156.19.14
-    port: 56595
-    type: vmess
-    uuid: 98821111-93ab-4562-946a-61ba95f472f1
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /sg8/getData
-    udp: true
-  - name: 🇯🇵 JP 15 → tg@nicevpn123
+  - name: 🇯🇵 JP 16 → tg@nicevpn123
     server: 43.159.47.228
     port: 45056
     type: vmess
@@ -706,46 +1044,14 @@ proxies:
     ws-opts:
       path: /sg4/getData
     udp: true
-  - name: 🇯🇵 JP 16 → tg@nicevpn123
-    server: 43.156.111.144
-    port: 54415
-    type: vmess
-    uuid: ffd17b65-3ea1-42e6-a75a-9c90caebb530
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /sg5/getData
+  - name: 🇯🇵 JP 2 → tg@nicevpn123
+    server: 43.207.214.255
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
     udp: true
-  - name: 🇯🇵 JP 17 → tg@nicevpn123
-    server: 43.154.158.116
-    port: 34971
-    type: vmess
-    uuid: 6b6dd11a-798c-401e-ba46-d6272e29aca3
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hk4/getData
-    udp: true
-  - name: 🇯🇵 JP 18 → tg@nicevpn123
-    server: 43.155.101.165
-    port: 47333
-    type: vmess
-    uuid: bc32a4cb-734d-4f55-888b-704ca4950ce9
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /hk13/getData
-    udp: true
-  - name: 🇯🇵 JP 19 → tg@nicevpn123
+  - name: 🇯🇵 JP 20 → tg@nicevpn123
     server: 43.134.227.81
     port: 20386
     type: vmess
@@ -758,35 +1064,29 @@ proxies:
     ws-opts:
       path: /sg6/getData
     udp: true
-  - name: 🇯🇵 JP 2 → tg@nicevpn123
-    server: 43.201.146.250
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 🇯🇵 JP 20 → tg@nicevpn123
-    server: 996sg.996cloud.xyz
-    port: 443
-    type: trojan
-    password: 3e55b4d3-1484-4295-baeb-2b2d15410436
-    skip-cert-verify: true
-    udp: true
   - name: 🇯🇵 JP 21 → tg@nicevpn123
-    server: 996uk.996cloud.xyz
-    port: 443
-    type: trojan
-    password: 3e55b4d3-1484-4295-baeb-2b2d15410436
-    skip-cert-verify: true
-    udp: true
-  - name: 🇯🇵 JP 23 → tg@nicevpn123
     server: 996in.996cloud.xyz
     port: 443
     type: trojan
-    password: cb39d7ba-9b22-4bf5-b9f7-f1f81baf0509
+    password: 3e55b4d3-1484-4295-baeb-2b2d15410436
     skip-cert-verify: true
     udp: true
-  - name: 🇯🇵 JP 24 → tg@nicevpn123
+  - name: 🇯🇵 JP 22 → tg@nicevpn123
+    server: ca0831a7-9d9b-a828-144e-1cb47eae7ff9.cnnic.rip
+    port: 80
+    type: vmess
+    uuid: 3ed486c9-f581-477f-85b8-f48c0095064a
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: ca0831a7-9d9b-a828-144e-1cb47eae7ff9.cnnic.rip
+    udp: true
+  - name: 🇯🇵 JP 23 → tg@nicevpn123
     server: kgcwafbvf.76898102.xyz
     port: 15241
     type: vmess
@@ -796,7 +1096,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇯🇵 JP 25 → tg@nicevpn123
+  - name: 🇯🇵 JP 24 → tg@nicevpn123
     server: irancell.fxnxs.com
     port: 443
     type: vmess
@@ -811,7 +1111,7 @@ proxies:
       headers:
         Host: irancell.fxnxs.com
     udp: true
-  - name: 🇯🇵 JP 26 → tg@nicevpn123
+  - name: 🇯🇵 JP 25 → tg@nicevpn123
     server: leg.fastv2ray.eu.org
     port: 443
     type: vmess
@@ -826,7 +1126,7 @@ proxies:
       headers:
         Host: leg.fastv2ray.eu.org
     udp: true
-  - name: 🇯🇵 JP 27 → tg@nicevpn123
+  - name: 🇯🇵 JP 26 → tg@nicevpn123
     server: legenderyserversirn.ddns.net
     port: 443
     type: vmess
@@ -841,7 +1141,7 @@ proxies:
       headers:
         Host: legenderyserversirn.ddns.net
     udp: true
-  - name: 🇯🇵 JP 28 → tg@nicevpn123
+  - name: 🇯🇵 JP 27 → tg@nicevpn123
     server: 45.85.119.18
     port: 443
     type: vmess
@@ -855,28 +1155,35 @@ proxies:
       path: /current_time
     udp: true
   - name: 🇯🇵 JP 3 → tg@nicevpn123
-    server: 43.201.60.60
+    server: 43.207.205.208
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
   - name: 🇯🇵 JP 4 → tg@nicevpn123
-    server: 43.201.57.87
+    server: 43.200.6.15
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
   - name: 🇯🇵 JP 5 → tg@nicevpn123
-    server: 43.207.214.255
+    server: 43.201.148.126
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
   - name: 🇯🇵 JP 6 → tg@nicevpn123
-    server: 43.207.205.208
+    server: 43.201.146.250
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: 🇯🇵 JP 7 → tg@nicevpn123
+    server: 43.201.60.60
     port: 443
     type: ss
     cipher: aes-256-cfb
@@ -910,16 +1217,6 @@ proxies:
     network: ws
     ws-opts:
       path: /kor1/getData
-    udp: true
-  - name: 🇳🇱 NL 1 → tg@nicevpn123
-    server: 192.243.124.25
-    port: 27763
-    type: vmess
-    uuid: 1d638060-9665-42bf-8744-b7a2ecc608d4
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
     udp: true
   - name: 🇳🇱 NL 2 → tg@nicevpn123
     server: mbt.ircf.space
@@ -992,6 +1289,26 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: 878801409
     udp: true
+  - name: 🇸🇬 SG 6 → tg@nicevpn123
+    server: 13.229.73.249
+    port: 9002
+    type: vmess
+    uuid: fb65977f-dc16-4e03-9564-8afed32ec7c5
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇸🇬 SG 7 → tg@nicevpn123
+    server: 13.229.73.249
+    port: 9000
+    type: vmess
+    uuid: fb65977f-dc16-4e03-9564-8afed32ec7c5
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
   - name: 🇺🇸 US 1 → tg@nicevpn123
     server: tj2.dalazhi.cyou
     port: 443
@@ -1000,20 +1317,17 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: 🇺🇸 US 10 → tg@nicevpn123
+    server: 172.99.188.99
+    port: 8882
+    type: ss
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
+    udp: true
+  - name: 🇺🇸 US 100 → tg@nicevpn123
     server: 142.4.108.22
     port: 55102
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸 US 101 → tg@nicevpn123
-    server: 142.4.99.68
-    port: 41169
-    type: vmess
-    uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
     alterId: 64
     cipher: auto
     tls: false
@@ -1063,16 +1377,6 @@ proxies:
       path: /current_time
       headers:
         Host: holyquran11.store
-    udp: true
-  - name: 🇺🇸 US 105 → tg@nicevpn123
-    server: 142.4.97.71
-    port: 44942
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
     udp: true
   - name: 🇺🇸 US 106 → tg@nicevpn123
     server: quranweb16.xyz
@@ -1135,7 +1439,7 @@ proxies:
         Host: germany1.yj2022.ga
     udp: true
   - name: 🇺🇸 US 11 → tg@nicevpn123
-    server: 143.42.110.81
+    server: quran-audio4.xyz
     port: 443
     type: vmess
     uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
@@ -1146,6 +1450,8 @@ proxies:
     network: ws
     ws-opts:
       path: /
+      headers:
+        Host: quran-audio4.xyz
     udp: true
   - name: 🇺🇸 US 110 → tg@nicevpn123
     server: cf-topspeedvv2.uk
@@ -1297,6 +1603,19 @@ proxies:
       headers:
         Host: france1.yj2022.ga
     udp: true
+  - name: 🇺🇸 US 12 → tg@nicevpn123
+    server: 143.42.31.89
+    port: 443
+    type: vmess
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+    udp: true
   - name: 🇺🇸 US 120 → tg@nicevpn123
     server: www.udemy.com
     port: 443
@@ -1373,6 +1692,21 @@ proxies:
         Host: japan.com
     udp: true
   - name: 🇺🇸 US 125 → tg@nicevpn123
+    server: cf.noaries.de
+    port: 2082
+    type: vmess
+    uuid: 44ca94c0-b0c8-4e15-ab35-0a7947d7093b
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        Host: cf.noaries.de
+    udp: true
+  - name: 🇺🇸 US 126 → tg@nicevpn123
     server: ny1.sharecentrepro.org
     port: 443
     type: vmess
@@ -1387,7 +1721,7 @@ proxies:
       headers:
         Host: ny1.sharecentrepro.org
     udp: true
-  - name: 🇺🇸 US 126 → tg@nicevpn123
+  - name: 🇺🇸 US 127 → tg@nicevpn123
     server: v2ray.wefuckgfw.tk
     port: 2053
     type: vmess
@@ -1402,7 +1736,7 @@ proxies:
       headers:
         Host: v2ray.wefuckgfw.tk
     udp: true
-  - name: 🇺🇸 US 127 → tg@nicevpn123
+  - name: 🇺🇸 US 128 → tg@nicevpn123
     server: srv1.hellosalam.xyz
     port: 2096
     type: vmess
@@ -1416,21 +1750,6 @@ proxies:
       path: /hellosalam.xyz
       headers:
         Host: srv1.hellosalam.xyz
-    udp: true
-  - name: 🇺🇸 US 128 → tg@nicevpn123
-    server: cf.noaries.de
-    port: 80
-    type: vmess
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: cf.noaries.de
     udp: true
   - name: 🇺🇸 US 129 → tg@nicevpn123
     server: quranweb10.xyz
@@ -1448,7 +1767,7 @@ proxies:
         Host: quranweb10.xyz
     udp: true
   - name: 🇺🇸 US 13 → tg@nicevpn123
-    server: holyquran8.store
+    server: quranweb29.xyz
     port: 443
     type: vmess
     uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
@@ -1458,9 +1777,9 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /current_time
+      path: /
       headers:
-        Host: holyquran8.store
+        Host: quranweb29.xyz
     udp: true
   - name: 🇺🇸 US 130 → tg@nicevpn123
     server: els200.jslist.tk
@@ -1535,7 +1854,7 @@ proxies:
       headers:
         Host: lsb-gy.heinu.cf
     udp: true
-  - name: 🇺🇸 US 14 → tg@nicevpn123
+  - name: 🇺🇸 US 15 → tg@nicevpn123
     server: cf-topspeedv9.uk
     port: 443
     type: vmess
@@ -1550,278 +1869,7 @@ proxies:
       headers:
         Host: cf-topspeedv9.uk
     udp: true
-  - name: 🇺🇸 US 15 → tg@nicevpn123
-    server: new3.hucloud-dns.xyz
-    port: 443
-    type: vmess
-    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: new3.hucloud-dns.xyz
-    udp: true
-  - name: 🇺🇸 US 16 → tg@nicevpn123
-    server: quranweb3.xyz
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /current_time
-      headers:
-        Host: quranweb3.xyz
-    udp: true
   - name: 🇺🇸 US 17 → tg@nicevpn123
-    server: holyquran15.store
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /current_time
-      headers:
-        Host: holyquran15.store
-    udp: true
-  - name: 🇺🇸 US 18 → tg@nicevpn123
-    server: holyquran4.store
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /current_time
-      headers:
-        Host: holyquran4.store
-    udp: true
-  - name: 🇺🇸 US 19 → tg@nicevpn123
-    server: quranweb15.xyz
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /current_time
-      headers:
-        Host: quranweb15.xyz
-    udp: true
-  - name: 🇺🇸 US 2 → tg@nicevpn123
-    server: 192.203.230.65
-    port: 443
-    type: vmess
-    uuid: f4b8a569-60f0-444a-b2d9-bdaa46491a08
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /meizhiyuan/hkhgc?ed=2048
-    udp: true
-  - name: 🇺🇸 US 20 → tg@nicevpn123
-    server: cf-topspeedoneplus.uk
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /current_time
-      headers:
-        Host: cf-topspeedoneplus.uk
-    udp: true
-  - name: 🇺🇸 US 21 → tg@nicevpn123
-    server: 172.67.135.103
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /current_time
-    udp: true
-  - name: 🇺🇸 US 22 → tg@nicevpn123
-    server: cf-topspeedv5.uk
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: cf-topspeedv5.uk
-    udp: true
-  - name: 🇺🇸 US 23 → tg@nicevpn123
-    server: quranweb19.xyz
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: quranweb19.xyz
-    udp: true
-  - name: 🇺🇸 US 24 → tg@nicevpn123
-    server: holyquran10.store
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /current_time
-      headers:
-        Host: holyquran10.store
-    udp: true
-  - name: 🇺🇸 US 25 → tg@nicevpn123
-    server: v2hk1.594888.xyz
-    port: 35203
-    type: vmess
-    uuid: ef50b3a6-346a-365a-81a0-0d0584505393
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /maohk1
-      headers:
-        Host: v2hk1.594888.xyz
-    udp: true
-  - name: 🇺🇸 US 26 → tg@nicevpn123
-    server: s245.rpscloud3.cloud
-    port: 80
-    type: vmess
-    uuid: d65ca664-72d3-4a14-a836-00eadd0df46e
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /graphql
-      headers:
-        Host: s245.rpscloud3.cloud
-    udp: true
-  - name: 🇺🇸 US 27 → tg@nicevpn123
-    server: dl.filmino.online
-    port: 2096
-    type: vmess
-    uuid: fa5a6f0e-ab9d-45bf-e3ed-102dd5fee6b2
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: dl.filmino.online
-    udp: true
-  - name: 🇺🇸 US 28 → tg@nicevpn123
-    server: 172.99.188.99
-    port: 8882
-    type: ss
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-    udp: true
-  - name: 🇺🇸 US 29 → tg@nicevpn123
-    server: quran-audio4.xyz
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: quran-audio4.xyz
-    udp: true
-  - name: 🇺🇸 US 3 → tg@nicevpn123
-    server: sg.herofree66.tk
-    port: 443
-    type: vmess
-    uuid: 5e3d4757-1395-4843-d498-bf7317470085
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /tg@herhero6
-      headers:
-        Host: sg.herofree66.tk
-    udp: true
-  - name: 🇺🇸 US 30 → tg@nicevpn123
-    server: 143.42.31.89
-    port: 443
-    type: vmess
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-    udp: true
-  - name: 🇺🇸 US 31 → tg@nicevpn123
-    server: quranweb29.xyz
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: quranweb29.xyz
-    udp: true
-  - name: 🇺🇸 US 34 → tg@nicevpn123
     server: woiden.739256.xyz
     port: 443
     type: vmess
@@ -1836,17 +1884,48 @@ proxies:
       headers:
         Host: woiden.739256.xyz
     udp: true
-  - name: 🇺🇸 US 35 → tg@nicevpn123
-    server: www.kuromi.eu.org
-    port: 33421
+  - name: 🇺🇸 US 18 → tg@nicevpn123
+    server: 143.42.110.81
+    port: 443
     type: vmess
-    uuid: 94e56ff9-ccf1-414e-a114-46e0a79f6614
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
     udp: true
-  - name: 🇺🇸 US 36 → tg@nicevpn123
+  - name: 🇺🇸 US 19 → tg@nicevpn123
+    server: holyquran3.store
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: holyquran3.store
+    udp: true
+  - name: 🇺🇸 US 2 → tg@nicevpn123
+    server: 192.203.230.65
+    port: 443
+    type: vmess
+    uuid: f4b8a569-60f0-444a-b2d9-bdaa46491a08
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /meizhiyuan/hkhgc?ed=2048
+    udp: true
+  - name: 🇺🇸 US 21 → tg@nicevpn123
     server: cf-topspeedonline.uk
     port: 443
     type: vmess
@@ -1861,7 +1940,7 @@ proxies:
       headers:
         Host: cf-topspeedonline.uk
     udp: true
-  - name: 🇺🇸 US 37 → tg@nicevpn123
+  - name: 🇺🇸 US 22 → tg@nicevpn123
     server: us.glucy.top
     port: 443
     type: vmess
@@ -1876,7 +1955,22 @@ proxies:
       headers:
         Host: us.glucy.top
     udp: true
-  - name: 🇺🇸 US 38 → tg@nicevpn123
+  - name: 🇺🇸 US 24 → tg@nicevpn123
+    server: cf-topspeedv5.uk
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: cf-topspeedv5.uk
+    udp: true
+  - name: 🇺🇸 US 25 → tg@nicevpn123
     server: 172.67.135.57
     port: 443
     type: vmess
@@ -1889,7 +1983,7 @@ proxies:
     ws-opts:
       path: /AUIKN8AU
     udp: true
-  - name: 🇺🇸 US 39 → tg@nicevpn123
+  - name: 🇺🇸 US 26 → tg@nicevpn123
     server: quranweb9.xyz
     port: 443
     type: vmess
@@ -1903,6 +1997,179 @@ proxies:
       path: /
       headers:
         Host: quranweb9.xyz
+    udp: true
+  - name: 🇺🇸 US 27 → tg@nicevpn123
+    server: quran-audio7.xyz
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: quran-audio7.xyz
+    udp: true
+  - name: 🇺🇸 US 28 → tg@nicevpn123
+    server: 64.32.20.34
+    port: 54042
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 US 30 → tg@nicevpn123
+    server: holyquran8.store
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /current_time
+      headers:
+        Host: holyquran8.store
+    udp: true
+  - name: 🇺🇸 US 31 → tg@nicevpn123
+    server: new3.hucloud-dns.xyz
+    port: 443
+    type: vmess
+    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: new3.hucloud-dns.xyz
+    udp: true
+  - name: 🇺🇸 US 32 → tg@nicevpn123
+    server: quranweb3.xyz
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /current_time
+      headers:
+        Host: quranweb3.xyz
+    udp: true
+  - name: 🇺🇸 US 33 → tg@nicevpn123
+    server: holyquran15.store
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /current_time
+      headers:
+        Host: holyquran15.store
+    udp: true
+  - name: 🇺🇸 US 34 → tg@nicevpn123
+    server: holyquran4.store
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /current_time
+      headers:
+        Host: holyquran4.store
+    udp: true
+  - name: 🇺🇸 US 35 → tg@nicevpn123
+    server: quranweb15.xyz
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /current_time
+      headers:
+        Host: quranweb15.xyz
+    udp: true
+  - name: 🇺🇸 US 36 → tg@nicevpn123
+    server: cf-topspeedoneplus.uk
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /current_time
+      headers:
+        Host: cf-topspeedoneplus.uk
+    udp: true
+  - name: 🇺🇸 US 37 → tg@nicevpn123
+    server: 172.67.135.103
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /current_time
+    udp: true
+  - name: 🇺🇸 US 38 → tg@nicevpn123
+    server: quranweb19.xyz
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: quranweb19.xyz
+    udp: true
+  - name: 🇺🇸 US 39 → tg@nicevpn123
+    server: holyquran10.store
+    port: 443
+    type: vmess
+    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /current_time
+      headers:
+        Host: holyquran10.store
     udp: true
   - name: 🇺🇸 US 4 → tg@nicevpn123
     server: 104.18.82.47
@@ -1918,19 +2185,19 @@ proxies:
       path: /tg@herhero6
     udp: true
   - name: 🇺🇸 US 40 → tg@nicevpn123
-    server: quran-audio7.xyz
-    port: 443
+    server: v2hk1.594888.xyz
+    port: 35203
     type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
+    uuid: ef50b3a6-346a-365a-81a0-0d0584505393
     alterId: 0
     cipher: auto
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /maohk1
       headers:
-        Host: quran-audio7.xyz
+        Host: v2hk1.594888.xyz
     udp: true
   - name: 🇺🇸 US 41 → tg@nicevpn123
     server: 316us.ljydw.top
@@ -2109,21 +2376,6 @@ proxies:
         Host: 4bb4ced4.8200860.xyz
     udp: true
   - name: 🇺🇸 US 54 → tg@nicevpn123
-    server: vin1.0bad.com
-    port: 443
-    type: vmess
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /chat
-      headers:
-        Host: vin1.0bad.com
-    udp: true
-  - name: 🇺🇸 US 55 → tg@nicevpn123
     server: 13.40.6.241
     port: 43632
     type: vmess
@@ -2134,19 +2386,6 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: 🇺🇸 US 56 → tg@nicevpn123
-    server: 38.54.107.122
-    port: 52452
-    type: vmess
-    uuid: 6e28708e-60b5-4fda-aaa7-51940d3cc55b
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /tw2/getData
-    udp: true
-  - name: 🇺🇸 US 57 → tg@nicevpn123
     server: 38.47.96.219
     port: 48597
     type: vmess
@@ -2160,20 +2399,14 @@ proxies:
       path: /jp1/getData
     udp: true
   - name: 🇺🇸 US 58 → tg@nicevpn123
-    server: 38.47.110.212
-    port: 31263
-    type: vmess
-    uuid: f5b19092-44aa-408f-8148-f11b9ddc04d8
-    alterId: 64
-    cipher: auto
-    tls: true
+    server: 996hk.996cloud.xyz
+    port: 443
+    type: trojan
+    password: 3e55b4d3-1484-4295-baeb-2b2d15410436
     skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /jp2/getData
     udp: true
   - name: 🇺🇸 US 59 → tg@nicevpn123
-    server: 996hk.996cloud.xyz
+    server: 996jp.996cloud.xyz
     port: 443
     type: trojan
     password: 3e55b4d3-1484-4295-baeb-2b2d15410436
@@ -2193,7 +2426,7 @@ proxies:
       path: /jp1/getData
     udp: true
   - name: 🇺🇸 US 60 → tg@nicevpn123
-    server: 996jp.996cloud.xyz
+    server: 996sg.996cloud.xyz
     port: 443
     type: trojan
     password: 3e55b4d3-1484-4295-baeb-2b2d15410436
@@ -2207,6 +2440,13 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: 🇺🇸 US 62 → tg@nicevpn123
+    server: 996uk.996cloud.xyz
+    port: 443
+    type: trojan
+    password: 3e55b4d3-1484-4295-baeb-2b2d15410436
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 US 63 → tg@nicevpn123
     server: 996de.996cloud.xyz
     port: 443
     type: trojan
@@ -2233,22 +2473,7 @@ proxies:
     ws-opts:
       path: /jp2/getData
     udp: true
-  - name: 🇺🇸 US 73 → tg@nicevpn123
-    server: ca0831a7-9d9b-a828-144e-1cb47eae7ff9.cnnic.rip
-    port: 80
-    type: vmess
-    uuid: 3ed486c9-f581-477f-85b8-f48c0095064a
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: ca0831a7-9d9b-a828-144e-1cb47eae7ff9.cnnic.rip
-    udp: true
-  - name: 🇺🇸 US 74 → tg@nicevpn123
+  - name: 🇺🇸 US 75 → tg@nicevpn123
     server: sg17.microsoftjs.top
     port: 443
     type: vmess
@@ -2263,7 +2488,7 @@ proxies:
       headers:
         Host: sg17.microsoftjs.top
     udp: true
-  - name: 🇺🇸 US 75 → tg@nicevpn123
+  - name: 🇺🇸 US 76 → tg@nicevpn123
     server: auvwfuyse.76898102.xyz
     port: 15247
     type: vmess
@@ -2273,7 +2498,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸 US 76 → tg@nicevpn123
+  - name: 🇺🇸 US 77 → tg@nicevpn123
     server: sg10.microsoftjs.top
     port: 80
     type: vmess
@@ -2288,7 +2513,7 @@ proxies:
       headers:
         Host: sg10.microsoftjs.top
     udp: true
-  - name: 🇺🇸 US 77 → tg@nicevpn123
+  - name: 🇺🇸 US 78 → tg@nicevpn123
     server: auvwfuyse.76898102.xyz
     port: 15332
     type: vmess
@@ -2298,7 +2523,7 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸 US 78 → tg@nicevpn123
+  - name: 🇺🇸 US 79 → tg@nicevpn123
     server: 131.186.41.192
     port: 26297
     type: vmess
@@ -2308,7 +2533,22 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸 US 79 → tg@nicevpn123
+  - name: 🇺🇸 US 8 → tg@nicevpn123
+    server: s245.rpscloud3.cloud
+    port: 80
+    type: vmess
+    uuid: d65ca664-72d3-4a14-a836-00eadd0df46e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /graphql
+      headers:
+        Host: s245.rpscloud3.cloud
+    udp: true
+  - name: 🇺🇸 US 80 → tg@nicevpn123
     server: jp2.microsoftjs.top
     port: 80
     type: trojan
@@ -2316,22 +2556,7 @@ proxies:
     sni: tls.microsoftjs.top
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸 US 8 → tg@nicevpn123
-    server: holyquran3.store
-    port: 443
-    type: vmess
-    uuid: 8bbd91fe-a30b-4e29-bfc7-c28a44c0cb8f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: holyquran3.store
-    udp: true
-  - name: 🇺🇸 US 80 → tg@nicevpn123
+  - name: 🇺🇸 US 81 → tg@nicevpn123
     server: cf-topspeedone.uk
     port: 443
     type: vmess
@@ -2346,7 +2571,7 @@ proxies:
       headers:
         Host: cf-topspeedone.uk
     udp: true
-  - name: 🇺🇸 US 81 → tg@nicevpn123
+  - name: 🇺🇸 US 82 → tg@nicevpn123
     server: 172.67.69.16
     port: 2052
     type: vmess
@@ -2359,7 +2584,7 @@ proxies:
     ws-opts:
       path: /tg:@hkaa0
     udp: true
-  - name: 🇺🇸 US 82 → tg@nicevpn123
+  - name: 🇺🇸 US 83 → tg@nicevpn123
     server: freequranbook.uk
     port: 443
     type: vmess
@@ -2374,7 +2599,7 @@ proxies:
       headers:
         Host: freequranbook.uk
     udp: true
-  - name: 🇺🇸 US 83 → tg@nicevpn123
+  - name: 🇺🇸 US 84 → tg@nicevpn123
     server: quranweb20.xyz
     port: 443
     type: vmess
@@ -2389,7 +2614,7 @@ proxies:
       headers:
         Host: quranweb20.xyz
     udp: true
-  - name: 🇺🇸 US 84 → tg@nicevpn123
+  - name: 🇺🇸 US 85 → tg@nicevpn123
     server: quranweb7.xyz
     port: 443
     type: vmess
@@ -2404,7 +2629,7 @@ proxies:
       headers:
         Host: quranweb7.xyz
     udp: true
-  - name: 🇺🇸 US 86 → tg@nicevpn123
+  - name: 🇺🇸 US 87 → tg@nicevpn123
     server: quranweb40.xyz
     port: 443
     type: vmess
@@ -2419,7 +2644,7 @@ proxies:
       headers:
         Host: quranweb40.xyz
     udp: true
-  - name: 🇺🇸 US 88 → tg@nicevpn123
+  - name: 🇺🇸 US 89 → tg@nicevpn123
     server: quranweb41.xyz
     port: 443
     type: vmess
@@ -2434,7 +2659,22 @@ proxies:
       headers:
         Host: quranweb41.xyz
     udp: true
-  - name: 🇺🇸 US 89 → tg@nicevpn123
+  - name: 🇺🇸 US 9 → tg@nicevpn123
+    server: dl.filmino.online
+    port: 2096
+    type: vmess
+    uuid: fa5a6f0e-ab9d-45bf-e3ed-102dd5fee6b2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: dl.filmino.online
+    udp: true
+  - name: 🇺🇸 US 90 → tg@nicevpn123
     server: holyquran1.store
     port: 443
     type: vmess
@@ -2449,17 +2689,7 @@ proxies:
       headers:
         Host: holyquran1.store
     udp: true
-  - name: 🇺🇸 US 9 → tg@nicevpn123
-    server: 64.32.20.34
-    port: 54042
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸 US 90 → tg@nicevpn123
+  - name: 🇺🇸 US 91 → tg@nicevpn123
     server: quranweb4.xyz
     port: 443
     type: vmess
@@ -2474,7 +2704,7 @@ proxies:
       headers:
         Host: quranweb4.xyz
     udp: true
-  - name: 🇺🇸 US 91 → tg@nicevpn123
+  - name: 🇺🇸 US 92 → tg@nicevpn123
     server: quranweb22.xyz
     port: 443
     type: vmess
@@ -2489,7 +2719,7 @@ proxies:
       headers:
         Host: quranweb22.xyz
     udp: true
-  - name: 🇺🇸 US 92 → tg@nicevpn123
+  - name: 🇺🇸 US 93 → tg@nicevpn123
     server: quran-audio.xyz
     port: 443
     type: vmess
@@ -2504,7 +2734,7 @@ proxies:
       headers:
         Host: quran-audio.xyz
     udp: true
-  - name: 🇺🇸 US 94 → tg@nicevpn123
+  - name: 🇺🇸 US 95 → tg@nicevpn123
     server: quranweb24.xyz
     port: 443
     type: vmess
@@ -2518,21 +2748,6 @@ proxies:
       path: /current_time
       headers:
         Host: quranweb24.xyz
-    udp: true
-  - name: 🇺🇸 US 95 → tg@nicevpn123
-    server: cf.noaries.de
-    port: 2052
-    type: vmess
-    uuid: 44ca94c0-b0c8-4e15-ab35-0a7947d7093b
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        Host: cf.noaries.de
     udp: true
   - name: 🇺🇸 US 96 → tg@nicevpn123
     server: 198.2.208.179
@@ -2589,430 +2804,6 @@ proxies:
       headers:
         Host: quranweb26.xyz
     udp: true
-  - name: 🇺🇸 github.com/freefq - 美国惠普HP 1
-    server: 0kxedm1x8q8lksmj04.xingbayun.buzz
-    port: 4001
-    type: vmess
-    uuid: 399004bf-eaf0-4532-b139-ca4e79c5e27b
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 2
-    server: hucloud.tk
-    port: 443
-    type: vmess
-    uuid: 2df3ed4a-4313-45f9-b742-2f02ce593a6e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: hucloud.tk
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
-    server: us1.sharecentrepro.com
-    port: 443
-    type: vmess
-    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: us1.sharecentrepro.com
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
-    server: d.pgypgykmoljklj.xyz
-    port: 443
-    type: vmess
-    uuid: fa4cb529-3ac9-4268-bb04-ed4253813508
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: d.pgypgykmoljklj.xyz
-    udp: true
-  - name: 🇦🇺 github.com/freefq - 澳大利亚Kooweerup Secondary College 5
-    server: 203.30.189.1
-    port: 443
-    type: vmess
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ECTCJ0DF
-      headers:
-        Host: 154.v2ray3.xyz
-    udp: true
-  - name: github.com/freefq - 亚太地区  6
-    server: 103.152.221.113
-    port: 4721
-    type: vmess
-    uuid: 32f0c996-f0f8-3103-90a6-230b98ac384e
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰 github.com/freefq - 香港Amazon数据中心 7
-    server: 0kxedm1x8q8lksmj02.xingbayun.buzz
-    port: 2001
-    type: vmess
-    uuid: 399004bf-eaf0-4532-b139-ca4e79c5e27b
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国  8
-    server: 172.99.188.99
-    port: 5003
-    type: ss
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 9
-    server: pm.motori.pw
-    port: 8880
-    type: vmess
-    uuid: d1c59699-1874-49f1-b9ba-bbbfd7968075
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: pm.motori.pw
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 10
-    server: 104.21.234.238
-    port: 443
-    type: vmess
-    uuid: 128a73ee-a5a3-4dce-a832-5c3f60841032
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: jp03.cctvvip.ml
-    udp: true
-  - name: github.com/freefq - 欧盟  11
-    server: mtnx.ircf.space
-    port: 2096
-    type: vmess
-    uuid: 4a92ff9c-7940-4dba-e5de-22df9c20c798
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: social.progbyrazyar.ir
-    network: ws
-    ws-opts:
-      path: /nodejs
-      headers:
-        Host: social.progbyrazyar.ir
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 12
-    server: pyptom.cf
-    port: 443
-    type: vmess
-    uuid: 46bfdb59-83c6-4710-877e-c809b5a90dff
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /vpnneo
-      headers:
-        Host: pyptom.cf
-    udp: true
-  - name: 🇩🇰 github.com/freefq - 丹麦  14
-    server: 185.162.228.2
-    port: 443
-    type: vmess
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: 77.v2ray1.xyz
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 15
-    server: 23.227.38.27
-    port: 443
-    type: vmess
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: oplg1.cfcdn2.xyz
-    udp: true
-  - name: 🇱🇺 github.com/freefq - 卢森堡root.lu数据中心 16
-    server: ztl.ircf.space
-    port: 2096
-    type: vmess
-    uuid: 4a92ff9c-7940-4dba-e5de-22df9c20c798
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /nodejs
-      headers:
-        Host: social.progbyrazyar.ir
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
-    server: surongwei.eu.org
-    port: 443
-    type: vmess
-    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: surongwei.eu.org
-    udp: true
-  - name: github.com/freefq - 欧盟  18
-    server: 45.85.119.10
-    port: 2096
-    type: vmess
-    uuid: 8537598c-2adc-45eb-9eb5-14aa3cc94412
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: wow2.melo-eztic.shop
-    network: ws
-    ws-opts:
-      path: /@melov2ray
-      headers:
-        Host: wow2.melo-eztic.shop
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
-    server: fr1.trump2023.org
-    port: 443
-    type: vmess
-    uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /9JZFDTKE
-      headers:
-        Host: fr1.trump2023.org
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
-    server: 77.v2ray1.xyz
-    port: 443
-    type: vmess
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: 77.v2ray1.xyz
-    udp: true
-  - name: 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
-    server: 85.208.108.60
-    port: 8000
-    type: ss
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
-    server: generates-guitar-comparing-un.trycloudflare.com
-    port: 443
-    type: vmess
-    uuid: ef0a75a6-bd97-11ed-afa1-0242ac120002
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: generates-guitar-comparing-un.trycloudflare.com
-    udp: true
-  - name: github.com/freefq - 欧盟  24
-    server: 45.85.119.154
-    port: 2083
-    type: vmess
-    uuid: 14ddbed0-c5d2-11ed-b732-205c6d5f5d78
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: nl.0rd.net
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 25
-    server: 200.aquabazi.site
-    port: 443
-    type: vmess
-    uuid: 0b873cff-11ab-4716-c41a-04f886135091
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /suzhihan.eu.org/roewesu
-      headers:
-        Host: 200.aquabazi.site
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 26
-    server: sogood.linefriends.com
-    port: 443
-    type: vmess
-    uuid: acd17818-d434-49ae-80a6-d194bcaf6392
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /vvip
-      headers:
-        Host: sgray.jagoan.vip
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 27
-    server: ming2.kiwireich.com
-    port: 443
-    type: vmess
-    uuid: 18e5f40f-bda6-4c15-9334-e87cda6047af
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /ray
-      headers:
-        Host: ming2.kiwireich.com
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国  28
-    server: vus5.0bad.com
-    port: 443
-    type: vmess
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vus5.0bad.com
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国  29
-    server: vus3.0bad.com
-    port: 443
-    type: vmess
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vus3.0bad.com
-    udp: true
-  - name: github.com/freefq - 欧盟  31
-    server: 45.85.119.121
-    port: 443
-    type: vmess
-    uuid: 5632cdd9-910b-4976-8195-6111a68b6336
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: gemws.mainssh.xyz
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: gemws.mainssh.xyz
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 32
-    server: new8.hucloud-dns.xyz
-    port: 443
-    type: vmess
-    uuid: f11786fc-abf0-40e8-8177-992c699cc95f
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /0fa5cea95e7/
-      headers:
-        Host: new8.hucloud-dns.xyz
-    udp: true
-  - name: 🇬🇧 github.com/freefq - 英国  33
-    server: kt.p.mkitty.top
-    port: 443
-    type: trojan
-    password: 45c40b80-3d85-47aa-b6e4-3e0e2a066842
-    skip-cert-verify: true
-    udp: true
-  - name: _US_美国
-    server: 64.32.20.91
-    port: 45809
-    type: vmess
-    uuid: c1bad9a6-1482-4941-a0c4-e85f3cbbcb5a
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
   - name: _BZ_伯利兹
     server: 203.30.191.18
     port: 443
@@ -3027,6 +2818,13 @@ proxies:
       path: /dongtaiwang.com
       headers:
         Host: clash6.ssr-free.xyz
+    udp: true
+  - name: _KR_韩国 2
+    server: 43.201.33.242
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
     udp: true
   - name: _KR_韩国 3
     server: 43.201.37.176
@@ -3049,16 +2847,6 @@ proxies:
       path: /cf01
       headers:
         Host: 1st.starvskii2world.top
-    udp: true
-  - name: _NL_荷兰
-    server: 154.84.1.80
-    port: 42902
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
     udp: true
   - name: _JP_日本 2
     server: 85.208.108.60
@@ -3119,58 +2907,426 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: github.com/freefq-美国惠普HP11
+    ws-opts:
+      path: /
+      headers:
+        host: 0kxedm1x8q8lksmj04.xingbayun.buzz
+    server: 0kxedm1x8q8lksmj04.xingbayun.buzz
+    port: 4001
+    uuid: 399004bf-eaf0-4532-b139-ca4e79c5e27b
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点22
+    ws-opts:
+      path: /huhu
+    server: hucloud.tk
+    port: 443
+    uuid: 2df3ed4a-4313-45f9-b742-2f02ce593a6e
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点33
+    ws-opts:
+      path: /shirker
+      headers:
+        host: us1.sharecentrepro.com
+    server: us1.sharecentrepro.com
+    port: 443
+    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点44
+    ws-opts:
+      path: /mR17oBKzZ7
+    server: d.pgypgykmoljklj.xyz
+    port: 443
+    uuid: fa4cb529-3ac9-4268-bb04-ed4253813508
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-澳大利亚KooweerupSecondaryCollege55
+    ws-opts:
+      path: /ECTCJ0DF
+      headers:
+        host: 154.v2ray3.xyz
+    server: 203.30.189.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-亚太地区66
+    ws-opts:
+      path: /current_time
+      headers:
+        host: holyquran15.store
+    server: 103.152.221.113
+    port: 4721
+    uuid: 32f0c996-f0f8-3103-90a6-230b98ac384e
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: github.com/freefq-香港Amazon数据中心77
+    server: 0kxedm1x8q8lksmj02.xingbayun.buzz
+    port: 2001
+    uuid: 399004bf-eaf0-4532-b139-ca4e79c5e27b
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: ss
+    name: github.com/freefq-美国8
+    server: 172.99.188.99
+    port: 5003
+    password: YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk
+    cipher: aes-128-gcm
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点99
+    ws-opts:
+      path: /
+      headers:
+        host: pm.motori.pw
+    server: pm.motori.pw
+    port: 8880
+    uuid: d1c59699-1874-49f1-b9ba-bbbfd7968075
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点1010
+    ws-opts:
+      path: /cctv13.m3u8
+      headers:
+        host: jp03.cctvvip.ml
+    server: 104.21.234.238
+    port: 443
+    uuid: 128a73ee-a5a3-4dce-a832-5c3f60841032
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-欧盟1111
+    ws-opts:
+      path: /nodejs
+      headers:
+        host: social.progbyrazyar.ir
+    server: mtnx.ircf.space
+    port: 2096
+    uuid: 4a92ff9c-7940-4dba-e5de-22df9c20c798
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1212
+    ws-opts:
+      path: /vpnneo
+      headers:
+        host: pyptom.cf
+    server: pyptom.cf
+    port: 443
+    uuid: 46bfdb59-83c6-4710-877e-c809b5a90dff
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-丹麦1414
+    ws-opts:
+      path: /A2DJOPFT
+      headers:
+        host: 77.v2ray1.xyz
+    server: 185.162.228.2
+    port: 443
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点(shopify)1515
+    ws-opts:
+      path: /AUIKN8AU
+      headers:
+        host: oplg1.cfcdn2.xyz
+    server: 23.227.38.27
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-卢森堡root.lu数据中心1616
+    ws-opts:
+      path: /nodejs
+      headers:
+        host: social.progbyrazyar.ir
+    server: ztl.ircf.space
+    port: 2096
+    uuid: 4a92ff9c-7940-4dba-e5de-22df9c20c798
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1717
+    ws-opts:
+      path: /reffs7y26g0ua
+      headers:
+        host: surongwei.eu.org
+    server: surongwei.eu.org
+    port: 443
+    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-欧盟1818
+    ws-opts:
+      path: /@melov2ray
+      headers:
+        host: wow2.melo-eztic.shop
+    server: 45.85.119.10
+    port: 2096
+    uuid: 8537598c-2adc-45eb-9eb5-14aa3cc94412
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点1919
+    ws-opts:
+      path: /9JZFDTKE
+      headers:
+        host: fr1.trump2023.org
+    server: fr1.trump2023.org
+    port: 443
+    uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点2121
+    ws-opts:
+      path: /A2DJOPFT
+    server: 77.v2ray1.xyz
+    port: 443
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: ss
+    name: github.com/freefq-沙特阿拉伯ArabicComputerSystemCo.22
+    server: 85.208.108.60
+    port: 8000
+    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ
+    cipher: aes-128-gcm
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点2323
+    ws-opts:
+      path: /vmess?ed=2048
+      headers:
+        host: generates-guitar-comparing-un.trycloudflare.com
+    server: generates-guitar-comparing-un.trycloudflare.com
+    port: 443
+    uuid: ef0a75a6-bd97-11ed-afa1-0242ac120002
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-欧盟2424
+    ws-opts:
+      path: /@hopev2ray
+      headers:
+        host: nl.0rd.net
+    server: 45.85.119.154
+    port: 2083
+    uuid: 14ddbed0-c5d2-11ed-b732-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点2525
+    ws-opts:
+      path: /suzhihan.eu.org/roewesu
+      headers:
+        host: 200.aquabazi.site
+    server: 200.aquabazi.site
+    port: 443
+    uuid: 0b873cff-11ab-4716-c41a-04f886135091
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点2626
+    ws-opts:
+      path: /vvip
+      headers:
+        host: sgray.jagoan.vip
+    server: sogood.linefriends.com
+    port: 443
+    uuid: acd17818-d434-49ae-80a6-d194bcaf6392
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点2727
+    ws-opts:
+      path: /ray
+      headers:
+        host: ming2.kiwireich.com
+    server: ming2.kiwireich.com
+    port: 443
+    uuid: 18e5f40f-bda6-4c15-9334-e87cda6047af
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国2828
+    ws-opts:
+      path: /chat
+    server: vus5.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国2929
+    ws-opts:
+      path: /chat
+      headers:
+        host: vus3.0bad.com
+    server: vus3.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-欧盟3131
+    ws-opts:
+      path: /vmess
+      headers:
+        host: gemws.mainssh.xyz
+    server: 45.85.119.121
+    port: 443
+    uuid: 5632cdd9-910b-4976-8195-6111a68b6336
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点3232
+    ws-opts:
+      path: /0fa5cea95e7/
+      headers:
+        host: new8.hucloud-dns.xyz
+    server: new8.hucloud-dns.xyz
+    port: 443
+    uuid: f11786fc-abf0-40e8-8177-992c699cc95f
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: trojan
+    name: github.com/freefq-英国33
+    server: kt.p.mkitty.top
+    port: 443
+    password: 45c40b80-3d85-47aa-b6e4-3e0e2a066842
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - HK_speednode_0001
-      - SG_speednode_0002
-      - SG_speednode_0003
-      - JP_speednode_0006
-      - JP_speednode_0007
-      - US_speednode_0008
-      - JP_speednode_0009
-      - ZA_speednode_0010
-      - US_speednode_0012
-      - ZA_speednode_0013
-      - ZA_speednode_0014
-      - SE_speednode_0015
-      - SG_speednode_0016
+      - SG_speednode_0001
+      - ZA_speednode_0002
+      - US_speednode_0003
+      - US_speednode_0004
+      - SG_speednode_0005
+      - ZA_speednode_0006
+      - ZA_speednode_0008
+      - ZA_speednode_0009
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - US_speednode_0016
       - US_speednode_0017
-      - CN_speednode_0018
-      - US_speednode_0019
-      - US_speednode_0020
-      - US_speednode_0021
-      - SG_speednode_0022
-      - JP_speednode_0023
-      - SG_speednode_0024
+      - US_speednode_0018
+      - CN_speednode_0019
+      - CN_speednode_0020
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - US_speednode_0023
+      - CN_speednode_0024
       - CN_speednode_0025
-      - SG_speednode_0026
-      - FR_speednode_0028
-      - FR_speednode_0029
-      - CN_speednode_0030
-      - JP_speednode_0034
-      - CN_speednode_0035
-      - US_speednode_0036
-      - JP_speednode_0037
-      - CN_speednode_0039
-      - JP_speednode_0040
-      - JP_speednode_0041
-      - SG_speednode_0042
-      - CN_speednode_0046
-      - ZA_speednode_0047
-      - US_speednode_0048
-      - FR_speednode_0051
-      - FR_speednode_0052
-      - CN_speednode_0053
-      - FR_speednode_0054
-      - CN_speednode_0056
-      - FR_speednode_0057
-      - TW_speednode_0058
-      - TW_speednode_0059
-      - TW_speednode_0061
+      - US_speednode_0027
+      - JP_speednode_0028
+      - CN_speednode_0029
+      - US_speednode_0031
+      - CN_speednode_0032
+      - US_speednode_0033
+      - US_speednode_0034
+      - NL_speednode_0036
+      - CN_speednode_0037
+      - JP_speednode_0039
+      - US_speednode_0043
+      - ZA_speednode_0044
+      - HK_speednode_0045
+      - US_speednode_0047
+      - ZA_speednode_0048
+      - HK_speednode_0049
+      - speednode_0050
+      - JP_speednode_0051
+      - SG_speednode_0052
+      - US_speednode_0056
+      - US_speednode_0057
+      - US_speednode_0058
+      - US_speednode_0059
+      - US_speednode_0060
+      - JP_speednode_0062
+      - US_speednode_0063
+      - NL_speednode_0064
+      - JP_speednode_0065
+      - SG_speednode_0066
+      - TW_speednode_0067
+      - JP_speednode_0068
+      - US_speednode_0069
+      - CN_speednode_0070
+      - US_speednode_0071
+      - JP_speednode_0072
+      - JP_speednode_0074
+      - US_speednode_0075
       - IT 1 → tg@nicevpn123
       - MO 1 → tg@nicevpn123
       - TR 1 → tg@nicevpn123
@@ -3191,34 +3347,34 @@ proxy-groups:
       - 🇨🇳 TW 11 → tg@nicevpn123
       - 🇨🇳 TW 2 → tg@nicevpn123
       - 🇨🇳 TW 4 → tg@nicevpn123
+      - 🇫🇷 FR 1 → tg@nicevpn123
+      - 🇫🇷 FR 2 → tg@nicevpn123
+      - 🇫🇷 FR 3 → tg@nicevpn123
+      - 🇫🇷 FR 4 → tg@nicevpn123
       - 🇭🇰 HK 1 → tg@nicevpn123
+      - 🇯🇵 JP 1 → tg@nicevpn123
       - 🇯🇵 JP 10 → tg@nicevpn123
       - 🇯🇵 JP 11 → tg@nicevpn123
       - 🇯🇵 JP 12 → tg@nicevpn123
       - 🇯🇵 JP 13 → tg@nicevpn123
-      - 🇯🇵 JP 14 → tg@nicevpn123
-      - 🇯🇵 JP 15 → tg@nicevpn123
       - 🇯🇵 JP 16 → tg@nicevpn123
-      - 🇯🇵 JP 17 → tg@nicevpn123
-      - 🇯🇵 JP 18 → tg@nicevpn123
-      - 🇯🇵 JP 19 → tg@nicevpn123
       - 🇯🇵 JP 2 → tg@nicevpn123
       - 🇯🇵 JP 20 → tg@nicevpn123
       - 🇯🇵 JP 21 → tg@nicevpn123
+      - 🇯🇵 JP 22 → tg@nicevpn123
       - 🇯🇵 JP 23 → tg@nicevpn123
       - 🇯🇵 JP 24 → tg@nicevpn123
       - 🇯🇵 JP 25 → tg@nicevpn123
       - 🇯🇵 JP 26 → tg@nicevpn123
       - 🇯🇵 JP 27 → tg@nicevpn123
-      - 🇯🇵 JP 28 → tg@nicevpn123
       - 🇯🇵 JP 3 → tg@nicevpn123
       - 🇯🇵 JP 4 → tg@nicevpn123
       - 🇯🇵 JP 5 → tg@nicevpn123
       - 🇯🇵 JP 6 → tg@nicevpn123
+      - 🇯🇵 JP 7 → tg@nicevpn123
       - 🇯🇵 JP 8 → tg@nicevpn123
       - 🇯🇵 JP 9 → tg@nicevpn123
       - 🇰🇷 KR 1 → tg@nicevpn123
-      - 🇳🇱 NL 1 → tg@nicevpn123
       - 🇳🇱 NL 2 → tg@nicevpn123
       - 🇷🇺 RU 1 → tg@nicevpn123
       - 🇸🇬 SG 1 → tg@nicevpn123
@@ -3226,13 +3382,14 @@ proxy-groups:
       - 🇸🇬 SG 3 → tg@nicevpn123
       - 🇸🇬 SG 4 → tg@nicevpn123
       - 🇸🇬 SG 5 → tg@nicevpn123
+      - 🇸🇬 SG 6 → tg@nicevpn123
+      - 🇸🇬 SG 7 → tg@nicevpn123
       - 🇺🇸 US 1 → tg@nicevpn123
       - 🇺🇸 US 10 → tg@nicevpn123
-      - 🇺🇸 US 101 → tg@nicevpn123
+      - 🇺🇸 US 100 → tg@nicevpn123
       - 🇺🇸 US 102 → tg@nicevpn123
       - 🇺🇸 US 103 → tg@nicevpn123
       - 🇺🇸 US 104 → tg@nicevpn123
-      - 🇺🇸 US 105 → tg@nicevpn123
       - 🇺🇸 US 106 → tg@nicevpn123
       - 🇺🇸 US 107 → tg@nicevpn123
       - 🇺🇸 US 108 → tg@nicevpn123
@@ -3248,6 +3405,7 @@ proxy-groups:
       - 🇺🇸 US 117 → tg@nicevpn123
       - 🇺🇸 US 118 → tg@nicevpn123
       - 🇺🇸 US 119 → tg@nicevpn123
+      - 🇺🇸 US 12 → tg@nicevpn123
       - 🇺🇸 US 120 → tg@nicevpn123
       - 🇺🇸 US 121 → tg@nicevpn123
       - 🇺🇸 US 122 → tg@nicevpn123
@@ -3264,26 +3422,22 @@ proxy-groups:
       - 🇺🇸 US 132 → tg@nicevpn123
       - 🇺🇸 US 133 → tg@nicevpn123
       - 🇺🇸 US 134 → tg@nicevpn123
-      - 🇺🇸 US 14 → tg@nicevpn123
       - 🇺🇸 US 15 → tg@nicevpn123
-      - 🇺🇸 US 16 → tg@nicevpn123
       - 🇺🇸 US 17 → tg@nicevpn123
       - 🇺🇸 US 18 → tg@nicevpn123
       - 🇺🇸 US 19 → tg@nicevpn123
       - 🇺🇸 US 2 → tg@nicevpn123
-      - 🇺🇸 US 20 → tg@nicevpn123
       - 🇺🇸 US 21 → tg@nicevpn123
       - 🇺🇸 US 22 → tg@nicevpn123
-      - 🇺🇸 US 23 → tg@nicevpn123
       - 🇺🇸 US 24 → tg@nicevpn123
       - 🇺🇸 US 25 → tg@nicevpn123
       - 🇺🇸 US 26 → tg@nicevpn123
       - 🇺🇸 US 27 → tg@nicevpn123
       - 🇺🇸 US 28 → tg@nicevpn123
-      - 🇺🇸 US 29 → tg@nicevpn123
-      - 🇺🇸 US 3 → tg@nicevpn123
       - 🇺🇸 US 30 → tg@nicevpn123
       - 🇺🇸 US 31 → tg@nicevpn123
+      - 🇺🇸 US 32 → tg@nicevpn123
+      - 🇺🇸 US 33 → tg@nicevpn123
       - 🇺🇸 US 34 → tg@nicevpn123
       - 🇺🇸 US 35 → tg@nicevpn123
       - 🇺🇸 US 36 → tg@nicevpn123
@@ -3306,19 +3460,16 @@ proxy-groups:
       - 🇺🇸 US 51 → tg@nicevpn123
       - 🇺🇸 US 52 → tg@nicevpn123
       - 🇺🇸 US 54 → tg@nicevpn123
-      - 🇺🇸 US 55 → tg@nicevpn123
       - 🇺🇸 US 56 → tg@nicevpn123
-      - 🇺🇸 US 57 → tg@nicevpn123
       - 🇺🇸 US 58 → tg@nicevpn123
       - 🇺🇸 US 59 → tg@nicevpn123
       - 🇺🇸 US 6 → tg@nicevpn123
       - 🇺🇸 US 60 → tg@nicevpn123
       - 🇺🇸 US 61 → tg@nicevpn123
       - 🇺🇸 US 62 → tg@nicevpn123
+      - 🇺🇸 US 63 → tg@nicevpn123
       - 🇺🇸 US 64 → tg@nicevpn123
       - 🇺🇸 US 7 → tg@nicevpn123
-      - 🇺🇸 US 73 → tg@nicevpn123
-      - 🇺🇸 US 74 → tg@nicevpn123
       - 🇺🇸 US 75 → tg@nicevpn123
       - 🇺🇸 US 76 → tg@nicevpn123
       - 🇺🇸 US 77 → tg@nicevpn123
@@ -3330,112 +3481,125 @@ proxy-groups:
       - 🇺🇸 US 82 → tg@nicevpn123
       - 🇺🇸 US 83 → tg@nicevpn123
       - 🇺🇸 US 84 → tg@nicevpn123
-      - 🇺🇸 US 86 → tg@nicevpn123
-      - 🇺🇸 US 88 → tg@nicevpn123
+      - 🇺🇸 US 85 → tg@nicevpn123
+      - 🇺🇸 US 87 → tg@nicevpn123
       - 🇺🇸 US 89 → tg@nicevpn123
       - 🇺🇸 US 9 → tg@nicevpn123
       - 🇺🇸 US 90 → tg@nicevpn123
       - 🇺🇸 US 91 → tg@nicevpn123
       - 🇺🇸 US 92 → tg@nicevpn123
-      - 🇺🇸 US 94 → tg@nicevpn123
+      - 🇺🇸 US 93 → tg@nicevpn123
       - 🇺🇸 US 95 → tg@nicevpn123
       - 🇺🇸 US 96 → tg@nicevpn123
       - 🇺🇸 US 97 → tg@nicevpn123
       - 🇺🇸 US 98 → tg@nicevpn123
       - 🇺🇸 US 99 → tg@nicevpn123
-      - 🇺🇸 github.com/freefq - 美国惠普HP 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
-      - 🇦🇺 github.com/freefq - 澳大利亚Kooweerup Secondary College 5
-      - github.com/freefq - 亚太地区  6
-      - 🇭🇰 github.com/freefq - 香港Amazon数据中心 7
-      - 🇺🇸 github.com/freefq - 美国  8
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 9
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 10
-      - github.com/freefq - 欧盟  11
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 12
-      - 🇩🇰 github.com/freefq - 丹麦  14
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 15
-      - 🇱🇺 github.com/freefq - 卢森堡root.lu数据中心 16
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
-      - github.com/freefq - 欧盟  18
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
-      - 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
-      - github.com/freefq - 欧盟  24
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 25
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 26
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 27
-      - 🇺🇸 github.com/freefq - 美国  28
-      - 🇺🇸 github.com/freefq - 美国  29
-      - github.com/freefq - 欧盟  31
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 32
-      - 🇬🇧 github.com/freefq - 英国  33
-      - _US_美国
       - _BZ_伯利兹
+      - _KR_韩国 2
       - _KR_韩国 3
       - _US_美国 2
-      - _NL_荷兰
       - _JP_日本 2
       - _US_美国->🇩🇪_DE_德国 2
       - _JP_日本 3
       - _US_美国->🇩🇪_DE_德国 3
       - _SG_新加坡
       - 更新于:03-2412:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国惠普HP11
+      - github.com/freefq-美国CloudFlare公司CDN节点22
+      - github.com/freefq-美国CloudFlare公司CDN节点33
+      - github.com/freefq-美国CloudFlare节点44
+      - github.com/freefq-澳大利亚KooweerupSecondaryCollege55
+      - github.com/freefq-亚太地区66
+      - github.com/freefq-香港Amazon数据中心77
+      - github.com/freefq-美国8
+      - github.com/freefq-美国CloudFlare节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点1010
+      - github.com/freefq-欧盟1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-丹麦1414
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1515
+      - github.com/freefq-卢森堡root.lu数据中心1616
+      - github.com/freefq-美国CloudFlare节点1717
+      - github.com/freefq-欧盟1818
+      - github.com/freefq-美国CloudFlare公司CDN节点1919
+      - github.com/freefq-美国CloudFlare公司CDN节点2121
+      - github.com/freefq-沙特阿拉伯ArabicComputerSystemCo.22
+      - github.com/freefq-美国CloudFlare公司CDN节点2323
+      - github.com/freefq-欧盟2424
+      - github.com/freefq-美国CloudFlare节点2525
+      - github.com/freefq-美国CloudFlare公司CDN节点2626
+      - github.com/freefq-美国CloudFlare节点2727
+      - github.com/freefq-美国2828
+      - github.com/freefq-美国2929
+      - github.com/freefq-欧盟3131
+      - github.com/freefq-美国CloudFlare公司CDN节点3232
+      - github.com/freefq-英国33
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - HK_speednode_0001
-      - SG_speednode_0002
-      - SG_speednode_0003
-      - JP_speednode_0006
-      - JP_speednode_0007
-      - US_speednode_0008
-      - JP_speednode_0009
-      - ZA_speednode_0010
-      - US_speednode_0012
-      - ZA_speednode_0013
-      - ZA_speednode_0014
-      - SE_speednode_0015
-      - SG_speednode_0016
+      - SG_speednode_0001
+      - ZA_speednode_0002
+      - US_speednode_0003
+      - US_speednode_0004
+      - SG_speednode_0005
+      - ZA_speednode_0006
+      - ZA_speednode_0008
+      - ZA_speednode_0009
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - US_speednode_0016
       - US_speednode_0017
-      - CN_speednode_0018
-      - US_speednode_0019
-      - US_speednode_0020
-      - US_speednode_0021
-      - SG_speednode_0022
-      - JP_speednode_0023
-      - SG_speednode_0024
+      - US_speednode_0018
+      - CN_speednode_0019
+      - CN_speednode_0020
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - US_speednode_0023
+      - CN_speednode_0024
       - CN_speednode_0025
-      - SG_speednode_0026
-      - FR_speednode_0028
-      - FR_speednode_0029
-      - CN_speednode_0030
-      - JP_speednode_0034
-      - CN_speednode_0035
-      - US_speednode_0036
-      - JP_speednode_0037
-      - CN_speednode_0039
-      - JP_speednode_0040
-      - JP_speednode_0041
-      - SG_speednode_0042
-      - CN_speednode_0046
-      - ZA_speednode_0047
-      - US_speednode_0048
-      - FR_speednode_0051
-      - FR_speednode_0052
-      - CN_speednode_0053
-      - FR_speednode_0054
-      - CN_speednode_0056
-      - FR_speednode_0057
-      - TW_speednode_0058
-      - TW_speednode_0059
-      - TW_speednode_0061
+      - US_speednode_0027
+      - JP_speednode_0028
+      - CN_speednode_0029
+      - US_speednode_0031
+      - CN_speednode_0032
+      - US_speednode_0033
+      - US_speednode_0034
+      - NL_speednode_0036
+      - CN_speednode_0037
+      - JP_speednode_0039
+      - US_speednode_0043
+      - ZA_speednode_0044
+      - HK_speednode_0045
+      - US_speednode_0047
+      - ZA_speednode_0048
+      - HK_speednode_0049
+      - speednode_0050
+      - JP_speednode_0051
+      - SG_speednode_0052
+      - US_speednode_0056
+      - US_speednode_0057
+      - US_speednode_0058
+      - US_speednode_0059
+      - US_speednode_0060
+      - JP_speednode_0062
+      - US_speednode_0063
+      - NL_speednode_0064
+      - JP_speednode_0065
+      - SG_speednode_0066
+      - TW_speednode_0067
+      - JP_speednode_0068
+      - US_speednode_0069
+      - CN_speednode_0070
+      - US_speednode_0071
+      - JP_speednode_0072
+      - JP_speednode_0074
+      - US_speednode_0075
       - IT 1 → tg@nicevpn123
       - MO 1 → tg@nicevpn123
       - TR 1 → tg@nicevpn123
@@ -3456,34 +3620,34 @@ proxy-groups:
       - 🇨🇳 TW 11 → tg@nicevpn123
       - 🇨🇳 TW 2 → tg@nicevpn123
       - 🇨🇳 TW 4 → tg@nicevpn123
+      - 🇫🇷 FR 1 → tg@nicevpn123
+      - 🇫🇷 FR 2 → tg@nicevpn123
+      - 🇫🇷 FR 3 → tg@nicevpn123
+      - 🇫🇷 FR 4 → tg@nicevpn123
       - 🇭🇰 HK 1 → tg@nicevpn123
+      - 🇯🇵 JP 1 → tg@nicevpn123
       - 🇯🇵 JP 10 → tg@nicevpn123
       - 🇯🇵 JP 11 → tg@nicevpn123
       - 🇯🇵 JP 12 → tg@nicevpn123
       - 🇯🇵 JP 13 → tg@nicevpn123
-      - 🇯🇵 JP 14 → tg@nicevpn123
-      - 🇯🇵 JP 15 → tg@nicevpn123
       - 🇯🇵 JP 16 → tg@nicevpn123
-      - 🇯🇵 JP 17 → tg@nicevpn123
-      - 🇯🇵 JP 18 → tg@nicevpn123
-      - 🇯🇵 JP 19 → tg@nicevpn123
       - 🇯🇵 JP 2 → tg@nicevpn123
       - 🇯🇵 JP 20 → tg@nicevpn123
       - 🇯🇵 JP 21 → tg@nicevpn123
+      - 🇯🇵 JP 22 → tg@nicevpn123
       - 🇯🇵 JP 23 → tg@nicevpn123
       - 🇯🇵 JP 24 → tg@nicevpn123
       - 🇯🇵 JP 25 → tg@nicevpn123
       - 🇯🇵 JP 26 → tg@nicevpn123
       - 🇯🇵 JP 27 → tg@nicevpn123
-      - 🇯🇵 JP 28 → tg@nicevpn123
       - 🇯🇵 JP 3 → tg@nicevpn123
       - 🇯🇵 JP 4 → tg@nicevpn123
       - 🇯🇵 JP 5 → tg@nicevpn123
       - 🇯🇵 JP 6 → tg@nicevpn123
+      - 🇯🇵 JP 7 → tg@nicevpn123
       - 🇯🇵 JP 8 → tg@nicevpn123
       - 🇯🇵 JP 9 → tg@nicevpn123
       - 🇰🇷 KR 1 → tg@nicevpn123
-      - 🇳🇱 NL 1 → tg@nicevpn123
       - 🇳🇱 NL 2 → tg@nicevpn123
       - 🇷🇺 RU 1 → tg@nicevpn123
       - 🇸🇬 SG 1 → tg@nicevpn123
@@ -3491,13 +3655,14 @@ proxy-groups:
       - 🇸🇬 SG 3 → tg@nicevpn123
       - 🇸🇬 SG 4 → tg@nicevpn123
       - 🇸🇬 SG 5 → tg@nicevpn123
+      - 🇸🇬 SG 6 → tg@nicevpn123
+      - 🇸🇬 SG 7 → tg@nicevpn123
       - 🇺🇸 US 1 → tg@nicevpn123
       - 🇺🇸 US 10 → tg@nicevpn123
-      - 🇺🇸 US 101 → tg@nicevpn123
+      - 🇺🇸 US 100 → tg@nicevpn123
       - 🇺🇸 US 102 → tg@nicevpn123
       - 🇺🇸 US 103 → tg@nicevpn123
       - 🇺🇸 US 104 → tg@nicevpn123
-      - 🇺🇸 US 105 → tg@nicevpn123
       - 🇺🇸 US 106 → tg@nicevpn123
       - 🇺🇸 US 107 → tg@nicevpn123
       - 🇺🇸 US 108 → tg@nicevpn123
@@ -3513,6 +3678,7 @@ proxy-groups:
       - 🇺🇸 US 117 → tg@nicevpn123
       - 🇺🇸 US 118 → tg@nicevpn123
       - 🇺🇸 US 119 → tg@nicevpn123
+      - 🇺🇸 US 12 → tg@nicevpn123
       - 🇺🇸 US 120 → tg@nicevpn123
       - 🇺🇸 US 121 → tg@nicevpn123
       - 🇺🇸 US 122 → tg@nicevpn123
@@ -3529,26 +3695,22 @@ proxy-groups:
       - 🇺🇸 US 132 → tg@nicevpn123
       - 🇺🇸 US 133 → tg@nicevpn123
       - 🇺🇸 US 134 → tg@nicevpn123
-      - 🇺🇸 US 14 → tg@nicevpn123
       - 🇺🇸 US 15 → tg@nicevpn123
-      - 🇺🇸 US 16 → tg@nicevpn123
       - 🇺🇸 US 17 → tg@nicevpn123
       - 🇺🇸 US 18 → tg@nicevpn123
       - 🇺🇸 US 19 → tg@nicevpn123
       - 🇺🇸 US 2 → tg@nicevpn123
-      - 🇺🇸 US 20 → tg@nicevpn123
       - 🇺🇸 US 21 → tg@nicevpn123
       - 🇺🇸 US 22 → tg@nicevpn123
-      - 🇺🇸 US 23 → tg@nicevpn123
       - 🇺🇸 US 24 → tg@nicevpn123
       - 🇺🇸 US 25 → tg@nicevpn123
       - 🇺🇸 US 26 → tg@nicevpn123
       - 🇺🇸 US 27 → tg@nicevpn123
       - 🇺🇸 US 28 → tg@nicevpn123
-      - 🇺🇸 US 29 → tg@nicevpn123
-      - 🇺🇸 US 3 → tg@nicevpn123
       - 🇺🇸 US 30 → tg@nicevpn123
       - 🇺🇸 US 31 → tg@nicevpn123
+      - 🇺🇸 US 32 → tg@nicevpn123
+      - 🇺🇸 US 33 → tg@nicevpn123
       - 🇺🇸 US 34 → tg@nicevpn123
       - 🇺🇸 US 35 → tg@nicevpn123
       - 🇺🇸 US 36 → tg@nicevpn123
@@ -3571,19 +3733,16 @@ proxy-groups:
       - 🇺🇸 US 51 → tg@nicevpn123
       - 🇺🇸 US 52 → tg@nicevpn123
       - 🇺🇸 US 54 → tg@nicevpn123
-      - 🇺🇸 US 55 → tg@nicevpn123
       - 🇺🇸 US 56 → tg@nicevpn123
-      - 🇺🇸 US 57 → tg@nicevpn123
       - 🇺🇸 US 58 → tg@nicevpn123
       - 🇺🇸 US 59 → tg@nicevpn123
       - 🇺🇸 US 6 → tg@nicevpn123
       - 🇺🇸 US 60 → tg@nicevpn123
       - 🇺🇸 US 61 → tg@nicevpn123
       - 🇺🇸 US 62 → tg@nicevpn123
+      - 🇺🇸 US 63 → tg@nicevpn123
       - 🇺🇸 US 64 → tg@nicevpn123
       - 🇺🇸 US 7 → tg@nicevpn123
-      - 🇺🇸 US 73 → tg@nicevpn123
-      - 🇺🇸 US 74 → tg@nicevpn123
       - 🇺🇸 US 75 → tg@nicevpn123
       - 🇺🇸 US 76 → tg@nicevpn123
       - 🇺🇸 US 77 → tg@nicevpn123
@@ -3595,111 +3754,124 @@ proxy-groups:
       - 🇺🇸 US 82 → tg@nicevpn123
       - 🇺🇸 US 83 → tg@nicevpn123
       - 🇺🇸 US 84 → tg@nicevpn123
-      - 🇺🇸 US 86 → tg@nicevpn123
-      - 🇺🇸 US 88 → tg@nicevpn123
+      - 🇺🇸 US 85 → tg@nicevpn123
+      - 🇺🇸 US 87 → tg@nicevpn123
       - 🇺🇸 US 89 → tg@nicevpn123
       - 🇺🇸 US 9 → tg@nicevpn123
       - 🇺🇸 US 90 → tg@nicevpn123
       - 🇺🇸 US 91 → tg@nicevpn123
       - 🇺🇸 US 92 → tg@nicevpn123
-      - 🇺🇸 US 94 → tg@nicevpn123
+      - 🇺🇸 US 93 → tg@nicevpn123
       - 🇺🇸 US 95 → tg@nicevpn123
       - 🇺🇸 US 96 → tg@nicevpn123
       - 🇺🇸 US 97 → tg@nicevpn123
       - 🇺🇸 US 98 → tg@nicevpn123
       - 🇺🇸 US 99 → tg@nicevpn123
-      - 🇺🇸 github.com/freefq - 美国惠普HP 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
-      - 🇦🇺 github.com/freefq - 澳大利亚Kooweerup Secondary College 5
-      - github.com/freefq - 亚太地区  6
-      - 🇭🇰 github.com/freefq - 香港Amazon数据中心 7
-      - 🇺🇸 github.com/freefq - 美国  8
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 9
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 10
-      - github.com/freefq - 欧盟  11
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 12
-      - 🇩🇰 github.com/freefq - 丹麦  14
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 15
-      - 🇱🇺 github.com/freefq - 卢森堡root.lu数据中心 16
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
-      - github.com/freefq - 欧盟  18
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
-      - 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
-      - github.com/freefq - 欧盟  24
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 25
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 26
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 27
-      - 🇺🇸 github.com/freefq - 美国  28
-      - 🇺🇸 github.com/freefq - 美国  29
-      - github.com/freefq - 欧盟  31
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 32
-      - 🇬🇧 github.com/freefq - 英国  33
-      - _US_美国
       - _BZ_伯利兹
+      - _KR_韩国 2
       - _KR_韩国 3
       - _US_美国 2
-      - _NL_荷兰
       - _JP_日本 2
       - _US_美国->🇩🇪_DE_德国 2
       - _JP_日本 3
       - _US_美国->🇩🇪_DE_德国 3
       - _SG_新加坡
       - 更新于:03-2412:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国惠普HP11
+      - github.com/freefq-美国CloudFlare公司CDN节点22
+      - github.com/freefq-美国CloudFlare公司CDN节点33
+      - github.com/freefq-美国CloudFlare节点44
+      - github.com/freefq-澳大利亚KooweerupSecondaryCollege55
+      - github.com/freefq-亚太地区66
+      - github.com/freefq-香港Amazon数据中心77
+      - github.com/freefq-美国8
+      - github.com/freefq-美国CloudFlare节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点1010
+      - github.com/freefq-欧盟1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-丹麦1414
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1515
+      - github.com/freefq-卢森堡root.lu数据中心1616
+      - github.com/freefq-美国CloudFlare节点1717
+      - github.com/freefq-欧盟1818
+      - github.com/freefq-美国CloudFlare公司CDN节点1919
+      - github.com/freefq-美国CloudFlare公司CDN节点2121
+      - github.com/freefq-沙特阿拉伯ArabicComputerSystemCo.22
+      - github.com/freefq-美国CloudFlare公司CDN节点2323
+      - github.com/freefq-欧盟2424
+      - github.com/freefq-美国CloudFlare节点2525
+      - github.com/freefq-美国CloudFlare公司CDN节点2626
+      - github.com/freefq-美国CloudFlare节点2727
+      - github.com/freefq-美国2828
+      - github.com/freefq-美国2929
+      - github.com/freefq-欧盟3131
+      - github.com/freefq-美国CloudFlare公司CDN节点3232
+      - github.com/freefq-英国33
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - HK_speednode_0001
-      - SG_speednode_0002
-      - SG_speednode_0003
-      - JP_speednode_0006
-      - JP_speednode_0007
-      - US_speednode_0008
-      - JP_speednode_0009
-      - ZA_speednode_0010
-      - US_speednode_0012
-      - ZA_speednode_0013
-      - ZA_speednode_0014
-      - SE_speednode_0015
-      - SG_speednode_0016
+      - SG_speednode_0001
+      - ZA_speednode_0002
+      - US_speednode_0003
+      - US_speednode_0004
+      - SG_speednode_0005
+      - ZA_speednode_0006
+      - ZA_speednode_0008
+      - ZA_speednode_0009
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - US_speednode_0016
       - US_speednode_0017
-      - CN_speednode_0018
-      - US_speednode_0019
-      - US_speednode_0020
-      - US_speednode_0021
-      - SG_speednode_0022
-      - JP_speednode_0023
-      - SG_speednode_0024
+      - US_speednode_0018
+      - CN_speednode_0019
+      - CN_speednode_0020
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - US_speednode_0023
+      - CN_speednode_0024
       - CN_speednode_0025
-      - SG_speednode_0026
-      - FR_speednode_0028
-      - FR_speednode_0029
-      - CN_speednode_0030
-      - JP_speednode_0034
-      - CN_speednode_0035
-      - US_speednode_0036
-      - JP_speednode_0037
-      - CN_speednode_0039
-      - JP_speednode_0040
-      - JP_speednode_0041
-      - SG_speednode_0042
-      - CN_speednode_0046
-      - ZA_speednode_0047
-      - US_speednode_0048
-      - FR_speednode_0051
-      - FR_speednode_0052
-      - CN_speednode_0053
-      - FR_speednode_0054
-      - CN_speednode_0056
-      - FR_speednode_0057
-      - TW_speednode_0058
-      - TW_speednode_0059
-      - TW_speednode_0061
+      - US_speednode_0027
+      - JP_speednode_0028
+      - CN_speednode_0029
+      - US_speednode_0031
+      - CN_speednode_0032
+      - US_speednode_0033
+      - US_speednode_0034
+      - NL_speednode_0036
+      - CN_speednode_0037
+      - JP_speednode_0039
+      - US_speednode_0043
+      - ZA_speednode_0044
+      - HK_speednode_0045
+      - US_speednode_0047
+      - ZA_speednode_0048
+      - HK_speednode_0049
+      - speednode_0050
+      - JP_speednode_0051
+      - SG_speednode_0052
+      - US_speednode_0056
+      - US_speednode_0057
+      - US_speednode_0058
+      - US_speednode_0059
+      - US_speednode_0060
+      - JP_speednode_0062
+      - US_speednode_0063
+      - NL_speednode_0064
+      - JP_speednode_0065
+      - SG_speednode_0066
+      - TW_speednode_0067
+      - JP_speednode_0068
+      - US_speednode_0069
+      - CN_speednode_0070
+      - US_speednode_0071
+      - JP_speednode_0072
+      - JP_speednode_0074
+      - US_speednode_0075
       - IT 1 → tg@nicevpn123
       - MO 1 → tg@nicevpn123
       - TR 1 → tg@nicevpn123
@@ -3720,34 +3892,34 @@ proxy-groups:
       - 🇨🇳 TW 11 → tg@nicevpn123
       - 🇨🇳 TW 2 → tg@nicevpn123
       - 🇨🇳 TW 4 → tg@nicevpn123
+      - 🇫🇷 FR 1 → tg@nicevpn123
+      - 🇫🇷 FR 2 → tg@nicevpn123
+      - 🇫🇷 FR 3 → tg@nicevpn123
+      - 🇫🇷 FR 4 → tg@nicevpn123
       - 🇭🇰 HK 1 → tg@nicevpn123
+      - 🇯🇵 JP 1 → tg@nicevpn123
       - 🇯🇵 JP 10 → tg@nicevpn123
       - 🇯🇵 JP 11 → tg@nicevpn123
       - 🇯🇵 JP 12 → tg@nicevpn123
       - 🇯🇵 JP 13 → tg@nicevpn123
-      - 🇯🇵 JP 14 → tg@nicevpn123
-      - 🇯🇵 JP 15 → tg@nicevpn123
       - 🇯🇵 JP 16 → tg@nicevpn123
-      - 🇯🇵 JP 17 → tg@nicevpn123
-      - 🇯🇵 JP 18 → tg@nicevpn123
-      - 🇯🇵 JP 19 → tg@nicevpn123
       - 🇯🇵 JP 2 → tg@nicevpn123
       - 🇯🇵 JP 20 → tg@nicevpn123
       - 🇯🇵 JP 21 → tg@nicevpn123
+      - 🇯🇵 JP 22 → tg@nicevpn123
       - 🇯🇵 JP 23 → tg@nicevpn123
       - 🇯🇵 JP 24 → tg@nicevpn123
       - 🇯🇵 JP 25 → tg@nicevpn123
       - 🇯🇵 JP 26 → tg@nicevpn123
       - 🇯🇵 JP 27 → tg@nicevpn123
-      - 🇯🇵 JP 28 → tg@nicevpn123
       - 🇯🇵 JP 3 → tg@nicevpn123
       - 🇯🇵 JP 4 → tg@nicevpn123
       - 🇯🇵 JP 5 → tg@nicevpn123
       - 🇯🇵 JP 6 → tg@nicevpn123
+      - 🇯🇵 JP 7 → tg@nicevpn123
       - 🇯🇵 JP 8 → tg@nicevpn123
       - 🇯🇵 JP 9 → tg@nicevpn123
       - 🇰🇷 KR 1 → tg@nicevpn123
-      - 🇳🇱 NL 1 → tg@nicevpn123
       - 🇳🇱 NL 2 → tg@nicevpn123
       - 🇷🇺 RU 1 → tg@nicevpn123
       - 🇸🇬 SG 1 → tg@nicevpn123
@@ -3755,13 +3927,14 @@ proxy-groups:
       - 🇸🇬 SG 3 → tg@nicevpn123
       - 🇸🇬 SG 4 → tg@nicevpn123
       - 🇸🇬 SG 5 → tg@nicevpn123
+      - 🇸🇬 SG 6 → tg@nicevpn123
+      - 🇸🇬 SG 7 → tg@nicevpn123
       - 🇺🇸 US 1 → tg@nicevpn123
       - 🇺🇸 US 10 → tg@nicevpn123
-      - 🇺🇸 US 101 → tg@nicevpn123
+      - 🇺🇸 US 100 → tg@nicevpn123
       - 🇺🇸 US 102 → tg@nicevpn123
       - 🇺🇸 US 103 → tg@nicevpn123
       - 🇺🇸 US 104 → tg@nicevpn123
-      - 🇺🇸 US 105 → tg@nicevpn123
       - 🇺🇸 US 106 → tg@nicevpn123
       - 🇺🇸 US 107 → tg@nicevpn123
       - 🇺🇸 US 108 → tg@nicevpn123
@@ -3777,6 +3950,7 @@ proxy-groups:
       - 🇺🇸 US 117 → tg@nicevpn123
       - 🇺🇸 US 118 → tg@nicevpn123
       - 🇺🇸 US 119 → tg@nicevpn123
+      - 🇺🇸 US 12 → tg@nicevpn123
       - 🇺🇸 US 120 → tg@nicevpn123
       - 🇺🇸 US 121 → tg@nicevpn123
       - 🇺🇸 US 122 → tg@nicevpn123
@@ -3793,26 +3967,22 @@ proxy-groups:
       - 🇺🇸 US 132 → tg@nicevpn123
       - 🇺🇸 US 133 → tg@nicevpn123
       - 🇺🇸 US 134 → tg@nicevpn123
-      - 🇺🇸 US 14 → tg@nicevpn123
       - 🇺🇸 US 15 → tg@nicevpn123
-      - 🇺🇸 US 16 → tg@nicevpn123
       - 🇺🇸 US 17 → tg@nicevpn123
       - 🇺🇸 US 18 → tg@nicevpn123
       - 🇺🇸 US 19 → tg@nicevpn123
       - 🇺🇸 US 2 → tg@nicevpn123
-      - 🇺🇸 US 20 → tg@nicevpn123
       - 🇺🇸 US 21 → tg@nicevpn123
       - 🇺🇸 US 22 → tg@nicevpn123
-      - 🇺🇸 US 23 → tg@nicevpn123
       - 🇺🇸 US 24 → tg@nicevpn123
       - 🇺🇸 US 25 → tg@nicevpn123
       - 🇺🇸 US 26 → tg@nicevpn123
       - 🇺🇸 US 27 → tg@nicevpn123
       - 🇺🇸 US 28 → tg@nicevpn123
-      - 🇺🇸 US 29 → tg@nicevpn123
-      - 🇺🇸 US 3 → tg@nicevpn123
       - 🇺🇸 US 30 → tg@nicevpn123
       - 🇺🇸 US 31 → tg@nicevpn123
+      - 🇺🇸 US 32 → tg@nicevpn123
+      - 🇺🇸 US 33 → tg@nicevpn123
       - 🇺🇸 US 34 → tg@nicevpn123
       - 🇺🇸 US 35 → tg@nicevpn123
       - 🇺🇸 US 36 → tg@nicevpn123
@@ -3835,19 +4005,16 @@ proxy-groups:
       - 🇺🇸 US 51 → tg@nicevpn123
       - 🇺🇸 US 52 → tg@nicevpn123
       - 🇺🇸 US 54 → tg@nicevpn123
-      - 🇺🇸 US 55 → tg@nicevpn123
       - 🇺🇸 US 56 → tg@nicevpn123
-      - 🇺🇸 US 57 → tg@nicevpn123
       - 🇺🇸 US 58 → tg@nicevpn123
       - 🇺🇸 US 59 → tg@nicevpn123
       - 🇺🇸 US 6 → tg@nicevpn123
       - 🇺🇸 US 60 → tg@nicevpn123
       - 🇺🇸 US 61 → tg@nicevpn123
       - 🇺🇸 US 62 → tg@nicevpn123
+      - 🇺🇸 US 63 → tg@nicevpn123
       - 🇺🇸 US 64 → tg@nicevpn123
       - 🇺🇸 US 7 → tg@nicevpn123
-      - 🇺🇸 US 73 → tg@nicevpn123
-      - 🇺🇸 US 74 → tg@nicevpn123
       - 🇺🇸 US 75 → tg@nicevpn123
       - 🇺🇸 US 76 → tg@nicevpn123
       - 🇺🇸 US 77 → tg@nicevpn123
@@ -3859,60 +4026,59 @@ proxy-groups:
       - 🇺🇸 US 82 → tg@nicevpn123
       - 🇺🇸 US 83 → tg@nicevpn123
       - 🇺🇸 US 84 → tg@nicevpn123
-      - 🇺🇸 US 86 → tg@nicevpn123
-      - 🇺🇸 US 88 → tg@nicevpn123
+      - 🇺🇸 US 85 → tg@nicevpn123
+      - 🇺🇸 US 87 → tg@nicevpn123
       - 🇺🇸 US 89 → tg@nicevpn123
       - 🇺🇸 US 9 → tg@nicevpn123
       - 🇺🇸 US 90 → tg@nicevpn123
       - 🇺🇸 US 91 → tg@nicevpn123
       - 🇺🇸 US 92 → tg@nicevpn123
-      - 🇺🇸 US 94 → tg@nicevpn123
+      - 🇺🇸 US 93 → tg@nicevpn123
       - 🇺🇸 US 95 → tg@nicevpn123
       - 🇺🇸 US 96 → tg@nicevpn123
       - 🇺🇸 US 97 → tg@nicevpn123
       - 🇺🇸 US 98 → tg@nicevpn123
       - 🇺🇸 US 99 → tg@nicevpn123
-      - 🇺🇸 github.com/freefq - 美国惠普HP 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
-      - 🇦🇺 github.com/freefq - 澳大利亚Kooweerup Secondary College 5
-      - github.com/freefq - 亚太地区  6
-      - 🇭🇰 github.com/freefq - 香港Amazon数据中心 7
-      - 🇺🇸 github.com/freefq - 美国  8
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 9
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 10
-      - github.com/freefq - 欧盟  11
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 12
-      - 🇩🇰 github.com/freefq - 丹麦  14
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 15
-      - 🇱🇺 github.com/freefq - 卢森堡root.lu数据中心 16
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
-      - github.com/freefq - 欧盟  18
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
-      - 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
-      - github.com/freefq - 欧盟  24
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 25
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 26
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 27
-      - 🇺🇸 github.com/freefq - 美国  28
-      - 🇺🇸 github.com/freefq - 美国  29
-      - github.com/freefq - 欧盟  31
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 32
-      - 🇬🇧 github.com/freefq - 英国  33
-      - _US_美国
       - _BZ_伯利兹
+      - _KR_韩国 2
       - _KR_韩国 3
       - _US_美国 2
-      - _NL_荷兰
       - _JP_日本 2
       - _US_美国->🇩🇪_DE_德国 2
       - _JP_日本 3
       - _US_美国->🇩🇪_DE_德国 3
       - _SG_新加坡
       - 更新于:03-2412:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国惠普HP11
+      - github.com/freefq-美国CloudFlare公司CDN节点22
+      - github.com/freefq-美国CloudFlare公司CDN节点33
+      - github.com/freefq-美国CloudFlare节点44
+      - github.com/freefq-澳大利亚KooweerupSecondaryCollege55
+      - github.com/freefq-亚太地区66
+      - github.com/freefq-香港Amazon数据中心77
+      - github.com/freefq-美国8
+      - github.com/freefq-美国CloudFlare节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点1010
+      - github.com/freefq-欧盟1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-丹麦1414
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1515
+      - github.com/freefq-卢森堡root.lu数据中心1616
+      - github.com/freefq-美国CloudFlare节点1717
+      - github.com/freefq-欧盟1818
+      - github.com/freefq-美国CloudFlare公司CDN节点1919
+      - github.com/freefq-美国CloudFlare公司CDN节点2121
+      - github.com/freefq-沙特阿拉伯ArabicComputerSystemCo.22
+      - github.com/freefq-美国CloudFlare公司CDN节点2323
+      - github.com/freefq-欧盟2424
+      - github.com/freefq-美国CloudFlare节点2525
+      - github.com/freefq-美国CloudFlare公司CDN节点2626
+      - github.com/freefq-美国CloudFlare节点2727
+      - github.com/freefq-美国2828
+      - github.com/freefq-美国2929
+      - github.com/freefq-欧盟3131
+      - github.com/freefq-美国CloudFlare公司CDN节点3232
+      - github.com/freefq-英国33
   - name: 📲 电报信息
     type: select
     proxies:
@@ -3950,52 +4116,66 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - HK_speednode_0001
-      - SG_speednode_0002
-      - SG_speednode_0003
-      - JP_speednode_0006
-      - JP_speednode_0007
-      - US_speednode_0008
-      - JP_speednode_0009
-      - ZA_speednode_0010
-      - US_speednode_0012
-      - ZA_speednode_0013
-      - ZA_speednode_0014
-      - SE_speednode_0015
-      - SG_speednode_0016
+      - SG_speednode_0001
+      - ZA_speednode_0002
+      - US_speednode_0003
+      - US_speednode_0004
+      - SG_speednode_0005
+      - ZA_speednode_0006
+      - ZA_speednode_0008
+      - ZA_speednode_0009
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - US_speednode_0016
       - US_speednode_0017
-      - CN_speednode_0018
-      - US_speednode_0019
-      - US_speednode_0020
-      - US_speednode_0021
-      - SG_speednode_0022
-      - JP_speednode_0023
-      - SG_speednode_0024
+      - US_speednode_0018
+      - CN_speednode_0019
+      - CN_speednode_0020
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - US_speednode_0023
+      - CN_speednode_0024
       - CN_speednode_0025
-      - SG_speednode_0026
-      - FR_speednode_0028
-      - FR_speednode_0029
-      - CN_speednode_0030
-      - JP_speednode_0034
-      - CN_speednode_0035
-      - US_speednode_0036
-      - JP_speednode_0037
-      - CN_speednode_0039
-      - JP_speednode_0040
-      - JP_speednode_0041
-      - SG_speednode_0042
-      - CN_speednode_0046
-      - ZA_speednode_0047
-      - US_speednode_0048
-      - FR_speednode_0051
-      - FR_speednode_0052
-      - CN_speednode_0053
-      - FR_speednode_0054
-      - CN_speednode_0056
-      - FR_speednode_0057
-      - TW_speednode_0058
-      - TW_speednode_0059
-      - TW_speednode_0061
+      - US_speednode_0027
+      - JP_speednode_0028
+      - CN_speednode_0029
+      - US_speednode_0031
+      - CN_speednode_0032
+      - US_speednode_0033
+      - US_speednode_0034
+      - NL_speednode_0036
+      - CN_speednode_0037
+      - JP_speednode_0039
+      - US_speednode_0043
+      - ZA_speednode_0044
+      - HK_speednode_0045
+      - US_speednode_0047
+      - ZA_speednode_0048
+      - HK_speednode_0049
+      - speednode_0050
+      - JP_speednode_0051
+      - SG_speednode_0052
+      - US_speednode_0056
+      - US_speednode_0057
+      - US_speednode_0058
+      - US_speednode_0059
+      - US_speednode_0060
+      - JP_speednode_0062
+      - US_speednode_0063
+      - NL_speednode_0064
+      - JP_speednode_0065
+      - SG_speednode_0066
+      - TW_speednode_0067
+      - JP_speednode_0068
+      - US_speednode_0069
+      - CN_speednode_0070
+      - US_speednode_0071
+      - JP_speednode_0072
+      - JP_speednode_0074
+      - US_speednode_0075
       - IT 1 → tg@nicevpn123
       - MO 1 → tg@nicevpn123
       - TR 1 → tg@nicevpn123
@@ -4016,34 +4196,34 @@ proxy-groups:
       - 🇨🇳 TW 11 → tg@nicevpn123
       - 🇨🇳 TW 2 → tg@nicevpn123
       - 🇨🇳 TW 4 → tg@nicevpn123
+      - 🇫🇷 FR 1 → tg@nicevpn123
+      - 🇫🇷 FR 2 → tg@nicevpn123
+      - 🇫🇷 FR 3 → tg@nicevpn123
+      - 🇫🇷 FR 4 → tg@nicevpn123
       - 🇭🇰 HK 1 → tg@nicevpn123
+      - 🇯🇵 JP 1 → tg@nicevpn123
       - 🇯🇵 JP 10 → tg@nicevpn123
       - 🇯🇵 JP 11 → tg@nicevpn123
       - 🇯🇵 JP 12 → tg@nicevpn123
       - 🇯🇵 JP 13 → tg@nicevpn123
-      - 🇯🇵 JP 14 → tg@nicevpn123
-      - 🇯🇵 JP 15 → tg@nicevpn123
       - 🇯🇵 JP 16 → tg@nicevpn123
-      - 🇯🇵 JP 17 → tg@nicevpn123
-      - 🇯🇵 JP 18 → tg@nicevpn123
-      - 🇯🇵 JP 19 → tg@nicevpn123
       - 🇯🇵 JP 2 → tg@nicevpn123
       - 🇯🇵 JP 20 → tg@nicevpn123
       - 🇯🇵 JP 21 → tg@nicevpn123
+      - 🇯🇵 JP 22 → tg@nicevpn123
       - 🇯🇵 JP 23 → tg@nicevpn123
       - 🇯🇵 JP 24 → tg@nicevpn123
       - 🇯🇵 JP 25 → tg@nicevpn123
       - 🇯🇵 JP 26 → tg@nicevpn123
       - 🇯🇵 JP 27 → tg@nicevpn123
-      - 🇯🇵 JP 28 → tg@nicevpn123
       - 🇯🇵 JP 3 → tg@nicevpn123
       - 🇯🇵 JP 4 → tg@nicevpn123
       - 🇯🇵 JP 5 → tg@nicevpn123
       - 🇯🇵 JP 6 → tg@nicevpn123
+      - 🇯🇵 JP 7 → tg@nicevpn123
       - 🇯🇵 JP 8 → tg@nicevpn123
       - 🇯🇵 JP 9 → tg@nicevpn123
       - 🇰🇷 KR 1 → tg@nicevpn123
-      - 🇳🇱 NL 1 → tg@nicevpn123
       - 🇳🇱 NL 2 → tg@nicevpn123
       - 🇷🇺 RU 1 → tg@nicevpn123
       - 🇸🇬 SG 1 → tg@nicevpn123
@@ -4051,13 +4231,14 @@ proxy-groups:
       - 🇸🇬 SG 3 → tg@nicevpn123
       - 🇸🇬 SG 4 → tg@nicevpn123
       - 🇸🇬 SG 5 → tg@nicevpn123
+      - 🇸🇬 SG 6 → tg@nicevpn123
+      - 🇸🇬 SG 7 → tg@nicevpn123
       - 🇺🇸 US 1 → tg@nicevpn123
       - 🇺🇸 US 10 → tg@nicevpn123
-      - 🇺🇸 US 101 → tg@nicevpn123
+      - 🇺🇸 US 100 → tg@nicevpn123
       - 🇺🇸 US 102 → tg@nicevpn123
       - 🇺🇸 US 103 → tg@nicevpn123
       - 🇺🇸 US 104 → tg@nicevpn123
-      - 🇺🇸 US 105 → tg@nicevpn123
       - 🇺🇸 US 106 → tg@nicevpn123
       - 🇺🇸 US 107 → tg@nicevpn123
       - 🇺🇸 US 108 → tg@nicevpn123
@@ -4073,6 +4254,7 @@ proxy-groups:
       - 🇺🇸 US 117 → tg@nicevpn123
       - 🇺🇸 US 118 → tg@nicevpn123
       - 🇺🇸 US 119 → tg@nicevpn123
+      - 🇺🇸 US 12 → tg@nicevpn123
       - 🇺🇸 US 120 → tg@nicevpn123
       - 🇺🇸 US 121 → tg@nicevpn123
       - 🇺🇸 US 122 → tg@nicevpn123
@@ -4089,26 +4271,22 @@ proxy-groups:
       - 🇺🇸 US 132 → tg@nicevpn123
       - 🇺🇸 US 133 → tg@nicevpn123
       - 🇺🇸 US 134 → tg@nicevpn123
-      - 🇺🇸 US 14 → tg@nicevpn123
       - 🇺🇸 US 15 → tg@nicevpn123
-      - 🇺🇸 US 16 → tg@nicevpn123
       - 🇺🇸 US 17 → tg@nicevpn123
       - 🇺🇸 US 18 → tg@nicevpn123
       - 🇺🇸 US 19 → tg@nicevpn123
       - 🇺🇸 US 2 → tg@nicevpn123
-      - 🇺🇸 US 20 → tg@nicevpn123
       - 🇺🇸 US 21 → tg@nicevpn123
       - 🇺🇸 US 22 → tg@nicevpn123
-      - 🇺🇸 US 23 → tg@nicevpn123
       - 🇺🇸 US 24 → tg@nicevpn123
       - 🇺🇸 US 25 → tg@nicevpn123
       - 🇺🇸 US 26 → tg@nicevpn123
       - 🇺🇸 US 27 → tg@nicevpn123
       - 🇺🇸 US 28 → tg@nicevpn123
-      - 🇺🇸 US 29 → tg@nicevpn123
-      - 🇺🇸 US 3 → tg@nicevpn123
       - 🇺🇸 US 30 → tg@nicevpn123
       - 🇺🇸 US 31 → tg@nicevpn123
+      - 🇺🇸 US 32 → tg@nicevpn123
+      - 🇺🇸 US 33 → tg@nicevpn123
       - 🇺🇸 US 34 → tg@nicevpn123
       - 🇺🇸 US 35 → tg@nicevpn123
       - 🇺🇸 US 36 → tg@nicevpn123
@@ -4131,19 +4309,16 @@ proxy-groups:
       - 🇺🇸 US 51 → tg@nicevpn123
       - 🇺🇸 US 52 → tg@nicevpn123
       - 🇺🇸 US 54 → tg@nicevpn123
-      - 🇺🇸 US 55 → tg@nicevpn123
       - 🇺🇸 US 56 → tg@nicevpn123
-      - 🇺🇸 US 57 → tg@nicevpn123
       - 🇺🇸 US 58 → tg@nicevpn123
       - 🇺🇸 US 59 → tg@nicevpn123
       - 🇺🇸 US 6 → tg@nicevpn123
       - 🇺🇸 US 60 → tg@nicevpn123
       - 🇺🇸 US 61 → tg@nicevpn123
       - 🇺🇸 US 62 → tg@nicevpn123
+      - 🇺🇸 US 63 → tg@nicevpn123
       - 🇺🇸 US 64 → tg@nicevpn123
       - 🇺🇸 US 7 → tg@nicevpn123
-      - 🇺🇸 US 73 → tg@nicevpn123
-      - 🇺🇸 US 74 → tg@nicevpn123
       - 🇺🇸 US 75 → tg@nicevpn123
       - 🇺🇸 US 76 → tg@nicevpn123
       - 🇺🇸 US 77 → tg@nicevpn123
@@ -4155,60 +4330,59 @@ proxy-groups:
       - 🇺🇸 US 82 → tg@nicevpn123
       - 🇺🇸 US 83 → tg@nicevpn123
       - 🇺🇸 US 84 → tg@nicevpn123
-      - 🇺🇸 US 86 → tg@nicevpn123
-      - 🇺🇸 US 88 → tg@nicevpn123
+      - 🇺🇸 US 85 → tg@nicevpn123
+      - 🇺🇸 US 87 → tg@nicevpn123
       - 🇺🇸 US 89 → tg@nicevpn123
       - 🇺🇸 US 9 → tg@nicevpn123
       - 🇺🇸 US 90 → tg@nicevpn123
       - 🇺🇸 US 91 → tg@nicevpn123
       - 🇺🇸 US 92 → tg@nicevpn123
-      - 🇺🇸 US 94 → tg@nicevpn123
+      - 🇺🇸 US 93 → tg@nicevpn123
       - 🇺🇸 US 95 → tg@nicevpn123
       - 🇺🇸 US 96 → tg@nicevpn123
       - 🇺🇸 US 97 → tg@nicevpn123
       - 🇺🇸 US 98 → tg@nicevpn123
       - 🇺🇸 US 99 → tg@nicevpn123
-      - 🇺🇸 github.com/freefq - 美国惠普HP 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
-      - 🇦🇺 github.com/freefq - 澳大利亚Kooweerup Secondary College 5
-      - github.com/freefq - 亚太地区  6
-      - 🇭🇰 github.com/freefq - 香港Amazon数据中心 7
-      - 🇺🇸 github.com/freefq - 美国  8
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 9
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 10
-      - github.com/freefq - 欧盟  11
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 12
-      - 🇩🇰 github.com/freefq - 丹麦  14
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点(shopify) 15
-      - 🇱🇺 github.com/freefq - 卢森堡root.lu数据中心 16
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 17
-      - github.com/freefq - 欧盟  18
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 19
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 21
-      - 🇸🇦 github.com/freefq - 沙特阿拉伯Arabic Computer System Co. 22
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 23
-      - github.com/freefq - 欧盟  24
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 25
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 26
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 27
-      - 🇺🇸 github.com/freefq - 美国  28
-      - 🇺🇸 github.com/freefq - 美国  29
-      - github.com/freefq - 欧盟  31
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 32
-      - 🇬🇧 github.com/freefq - 英国  33
-      - _US_美国
       - _BZ_伯利兹
+      - _KR_韩国 2
       - _KR_韩国 3
       - _US_美国 2
-      - _NL_荷兰
       - _JP_日本 2
       - _US_美国->🇩🇪_DE_德国 2
       - _JP_日本 3
       - _US_美国->🇩🇪_DE_德国 3
       - _SG_新加坡
       - 更新于:03-2412:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国惠普HP11
+      - github.com/freefq-美国CloudFlare公司CDN节点22
+      - github.com/freefq-美国CloudFlare公司CDN节点33
+      - github.com/freefq-美国CloudFlare节点44
+      - github.com/freefq-澳大利亚KooweerupSecondaryCollege55
+      - github.com/freefq-亚太地区66
+      - github.com/freefq-香港Amazon数据中心77
+      - github.com/freefq-美国8
+      - github.com/freefq-美国CloudFlare节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点1010
+      - github.com/freefq-欧盟1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-丹麦1414
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1515
+      - github.com/freefq-卢森堡root.lu数据中心1616
+      - github.com/freefq-美国CloudFlare节点1717
+      - github.com/freefq-欧盟1818
+      - github.com/freefq-美国CloudFlare公司CDN节点1919
+      - github.com/freefq-美国CloudFlare公司CDN节点2121
+      - github.com/freefq-沙特阿拉伯ArabicComputerSystemCo.22
+      - github.com/freefq-美国CloudFlare公司CDN节点2323
+      - github.com/freefq-欧盟2424
+      - github.com/freefq-美国CloudFlare节点2525
+      - github.com/freefq-美国CloudFlare公司CDN节点2626
+      - github.com/freefq-美国CloudFlare节点2727
+      - github.com/freefq-美国2828
+      - github.com/freefq-美国2929
+      - github.com/freefq-欧盟3131
+      - github.com/freefq-美国CloudFlare公司CDN节点3232
+      - github.com/freefq-英国33
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
