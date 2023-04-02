@@ -1,4 +1,4 @@
-# 更新时间 2023-04-02T06:30:52.418Z
+# 更新时间 2023-04-02T06:41:16.176Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -489,6 +489,14 @@ proxies:
       path: /dongtaiwang.com
     udp: true
   - name: 🇨🇦 CA 1 → tg@nicevpn123
+    server: 625tw.ljydw.top
+    port: 80
+    type: trojan
+    password: 8791e9dc-4279-4edf-b372-29cd4cc17fe6
+    sni: 625tw.ljydw.top
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦 CA 2 → tg@nicevpn123
     server: 23.227.38.27
     port: 443
     type: vmess
@@ -501,14 +509,6 @@ proxies:
     ws-opts:
       path: /AUIKN8AU
     udp: true
-  - name: 🇨🇦 CA 2 → tg@nicevpn123
-    server: 625tw.ljydw.top
-    port: 80
-    type: trojan
-    password: 8791e9dc-4279-4edf-b372-29cd4cc17fe6
-    sni: 625tw.ljydw.top
-    skip-cert-verify: true
-    udp: true
   - name: 🇨🇳 TW 1 → tg@nicevpn123
     server: 211.72.35.155
     port: 3389
@@ -518,14 +518,15 @@ proxies:
     udp: true
   - name: 🇨🇳 TW 11 → tg@nicevpn123
     server: azgy001.xibai6.top
-    port: 20710
+    port: 20712
     type: trojan
-    password: f23a8308-7cf3-3e69-976a-de7246b02a2d
+    password: 78af6d6d-6de7-3a1f-a969-c39077fb47bf
+    sni: ssl.ssl12.xyz
     skip-cert-verify: true
     udp: true
   - name: 🇨🇳 TW 12 → tg@nicevpn123
     server: azgy001.xibai6.top
-    port: 20712
+    port: 20710
     type: trojan
     password: 78af6d6d-6de7-3a1f-a969-c39077fb47bf
     sni: ssl.ssl12.xyz
@@ -649,14 +650,6 @@ proxies:
       path: /shirker
     udp: true
   - name: 🇬🇧 GB 1 → tg@nicevpn123
-    server: zzus01.gutingting.com
-    port: 20220
-    type: trojan
-    password: 7122ac11-1363-48b7-bcf1-a9c7cfcc79cd
-    sni: zzus01.gutingting.com
-    skip-cert-verify: true
-    udp: true
-  - name: 🇬🇧 GB 2 → tg@nicevpn123
     server: 6bd8e697-rrslc0-14vzw.uk.tcpbbr.net
     port: 80
     type: vmess
@@ -670,6 +663,14 @@ proxies:
       path: /
       headers:
         Host: 6bd8e697-rrslc0-14vzw.uk.tcpbbr.net
+    udp: true
+  - name: 🇬🇧 GB 2 → tg@nicevpn123
+    server: zzus01.gutingting.com
+    port: 20220
+    type: trojan
+    password: 7122ac11-1363-48b7-bcf1-a9c7cfcc79cd
+    sni: zzus01.gutingting.com
+    skip-cert-verify: true
     udp: true
   - name: 🇬🇧 GB 3 → tg@nicevpn123
     server: 185.16.206.211
@@ -711,49 +712,58 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: 🇯🇵 JP 1 → tg@nicevpn123
-    server: 43.207.66.60
+    server: 43.201.146.228
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
   - name: 🇯🇵 JP 10 → tg@nicevpn123
-    server: 43.200.244.234
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 🇯🇵 JP 11 → tg@nicevpn123
-    server: 43.201.57.87
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 🇯🇵 JP 12 → tg@nicevpn123
-    server: 43.201.149.16
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 🇯🇵 JP 13 → tg@nicevpn123
-    server: 43.201.70.114
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 🇯🇵 JP 14 → tg@nicevpn123
     server: 43.201.86.41
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: 🇯🇵 JP 15 → tg@nicevpn123
+  - name: 🇯🇵 JP 11 → tg@nicevpn123
     server: 43.201.33.242
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: 🇯🇵 JP 12 → tg@nicevpn123
+    server: 43.206.200.71
+    port: 80
+    type: vmess
+    uuid: 3a2ebeb1-8ebd-4323-a7f6-5cbaf3de76fc
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+    udp: true
+  - name: 🇯🇵 JP 13 → tg@nicevpn123
+    server: bgroup.node1.t.nodelist-gfwairport1.download
+    port: 50001
+    type: trojan
+    password: 9f0ae767-0156-460c-acd6-67cb3000faf1
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 JP 14 → tg@nicevpn123
+    server: b1.ss1011.top
+    port: 1507
+    type: vmess
+    uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇯🇵 JP 15 → tg@nicevpn123
+    server: 43.207.225.151
     port: 443
     type: ss
     cipher: aes-256-cfb
@@ -806,17 +816,11 @@ proxies:
     password: amazonskr05
     udp: true
   - name: 🇯🇵 JP 2 → tg@nicevpn123
-    server: 43.206.200.71
-    port: 80
-    type: vmess
-    uuid: 3a2ebeb1-8ebd-4323-a7f6-5cbaf3de76fc
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
+    server: 43.207.66.60
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
     udp: true
   - name: 🇯🇵 JP 20 → tg@nicevpn123
     server: 54.249.17.38
@@ -878,52 +882,49 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: 🇯🇵 JP 3 → tg@nicevpn123
-    server: bgroup.node1.t.nodelist-gfwairport1.download
-    port: 50001
-    type: trojan
-    password: 9f0ae767-0156-460c-acd6-67cb3000faf1
-    skip-cert-verify: true
-    udp: true
-  - name: 🇯🇵 JP 4 → tg@nicevpn123
-    server: b1.ss1011.top
-    port: 1507
-    type: vmess
-    uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇯🇵 JP 5 → tg@nicevpn123
-    server: 43.207.225.151
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 🇯🇵 JP 6 → tg@nicevpn123
-    server: 43.201.146.228
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 🇯🇵 JP 7 → tg@nicevpn123
     server: 43.201.37.176
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: 🇯🇵 JP 8 → tg@nicevpn123
+  - name: 🇯🇵 JP 4 → tg@nicevpn123
     server: 43.207.160.88
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: doub.io
     udp: true
-  - name: 🇯🇵 JP 9 → tg@nicevpn123
+  - name: 🇯🇵 JP 5 → tg@nicevpn123
     server: 43.201.50.238
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: 🇯🇵 JP 6 → tg@nicevpn123
+    server: 43.200.244.234
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: 🇯🇵 JP 7 → tg@nicevpn123
+    server: 43.201.57.87
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: 🇯🇵 JP 8 → tg@nicevpn123
+    server: 43.201.149.16
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: 🇯🇵 JP 9 → tg@nicevpn123
+    server: 43.201.70.114
     port: 443
     type: ss
     cipher: aes-256-cfb
@@ -937,6 +938,16 @@ proxies:
     password: amazonskr05
     udp: true
   - name: 🇳🇱 NL 1 → tg@nicevpn123
+    server: 154.84.1.225
+    port: 56481
+    type: vmess
+    uuid: 6193116d-96f9-4d7a-9be5-5bb06a69af0b
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇳🇱 NL 2 → tg@nicevpn123
     server: 185.143.220.25
     port: 443
     type: vmess
@@ -948,16 +959,6 @@ proxies:
     network: ws
     ws-opts:
       path: /6e9EtZ2dL
-    udp: true
-  - name: 🇳🇱 NL 2 → tg@nicevpn123
-    server: 154.84.1.225
-    port: 56481
-    type: vmess
-    uuid: 6193116d-96f9-4d7a-9be5-5bb06a69af0b
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
     udp: true
   - name: 🇳🇱 NL 3 → tg@nicevpn123
     server: 213.183.59.211
@@ -1203,189 +1204,6 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: 🇺🇸 US 10 → tg@nicevpn123
-    server: uk1.scproxy.top
-    port: 443
-    type: vmess
-    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: uk1.scproxy.top
-    udp: true
-  - name: 🇺🇸 US 11 → tg@nicevpn123
-    server: 38.91.102.74
-    port: 3306
-    type: ss
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-    udp: true
-  - name: 🇺🇸 US 12 → tg@nicevpn123
-    server: 173.249.199.27
-    port: 443
-    type: vmess
-    uuid: e5543efd-5400-3760-9bb6-02767728e888
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /video
-    udp: true
-  - name: 🇺🇸 US 13 → tg@nicevpn123
-    server: dp3.scproxy.top
-    port: 443
-    type: vmess
-    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: dp3.scproxy.top
-    udp: true
-  - name: 🇺🇸 US 14 → tg@nicevpn123
-    server: 38.68.135.18
-    port: 8881
-    type: ss
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-    udp: true
-  - name: 🇺🇸 US 15 → tg@nicevpn123
-    server: 172.99.188.71
-    port: 8118
-    type: ss
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-    udp: true
-  - name: 🇺🇸 US 16 → tg@nicevpn123
-    server: new3.hucloud-dns.xyz
-    port: 443
-    type: vmess
-    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: new3.hucloud-dns.xyz
-    udp: true
-  - name: 🇺🇸 US 17 → tg@nicevpn123
-    server: 1st.starvskii2world.top
-    port: 443
-    type: vmess
-    uuid: 3c530a57-f1f0-4fe0-92c3-7287a5251f97
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /cf01
-      headers:
-        Host: 1st.starvskii2world.top
-    udp: true
-  - name: 🇺🇸 US 18 → tg@nicevpn123
-    server: la.awsbest.com
-    port: 443
-    type: vmess
-    uuid: 8b6dd709-4d4e-4b92-f542-54a676efbfe4
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shares
-      headers:
-        Host: la.awsbest.com
-    udp: true
-  - name: 🇺🇸 US 19 → tg@nicevpn123
-    server: 13.215.183.79
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: doub.io
-    udp: true
-  - name: 🇺🇸 US 2 → tg@nicevpn123
-    server: >-
-      ak1663.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 5000
-    type: ss
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-    udp: true
-  - name: 🇺🇸 US 21 → tg@nicevpn123
-    server: vjp3.0bad.com
-    port: 443
-    type: vmess
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: vjp3.0bad.com
-    udp: true
-  - name: 🇺🇸 US 22 → tg@nicevpn123
-    server: sg.herofree66.tk
-    port: 443
-    type: vmess
-    uuid: 5e3d4757-1395-4843-d498-bf7317470085
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: sg.herofree66.tk
-    udp: true
-  - name: 🇺🇸 US 23 → tg@nicevpn123
-    server: 13.215.159.170
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
-    udp: true
-  - name: 🇺🇸 US 24 → tg@nicevpn123
-    server: 167.88.63.79
-    port: 2375
-    type: ss
-    cipher: aes-256-gcm
-    password: faBAoD54k87UJG7
-    udp: true
-  - name: 🇺🇸 US 25 → tg@nicevpn123
-    server: haxeu3.glucy.top
-    port: 443
-    type: vmess
-    uuid: 65632ff6-be8a-46fd-c6cc-a9d8135a690d
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: haxeu3.glucy.top
-    udp: true
-  - name: 🇺🇸 US 26 → tg@nicevpn123
     server: eu2.glucy.top
     port: 443
     type: vmess
@@ -1400,7 +1218,7 @@ proxies:
       headers:
         Host: eu2.glucy.top
     udp: true
-  - name: 🇺🇸 US 27 → tg@nicevpn123
+  - name: 🇺🇸 US 11 → tg@nicevpn123
     server: justhost.739256.xyz
     port: 443
     type: vmess
@@ -1415,7 +1233,14 @@ proxies:
       headers:
         Host: justhost.739256.xyz
     udp: true
-  - name: 🇺🇸 US 28 → tg@nicevpn123
+  - name: 🇺🇸 US 12 → tg@nicevpn123
+    server: 172.99.188.99
+    port: 8888
+    type: ss
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+    udp: true
+  - name: 🇺🇸 US 13 → tg@nicevpn123
     server: dg.glucy.top
     port: 443
     type: vmess
@@ -1430,7 +1255,7 @@ proxies:
       headers:
         Host: dg.glucy.top
     udp: true
-  - name: 🇺🇸 US 29 → tg@nicevpn123
+  - name: 🇺🇸 US 14 → tg@nicevpn123
     server: example2.digimovie.tech
     port: 2096
     type: vmess
@@ -1445,14 +1270,7 @@ proxies:
       headers:
         Host: example2.digimovie.tech
     udp: true
-  - name: 🇺🇸 US 3 → tg@nicevpn123
-    server: 172.99.188.99
-    port: 8888
-    type: ss
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-    udp: true
-  - name: 🇺🇸 US 30 → tg@nicevpn123
+  - name: 🇺🇸 US 15 → tg@nicevpn123
     server: 198.2.208.180
     port: 35402
     type: vmess
@@ -1462,14 +1280,14 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸 US 31 → tg@nicevpn123
+  - name: 🇺🇸 US 16 → tg@nicevpn123
     server: 204.216.214.102
     port: 44386
     type: trojan
     password: C931CWacy8
     skip-cert-verify: true
     udp: true
-  - name: 🇺🇸 US 32 → tg@nicevpn123
+  - name: 🇺🇸 US 17 → tg@nicevpn123
     server: zhuyong.hucloud-dns.xyz
     port: 443
     type: vmess
@@ -1484,14 +1302,14 @@ proxies:
       headers:
         Host: zhuyong.hucloud-dns.xyz
     udp: true
-  - name: 🇺🇸 US 33 → tg@nicevpn123
+  - name: 🇺🇸 US 18 → tg@nicevpn123
     server: 52.13.110.247
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: 🇺🇸 US 34 → tg@nicevpn123
+  - name: 🇺🇸 US 19 → tg@nicevpn123
     server: dallas.starsea.vip
     port: 443
     type: vmess
@@ -1506,7 +1324,22 @@ proxies:
       headers:
         Host: dallas.starsea.vip
     udp: true
-  - name: 🇺🇸 US 35 → tg@nicevpn123
+  - name: 🇺🇸 US 2 → tg@nicevpn123
+    server: la.awsbest.com
+    port: 443
+    type: vmess
+    uuid: 8b6dd709-4d4e-4b92-f542-54a676efbfe4
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shares
+      headers:
+        Host: la.awsbest.com
+    udp: true
+  - name: 🇺🇸 US 20 → tg@nicevpn123
     server: ca.ilovescp.com
     port: 443
     type: vmess
@@ -1521,12 +1354,197 @@ proxies:
       headers:
         Host: ca.ilovescp.com
     udp: true
-  - name: 🇺🇸 US 36 → tg@nicevpn123
+  - name: 🇺🇸 US 21 → tg@nicevpn123
     server: 184.170.213.204
     port: 443
     type: ss
     cipher: chacha20-ietf-poly1305
     password: dqlr7JCgDrOK
+    udp: true
+  - name: 🇺🇸 US 22 → tg@nicevpn123
+    server: >-
+      ak1663.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 5000
+    type: ss
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+    udp: true
+  - name: 🇺🇸 US 23 → tg@nicevpn123
+    server: >-
+      ak1643.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 8888
+    type: ss
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+    udp: true
+  - name: 🇺🇸 US 24 → tg@nicevpn123
+    server: project.mytargoocloud.live
+    port: 443
+    type: vmess
+    uuid: d7c91c45-8f30-4175-b78b-c18ccf6a1fa5
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        Host: project.mytargoocloud.live
+    udp: true
+  - name: 🇺🇸 US 25 → tg@nicevpn123
+    server: frgt1.ssr-free2.xyz
+    port: 443
+    type: vmess
+    uuid: 9379fea0-006d-4fd3-8e35-d45a5af72aa2
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /UMW36262
+      headers:
+        Host: frgt1.ssr-free2.xyz
+    udp: true
+  - name: 🇺🇸 US 26 → tg@nicevpn123
+    server: 172.67.209.170
+    port: 443
+    type: vmess
+    uuid: d05d144a-71a9-4720-8c4e-565257953069
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+    udp: true
+  - name: 🇺🇸 US 27 → tg@nicevpn123
+    server: s245.rpscloud3.cloud
+    port: 80
+    type: vmess
+    uuid: d65ca664-72d3-4a14-a836-00eadd0df46e
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /graphql
+      headers:
+        Host: s245.rpscloud3.cloud
+    udp: true
+  - name: 🇺🇸 US 28 → tg@nicevpn123
+    server: 131.186.41.192
+    port: 26297
+    type: vmess
+    uuid: b0ed6eb7-dc30-4897-df50-c2c1d4ee6e91
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 US 29 → tg@nicevpn123
+    server: uk1.scproxy.top
+    port: 443
+    type: vmess
+    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: uk1.scproxy.top
+    udp: true
+  - name: 🇺🇸 US 3 → tg@nicevpn123
+    server: 13.215.183.79
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: doub.io
+    udp: true
+  - name: 🇺🇸 US 30 → tg@nicevpn123
+    server: 38.91.102.74
+    port: 3306
+    type: ss
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+    udp: true
+  - name: 🇺🇸 US 31 → tg@nicevpn123
+    server: 173.249.199.27
+    port: 443
+    type: vmess
+    uuid: e5543efd-5400-3760-9bb6-02767728e888
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /video
+    udp: true
+  - name: 🇺🇸 US 32 → tg@nicevpn123
+    server: dp3.scproxy.top
+    port: 443
+    type: vmess
+    uuid: 823c31da-701f-483d-b36e-896e5cf0987a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: dp3.scproxy.top
+    udp: true
+  - name: 🇺🇸 US 33 → tg@nicevpn123
+    server: 38.68.135.18
+    port: 8881
+    type: ss
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
+    udp: true
+  - name: 🇺🇸 US 34 → tg@nicevpn123
+    server: 172.99.188.71
+    port: 8118
+    type: ss
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
+    udp: true
+  - name: 🇺🇸 US 35 → tg@nicevpn123
+    server: new3.hucloud-dns.xyz
+    port: 443
+    type: vmess
+    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: new3.hucloud-dns.xyz
+    udp: true
+  - name: 🇺🇸 US 36 → tg@nicevpn123
+    server: 1st.starvskii2world.top
+    port: 443
+    type: vmess
+    uuid: 3c530a57-f1f0-4fe0-92c3-7287a5251f97
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /cf01
+      headers:
+        Host: 1st.starvskii2world.top
     udp: true
   - name: 🇺🇸 US 37 → tg@nicevpn123
     server: kr05.wangxd.life
@@ -1555,14 +1573,6 @@ proxies:
     network: ws
     ws-opts:
       path: /ray
-    udp: true
-  - name: 🇺🇸 US 4 → tg@nicevpn123
-    server: >-
-      ak1643.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 8888
-    type: ss
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
     udp: true
   - name: 🇺🇸 US 40 → tg@nicevpn123
     server: 45.89.106.112
@@ -1686,19 +1696,19 @@ proxies:
       path: /ws-path
     udp: true
   - name: 🇺🇸 US 5 → tg@nicevpn123
-    server: project.mytargoocloud.live
+    server: vjp3.0bad.com
     port: 443
     type: vmess
-    uuid: d7c91c45-8f30-4175-b78b-c18ccf6a1fa5
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /?ed=2048
+      path: /
       headers:
-        Host: project.mytargoocloud.live
+        Host: vjp3.0bad.com
     udp: true
   - name: 🇺🇸 US 50 → tg@nicevpn123
     server: 45.89.106.111
@@ -1829,19 +1839,19 @@ proxies:
         Host: n1674862930.eaurlmj.cn
     udp: true
   - name: 🇺🇸 US 6 → tg@nicevpn123
-    server: frgt1.ssr-free2.xyz
+    server: sg.herofree66.tk
     port: 443
     type: vmess
-    uuid: 9379fea0-006d-4fd3-8e35-d45a5af72aa2
+    uuid: 5e3d4757-1395-4843-d498-bf7317470085
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /UMW36262
+      path: /
       headers:
-        Host: frgt1.ssr-free2.xyz
+        Host: sg.herofree66.tk
     udp: true
   - name: 🇺🇸 US 60 → tg@nicevpn123
     server: 64.52.108.181
@@ -1949,17 +1959,11 @@ proxies:
     password: amazonskr05
     udp: true
   - name: 🇺🇸 US 7 → tg@nicevpn123
-    server: 172.67.209.170
+    server: 13.215.159.170
     port: 443
-    type: vmess
-    uuid: d05d144a-71a9-4720-8c4e-565257953069
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
     udp: true
   - name: 🇺🇸 US 70 → tg@nicevpn123
     server: 13.213.17.234
@@ -2025,19 +2029,11 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: 🇺🇸 US 8 → tg@nicevpn123
-    server: s245.rpscloud3.cloud
-    port: 80
-    type: vmess
-    uuid: d65ca664-72d3-4a14-a836-00eadd0df46e
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /graphql
-      headers:
-        Host: s245.rpscloud3.cloud
+    server: 167.88.63.79
+    port: 2375
+    type: ss
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
     udp: true
   - name: 🇺🇸 US 81 → tg@nicevpn123
     server: 167.88.63.79
@@ -2124,14 +2120,19 @@ proxies:
       path: /current_time
     udp: true
   - name: 🇺🇸 US 9 → tg@nicevpn123
-    server: 131.186.41.192
-    port: 26297
+    server: haxeu3.glucy.top
+    port: 443
     type: vmess
-    uuid: b0ed6eb7-dc30-4897-df50-c2c1d4ee6e91
+    uuid: 65632ff6-be8a-46fd-c6cc-a9d8135a690d
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: haxeu3.glucy.top
     udp: true
   - name: 🇺🇸 US 90 → tg@nicevpn123
     server: eu3.glucy.top
@@ -2743,6 +2744,7 @@ proxy-groups:
       - 🇺🇸 US 18 → tg@nicevpn123
       - 🇺🇸 US 19 → tg@nicevpn123
       - 🇺🇸 US 2 → tg@nicevpn123
+      - 🇺🇸 US 20 → tg@nicevpn123
       - 🇺🇸 US 21 → tg@nicevpn123
       - 🇺🇸 US 22 → tg@nicevpn123
       - 🇺🇸 US 23 → tg@nicevpn123
@@ -2763,7 +2765,6 @@ proxy-groups:
       - 🇺🇸 US 37 → tg@nicevpn123
       - 🇺🇸 US 38 → tg@nicevpn123
       - 🇺🇸 US 39 → tg@nicevpn123
-      - 🇺🇸 US 4 → tg@nicevpn123
       - 🇺🇸 US 40 → tg@nicevpn123
       - 🇺🇸 US 42 → tg@nicevpn123
       - 🇺🇸 US 43 → tg@nicevpn123
@@ -3000,6 +3001,7 @@ proxy-groups:
       - 🇺🇸 US 18 → tg@nicevpn123
       - 🇺🇸 US 19 → tg@nicevpn123
       - 🇺🇸 US 2 → tg@nicevpn123
+      - 🇺🇸 US 20 → tg@nicevpn123
       - 🇺🇸 US 21 → tg@nicevpn123
       - 🇺🇸 US 22 → tg@nicevpn123
       - 🇺🇸 US 23 → tg@nicevpn123
@@ -3020,7 +3022,6 @@ proxy-groups:
       - 🇺🇸 US 37 → tg@nicevpn123
       - 🇺🇸 US 38 → tg@nicevpn123
       - 🇺🇸 US 39 → tg@nicevpn123
-      - 🇺🇸 US 4 → tg@nicevpn123
       - 🇺🇸 US 40 → tg@nicevpn123
       - 🇺🇸 US 42 → tg@nicevpn123
       - 🇺🇸 US 43 → tg@nicevpn123
@@ -3256,6 +3257,7 @@ proxy-groups:
       - 🇺🇸 US 18 → tg@nicevpn123
       - 🇺🇸 US 19 → tg@nicevpn123
       - 🇺🇸 US 2 → tg@nicevpn123
+      - 🇺🇸 US 20 → tg@nicevpn123
       - 🇺🇸 US 21 → tg@nicevpn123
       - 🇺🇸 US 22 → tg@nicevpn123
       - 🇺🇸 US 23 → tg@nicevpn123
@@ -3276,7 +3278,6 @@ proxy-groups:
       - 🇺🇸 US 37 → tg@nicevpn123
       - 🇺🇸 US 38 → tg@nicevpn123
       - 🇺🇸 US 39 → tg@nicevpn123
-      - 🇺🇸 US 4 → tg@nicevpn123
       - 🇺🇸 US 40 → tg@nicevpn123
       - 🇺🇸 US 42 → tg@nicevpn123
       - 🇺🇸 US 43 → tg@nicevpn123
@@ -3544,6 +3545,7 @@ proxy-groups:
       - 🇺🇸 US 18 → tg@nicevpn123
       - 🇺🇸 US 19 → tg@nicevpn123
       - 🇺🇸 US 2 → tg@nicevpn123
+      - 🇺🇸 US 20 → tg@nicevpn123
       - 🇺🇸 US 21 → tg@nicevpn123
       - 🇺🇸 US 22 → tg@nicevpn123
       - 🇺🇸 US 23 → tg@nicevpn123
@@ -3564,7 +3566,6 @@ proxy-groups:
       - 🇺🇸 US 37 → tg@nicevpn123
       - 🇺🇸 US 38 → tg@nicevpn123
       - 🇺🇸 US 39 → tg@nicevpn123
-      - 🇺🇸 US 4 → tg@nicevpn123
       - 🇺🇸 US 40 → tg@nicevpn123
       - 🇺🇸 US 42 → tg@nicevpn123
       - 🇺🇸 US 43 → tg@nicevpn123
