@@ -10,6 +10,7 @@ import { getNodeFreeOrg } from "./src/nodefreeOrg.mjs";
 import { generateFile } from "./src/output.mjs";
 import { testSpeed } from "./src/speedTest.mjs";
 import { batchV2rayToClashNodes } from "./src/v2ray.mjs";
+const uuidValidate = require('uuid-validate');
 
 async function task1() {
   const nodeList = await mergeClashNodes(clashList);
@@ -39,6 +40,7 @@ async function task1() {
       // 过滤不支持的vless协议
       .filter((node)=> node.type !== "vless")
       .filter((node)=> !node.name.includes("🇨🇳 CN"))
+      .filter((node)=> uuidValidate(node.uuid))
   );
 
   const comments = `# 更新时间 ${new Date().toISOString()}
