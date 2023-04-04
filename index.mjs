@@ -40,7 +40,7 @@ async function task1() {
       // 过滤不支持的vless协议
       .filter((node) => node.type !== "vless")
       .filter((node) => !node.name.includes("🇨🇳 CN"))
-      .filter((node) => uuidValidate(node.uuid))
+      .filter((node) => !node.uuid || uuidValidate(node.uuid))
   );
 
   const comments = `# 更新时间 ${new Date().toISOString()}
