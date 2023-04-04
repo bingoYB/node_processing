@@ -1,4 +1,4 @@
-# 更新时间 2023-04-04T01:15:18.974Z
+# 更新时间 2023-04-04T01:42:48.945Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -6,6 +6,82 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
+  - name: JP_speednode_0001
+    server: 175.41.231.17
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: SG_speednode_0002
+    server: 54.255.85.173
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: SG_speednode_0003
+    server: 54.179.106.45
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: SG_speednode_0004
+    server: 18.143.156.242
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: US_speednode_0005
+    server: sg-am3.eqsunshine.com
+    port: 32001
+    type: ssr
+    cipher: aes-256-cfb
+    password: 3g0dHlKME
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param: ''
+    obfs-param: None
+  - name: US_speednode_0008
+    server: 18.237.252.244
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: US_speednode_0009
+    server: 35.167.207.100
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: SG_speednode_0010
+    server: 54.151.166.115
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: CN_speednode_0011
+    server: oss-cn-shanghai.westdatacloud.top
+    port: 20048
+    type: trojan
+    password: 626351FA-3CA6-8118-FADF-CCDBCD620871
+    sni: oss-cn-shanghai.westdatacloud.top
+    allowInsecure: 1
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0013
+    server: 152.70.74.66
+    port: 443
+    type: trojan
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    allowInsecure: 1
+    skip-cert-verify: true
+    udp: true
   - name: ZA_speednode_0014
     server: 156.225.67.107
     port: 51234
@@ -14,6 +90,77 @@ proxies:
     alterId: 64
     cipher: auto
     network: tcp
+  - name: BH_speednode_0015
+    server: 23.247.137.71
+    port: 2377
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: t0srmdxrm3xyjnvqz9ewlxb2myq7rjuv
+    plugin: obfs
+    plugin-opts:
+      mode: tls
+      host: df1fab2.dl.nintendo.net:16569
+  - name: MO 1 → tg@nicevpn123
+    server: 45.64.22.55
+    port: 443
+    type: trojan
+    password: KLF0qOU0ZZGw5Tnu
+    sni: swift.protocolbuffer.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳 TW 1 → tg@nicevpn123
+    server: 211.72.35.155
+    port: 3389
+    type: trojan
+    password: 0cc6b4268dea0ba8
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳 TW 2 → tg@nicevpn123
+    server: 211.72.35.152
+    port: 3389
+    type: trojan
+    password: 26a663656e575c0b
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳 TW 4 → tg@nicevpn123
+    server: 211.72.35.157
+    port: 3389
+    type: trojan
+    password: 26a663656e575c0b
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 US 1 → tg@nicevpn123
+    server: tj2.dalazhi.cyou
+    port: 443
+    type: trojan
+    password: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1
+    skip-cert-verify: true
+    udp: true
+  - name: _HK_香港
+    server: 103.103.245.125
+    port: 50350
+    type: trojan
+    password: 006bca8c-4e1f-44e0-9399-1cd4ff480a40
+    skip-cert-verify: true
+    udp: true
+  - name: _JP_日本
+    server: jp2.vfun.icu
+    port: 443
+    type: ssr
+    cipher: aes-256-cfb
+    password: vyunme
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 17422:TTp0SX
+    obfs-param: ab93117422.jd.hk
+    udp: true
+  - name: _JP_日本 2
+    server: 85.208.108.60
+    port: 8119
+    type: ss
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
+    udp: true
   - name: _BZ_伯利兹
     server: 203.30.191.19
     port: 443
@@ -29,6 +176,13 @@ proxies:
       headers:
         Host: clash6.ssr-free.xyz
     udp: true
+  - name: _KR_韩国
+    server: 43.201.14.240
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
   - name: _US_美国
     server: 142.4.108.172
     port: 49890
@@ -38,6 +192,20 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
+    udp: true
+  - name: _KR_韩国 2
+    server: 43.201.57.87
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: _KR_韩国 3
+    server: 43.201.70.114
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
     udp: true
   - name: _US_美国 2
     server: example2.digimovie.tech
@@ -54,6 +222,62 @@ proxies:
       headers:
         Host: example2.digimovie.tech
     udp: true
+  - name: _US_美国 3
+    server: 167.88.63.79
+    port: 7307
+    type: ss
+    cipher: aes-256-gcm
+    password: FoOiGlkAA9yPEGP
+    udp: true
+  - name: _US_美国 4
+    server: 167.88.63.79
+    port: 9101
+    type: ss
+    cipher: aes-256-gcm
+    password: e4FCWrgpkji3QY
+    udp: true
+  - name: _JP_日本 3
+    server: 85.208.108.60
+    port: 5003
+    type: ss
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
+    udp: true
+  - name: _US_美国 5
+    server: 167.88.63.79
+    port: 3306
+    type: ss
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+    udp: true
+  - name: _US_美国 6
+    server: 167.88.63.79
+    port: 8119
+    type: ss
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
+    udp: true
+  - name: _US_美国 7
+    server: 167.88.63.79
+    port: 3389
+    type: ss
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+    udp: true
+  - name: _JP_日本 4
+    server: 85.208.108.60
+    port: 8009
+    type: ss
+    cipher: aes-256-gcm
+    password: XKFKl2rULjIp74
+    udp: true
+  - name: _JP_日本 5
+    server: 43.207.117.53
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
   - name: _US_美国 8
     server: zhuyong.hucloud-dns.xyz
     port: 443
@@ -69,6 +293,13 @@ proxies:
       headers:
         Host: zhuyong.hucloud-dns.xyz
     udp: true
+  - name: _NL_荷兰
+    server: 172.99.188.99
+    port: 2375
+    type: ss
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
+    udp: true
   - name: _PA_巴拿马
     server: 185.143.220.25
     port: 443
@@ -81,6 +312,13 @@ proxies:
     network: ws
     ws-opts:
       path: /
+    udp: true
+  - name: _JP_日本 6
+    server: 85.208.108.60
+    port: 6679
+    type: ss
+    cipher: aes-256-gcm
+    password: TEzjfAYq2IjtuoS
     udp: true
   - name: _US_美国 9
     server: 143.42.96.118
@@ -95,6 +333,39 @@ proxies:
     ws-opts:
       path: /
     udp: true
+  - name: _JP_日本->🇭🇰_HK_香港
+    server: hk1.vfun.icu
+    port: 443
+    type: ssr
+    cipher: aes-256-cfb
+    password: vyunme
+    protocol: auth_aes128_sha1
+    obfs: plain
+    protocol-param: 17422:TTp0SX
+    obfs-param: ab93117422.jd.hk
+    udp: true
+  - name: _TW_台湾
+    server: 805tw.ljydw.top
+    port: 443
+    type: trojan
+    password: dc98569b-426f-46d7-9bf4-a91e874ee6eb
+    sni: 805tw.ljydw.top
+    skip-cert-verify: true
+    udp: true
+  - name: _US_美国 10
+    server: 54.189.189.150
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
+  - name: _JP_日本 7
+    server: 43.207.66.114
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
+    udp: true
   - name: _US_美国->🇳🇱_NL_荷兰
     server: 156.225.67.156
     port: 46617
@@ -104,6 +375,13 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
+    udp: true
+  - name: _KR_韩国 4
+    server: 43.200.244.234
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: amazonskr05
     udp: true
   - name: _FR_法国->🇳🇱_NL_荷兰
     server: 156.249.18.135
@@ -129,6 +407,13 @@ proxies:
       path: /AUIKN8AU
       headers:
         Host: oplg1.cfcdn2.xyz
+    udp: true
+  - name: _JP_日本 8
+    server: 43.207.160.88
+    port: 443
+    type: ss
+    cipher: aes-256-cfb
+    password: doub.io
     udp: true
   - name: _US_美国 13
     server: uk1.scproxy.top
@@ -247,6 +532,18 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: github.com/freefq-瑞典5
+    server: 167.88.63.79
+    port: 8881
+    password: YWVzLTI1Ni1nY206a0RXdlhZWm9UQmNHa0M0
+    cipher: aes-128-gcm
+  - type: ss
+    name: github.com/freefq-瑞典6
+    server: 167.88.63.79
+    port: 5003
+    password: YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk
+    cipher: aes-128-gcm
   - type: vmess
     name: github.com/freefq-湖南省怀化市移动77
     ws-opts:
@@ -257,6 +554,13 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
+  - type: trojan
+    name: github.com/freefq-加拿大魁北克省博阿努瓦OVH数据中心8
+    server: amir.greenboys.xyz
+    port: 37985
+    password: cQv2PgL1Im
+    udp: true
+    skip-cert-verify: true
   - type: vmess
     name: github.com/freefq-美国CloudFlare节点99
     ws-opts:
@@ -372,6 +676,13 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: github.com/freefq-美国22
+    server: tk-002-001.xiaoxiaobujidao.xyz
+    port: 443
+    password: 73b4be2f-2472-3c5c-a92c-3937ae1d8136
+    udp: true
+    skip-cert-verify: true
   - type: vmess
     name: github.com/freefq-美国CloudFlare节点2323
     ws-opts:
@@ -412,16 +723,54 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - JP_speednode_0001
+      - SG_speednode_0002
+      - SG_speednode_0003
+      - SG_speednode_0004
+      - US_speednode_0005
+      - US_speednode_0008
+      - US_speednode_0009
+      - SG_speednode_0010
+      - CN_speednode_0011
+      - US_speednode_0013
       - ZA_speednode_0014
+      - BH_speednode_0015
+      - MO 1 → tg@nicevpn123
+      - 🇨🇳 TW 1 → tg@nicevpn123
+      - 🇨🇳 TW 2 → tg@nicevpn123
+      - 🇨🇳 TW 4 → tg@nicevpn123
+      - 🇺🇸 US 1 → tg@nicevpn123
+      - _HK_香港
+      - _JP_日本
+      - _JP_日本 2
       - _BZ_伯利兹
+      - _KR_韩国
       - _US_美国
+      - _KR_韩国 2
+      - _KR_韩国 3
       - _US_美国 2
+      - _US_美国 3
+      - _US_美国 4
+      - _JP_日本 3
+      - _US_美国 5
+      - _US_美国 6
+      - _US_美国 7
+      - _JP_日本 4
+      - _JP_日本 5
       - _US_美国 8
+      - _NL_荷兰
       - _PA_巴拿马
+      - _JP_日本 6
       - _US_美国 9
+      - _JP_日本->🇭🇰_HK_香港
+      - _TW_台湾
+      - _US_美国 10
+      - _JP_日本 7
       - _US_美国->🇳🇱_NL_荷兰
+      - _KR_韩国 4
       - _FR_法国->🇳🇱_NL_荷兰
       - _US_美国 12
+      - _JP_日本 8
       - _US_美国 13
       - _US_美国->🇩🇪_DE_德国
       - _SG_新加坡
@@ -431,7 +780,10 @@ proxy-groups:
       - github.com/freefq-南非11
       - github.com/freefq-美国CloudFlare节点33
       - github.com/freefq-美国CloudFlare公司CDN节点44
+      - github.com/freefq-瑞典5
+      - github.com/freefq-瑞典6
       - github.com/freefq-湖南省怀化市移动77
+      - github.com/freefq-加拿大魁北克省博阿努瓦OVH数据中心8
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-澳大利亚LyndhurstSecondaryCollege1010
       - github.com/freefq-新加坡亚马逊(Amazon)公司数据中心1111
@@ -442,6 +794,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
+      - github.com/freefq-美国22
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-香港安畅BGP数据中心2525
@@ -451,16 +804,54 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - JP_speednode_0001
+      - SG_speednode_0002
+      - SG_speednode_0003
+      - SG_speednode_0004
+      - US_speednode_0005
+      - US_speednode_0008
+      - US_speednode_0009
+      - SG_speednode_0010
+      - CN_speednode_0011
+      - US_speednode_0013
       - ZA_speednode_0014
+      - BH_speednode_0015
+      - MO 1 → tg@nicevpn123
+      - 🇨🇳 TW 1 → tg@nicevpn123
+      - 🇨🇳 TW 2 → tg@nicevpn123
+      - 🇨🇳 TW 4 → tg@nicevpn123
+      - 🇺🇸 US 1 → tg@nicevpn123
+      - _HK_香港
+      - _JP_日本
+      - _JP_日本 2
       - _BZ_伯利兹
+      - _KR_韩国
       - _US_美国
+      - _KR_韩国 2
+      - _KR_韩国 3
       - _US_美国 2
+      - _US_美国 3
+      - _US_美国 4
+      - _JP_日本 3
+      - _US_美国 5
+      - _US_美国 6
+      - _US_美国 7
+      - _JP_日本 4
+      - _JP_日本 5
       - _US_美国 8
+      - _NL_荷兰
       - _PA_巴拿马
+      - _JP_日本 6
       - _US_美国 9
+      - _JP_日本->🇭🇰_HK_香港
+      - _TW_台湾
+      - _US_美国 10
+      - _JP_日本 7
       - _US_美国->🇳🇱_NL_荷兰
+      - _KR_韩国 4
       - _FR_法国->🇳🇱_NL_荷兰
       - _US_美国 12
+      - _JP_日本 8
       - _US_美国 13
       - _US_美国->🇩🇪_DE_德国
       - _SG_新加坡
@@ -470,7 +861,10 @@ proxy-groups:
       - github.com/freefq-南非11
       - github.com/freefq-美国CloudFlare节点33
       - github.com/freefq-美国CloudFlare公司CDN节点44
+      - github.com/freefq-瑞典5
+      - github.com/freefq-瑞典6
       - github.com/freefq-湖南省怀化市移动77
+      - github.com/freefq-加拿大魁北克省博阿努瓦OVH数据中心8
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-澳大利亚LyndhurstSecondaryCollege1010
       - github.com/freefq-新加坡亚马逊(Amazon)公司数据中心1111
@@ -481,6 +875,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
+      - github.com/freefq-美国22
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-香港安畅BGP数据中心2525
@@ -489,16 +884,54 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
+      - JP_speednode_0001
+      - SG_speednode_0002
+      - SG_speednode_0003
+      - SG_speednode_0004
+      - US_speednode_0005
+      - US_speednode_0008
+      - US_speednode_0009
+      - SG_speednode_0010
+      - CN_speednode_0011
+      - US_speednode_0013
       - ZA_speednode_0014
+      - BH_speednode_0015
+      - MO 1 → tg@nicevpn123
+      - 🇨🇳 TW 1 → tg@nicevpn123
+      - 🇨🇳 TW 2 → tg@nicevpn123
+      - 🇨🇳 TW 4 → tg@nicevpn123
+      - 🇺🇸 US 1 → tg@nicevpn123
+      - _HK_香港
+      - _JP_日本
+      - _JP_日本 2
       - _BZ_伯利兹
+      - _KR_韩国
       - _US_美国
+      - _KR_韩国 2
+      - _KR_韩国 3
       - _US_美国 2
+      - _US_美国 3
+      - _US_美国 4
+      - _JP_日本 3
+      - _US_美国 5
+      - _US_美国 6
+      - _US_美国 7
+      - _JP_日本 4
+      - _JP_日本 5
       - _US_美国 8
+      - _NL_荷兰
       - _PA_巴拿马
+      - _JP_日本 6
       - _US_美国 9
+      - _JP_日本->🇭🇰_HK_香港
+      - _TW_台湾
+      - _US_美国 10
+      - _JP_日本 7
       - _US_美国->🇳🇱_NL_荷兰
+      - _KR_韩国 4
       - _FR_法国->🇳🇱_NL_荷兰
       - _US_美国 12
+      - _JP_日本 8
       - _US_美国 13
       - _US_美国->🇩🇪_DE_德国
       - _SG_新加坡
@@ -508,7 +941,10 @@ proxy-groups:
       - github.com/freefq-南非11
       - github.com/freefq-美国CloudFlare节点33
       - github.com/freefq-美国CloudFlare公司CDN节点44
+      - github.com/freefq-瑞典5
+      - github.com/freefq-瑞典6
       - github.com/freefq-湖南省怀化市移动77
+      - github.com/freefq-加拿大魁北克省博阿努瓦OVH数据中心8
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-澳大利亚LyndhurstSecondaryCollege1010
       - github.com/freefq-新加坡亚马逊(Amazon)公司数据中心1111
@@ -519,6 +955,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
+      - github.com/freefq-美国22
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-香港安畅BGP数据中心2525
@@ -559,16 +996,54 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - JP_speednode_0001
+      - SG_speednode_0002
+      - SG_speednode_0003
+      - SG_speednode_0004
+      - US_speednode_0005
+      - US_speednode_0008
+      - US_speednode_0009
+      - SG_speednode_0010
+      - CN_speednode_0011
+      - US_speednode_0013
       - ZA_speednode_0014
+      - BH_speednode_0015
+      - MO 1 → tg@nicevpn123
+      - 🇨🇳 TW 1 → tg@nicevpn123
+      - 🇨🇳 TW 2 → tg@nicevpn123
+      - 🇨🇳 TW 4 → tg@nicevpn123
+      - 🇺🇸 US 1 → tg@nicevpn123
+      - _HK_香港
+      - _JP_日本
+      - _JP_日本 2
       - _BZ_伯利兹
+      - _KR_韩国
       - _US_美国
+      - _KR_韩国 2
+      - _KR_韩国 3
       - _US_美国 2
+      - _US_美国 3
+      - _US_美国 4
+      - _JP_日本 3
+      - _US_美国 5
+      - _US_美国 6
+      - _US_美国 7
+      - _JP_日本 4
+      - _JP_日本 5
       - _US_美国 8
+      - _NL_荷兰
       - _PA_巴拿马
+      - _JP_日本 6
       - _US_美国 9
+      - _JP_日本->🇭🇰_HK_香港
+      - _TW_台湾
+      - _US_美国 10
+      - _JP_日本 7
       - _US_美国->🇳🇱_NL_荷兰
+      - _KR_韩国 4
       - _FR_法国->🇳🇱_NL_荷兰
       - _US_美国 12
+      - _JP_日本 8
       - _US_美国 13
       - _US_美国->🇩🇪_DE_德国
       - _SG_新加坡
@@ -578,7 +1053,10 @@ proxy-groups:
       - github.com/freefq-南非11
       - github.com/freefq-美国CloudFlare节点33
       - github.com/freefq-美国CloudFlare公司CDN节点44
+      - github.com/freefq-瑞典5
+      - github.com/freefq-瑞典6
       - github.com/freefq-湖南省怀化市移动77
+      - github.com/freefq-加拿大魁北克省博阿努瓦OVH数据中心8
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-澳大利亚LyndhurstSecondaryCollege1010
       - github.com/freefq-新加坡亚马逊(Amazon)公司数据中心1111
@@ -589,6 +1067,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
+      - github.com/freefq-美国22
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-香港安畅BGP数据中心2525
