@@ -1,4 +1,4 @@
-# 更新时间 2023-04-17T18:53:18.977Z
+# 更新时间 2023-04-17T19:07:09.496Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -510,121 +510,6 @@ proxies:
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
     udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-    server: new3.hucloud-dns.xyz
-    port: 443
-    type: vmess
-    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: new3.hucloud-dns.xyz
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-    server: 162.159.255.205
-    port: 80
-    type: vmess
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us-1.acyun.eu.org
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-    server: cf.noaries.de
-    port: 8080
-    type: vmess
-    uuid: a0f153d8-e32f-41f3-9bcd-073f579e2264
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        Host: buyvm.cloudflare.quest
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
-    server: 172.67.217.222
-    port: 80
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: dp3.scproxy.top
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
-    server: germany1.unlimiteddev.co
-    port: 80
-    type: vmess
-    uuid: 97ea79a6-615c-4ad7-8083-4f3b49cbe8a2
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: germany1.unlimiteddev.co
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 8
-    server: pop.china.gfwcaonimanmsl.ml
-    port: 10010
-    type: vmess
-    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: pop.china.gfwcaonimanmsl.ml
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 9
-    server: pop.usa.gfwcaonimanmsl.ml
-    port: 8966
-    type: vmess
-    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /name
-      headers:
-        Host: pop.usa.gfwcaonimanmsl.ml
-    udp: true
-  - name: 🇨🇳 github.com/freefq - 安徽省合肥市移动 10
-    server: 120.210.205.220
-    port: 36918
-    type: vmess
-    uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
   - name: _TW_台湾
     server: tw1.sanfen001.pics
     port: 443
@@ -730,6 +615,21 @@ proxies:
     type: ss
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
+    udp: true
+  - name: _US_美国 10
+    server: new3.hucloud-dns.xyz
+    port: 443
+    type: vmess
+    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: new3.hucloud-dns.xyz
     udp: true
   - name: _US_美国 11
     server: dp3.scproxy.top
@@ -922,6 +822,21 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
+  - name: _US_美国 20
+    server: pop.china.gfwcaonimanmsl.ml
+    port: 10010
+    type: vmess
+    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /name
+      headers:
+        Host: pop.china.gfwcaonimanmsl.ml
+    udp: true
   - name: _US_美国->🇬🇧_GB_英国 3
     server: ping.pe
     port: 80
@@ -1057,6 +972,76 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点22
+    ws-opts:
+      path: /
+      headers:
+        host: us-1.acyun.eu.org
+    server: 162.159.255.205
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点33
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: buyvm.cloudflare.quest
+    server: cf.noaries.de
+    port: 8080
+    uuid: a0f153d8-e32f-41f3-9bcd-073f579e2264
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点55
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+    server: 172.67.217.222
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点66
+    ws-opts:
+      path: /
+      headers:
+        host: germany1.unlimiteddev.co
+    server: germany1.unlimiteddev.co
+    port: 80
+    uuid: 97ea79a6-615c-4ad7-8083-4f3b49cbe8a2
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国加利福尼亚州旧金山Amazon数据中心99
+    ws-opts:
+      path: /name
+      headers:
+        host: pop.usa.gfwcaonimanmsl.ml
+    server: pop.usa.gfwcaonimanmsl.ml
+    port: 8966
+    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-安徽省合肥市移动1010
+    ws-opts:
+      path: /
+    server: 120.210.205.220
+    port: 36918
+    uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1115,14 +1100,6 @@ proxy-groups:
       - NL_speednode_0095
       - US_speednode_0097
       - EG_speednode_0098
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 8
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 9
-      - 🇨🇳 github.com/freefq - 安徽省合肥市移动 10
       - _TW_台湾
       - _US_美国 2
       - _US_美国 3
@@ -1134,6 +1111,7 @@ proxy-groups:
       - _JP_日本
       - _US_美国 9
       - _JP_日本 2
+      - _US_美国 10
       - _US_美国 11
       - _US_美国 12
       - _JP_日本 3
@@ -1151,6 +1129,7 @@ proxy-groups:
       - _SC_塞舌尔->🇳🇱_NL_荷兰
       - _US_美国 18
       - _US_美国 19
+      - _US_美国 20
       - _US_美国->🇬🇧_GB_英国 3
       - _US_美国 21
       - _US_美国 22
@@ -1165,6 +1144,12 @@ proxy-groups:
       - _KR_韩国
       - _US_美国 26
       - 更新于:04-1800:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国CloudFlare节点22
+      - github.com/freefq-美国CloudFlare节点33
+      - github.com/freefq-美国CloudFlare节点55
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-美国加利福尼亚州旧金山Amazon数据中心99
+      - github.com/freefq-安徽省合肥市移动1010
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1223,14 +1208,6 @@ proxy-groups:
       - NL_speednode_0095
       - US_speednode_0097
       - EG_speednode_0098
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 8
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 9
-      - 🇨🇳 github.com/freefq - 安徽省合肥市移动 10
       - _TW_台湾
       - _US_美国 2
       - _US_美国 3
@@ -1242,6 +1219,7 @@ proxy-groups:
       - _JP_日本
       - _US_美国 9
       - _JP_日本 2
+      - _US_美国 10
       - _US_美国 11
       - _US_美国 12
       - _JP_日本 3
@@ -1259,6 +1237,7 @@ proxy-groups:
       - _SC_塞舌尔->🇳🇱_NL_荷兰
       - _US_美国 18
       - _US_美国 19
+      - _US_美国 20
       - _US_美国->🇬🇧_GB_英国 3
       - _US_美国 21
       - _US_美国 22
@@ -1273,6 +1252,12 @@ proxy-groups:
       - _KR_韩国
       - _US_美国 26
       - 更新于:04-1800:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国CloudFlare节点22
+      - github.com/freefq-美国CloudFlare节点33
+      - github.com/freefq-美国CloudFlare节点55
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-美国加利福尼亚州旧金山Amazon数据中心99
+      - github.com/freefq-安徽省合肥市移动1010
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1330,14 +1315,6 @@ proxy-groups:
       - NL_speednode_0095
       - US_speednode_0097
       - EG_speednode_0098
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 8
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 9
-      - 🇨🇳 github.com/freefq - 安徽省合肥市移动 10
       - _TW_台湾
       - _US_美国 2
       - _US_美国 3
@@ -1349,6 +1326,7 @@ proxy-groups:
       - _JP_日本
       - _US_美国 9
       - _JP_日本 2
+      - _US_美国 10
       - _US_美国 11
       - _US_美国 12
       - _JP_日本 3
@@ -1366,6 +1344,7 @@ proxy-groups:
       - _SC_塞舌尔->🇳🇱_NL_荷兰
       - _US_美国 18
       - _US_美国 19
+      - _US_美国 20
       - _US_美国->🇬🇧_GB_英国 3
       - _US_美国 21
       - _US_美国 22
@@ -1380,6 +1359,12 @@ proxy-groups:
       - _KR_韩国
       - _US_美国 26
       - 更新于:04-1800:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国CloudFlare节点22
+      - github.com/freefq-美国CloudFlare节点33
+      - github.com/freefq-美国CloudFlare节点55
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-美国加利福尼亚州旧金山Amazon数据中心99
+      - github.com/freefq-安徽省合肥市移动1010
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1469,14 +1454,6 @@ proxy-groups:
       - NL_speednode_0095
       - US_speednode_0097
       - EG_speednode_0098
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 8
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州旧金山Amazon数据中心 9
-      - 🇨🇳 github.com/freefq - 安徽省合肥市移动 10
       - _TW_台湾
       - _US_美国 2
       - _US_美国 3
@@ -1488,6 +1465,7 @@ proxy-groups:
       - _JP_日本
       - _US_美国 9
       - _JP_日本 2
+      - _US_美国 10
       - _US_美国 11
       - _US_美国 12
       - _JP_日本 3
@@ -1505,6 +1483,7 @@ proxy-groups:
       - _SC_塞舌尔->🇳🇱_NL_荷兰
       - _US_美国 18
       - _US_美国 19
+      - _US_美国 20
       - _US_美国->🇬🇧_GB_英国 3
       - _US_美国 21
       - _US_美国 22
@@ -1519,6 +1498,12 @@ proxy-groups:
       - _KR_韩国
       - _US_美国 26
       - 更新于:04-1800:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国CloudFlare节点22
+      - github.com/freefq-美国CloudFlare节点33
+      - github.com/freefq-美国CloudFlare节点55
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-美国加利福尼亚州旧金山Amazon数据中心99
+      - github.com/freefq-安徽省合肥市移动1010
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
