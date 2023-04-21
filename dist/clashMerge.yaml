@@ -1,4 +1,4 @@
-# 更新时间 2023-04-20T19:06:52.804Z
+# 更新时间 2023-04-21T01:09:02.828Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -534,22 +534,45 @@ proxies:
       headers:
         Host: uk1.scproxy.top
     udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-    server: new3.hucloud-dns.xyz
+  - name: 🇺🇸 github.com/freefq - 美国惠普HP 1
+    server: hk3.af49c4e4c2ef.sanfen004.me
     port: 443
     type: vmess
-    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
+    uuid: 1172d7fe-4a5d-4d07-92f6-aefa4212347f
     alterId: 0
     cipher: auto
     tls: true
+    skip-cert-verify: true
+    servername: www.microsoft.com
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: www.microsoft.com
+    udp: true
+  - name: 🇸🇪 github.com/freefq - 瑞典  2
+    server: 167.88.63.79
+    port: 5003
+    type: ss
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
+    udp: true
+  - name: 🇨🇳 github.com/freefq - 广东省佛山市移动 3
+    server: 25.v2-ray.cyou
+    port: 23625
+    type: vmess
+    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
+    alterId: 2
+    cipher: auto
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
       headers:
-        Host: new3.hucloud-dns.xyz
+        Host: 25.v2-ray.cyou
     udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
+  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
     server: 172.67.217.222
     port: 80
     type: vmess
@@ -564,22 +587,29 @@ proxies:
       headers:
         Host: dp3.scproxy.top
     udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4
-    server: 104.17.3.81
-    port: 80
+  - name: 🇸🇪 github.com/freefq - 瑞典  5
+    server: 167.88.63.79
+    port: 8009
+    type: ss
+    cipher: aes-256-gcm
+    password: XKFKl2rULjIp74
+    udp: true
+  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
+    server: new3.hucloud-dns.xyz
+    port: 443
     type: vmess
-    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
+    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
     alterId: 0
     cipher: auto
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /worryfree
+      path: /
       headers:
-        Host: w.evouch77.live
+        Host: new3.hucloud-dns.xyz
     udp: true
-  - name: 🇺🇸 github.com/freefq - 美国  5
+  - name: 🇺🇸 github.com/freefq - 美国  7
     server: flos1.ydnode.us
     port: 80
     type: vmess
@@ -593,36 +623,6 @@ proxies:
       path: /v2ray
       headers:
         Host: flos1.ydnode.us
-    udp: true
-  - name: 🇨🇳 github.com/freefq - 广东省广州市移动 6
-    server: 120.232.179.161
-    port: 63078
-    type: vmess
-    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: hk-balancer.airport-v2.com
-    udp: true
-  - name: 🇨🇳 github.com/freefq - 广东省佛山市移动 7
-    server: 25.v2-ray.cyou
-    port: 23625
-    type: vmess
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: 25.v2-ray.cyou
     udp: true
   - name: _US_美国
     server: 192.74.243.43
@@ -771,13 +771,6 @@ proxies:
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
-    udp: true
-  - name: _US_美国 12
-    server: 167.88.63.79
-    port: 5003
-    type: ss
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
     udp: true
   - name: _US_美国 13
     server: 167.88.63.79
@@ -978,7 +971,7 @@ proxies:
     password: amazonskr05
     udp: true
   - type: vmess
-    name: 更新于:04-2100:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:04-2108:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -1048,12 +1041,13 @@ proxy-groups:
       - AR_speednode_0056
       - speednode_0057
       - US_speednode_0058
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4
-      - 🇺🇸 github.com/freefq - 美国  5
-      - 🇨🇳 github.com/freefq - 广东省广州市移动 6
-      - 🇨🇳 github.com/freefq - 广东省佛山市移动 7
+      - 🇺🇸 github.com/freefq - 美国惠普HP 1
+      - 🇸🇪 github.com/freefq - 瑞典  2
+      - 🇨🇳 github.com/freefq - 广东省佛山市移动 3
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
+      - 🇸🇪 github.com/freefq - 瑞典  5
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
+      - 🇺🇸 github.com/freefq - 美国  7
       - _US_美国
       - _HK_香港
       - _US_美国 2
@@ -1070,7 +1064,6 @@ proxy-groups:
       - _JP_日本
       - _KR_韩国
       - _JP_日本 2
-      - _US_美国 12
       - _US_美国 13
       - _US_美国 14
       - _US_美国 15
@@ -1091,7 +1084,7 @@ proxy-groups:
       - _GB_英国->🇳🇱_NL_荷兰
       - _JP_日本 3
       - _SG_新加坡 2
-      - 更新于:04-2100:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:04-2108:00-byBuLink.xyz-以下节点不计流量0
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1155,12 +1148,13 @@ proxy-groups:
       - AR_speednode_0056
       - speednode_0057
       - US_speednode_0058
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4
-      - 🇺🇸 github.com/freefq - 美国  5
-      - 🇨🇳 github.com/freefq - 广东省广州市移动 6
-      - 🇨🇳 github.com/freefq - 广东省佛山市移动 7
+      - 🇺🇸 github.com/freefq - 美国惠普HP 1
+      - 🇸🇪 github.com/freefq - 瑞典  2
+      - 🇨🇳 github.com/freefq - 广东省佛山市移动 3
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
+      - 🇸🇪 github.com/freefq - 瑞典  5
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
+      - 🇺🇸 github.com/freefq - 美国  7
       - _US_美国
       - _HK_香港
       - _US_美国 2
@@ -1177,7 +1171,6 @@ proxy-groups:
       - _JP_日本
       - _KR_韩国
       - _JP_日本 2
-      - _US_美国 12
       - _US_美国 13
       - _US_美国 14
       - _US_美国 15
@@ -1198,7 +1191,7 @@ proxy-groups:
       - _GB_英国->🇳🇱_NL_荷兰
       - _JP_日本 3
       - _SG_新加坡 2
-      - 更新于:04-2100:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:04-2108:00-byBuLink.xyz-以下节点不计流量0
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1261,12 +1254,13 @@ proxy-groups:
       - AR_speednode_0056
       - speednode_0057
       - US_speednode_0058
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4
-      - 🇺🇸 github.com/freefq - 美国  5
-      - 🇨🇳 github.com/freefq - 广东省广州市移动 6
-      - 🇨🇳 github.com/freefq - 广东省佛山市移动 7
+      - 🇺🇸 github.com/freefq - 美国惠普HP 1
+      - 🇸🇪 github.com/freefq - 瑞典  2
+      - 🇨🇳 github.com/freefq - 广东省佛山市移动 3
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
+      - 🇸🇪 github.com/freefq - 瑞典  5
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
+      - 🇺🇸 github.com/freefq - 美国  7
       - _US_美国
       - _HK_香港
       - _US_美国 2
@@ -1283,7 +1277,6 @@ proxy-groups:
       - _JP_日本
       - _KR_韩国
       - _JP_日本 2
-      - _US_美国 12
       - _US_美国 13
       - _US_美国 14
       - _US_美国 15
@@ -1304,7 +1297,7 @@ proxy-groups:
       - _GB_英国->🇳🇱_NL_荷兰
       - _JP_日本 3
       - _SG_新加坡 2
-      - 更新于:04-2100:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:04-2108:00-byBuLink.xyz-以下节点不计流量0
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1399,12 +1392,13 @@ proxy-groups:
       - AR_speednode_0056
       - speednode_0057
       - US_speednode_0058
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 1
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 4
-      - 🇺🇸 github.com/freefq - 美国  5
-      - 🇨🇳 github.com/freefq - 广东省广州市移动 6
-      - 🇨🇳 github.com/freefq - 广东省佛山市移动 7
+      - 🇺🇸 github.com/freefq - 美国惠普HP 1
+      - 🇸🇪 github.com/freefq - 瑞典  2
+      - 🇨🇳 github.com/freefq - 广东省佛山市移动 3
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 4
+      - 🇸🇪 github.com/freefq - 瑞典  5
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 6
+      - 🇺🇸 github.com/freefq - 美国  7
       - _US_美国
       - _HK_香港
       - _US_美国 2
@@ -1421,7 +1415,6 @@ proxy-groups:
       - _JP_日本
       - _KR_韩国
       - _JP_日本 2
-      - _US_美国 12
       - _US_美国 13
       - _US_美国 14
       - _US_美国 15
@@ -1442,7 +1435,7 @@ proxy-groups:
       - _GB_英国->🇳🇱_NL_荷兰
       - _JP_日本 3
       - _SG_新加坡 2
-      - 更新于:04-2100:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:04-2108:00-byBuLink.xyz-以下节点不计流量0
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
