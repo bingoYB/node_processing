@@ -1,4 +1,4 @@
-# 更新时间 2023-04-23T12:50:51.722Z
+# 更新时间 2023-04-23T13:05:12.127Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -682,6 +682,78 @@ proxies:
       path: /8cda48b3
       headers:
         host: kr-207-239.shoptunnel.live
+  - name: 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+    server: 170.178.194.14
+    port: 51986
+    type: vmess
+    uuid: 3023981b-0431-4bff-8a10-0f986ba86c73
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇦 github.com/freefq - 加拿大  2
+    server: jp1117.ljydw.top
+    port: 80
+    type: trojan
+    password: 60fa7666-06a5-46eb-8e22-742e029117b2
+    skip-cert-verify: true
+    udp: true
+  - name: 🇨🇳 github.com/freefq - 广东省揭阳市移动 3
+    server: 120.240.163.51
+    port: 53173
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇬🇧 github.com/freefq - 英国  4
+    server: mahsa2081p5k.mahsaaminivpn.com
+    port: 23706
+    type: trojan
+    password: 41oia27jYy
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 github.com/freefq - 美国  6
+    server: mahsa8.mahsaaminivpn.com
+    port: 24930
+    type: trojan
+    password: 21ra5sH0EZ
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 7
+    server: cf-lt.sharecentre.online
+    port: 443
+    type: vmess
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: lv1.sharecentrepro.org
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: lv1.sharecentrepro.org
+    udp: true
+  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 8
+    server: www.codepen.io
+    port: 443
+    type: vmess
+    uuid: 2cd39102-0799-4c61-abb6-2e7a258f0397
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: us-v.sshmax.xyz
+    udp: true
   - name: _SG_新加坡
     server: sg-01.cn2.run
     port: 10000
@@ -959,21 +1031,6 @@ proxies:
     cipher: aes-256-gcm
     password: FoOiGlkAA9yPEGP
     udp: true
-  - name: _US_美国 23
-    server: cf-lt.sharecentre.online
-    port: 443
-    type: vmess
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        Host: ca.ilovescp.com
-    udp: true
   - name: _US_美国 24
     server: 167.88.63.79
     port: 8881
@@ -1113,58 +1170,6 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
-  - type: vmess
-    name: github.com/freefq-美国加利福尼亚州洛杉矶MULTACOM数据中心11
-    server: 170.178.194.14
-    port: 51986
-    uuid: 3023981b-0431-4bff-8a10-0f986ba86c73
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: trojan
-    name: github.com/freefq-加拿大2
-    server: jp1117.ljydw.top
-    port: 80
-    password: 60fa7666-06a5-46eb-8e22-742e029117b2
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: github.com/freefq-广东省揭阳市移动33
-    ws-opts:
-      path: /
-    server: 120.240.163.51
-    port: 53173
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: trojan
-    name: github.com/freefq-英国4
-    server: mahsa2081p5k.mahsaaminivpn.com
-    port: 23706
-    password: 41oia27jYy
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: github.com/freefq-美国6
-    server: mahsa8.mahsaaminivpn.com
-    port: 24930
-    password: 21ra5sH0EZ
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点88
-    ws-opts:
-      path: /vmess
-      headers:
-        host: us-v.sshmax.xyz
-    server: www.codepen.io
-    port: 443
-    uuid: 2cd39102-0799-4c61-abb6-2e7a258f0397
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1232,6 +1237,13 @@ proxy-groups:
       - CN_speednode_0062
       - CN_speednode_0063
       - speednode_0064
+      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+      - 🇨🇦 github.com/freefq - 加拿大  2
+      - 🇨🇳 github.com/freefq - 广东省揭阳市移动 3
+      - 🇬🇧 github.com/freefq - 英国  4
+      - 🇺🇸 github.com/freefq - 美国  6
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 7
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 8
       - _SG_新加坡
       - _HK_香港
       - _US_美国
@@ -1260,7 +1272,6 @@ proxy-groups:
       - _US_美国 21
       - _ES_西班牙
       - _US_美国 22
-      - _US_美国 23
       - _US_美国 24
       - _US_美国 25
       - _US_美国 26
@@ -1274,12 +1285,6 @@ proxy-groups:
       - _US_美国 29
       - _US_美国 30
       - 更新于:04-2320:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州洛杉矶MULTACOM数据中心11
-      - github.com/freefq-加拿大2
-      - github.com/freefq-广东省揭阳市移动33
-      - github.com/freefq-英国4
-      - github.com/freefq-美国6
-      - github.com/freefq-美国CloudFlare公司CDN节点88
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1347,6 +1352,13 @@ proxy-groups:
       - CN_speednode_0062
       - CN_speednode_0063
       - speednode_0064
+      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+      - 🇨🇦 github.com/freefq - 加拿大  2
+      - 🇨🇳 github.com/freefq - 广东省揭阳市移动 3
+      - 🇬🇧 github.com/freefq - 英国  4
+      - 🇺🇸 github.com/freefq - 美国  6
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 7
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 8
       - _SG_新加坡
       - _HK_香港
       - _US_美国
@@ -1375,7 +1387,6 @@ proxy-groups:
       - _US_美国 21
       - _ES_西班牙
       - _US_美国 22
-      - _US_美国 23
       - _US_美国 24
       - _US_美国 25
       - _US_美国 26
@@ -1389,12 +1400,6 @@ proxy-groups:
       - _US_美国 29
       - _US_美国 30
       - 更新于:04-2320:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州洛杉矶MULTACOM数据中心11
-      - github.com/freefq-加拿大2
-      - github.com/freefq-广东省揭阳市移动33
-      - github.com/freefq-英国4
-      - github.com/freefq-美国6
-      - github.com/freefq-美国CloudFlare公司CDN节点88
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1461,6 +1466,13 @@ proxy-groups:
       - CN_speednode_0062
       - CN_speednode_0063
       - speednode_0064
+      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+      - 🇨🇦 github.com/freefq - 加拿大  2
+      - 🇨🇳 github.com/freefq - 广东省揭阳市移动 3
+      - 🇬🇧 github.com/freefq - 英国  4
+      - 🇺🇸 github.com/freefq - 美国  6
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 7
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 8
       - _SG_新加坡
       - _HK_香港
       - _US_美国
@@ -1489,7 +1501,6 @@ proxy-groups:
       - _US_美国 21
       - _ES_西班牙
       - _US_美国 22
-      - _US_美国 23
       - _US_美国 24
       - _US_美国 25
       - _US_美国 26
@@ -1503,12 +1514,6 @@ proxy-groups:
       - _US_美国 29
       - _US_美国 30
       - 更新于:04-2320:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州洛杉矶MULTACOM数据中心11
-      - github.com/freefq-加拿大2
-      - github.com/freefq-广东省揭阳市移动33
-      - github.com/freefq-英国4
-      - github.com/freefq-美国6
-      - github.com/freefq-美国CloudFlare公司CDN节点88
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1607,6 +1612,13 @@ proxy-groups:
       - CN_speednode_0062
       - CN_speednode_0063
       - speednode_0064
+      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶MULTACOM数据中心 1
+      - 🇨🇦 github.com/freefq - 加拿大  2
+      - 🇨🇳 github.com/freefq - 广东省揭阳市移动 3
+      - 🇬🇧 github.com/freefq - 英国  4
+      - 🇺🇸 github.com/freefq - 美国  6
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 7
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 8
       - _SG_新加坡
       - _HK_香港
       - _US_美国
@@ -1635,7 +1647,6 @@ proxy-groups:
       - _US_美国 21
       - _ES_西班牙
       - _US_美国 22
-      - _US_美国 23
       - _US_美国 24
       - _US_美国 25
       - _US_美国 26
@@ -1649,12 +1660,6 @@ proxy-groups:
       - _US_美国 29
       - _US_美国 30
       - 更新于:04-2320:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州洛杉矶MULTACOM数据中心11
-      - github.com/freefq-加拿大2
-      - github.com/freefq-广东省揭阳市移动33
-      - github.com/freefq-英国4
-      - github.com/freefq-美国6
-      - github.com/freefq-美国CloudFlare公司CDN节点88
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
