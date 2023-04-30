@@ -1,4 +1,4 @@
-# 更新时间 2023-04-30T13:00:31.098Z
+# 更新时间 2023-04-30T18:16:08.935Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -348,7 +348,37 @@ proxies:
       path: /shirker
       headers:
         host: lv1.sharecentrepro.org
-  - name: 🇯🇵 github.com/freefq - 日本  1
+  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
+    server: cf-lt.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: nl.sharecentrepro.com
+    udp: true
+  - name: 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
+    server: hd.mamadcucu.com
+    port: 2082
+    type: vmess
+    uuid: 8e98f959-6eac-40b7-8fa8-e745942c9a8c
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: h5.mamadcucu.com
+    udp: true
+  - name: 🇯🇵 github.com/freefq - 日本  4
     server: hk6.af49c4e4c2ef.sanfen004.me
     port: 443
     type: vmess
@@ -364,37 +394,22 @@ proxies:
       headers:
         Host: www.microsoft.com
     udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-    server: quiz.vidio.com
+  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
+    server: aaaa.wxx.gay
     port: 443
     type: vmess
-    uuid: 92869d41-a98a-40ba-b79d-2eeb7ffe2433
+    uuid: 7b1d76aa-e70b-11ed-8166-000017022008
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /worryfree
+      path: /look
       headers:
-        Host: dynamic-sg1b.obfs.xyz
+        Host: aaaa.wxx.gay
     udp: true
-  - name: 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-    server: cf-lt.sharecentre.online
-    port: 8080
-    type: vmess
-    uuid: e2952737-6f10-492b-9813-19131deb71b1
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        Host: ssrsub.v01.ssrsub.com
-    udp: true
-  - name: 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 4
+  - name: 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 6
     server: sg.stablize.top
     port: 443
     type: trojan
@@ -777,7 +792,7 @@ proxies:
     password: amazonskr05
     udp: true
   - type: vmess
-    name: 更新于:04-3020:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:05-0100:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -824,10 +839,11 @@ proxy-groups:
       - US_speednode_0037
       - US_speednode_0038
       - US_speednode_0039
-      - 🇯🇵 github.com/freefq - 日本  1
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 4
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
+      - 🇯🇵 github.com/freefq - 日本  4
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
+      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 6
       - _HK_香港
       - _US_美国
       - _US_美国 2
@@ -864,7 +880,7 @@ proxy-groups:
       - _JP_日本 6
       - _IN_印度
       - _JP_日本 7
-      - 更新于:04-3020:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:05-0100:00-byBuLink.xyz-以下节点不计流量0
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -905,10 +921,11 @@ proxy-groups:
       - US_speednode_0037
       - US_speednode_0038
       - US_speednode_0039
-      - 🇯🇵 github.com/freefq - 日本  1
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 4
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
+      - 🇯🇵 github.com/freefq - 日本  4
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
+      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 6
       - _HK_香港
       - _US_美国
       - _US_美国 2
@@ -945,7 +962,7 @@ proxy-groups:
       - _JP_日本 6
       - _IN_印度
       - _JP_日本 7
-      - 更新于:04-3020:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:05-0100:00-byBuLink.xyz-以下节点不计流量0
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -985,10 +1002,11 @@ proxy-groups:
       - US_speednode_0037
       - US_speednode_0038
       - US_speednode_0039
-      - 🇯🇵 github.com/freefq - 日本  1
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 4
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
+      - 🇯🇵 github.com/freefq - 日本  4
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
+      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 6
       - _HK_香港
       - _US_美国
       - _US_美国 2
@@ -1025,7 +1043,7 @@ proxy-groups:
       - _JP_日本 6
       - _IN_印度
       - _JP_日本 7
-      - 更新于:04-3020:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:05-0100:00-byBuLink.xyz-以下节点不计流量0
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1097,10 +1115,11 @@ proxy-groups:
       - US_speednode_0037
       - US_speednode_0038
       - US_speednode_0039
-      - 🇯🇵 github.com/freefq - 日本  1
       - 🇺🇸 github.com/freefq - 美国CloudFlare节点 2
-      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 3
-      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 4
+      - 🇺🇸 github.com/freefq - 美国CloudFlare公司CDN节点 3
+      - 🇯🇵 github.com/freefq - 日本  4
+      - 🇺🇸 github.com/freefq - 美国CloudFlare节点 5
+      - 🇺🇸 github.com/freefq - 美国加利福尼亚州洛杉矶Level3通信(DIA) 6
       - _HK_香港
       - _US_美国
       - _US_美国 2
@@ -1137,7 +1156,7 @@ proxy-groups:
       - _JP_日本 6
       - _IN_印度
       - _JP_日本 7
-      - 更新于:04-3020:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:05-0100:00-byBuLink.xyz-以下节点不计流量0
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
