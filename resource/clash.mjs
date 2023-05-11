@@ -10,5 +10,5 @@ export const clashList = [
     // "https://cdn.jsdelivr.net/gh/oslook/clash-freenode@main/clash.yaml",
     // "https://proxypool.toshiki.top/clash/proxies",
     // "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini",
-    "https://sub.back2me.cn/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
+    //"https://sub.back2me.cn/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Ffreefq%2Ffree%2Fmaster%2Fv2&insert=false&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true"
 ]
