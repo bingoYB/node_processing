@@ -1,4 +1,4 @@
-# 更新时间 2023-05-14T06:30:07.851Z
+# 更新时间 2023-05-14T06:40:33.276Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -6,26 +6,42 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - name: ZA_speednode_0001
+  - name: US_speednode_0001
+    server: awssg3-data.amazon-azure.com
+    port: 443
+    type: trojan
+    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
+    sni: awssg3-data.amazon-azure.com
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0002
+    server: awssg13-tg-data.amazonwebservicess.com
+    port: 443
+    type: trojan
+    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
+    sni: awssg13-tg-data.amazonwebservicess.com
+    skip-cert-verify: true
+    udp: true
+  - name: ZA_speednode_0003
     server: 154.198.209.42
     port: 443
     type: ssr
-    client-fingerprint: chrome
     cipher: rc4-md5
     password: ckq123..
-    tfo: false
     protocol: auth_chain_a
     obfs: tls1.2_ticket_auth
     protocol-param: ''
     obfs-param: cn.bing.com
-  - name: US_speednode_0002
-    server: azsg2-tg-data.amazonwebservicess.com
+    udp: true
+  - name: JP_speednode_0004
+    server: awsjp1-data.amazon-azure.com
     port: 443
     type: trojan
     password: 794d739c-89a0-444c-b2e7-acce12af3042
+    sni: awsjp1-data.amazon-azure.com
     skip-cert-verify: true
     udp: true
-  - name: US_speednode_0003
+  - name: US_speednode_0005
     server: sg.stablize.top
     port: 443
     type: trojan
@@ -33,59 +49,35 @@ proxies:
     sni: sg.stablize.top
     skip-cert-verify: true
     udp: true
-  - name: JP_speednode_0004
-    server: awsjp1-data.amazon-azure.com
-    port: 443
-    type: trojan
-    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
-    sni: data.amazon-azure.com
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0005
-    server: awssg3-data.amazon-azure.com
-    port: 443
-    type: trojan
-    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
-    sni: data.amazon-azure.com
-    skip-cert-verify: true
-    udp: true
-  - name: JP_speednode_0006
-    server: 172.105.217.55
+  - name: US_speednode_0006
+    server: us2.trojanvh.xyz
     port: 80
-    type: vmess
-    alterId: 0
-    cipher: auto
-    network: ws
-    skip-cert-verify: false
-    tls: false
-    uuid: ec7c94b5-6ca6-4289-b44b-c6583f2c5f6c
-    ws-opts:
-      path: /fuzzyng?ed=2048
+    type: trojan
+    password: 255c924c-1314-4084-9a9e-1d1a82a5cf49
+    sni: us2.trojanvh.xyz
+    skip-cert-verify: true
+    udp: true
   - name: US_speednode_0008
-    server: ap.stablize.top
+    server: awssg19-data.amazon-azure.com
     port: 443
     type: trojan
-    password: c8fb9d20-d89b-4f20-93f6-acd04aeb586b
+    password: 794d739c-89a0-444c-b2e7-acce12af3042
+    sni: awssg19-data.amazon-azure.com
     skip-cert-verify: true
     udp: true
   - name: JP_speednode_0009
-    server: jp1.fuzzyng.net
-    port: 80
-    type: vmess
-    alterId: 0
-    cipher: auto
-    network: ws
-    skip-cert-verify: false
-    tls: false
-    uuid: ec7c94b5-6ca6-4289-b44b-c6583f2c5f6c
-    ws-opts:
-      path: /fuzzyng?ed=2048
-  - name: JP_speednode_0010
     server: awsjp14-data.amazon-azure.com
     port: 443
     type: trojan
     password: 794d739c-89a0-444c-b2e7-acce12af3042
     sni: awsjp14-data.amazon-azure.com
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0010
+    server: 152.70.74.66
+    port: 443
+    type: trojan
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
     skip-cert-verify: true
     udp: true
   - name: speednode_0011
@@ -94,48 +86,8 @@ proxies:
     type: ss
     cipher: chacha20-ietf-poly1305
     password: 6ba2173f-7262-4db2-b41d-b3e4f38efd0b
-  - name: US_speednode_0013
-    server: us2.trojanvh.xyz
-    port: 80
-    type: trojan
-    password: 255c924c-1314-4084-9a9e-1d1a82a5cf49
-    allowInsecure: 1
-    skip-cert-verify: true
     udp: true
   - name: US_speednode_0014
-    server: 152.70.74.66
-    port: 443
-    type: trojan
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    skip-cert-verify: true
-  - name: US_speednode_0015
-    server: awssg13-tg-data.amazonwebservicess.com
-    port: 443
-    type: trojan
-    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
-    sni: data.amazonwebservicess.com
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0016
-    server: 142.0.130.8
-    port: 53452
-    type: vmess
-    client-fingerprint: chrome
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-  - name: US_speednode_0019
-    server: awssg19-data.amazon-azure.com
-    port: 443
-    type: trojan
-    password: 794d739c-89a0-444c-b2e7-acce12af3042
-    sni: data.amazon-azure.com
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0021
     server: 192.203.230.86
     port: 80
     type: vmess
@@ -150,12 +102,6 @@ proxies:
       path: /
       headers:
         Host: us-1.acyun.cf
-  - name: speednode_0022
-    server: gy.51vv.top
-    port: 32012
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 6ba2173f-7262-4db2-b41d-b3e4f38efd0b
   - name: _SG_新加坡
     server: sg-am3.eqsunshine.com
     port: 32001
@@ -506,6 +452,14 @@ proxies:
     type: ss
     cipher: aes-256-cfb
     password: bwhskrskr03
+    udp: true
+  - name: _SG_新加坡 2
+    server: azsg2-tg-data.amazonwebservicess.com
+    port: 443
+    type: trojan
+    password: 794d739c-89a0-444c-b2e7-acce12af3042
+    sni: data.amazonwebservicess.com
+    skip-cert-verify: true
     udp: true
   - name: _US_美国 23
     server: vde2.0bad.com
@@ -896,23 +850,17 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - ZA_speednode_0001
+      - US_speednode_0001
       - US_speednode_0002
-      - US_speednode_0003
+      - ZA_speednode_0003
       - JP_speednode_0004
       - US_speednode_0005
-      - JP_speednode_0006
+      - US_speednode_0006
       - US_speednode_0008
       - JP_speednode_0009
-      - JP_speednode_0010
+      - US_speednode_0010
       - speednode_0011
-      - US_speednode_0013
       - US_speednode_0014
-      - US_speednode_0015
-      - US_speednode_0016
-      - US_speednode_0019
-      - US_speednode_0021
-      - speednode_0022
       - _SG_新加坡
       - _US_美国
       - _US_美国 2
@@ -946,6 +894,7 @@ proxy-groups:
       - _TW_台湾
       - _GB_英国
       - _US_美国 22
+      - _SG_新加坡 2
       - _US_美国 23
       - _US_美国 24
       - _PA_巴拿马
@@ -986,23 +935,17 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - ZA_speednode_0001
+      - US_speednode_0001
       - US_speednode_0002
-      - US_speednode_0003
+      - ZA_speednode_0003
       - JP_speednode_0004
       - US_speednode_0005
-      - JP_speednode_0006
+      - US_speednode_0006
       - US_speednode_0008
       - JP_speednode_0009
-      - JP_speednode_0010
+      - US_speednode_0010
       - speednode_0011
-      - US_speednode_0013
       - US_speednode_0014
-      - US_speednode_0015
-      - US_speednode_0016
-      - US_speednode_0019
-      - US_speednode_0021
-      - speednode_0022
       - _SG_新加坡
       - _US_美国
       - _US_美国 2
@@ -1036,6 +979,7 @@ proxy-groups:
       - _TW_台湾
       - _GB_英国
       - _US_美国 22
+      - _SG_新加坡 2
       - _US_美国 23
       - _US_美国 24
       - _PA_巴拿马
@@ -1075,23 +1019,17 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - ZA_speednode_0001
+      - US_speednode_0001
       - US_speednode_0002
-      - US_speednode_0003
+      - ZA_speednode_0003
       - JP_speednode_0004
       - US_speednode_0005
-      - JP_speednode_0006
+      - US_speednode_0006
       - US_speednode_0008
       - JP_speednode_0009
-      - JP_speednode_0010
+      - US_speednode_0010
       - speednode_0011
-      - US_speednode_0013
       - US_speednode_0014
-      - US_speednode_0015
-      - US_speednode_0016
-      - US_speednode_0019
-      - US_speednode_0021
-      - speednode_0022
       - _SG_新加坡
       - _US_美国
       - _US_美国 2
@@ -1125,6 +1063,7 @@ proxy-groups:
       - _TW_台湾
       - _GB_英国
       - _US_美国 22
+      - _SG_新加坡 2
       - _US_美国 23
       - _US_美国 24
       - _PA_巴拿马
@@ -1196,23 +1135,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ZA_speednode_0001
+      - US_speednode_0001
       - US_speednode_0002
-      - US_speednode_0003
+      - ZA_speednode_0003
       - JP_speednode_0004
       - US_speednode_0005
-      - JP_speednode_0006
+      - US_speednode_0006
       - US_speednode_0008
       - JP_speednode_0009
-      - JP_speednode_0010
+      - US_speednode_0010
       - speednode_0011
-      - US_speednode_0013
       - US_speednode_0014
-      - US_speednode_0015
-      - US_speednode_0016
-      - US_speednode_0019
-      - US_speednode_0021
-      - speednode_0022
       - _SG_新加坡
       - _US_美国
       - _US_美国 2
@@ -1246,6 +1179,7 @@ proxy-groups:
       - _TW_台湾
       - _GB_英国
       - _US_美国 22
+      - _SG_新加坡 2
       - _US_美国 23
       - _US_美国 24
       - _PA_巴拿马
