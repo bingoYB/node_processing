@@ -1,4 +1,4 @@
-# 更新时间 2023-05-18T01:10:28.127Z
+# 更新时间 2023-05-18T06:18:53.707Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -217,7 +217,18 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: _SG_新加坡
-    server: 57dc969f-c6d4-4028-b845-174a8e01a583.xn--9kq12xdq7a.com
+    server: sg-am3.eqsunshine.com
+    port: 32001
+    type: ssr
+    cipher: aes-256-cfb
+    password: 3g0dHlKME
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param: ''
+    obfs-param: ''
+    udp: true
+  - name: _HK_香港
+    server: 3ab83739-e995-4f97-9629-41faac2255c9.xn--9kq12xdq7a.com
     port: 80
     type: vmess
     uuid: ca099159-d67c-4918-9741-82a28c802234
@@ -229,46 +240,18 @@ proxies:
     ws-opts:
       path: /
       headers:
-        Host: 57dc969f-c6d4-4028-b845-174a8e01a583.xn--9kq12xdq7a.com
+        Host: 3ab83739-e995-4f97-9629-41faac2255c9.xn--9kq12xdq7a.com
     udp: true
-  - name: _SG_新加坡 2
-    server: aws-sg.aikun.online
+  - name: _SG_新加坡->🇦🇺_AU_澳大利亚
+    server: ap.stablize.top
     port: 443
     type: trojan
-    password: f9df5923-6775-46e3-a43a-9865a2b77e88
-    sni: aws-sg.aikun.online
-    skip-cert-verify: true
-    udp: true
-  - name: _HK_香港
-    server: awshk8-data.amazon-azure.com
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
+    password: 7561d9a0-af44-405d-81ae-f056fbc03675
     skip-cert-verify: true
     udp: true
   - name: _US_美国
-    server: 192.74.234.83
-    port: 51302
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: _US_美国 2
-    server: 192.74.242.154
-    port: 44667
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: _US_美国 3
-    server: 192.74.224.23
-    port: 54027
+    server: 45.136.235.10
+    port: 41632
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
@@ -287,9 +270,42 @@ proxies:
     protocol-param: ''
     obfs-param: ''
     udp: true
+  - name: _US_美国 2
+    server: 107.167.12.26
+    port: 41702
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: _SG_新加坡 2
+    server: 138.2.71.111
+    port: 80
+    type: vmess
+    uuid: b2947942-701b-4de2-91cd-f6810d5d03bc
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+    udp: true
+  - name: _US_美国 3
+    server: 142.0.133.39
+    port: 51412
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
   - name: _US_美国 4
-    server: 137.175.18.107
-    port: 50004
+    server: 137.175.61.152
+    port: 53940
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
@@ -298,70 +314,21 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: _US_美国 5
-    server: 104.194.224.93
-    port: 50912
+    server: 23.225.33.173
+    port: 443
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: _HK_香港 2
-    server: hk5.af49c4e4c2ef.sanfen004.me
-    port: 443
-    type: vmess
-    uuid: 5859520d-6c8e-4a80-8255-7cdd563b778f
-    alterId: 0
-    cipher: auto
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
-      headers:
-        Host: hk5.af49c4e4c2ef.sanfen004.me
-    udp: true
-  - name: _HK_香港 3
-    server: awshk5-tg-data.amazonwebservicess.com
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    skip-cert-verify: true
-    udp: true
-  - name: _HK_香港 4
-    server: hk2.c2bfe79372be.sanfen004.me
-    port: 443
-    type: vmess
-    uuid: adb800cf-f56b-4c93-964d-07e8cc9eaf05
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: hk2.c2bfe79372be.sanfen004.me
-    udp: true
-  - name: _US_美国->🇱🇺_LU_卢森堡
-    server: 104.21.53.35
-    port: 80
-    type: vmess
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /yxzbp
-      headers:
-        Host: buyvm1.yxjnode.com
     udp: true
   - name: _US_美国 6
-    server: 192.74.234.84
-    port: 51302
+    server: 45.12.144.80
+    port: 47127
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
@@ -370,19 +337,6 @@ proxies:
     skip-cert-verify: true
     udp: true
   - name: _US_美国 7
-    server: 198.2.200.105
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-    udp: true
-  - name: _US_美国 8
     server: cf-lt.sharecentre.online
     port: 80
     type: vmess
@@ -397,45 +351,111 @@ proxies:
       headers:
         Host: ca.ilovescp.com
     udp: true
-  - name: _HK_香港 5
-    server: awshk17-data.amazon-azure.com
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
+  - name: _US_美国 8
+    server: 192.74.228.178
+    port: 42857
+    type: vmess
+    uuid: 051b844f-efe3-4847-92aa-66b5de0b6d4e
+    alterId: 64
+    cipher: auto
+    tls: false
     skip-cert-verify: true
     udp: true
-  - name: _HK_香港 6
-    server: 43.154.76.92
-    port: 21857
+  - name: _HK_香港 2
+    server: hk5.cnamazon.sbs
+    port: 443
+    type: trojan
+    password: bc2a1eb1-a706-4ee5-95a6-732a6c324142
+    skip-cert-verify: true
+    udp: true
+  - name: _US_美国->🇳🇱_NL_荷兰
+    server: 172.67.134.123
+    port: 443
     type: vmess
-    uuid: 784272d2-bd2d-438a-bbd4-1271bb1f1b0d
-    alterId: 64
+    uuid: 8357816b-68e4-4a2b-830c-e9bdd369ea22
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /7ouWwj1jH2IbuOfQj2chg
+      headers:
+        Host: en.foriran.live
+    udp: true
+  - name: _AE_阿联酋
+    server: jp1117.ljydw.top
+    port: 80
+    type: trojan
+    password: 0aaa052b-94f1-4ebf-afd0-7072303adfc8
+    sni: jp1117.ljydw.top
+    skip-cert-verify: true
+    udp: true
+  - name: _US_美国 9
+    server: 167.88.63.79
+    port: 5003
+    type: ss
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
+    udp: true
+  - name: _US_美国->🇳🇱_NL_荷兰 2
+    server: cu.wfitech.net
+    port: 443
+    type: vmess
+    uuid: 030ae75a-1a4a-45cc-88f1-f1b7d9fe15f3
+    alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
+      headers:
+        Host: cu.wfitech.net
     udp: true
   - name: _US_美国 10
-    server: us62vms.qpfdpf5.jfdiwue7.wpdfj.mrgspeed.site
-    port: 36611
-    type: vmess
-    uuid: d1c5b6b0-b6f9-4f1d-875d-7ccc88f4ca53
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
+    server: 167.88.63.79
+    port: 8118
+    type: ss
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
     udp: true
-  - name: _IR_伊朗
-    server: aparat.persianmizban.com
-    port: 4433
+  - name: _US_美国 11
+    server: 167.88.63.79
+    port: 7307
+    type: ss
+    cipher: aes-256-gcm
+    password: FoOiGlkAA9yPEGP
+    udp: true
+  - name: _HK_香港 3
+    server: hk5.af49c4e4c2ef.sanfen004.me
+    port: 443
     type: vmess
-    uuid: 88790a1b-f059-40c7-9c9d-b7c943b4420b
+    uuid: 5859520d-6c8e-4a80-8255-7cdd563b778f
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: hk5.af49c4e4c2ef.sanfen004.me
+    udp: true
+  - name: _SG_新加坡 3
+    server: 0309tw.ljydw.top
+    port: 443
+    type: trojan
+    password: 0aaa052b-94f1-4ebf-afd0-7072303adfc8
+    sni: 0309tw.ljydw.top
+    skip-cert-verify: true
+    udp: true
+  - name: _BG_保加利亚
+    server: 213.183.63.69
+    port: 9061
+    type: ss
+    cipher: aes-256-cfb
+    password: 4R3hUfZ2FHhDmNcP
     udp: true
   - name: _FR_法国
     server: fr-am1-5.eqsunshine.com
@@ -448,66 +468,95 @@ proxies:
     protocol-param: ''
     obfs-param: ''
     udp: true
-  - name: _HK_香港 7
-    server: awshk19-data.amazon-azure.com
+  - name: _DE_德国
+    server: 217.79.184.18
     port: 443
     type: trojan
-    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
-    sni: data.amazon-azure.com
+    password: 27af95ea-e457-4bc9-9e36-8042ae657f4e
+    sni: download.xn--mes358a9urctx.com
     skip-cert-verify: true
     udp: true
-  - name: _LV_拉脱维亚
-    server: 185.135.86.173
-    port: 9003
+  - name: _JP_日本 2
+    server: 52.194.255.173
+    port: 443
     type: ss
     cipher: aes-256-cfb
-    password: JdmRK9gMEqFgs8nP
+    password: amazonskr05
     udp: true
-  - name: _US_美国 11
+  - name: _US_美国 13
     server: 135.148.149.209
     port: 80
     type: trojan
     password: 255c924c-1314-4084-9a9e-1d1a82a5cf49
     skip-cert-verify: true
     udp: true
-  - name: _DE_德国
-    server: 80.92.204.106
-    port: 9094
-    type: ss
-    cipher: aes-256-cfb
-    password: rpgbNnU9rDDU4aWZ
-    udp: true
-  - name: _US_美国 12
-    server: 172.67.73.39
+  - name: _US_美国 14
+    server: 206.168.191.67
     port: 80
     type: vmess
-    uuid: b8458948-a630-4e6d-809a-230b2223ff3d
+    uuid: 7997b5a0-f2f9-11ed-b436-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /xrayvws
+      path: /r2vt59x8
       headers:
-        Host: f.tun4.live
+        Host: 206.168.191.67
+    udp: true
+  - name: _IR_伊朗
+    server: de63.thugiping.cloud
+    port: 443
+    type: vmess
+    uuid: c9a22360-3f66-48c8-89ab-13799b05a730
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
     udp: true
   - name: _TW_台湾
+    server: stw10-tg-data.amazonwebservicess.com
+    port: 443
+    type: trojan
+    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
+    skip-cert-verify: true
+    udp: true
+  - name: _TW_台湾 2
     server: scloudtw1-tg-data.amazonwebservicess.com
     port: 443
     type: trojan
     password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
     skip-cert-verify: true
     udp: true
-  - name: _US_美国 13
-    server: 143.42.199.130
-    port: 38867
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 8257221136
+  - name: _US_美国->🇦🇷_AR_阿根廷
+    server: us-am3.eqnode.net
+    port: 8081
+    type: ssr
+    cipher: aes-256-cfb
+    password: fou8MBGij
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param: ''
+    obfs-param: ''
     udp: true
-  - name: _HK_香港 8
-    server: awshk15-data.amazon-azure.com
+  - name: _US_美国 15
+    server: 216.52.183.243
+    port: 80
+    type: ss
+    cipher: aes-128-gcm
+    password: 83XvX4Vo%*3a
+    udp: true
+  - name: _TW_台湾 3
+    server: bgptw2.cnamazon.sbs
+    port: 443
+    type: trojan
+    password: 3e7ad819-03dd-46e1-8292-116fd2cea1c2
+    sni: tlsdata.cnamazon.sbs
+    skip-cert-verify: true
+    udp: true
+  - name: _TW_台湾 4
+    server: stw3-tg-data.amazonwebservicess.com
     port: 443
     type: trojan
     password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
@@ -520,73 +569,44 @@ proxies:
     password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
     skip-cert-verify: true
     udp: true
-  - name: _TW_台湾 2
-    server: stw3-tg-data.amazonwebservicess.com
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    skip-cert-verify: true
-    udp: true
-  - name: _IR_伊朗 2
-    server: de63.thugiping.cloud
+  - name: _CA_加拿大
+    server: 23.227.38.99
     port: 443
     type: vmess
-    uuid: c9a22360-3f66-48c8-89ab-13799b05a730
+    uuid: 86d37526-5758-4cec-862f-df404b313086
     alterId: 0
     cipher: auto
     tls: true
     skip-cert-verify: true
-    udp: true
-  - name: _SG_新加坡->🇹🇼_TW_台湾 2
-    server: stw8-tg-data.amazonwebservicess.com
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    skip-cert-verify: true
-    udp: true
-  - name: _RU_俄罗斯联邦
-    server: 45.130.146.86
-    port: 443
-    type: ssr
-    cipher: aes-256-cfb
-    password: vyunme
-    protocol: auth_aes128_sha1
-    obfs: plain
-    protocol-param: 17422:TTp0SX
-    obfs-param: ab93117422.jd.hk
-    udp: true
-  - name: _US_美国->🇳🇱_NL_荷兰
-    server: tech.noaries.de
-    port: 80
-    type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /shirker
+      path: /3G6WPDL7
       headers:
-        Host: nl.sharecentrepro.com
-    udp: true
-  - name: _HK_香港 9
-    server: 16.162.50.230
-    port: 443
-    type: trojan
-    password: 4aeda200-44c9-4168-8f2a-a00a72176d35
-    skip-cert-verify: true
+        Host: 1.freek1.xyz
     udp: true
   - type: vmess
-    name: 更新于:05-1808:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:05-1812:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
     alterId: 0
     cipher: auto
     network: auto
+  - type: ss
+    name: github.com/freefq-荷兰北荷兰省阿姆斯特丹Microsoft数据中心2
+    server: 40.113.153.173
+    port: 45160
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprUXBhREpkRlBubHRZY2JCWUY0S3RL
+    cipher: aes-128-gcm
+  - type: trojan
+    name: github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)3
+    server: jp.stablize.top
+    port: 443
+    password: 7561d9a0-af44-405d-81ae-f056fbc03675
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: github.com/freefq-北京市移动11
+    name: github.com/freefq-北京市移动44
     ws-opts:
       path: /
     server: 36.134.16.171
@@ -595,59 +615,21 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
-  - type: trojan
-    name: github.com/freefq-美国Microsoft数据中心2
-    server: fscus.fscloud123456789.com
-    port: 443
-    password: 02d79af1-e121-401a-a294-fc72a50eb8b8
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)3
-    server: ap.stablize.top
-    port: 443
-    password: 7561d9a0-af44-405d-81ae-f056fbc03675
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点55
+    name: github.com/freefq-南非66
     ws-opts:
-      path: /7ouWwj1jH2IbuOfQj2chg
+      path: /path/1684230882527
       headers:
-        host: en.foriran.live
-    server: 172.67.134.123
+        host: www.20163322.xyz
+    server: 156.225.67.8
     port: 443
-    uuid: 8357816b-68e4-4a2b-830c-e9bdd369ea22
+    uuid: d7735058-1dac-4618-99ff-0aa0441ec2d7
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国66
-    ws-opts:
-      path: /r2vt59x8
-      headers:
-        host: 206.168.191.67
-    server: 206.168.191.67
-    port: 80
-    uuid: 7997b5a0-f2f9-11ed-b436-205c6d5f5d78
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点77
-    ws-opts:
-      path: /yxzbp
-      headers:
-        host: dp1.yxjnode.com
-    server: cf.yxjnode.com
-    port: 80
-    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-日本东京阿里云99
+    name: github.com/freefq-美国CloudFlare节点88
     ws-opts:
       path: /api/v3/download.getFile
       headers:
@@ -659,7 +641,32 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国阿里云1010
+    name: github.com/freefq-美国CloudFlare公司CDN节点99
+    ws-opts:
+      path: /yxzbp
+      headers:
+        host: dp1.yxjnode.com
+    server: cf.yxjnode.com
+    port: 80
+    uuid: 09c1d32d-4458-4ebf-b36d-4dd732bae3aa
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点1010
+    ws-opts:
+      path: /
+      headers:
+        host: new8.huvicloud.com
+    server: new8.huvicloud.com
+    port: 443
+    uuid: a11ca760-9ef9-4a63-95c9-4c5c32d56251
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1111
     ws-opts:
       path: /
       headers:
@@ -671,28 +678,18 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1111
+    name: github.com/freefq-美国RFEngineering1212
     ws-opts:
-      path: /X9piqfat/
-    server: v2ray3.webgfw.top
-    port: 2083
-    uuid: ea9de06d-2436-42e9-8187-9e6d5fc40407
+      path: /speedtest
+      headers:
+        host: Lille.kotick.site
+    server: 141.193.213.31
+    port: 443
+    uuid: 6147F065-9AC0-4081-A5A3-A2EB4EBB8958
     alterId: 0
     cipher: auto
     network: ws
     tls: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1212
-    ws-opts:
-      path: /qwer11
-      headers:
-        host: uyaa.vtcss.top
-    server: 172.67.247.250
-    port: 80
-    uuid: 53ae65be-81ee-4766-8a09-da43c44c4d30
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: vmess
     name: github.com/freefq-香港特别行政区1313
     ws-opts:
@@ -706,7 +703,66 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-日本东京Amazon数据中心1414
+    name: github.com/freefq-希腊1414
+    ws-opts:
+      path: /nimvws
+      headers:
+        host: phosphorylative.aurorainiceland.com
+    server: 95.179.171.203
+    port: 443
+    uuid: 6388bd92-6cbc-4b72-a9a6-931f071d0ffa
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-日本东京Amazon数据中心1616
+    ws-opts:
+      path: /hlsrthe214/8u4692j
+      headers:
+        host: jp06-vm0.entry.jpojpoh.art
+    server: jp06-vm0.entry.jpojpoh.art
+    port: 28787
+    uuid: 1bc52308-0bd9-30d0-90fd-cef337875d10
+    alterId: 0
+    cipher: auto
+    network: auto
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1818
+    ws-opts:
+      path: /qwer11
+      headers:
+        host: uyaa.vtcss.top
+    server: 172.67.247.250
+    port: 80
+    uuid: 53ae65be-81ee-4766-8a09-da43c44c4d30
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-日本东京Amazon数据中心1919
+    ws-opts:
+      path: /
+    server: jp01-alt-vm0.entry.srthdw.art
+    port: 21585
+    uuid: 1bc52308-0bd9-30d0-90fd-cef337875d10
+    alterId: 0
+    cipher: auto
+    network: auto
+    tls: true
+  - type: vmess
+    name: github.com/freefq-日本东京Amazon数据中心2020
+    ws-opts:
+      path: /
+    server: jp05-vm0.entry.srthdw.art
+    port: 30593
+    uuid: 1bc52308-0bd9-30d0-90fd-cef337875d10
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: github.com/freefq-日本东京Amazon数据中心2121
     ws-opts:
       path: /
     server: jp06-vm0.entry.jpojpoh.art
@@ -744,54 +800,59 @@ proxy-groups:
       - RS_speednode_0021
       - EG_speednode_0022
       - _SG_新加坡
-      - _SG_新加坡 2
       - _HK_香港
+      - _SG_新加坡->🇦🇺_AU_澳大利亚
       - _US_美国
-      - _US_美国 2
-      - _US_美国 3
       - _JP_日本
+      - _US_美国 2
+      - _SG_新加坡 2
+      - _US_美国 3
       - _US_美国 4
       - _US_美国 5
-      - _HK_香港 2
-      - _HK_香港 3
-      - _HK_香港 4
-      - _US_美国->🇱🇺_LU_卢森堡
       - _US_美国 6
       - _US_美国 7
       - _US_美国 8
-      - _HK_香港 5
-      - _HK_香港 6
-      - _US_美国 10
-      - _IR_伊朗
-      - _FR_法国
-      - _HK_香港 7
-      - _LV_拉脱维亚
-      - _US_美国 11
-      - _DE_德国
-      - _US_美国 12
-      - _TW_台湾
-      - _US_美国 13
-      - _HK_香港 8
-      - _SG_新加坡->🇹🇼_TW_台湾
-      - _TW_台湾 2
-      - _IR_伊朗 2
-      - _SG_新加坡->🇹🇼_TW_台湾 2
-      - _RU_俄罗斯联邦
+      - _HK_香港 2
       - _US_美国->🇳🇱_NL_荷兰
-      - _HK_香港 9
-      - 更新于:05-1808:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-北京市移动11
-      - github.com/freefq-美国Microsoft数据中心2
+      - _AE_阿联酋
+      - _US_美国 9
+      - _US_美国->🇳🇱_NL_荷兰 2
+      - _US_美国 10
+      - _US_美国 11
+      - _HK_香港 3
+      - _SG_新加坡 3
+      - _BG_保加利亚
+      - _FR_法国
+      - _DE_德国
+      - _JP_日本 2
+      - _US_美国 13
+      - _US_美国 14
+      - _IR_伊朗
+      - _TW_台湾
+      - _TW_台湾 2
+      - _US_美国->🇦🇷_AR_阿根廷
+      - _US_美国 15
+      - _TW_台湾 3
+      - _TW_台湾 4
+      - _SG_新加坡->🇹🇼_TW_台湾
+      - _CA_加拿大
+      - 更新于:05-1812:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-荷兰北荷兰省阿姆斯特丹Microsoft数据中心2
       - github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)3
-      - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-美国66
-      - github.com/freefq-美国CloudFlare节点77
-      - github.com/freefq-日本东京阿里云99
-      - github.com/freefq-美国阿里云1010
-      - github.com/freefq-美国CloudFlare公司CDN节点1111
-      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-北京市移动44
+      - github.com/freefq-南非66
+      - github.com/freefq-美国CloudFlare节点88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点1010
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-美国RFEngineering1212
       - github.com/freefq-香港特别行政区1313
-      - github.com/freefq-日本东京Amazon数据中心1414
+      - github.com/freefq-希腊1414
+      - github.com/freefq-日本东京Amazon数据中心1616
+      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-日本东京Amazon数据中心1919
+      - github.com/freefq-日本东京Amazon数据中心2020
+      - github.com/freefq-日本东京Amazon数据中心2121
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -820,54 +881,59 @@ proxy-groups:
       - RS_speednode_0021
       - EG_speednode_0022
       - _SG_新加坡
-      - _SG_新加坡 2
       - _HK_香港
+      - _SG_新加坡->🇦🇺_AU_澳大利亚
       - _US_美国
-      - _US_美国 2
-      - _US_美国 3
       - _JP_日本
+      - _US_美国 2
+      - _SG_新加坡 2
+      - _US_美国 3
       - _US_美国 4
       - _US_美国 5
-      - _HK_香港 2
-      - _HK_香港 3
-      - _HK_香港 4
-      - _US_美国->🇱🇺_LU_卢森堡
       - _US_美国 6
       - _US_美国 7
       - _US_美国 8
-      - _HK_香港 5
-      - _HK_香港 6
-      - _US_美国 10
-      - _IR_伊朗
-      - _FR_法国
-      - _HK_香港 7
-      - _LV_拉脱维亚
-      - _US_美国 11
-      - _DE_德国
-      - _US_美国 12
-      - _TW_台湾
-      - _US_美国 13
-      - _HK_香港 8
-      - _SG_新加坡->🇹🇼_TW_台湾
-      - _TW_台湾 2
-      - _IR_伊朗 2
-      - _SG_新加坡->🇹🇼_TW_台湾 2
-      - _RU_俄罗斯联邦
+      - _HK_香港 2
       - _US_美国->🇳🇱_NL_荷兰
-      - _HK_香港 9
-      - 更新于:05-1808:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-北京市移动11
-      - github.com/freefq-美国Microsoft数据中心2
+      - _AE_阿联酋
+      - _US_美国 9
+      - _US_美国->🇳🇱_NL_荷兰 2
+      - _US_美国 10
+      - _US_美国 11
+      - _HK_香港 3
+      - _SG_新加坡 3
+      - _BG_保加利亚
+      - _FR_法国
+      - _DE_德国
+      - _JP_日本 2
+      - _US_美国 13
+      - _US_美国 14
+      - _IR_伊朗
+      - _TW_台湾
+      - _TW_台湾 2
+      - _US_美国->🇦🇷_AR_阿根廷
+      - _US_美国 15
+      - _TW_台湾 3
+      - _TW_台湾 4
+      - _SG_新加坡->🇹🇼_TW_台湾
+      - _CA_加拿大
+      - 更新于:05-1812:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-荷兰北荷兰省阿姆斯特丹Microsoft数据中心2
       - github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)3
-      - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-美国66
-      - github.com/freefq-美国CloudFlare节点77
-      - github.com/freefq-日本东京阿里云99
-      - github.com/freefq-美国阿里云1010
-      - github.com/freefq-美国CloudFlare公司CDN节点1111
-      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-北京市移动44
+      - github.com/freefq-南非66
+      - github.com/freefq-美国CloudFlare节点88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点1010
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-美国RFEngineering1212
       - github.com/freefq-香港特别行政区1313
-      - github.com/freefq-日本东京Amazon数据中心1414
+      - github.com/freefq-希腊1414
+      - github.com/freefq-日本东京Amazon数据中心1616
+      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-日本东京Amazon数据中心1919
+      - github.com/freefq-日本东京Amazon数据中心2020
+      - github.com/freefq-日本东京Amazon数据中心2121
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -895,54 +961,59 @@ proxy-groups:
       - RS_speednode_0021
       - EG_speednode_0022
       - _SG_新加坡
-      - _SG_新加坡 2
       - _HK_香港
+      - _SG_新加坡->🇦🇺_AU_澳大利亚
       - _US_美国
-      - _US_美国 2
-      - _US_美国 3
       - _JP_日本
+      - _US_美国 2
+      - _SG_新加坡 2
+      - _US_美国 3
       - _US_美国 4
       - _US_美国 5
-      - _HK_香港 2
-      - _HK_香港 3
-      - _HK_香港 4
-      - _US_美国->🇱🇺_LU_卢森堡
       - _US_美国 6
       - _US_美国 7
       - _US_美国 8
-      - _HK_香港 5
-      - _HK_香港 6
-      - _US_美国 10
-      - _IR_伊朗
-      - _FR_法国
-      - _HK_香港 7
-      - _LV_拉脱维亚
-      - _US_美国 11
-      - _DE_德国
-      - _US_美国 12
-      - _TW_台湾
-      - _US_美国 13
-      - _HK_香港 8
-      - _SG_新加坡->🇹🇼_TW_台湾
-      - _TW_台湾 2
-      - _IR_伊朗 2
-      - _SG_新加坡->🇹🇼_TW_台湾 2
-      - _RU_俄罗斯联邦
+      - _HK_香港 2
       - _US_美国->🇳🇱_NL_荷兰
-      - _HK_香港 9
-      - 更新于:05-1808:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-北京市移动11
-      - github.com/freefq-美国Microsoft数据中心2
+      - _AE_阿联酋
+      - _US_美国 9
+      - _US_美国->🇳🇱_NL_荷兰 2
+      - _US_美国 10
+      - _US_美国 11
+      - _HK_香港 3
+      - _SG_新加坡 3
+      - _BG_保加利亚
+      - _FR_法国
+      - _DE_德国
+      - _JP_日本 2
+      - _US_美国 13
+      - _US_美国 14
+      - _IR_伊朗
+      - _TW_台湾
+      - _TW_台湾 2
+      - _US_美国->🇦🇷_AR_阿根廷
+      - _US_美国 15
+      - _TW_台湾 3
+      - _TW_台湾 4
+      - _SG_新加坡->🇹🇼_TW_台湾
+      - _CA_加拿大
+      - 更新于:05-1812:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-荷兰北荷兰省阿姆斯特丹Microsoft数据中心2
       - github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)3
-      - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-美国66
-      - github.com/freefq-美国CloudFlare节点77
-      - github.com/freefq-日本东京阿里云99
-      - github.com/freefq-美国阿里云1010
-      - github.com/freefq-美国CloudFlare公司CDN节点1111
-      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-北京市移动44
+      - github.com/freefq-南非66
+      - github.com/freefq-美国CloudFlare节点88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点1010
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-美国RFEngineering1212
       - github.com/freefq-香港特别行政区1313
-      - github.com/freefq-日本东京Amazon数据中心1414
+      - github.com/freefq-希腊1414
+      - github.com/freefq-日本东京Amazon数据中心1616
+      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-日本东京Amazon数据中心1919
+      - github.com/freefq-日本东京Amazon数据中心2020
+      - github.com/freefq-日本东京Amazon数据中心2121
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1002,54 +1073,59 @@ proxy-groups:
       - RS_speednode_0021
       - EG_speednode_0022
       - _SG_新加坡
-      - _SG_新加坡 2
       - _HK_香港
+      - _SG_新加坡->🇦🇺_AU_澳大利亚
       - _US_美国
-      - _US_美国 2
-      - _US_美国 3
       - _JP_日本
+      - _US_美国 2
+      - _SG_新加坡 2
+      - _US_美国 3
       - _US_美国 4
       - _US_美国 5
-      - _HK_香港 2
-      - _HK_香港 3
-      - _HK_香港 4
-      - _US_美国->🇱🇺_LU_卢森堡
       - _US_美国 6
       - _US_美国 7
       - _US_美国 8
-      - _HK_香港 5
-      - _HK_香港 6
-      - _US_美国 10
-      - _IR_伊朗
-      - _FR_法国
-      - _HK_香港 7
-      - _LV_拉脱维亚
-      - _US_美国 11
-      - _DE_德国
-      - _US_美国 12
-      - _TW_台湾
-      - _US_美国 13
-      - _HK_香港 8
-      - _SG_新加坡->🇹🇼_TW_台湾
-      - _TW_台湾 2
-      - _IR_伊朗 2
-      - _SG_新加坡->🇹🇼_TW_台湾 2
-      - _RU_俄罗斯联邦
+      - _HK_香港 2
       - _US_美国->🇳🇱_NL_荷兰
-      - _HK_香港 9
-      - 更新于:05-1808:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-北京市移动11
-      - github.com/freefq-美国Microsoft数据中心2
+      - _AE_阿联酋
+      - _US_美国 9
+      - _US_美国->🇳🇱_NL_荷兰 2
+      - _US_美国 10
+      - _US_美国 11
+      - _HK_香港 3
+      - _SG_新加坡 3
+      - _BG_保加利亚
+      - _FR_法国
+      - _DE_德国
+      - _JP_日本 2
+      - _US_美国 13
+      - _US_美国 14
+      - _IR_伊朗
+      - _TW_台湾
+      - _TW_台湾 2
+      - _US_美国->🇦🇷_AR_阿根廷
+      - _US_美国 15
+      - _TW_台湾 3
+      - _TW_台湾 4
+      - _SG_新加坡->🇹🇼_TW_台湾
+      - _CA_加拿大
+      - 更新于:05-1812:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-荷兰北荷兰省阿姆斯特丹Microsoft数据中心2
       - github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)3
-      - github.com/freefq-美国CloudFlare节点55
-      - github.com/freefq-美国66
-      - github.com/freefq-美国CloudFlare节点77
-      - github.com/freefq-日本东京阿里云99
-      - github.com/freefq-美国阿里云1010
-      - github.com/freefq-美国CloudFlare公司CDN节点1111
-      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-北京市移动44
+      - github.com/freefq-南非66
+      - github.com/freefq-美国CloudFlare节点88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点1010
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-美国RFEngineering1212
       - github.com/freefq-香港特别行政区1313
-      - github.com/freefq-日本东京Amazon数据中心1414
+      - github.com/freefq-希腊1414
+      - github.com/freefq-日本东京Amazon数据中心1616
+      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-日本东京Amazon数据中心1919
+      - github.com/freefq-日本东京Amazon数据中心2020
+      - github.com/freefq-日本东京Amazon数据中心2121
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
