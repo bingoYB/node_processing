@@ -1,4 +1,4 @@
-# 更新时间 2023-05-22T07:10:34.836Z
+# 更新时间 2023-05-22T12:27:35.804Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -6,92 +6,51 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - name: US_speednode_0001
-    server: 142.4.126.71
-    port: 31002
-    type: vmess
-    client-fingerprint: chrome
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-  - name: US_speednode_0002
-    server: 45.12.112.102
-    port: 40002
-    type: vmess
-    client-fingerprint: chrome
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-  - name: CN_speednode_0003
-    server: 198.2.203.57
-    port: 44502
-    type: vmess
-    client-fingerprint: chrome
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
+  - name: CA_speednode_0001
+    server: 165.154.253.42
+    port: 443
+    type: trojan
+    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
+    skip-cert-verify: true
+  - name: CA_speednode_0002
+    server: 165.154.227.239
+    port: 443
+    type: trojan
+    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
+    skip-cert-verify: true
+  - name: CA_speednode_0003
+    server: bgptw5.cnamazon.sbs
+    port: 443
+    type: trojan
+    password: 33114904-dfa7-4267-9996-2c5bb47b7b50
+    sni: tlsdata.cnamazon.sbs
+    skip-cert-verify: true
   - name: US_speednode_0004
+    server: kr.stablize.top
+    port: 443
+    type: trojan
+    password: 6191d59d-021c-4af1-8197-85d52c564ac4
+    sni: kr.stablize.top
+    skip-cert-verify: true
+    udp: true
+  - name: CN_speednode_0005
+    server: ahcm.v-too.cloud
+    port: 10259
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 0afcc41c-8a1a-4229-82d9-c483b48d5389
+    udp: true
+  - name: CA_speednode_0006
+    server: 165.154.227.191
+    port: 443
+    type: trojan
+    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
+    skip-cert-verify: true
+  - name: US_speednode_0008
     server: 152.70.74.66
     port: 443
     type: trojan
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0005
-    server: us9.ss361.xyz
-    port: 2095
-    type: vmess
-    client-fingerprint: chrome
-    uuid: 600d53b5-b034-4889-80ec-3817c5658e3d
-    alterId: 0
-    cipher: auto
-    tls: false
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: us9.ss361.xyz
-  - name: JP_speednode_0006
-    server: 45.85.119.44
-    port: 443
-    type: vmess
-    client-fingerprint: chrome
-    uuid: 3E271C5F-28FF-4704-B8E5-CC2B39AB7F60
-    alterId: 0
-    cipher: auto
-    tls: true
-    tfo: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /speedtest
-      headers:
-        Host: Kansas.kotick.site
-  - name: US_speednode_0007
-    server: 148.59.74.239
-    port: 443
-    type: trojan
-    password: 39007fdd-ce3d-4d69-9db9-8434ce32d43b
-    sni: 20-212-60-88.nhost.00cdn.com
-    skip-cert-verify: true
-    udp: true
-  - name: GB_speednode_0008
-    server: 141.11.127.19
-    port: 443
-    type: trojan
-    password: 8764f05d-8516-43cc-802c-a1ad6c67aeef
-    sni: 4-193-105-141.nhost.00cdn.com
     skip-cert-verify: true
     udp: true
   - name: US_speednode_0009
@@ -108,21 +67,7 @@ proxies:
       path: /yxzbp
       headers:
         host: dp4.yxjnode.com
-  - name: speednode_0010
-    server: cf-lt.sharecentre.online
-    port: 80
-    type: vmess
-    cipher: aes-128-gcm
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /shirker
-      headers:
-        host: uk1.scproxy.top
-  - name: SG_speednode_0011
+  - name: JP_speednode_0010
     server: cdn.twitter.now.cc
     port: 443
     type: vmess
@@ -137,298 +82,19 @@ proxies:
       path: /ikun
       headers:
         Host: de.twittei.me
-  - name: US_speednode_0012
-    server: jp3.d4995a2eb9b2.sanfen004.me
-    port: 443
-    type: vmess
-    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0013
-    server: cf-dx-dns.sharecentre.online
+  - name: speednode_0011
+    server: cf-lt.sharecentre.online
     port: 80
     type: vmess
-    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    udp: true
     ws-opts:
       path: /shirker
       headers:
-        Host: nl.sharecentrepro.com
-  - name: AU_speednode_0014
-    server: 139.99.245.165
-    port: 50002
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    network: tcp
-  - name: speednode_0015
-    server: 162.159.152.153
-    port: 8880
-    type: vmess
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: csjp.iiio.wiki
-    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
+        host: hk-hytron.ilovescp.com
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
     alterId: 0
     cipher: auto
     network: ws
-  - name: US_speednode_0016
-    server: cambridge.org
-    port: 443
-    type: vmess
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Lille.kotick.site
-    uuid: 3E271C5F-28FF-4704-B8E5-CC2B39AB7F60
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - name: CY_speednode_0018
-    server: 203.22.223.51
-    port: 443
-    type: vmess
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Kansas.kotick.site
-    uuid: 7757E99E-75C9-46D5-854D-4065BF372100
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - name: US_speednode_0019
-    server: downloadvip.cfd
-    port: 443
-    type: vmess
-    uuid: 6f17bfc8-dc72-4288-82e0-658c99a78219
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /djjc/jp1
-      headers:
-        Host: jp1.djjc.sbs
-  - name: SG_speednode_0020
-    server: sigma.jandapirang.my.id
-    port: 80
-    type: vmess
-    uuid: 1d1c1d94-6987-4658-a4dc-8821a30fe7e0
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /vmess
-      headers:
-        Host: sigma.jandapirang.my.id
-  - name: CN_speednode_0021
-    server: ahcm.v-too.cloud
-    port: 10259
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 0afcc41c-8a1a-4229-82d9-c483b48d5389
-    udp: true
-  - name: US_speednode_0022
-    server: kr.stablize.top
-    port: 443
-    type: trojan
-    password: 6191d59d-021c-4af1-8197-85d52c564ac4
-    sni: kr.stablize.top
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0023
-    server: 142.4.106.250
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /path/1683715826870
-      headers:
-        Host: www.44716766.xyz
-  - name: US_speednode_0024
-    server: sg.stablize.top
-    port: 443
-    type: trojan
-    password: b327d1e6-3abc-4ce5-81f3-620ea3f10647
-    sni: sg.stablize.top
-    skip-cert-verify: true
-    udp: true
-  - name: DE_speednode_0025
-    server: uslws.ov2ray.xyz
-    port: 443
-    type: vmess
-    uuid: DC615FCF-98B5-4D06-AA18-A6A1F65FF6D3
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /speedtest
-      headers:
-        Host: Lille.kotick.site
-  - name: CA_speednode_0027
-    server: 165.154.246.207
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    allowInsecure: 1
-    skip-cert-verify: true
-    udp: true
-  - name: CA_speednode_0028
-    server: stw6-tg-data.amazonwebservicess.com
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    allowInsecure: 1
-    skip-cert-verify: true
-    udp: true
-  - name: CA_speednode_0029
-    server: 165.154.226.87
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    allowInsecure: 1
-    skip-cert-verify: true
-    udp: true
-  - name: CA_speednode_0030
-    server: 165.154.226.138
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    allowInsecure: 1
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0033
-    server: 198.2.208.182
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1684405930831
-      headers:
-        Host: www.62317155.xyz
-    udp: true
-  - name: US_speednode_0034
-    server: usajs.stablize.top
-    port: 443
-    type: trojan
-    password: 6191d59d-021c-4af1-8197-85d52c564ac4
-    allowInsecure: 1
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0035
-    server: chat.samrg.buzz
-    port: 443
-    type: vmess
-    uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /cutino
-      headers:
-        Host: chat.samrg.buzz
-  - name: US_speednode_0036
-    server: 172.67.147.152
-    port: 443
-    type: vmess
-    uuid: 9e6ceeff-2546-3690-ac00-6fcdf31dec94
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /cutino
-      headers:
-        Host: chat.samrg.buzz
-  - name: US_speednode_0037
-    server: us2.01dj.sbs
-    port: 443
-    type: vmess
-    alterId: 0
-    cipher: auto
-    network: ws
-    skip-cert-verify: false
-    tls: true
-    uuid: 4dc3b73e-9c0a-477c-8a29-843849e9194e
-    ws-opts:
-      path: /sometimesnaive
-  - name: CA_speednode_0038
-    server: 165.154.227.191
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    skip-cert-verify: true
-  - name: speednode_0039
-    server: 195.54.170.70
-    port: 989
-    type: ss
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-  - name: US_speednode_0040
-    server: us1.01dj.sbs
-    port: 443
-    type: vmess
-    alterId: 0
-    cipher: auto
-    network: ws
-    skip-cert-verify: false
-    tls: true
-    uuid: 4dc3b73e-9c0a-477c-8a29-843849e9194e
-    ws-opts:
-      path: /sometimesnaive
-  - name: CA_speednode_0041
-    server: 165.154.253.42
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    skip-cert-verify: true
-  - name: DE_speednode_0042
-    server: 172.104.132.14
-    port: 443
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 0r91Aj1MeFRSvoy6
-  - name: CA_speednode_0043
-    server: 165.154.227.239
-    port: 443
-    type: trojan
-    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
-    skip-cert-verify: true
-  - name: US_speednode_0044
+  - name: US_speednode_0012
     server: 23.224.110.242
     port: 443
     type: vmess
@@ -440,69 +106,7 @@ proxies:
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     ws-opts:
       path: /path/1683715826870
-  - name: JP_speednode_0045
-    server: 43.154.76.92
-    port: 25034
-    type: vmess
-    alterId: 64
-    cipher: auto
-    network: ws
-    skip-cert-verify: true
-    tls: true
-    uuid: 784272d2-bd2d-438a-bbd4-1271bb1f1b0d
-    ws-opts:
-      path: /hk15/getData
-  - name: US_speednode_0046
-    server: 45.12.144.86
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1684230882527
-      headers:
-        Host: www.11232252.xyz
-    udp: true
-  - name: US_speednode_0047
-    server: 154.85.1.3
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    udp: true
-    ws-opts:
-      path: /path/1683629314915
-      headers:
-        Host: www.42077230.xyz
-  - name: US_speednode_0048
-    server: 171.22.134.3
-    port: 53433
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: CN_speednode_0049
-    server: 112.132.215.189
-    port: 50002
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: US_speednode_0051
+  - name: US_speednode_0013
     server: cfcdn.sanfencdn.net
     port: 443
     type: vmess
@@ -517,8 +121,56 @@ proxies:
       path: /zh-cn
       headers:
         Host: us2.sanfencdn.net
-  - name: US_speednode_0052
-    server: 23.224.110.183
+  - name: GB_speednode_0014
+    server: 141.11.127.19
+    port: 443
+    type: trojan
+    password: 8764f05d-8516-43cc-802c-a1ad6c67aeef
+    sni: 4-193-105-141.nhost.00cdn.com
+    skip-cert-verify: true
+    udp: true
+  - name: US_speednode_0016
+    server: cf-dx-dns.sharecentre.online
+    port: 80
+    type: vmess
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    udp: true
+    ws-opts:
+      path: /shirker
+      headers:
+        Host: nl.sharecentrepro.com
+  - name: speednode_0017
+    server: 162.159.152.153
+    port: 8880
+    type: vmess
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: csjp.iiio.wiki
+    uuid: 67c5ce45-7b48-473e-bf25-e4c830b0ed24
+    alterId: 0
+    cipher: auto
+    network: ws
+  - name: US_speednode_0018
+    server: cambridge.org
+    port: 443
+    type: vmess
+    ws-opts:
+      path: /speedtest
+      headers:
+        host: Lille.kotick.site
+    uuid: 3E271C5F-28FF-4704-B8E5-CC2B39AB7F60
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - name: US_speednode_0019
+    server: 142.4.106.250
     port: 443
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
@@ -529,17 +181,40 @@ proxies:
     network: ws
     udp: true
     ws-opts:
-      path: /path/080712342310
+      path: /path/1683715826870
       headers:
-        Host: 23.224.110.183
-  - name: US_speednode_0054
-    server: 64.32.24.210
-    port: 48659
+        Host: www.44716766.xyz
+  - name: DE_speednode_0020
+    server: uslws.ov2ray.xyz
+    port: 443
     type: vmess
-    uuid: cff9d860-7330-4ee1-b072-7142ddf1571d
-    alterId: 64
+    uuid: DC615FCF-98B5-4D06-AA18-A6A1F65FF6D3
+    alterId: 0
     cipher: auto
-    tls: false
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    udp: true
+    ws-opts:
+      path: /speedtest
+      headers:
+        Host: Lille.kotick.site
+  - name: CA_speednode_0021
+    server: stw6-tg-data.amazonwebservicess.com
+    port: 443
+    type: trojan
+    password: ca7febc2-bb45-4e6d-810e-ab0af6009c4e
+    allowInsecure: 1
+    skip-cert-verify: true
+    udp: true
+  - name: _JP_日本
+    server: jp3.d4995a2eb9b2.sanfen004.me
+    port: 443
+    type: vmess
+    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
+    alterId: 0
+    cipher: auto
+    tls: true
     skip-cert-verify: true
     udp: true
   - name: _JP_日本 2
@@ -639,6 +314,21 @@ proxies:
     tls: false
     skip-cert-verify: true
     udp: true
+  - name: _US_美国 7
+    server: downloadvip.cfd
+    port: 443
+    type: vmess
+    uuid: a250f5a3-4147-41e7-8b36-a40466bf76f0
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /jsjc/us1
+      headers:
+        Host: us1.jsjc.sbs
+    udp: true
   - name: _US_美国 8
     server: 192.74.239.28
     port: 41288
@@ -672,6 +362,16 @@ proxies:
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
+    udp: true
+  - name: _US_美国 10
+    server: 171.22.134.3
+    port: 53433
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
     udp: true
   - name: _SG_新加坡 3
     server: 13.215.251.162
@@ -747,13 +447,6 @@ proxies:
     cipher: aes-256-cfb
     password: VcFuyXvND2yQWSFY
     udp: true
-  - name: _TW_台湾 2
-    server: bgptw5.cnamazon.sbs
-    port: 443
-    type: trojan
-    password: 4658738d-c3f1-4ebf-ad7a-ee603e3f9690
-    skip-cert-verify: true
-    udp: true
   - name: _TW_台湾 3
     server: stw3-tg-data.amazonwebservicess.com
     port: 443
@@ -776,12 +469,37 @@ proxies:
       headers:
         Host: buyvm1.yxjnode.com
     udp: true
+  - name: _AU_澳大利亚
+    server: 139.99.245.165
+    port: 50002
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
   - name: _US_美国 12
     server: 216.52.183.243
     port: 80
     type: ss
     cipher: aes-128-gcm
     password: 83XvX4Vo%*3a
+    udp: true
+  - name: _RO_罗马尼亚->🇺🇸_US_美国
+    server: 45.85.119.44
+    port: 443
+    type: vmess
+    uuid: 3E271C5F-28FF-4704-B8E5-CC2B39AB7F60
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /speedtest
+      headers:
+        Host: Kansas.kotick.site
     udp: true
   - name: _US_美国->🇳🇱_NL_荷兰
     server: kontakt.az
@@ -919,7 +637,7 @@ proxies:
         Host: Dusseldorf.kotick.site
     udp: true
   - type: vmess
-    name: 更新于:05-2212:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:05-2220:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -927,46 +645,86 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-    server: 142.4.99.78
-    port: 43379
-    uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
+    name: github.com/freefq-江苏省南通市移动11
+    server: cdn.hehua99.xyz
+    port: 50034
+    uuid: 468ca404-3b4d-40bd-9921-44d13832d4da
     alterId: 0
     cipher: auto
     network: auto
-  - type: vmess
-    name: github.com/freefq-美国加利福尼亚洛杉矶ITLDCNetwork33
-    ws-opts:
-      path: /vpnjantit
-    server: 195.123.240.135
-    port: 10000
-    uuid: 664e81e6-f75b-11ed-8126-17d848021134
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国加利福尼亚州费利蒙Linode数据中心55
-    ws-opts:
-      path: /chat
-    server: vus2.0bad.com
+  - type: trojan
+    name: github.com/freefq-香港特别行政区2
+    server: hk03.trojanyyds.xyz
     port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    password: d7a82727-5365-4517-8a92-c2864081008a
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: github.com/freefq-日本东京Choopa数据中心44
+    ws-opts:
+      path: /sometimesnaive
+      headers:
+        host: jp3.01dj.sbs
+    server: jp3.01dj.sbs
+    port: 443
+    uuid: 95b2dc83-a476-4a82-93b2-0d77b4c30c18
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心66
+    name: github.com/freefq-美国阿里云55
     ws-opts:
-      path: /
-    server: 185.133.40.192
-    port: 35059
-    uuid: 8d78c2a8-acaa-467d-9234-d2606624506d
+      path: /gqfWkjL8.gif
+      headers:
+        host: v1.lsb1.microsoftdebug.com
+    server: microsoftdebug.com
+    port: 8880
+    uuid: c0f8cfc4-7c7f-470f-9411-46eb752c49f2
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1313
+    name: github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心66
+    ws-opts:
+      path: /zh-cn
+      headers:
+        host: www.microsoft.com
+    server: jp1.d4995a2eb9b2.sanfen004.me
+    port: 443
+    uuid: 7262cf44-a587-401a-9cd3-a87e2ce8f04e
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-日本东京Choopa数据中心88
+    ws-opts:
+      path: /sometimesnaive
+      headers:
+        host: jp4.01dj.sbs
+    server: jp4.01dj.sbs
+    port: 443
+    uuid: 95b2dc83-a476-4a82-93b2-0d77b4c30c18
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-香港99
+    ws-opts:
+      path: /path/1684405930831
+      headers:
+        host: www.12460158.xyz
+    server: 156.245.8.168
+    port: 443
+    uuid: b8df3ef1-887f-4ee4-855f-4f80416c2464
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1111
     ws-opts:
       path: /ndy58850
       headers:
@@ -979,12 +737,49 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-澳大利亚1414
+    name: github.com/freefq-美国CloudFlare节点1212
+    ws-opts:
+      path: /sometimesnaive
+      headers:
+        host: us1.01dj.sbs
+    server: us1.01dj.sbs
+    port: 443
+    uuid: 95b2dc83-a476-4a82-93b2-0d77b4c30c18
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-日本东京阿里云1717
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v02.ssrsub.com
+    server: cdncf.scyu.app
+    port: 80
+    uuid: f809b651-3924-4a80-abde-6c8536fbb229
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国1919
+    ws-opts:
+      path: /
+      headers:
+        host: us-1.acyun.cf
+    server: 192.203.230.86
+    port: 80
+    uuid: a442dacf-cbb3-488a-9744-61494ea38630
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国2121
     ws-opts:
       path: /speedtest
       headers:
-        host: Kansas.kotick.site
-    server: 203.29.53.179
+        host: Amsterdam.kotick.site
+    server: 170.114.45.23
     port: 443
     uuid: 7757E99E-75C9-46D5-854D-4065BF372100
     alterId: 0
@@ -992,7 +787,29 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点(shopify)1616
+    name: github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心2222
+    ws-opts:
+      path: /
+    server: 185.133.40.192
+    port: 35059
+    uuid: 8d78c2a8-acaa-467d-9234-d2606624506d
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点2323
+    ws-opts:
+      path: /qwer11
+      headers:
+        host: uyaa.vtcss.top
+    server: 104.25.5.175
+    port: 80
+    uuid: 53ae65be-81ee-4766-8a09-da43c44c4d30
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点(shopify)2525
     ws-opts:
       path: /speedtest
       headers:
@@ -1005,91 +822,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国1717
-    ws-opts:
-      path: /
-      headers:
-        host: us-1.acyun.cf
-    server: 192.203.230.86
-    port: 80
-    uuid: a442dacf-cbb3-488a-9744-61494ea38630
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-加拿大1919
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Dusseldorf.kotick.site
-    server: 23.227.60.184
-    port: 443
-    uuid: 3E271C5F-28FF-4704-B8E5-CC2B39AB7F60
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-欧盟2020
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Kansas.kotick.site
-    server: 45.14.174.57
-    port: 443
-    uuid: 7757E99E-75C9-46D5-854D-4065BF372100
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国2121
-    ws-opts:
-      path: /speedtest
-      headers:
-        host: Lille.kotick.site
-    server: zfc.windowsupdate1.com
-    port: 443
-    uuid: DC615FCF-98B5-4D06-AA18-A6A1F65FF6D3
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-日本东京Amazon数据中心2323
-    ws-opts:
-      path: /
-    server: jp04-vm0.entry.srthdw.art
-    port: 446
-    uuid: b2a2c706-12e0-3335-8a62-31925219a712
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: github.com/freefq-北京市移动2424
-    ws-opts:
-      path: /
-    server: 36.134.16.190
-    port: 11023
-    uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点2525
-    ws-opts:
-      path: /c3lZ7dp02p?ed=2048
-      headers:
-        host: d2.pgypgykmoljklj.xyz
-    server: 104.18.1.110
-    port: 443
-    uuid: 1d8488a7-c784-4e66-ae92-1b22da9c9e68
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点2727
+    name: github.com/freefq-美国CloudFlare节点2626
     ws-opts:
       path: /qwer
       headers:
@@ -1102,19 +835,60 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点3030
+    name: github.com/freefq-北京市移动2727
     ws-opts:
-      path: /tg@hkaa0
+      path: /
+    server: 36.134.16.190
+    port: 11023
+    uuid: 8c042a38-71c1-1dcb-00df-54880236e0dc
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: github.com/freefq-欧盟2828
+    ws-opts:
+      path: /speedtest
       headers:
-        host: jp.wyhkaa0.ga
-    server: 190.93.245.40
-    port: 2095
-    uuid: 67597b31-fba2-42ba-b3df-b7264d346235
+        host: Kansas.kotick.site
+    server: 45.14.174.57
+    port: 443
+    uuid: 7757E99E-75C9-46D5-854D-4065BF372100
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
+  - type: trojan
+    name: github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)29
+    server: ap.stablize.top
+    port: 443
+    password: b327d1e6-3abc-4ce5-81f3-620ea3f10647
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: github.com/freefq-日本东京Amazon数据中心3131
+    name: github.com/freefq-日本3030
+    ws-opts:
+      path: /
+    server: jp05-vm0.entry.srthdw.art
+    port: 30591
+    uuid: 22acc467-7440-386a-927a-d84be554b37e
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: github.com/freefq-加拿大3131
+    ws-opts:
+      path: /speedtest
+      headers:
+        host: Dusseldorf.kotick.site
+    server: 23.227.60.184
+    port: 443
+    uuid: 3E271C5F-28FF-4704-B8E5-CC2B39AB7F60
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-日本东京Amazon数据中心3232
     ws-opts:
       path: /
     server: jp04-vm0.entry.srthdw.art
@@ -1124,70 +898,52 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点3232
+    name: github.com/freefq-日本东京Amazon数据中心3333
     ws-opts:
-      path: /look
-    server: aaaa.wxx.gay
-    port: 443
-    uuid: 8b0b57c6-f7f0-11ed-ab45-000017022008
+      path: /
+    server: jp03-alt-vm0.entry.srthdw.art
+    port: 21583
+    uuid: 22acc467-7440-386a-927a-d84be554b37e
     alterId: 0
     cipher: auto
-    network: ws
+    network: auto
     tls: true
+  - type: vmess
+    name: github.com/freefq-日本东京Amazon数据中心3434
+    ws-opts:
+      path: /
+    server: jp04-vm0.entry.srthdw.art
+    port: 446
+    uuid: b2a2c706-12e0-3335-8a62-31925219a712
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - US_speednode_0001
-      - US_speednode_0002
-      - CN_speednode_0003
+      - CA_speednode_0001
+      - CA_speednode_0002
+      - CA_speednode_0003
       - US_speednode_0004
-      - US_speednode_0005
-      - JP_speednode_0006
-      - US_speednode_0007
-      - GB_speednode_0008
+      - CN_speednode_0005
+      - CA_speednode_0006
+      - US_speednode_0008
       - US_speednode_0009
-      - speednode_0010
-      - SG_speednode_0011
+      - JP_speednode_0010
+      - speednode_0011
       - US_speednode_0012
       - US_speednode_0013
-      - AU_speednode_0014
-      - speednode_0015
+      - GB_speednode_0014
       - US_speednode_0016
-      - CY_speednode_0018
+      - speednode_0017
+      - US_speednode_0018
       - US_speednode_0019
-      - SG_speednode_0020
-      - CN_speednode_0021
-      - US_speednode_0022
-      - US_speednode_0023
-      - US_speednode_0024
-      - DE_speednode_0025
-      - CA_speednode_0027
-      - CA_speednode_0028
-      - CA_speednode_0029
-      - CA_speednode_0030
-      - US_speednode_0033
-      - US_speednode_0034
-      - US_speednode_0035
-      - US_speednode_0036
-      - US_speednode_0037
-      - CA_speednode_0038
-      - speednode_0039
-      - US_speednode_0040
-      - CA_speednode_0041
-      - DE_speednode_0042
-      - CA_speednode_0043
-      - US_speednode_0044
-      - JP_speednode_0045
-      - US_speednode_0046
-      - US_speednode_0047
-      - US_speednode_0048
-      - CN_speednode_0049
-      - US_speednode_0051
-      - US_speednode_0052
-      - US_speednode_0054
+      - DE_speednode_0020
+      - CA_speednode_0021
+      - _JP_日本
       - _JP_日本 2
       - _HK_香港
       - _SG_新加坡
@@ -1199,10 +955,12 @@ proxy-groups:
       - _US_美国 5
       - _JP_日本 3
       - _US_美国 6
+      - _US_美国 7
       - _US_美国 8
       - _US_美国 9
       - _KR_韩国
       - _KR_韩国 2
+      - _US_美国 10
       - _SG_新加坡 3
       - _US_美国 11
       - _US_美国->🇸🇬_SG_新加坡
@@ -1210,10 +968,11 @@ proxy-groups:
       - _US_美国->🇨🇦_CA_加拿大
       - _KR_韩国 3
       - _ES_西班牙
-      - _TW_台湾 2
       - _TW_台湾 3
       - _US_美国->🇱🇺_LU_卢森堡
+      - _AU_澳大利亚
       - _US_美国 12
+      - _RO_罗马尼亚->🇺🇸_US_美国
       - _US_美国->🇳🇱_NL_荷兰
       - _US_美国 13
       - _US_美国->🇳🇱_NL_荷兰 2
@@ -1223,79 +982,57 @@ proxy-groups:
       - _US_美国 16
       - _CA_加拿大->🇺🇸_US_美国
       - _US_美国 17
-      - 更新于:05-2212:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-      - github.com/freefq-美国加利福尼亚洛杉矶ITLDCNetwork33
-      - github.com/freefq-美国加利福尼亚州费利蒙Linode数据中心55
-      - github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心66
-      - github.com/freefq-美国CloudFlare节点1313
-      - github.com/freefq-澳大利亚1414
-      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1616
-      - github.com/freefq-美国1717
-      - github.com/freefq-加拿大1919
-      - github.com/freefq-欧盟2020
+      - 更新于:05-2220:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-江苏省南通市移动11
+      - github.com/freefq-香港特别行政区2
+      - github.com/freefq-日本东京Choopa数据中心44
+      - github.com/freefq-美国阿里云55
+      - github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心66
+      - github.com/freefq-日本东京Choopa数据中心88
+      - github.com/freefq-香港99
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-日本东京阿里云1717
+      - github.com/freefq-美国1919
       - github.com/freefq-美国2121
-      - github.com/freefq-日本东京Amazon数据中心2323
-      - github.com/freefq-北京市移动2424
-      - github.com/freefq-美国CloudFlare公司CDN节点2525
-      - github.com/freefq-美国CloudFlare节点2727
-      - github.com/freefq-美国CloudFlare节点3030
-      - github.com/freefq-日本东京Amazon数据中心3131
-      - github.com/freefq-美国CloudFlare节点3232
+      - github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心2222
+      - github.com/freefq-美国CloudFlare公司CDN节点2323
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2525
+      - github.com/freefq-美国CloudFlare节点2626
+      - github.com/freefq-北京市移动2727
+      - github.com/freefq-欧盟2828
+      - github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)29
+      - github.com/freefq-日本3030
+      - github.com/freefq-加拿大3131
+      - github.com/freefq-日本东京Amazon数据中心3232
+      - github.com/freefq-日本东京Amazon数据中心3333
+      - github.com/freefq-日本东京Amazon数据中心3434
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - US_speednode_0001
-      - US_speednode_0002
-      - CN_speednode_0003
+      - CA_speednode_0001
+      - CA_speednode_0002
+      - CA_speednode_0003
       - US_speednode_0004
-      - US_speednode_0005
-      - JP_speednode_0006
-      - US_speednode_0007
-      - GB_speednode_0008
+      - CN_speednode_0005
+      - CA_speednode_0006
+      - US_speednode_0008
       - US_speednode_0009
-      - speednode_0010
-      - SG_speednode_0011
+      - JP_speednode_0010
+      - speednode_0011
       - US_speednode_0012
       - US_speednode_0013
-      - AU_speednode_0014
-      - speednode_0015
+      - GB_speednode_0014
       - US_speednode_0016
-      - CY_speednode_0018
+      - speednode_0017
+      - US_speednode_0018
       - US_speednode_0019
-      - SG_speednode_0020
-      - CN_speednode_0021
-      - US_speednode_0022
-      - US_speednode_0023
-      - US_speednode_0024
-      - DE_speednode_0025
-      - CA_speednode_0027
-      - CA_speednode_0028
-      - CA_speednode_0029
-      - CA_speednode_0030
-      - US_speednode_0033
-      - US_speednode_0034
-      - US_speednode_0035
-      - US_speednode_0036
-      - US_speednode_0037
-      - CA_speednode_0038
-      - speednode_0039
-      - US_speednode_0040
-      - CA_speednode_0041
-      - DE_speednode_0042
-      - CA_speednode_0043
-      - US_speednode_0044
-      - JP_speednode_0045
-      - US_speednode_0046
-      - US_speednode_0047
-      - US_speednode_0048
-      - CN_speednode_0049
-      - US_speednode_0051
-      - US_speednode_0052
-      - US_speednode_0054
+      - DE_speednode_0020
+      - CA_speednode_0021
+      - _JP_日本
       - _JP_日本 2
       - _HK_香港
       - _SG_新加坡
@@ -1307,10 +1044,12 @@ proxy-groups:
       - _US_美国 5
       - _JP_日本 3
       - _US_美国 6
+      - _US_美国 7
       - _US_美国 8
       - _US_美国 9
       - _KR_韩国
       - _KR_韩国 2
+      - _US_美国 10
       - _SG_新加坡 3
       - _US_美国 11
       - _US_美国->🇸🇬_SG_新加坡
@@ -1318,10 +1057,11 @@ proxy-groups:
       - _US_美国->🇨🇦_CA_加拿大
       - _KR_韩国 3
       - _ES_西班牙
-      - _TW_台湾 2
       - _TW_台湾 3
       - _US_美国->🇱🇺_LU_卢森堡
+      - _AU_澳大利亚
       - _US_美国 12
+      - _RO_罗马尼亚->🇺🇸_US_美国
       - _US_美国->🇳🇱_NL_荷兰
       - _US_美国 13
       - _US_美国->🇳🇱_NL_荷兰 2
@@ -1331,78 +1071,56 @@ proxy-groups:
       - _US_美国 16
       - _CA_加拿大->🇺🇸_US_美国
       - _US_美国 17
-      - 更新于:05-2212:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-      - github.com/freefq-美国加利福尼亚洛杉矶ITLDCNetwork33
-      - github.com/freefq-美国加利福尼亚州费利蒙Linode数据中心55
-      - github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心66
-      - github.com/freefq-美国CloudFlare节点1313
-      - github.com/freefq-澳大利亚1414
-      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1616
-      - github.com/freefq-美国1717
-      - github.com/freefq-加拿大1919
-      - github.com/freefq-欧盟2020
+      - 更新于:05-2220:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-江苏省南通市移动11
+      - github.com/freefq-香港特别行政区2
+      - github.com/freefq-日本东京Choopa数据中心44
+      - github.com/freefq-美国阿里云55
+      - github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心66
+      - github.com/freefq-日本东京Choopa数据中心88
+      - github.com/freefq-香港99
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-日本东京阿里云1717
+      - github.com/freefq-美国1919
       - github.com/freefq-美国2121
-      - github.com/freefq-日本东京Amazon数据中心2323
-      - github.com/freefq-北京市移动2424
-      - github.com/freefq-美国CloudFlare公司CDN节点2525
-      - github.com/freefq-美国CloudFlare节点2727
-      - github.com/freefq-美国CloudFlare节点3030
-      - github.com/freefq-日本东京Amazon数据中心3131
-      - github.com/freefq-美国CloudFlare节点3232
+      - github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心2222
+      - github.com/freefq-美国CloudFlare公司CDN节点2323
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2525
+      - github.com/freefq-美国CloudFlare节点2626
+      - github.com/freefq-北京市移动2727
+      - github.com/freefq-欧盟2828
+      - github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)29
+      - github.com/freefq-日本3030
+      - github.com/freefq-加拿大3131
+      - github.com/freefq-日本东京Amazon数据中心3232
+      - github.com/freefq-日本东京Amazon数据中心3333
+      - github.com/freefq-日本东京Amazon数据中心3434
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - US_speednode_0001
-      - US_speednode_0002
-      - CN_speednode_0003
+      - CA_speednode_0001
+      - CA_speednode_0002
+      - CA_speednode_0003
       - US_speednode_0004
-      - US_speednode_0005
-      - JP_speednode_0006
-      - US_speednode_0007
-      - GB_speednode_0008
+      - CN_speednode_0005
+      - CA_speednode_0006
+      - US_speednode_0008
       - US_speednode_0009
-      - speednode_0010
-      - SG_speednode_0011
+      - JP_speednode_0010
+      - speednode_0011
       - US_speednode_0012
       - US_speednode_0013
-      - AU_speednode_0014
-      - speednode_0015
+      - GB_speednode_0014
       - US_speednode_0016
-      - CY_speednode_0018
+      - speednode_0017
+      - US_speednode_0018
       - US_speednode_0019
-      - SG_speednode_0020
-      - CN_speednode_0021
-      - US_speednode_0022
-      - US_speednode_0023
-      - US_speednode_0024
-      - DE_speednode_0025
-      - CA_speednode_0027
-      - CA_speednode_0028
-      - CA_speednode_0029
-      - CA_speednode_0030
-      - US_speednode_0033
-      - US_speednode_0034
-      - US_speednode_0035
-      - US_speednode_0036
-      - US_speednode_0037
-      - CA_speednode_0038
-      - speednode_0039
-      - US_speednode_0040
-      - CA_speednode_0041
-      - DE_speednode_0042
-      - CA_speednode_0043
-      - US_speednode_0044
-      - JP_speednode_0045
-      - US_speednode_0046
-      - US_speednode_0047
-      - US_speednode_0048
-      - CN_speednode_0049
-      - US_speednode_0051
-      - US_speednode_0052
-      - US_speednode_0054
+      - DE_speednode_0020
+      - CA_speednode_0021
+      - _JP_日本
       - _JP_日本 2
       - _HK_香港
       - _SG_新加坡
@@ -1414,10 +1132,12 @@ proxy-groups:
       - _US_美国 5
       - _JP_日本 3
       - _US_美国 6
+      - _US_美国 7
       - _US_美国 8
       - _US_美国 9
       - _KR_韩国
       - _KR_韩国 2
+      - _US_美国 10
       - _SG_新加坡 3
       - _US_美国 11
       - _US_美国->🇸🇬_SG_新加坡
@@ -1425,10 +1145,11 @@ proxy-groups:
       - _US_美国->🇨🇦_CA_加拿大
       - _KR_韩国 3
       - _ES_西班牙
-      - _TW_台湾 2
       - _TW_台湾 3
       - _US_美国->🇱🇺_LU_卢森堡
+      - _AU_澳大利亚
       - _US_美国 12
+      - _RO_罗马尼亚->🇺🇸_US_美国
       - _US_美国->🇳🇱_NL_荷兰
       - _US_美国 13
       - _US_美国->🇳🇱_NL_荷兰 2
@@ -1438,25 +1159,31 @@ proxy-groups:
       - _US_美国 16
       - _CA_加拿大->🇺🇸_US_美国
       - _US_美国 17
-      - 更新于:05-2212:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-      - github.com/freefq-美国加利福尼亚洛杉矶ITLDCNetwork33
-      - github.com/freefq-美国加利福尼亚州费利蒙Linode数据中心55
-      - github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心66
-      - github.com/freefq-美国CloudFlare节点1313
-      - github.com/freefq-澳大利亚1414
-      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1616
-      - github.com/freefq-美国1717
-      - github.com/freefq-加拿大1919
-      - github.com/freefq-欧盟2020
+      - 更新于:05-2220:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-江苏省南通市移动11
+      - github.com/freefq-香港特别行政区2
+      - github.com/freefq-日本东京Choopa数据中心44
+      - github.com/freefq-美国阿里云55
+      - github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心66
+      - github.com/freefq-日本东京Choopa数据中心88
+      - github.com/freefq-香港99
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-日本东京阿里云1717
+      - github.com/freefq-美国1919
       - github.com/freefq-美国2121
-      - github.com/freefq-日本东京Amazon数据中心2323
-      - github.com/freefq-北京市移动2424
-      - github.com/freefq-美国CloudFlare公司CDN节点2525
-      - github.com/freefq-美国CloudFlare节点2727
-      - github.com/freefq-美国CloudFlare节点3030
-      - github.com/freefq-日本东京Amazon数据中心3131
-      - github.com/freefq-美国CloudFlare节点3232
+      - github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心2222
+      - github.com/freefq-美国CloudFlare公司CDN节点2323
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2525
+      - github.com/freefq-美国CloudFlare节点2626
+      - github.com/freefq-北京市移动2727
+      - github.com/freefq-欧盟2828
+      - github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)29
+      - github.com/freefq-日本3030
+      - github.com/freefq-加拿大3131
+      - github.com/freefq-日本东京Amazon数据中心3232
+      - github.com/freefq-日本东京Amazon数据中心3333
+      - github.com/freefq-日本东京Amazon数据中心3434
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1494,54 +1221,26 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_speednode_0001
-      - US_speednode_0002
-      - CN_speednode_0003
+      - CA_speednode_0001
+      - CA_speednode_0002
+      - CA_speednode_0003
       - US_speednode_0004
-      - US_speednode_0005
-      - JP_speednode_0006
-      - US_speednode_0007
-      - GB_speednode_0008
+      - CN_speednode_0005
+      - CA_speednode_0006
+      - US_speednode_0008
       - US_speednode_0009
-      - speednode_0010
-      - SG_speednode_0011
+      - JP_speednode_0010
+      - speednode_0011
       - US_speednode_0012
       - US_speednode_0013
-      - AU_speednode_0014
-      - speednode_0015
+      - GB_speednode_0014
       - US_speednode_0016
-      - CY_speednode_0018
+      - speednode_0017
+      - US_speednode_0018
       - US_speednode_0019
-      - SG_speednode_0020
-      - CN_speednode_0021
-      - US_speednode_0022
-      - US_speednode_0023
-      - US_speednode_0024
-      - DE_speednode_0025
-      - CA_speednode_0027
-      - CA_speednode_0028
-      - CA_speednode_0029
-      - CA_speednode_0030
-      - US_speednode_0033
-      - US_speednode_0034
-      - US_speednode_0035
-      - US_speednode_0036
-      - US_speednode_0037
-      - CA_speednode_0038
-      - speednode_0039
-      - US_speednode_0040
-      - CA_speednode_0041
-      - DE_speednode_0042
-      - CA_speednode_0043
-      - US_speednode_0044
-      - JP_speednode_0045
-      - US_speednode_0046
-      - US_speednode_0047
-      - US_speednode_0048
-      - CN_speednode_0049
-      - US_speednode_0051
-      - US_speednode_0052
-      - US_speednode_0054
+      - DE_speednode_0020
+      - CA_speednode_0021
+      - _JP_日本
       - _JP_日本 2
       - _HK_香港
       - _SG_新加坡
@@ -1553,10 +1252,12 @@ proxy-groups:
       - _US_美国 5
       - _JP_日本 3
       - _US_美国 6
+      - _US_美国 7
       - _US_美国 8
       - _US_美国 9
       - _KR_韩国
       - _KR_韩国 2
+      - _US_美国 10
       - _SG_新加坡 3
       - _US_美国 11
       - _US_美国->🇸🇬_SG_新加坡
@@ -1564,10 +1265,11 @@ proxy-groups:
       - _US_美国->🇨🇦_CA_加拿大
       - _KR_韩国 3
       - _ES_西班牙
-      - _TW_台湾 2
       - _TW_台湾 3
       - _US_美国->🇱🇺_LU_卢森堡
+      - _AU_澳大利亚
       - _US_美国 12
+      - _RO_罗马尼亚->🇺🇸_US_美国
       - _US_美国->🇳🇱_NL_荷兰
       - _US_美国 13
       - _US_美国->🇳🇱_NL_荷兰 2
@@ -1577,25 +1279,31 @@ proxy-groups:
       - _US_美国 16
       - _CA_加拿大->🇺🇸_US_美国
       - _US_美国 17
-      - 更新于:05-2212:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-      - github.com/freefq-美国加利福尼亚洛杉矶ITLDCNetwork33
-      - github.com/freefq-美国加利福尼亚州费利蒙Linode数据中心55
-      - github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心66
-      - github.com/freefq-美国CloudFlare节点1313
-      - github.com/freefq-澳大利亚1414
-      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1616
-      - github.com/freefq-美国1717
-      - github.com/freefq-加拿大1919
-      - github.com/freefq-欧盟2020
+      - 更新于:05-2220:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-江苏省南通市移动11
+      - github.com/freefq-香港特别行政区2
+      - github.com/freefq-日本东京Choopa数据中心44
+      - github.com/freefq-美国阿里云55
+      - github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心66
+      - github.com/freefq-日本东京Choopa数据中心88
+      - github.com/freefq-香港99
+      - github.com/freefq-美国CloudFlare节点1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-日本东京阿里云1717
+      - github.com/freefq-美国1919
       - github.com/freefq-美国2121
-      - github.com/freefq-日本东京Amazon数据中心2323
-      - github.com/freefq-北京市移动2424
-      - github.com/freefq-美国CloudFlare公司CDN节点2525
-      - github.com/freefq-美国CloudFlare节点2727
-      - github.com/freefq-美国CloudFlare节点3030
-      - github.com/freefq-日本东京Amazon数据中心3131
-      - github.com/freefq-美国CloudFlare节点3232
+      - github.com/freefq-俄罗斯新西伯利亚ADMAN数据中心2222
+      - github.com/freefq-美国CloudFlare公司CDN节点2323
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2525
+      - github.com/freefq-美国CloudFlare节点2626
+      - github.com/freefq-北京市移动2727
+      - github.com/freefq-欧盟2828
+      - github.com/freefq-美国加利福尼亚州洛杉矶Level3通信(DIA)29
+      - github.com/freefq-日本3030
+      - github.com/freefq-加拿大3131
+      - github.com/freefq-日本东京Amazon数据中心3232
+      - github.com/freefq-日本东京Amazon数据中心3333
+      - github.com/freefq-日本东京Amazon数据中心3434
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
