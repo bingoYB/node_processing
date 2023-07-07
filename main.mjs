@@ -1,3 +1,4 @@
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 import { writeFile } from "fs";
 import _ from "lodash";
 import fetch from "node-fetch";
