@@ -2,11 +2,11 @@ name: Run Task
 
 # Controls when the action will run. 
 on:
-  push:
-    branches: [ main ]
   schedule:
     - cron: '* */6 * * *'
   workflow_dispatch:
+  watch:
+    types: [started]
 
 jobs:
   build:
@@ -21,9 +21,12 @@ jobs:
           node-version: 16
       - name: 'Install requirements'
         run: npm i
-      - name: 'Working'
+      - name: 'task-1'
         run: 
           node main.mjs
+      - name: 'task-2'
+        run: 
+          node index.mjs
 
       - name: commit
         run: |

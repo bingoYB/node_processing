@@ -1,6 +1,9 @@
 import fs from "fs";
 import yaml from "js-yaml";
 import _ from "lodash";
+import dns from "dns";
+import geoip from "geoip-lite";
+
 const { last, uniqBy } = _;
 
 export const Base64 = {
@@ -39,17 +42,17 @@ export function parseV2ray(content) {
             name: node.ps.replace(/\s/g, "") + i,
             ...(node.path
               ? {
-                  "ws-opts": {
-                    path: node.path,
-                    ...(node.host
-                      ? {
-                          headers: {
-                            host: node.host,
-                          },
-                        }
-                      : {}),
-                  },
-                }
+                "ws-opts": {
+                  path: node.path,
+                  ...(node.host
+                    ? {
+                      headers: {
+                        host: node.host,
+                      },
+                    }
+                    : {}),
+                },
+              }
               : {}),
             server: node.add,
             port: +node.port,
@@ -145,4 +148,18 @@ export function generateClashConf(nodeList) {
   last(group).proxies = [...last(group).proxies, ...names];
 
   return yaml.dump(conf);
+}
+
+export async function getIPGeoInfo(domain) {
+  return new Promise((rs, rj) => {
+    dns.lookup(domain, (err, address) => {
+      if (err) {
+        rj(err);
+        return;
+      }
+
+      const geo = geoip.lookup(address);
+      rs(geo);
+    });
+  })
 }

@@ -2,6 +2,7 @@ import fs from "fs";
 import yaml from "js-yaml";
 import _ from "lodash";
 import fetch from "node-fetch";
+import { getNodesHooks as hooks } from "./hooks.mjs";
 const { uniqBy, last } = _;
 import { logger } from "./log.mjs"
 
@@ -11,8 +12,9 @@ import { logger } from "./log.mjs"
  * @returns 
  */
 export function generateClashConf(nodeList) {
-  // todo:
+  // 去重
   nodeList = uniqBy(nodeList.filter(n=>n), (node) => node.name);
+  nodeList = uniqBy(nodeList, (node)=> node.server + ":" + node.port);
 
   const example = fs.readFileSync("./example.yaml");
   const conf = yaml.load(example);
@@ -47,10 +49,14 @@ export function getClashNodesByUrl(url) {
     .then((res) => {
       return res.text();
     }).then(content => {
-      const conf = yaml.load(content);
+      const conf = yaml.load(content.replaceAll("!<str>", ""));
+      if(hooks[url]){
+        return hooks[url](conf.proxies);
+      }
       return conf.proxies;
     }).catch(e => {
-      logger.error(e);
+      logger.error("fetch fail at url: ", url, e);
+      return [];
     })
 }
 
