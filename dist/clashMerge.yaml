@@ -1,4 +1,4 @@
-# 更新时间 2023-07-18T18:51:25.046Z
+# 更新时间 2023-07-18T19:07:28.981Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -191,7 +191,7 @@ proxies:
       path: /
       headers:
         host: v2node13.bipbupvpn.com
-  - name: NU_speednode_0025
+  - name: US_NU_speednode_0025
     server: baxamdyfa.76898102.xyz
     port: 2052
     type: vmess
@@ -1077,7 +1077,17 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点1
+    name: 欧盟V2CROSS.COM2
+    ws-opts:
+      path: /
+    server: 45.92.160.20
+    port: 47839
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点3
     ws-opts:
       path: /vmess
       headers:
@@ -1089,35 +1099,59 @@ proxies:
     cipher: auto
     network: ws
     tls: true
+  - type: trojan
+    name: 亚太地区+V2CROSS.COM
+    server: 163.123.192.60
+    port: 443
+    password: 7ad2a5e0-906b-4b3e-97bb-b5f3992cb19d
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国弗吉尼亚州阿什本CloudFlare节点3
+    name: 美国CloudFlare节点7
     ws-opts:
-      path: /qwer
+      path: /
       headers:
-        host: ylks.vtcss.top
-    server: 173.245.49.115
+        host: de1.mlxg.org
+    server: jp.mlxg.org
     port: 80
-    uuid: 298530df-8418-4bc6-bff2-eeee595bf5cd
+    uuid: c7442852-5a48-4456-8783-b7b8eebbca6c
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国加利福尼亚州圣何塞PEGTECH数据中心8
+    ws-opts:
+      path: /
+    server: 192.74.231.188
+    port: 49255
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
   - type: trojan
-    name: 新加坡+Amazon数据中心
-    server: kbawssg1.aiopen.cfd
+    name: 日本+东京Amazon数据中心
+    server: kbawsjp1.aiopen.cfd
     port: 443
     password: c68e3c20-da73-4791-b4d8-7011a98ba06b
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国Datability7
+    name: 英国V2CROSS.COM10
     ws-opts:
-      path: /
-    server: 140.99.77.12
-    port: 54774
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+      path: /chat
+    server: vuk2.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
+    tls: true
+  - type: ss
+    name: 瑞士+Oracle+Corporation
+    server: 141.148.168.193
+    port: 14114
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5SU9mYlR3b1ZyNzY4R3FmMk1RYg==
+    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1142,7 +1176,7 @@ proxy-groups:
       - NL_NL_speednode_0020
       - NL_NL_speednode_0021
       - RU_NL_speednode_0023
-      - NU_speednode_0025
+      - US_NU_speednode_0025
       - RU_RU_speednode_0026
       - TW_speednode_0027
       - US_US_speednode_0028
@@ -1225,10 +1259,14 @@ proxy-groups:
       - github.com/freefq-澳大利亚悉尼1313
       - github.com/freefq-荷兰1414
       - github.com/freefq-巴西圣保罗CloudFlare节点1717
-      - 美国CloudFlare节点1
-      - 美国弗吉尼亚州阿什本CloudFlare节点3
-      - 新加坡+Amazon数据中心
-      - 美国Datability7
+      - 欧盟V2CROSS.COM2
+      - 美国CloudFlare节点3
+      - 亚太地区+V2CROSS.COM
+      - 美国CloudFlare节点7
+      - 美国加利福尼亚州圣何塞PEGTECH数据中心8
+      - 日本+东京Amazon数据中心
+      - 英国V2CROSS.COM10
+      - 瑞士+Oracle+Corporation
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1253,7 +1291,7 @@ proxy-groups:
       - NL_NL_speednode_0020
       - NL_NL_speednode_0021
       - RU_NL_speednode_0023
-      - NU_speednode_0025
+      - US_NU_speednode_0025
       - RU_RU_speednode_0026
       - TW_speednode_0027
       - US_US_speednode_0028
@@ -1336,10 +1374,14 @@ proxy-groups:
       - github.com/freefq-澳大利亚悉尼1313
       - github.com/freefq-荷兰1414
       - github.com/freefq-巴西圣保罗CloudFlare节点1717
-      - 美国CloudFlare节点1
-      - 美国弗吉尼亚州阿什本CloudFlare节点3
-      - 新加坡+Amazon数据中心
-      - 美国Datability7
+      - 欧盟V2CROSS.COM2
+      - 美国CloudFlare节点3
+      - 亚太地区+V2CROSS.COM
+      - 美国CloudFlare节点7
+      - 美国加利福尼亚州圣何塞PEGTECH数据中心8
+      - 日本+东京Amazon数据中心
+      - 英国V2CROSS.COM10
+      - 瑞士+Oracle+Corporation
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1363,7 +1405,7 @@ proxy-groups:
       - NL_NL_speednode_0020
       - NL_NL_speednode_0021
       - RU_NL_speednode_0023
-      - NU_speednode_0025
+      - US_NU_speednode_0025
       - RU_RU_speednode_0026
       - TW_speednode_0027
       - US_US_speednode_0028
@@ -1446,10 +1488,14 @@ proxy-groups:
       - github.com/freefq-澳大利亚悉尼1313
       - github.com/freefq-荷兰1414
       - github.com/freefq-巴西圣保罗CloudFlare节点1717
-      - 美国CloudFlare节点1
-      - 美国弗吉尼亚州阿什本CloudFlare节点3
-      - 新加坡+Amazon数据中心
-      - 美国Datability7
+      - 欧盟V2CROSS.COM2
+      - 美国CloudFlare节点3
+      - 亚太地区+V2CROSS.COM
+      - 美国CloudFlare节点7
+      - 美国加利福尼亚州圣何塞PEGTECH数据中心8
+      - 日本+东京Amazon数据中心
+      - 英国V2CROSS.COM10
+      - 瑞士+Oracle+Corporation
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1505,7 +1551,7 @@ proxy-groups:
       - NL_NL_speednode_0020
       - NL_NL_speednode_0021
       - RU_NL_speednode_0023
-      - NU_speednode_0025
+      - US_NU_speednode_0025
       - RU_RU_speednode_0026
       - TW_speednode_0027
       - US_US_speednode_0028
@@ -1588,10 +1634,14 @@ proxy-groups:
       - github.com/freefq-澳大利亚悉尼1313
       - github.com/freefq-荷兰1414
       - github.com/freefq-巴西圣保罗CloudFlare节点1717
-      - 美国CloudFlare节点1
-      - 美国弗吉尼亚州阿什本CloudFlare节点3
-      - 新加坡+Amazon数据中心
-      - 美国Datability7
+      - 欧盟V2CROSS.COM2
+      - 美国CloudFlare节点3
+      - 亚太地区+V2CROSS.COM
+      - 美国CloudFlare节点7
+      - 美国加利福尼亚州圣何塞PEGTECH数据中心8
+      - 日本+东京Amazon数据中心
+      - 英国V2CROSS.COM10
+      - 瑞士+Oracle+Corporation
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
