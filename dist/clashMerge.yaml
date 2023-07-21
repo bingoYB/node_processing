@@ -1,4 +1,4 @@
-# 更新时间 2023-07-21T06:50:18.896Z
+# 更新时间 2023-07-21T07:02:43.843Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1198,35 +1198,18 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国加利福尼亚州洛杉矶Sharktech数据中心1
+    name: 美国CloudFlare节点7
     ws-opts:
-      path: /
-    server: 64.32.20.101
-    port: 40039
-    uuid: c1bad9a6-1482-4941-a0c4-e85f3cbbcb5a
+      path: /zh-cn
+      headers:
+        host: us2.sanfencdn1.com
+    server: cfcdn2.sanfencdn.net
+    port: 443
+    uuid: 0e1215e4-aa7a-47ac-bbf9-27b84565eee5
     alterId: 0
     cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国Datability2
-    ws-opts:
-      path: /
-    server: 140.99.59.230
-    port: 55512
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国V2CROSS.COM3
-    ws-opts:
-      path: /
-    server: 108.186.116.183
-    port: 55005
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1347,9 +1330,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心1
-      - 美国Datability2
-      - 美国V2CROSS.COM3
+      - 美国CloudFlare节点7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1470,9 +1451,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心1
-      - 美国Datability2
-      - 美国V2CROSS.COM3
+      - 美国CloudFlare节点7
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1592,9 +1571,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心1
-      - 美国Datability2
-      - 美国V2CROSS.COM3
+      - 美国CloudFlare节点7
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1746,9 +1723,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心1
-      - 美国Datability2
-      - 美国V2CROSS.COM3
+      - 美国CloudFlare节点7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
