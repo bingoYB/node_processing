@@ -1,4 +1,4 @@
-# 更新时间 2023-07-23T18:57:31.271Z
+# 更新时间 2023-07-23T19:17:09.971Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -6,7 +6,7 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - name: US_CN_speednode_0001
+  - name: JP_CN_speednode_0001
     server: hk01.vipnode.online
     port: 80
     type: vmess
@@ -961,22 +961,51 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国Datability2
+    name: 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
     ws-opts:
       path: /
-    server: 140.99.149.46
+    server: 23.224.190.237
+    port: 58022
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /
+      headers:
+        host: hax.vpn66.eu.org
+    server: cf1.992688.xyz
+    port: 8080
+    uuid: fda2c765-ed35-4e97-ba13-ed64b1c4c460
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国Datability7
+    ws-opts:
+      path: /
+    server: 140.99.149.43
     port: 53082
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: auto
+  - type: trojan
+    name: 美国+Interland
+    server: 64.227.131.19
+    port: 443
+    password: 21c6c7cb-332b-4a0c-9ad7-dff9c3111442
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - US_CN_speednode_0001
+      - JP_CN_speednode_0001
       - CN_CN_speednode_0002
       - CN_CN_speednode_0003
       - AT_DK_speednode_0004
@@ -1065,14 +1094,17 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞CloudflareCDN节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1515
-      - 美国Datability2
+      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+      - 美国CloudFlare节点5
+      - 美国Datability7
+      - 美国+Interland
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - US_CN_speednode_0001
+      - JP_CN_speednode_0001
       - CN_CN_speednode_0002
       - CN_CN_speednode_0003
       - AT_DK_speednode_0004
@@ -1161,13 +1193,16 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞CloudflareCDN节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1515
-      - 美国Datability2
+      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+      - 美国CloudFlare节点5
+      - 美国Datability7
+      - 美国+Interland
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - US_CN_speednode_0001
+      - JP_CN_speednode_0001
       - CN_CN_speednode_0002
       - CN_CN_speednode_0003
       - AT_DK_speednode_0004
@@ -1256,7 +1291,10 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞CloudflareCDN节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1515
-      - 美国Datability2
+      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+      - 美国CloudFlare节点5
+      - 美国Datability7
+      - 美国+Interland
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1294,7 +1332,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_CN_speednode_0001
+      - JP_CN_speednode_0001
       - CN_CN_speednode_0002
       - CN_CN_speednode_0003
       - AT_DK_speednode_0004
@@ -1383,7 +1421,10 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞CloudflareCDN节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1515
-      - 美国Datability2
+      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+      - 美国CloudFlare节点5
+      - 美国Datability7
+      - 美国+Interland
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
