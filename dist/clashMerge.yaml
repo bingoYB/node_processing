@@ -1,4 +1,4 @@
-# 更新时间 2023-07-24T12:36:33.416Z
+# 更新时间 2023-07-24T13:00:57.369Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -812,11 +812,23 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 南非豪登省约翰内斯堡Cloudinnovation数据中心3
+    name: 新加坡Amazon数据中心2
     ws-opts:
       path: /
-    server: 156.249.18.36
-    port: 48222
+      headers:
+        host: s.anm.lol
+    server: s.anm.lol
+    port: 443
+    uuid: 8744c979-6e54-4391-8cfb-29188988e409
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 法国V2CROSS.COM3
+    ws-opts:
+      path: /
+    server: 51.89.74.241
+    port: 51102
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
@@ -827,21 +839,21 @@ proxies:
       path: /qwer
       headers:
         host: ecc.vtcss.top
-    server: 104.25.191.215
+    server: 173.245.59.217
     port: 8880
     uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 新加坡Amazon数据中心7
+    name: 美国V2CROSS.COM6
     ws-opts:
-      path: /
+      path: /IOebhLMhl1CTbFHbL95myfRX2
       headers:
-        host: s.anm.lol
-    server: s.anm.lol
-    port: 443
-    uuid: 8744c979-6e54-4391-8cfb-29188988e409
+        host: ca4.tehme2.fun
+    server: 104.31.16.28
+    port: 80
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
     alterId: 0
     cipher: auto
     network: ws
@@ -926,9 +938,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 南非豪登省约翰内斯堡Cloudinnovation数据中心3
+      - 新加坡Amazon数据中心2
+      - 法国V2CROSS.COM3
       - 美国CloudFlare节点4
-      - 新加坡Amazon数据中心7
+      - 美国V2CROSS.COM6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1010,9 +1023,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 南非豪登省约翰内斯堡Cloudinnovation数据中心3
+      - 新加坡Amazon数据中心2
+      - 法国V2CROSS.COM3
       - 美国CloudFlare节点4
-      - 新加坡Amazon数据中心7
+      - 美国V2CROSS.COM6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1093,9 +1107,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 南非豪登省约翰内斯堡Cloudinnovation数据中心3
+      - 新加坡Amazon数据中心2
+      - 法国V2CROSS.COM3
       - 美国CloudFlare节点4
-      - 新加坡Amazon数据中心7
+      - 美国V2CROSS.COM6
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1208,9 +1223,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 南非豪登省约翰内斯堡Cloudinnovation数据中心3
+      - 新加坡Amazon数据中心2
+      - 法国V2CROSS.COM3
       - 美国CloudFlare节点4
-      - 新加坡Amazon数据中心7
+      - 美国V2CROSS.COM6
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
