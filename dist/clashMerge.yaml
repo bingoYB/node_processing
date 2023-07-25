@@ -1,4 +1,4 @@
-# 更新时间 2023-07-25T06:49:45.903Z
+# 更新时间 2023-07-25T07:02:58.702Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -779,30 +779,35 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: 印度V2CROSS.COM0
+    name: 法国V2CROSS.COM2
     ws-opts:
-      path: a2284cc1
+      path: /
+    server: 51.89.74.241
+    port: 51102
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /kplxvws
       headers:
-        host: dedi2.1808.cf
-    server: 103.160.204.35
+        host: us.dalazhi.eu.org
+    server: cf.dalazhi.eu.org
     port: 443
-    uuid: a2284cc1-20d8-4c78-a622-3e3cca767a70
+    uuid: 64480f4c-61c2-4d88-89c3-fc0045229bfc
     alterId: 0
     cipher: auto
     network: ws
     tls: true
-  - type: vmess
-    name: 美国CloudFlare节点3
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v01.ssrsub.com
-    server: speedip.eu.org
-    port: 80
-    uuid: 789dfa0d-2028-4d53-a4db-252ea75d863e
-    alterId: 0
-    cipher: auto
-    network: ws
+  - type: trojan
+    name: 广东省广州市+UCloud
+    server: iplc-enter-tw-xe.fib-sys.xyz
+    port: 11451
+    password: 11a4e5be-3c87-37d2-aac8-00b85ef0fcdc
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -879,8 +884,9 @@ proxy-groups:
       - github.com/freefq-亚太地区1818
       - github.com/freefq-美国CloudFlare节点2121
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房2222
-      - 印度V2CROSS.COM0
-      - 美国CloudFlare节点3
+      - 法国V2CROSS.COM2
+      - 美国CloudFlare节点4
+      - 广东省广州市+UCloud
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -957,8 +963,9 @@ proxy-groups:
       - github.com/freefq-亚太地区1818
       - github.com/freefq-美国CloudFlare节点2121
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房2222
-      - 印度V2CROSS.COM0
-      - 美国CloudFlare节点3
+      - 法国V2CROSS.COM2
+      - 美国CloudFlare节点4
+      - 广东省广州市+UCloud
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1034,8 +1041,9 @@ proxy-groups:
       - github.com/freefq-亚太地区1818
       - github.com/freefq-美国CloudFlare节点2121
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房2222
-      - 印度V2CROSS.COM0
-      - 美国CloudFlare节点3
+      - 法国V2CROSS.COM2
+      - 美国CloudFlare节点4
+      - 广东省广州市+UCloud
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1143,8 +1151,9 @@ proxy-groups:
       - github.com/freefq-亚太地区1818
       - github.com/freefq-美国CloudFlare节点2121
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房2222
-      - 印度V2CROSS.COM0
-      - 美国CloudFlare节点3
+      - 法国V2CROSS.COM2
+      - 美国CloudFlare节点4
+      - 广东省广州市+UCloud
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
