@@ -1,4 +1,4 @@
-# 更新时间 2023-07-25T18:58:34.108Z
+# 更新时间 2023-07-25T19:14:36.172Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1120,6 +1120,33 @@ proxies:
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: 美国Datability0
+    ws-opts:
+      path: /path/1690021167515
+      headers:
+        host: www.80201099.xyz
+    server: 140.99.157.86
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: trojan
+    name: 新加坡+Amazon数据中心
+    server: kbawssg2.aiopen.cfd
+    port: 443
+    password: 5fb22807-e954-4547-a609-ab9329bcccaf
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 香港+Amazon数据中心
+    server: aws-hk03.aikun.online
+    port: 443
+    password: 9e89ba21-9b62-4e1e-b4ac-bec68b517fcf
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1236,6 +1263,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-亚太地区2121
       - github.com/freefq-亚太地区2424
+      - 美国Datability0
+      - 新加坡+Amazon数据中心
+      - 香港+Amazon数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1352,6 +1382,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-亚太地区2121
       - github.com/freefq-亚太地区2424
+      - 美国Datability0
+      - 新加坡+Amazon数据中心
+      - 香港+Amazon数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1467,6 +1500,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-亚太地区2121
       - github.com/freefq-亚太地区2424
+      - 美国Datability0
+      - 新加坡+Amazon数据中心
+      - 香港+Amazon数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1614,6 +1650,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-亚太地区2121
       - github.com/freefq-亚太地区2424
+      - 美国Datability0
+      - 新加坡+Amazon数据中心
+      - 香港+Amazon数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
