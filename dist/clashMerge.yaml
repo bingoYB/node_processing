@@ -1,4 +1,4 @@
-# 更新时间 2023-07-26T06:59:27.948Z
+# 更新时间 2023-07-26T07:18:51.174Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -661,47 +661,91 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+加利福尼亚州洛杉矶Level3通信(DIA)
-    server: jp.mjt001.com
-    port: 443
-    password: bc8870d9-6033-46ac-a75e-03a6583366d0
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国Datability9
+    name: 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+    ws-opts:
+      path: /path/080712342310
+    server: 23.224.110.183
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 英国V2CROSS.COM2
     ws-opts:
       path: /
-    server: 140.99.57.46
+      headers:
+        host: data.video.qiyi.com
+    server: shouer1zijiyong.209966.xyz
+    port: 10001
+    uuid: 5155ee3b-cd67-429b-a781-577de23407b1
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国加利福尼亚州圣何塞PEGTECH6
+    ws-opts:
+      path: /path/1690195052514
+      headers:
+        host: www.80128693.xyz
+    server: 142.4.112.137
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国Datability7
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+    server: 140.99.127.222
+    port: 54774
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 欧盟V2CROSS.COM8
+    ws-opts:
+      path: /
+    server: 45.88.160.195
     port: 59418
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: auto
   - type: vmess
-    name: 新加坡腾讯云10
+    name: 印度V2CROSS.COM9
     ws-opts:
-      path: /
+      path: a2284cc1
       headers:
-        host: hang02.sologoog.xyz
-    server: hang02.sologoog.xyz
-    port: 26888
-    uuid: f7d480fd-450d-4162-b65e-4df7daa69a08
+        host: dedi2.1808.cf
+    server: 103.160.204.16
+    port: 443
+    uuid: a2284cc1-20d8-4c78-a622-3e3cca767a70
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 美国加利福尼亚州圣何塞MULTACOM机房12
-    ws-opts:
-      path: /
-      headers:
-        host: 🇺🇸US美国(youtube阿伟科技)
-    server: 45.199.138.145
-    port: 42111
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 0
-    cipher: auto
-    network: auto
+    tls: true
+  - type: trojan
+    name: 美国+加利福尼亚州圣克拉拉Microsoft公司
+    server: vn.mjt001.com
+    port: 443
+    password: bc8870d9-6033-46ac-a75e-03a6583366d0
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+Microsoft数据中心
+    server: ch.mjt001.com
+    port: 443
+    password: bc8870d9-6033-46ac-a75e-03a6583366d0
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -766,10 +810,14 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房2121
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2222
       - github.com/freefq-美国加利福尼亚州圣克拉拉阿里云2323
-      - 美国+加利福尼亚州洛杉矶Level3通信(DIA)
-      - 美国Datability9
-      - 新加坡腾讯云10
-      - 美国加利福尼亚州圣何塞MULTACOM机房12
+      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+      - 英国V2CROSS.COM2
+      - 美国加利福尼亚州圣何塞PEGTECH6
+      - 美国Datability7
+      - 欧盟V2CROSS.COM8
+      - 印度V2CROSS.COM9
+      - 美国+加利福尼亚州圣克拉拉Microsoft公司
+      - 美国+Microsoft数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -834,10 +882,14 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房2121
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2222
       - github.com/freefq-美国加利福尼亚州圣克拉拉阿里云2323
-      - 美国+加利福尼亚州洛杉矶Level3通信(DIA)
-      - 美国Datability9
-      - 新加坡腾讯云10
-      - 美国加利福尼亚州圣何塞MULTACOM机房12
+      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+      - 英国V2CROSS.COM2
+      - 美国加利福尼亚州圣何塞PEGTECH6
+      - 美国Datability7
+      - 欧盟V2CROSS.COM8
+      - 印度V2CROSS.COM9
+      - 美国+加利福尼亚州圣克拉拉Microsoft公司
+      - 美国+Microsoft数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -901,10 +953,14 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房2121
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2222
       - github.com/freefq-美国加利福尼亚州圣克拉拉阿里云2323
-      - 美国+加利福尼亚州洛杉矶Level3通信(DIA)
-      - 美国Datability9
-      - 新加坡腾讯云10
-      - 美国加利福尼亚州圣何塞MULTACOM机房12
+      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+      - 英国V2CROSS.COM2
+      - 美国加利福尼亚州圣何塞PEGTECH6
+      - 美国Datability7
+      - 欧盟V2CROSS.COM8
+      - 印度V2CROSS.COM9
+      - 美国+加利福尼亚州圣克拉拉Microsoft公司
+      - 美国+Microsoft数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1000,10 +1056,14 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房2121
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2222
       - github.com/freefq-美国加利福尼亚州圣克拉拉阿里云2323
-      - 美国+加利福尼亚州洛杉矶Level3通信(DIA)
-      - 美国Datability9
-      - 新加坡腾讯云10
-      - 美国加利福尼亚州圣何塞MULTACOM机房12
+      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心0
+      - 英国V2CROSS.COM2
+      - 美国加利福尼亚州圣何塞PEGTECH6
+      - 美国Datability7
+      - 欧盟V2CROSS.COM8
+      - 印度V2CROSS.COM9
+      - 美国+加利福尼亚州圣克拉拉Microsoft公司
+      - 美国+Microsoft数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
