@@ -1,4 +1,4 @@
-# 更新时间 2023-07-27T12:58:17.518Z
+# 更新时间 2023-07-27T13:27:06.461Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -285,7 +285,7 @@ proxies:
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     ws-opts:
       path: /
-  - name: US_US_speednode_0037
+  - name: US_speednode_0037
     server: cfcdn2.sanfencdn.net
     port: 2052
     type: vmess
@@ -917,35 +917,42 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 广东省+移动
+    server: 183.240.221.139
+    port: 14127
+    password: YWVzLTEyOC1nY206NzMyNmJjOGMtNTRhMC00OWI3LTgyYWUtYTM1ZTI5NjZkY2Zi
+    cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点0
+    name: 美国CloudFlare节点7
     ws-opts:
-      path: /huawei
-    server: cloudflare.piaole.me
-    port: 443
-    uuid: e71fef74-5caa-4447-9fc0-27184bd926c1
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v02.ssrsub.com
+    server: speedip.eu.org
+    port: 80
+    uuid: 789dfa0d-2028-4d53-a4db-252ea75d863e
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
-  - type: ss
-    name: 广东省+移动
-    server: 183.240.221.143
-    port: 14115
-    password: YWVzLTEyOC1nY206NzMyNmJjOGMtNTRhMC00OWI3LTgyYWUtYTM1ZTI5NjZkY2Zi
-    cipher: aes-128-gcm
-  - type: ss
-    name: 上海市+联通
-    server: 223.167.121.32
-    port: 14101
-    password: YWVzLTEyOC1nY206NzMyNmJjOGMtNTRhMC00OWI3LTgyYWUtYTM1ZTI5NjZkY2Zi
-    cipher: aes-128-gcm
   - type: ss
     name: 湖南省+联通
     server: 116.163.29.76
-    port: 14114
+    port: 14106
     password: YWVzLTEyOC1nY206NzMyNmJjOGMtNTRhMC00OWI3LTgyYWUtYTM1ZTI5NjZkY2Zi
     cipher: aes-128-gcm
+  - type: vmess
+    name: 乌克兰V2CROSS.COM10
+    ws-opts:
+      path: /
+      headers:
+        host: internet.life.com.by
+    server: sw-94.131.10.5.nip.io
+    port: 443
+    uuid: 88d476c1-48f7-4d3d-a0e6-acccbff02db6
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -982,7 +989,7 @@ proxy-groups:
       - US_US_speednode_0034
       - RO_US_speednode_0035
       - US_US_speednode_0036
-      - US_US_speednode_0037
+      - US_speednode_0037
       - US_US_speednode_0038
       - US_US_speednode_0039
       - CN_US_speednode_0040
@@ -1034,10 +1041,10 @@ proxy-groups:
       - github.com/freefq-亚太地区2121
       - github.com/freefq-亚太地区2222
       - github.com/freefq-美国CloudFlare节点2323
-      - 美国CloudFlare节点0
       - 广东省+移动
-      - 上海市+联通
+      - 美国CloudFlare节点7
       - 湖南省+联通
+      - 乌克兰V2CROSS.COM10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1074,7 +1081,7 @@ proxy-groups:
       - US_US_speednode_0034
       - RO_US_speednode_0035
       - US_US_speednode_0036
-      - US_US_speednode_0037
+      - US_speednode_0037
       - US_US_speednode_0038
       - US_US_speednode_0039
       - CN_US_speednode_0040
@@ -1126,10 +1133,10 @@ proxy-groups:
       - github.com/freefq-亚太地区2121
       - github.com/freefq-亚太地区2222
       - github.com/freefq-美国CloudFlare节点2323
-      - 美国CloudFlare节点0
       - 广东省+移动
-      - 上海市+联通
+      - 美国CloudFlare节点7
       - 湖南省+联通
+      - 乌克兰V2CROSS.COM10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1165,7 +1172,7 @@ proxy-groups:
       - US_US_speednode_0034
       - RO_US_speednode_0035
       - US_US_speednode_0036
-      - US_US_speednode_0037
+      - US_speednode_0037
       - US_US_speednode_0038
       - US_US_speednode_0039
       - CN_US_speednode_0040
@@ -1217,10 +1224,10 @@ proxy-groups:
       - github.com/freefq-亚太地区2121
       - github.com/freefq-亚太地区2222
       - github.com/freefq-美国CloudFlare节点2323
-      - 美国CloudFlare节点0
       - 广东省+移动
-      - 上海市+联通
+      - 美国CloudFlare节点7
       - 湖南省+联通
+      - 乌克兰V2CROSS.COM10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1288,7 +1295,7 @@ proxy-groups:
       - US_US_speednode_0034
       - RO_US_speednode_0035
       - US_US_speednode_0036
-      - US_US_speednode_0037
+      - US_speednode_0037
       - US_US_speednode_0038
       - US_US_speednode_0039
       - CN_US_speednode_0040
@@ -1340,10 +1347,10 @@ proxy-groups:
       - github.com/freefq-亚太地区2121
       - github.com/freefq-亚太地区2222
       - github.com/freefq-美国CloudFlare节点2323
-      - 美国CloudFlare节点0
       - 广东省+移动
-      - 上海市+联通
+      - 美国CloudFlare节点7
       - 湖南省+联通
+      - 乌克兰V2CROSS.COM10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
