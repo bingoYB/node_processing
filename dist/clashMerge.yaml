@@ -1,4 +1,4 @@
-# 更新时间 2023-07-28T18:57:17.716Z
+# 更新时间 2023-07-28T19:14:55.827Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1339,37 +1339,56 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: vmess
-    name: 美国CloudFlare公司CDN节点(shopify)2
-    ws-opts:
-      path: /aries
-      headers:
-        host: Fr.cloudflare.quest
-    server: Shopify.com
-    port: 2086
-    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: trojan
-    name: 希腊+V2CROSS.COM
-    server: 144.24.75.121
+    name: 亚太地区+V2CROSS.COM
+    server: 163.123.192.155
     port: 443
-    password: 938479db-2f21-497c-96fb-e08bff417f77
+    password: d31792a4-b843-469f-9185-4a6111ff7612
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点10
+    name: 美国Datability1
     ws-opts:
-      path: /qwer01
+      path: /
+    server: 140.99.129.244
+    port: 48901
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 南非V2CROSS.COM5
+    ws-opts:
+      path: /
+    server: 156.225.67.230
+    port: 50881
+    uuid: 515bcb4d-0ba1-4cae-87cf-a047007eec54
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 南非豪登省约翰内斯堡Cloudinnovation数据中心8
+    ws-opts:
+      path: /
+    server: 156.249.18.163
+    port: 42292
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国V2CROSS.COM12
+    ws-opts:
+      path: /path/1690369250008
       headers:
-        host: ecc.vtcss.top
-    server: 172.67.163.143
-    port: 8880
-    uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
+        host: www.62618992.xyz
+    server: 198.200.56.106
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1496,9 +1515,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点1919
       - github.com/freefq-美国EasyDNSAnycast节点(Cloudflare节点)2020
-      - 美国CloudFlare公司CDN节点(shopify)2
-      - 希腊+V2CROSS.COM
-      - 美国CloudFlare节点10
+      - 亚太地区+V2CROSS.COM
+      - 美国Datability1
+      - 南非V2CROSS.COM5
+      - 南非豪登省约翰内斯堡Cloudinnovation数据中心8
+      - 美国V2CROSS.COM12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1625,9 +1646,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点1919
       - github.com/freefq-美国EasyDNSAnycast节点(Cloudflare节点)2020
-      - 美国CloudFlare公司CDN节点(shopify)2
-      - 希腊+V2CROSS.COM
-      - 美国CloudFlare节点10
+      - 亚太地区+V2CROSS.COM
+      - 美国Datability1
+      - 南非V2CROSS.COM5
+      - 南非豪登省约翰内斯堡Cloudinnovation数据中心8
+      - 美国V2CROSS.COM12
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1753,9 +1776,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点1919
       - github.com/freefq-美国EasyDNSAnycast节点(Cloudflare节点)2020
-      - 美国CloudFlare公司CDN节点(shopify)2
-      - 希腊+V2CROSS.COM
-      - 美国CloudFlare节点10
+      - 亚太地区+V2CROSS.COM
+      - 美国Datability1
+      - 南非V2CROSS.COM5
+      - 南非豪登省约翰内斯堡Cloudinnovation数据中心8
+      - 美国V2CROSS.COM12
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1913,9 +1938,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点1919
       - github.com/freefq-美国EasyDNSAnycast节点(Cloudflare节点)2020
-      - 美国CloudFlare公司CDN节点(shopify)2
-      - 希腊+V2CROSS.COM
-      - 美国CloudFlare节点10
+      - 亚太地区+V2CROSS.COM
+      - 美国Datability1
+      - 南非V2CROSS.COM5
+      - 南非豪登省约翰内斯堡Cloudinnovation数据中心8
+      - 美国V2CROSS.COM12
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
