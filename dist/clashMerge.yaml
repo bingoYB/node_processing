@@ -1,4 +1,4 @@
-# 更新时间 2023-07-31T18:59:08.668Z
+# 更新时间 2023-07-31T19:16:10.840Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -380,7 +380,7 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: false
-  - name: US_US_speednode_0054
+  - name: US_speednode_0054
     server: cf-lt.sharecentre.online
     port: 8080
     type: vmess
@@ -1030,15 +1030,56 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 荷兰北荷兰省阿姆斯特丹Sharktech数据中心1
+    name: 美国CloudFlare节点1
     ws-opts:
       path: /
-    server: 45.58.180.70
-    port: 44802
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+      headers:
+        host: haxus3.vpn66.eu.org
+    server: cf2.992688.xyz
+    port: 8080
+    uuid: 0ea60ebb-632d-4226-893a-cccc2053dbf5
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 香港+Amazon数据中心
+    server: microsoft-hk01.syjd.xyz
+    port: 443
+    password: 51eebef7-beaa-417b-9584-2794d10377c9
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国加利福尼亚州圣何塞MULTACOM机房9
+    ws-opts:
+      path: /
+    server: 45.199.138.151
+    port: 49232
+    uuid: 418048af-a293-4b99-9b0c-98ca4690dd24
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: 日本V2CROSS.COM10
+    ws-opts:
+      path: /
+    server: jp04-vm0.entry.srthdw.art
+    port: 446
+    uuid: c4b2e7ea-1a0e-316f-8e28-0717cc087534
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 卢森堡root.lu数据中心13
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+    server: amszxc.66666654.xyz
+    port: 2095
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1083,7 +1124,7 @@ proxy-groups:
       - US_US_speednode_0051
       - US_US_speednode_0052
       - ZA_US_speednode_0053
-      - US_US_speednode_0054
+      - US_speednode_0054
       - ZA_US_speednode_0055
       - US_US_speednode_0056
       - US_US_speednode_0057
@@ -1138,7 +1179,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-澳大利亚EumemmerringSecondaryCollege1919
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2121
-      - 荷兰北荷兰省阿姆斯特丹Sharktech数据中心1
+      - 美国CloudFlare节点1
+      - 香港+Amazon数据中心
+      - 美国加利福尼亚州圣何塞MULTACOM机房9
+      - 日本V2CROSS.COM10
+      - 卢森堡root.lu数据中心13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1183,7 +1228,7 @@ proxy-groups:
       - US_US_speednode_0051
       - US_US_speednode_0052
       - ZA_US_speednode_0053
-      - US_US_speednode_0054
+      - US_speednode_0054
       - ZA_US_speednode_0055
       - US_US_speednode_0056
       - US_US_speednode_0057
@@ -1238,7 +1283,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-澳大利亚EumemmerringSecondaryCollege1919
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2121
-      - 荷兰北荷兰省阿姆斯特丹Sharktech数据中心1
+      - 美国CloudFlare节点1
+      - 香港+Amazon数据中心
+      - 美国加利福尼亚州圣何塞MULTACOM机房9
+      - 日本V2CROSS.COM10
+      - 卢森堡root.lu数据中心13
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1282,7 +1331,7 @@ proxy-groups:
       - US_US_speednode_0051
       - US_US_speednode_0052
       - ZA_US_speednode_0053
-      - US_US_speednode_0054
+      - US_speednode_0054
       - ZA_US_speednode_0055
       - US_US_speednode_0056
       - US_US_speednode_0057
@@ -1337,7 +1386,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-澳大利亚EumemmerringSecondaryCollege1919
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2121
-      - 荷兰北荷兰省阿姆斯特丹Sharktech数据中心1
+      - 美国CloudFlare节点1
+      - 香港+Amazon数据中心
+      - 美国加利福尼亚州圣何塞MULTACOM机房9
+      - 日本V2CROSS.COM10
+      - 卢森堡root.lu数据中心13
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1413,7 +1466,7 @@ proxy-groups:
       - US_US_speednode_0051
       - US_US_speednode_0052
       - ZA_US_speednode_0053
-      - US_US_speednode_0054
+      - US_speednode_0054
       - ZA_US_speednode_0055
       - US_US_speednode_0056
       - US_US_speednode_0057
@@ -1468,7 +1521,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1818
       - github.com/freefq-澳大利亚EumemmerringSecondaryCollege1919
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2121
-      - 荷兰北荷兰省阿姆斯特丹Sharktech数据中心1
+      - 美国CloudFlare节点1
+      - 香港+Amazon数据中心
+      - 美国加利福尼亚州圣何塞MULTACOM机房9
+      - 日本V2CROSS.COM10
+      - 卢森堡root.lu数据中心13
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
