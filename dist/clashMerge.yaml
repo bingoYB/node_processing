@@ -1,4 +1,4 @@
-# 更新时间 2023-08-01T06:51:09.629Z
+# 更新时间 2023-08-01T07:08:36.698Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1153,33 +1153,55 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 新加坡+Amazon数据中心
-    server: sg5.microsoft-orgwly.vip
-    port: 10048
-    password: 130a47e1-d0f2-4919-a766-ceebd55214ca
-    udp: true
-    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /
+      headers:
+        host: mm.shabijichang.com
+    server: mm.shabijichang.com
+    port: 80
+    uuid: f8d42c46-8b15-483f-a630-4546bf9f4f39
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: ss
     name: 法国+格拉沃利讷OVH数据中心
     server: 54.36.174.181
     port: 9102
     password: YWVzLTI1Ni1nY206ZTRGQ1dyZ3BramkzUVk=
     cipher: aes-128-gcm
-  - type: trojan
-    name: 美国+麻省理工学院
-    server: gb2.microsoft-orgwly.vip
-    port: 10090
-    password: 130a47e1-d0f2-4919-a766-ceebd55214ca
-    udp: true
-    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /
+      headers:
+        host: haxus3.vpn66.eu.org
+    server: cf3.992688.xyz
+    port: 8080
+    uuid: 0ea60ebb-632d-4226-893a-cccc2053dbf5
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: vmess
     name: 美国CloudFlare节点12
     ws-opts:
       path: /
       headers:
-        host: hdlb.shabijichang.com
-    server: hdlb.shabijichang.com
+        host: asb.shabijichang.com
+    server: asb.shabijichang.com
+    port: 80
+    uuid: f8d42c46-8b15-483f-a630-4546bf9f4f39
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点13
+    ws-opts:
+      path: /
+      headers:
+        host: yhnsb.shabijichang.com
+    server: yhnsb.shabijichang.com
     port: 80
     uuid: f8d42c46-8b15-483f-a630-4546bf9f4f39
     alterId: 0
@@ -1188,24 +1210,12 @@ proxies:
   - type: vmess
     name: 美国CloudFlare节点14
     ws-opts:
-      path: /blue
+      path: /
       headers:
-        host: uxx.vtcss.top
-    server: 141.101.120.153
-    port: 2052
-    uuid: 50c6f498-9c49-49b4-b87c-fda69d822e5c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点16
-    ws-opts:
-      path: /qwer01
-      headers:
-        host: ecc.vtcss.top
-    server: 104.24.18.165
-    port: 8880
-    uuid: 006023f6-6d17-4ec6-af24-bcc5f7c44e35
+        host: ms.shabijichang.com
+    server: ms.shabijichang.com
+    port: 80
+    uuid: f8d42c46-8b15-483f-a630-4546bf9f4f39
     alterId: 0
     cipher: auto
     network: ws
@@ -1319,12 +1329,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3535
       - github.com/freefq-美国CloudFlare节点3636
       - github.com/freefq-日本东京阿里云3737
-      - 新加坡+Amazon数据中心
+      - 美国CloudFlare节点2
       - 法国+格拉沃利讷OVH数据中心
-      - 美国+麻省理工学院
+      - 美国CloudFlare节点5
       - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
       - 美国CloudFlare节点14
-      - 美国CloudFlare节点16
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1435,12 +1445,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3535
       - github.com/freefq-美国CloudFlare节点3636
       - github.com/freefq-日本东京阿里云3737
-      - 新加坡+Amazon数据中心
+      - 美国CloudFlare节点2
       - 法国+格拉沃利讷OVH数据中心
-      - 美国+麻省理工学院
+      - 美国CloudFlare节点5
       - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
       - 美国CloudFlare节点14
-      - 美国CloudFlare节点16
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1550,12 +1560,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3535
       - github.com/freefq-美国CloudFlare节点3636
       - github.com/freefq-日本东京阿里云3737
-      - 新加坡+Amazon数据中心
+      - 美国CloudFlare节点2
       - 法国+格拉沃利讷OVH数据中心
-      - 美国+麻省理工学院
+      - 美国CloudFlare节点5
       - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
       - 美国CloudFlare节点14
-      - 美国CloudFlare节点16
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1697,12 +1707,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3535
       - github.com/freefq-美国CloudFlare节点3636
       - github.com/freefq-日本东京阿里云3737
-      - 新加坡+Amazon数据中心
+      - 美国CloudFlare节点2
       - 法国+格拉沃利讷OVH数据中心
-      - 美国+麻省理工学院
+      - 美国CloudFlare节点5
       - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
       - 美国CloudFlare节点14
-      - 美国CloudFlare节点16
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
