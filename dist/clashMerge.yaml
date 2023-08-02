@@ -1,4 +1,4 @@
-# 更新时间 2023-08-02T06:59:27.796Z
+# 更新时间 2023-08-02T07:17:52.164Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1784,25 +1784,44 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+V2CROSS.COM
-    server: tempest-us.aikun.online
-    port: 443
-    password: 11e247e5-136d-45f1-844a-a7f054d36bab
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 荷兰北荷兰省阿姆斯特丹Sharktech数据中心7
+    name: 美国CloudFlare节点2
     ws-opts:
-      path: /
-    server: 45.58.186.81
-    port: 51140
-    uuid: 4a138e19-0595-4d51-83c6-fd276cf7d307
+      path: /blue
+      headers:
+        host: uxx.vtcss.top
+    server: 141.101.120.153
+    port: 2052
+    uuid: 50c6f498-9c49-49b4-b87c-fda69d822e5c
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
   - type: vmess
-    name: 台湾省中华电信(HiNet)数据中心9
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+    server: 172.64.207.232
+    port: 2095
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: 4a47e680
+      headers:
+        host: ddp2.1808.cf
+    server: 172.67.212.44
+    port: 80
+    uuid: 4a47e680-d860-4e63-9fa6-813857fb0f42
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 台湾省中华电信(HiNet)数据中心7
     ws-opts:
       path: /
     server: tw98-1g-hinet.mytls888.com
@@ -1811,18 +1830,6 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
-  - type: vmess
-    name: 美国CloudFlare节点14
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-    server: 172.67.193.109
-    port: 2095
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    cipher: auto
-    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1967,10 +1974,10 @@ proxy-groups:
       - github.com/freefq-澳大利亚悉尼2929
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房3131
       - github.com/freefq-美国CloudFlare公司CDN节点3232
-      - 美国+V2CROSS.COM
-      - 荷兰北荷兰省阿姆斯特丹Sharktech数据中心7
-      - 台湾省中华电信(HiNet)数据中心9
-      - 美国CloudFlare节点14
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点4
+      - 台湾省中华电信(HiNet)数据中心7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -2115,10 +2122,10 @@ proxy-groups:
       - github.com/freefq-澳大利亚悉尼2929
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房3131
       - github.com/freefq-美国CloudFlare公司CDN节点3232
-      - 美国+V2CROSS.COM
-      - 荷兰北荷兰省阿姆斯特丹Sharktech数据中心7
-      - 台湾省中华电信(HiNet)数据中心9
-      - 美国CloudFlare节点14
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点4
+      - 台湾省中华电信(HiNet)数据中心7
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2262,10 +2269,10 @@ proxy-groups:
       - github.com/freefq-澳大利亚悉尼2929
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房3131
       - github.com/freefq-美国CloudFlare公司CDN节点3232
-      - 美国+V2CROSS.COM
-      - 荷兰北荷兰省阿姆斯特丹Sharktech数据中心7
-      - 台湾省中华电信(HiNet)数据中心9
-      - 美国CloudFlare节点14
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点4
+      - 台湾省中华电信(HiNet)数据中心7
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2441,10 +2448,10 @@ proxy-groups:
       - github.com/freefq-澳大利亚悉尼2929
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房3131
       - github.com/freefq-美国CloudFlare公司CDN节点3232
-      - 美国+V2CROSS.COM
-      - 荷兰北荷兰省阿姆斯特丹Sharktech数据中心7
-      - 台湾省中华电信(HiNet)数据中心9
-      - 美国CloudFlare节点14
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点4
+      - 台湾省中华电信(HiNet)数据中心7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
