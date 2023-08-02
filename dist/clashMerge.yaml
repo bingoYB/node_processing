@@ -1,4 +1,4 @@
-# 更新时间 2023-08-02T12:58:10.285Z
+# 更新时间 2023-08-02T13:22:58.116Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1690,12 +1690,36 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点2
+    name: 美国CloudFlare节点1
     ws-opts:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-    server: 172.67.97.183
+    server: 172.67.193.109
+    port: 2095
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)3
+    ws-opts:
+      path: /aries
+      headers:
+        host: Fr.cloudflare.quest
+    server: Shopify.com
+    port: 2086
+    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点7
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+    server: 162.159.255.119
     port: 2095
     uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
     alterId: 0
@@ -1841,7 +1865,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2626
-      - 美国CloudFlare节点2
+      - 美国CloudFlare节点1
+      - 美国CloudFlare公司CDN节点(shopify)3
+      - 美国CloudFlare节点7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1982,7 +2008,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2626
-      - 美国CloudFlare节点2
+      - 美国CloudFlare节点1
+      - 美国CloudFlare公司CDN节点(shopify)3
+      - 美国CloudFlare节点7
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2122,7 +2150,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2626
-      - 美国CloudFlare节点2
+      - 美国CloudFlare节点1
+      - 美国CloudFlare公司CDN节点(shopify)3
+      - 美国CloudFlare节点7
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2294,7 +2324,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2626
-      - 美国CloudFlare节点2
+      - 美国CloudFlare节点1
+      - 美国CloudFlare公司CDN节点(shopify)3
+      - 美国CloudFlare节点7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
