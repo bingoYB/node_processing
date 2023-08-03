@@ -1,4 +1,4 @@
-# 更新时间 2023-08-03T18:58:41.741Z
+# 更新时间 2023-08-03T19:15:45.378Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1796,18 +1796,30 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国V2CROSS.COM2
+    name: 美国V2CROSS.COM0
     ws-opts:
       path: /juYLyvNBpY0LBOAommy2aJE
       headers:
         host: nika3hdfy2.foriran.trade
-    server: ask.ircf.space
+    server: 104.31.16.223
     port: 443
     uuid: 79770a32-9607-4919-9483-0f1794559390
     alterId: 0
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: 美国CloudFlare节点8
+    ws-opts:
+      path: /
+      headers:
+        host: vcus2.vpn66.eu.org
+    server: cf3.992688.xyz
+    port: 8080
+    uuid: f467f4da-2226-448d-a30d-463ef10548ac
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1957,7 +1969,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2323
       - github.com/freefq-美国CloudFlare公司CDN节点2424
-      - 美国V2CROSS.COM2
+      - 美国V2CROSS.COM0
+      - 美国CloudFlare节点8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -2107,7 +2120,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2323
       - github.com/freefq-美国CloudFlare公司CDN节点2424
-      - 美国V2CROSS.COM2
+      - 美国V2CROSS.COM0
+      - 美国CloudFlare节点8
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2256,7 +2270,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2323
       - github.com/freefq-美国CloudFlare公司CDN节点2424
-      - 美国V2CROSS.COM2
+      - 美国V2CROSS.COM0
+      - 美国CloudFlare节点8
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2437,7 +2452,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)2323
       - github.com/freefq-美国CloudFlare公司CDN节点2424
-      - 美国V2CROSS.COM2
+      - 美国V2CROSS.COM0
+      - 美国CloudFlare节点8
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
