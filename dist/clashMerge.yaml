@@ -1,4 +1,4 @@
-# 更新时间 2023-08-07T18:58:09.957Z
+# 更新时间 2023-08-07T19:15:07.038Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1409,12 +1409,24 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点3
+    name: 美国CloudFlare节点0
     ws-opts:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-    server: 172.67.237.176
+    server: 172.64.194.98
+    port: 2095
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+    server: 172.67.37.107
     port: 2095
     uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
     alterId: 0
@@ -1423,54 +1435,10 @@ proxies:
   - type: vmess
     name: 美国CloudFlare节点4
     ws-opts:
-      path: /
-      headers:
-        host: haxus3.vpn66.eu.org
-    server: cf2.992688.xyz
-    port: 8080
-    uuid: 0ea60ebb-632d-4226-893a-cccc2053dbf5
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 上海市电信6
-    server: 16.kccic2pa.xyz
-    port: 50016
-    uuid: 93ca7271-b80d-42dc-9dcc-000965239fb5
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare公司CDN节点(shopify)7
-    ws-opts:
-      path: /aries
-      headers:
-        host: Fr.cloudflare.quest
-    server: Shopify.com
-    port: 2086
-    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点8
-    ws-opts:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-    server: 172.64.193.102
-    port: 2095
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点10
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-    server: 172.64.172.109
+    server: 172.67.8.33
     port: 2095
     uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
     alterId: 0
@@ -1602,12 +1570,9 @@ proxy-groups:
       - github.com/freefq-巴西圣保罗CloudFlare节点1010
       - github.com/freefq-美国CloudFlare节点1111
       - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 美国CloudFlare节点3
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点2
       - 美国CloudFlare节点4
-      - 上海市电信6
-      - 美国CloudFlare公司CDN节点(shopify)7
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1734,12 +1699,9 @@ proxy-groups:
       - github.com/freefq-巴西圣保罗CloudFlare节点1010
       - github.com/freefq-美国CloudFlare节点1111
       - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 美国CloudFlare节点3
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点2
       - 美国CloudFlare节点4
-      - 上海市电信6
-      - 美国CloudFlare公司CDN节点(shopify)7
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1865,12 +1827,9 @@ proxy-groups:
       - github.com/freefq-巴西圣保罗CloudFlare节点1010
       - github.com/freefq-美国CloudFlare节点1111
       - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 美国CloudFlare节点3
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点2
       - 美国CloudFlare节点4
-      - 上海市电信6
-      - 美国CloudFlare公司CDN节点(shopify)7
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2028,12 +1987,9 @@ proxy-groups:
       - github.com/freefq-巴西圣保罗CloudFlare节点1010
       - github.com/freefq-美国CloudFlare节点1111
       - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 美国CloudFlare节点3
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点2
       - 美国CloudFlare节点4
-      - 上海市电信6
-      - 美国CloudFlare公司CDN节点(shopify)7
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
