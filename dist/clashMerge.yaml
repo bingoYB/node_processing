@@ -1,4 +1,4 @@
-# 更新时间 2023-08-08T12:56:53.738Z
+# 更新时间 2023-08-08T13:21:07.873Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1243,45 +1243,87 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点1
+    name: 美国V2CROSS.COM0
     ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-    server: 172.67.51.202
-    port: 2095
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+      path: /v2ray-vmess/ntls
+    server: 50.21.191.176
+    port: 80
+    uuid: 8347ac90-e0d9-474a-870a-0cc85e2c8fae
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 英国+V2CROSS.COM
-    server: zl.wingsjiasu.link
-    port: 443
-    password: d0889a38-6871-4a7d-8c83-c4fb6cad9809
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点3
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-    server: 172.67.7.186
-    port: 2095
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    name: 广东省深圳市移动2
+    server: 120.241.47.40
+    port: 58002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
-    network: ws
+    network: auto
   - type: vmess
     name: 美国CloudFlare节点4
     ws-opts:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-    server: 162.159.240.102
+    server: 162.159.254.44
     port: 2095
     uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+    server: 172.67.65.210
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 广东省广州市+电信
+    server: u-s03.xingyunwu.top
+    port: 50032
+    password: fad6dff0-9437-4ff1-ab9f-f96c48efc928
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点12
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+    server: 172.64.165.188
+    port: 2095
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点14
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+    server: 162.159.138.46
+    port: 2095
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国加利福尼亚州圣克拉拉阿里云16
+    ws-opts:
+      path: /2TokGE9A/
+      headers:
+        host: us6.cachexy.cf
+    server: cdn.chigua.tk
+    port: 80
+    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
     alterId: 0
     cipher: auto
     network: ws
@@ -1402,10 +1444,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1717
       - github.com/freefq-美国CloudFlare公司CDN节点1818
-      - 美国CloudFlare节点1
-      - 英国+V2CROSS.COM
-      - 美国CloudFlare节点3
+      - 美国V2CROSS.COM0
+      - 广东省深圳市移动2
       - 美国CloudFlare节点4
+      - 美国CloudFlare节点5
+      - 广东省广州市+电信
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点14
+      - 美国加利福尼亚州圣克拉拉阿里云16
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1523,10 +1569,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1717
       - github.com/freefq-美国CloudFlare公司CDN节点1818
-      - 美国CloudFlare节点1
-      - 英国+V2CROSS.COM
-      - 美国CloudFlare节点3
+      - 美国V2CROSS.COM0
+      - 广东省深圳市移动2
       - 美国CloudFlare节点4
+      - 美国CloudFlare节点5
+      - 广东省广州市+电信
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点14
+      - 美国加利福尼亚州圣克拉拉阿里云16
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1643,10 +1693,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1717
       - github.com/freefq-美国CloudFlare公司CDN节点1818
-      - 美国CloudFlare节点1
-      - 英国+V2CROSS.COM
-      - 美国CloudFlare节点3
+      - 美国V2CROSS.COM0
+      - 广东省深圳市移动2
       - 美国CloudFlare节点4
+      - 美国CloudFlare节点5
+      - 广东省广州市+电信
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点14
+      - 美国加利福尼亚州圣克拉拉阿里云16
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1795,10 +1849,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1717
       - github.com/freefq-美国CloudFlare公司CDN节点1818
-      - 美国CloudFlare节点1
-      - 英国+V2CROSS.COM
-      - 美国CloudFlare节点3
+      - 美国V2CROSS.COM0
+      - 广东省深圳市移动2
       - 美国CloudFlare节点4
+      - 美国CloudFlare节点5
+      - 广东省广州市+电信
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点14
+      - 美国加利福尼亚州圣克拉拉阿里云16
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
