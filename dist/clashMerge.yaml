@@ -1,4 +1,4 @@
-# 更新时间 2023-08-09T07:00:39.965Z
+# 更新时间 2023-08-09T12:36:08.727Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -20,13 +20,15 @@ proxies:
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
     tfo: false
-  - name: US_DE_speednode_0003
-    server: 3.71.40.22
-    port: 22222
-    type: trojan
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
+  - name: AU_AU_speednode_0003
+    server: 139.99.245.164
+    port: 49921
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
     udp: true
   - name: DE_DE_speednode_0004
     server: 89.163.129.118
@@ -58,14 +60,7 @@ proxies:
       headers:
         Host: www.34591664.xyz
     udp: true
-  - name: RU_ES_speednode_0006
-    server: 5.188.181.201
-    port: 9031
-    type: ss
-    cipher: aes-256-cfb
-    password: BwcAUZk8hUFAkDGN
-    udp: true
-  - name: ZA_FR_speednode_0007
+  - name: ZA_FR_speednode_0006
     server: 156.249.18.37
     port: 48222
     type: vmess
@@ -76,25 +71,14 @@ proxies:
     tls: false
     tfo: false
     skip-cert-verify: false
+  - name: DE_FR_speednode_0007
+    server: 54.36.115.241
+    port: 989
+    type: ss
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
+    udp: true
   - name: ZA_FR_speednode_0008
-    server: 156.249.18.23
-    port: 48222
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    udp: true
-  - name: US_FR_speednode_0009
-    server: 13.37.228.186
-    port: 22222
-    type: trojan
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    udp: true
-  - name: ZA_FR_speednode_0010
     server: 156.249.18.129
     port: 443
     type: vmess
@@ -109,14 +93,25 @@ proxies:
       headers:
         Host: www.11649769.xyz
     udp: true
-  - name: DE_FR_speednode_0011
-    server: 54.36.115.241
-    port: 989
-    type: ss
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
+  - name: ZA_FR_speednode_0009
+    server: 156.249.18.23
+    port: 48222
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
     udp: true
-  - name: US_GB_speednode_0012
+  - name: US_FR_speednode_0010
+    server: 13.37.228.186
+    port: 22222
+    type: trojan
+    password: telegram-id-directvpn
+    sni: trj.rollingnext.co.uk
+    skip-cert-verify: true
+    udp: true
+  - name: US_GB_speednode_0011
     server: 13.40.30.28
     port: 22222
     type: trojan
@@ -124,7 +119,7 @@ proxies:
     sni: trj.rollingnext.co.uk
     skip-cert-verify: true
     udp: true
-  - name: AF_GB_speednode_0013
+  - name: AF_GB_speednode_0012
     server: 121.127.46.147
     port: 989
     type: ss
@@ -132,7 +127,7 @@ proxies:
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
     tfo: false
-  - name: HK_HK_speednode_0014
+  - name: HK_HK_speednode_0013
     server: 156.245.8.133
     port: 443
     type: vmess
@@ -147,100 +142,93 @@ proxies:
       headers:
         Host: www.47523375.xyz
     udp: true
-  - name: HK_HK_speednode_0015
-    server: 156.245.8.187
+  - name: JP_JP_speednode_0014
+    server: gsawsjp1.aiopen.cfd
     port: 443
-    type: vmess
-    uuid: 5a4d69ad-20a9-4941-b223-87bbd09f5f52
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.48643700.xyz
+    type: trojan
     udp: true
-  - name: HK_HK_speednode_0016
-    server: 156.245.8.215
+    password: 47258c2d-6b4c-444c-9085-5131bf0aff64
+    sni: 18-140-66-207.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: JP_JP_speednode_0015
+    server: gsawshk2.aiopen.cfd
     port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.69414502.xyz
+    type: trojan
     udp: true
-  - name: KE_KE_speednode_0017
-    server: 62.12.116.66
-    port: 989
-    type: ss
-    client-fingerprint: chrome
-    cipher: aes-256-cfb
-    password: f8f7aCzcPKbsF8p3
-    tfo: false
-  - name: KR_KR_speednode_0018
-    server: 221.150.109.6
+    password: 47258c2d-6b4c-444c-9085-5131bf0aff64
+    sni: 18-140-66-207.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: KR_KR_speednode_0016
+    server: 125.141.26.3
     port: 2003
     type: ss
-    client-fingerprint: chrome
-    cipher: aes-256-cfb
-    password: qwerREWQ@@
-    tfo: false
-  - name: KR_KR_speednode_0019
-    server: 221.150.109.5
-    port: 9555
-    type: ss
     cipher: aes-256-cfb
     password: qwerREWQ@@
     udp: true
-  - name: IR_LV_speednode_0020
-    server: 185.135.86.173
-    port: 9029
+  - name: JP_KR_speednode_0017
+    server: 43.202.49.222
+    port: 2333
     type: ss
     cipher: aes-256-cfb
-    password: dU3DSNS8wYPXzEKw
+    password: doub.io
     udp: true
-  - name: IR_LV_speednode_0021
-    server: 185.135.86.173
-    port: 9041
+  - name: JP_KR_speednode_0018
+    server: 43.201.108.109
+    port: 443
     type: ss
     cipher: aes-256-cfb
-    password: U6qnYRhfyDmn8sgn
+    password: amazonskr05
     udp: true
-  - name: IR_LV_speednode_0022
-    server: 185.135.86.173
-    port: 9040
-    type: ss
-    cipher: aes-256-cfb
-    password: p9z5BVADH2YFs3MN
-    udp: true
-  - name: IR_LV_speednode_0023
+  - name: IR_LV_speednode_0019
     server: 185.135.86.173
     port: 9042
     type: ss
     cipher: aes-256-cfb
     password: S7KwUu7yBy58S3Ga
     udp: true
-  - name: IR_LV_speednode_0024
+  - name: IR_LV_speednode_0020
     server: 185.135.86.173
-    port: 9025
+    port: 9040
     type: ss
     cipher: aes-256-cfb
-    password: XPtzA9sCug3SPR4c
+    password: p9z5BVADH2YFs3MN
     udp: true
-  - name: IR_LV_speednode_0025
+  - name: IR_LV_speednode_0021
     server: 185.135.86.173
     port: 9043
     type: ss
     cipher: aes-256-cfb
     password: HSZuyJQcWe8dxNdF
+    udp: true
+  - name: IR_LV_speednode_0022
+    server: 185.135.86.173
+    port: 9029
+    type: ss
+    cipher: aes-256-cfb
+    password: dU3DSNS8wYPXzEKw
+    udp: true
+  - name: IR_LV_speednode_0023
+    server: 185.135.86.173
+    port: 9041
+    type: ss
+    cipher: aes-256-cfb
+    password: U6qnYRhfyDmn8sgn
+    udp: true
+  - name: IR_LV_speednode_0024
+    server: 185.135.86.173
+    port: 9020
+    type: ss
+    cipher: aes-256-cfb
+    password: BNmAXXxAHYpTRdzu
+    udp: true
+  - name: IR_LV_speednode_0025
+    server: 185.135.86.173
+    port: 9025
+    type: ss
+    cipher: aes-256-cfb
+    password: XPtzA9sCug3SPR4c
     udp: true
   - name: NL_NL_speednode_0026
     server: 46.182.107.71
@@ -252,7 +240,22 @@ proxies:
     tls: false
     skip-cert-verify: false
     udp: true
-  - name: RU_PH_speednode_0027
+  - name: US_NU_speednode_0027
+    server: 104.17.137.141
+    port: 443
+    type: vmess
+    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    udp: true
+    ws-opts:
+      path: /d84ee332-1284-11ee-a5c8-8213fd3be4b9
+      headers:
+        Host: d84ee332-1284-11ee-a5c8-8213fd3be4b9.bamarambash.monster
+  - name: RU_PH_speednode_0028
     server: 109.248.25.59
     port: 29064
     type: vmess
@@ -265,14 +268,38 @@ proxies:
     ws-opts:
       path: /ss
     udp: true
-  - name: SG_SG_speednode_0029
+  - name: RU_RU_speednode_0030
+    server: 185.59.218.177
+    port: 443
+    type: vmess
+    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /72d6d25e-1b39-11ee-a5c8-8213fd3be4b9
+      headers:
+        Host: 72d6d25e-1b39-11ee-a5c8-8213fd3be4b9.bamarambash.monster
+    udp: true
+  - name: SG_SG_speednode_0031
     server: 18.141.236.15
     port: 443
     type: ss
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: TW_speednode_0030
+  - name: TW_TW_speednode_0032
+    server: pqhinet1.aiopen.cfd
+    port: 443
+    type: trojan
+    udp: true
+    password: 47258c2d-6b4c-444c-9085-5131bf0aff64
+    sni: 18-140-66-207.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: TW_speednode_0033
     server: 103.177.33.180
     port: 443
     type: ss
@@ -288,17 +315,27 @@ proxies:
       tls: true
       mux: true
       skip-cert-verify: false
-  - name: US_US_speednode_0031
-    server: 45.199.138.149
-    port: 47922
+  - name: US_US_speednode_0034
+    server: 45.199.138.158
+    port: 49183
     type: vmess
-    uuid: f9fa3a9c-f7d5-414f-88e6-6970585d9949
+    uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7
     alterId: 64
     cipher: auto
     tls: false
     skip-cert-verify: false
     udp: true
-  - name: US_US_speednode_0032
+  - name: US_US_speednode_0035
+    server: 45.199.138.185
+    port: 44144
+    type: vmess
+    uuid: 078eb24d-8d1d-4fbd-b914-ee58a897a35e
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: US_US_speednode_0036
     server: 216.52.183.246
     port: 80
     type: ss
@@ -310,9 +347,9 @@ proxies:
     plugin-opts:
       mode: http
       host: None
-  - name: US_US_speednode_0033
-    server: 140.99.128.99
-    port: 58402
+  - name: ZA_US_speednode_0037
+    server: 156.225.67.89
+    port: 48339
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
@@ -320,77 +357,67 @@ proxies:
     tls: false
     skip-cert-verify: false
     udp: true
-  - name: ZA_US_speednode_0034
-    server: 156.225.67.230
-    port: 443
-    type: vmess
-    uuid: 515bcb4d-0ba1-4cae-87cf-a047007eec54
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.73938022.xyz
-    udp: true
-  - name: ZA_US_speednode_0035
-    server: 156.225.67.164
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.75544744.xyz
-    udp: true
-  - name: ZA_US_speednode_0036
-    server: 156.225.67.54
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.52326732.xyz
-    udp: true
-  - name: ZA_US_speednode_0037
-    server: 156.225.67.15
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.84938863.xyz
-    udp: true
   - name: US_US_speednode_0038
-    server: 45.199.138.158
-    port: 49183
+    server: 45.92.161.166
+    port: 32929
     type: vmess
-    uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     tls: false
     skip-cert-verify: false
     udp: true
   - name: US_US_speednode_0039
+    server: 45.199.138.169
+    port: 38175
+    type: vmess
+    uuid: 6e79eea4-5f72-4683-ad0e-5339f013421b
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: US_US_speednode_0040
+    server: 45.199.138.136
+    port: 49169
+    type: vmess
+    uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: US_US_speednode_0041
+    server: 45.199.138.134
+    port: 44393
+    type: vmess
+    uuid: 1d474f0b-e78d-4af9-bc4a-a467467bc7a7
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: US_US_speednode_0042
+    server: 45.199.138.74
+    port: 30917
+    type: vmess
+    uuid: 6fa560d4-35c5-4968-adfc-812c52878b84
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: US_US_speednode_0043
+    server: 171.22.116.4
+    port: 41665
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
+  - name: US_US_speednode_0044
     server: 142.4.111.89
     port: 443
     type: vmess
@@ -405,17 +432,7 @@ proxies:
       headers:
         Host: www.60321304.xyz
     udp: true
-  - name: US_US_speednode_0040
-    server: 45.199.138.134
-    port: 44393
-    type: vmess
-    uuid: 1d474f0b-e78d-4af9-bc4a-a467467bc7a7
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    udp: true
-  - name: US_US_speednode_0041
+  - name: US_US_speednode_0045
     server: 199.188.111.55
     port: 443
     type: vmess
@@ -430,57 +447,27 @@ proxies:
       headers:
         Host: www.62317155.xyz
     udp: true
-  - name: ZA_US_speednode_0042
-    server: 156.225.67.89
-    port: 48339
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    udp: true
-  - name: US_US_speednode_0043
-    server: 45.199.138.74
-    port: 30917
-    type: vmess
-    uuid: 6fa560d4-35c5-4968-adfc-812c52878b84
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    udp: true
-  - name: ZA_US_speednode_0044
-    server: 156.225.67.153
-    port: 443
-    type: vmess
-    uuid: a7fa8f14-4fb6-4280-9005-d6bbe99c5da9
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.84550179.xyz
-    udp: true
-  - name: ZA_US_speednode_0045
-    server: 156.225.67.38
-    port: 443
-    type: vmess
-    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.86139317.xyz
-    udp: true
   - name: US_US_speednode_0046
+    server: 45.199.138.92
+    port: 49232
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca4690dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: US_US_speednode_0047
+    server: 45.199.138.189
+    port: 42524
+    type: vmess
+    alterId: 64
+    cipher: auto
+    network: tcp
+    servername: ''
+    tls: false
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - name: US_US_speednode_0050
     server: 142.4.115.172
     port: 443
     type: vmess
@@ -495,17 +482,7 @@ proxies:
       headers:
         Host: www.53997395.xyz
     udp: true
-  - name: US_US_speednode_0047
-    server: 45.92.161.166
-    port: 32929
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    udp: true
-  - name: US_US_speednode_0048
+  - name: US_US_speednode_0051
     server: 74.217.182.119
     port: 443
     type: vmess
@@ -520,7 +497,7 @@ proxies:
       path: /path/1691318318420
       headers:
         Host: www.62976171.xyz
-  - name: US_US_speednode_0049
+  - name: US_US_speednode_0052
     server: 137.175.9.193
     port: 443
     type: vmess
@@ -535,17 +512,17 @@ proxies:
       headers:
         Host: www.71891316.xyz
     udp: true
-  - name: US_US_speednode_0050
-    server: 45.199.138.136
-    port: 49169
+  - name: US_US_speednode_0053
+    server: 45.199.138.149
+    port: 47922
     type: vmess
-    uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa
+    uuid: f9fa3a9c-f7d5-414f-88e6-6970585d9949
     alterId: 64
     cipher: auto
     tls: false
     skip-cert-verify: false
     udp: true
-  - name: US_US_speednode_0051
+  - name: US_US_speednode_0054
     server: 198.2.202.215
     port: 443
     type: vmess
@@ -560,9 +537,24 @@ proxies:
       headers:
         Host: www.13364896.xyz
     udp: true
-  - name: US_US_speednode_0052
-    server: 171.22.116.4
-    port: 41665
+  - name: US_US_speednode_0055
+    server: 74.217.182.105
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /path/1691318318420
+      headers:
+        Host: www.59197212.xyz
+    udp: true
+  - name: US_US_speednode_0056
+    server: 140.99.128.99
+    port: 58402
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
@@ -570,97 +562,7 @@ proxies:
     tls: false
     skip-cert-verify: false
     udp: true
-  - name: US_US_speednode_0053
-    server: 198.2.204.245
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.11141292.xyz
-    udp: true
-  - name: US_US_speednode_0054
-    server: 107.148.1.116
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 1
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/282517202535
-      headers:
-        Host: www.78895382.xyz
-    udp: true
-  - name: US_US_speednode_0055
-    server: 108.186.4.17
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.42438779.xyz
-    udp: true
-  - name: US_US_speednode_0056
-    server: 142.4.110.116
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.64830206.xyz
-    udp: true
   - name: ZA_US_speednode_0057
-    server: 156.225.67.224
-    port: 443
-    type: vmess
-    uuid: ebec2adf-e940-446f-bed4-d8c91143b54a
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.16658180.xyz
-    udp: true
-  - name: CN_US_speednode_0058
-    server: 198.2.197.77
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.71825152.xyz
-    udp: true
-  - name: ZA_US_speednode_0059
     server: 156.225.67.58
     port: 443
     type: vmess
@@ -675,142 +577,46 @@ proxies:
       headers:
         Host: www.84661158.xyz
     udp: true
-  - name: ZA_US_speednode_0060
-    server: 156.225.67.114
+  - name: US_US_speednode_0058
+    server: 74.217.179.35
+    port: 443
+    type: trojan
+    udp: true
+    password: 47258c2d-6b4c-444c-9085-5131bf0aff64
+    sni: 20-24-33-134.nhost.00cdn.com
+    skip-cert-verify: true
+    network: tcp
+  - name: US_US_speednode_0059
+    server: 198.2.204.245
     port: 443
     type: vmess
-    uuid: b8df3ef1-887f-4ee4-855f-4f80416c2464
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     tls: true
     skip-cert-verify: false
     network: ws
     ws-opts:
-      path: /path/1691403540577
+      path: /path/1691489542385
       headers:
-        Host: www.12460158.xyz
+        Host: www.11141292.xyz
+    udp: true
+  - name: CN_US_speednode_0060
+    server: 198.2.197.77
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /path/1691489542385
+      headers:
+        Host: www.71825152.xyz
     udp: true
   - name: US_US_speednode_0061
-    server: 45.15.166.115
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691318318420
-      headers:
-        Host: www.39960822.xyz
-    udp: true
-  - name: US_US_speednode_0062
-    server: 45.15.166.125
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.80817644.xyz
-    udp: true
-  - name: US_US_speednode_0063
-    server: 45.86.8.120
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.65307519.xyz
-    udp: true
-  - name: US_US_speednode_0064
-    server: 171.22.116.55
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.83993175.xyz
-    udp: true
-  - name: US_US_speednode_0065
-    server: 142.0.132.35
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.45022499.xyz
-    udp: true
-  - name: US_US_speednode_0066
-    server: 142.4.109.72
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 1
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/282517202535
-      headers:
-        Host: www.55538389.xyz
-    udp: true
-  - name: US_US_speednode_0067
-    server: 142.4.110.7
-    port: 443
-    type: vmess
-    uuid: 08fc4943-4c7a-4a69-9265-fb961eaea917
-    alterId: 1
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/252617081903
-      headers:
-        Host: www.53846731.xyz
-    udp: true
-  - name: US_US_speednode_0068
-    server: 192.74.229.34
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.19458162.xyz
-    udp: true
-  - name: US_US_speednode_0069
     server: 142.0.131.56
     port: 443
     type: vmess
@@ -825,7 +631,97 @@ proxies:
       headers:
         Host: www.68757543.xyz
     udp: true
-  - name: US_US_speednode_0070
+  - name: US_US_speednode_0062
+    server: 142.4.109.72
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 1
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/282517202535
+      headers:
+        Host: www.55538389.xyz
+    udp: true
+  - name: US_US_speednode_0063
+    server: 142.4.110.116
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /path/1691489542385
+      headers:
+        Host: www.64830206.xyz
+    udp: true
+  - name: US_US_speednode_0064
+    server: 142.0.132.35
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /path/1691489542385
+      headers:
+        Host: www.45022499.xyz
+    udp: true
+  - name: US_US_speednode_0065
+    server: 108.186.4.17
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /path/1691489542385
+      headers:
+        Host: www.42438779.xyz
+    udp: true
+  - name: US_US_speednode_0066
+    server: 192.74.229.34
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /path/1691489542385
+      headers:
+        Host: www.19458162.xyz
+    udp: true
+  - name: US_US_speednode_0067
+    server: 171.22.116.55
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /path/1691489542385
+      headers:
+        Host: www.83993175.xyz
+    udp: true
+  - name: US_US_speednode_0068
     server: 45.92.161.136
     port: 443
     type: vmess
@@ -840,8 +736,46 @@ proxies:
       headers:
         Host: www.24125478.xyz
     udp: true
+  - name: US_US_speednode_0069
+    server: 45.86.8.21
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /path/1691318318420
+      headers:
+        Host: www.29004003.xyz
+    udp: true
+  - name: US_US_speednode_0070
+    server: 142.4.109.6
+    port: 443
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 1
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/252617081903
+      headers:
+        Host: www.29253744.xyz
+    udp: true
   - name: US_US_speednode_0071
-    server: 140.99.57.21
+    server: 35.85.46.131
+    port: 443
+    type: ss
+    client-fingerprint: chrome
+    cipher: aes-256-cfb
+    password: amazonskr05
+    tfo: false
+  - name: US_US_speednode_0072
+    server: 45.12.112.123
     port: 443
     type: vmess
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
@@ -853,22 +787,7 @@ proxies:
     ws-opts:
       path: /path/1691489542385
       headers:
-        Host: www.60844181.xyz
-    udp: true
-  - name: US_US_speednode_0072
-    server: 140.99.120.174
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691232948890
-      headers:
-        Host: www.22716613.xyz
+        Host: www.80952070.xyz
     udp: true
   - name: US_US_speednode_0073
     server: 171.22.134.21
@@ -886,10 +805,65 @@ proxies:
         Host: www.28848492.xyz
     udp: true
   - name: US_US_speednode_0074
-    server: 142.4.109.6
+    server: 216.52.183.242
+    port: 80
+    type: ss
+    cipher: aes-128-gcm
+    password: 83XvX4Vo%*3a
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: None
+  - name: US_US_speednode_0075
+    server: hkpre.ph5gvpn.online
+    port: 80
+    type: vmess
+    uuid: 834d6d9a-08ab-4c47-967b-7a6bf6ec3077
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /ph5gvpn
+      headers:
+        Host: dl.kgvn.garenanow.com
+    udp: true
+  - name: US_US_speednode_0076
+    server: 216.52.183.245
+    port: 80
+    type: ss
+    cipher: aes-128-gcm
+    password: 83XvX4Vo%*3a
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: None
+  - name: US_US_speednode_0077
+    server: 216.52.183.244
+    port: 80
+    type: ss
+    cipher: aes-128-gcm
+    password: 83XvX4Vo%*3a
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: None
+  - name: US_US_speednode_0078
+    server: 216.52.183.243
+    port: 80
+    type: ss
+    cipher: aes-128-gcm
+    password: 83XvX4Vo%*3a
+    plugin: obfs
+    plugin-opts:
+      mode: http
+      host: None
+  - name: US_US_speednode_0079
+    server: 142.4.110.7
     port: 443
     type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: 08fc4943-4c7a-4a69-9265-fb961eaea917
     alterId: 1
     cipher: auto
     tls: true
@@ -898,76 +872,8 @@ proxies:
     ws-opts:
       path: /path/252617081903
       headers:
-        Host: www.29253744.xyz
+        Host: www.53846731.xyz
     udp: true
-  - name: US_US_speednode_0075
-    server: 45.12.112.123
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691489542385
-      headers:
-        Host: www.80952070.xyz
-    udp: true
-  - name: US_US_speednode_0076
-    server: 45.86.8.21
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691318318420
-      headers:
-        Host: www.29004003.xyz
-    udp: true
-  - name: US_US_speednode_0077
-    server: 45.15.166.181
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.52033619.xyz
-    udp: true
-  - name: US_US_speednode_0078
-    server: 140.99.149.46
-    port: 443
-    type: vmess
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    tls: true
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /path/1691403540577
-      headers:
-        Host: www.68178927.xyz
-    udp: true
-  - name: US_US_speednode_0079
-    server: 35.85.46.131
-    port: 443
-    type: ss
-    client-fingerprint: chrome
-    cipher: aes-256-cfb
-    password: amazonskr05
-    tfo: false
   - name: RO_US_speednode_0080
     server: 185.47.255.219
     port: 989
@@ -990,46 +896,6 @@ proxies:
       headers:
         Host: www.51896962.xyz
     udp: true
-  - name: US_US_speednode_0082
-    server: 216.52.183.242
-    port: 80
-    type: ss
-    cipher: aes-128-gcm
-    password: 83XvX4Vo%*3a
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: None
-  - name: US_US_speednode_0083
-    server: 216.52.183.244
-    port: 80
-    type: ss
-    cipher: aes-128-gcm
-    password: 83XvX4Vo%*3a
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: None
-  - name: US_US_speednode_0084
-    server: 216.52.183.245
-    port: 80
-    type: ss
-    cipher: aes-128-gcm
-    password: 83XvX4Vo%*3a
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: None
-  - name: US_US_speednode_0085
-    server: 216.52.183.243
-    port: 80
-    type: ss
-    cipher: aes-128-gcm
-    password: 83XvX4Vo%*3a
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: None
   - name: _JP_日本
     server: 18.179.118.255
     port: 443
@@ -1104,6 +970,13 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: true
+    udp: true
+  - name: _KE_肯尼亚
+    server: 62.12.116.66
+    port: 989
+    type: ss
+    cipher: aes-256-cfb
+    password: f8f7aCzcPKbsF8p3
     udp: true
   - name: _US_美国 4
     server: cnamemc1.cdncisco4.co
@@ -1209,13 +1082,6 @@ proxies:
       path: /hgcefomn
       headers:
         Host: amszx.66666654.xyz
-    udp: true
-  - name: _KR_韩国
-    server: 43.201.108.109
-    port: 443
-    type: ss
-    cipher: aes-256-cfb
-    password: amazonskr05
     udp: true
   - name: _US_美国->🇧🇷_BR_巴西 5
     server: 172.64.106.104
@@ -1557,7 +1423,7 @@ proxies:
     password: amazonskr05
     udp: true
   - type: vmess
-    name: 更新于:08-0912:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:08-0920:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -1565,7 +1431,15 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心33
+    name: github.com/freefq-荷兰北荷兰省阿姆斯特丹Sharktech数据中心11
+    server: 45.58.186.81
+    port: 51140
+    uuid: 4a138e19-0595-4d51-83c6-fd276cf7d307
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心55
     ws-opts:
       path: /
     server: 64.32.21.246
@@ -1575,7 +1449,20 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心44
+    name: github.com/freefq-美国CloudFlare公司CDN节点66
+    ws-opts:
+      path: /kplxvws
+      headers:
+        host: us.dalazhi.eu.org
+    server: cf.dalazhi.eu.org
+    port: 443
+    uuid: 64480f4c-61c2-4d88-89c3-fc0045229bfc
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心77
     ws-opts:
       path: /shirker
       headers:
@@ -1587,7 +1474,31 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点(shopify)55
+    name: github.com/freefq-美国CloudFlare公司CDN节点(shopify)88
+    ws-opts:
+      path: /aries
+      headers:
+        host: Fr.cloudflare.quest
+    server: Shopify.com
+    port: 2086
+    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点99
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: ca5.tehme100.fun
+    server: 104.31.16.46
+    port: 2082
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点(shopify)1010
     ws-opts:
       path: /dongtaiwang.com
       headers:
@@ -1600,76 +1511,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点66
-    ws-opts:
-      path: /cloudconebbb
-      headers:
-        host: cloudconebbb.gorgorchicken.one
-    server: cloudconebbb.gorgorchicken.one
-    port: 8443
-    uuid: aa0c4744-9568-4bee-a08b-73668a9b2a42
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-湖北省武汉市移动88
-    ws-opts:
-      path: /ef483582-6269-468c-93af-c511eccb8a69
-      headers:
-        host: cdn.node.user-sub.pddns-usersdk.com
-    server: cdn.node.user-sub.pddns-usersdk.com
-    port: 13003
-    uuid: 5f9f4df4-5398-35d1-9a6a-44a8a575832d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: github.com/freefq-广东省广州市电信9
-    server: k-r03.xingyunwu.top
-    port: 50024
-    password: fad6dff0-9437-4ff1-ab9f-f96c48efc928
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: github.com/freefq-澳大利亚1010
-    ws-opts:
-      path: ro2.v2rayserv.com/vmess
-      headers:
-        host: 4.saintink.eu.org
-    server: 203.28.8.207
-    port: 443
-    uuid: a128a5af-518a-4bc8-851e-b1f68b2c49d2
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1212
-    ws-opts:
-      path: /SMNxcwVdTTzcou9yQftDyZcCGQui9a
-      headers:
-        host: paris.yj2022.gq
-    server: cdn.narutos.top
-    port: 8880
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
     name: github.com/freefq-美国CloudFlare节点1313
-    ws-opts:
-      path: /
-      headers:
-        host: vcus2.vpn66.eu.org
-    server: cf1.992688.xyz
-    port: 8080
-    uuid: f467f4da-2226-448d-a30d-463ef10548ac
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1414
     ws-opts:
       path: /
       headers:
@@ -1681,80 +1523,31 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1717
+    name: github.com/freefq-美国CloudFlare节点1414
     ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
+      path: /
       headers:
-        host: ca5.tehme100.fun
-    server: 104.31.16.46
-    port: 2082
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+        host: vcus2.vpn66.eu.org
+    server: cf1.992688.xyz
+    port: 8080
+    uuid: f467f4da-2226-448d-a30d-463ef10548ac
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1919
-    ws-opts:
-      path: /i99LgvSaslbsPLLQQ7j6Z
-      headers:
-        host: de5.irteh.fun
-    server: ns1.v2-vip.fun
-    port: 80
-    uuid: 8abe9496-5e24-4e49-b566-dcf86116017d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点2121
-    ws-opts:
-      path: /b8767a6a-1c30-11ee-ba76-9ee097a90b8b
-      headers:
-        host: b8767a6a-1c30-11ee-ba76-9ee097a90b8b.bamarambash.monster
-    server: mci.bamarambash.monster
-    port: 443
-    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点2
+    name: github.com/freefq-美国CloudFlare节点1515
     ws-opts:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-    server: 172.64.166.10
+    server: 172.67.51.202
     port: 2095
     uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点4
-    ws-opts:
-      path: /hgcefomn
-      headers:
-        host: amszx.66666654.xyz
-    server: 172.67.244.14
-    port: 2095
-    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare公司CDN节点(shopify)6
-    ws-opts:
-      path: /aries
-      headers:
-        host: Fr.cloudflare.quest
-    server: Shopify.com
-    port: 2086
-    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点7
+    name: 美国CloudFlare节点0
     ws-opts:
       path: /hgcefomn
       headers:
@@ -1766,20 +1559,24 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 广东省深圳市移动10
-    server: 120.241.47.40
-    port: 58002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点12
+    name: 美国CloudFlare节点1
     ws-opts:
       path: /hgcefomn
       headers:
         host: amszx.66666654.xyz
-    server: 172.67.194.234
+    server: 172.64.109.235
+    port: 2095
+    uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /hgcefomn
+      headers:
+        host: amszx.66666654.xyz
+    server: 172.64.166.10
     port: 2095
     uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
     alterId: 0
@@ -1793,23 +1590,23 @@ proxy-groups:
       - DIRECT
       - US_AE_speednode_0001
       - AL_AL_speednode_0002
-      - US_DE_speednode_0003
+      - AU_AU_speednode_0003
       - DE_DE_speednode_0004
       - DE_DE_speednode_0005
-      - RU_ES_speednode_0006
-      - ZA_FR_speednode_0007
+      - ZA_FR_speednode_0006
+      - DE_FR_speednode_0007
       - ZA_FR_speednode_0008
-      - US_FR_speednode_0009
-      - ZA_FR_speednode_0010
-      - DE_FR_speednode_0011
-      - US_GB_speednode_0012
-      - AF_GB_speednode_0013
-      - HK_HK_speednode_0014
-      - HK_HK_speednode_0015
-      - HK_HK_speednode_0016
-      - KE_KE_speednode_0017
-      - KR_KR_speednode_0018
-      - KR_KR_speednode_0019
+      - ZA_FR_speednode_0009
+      - US_FR_speednode_0010
+      - US_GB_speednode_0011
+      - AF_GB_speednode_0012
+      - HK_HK_speednode_0013
+      - JP_JP_speednode_0014
+      - JP_JP_speednode_0015
+      - KR_KR_speednode_0016
+      - JP_KR_speednode_0017
+      - JP_KR_speednode_0018
+      - IR_LV_speednode_0019
       - IR_LV_speednode_0020
       - IR_LV_speednode_0021
       - IR_LV_speednode_0022
@@ -1817,28 +1614,26 @@ proxy-groups:
       - IR_LV_speednode_0024
       - IR_LV_speednode_0025
       - NL_NL_speednode_0026
-      - RU_PH_speednode_0027
-      - SG_SG_speednode_0029
-      - TW_speednode_0030
-      - US_US_speednode_0031
-      - US_US_speednode_0032
-      - US_US_speednode_0033
-      - ZA_US_speednode_0034
-      - ZA_US_speednode_0035
-      - ZA_US_speednode_0036
+      - US_NU_speednode_0027
+      - RU_PH_speednode_0028
+      - RU_RU_speednode_0030
+      - SG_SG_speednode_0031
+      - TW_TW_speednode_0032
+      - TW_speednode_0033
+      - US_US_speednode_0034
+      - US_US_speednode_0035
+      - US_US_speednode_0036
       - ZA_US_speednode_0037
       - US_US_speednode_0038
       - US_US_speednode_0039
       - US_US_speednode_0040
       - US_US_speednode_0041
-      - ZA_US_speednode_0042
+      - US_US_speednode_0042
       - US_US_speednode_0043
-      - ZA_US_speednode_0044
-      - ZA_US_speednode_0045
+      - US_US_speednode_0044
+      - US_US_speednode_0045
       - US_US_speednode_0046
       - US_US_speednode_0047
-      - US_US_speednode_0048
-      - US_US_speednode_0049
       - US_US_speednode_0050
       - US_US_speednode_0051
       - US_US_speednode_0052
@@ -1847,9 +1642,9 @@ proxy-groups:
       - US_US_speednode_0055
       - US_US_speednode_0056
       - ZA_US_speednode_0057
-      - CN_US_speednode_0058
-      - ZA_US_speednode_0059
-      - ZA_US_speednode_0060
+      - US_US_speednode_0058
+      - US_US_speednode_0059
+      - CN_US_speednode_0060
       - US_US_speednode_0061
       - US_US_speednode_0062
       - US_US_speednode_0063
@@ -1871,10 +1666,6 @@ proxy-groups:
       - US_US_speednode_0079
       - RO_US_speednode_0080
       - US_US_speednode_0081
-      - US_US_speednode_0082
-      - US_US_speednode_0083
-      - US_US_speednode_0084
-      - US_US_speednode_0085
       - _JP_日本
       - _SG_新加坡
       - _US_美国
@@ -1882,6 +1673,7 @@ proxy-groups:
       - _US_美国 2
       - _FR_法国
       - _US_美国->🇳🇱_NL_荷兰
+      - _KE_肯尼亚
       - _US_美国 4
       - _CA_加拿大
       - _US_美国->🇧🇷_BR_巴西
@@ -1890,7 +1682,6 @@ proxy-groups:
       - _US_美国->🇧🇷_BR_巴西 3
       - _US_美国->🇧🇷_BR_巴西 4
       - _GB_英国->🇧🇷_BR_巴西
-      - _KR_韩国
       - _US_美国->🇧🇷_BR_巴西 5
       - _HK_香港->🇺🇸_US_美国 2
       - _GB_英国
@@ -1915,26 +1706,20 @@ proxy-groups:
       - _CA_加拿大 2
       - _US_美国->🇧🇷_BR_巴西 20
       - _JP_日本 2
-      - 更新于:08-0912:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心33
-      - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心44
-      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)55
+      - 更新于:08-0920:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-荷兰北荷兰省阿姆斯特丹Sharktech数据中心11
+      - github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心55
       - github.com/freefq-美国CloudFlare公司CDN节点66
-      - github.com/freefq-湖北省武汉市移动88
-      - github.com/freefq-广东省广州市电信9
-      - github.com/freefq-澳大利亚1010
-      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心77
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1010
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1717
-      - github.com/freefq-美国CloudFlare公司CDN节点1919
-      - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国CloudFlare节点2
+      - github.com/freefq-美国CloudFlare节点1515
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
       - 美国CloudFlare节点4
-      - 美国CloudFlare公司CDN节点(shopify)6
-      - 美国CloudFlare节点7
-      - 广东省深圳市移动10
-      - 美国CloudFlare节点12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1943,23 +1728,23 @@ proxy-groups:
     proxies:
       - US_AE_speednode_0001
       - AL_AL_speednode_0002
-      - US_DE_speednode_0003
+      - AU_AU_speednode_0003
       - DE_DE_speednode_0004
       - DE_DE_speednode_0005
-      - RU_ES_speednode_0006
-      - ZA_FR_speednode_0007
+      - ZA_FR_speednode_0006
+      - DE_FR_speednode_0007
       - ZA_FR_speednode_0008
-      - US_FR_speednode_0009
-      - ZA_FR_speednode_0010
-      - DE_FR_speednode_0011
-      - US_GB_speednode_0012
-      - AF_GB_speednode_0013
-      - HK_HK_speednode_0014
-      - HK_HK_speednode_0015
-      - HK_HK_speednode_0016
-      - KE_KE_speednode_0017
-      - KR_KR_speednode_0018
-      - KR_KR_speednode_0019
+      - ZA_FR_speednode_0009
+      - US_FR_speednode_0010
+      - US_GB_speednode_0011
+      - AF_GB_speednode_0012
+      - HK_HK_speednode_0013
+      - JP_JP_speednode_0014
+      - JP_JP_speednode_0015
+      - KR_KR_speednode_0016
+      - JP_KR_speednode_0017
+      - JP_KR_speednode_0018
+      - IR_LV_speednode_0019
       - IR_LV_speednode_0020
       - IR_LV_speednode_0021
       - IR_LV_speednode_0022
@@ -1967,28 +1752,26 @@ proxy-groups:
       - IR_LV_speednode_0024
       - IR_LV_speednode_0025
       - NL_NL_speednode_0026
-      - RU_PH_speednode_0027
-      - SG_SG_speednode_0029
-      - TW_speednode_0030
-      - US_US_speednode_0031
-      - US_US_speednode_0032
-      - US_US_speednode_0033
-      - ZA_US_speednode_0034
-      - ZA_US_speednode_0035
-      - ZA_US_speednode_0036
+      - US_NU_speednode_0027
+      - RU_PH_speednode_0028
+      - RU_RU_speednode_0030
+      - SG_SG_speednode_0031
+      - TW_TW_speednode_0032
+      - TW_speednode_0033
+      - US_US_speednode_0034
+      - US_US_speednode_0035
+      - US_US_speednode_0036
       - ZA_US_speednode_0037
       - US_US_speednode_0038
       - US_US_speednode_0039
       - US_US_speednode_0040
       - US_US_speednode_0041
-      - ZA_US_speednode_0042
+      - US_US_speednode_0042
       - US_US_speednode_0043
-      - ZA_US_speednode_0044
-      - ZA_US_speednode_0045
+      - US_US_speednode_0044
+      - US_US_speednode_0045
       - US_US_speednode_0046
       - US_US_speednode_0047
-      - US_US_speednode_0048
-      - US_US_speednode_0049
       - US_US_speednode_0050
       - US_US_speednode_0051
       - US_US_speednode_0052
@@ -1997,9 +1780,9 @@ proxy-groups:
       - US_US_speednode_0055
       - US_US_speednode_0056
       - ZA_US_speednode_0057
-      - CN_US_speednode_0058
-      - ZA_US_speednode_0059
-      - ZA_US_speednode_0060
+      - US_US_speednode_0058
+      - US_US_speednode_0059
+      - CN_US_speednode_0060
       - US_US_speednode_0061
       - US_US_speednode_0062
       - US_US_speednode_0063
@@ -2021,10 +1804,6 @@ proxy-groups:
       - US_US_speednode_0079
       - RO_US_speednode_0080
       - US_US_speednode_0081
-      - US_US_speednode_0082
-      - US_US_speednode_0083
-      - US_US_speednode_0084
-      - US_US_speednode_0085
       - _JP_日本
       - _SG_新加坡
       - _US_美国
@@ -2032,6 +1811,7 @@ proxy-groups:
       - _US_美国 2
       - _FR_法国
       - _US_美国->🇳🇱_NL_荷兰
+      - _KE_肯尼亚
       - _US_美国 4
       - _CA_加拿大
       - _US_美国->🇧🇷_BR_巴西
@@ -2040,7 +1820,6 @@ proxy-groups:
       - _US_美国->🇧🇷_BR_巴西 3
       - _US_美国->🇧🇷_BR_巴西 4
       - _GB_英国->🇧🇷_BR_巴西
-      - _KR_韩国
       - _US_美国->🇧🇷_BR_巴西 5
       - _HK_香港->🇺🇸_US_美国 2
       - _GB_英国
@@ -2065,26 +1844,20 @@ proxy-groups:
       - _CA_加拿大 2
       - _US_美国->🇧🇷_BR_巴西 20
       - _JP_日本 2
-      - 更新于:08-0912:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心33
-      - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心44
-      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)55
+      - 更新于:08-0920:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-荷兰北荷兰省阿姆斯特丹Sharktech数据中心11
+      - github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心55
       - github.com/freefq-美国CloudFlare公司CDN节点66
-      - github.com/freefq-湖北省武汉市移动88
-      - github.com/freefq-广东省广州市电信9
-      - github.com/freefq-澳大利亚1010
-      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心77
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1010
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1717
-      - github.com/freefq-美国CloudFlare公司CDN节点1919
-      - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国CloudFlare节点2
+      - github.com/freefq-美国CloudFlare节点1515
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
       - 美国CloudFlare节点4
-      - 美国CloudFlare公司CDN节点(shopify)6
-      - 美国CloudFlare节点7
-      - 广东省深圳市移动10
-      - 美国CloudFlare节点12
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2092,23 +1865,23 @@ proxy-groups:
       - ♻️ 自动选择
       - US_AE_speednode_0001
       - AL_AL_speednode_0002
-      - US_DE_speednode_0003
+      - AU_AU_speednode_0003
       - DE_DE_speednode_0004
       - DE_DE_speednode_0005
-      - RU_ES_speednode_0006
-      - ZA_FR_speednode_0007
+      - ZA_FR_speednode_0006
+      - DE_FR_speednode_0007
       - ZA_FR_speednode_0008
-      - US_FR_speednode_0009
-      - ZA_FR_speednode_0010
-      - DE_FR_speednode_0011
-      - US_GB_speednode_0012
-      - AF_GB_speednode_0013
-      - HK_HK_speednode_0014
-      - HK_HK_speednode_0015
-      - HK_HK_speednode_0016
-      - KE_KE_speednode_0017
-      - KR_KR_speednode_0018
-      - KR_KR_speednode_0019
+      - ZA_FR_speednode_0009
+      - US_FR_speednode_0010
+      - US_GB_speednode_0011
+      - AF_GB_speednode_0012
+      - HK_HK_speednode_0013
+      - JP_JP_speednode_0014
+      - JP_JP_speednode_0015
+      - KR_KR_speednode_0016
+      - JP_KR_speednode_0017
+      - JP_KR_speednode_0018
+      - IR_LV_speednode_0019
       - IR_LV_speednode_0020
       - IR_LV_speednode_0021
       - IR_LV_speednode_0022
@@ -2116,28 +1889,26 @@ proxy-groups:
       - IR_LV_speednode_0024
       - IR_LV_speednode_0025
       - NL_NL_speednode_0026
-      - RU_PH_speednode_0027
-      - SG_SG_speednode_0029
-      - TW_speednode_0030
-      - US_US_speednode_0031
-      - US_US_speednode_0032
-      - US_US_speednode_0033
-      - ZA_US_speednode_0034
-      - ZA_US_speednode_0035
-      - ZA_US_speednode_0036
+      - US_NU_speednode_0027
+      - RU_PH_speednode_0028
+      - RU_RU_speednode_0030
+      - SG_SG_speednode_0031
+      - TW_TW_speednode_0032
+      - TW_speednode_0033
+      - US_US_speednode_0034
+      - US_US_speednode_0035
+      - US_US_speednode_0036
       - ZA_US_speednode_0037
       - US_US_speednode_0038
       - US_US_speednode_0039
       - US_US_speednode_0040
       - US_US_speednode_0041
-      - ZA_US_speednode_0042
+      - US_US_speednode_0042
       - US_US_speednode_0043
-      - ZA_US_speednode_0044
-      - ZA_US_speednode_0045
+      - US_US_speednode_0044
+      - US_US_speednode_0045
       - US_US_speednode_0046
       - US_US_speednode_0047
-      - US_US_speednode_0048
-      - US_US_speednode_0049
       - US_US_speednode_0050
       - US_US_speednode_0051
       - US_US_speednode_0052
@@ -2146,9 +1917,9 @@ proxy-groups:
       - US_US_speednode_0055
       - US_US_speednode_0056
       - ZA_US_speednode_0057
-      - CN_US_speednode_0058
-      - ZA_US_speednode_0059
-      - ZA_US_speednode_0060
+      - US_US_speednode_0058
+      - US_US_speednode_0059
+      - CN_US_speednode_0060
       - US_US_speednode_0061
       - US_US_speednode_0062
       - US_US_speednode_0063
@@ -2170,10 +1941,6 @@ proxy-groups:
       - US_US_speednode_0079
       - RO_US_speednode_0080
       - US_US_speednode_0081
-      - US_US_speednode_0082
-      - US_US_speednode_0083
-      - US_US_speednode_0084
-      - US_US_speednode_0085
       - _JP_日本
       - _SG_新加坡
       - _US_美国
@@ -2181,6 +1948,7 @@ proxy-groups:
       - _US_美国 2
       - _FR_法国
       - _US_美国->🇳🇱_NL_荷兰
+      - _KE_肯尼亚
       - _US_美国 4
       - _CA_加拿大
       - _US_美国->🇧🇷_BR_巴西
@@ -2189,7 +1957,6 @@ proxy-groups:
       - _US_美国->🇧🇷_BR_巴西 3
       - _US_美国->🇧🇷_BR_巴西 4
       - _GB_英国->🇧🇷_BR_巴西
-      - _KR_韩国
       - _US_美国->🇧🇷_BR_巴西 5
       - _HK_香港->🇺🇸_US_美国 2
       - _GB_英国
@@ -2214,26 +1981,20 @@ proxy-groups:
       - _CA_加拿大 2
       - _US_美国->🇧🇷_BR_巴西 20
       - _JP_日本 2
-      - 更新于:08-0912:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心33
-      - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心44
-      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)55
+      - 更新于:08-0920:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-荷兰北荷兰省阿姆斯特丹Sharktech数据中心11
+      - github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心55
       - github.com/freefq-美国CloudFlare公司CDN节点66
-      - github.com/freefq-湖北省武汉市移动88
-      - github.com/freefq-广东省广州市电信9
-      - github.com/freefq-澳大利亚1010
-      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心77
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1010
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1717
-      - github.com/freefq-美国CloudFlare公司CDN节点1919
-      - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国CloudFlare节点2
+      - github.com/freefq-美国CloudFlare节点1515
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
       - 美国CloudFlare节点4
-      - 美国CloudFlare公司CDN节点(shopify)6
-      - 美国CloudFlare节点7
-      - 广东省深圳市移动10
-      - 美国CloudFlare节点12
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2273,23 +2034,23 @@ proxy-groups:
       - ♻️ 自动选择
       - US_AE_speednode_0001
       - AL_AL_speednode_0002
-      - US_DE_speednode_0003
+      - AU_AU_speednode_0003
       - DE_DE_speednode_0004
       - DE_DE_speednode_0005
-      - RU_ES_speednode_0006
-      - ZA_FR_speednode_0007
+      - ZA_FR_speednode_0006
+      - DE_FR_speednode_0007
       - ZA_FR_speednode_0008
-      - US_FR_speednode_0009
-      - ZA_FR_speednode_0010
-      - DE_FR_speednode_0011
-      - US_GB_speednode_0012
-      - AF_GB_speednode_0013
-      - HK_HK_speednode_0014
-      - HK_HK_speednode_0015
-      - HK_HK_speednode_0016
-      - KE_KE_speednode_0017
-      - KR_KR_speednode_0018
-      - KR_KR_speednode_0019
+      - ZA_FR_speednode_0009
+      - US_FR_speednode_0010
+      - US_GB_speednode_0011
+      - AF_GB_speednode_0012
+      - HK_HK_speednode_0013
+      - JP_JP_speednode_0014
+      - JP_JP_speednode_0015
+      - KR_KR_speednode_0016
+      - JP_KR_speednode_0017
+      - JP_KR_speednode_0018
+      - IR_LV_speednode_0019
       - IR_LV_speednode_0020
       - IR_LV_speednode_0021
       - IR_LV_speednode_0022
@@ -2297,28 +2058,26 @@ proxy-groups:
       - IR_LV_speednode_0024
       - IR_LV_speednode_0025
       - NL_NL_speednode_0026
-      - RU_PH_speednode_0027
-      - SG_SG_speednode_0029
-      - TW_speednode_0030
-      - US_US_speednode_0031
-      - US_US_speednode_0032
-      - US_US_speednode_0033
-      - ZA_US_speednode_0034
-      - ZA_US_speednode_0035
-      - ZA_US_speednode_0036
+      - US_NU_speednode_0027
+      - RU_PH_speednode_0028
+      - RU_RU_speednode_0030
+      - SG_SG_speednode_0031
+      - TW_TW_speednode_0032
+      - TW_speednode_0033
+      - US_US_speednode_0034
+      - US_US_speednode_0035
+      - US_US_speednode_0036
       - ZA_US_speednode_0037
       - US_US_speednode_0038
       - US_US_speednode_0039
       - US_US_speednode_0040
       - US_US_speednode_0041
-      - ZA_US_speednode_0042
+      - US_US_speednode_0042
       - US_US_speednode_0043
-      - ZA_US_speednode_0044
-      - ZA_US_speednode_0045
+      - US_US_speednode_0044
+      - US_US_speednode_0045
       - US_US_speednode_0046
       - US_US_speednode_0047
-      - US_US_speednode_0048
-      - US_US_speednode_0049
       - US_US_speednode_0050
       - US_US_speednode_0051
       - US_US_speednode_0052
@@ -2327,9 +2086,9 @@ proxy-groups:
       - US_US_speednode_0055
       - US_US_speednode_0056
       - ZA_US_speednode_0057
-      - CN_US_speednode_0058
-      - ZA_US_speednode_0059
-      - ZA_US_speednode_0060
+      - US_US_speednode_0058
+      - US_US_speednode_0059
+      - CN_US_speednode_0060
       - US_US_speednode_0061
       - US_US_speednode_0062
       - US_US_speednode_0063
@@ -2351,10 +2110,6 @@ proxy-groups:
       - US_US_speednode_0079
       - RO_US_speednode_0080
       - US_US_speednode_0081
-      - US_US_speednode_0082
-      - US_US_speednode_0083
-      - US_US_speednode_0084
-      - US_US_speednode_0085
       - _JP_日本
       - _SG_新加坡
       - _US_美国
@@ -2362,6 +2117,7 @@ proxy-groups:
       - _US_美国 2
       - _FR_法国
       - _US_美国->🇳🇱_NL_荷兰
+      - _KE_肯尼亚
       - _US_美国 4
       - _CA_加拿大
       - _US_美国->🇧🇷_BR_巴西
@@ -2370,7 +2126,6 @@ proxy-groups:
       - _US_美国->🇧🇷_BR_巴西 3
       - _US_美国->🇧🇷_BR_巴西 4
       - _GB_英国->🇧🇷_BR_巴西
-      - _KR_韩国
       - _US_美国->🇧🇷_BR_巴西 5
       - _HK_香港->🇺🇸_US_美国 2
       - _GB_英国
@@ -2395,26 +2150,20 @@ proxy-groups:
       - _CA_加拿大 2
       - _US_美国->🇧🇷_BR_巴西 20
       - _JP_日本 2
-      - 更新于:08-0912:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心33
-      - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心44
-      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)55
+      - 更新于:08-0920:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-荷兰北荷兰省阿姆斯特丹Sharktech数据中心11
+      - github.com/freefq-美国加利福尼亚州洛杉矶Sharktech数据中心55
       - github.com/freefq-美国CloudFlare公司CDN节点66
-      - github.com/freefq-湖北省武汉市移动88
-      - github.com/freefq-广东省广州市电信9
-      - github.com/freefq-澳大利亚1010
-      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心77
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
+      - github.com/freefq-美国CloudFlare公司CDN节点(shopify)1010
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1717
-      - github.com/freefq-美国CloudFlare公司CDN节点1919
-      - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国CloudFlare节点2
+      - github.com/freefq-美国CloudFlare节点1515
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
       - 美国CloudFlare节点4
-      - 美国CloudFlare公司CDN节点(shopify)6
-      - 美国CloudFlare节点7
-      - 广东省深圳市移动10
-      - 美国CloudFlare节点12
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
