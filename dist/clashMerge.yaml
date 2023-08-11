@@ -1,4 +1,4 @@
-# 更新时间 2023-08-11T06:58:32.830Z
+# 更新时间 2023-08-11T07:17:23.447Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1553,36 +1553,51 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 美国加利福尼亚州圣克拉拉+腾讯云
+    server: 513ujsh.xyzsa.top
+    port: 443
+    password: ad13f574-f6b7-427e-bb29-224a07c56d10
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 俄罗斯V2CROSS.COM0
+    name: 美国CloudFlare公司CDN节点(shopify)1
     ws-opts:
-      path: /d/082f26a.fm.apple.com:31859
-    server: 95.174.71.96
-    port: 3331
-    uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
+      path: /aries
+      headers:
+        host: Fr.cloudflare.quest
+    server: Shopify.com
+    port: 2086
+    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国洛杉矶3
+    ws-opts:
+      path: /1c5854ba-1b44-11ee-a146-8213fd3be4b9
+      headers:
+        host: 1c5854ba-1b44-11ee-a146-8213fd3be4b9.bamarambash.monster
+    server: arvancloud.ir-Uc.snappfood.SO.ddns001.net
+    port: 443
+    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
     alterId: 0
     cipher: auto
     network: ws
     tls: true
-  - type: trojan
-    name: 日本+东京Amazon数据中心
-    server: pqawssg001.aiopen.cfd
-    port: 443
-    password: ca2daa1f-484b-49db-b088-f25b6a398d8c
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国加利福尼亚州圣何塞MULTACOM机房4
+    name: 法国OVH数据中心4
     ws-opts:
-      path: /1654431
+      path: /path/252617081903
       headers:
-        host: us2.mybestjj.com
-    server: 45.199.138.192
-    port: 55015
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+        host: www.33268208.xyz
+    server: 54.38.154.130
+    port: 443
+    uuid: 7beb4281-e8e4-4183-b172-29b78391abfd
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1730,9 +1745,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 俄罗斯V2CROSS.COM0
-      - 日本+东京Amazon数据中心
-      - 美国加利福尼亚州圣何塞MULTACOM机房4
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国CloudFlare公司CDN节点(shopify)1
+      - 美国洛杉矶3
+      - 法国OVH数据中心4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1880,9 +1896,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 俄罗斯V2CROSS.COM0
-      - 日本+东京Amazon数据中心
-      - 美国加利福尼亚州圣何塞MULTACOM机房4
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国CloudFlare公司CDN节点(shopify)1
+      - 美国洛杉矶3
+      - 法国OVH数据中心4
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2029,9 +2046,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 俄罗斯V2CROSS.COM0
-      - 日本+东京Amazon数据中心
-      - 美国加利福尼亚州圣何塞MULTACOM机房4
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国CloudFlare公司CDN节点(shopify)1
+      - 美国洛杉矶3
+      - 法国OVH数据中心4
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2210,9 +2228,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 俄罗斯V2CROSS.COM0
-      - 日本+东京Amazon数据中心
-      - 美国加利福尼亚州圣何塞MULTACOM机房4
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国CloudFlare公司CDN节点(shopify)1
+      - 美国洛杉矶3
+      - 法国OVH数据中心4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
