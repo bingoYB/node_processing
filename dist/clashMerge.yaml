@@ -1,4 +1,4 @@
-# 更新时间 2023-08-13T06:56:49.826Z
+# 更新时间 2023-08-13T07:14:06.953Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -893,6 +893,24 @@ proxies:
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)0
+    ws-opts:
+      path: /aries
+      headers:
+        host: Fr.cloudflare.quest
+    server: Shopify.com
+    port: 2086
+    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 广东省佛山市+移动
+    server: 183.232.170.32
+    port: 20005
+    password: YWVzLTEyOC1nY206ZzEyc1FpI3NzIyYx
+    cipher: aes-128-gcm
   - type: trojan
     name: 美国+麻省理工学院
     server: pqawssg1.aiopen.cfd
@@ -901,65 +919,12 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 法国+国际航空电讯集团公司(SITA)
-    server: 57.128.173.6
+    name: 美国加利福尼亚州圣克拉拉+腾讯云
+    server: 513ujsh.xyzsa.top
     port: 443
-    password: 29f2cf65-f0ee-4a08-83f3-df1beb74d55d
+    password: ad13f574-f6b7-427e-bb29-224a07c56d10
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 美国弗吉尼亚州阿什本CloudFlare节点4
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
-    server: 173.245.49.236
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国V2CROSS.COM5
-    server: 108.186.116.166
-    port: 46605
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国加利福尼亚州圣何塞MULTACOM机房6
-    ws-opts:
-      path: /
-    server: 45.199.138.74
-    port: 30917
-    uuid: 6fa560d4-35c5-4968-adfc-812c52878b84
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国V2CROSS.COM7
-    ws-opts:
-      path: /i99LgvSaslbsPLLQQ7j6Z
-      headers:
-        host: de5.irteh.fun
-    server: ns1.v2-vip.fun
-    port: 80
-    uuid: 8abe9496-5e24-4e49-b566-dcf86116017d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 俄罗斯V2CROSS.COM8
-    ws-opts:
-      path: /d/082f26a.fm.apple.com:31859
-    server: 95.174.71.96
-    port: 3331
-    uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1052,13 +1017,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2323
       - github.com/freefq-美国CloudFlare公司CDN节点2626
       - github.com/freefq-美国CloudFlare公司CDN节点2727
+      - 美国CloudFlare公司CDN节点(shopify)0
+      - 广东省佛山市+移动
       - 美国+麻省理工学院
-      - 法国+国际航空电讯集团公司(SITA)
-      - 美国弗吉尼亚州阿什本CloudFlare节点4
-      - 美国V2CROSS.COM5
-      - 美国加利福尼亚州圣何塞MULTACOM机房6
-      - 美国V2CROSS.COM7
-      - 俄罗斯V2CROSS.COM8
+      - 美国加利福尼亚州圣克拉拉+腾讯云
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1151,13 +1113,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2323
       - github.com/freefq-美国CloudFlare公司CDN节点2626
       - github.com/freefq-美国CloudFlare公司CDN节点2727
+      - 美国CloudFlare公司CDN节点(shopify)0
+      - 广东省佛山市+移动
       - 美国+麻省理工学院
-      - 法国+国际航空电讯集团公司(SITA)
-      - 美国弗吉尼亚州阿什本CloudFlare节点4
-      - 美国V2CROSS.COM5
-      - 美国加利福尼亚州圣何塞MULTACOM机房6
-      - 美国V2CROSS.COM7
-      - 俄罗斯V2CROSS.COM8
+      - 美国加利福尼亚州圣克拉拉+腾讯云
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1249,13 +1208,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2323
       - github.com/freefq-美国CloudFlare公司CDN节点2626
       - github.com/freefq-美国CloudFlare公司CDN节点2727
+      - 美国CloudFlare公司CDN节点(shopify)0
+      - 广东省佛山市+移动
       - 美国+麻省理工学院
-      - 法国+国际航空电讯集团公司(SITA)
-      - 美国弗吉尼亚州阿什本CloudFlare节点4
-      - 美国V2CROSS.COM5
-      - 美国加利福尼亚州圣何塞MULTACOM机房6
-      - 美国V2CROSS.COM7
-      - 俄罗斯V2CROSS.COM8
+      - 美国加利福尼亚州圣克拉拉+腾讯云
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1379,13 +1335,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2323
       - github.com/freefq-美国CloudFlare公司CDN节点2626
       - github.com/freefq-美国CloudFlare公司CDN节点2727
+      - 美国CloudFlare公司CDN节点(shopify)0
+      - 广东省佛山市+移动
       - 美国+麻省理工学院
-      - 法国+国际航空电讯集团公司(SITA)
-      - 美国弗吉尼亚州阿什本CloudFlare节点4
-      - 美国V2CROSS.COM5
-      - 美国加利福尼亚州圣何塞MULTACOM机房6
-      - 美国V2CROSS.COM7
-      - 俄罗斯V2CROSS.COM8
+      - 美国加利福尼亚州圣克拉拉+腾讯云
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
