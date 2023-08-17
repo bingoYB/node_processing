@@ -1,4 +1,4 @@
-# 更新时间 2023-08-17T12:53:56.007Z
+# 更新时间 2023-08-17T13:13:45.056Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1253,30 +1253,62 @@ proxies:
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphYThkYmEwNC1iZjM4LTQyNTUtYTNmNC0xYWEzZjFjMTBjYjY
     cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点6
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /zh-cn
+      headers:
+        host: sg3.sanfencdn2.com
+    server: 172.67.125.137
+    port: 2052
+    uuid: 78d6fa88-0d27-414f-8f51-1e16186d588f
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 印度V2CROSS.COM1
+    ws-opts:
+      path: /blue
+      headers:
+        host: tui.vtcss.top
+    server: 103.160.204.48
+    port: 2082
+    uuid: 0ddf0cc4-1487-4ff1-a6a7-d9ab93040606
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 韩国首尔Amazon数据中心2
+    ws-opts:
+      path: /
+      headers:
+        host: tls.0000000018a.node-for-bigairport.win
+    server: tls.0000000018a.node-for-bigairport.win
+    port: 443
+    uuid: d2082fef-f70c-44eb-bd89-3baa6b41be0d
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点4
     ws-opts:
       path: /shirker
       headers:
         host: dp4.ilovescp.com
-    server: 172.64.87.129
+    server: 172.64.203.172
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点7
-    ws-opts:
-      path: /d84ee332-1284-11ee-a5c8-8213fd3be4b9
-      headers:
-        host: d84ee332-1284-11ee-a5c8-8213fd3be4b9.bamarambash.monster
-    server: 104.17.137.141
-    port: 443
-    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
+    name: 美国加利福尼亚州洛杉矶Sharktech数据中心7
+    server: 64.32.20.103
+    port: 40039
+    uuid: c1bad9a6-1482-4941-a0c4-e85f3cbbcb5a
     alterId: 0
     cipher: auto
-    network: ws
-    tls: true
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1389,8 +1421,11 @@ proxy-groups:
       - github.com/freefq-美国加州1515
       - github.com/freefq-美国CloudFlare节点1717
       - github.com/freefq-江苏省徐州市移动21
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点0
+      - 印度V2CROSS.COM1
+      - 韩国首尔Amazon数据中心2
+      - 美国CloudFlare节点4
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1503,8 +1538,11 @@ proxy-groups:
       - github.com/freefq-美国加州1515
       - github.com/freefq-美国CloudFlare节点1717
       - github.com/freefq-江苏省徐州市移动21
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点0
+      - 印度V2CROSS.COM1
+      - 韩国首尔Amazon数据中心2
+      - 美国CloudFlare节点4
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心7
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1616,8 +1654,11 @@ proxy-groups:
       - github.com/freefq-美国加州1515
       - github.com/freefq-美国CloudFlare节点1717
       - github.com/freefq-江苏省徐州市移动21
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点0
+      - 印度V2CROSS.COM1
+      - 韩国首尔Amazon数据中心2
+      - 美国CloudFlare节点4
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心7
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1761,8 +1802,11 @@ proxy-groups:
       - github.com/freefq-美国加州1515
       - github.com/freefq-美国CloudFlare节点1717
       - github.com/freefq-江苏省徐州市移动21
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点0
+      - 印度V2CROSS.COM1
+      - 韩国首尔Amazon数据中心2
+      - 美国CloudFlare节点4
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
