@@ -1,4 +1,4 @@
-# 更新时间 2023-08-20T18:55:54.218Z
+# 更新时间 2023-08-20T19:13:07.712Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -2311,19 +2311,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 美国V2CROSS.COM0
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v04.ssrsub.com
-    server: ns1.v2-vip.fun
-    port: 80
-    uuid: 72e8030a-96c2-4bdb-acfb-5bc02248f9f0
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点2
+    name: 美国CloudFlare节点0
     ws-opts:
       path: /shirker
       headers:
@@ -2334,6 +2322,19 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)3
+    ws-opts:
+      path: /dongtaiwang.com
+      headers:
+        host: d.freeh1.xyz
+    server: 23.227.38.81
+    port: 443
+    uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -2542,8 +2543,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国加州2525
-      - 美国V2CROSS.COM0
-      - 美国CloudFlare节点2
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -2752,8 +2753,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国加州2525
-      - 美国V2CROSS.COM0
-      - 美国CloudFlare节点2
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)3
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2961,8 +2962,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国加州2525
-      - 美国V2CROSS.COM0
-      - 美国CloudFlare节点2
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)3
   - name: 📲 电报信息
     type: select
     proxies:
@@ -3202,8 +3203,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2323
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国加州2525
-      - 美国V2CROSS.COM0
-      - 美国CloudFlare节点2
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
