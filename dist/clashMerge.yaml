@@ -1,4 +1,4 @@
-# 更新时间 2023-08-20T06:56:51.160Z
+# 更新时间 2023-08-20T07:14:43.063Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1490,7 +1490,7 @@ proxies:
       mode: tls
       host: 953e517:89692
     udp: true
-  - name: CN_JP_speednode_0172
+  - name: JP_JP_speednode_0172
     server: 1608545.b4.gladns.com
     port: 2377
     type: ss
@@ -2856,7 +2856,19 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 美国CloudFlare公司CDN节点(shopify)1
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp4.ilovescp.com
+    server: 172.64.202.22
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)7
     ws-opts:
       path: /dongtaiwang.com
       headers:
@@ -2869,61 +2881,17 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 美国CloudFlare节点5
+    name: 美国CloudFlare节点10
     ws-opts:
       path: /shirker
       headers:
-        host: nl2.sharecentrepro.com
-    server: 172.67.247.81
+        host: lv3.sharecentrepro.org
+    server: 172.64.103.121
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 美国CloudFlare节点6
-    ws-opts:
-      path: /TG:@hkaa0
-      headers:
-        host: 15.wyhkaa0.gq
-    server: 15.wyhkaa0.gq
-    port: 2095
-    uuid: d54527c2-27d6-48ab-87b1-c7e22ffd7aac
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: 亚太地区+V2CROSS.COM
-    server: hkbnx3.uueai.com
-    port: 39002
-    password: 1e7829d2-ae30-3533-a569-bc20d980c312
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点13
-    ws-opts:
-      path: /shirker
-      headers:
-        host: dp3.scproxy.top
-    server: 162.159.240.97
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点15
-    ws-opts:
-      path: /d84ee332-1284-11ee-a5c8-8213fd3be4b9
-      headers:
-        host: d84ee332-1284-11ee-a5c8-8213fd3be4b9.bamarambash.monster
-    server: 104.17.137.141
-    port: 443
-    uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -3085,7 +3053,7 @@ proxy-groups:
       - US_HK_speednode_0169
       - HK_speednode_0170
       - HK_speednode_0171
-      - CN_JP_speednode_0172
+      - JP_JP_speednode_0172
       - JP_JP_speednode_0178
       - JP_JP_speednode_0183
       - JP_JP_speednode_0219
@@ -3191,12 +3159,9 @@ proxy-groups:
       - github.com/freefq-美国加州2727
       - github.com/freefq-美国CloudFlare节点2828
       - github.com/freefq-俄罗斯2929
-      - 美国CloudFlare公司CDN节点(shopify)1
-      - 美国CloudFlare节点5
       - 美国CloudFlare节点6
-      - 亚太地区+V2CROSS.COM
-      - 美国CloudFlare节点13
-      - 美国CloudFlare节点15
+      - 美国CloudFlare公司CDN节点(shopify)7
+      - 美国CloudFlare节点10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -3358,7 +3323,7 @@ proxy-groups:
       - US_HK_speednode_0169
       - HK_speednode_0170
       - HK_speednode_0171
-      - CN_JP_speednode_0172
+      - JP_JP_speednode_0172
       - JP_JP_speednode_0178
       - JP_JP_speednode_0183
       - JP_JP_speednode_0219
@@ -3464,12 +3429,9 @@ proxy-groups:
       - github.com/freefq-美国加州2727
       - github.com/freefq-美国CloudFlare节点2828
       - github.com/freefq-俄罗斯2929
-      - 美国CloudFlare公司CDN节点(shopify)1
-      - 美国CloudFlare节点5
       - 美国CloudFlare节点6
-      - 亚太地区+V2CROSS.COM
-      - 美国CloudFlare节点13
-      - 美国CloudFlare节点15
+      - 美国CloudFlare公司CDN节点(shopify)7
+      - 美国CloudFlare节点10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -3630,7 +3592,7 @@ proxy-groups:
       - US_HK_speednode_0169
       - HK_speednode_0170
       - HK_speednode_0171
-      - CN_JP_speednode_0172
+      - JP_JP_speednode_0172
       - JP_JP_speednode_0178
       - JP_JP_speednode_0183
       - JP_JP_speednode_0219
@@ -3736,12 +3698,9 @@ proxy-groups:
       - github.com/freefq-美国加州2727
       - github.com/freefq-美国CloudFlare节点2828
       - github.com/freefq-俄罗斯2929
-      - 美国CloudFlare公司CDN节点(shopify)1
-      - 美国CloudFlare节点5
       - 美国CloudFlare节点6
-      - 亚太地区+V2CROSS.COM
-      - 美国CloudFlare节点13
-      - 美国CloudFlare节点15
+      - 美国CloudFlare公司CDN节点(shopify)7
+      - 美国CloudFlare节点10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -3934,7 +3893,7 @@ proxy-groups:
       - US_HK_speednode_0169
       - HK_speednode_0170
       - HK_speednode_0171
-      - CN_JP_speednode_0172
+      - JP_JP_speednode_0172
       - JP_JP_speednode_0178
       - JP_JP_speednode_0183
       - JP_JP_speednode_0219
@@ -4040,12 +3999,9 @@ proxy-groups:
       - github.com/freefq-美国加州2727
       - github.com/freefq-美国CloudFlare节点2828
       - github.com/freefq-俄罗斯2929
-      - 美国CloudFlare公司CDN节点(shopify)1
-      - 美国CloudFlare节点5
       - 美国CloudFlare节点6
-      - 亚太地区+V2CROSS.COM
-      - 美国CloudFlare节点13
-      - 美国CloudFlare节点15
+      - 美国CloudFlare公司CDN节点(shopify)7
+      - 美国CloudFlare节点10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
