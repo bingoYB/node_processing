@@ -1,4 +1,4 @@
-# 更新时间 2023-08-23T12:56:03.129Z
+# 更新时间 2023-08-23T13:17:48.461Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -72,7 +72,7 @@ proxies:
       mode: tls
       host: (TG@WangCai_1)12a00c4:82897
     udp: true
-  - name: CN_CN_speednode_0062
+  - name: JP_CN_speednode_0062
     server: 1608545.b2.gladns.com
     port: 2377
     type: ss
@@ -105,7 +105,7 @@ proxies:
       mode: tls
       host: (TG@WangCai_1)c563b0d:65870
     udp: true
-  - name: CN_CN_speednode_0081
+  - name: TW_CN_speednode_0081
     server: 605ea34.b6.gladns.com
     port: 2377
     type: ss
@@ -160,7 +160,7 @@ proxies:
       mode: tls
       host: (TG@WangCai_1)082f26a:31859
     udp: true
-  - name: JP_CN_speednode_0088
+  - name: CN_CN_speednode_0088
     server: d02576d.b4.gladns.com
     port: 2377
     type: ss
@@ -1507,43 +1507,57 @@ proxies:
     cipher: auto
     network: ws
     tls: true
+  - type: ss
+    name: 安徽省合肥市+移动
+    server: ah-cmi-1000m.ikun666.club
+    port: 64847
+    password: YWVzLTI1Ni1nY206YmFkNWZiYTUtYTdiYy00NzA5LTg4MmItZTE1ZWRhZDE2Y2Vm
+    cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点1
-    ws-opts:
-      path: /
-      headers:
-        host: shs.shabijichang.com
-    server: shs.shabijichang.com
-    port: 80
-    uuid: df7abf48-196d-4dbd-b981-4d0c4f4bb446
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare公司CDN节点(shopify)2
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        host: 2.freek1.xyz
-    server: 23.227.39.110
-    port: 443
-    uuid: 25a9f3b9-1e6d-40bd-968b-e0818c1b196f
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点4
+    name: 美国CloudFlare节点2
     ws-opts:
       path: /shirker
       headers:
-        host: nl2.sharecentrepro.com
-    server: 172.67.254.29
+        host: dp4.ilovescp.com
+    server: 172.64.201.138
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 英国V2CROSS.COM4
+    ws-opts:
+      path: /
+    server: 171.22.116.2
+    port: 41665
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)10
+    ws-opts:
+      path: /dongtaiwang.com
+      headers:
+        host: d.freeh1.xyz
+    server: 23.227.38.81
+    port: 443
+    uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 南非V2CROSS.COM13
+    ws-opts:
+      path: /
+    server: 156.225.67.151
+    port: 46412
+    uuid: a7fa8f14-4fb6-4280-9005-d6bbe99c5da9
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1556,15 +1570,15 @@ proxy-groups:
       - CN_CN_speednode_0021
       - CN_CN_speednode_0039
       - CN_speednode_0059
-      - CN_CN_speednode_0062
+      - JP_CN_speednode_0062
       - CN_CN_speednode_0074
       - CN_CN_speednode_0077
-      - CN_CN_speednode_0081
+      - TW_CN_speednode_0081
       - CN_CN_speednode_0082
       - CN_CN_speednode_0085
       - CN_CN_speednode_0086
       - CN_CN_speednode_0087
-      - JP_CN_speednode_0088
+      - CN_CN_speednode_0088
       - CN_CN_speednode_0089
       - CN_CN_speednode_0091
       - CN_CN_speednode_0094
@@ -1695,9 +1709,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2727
       - github.com/freefq-美国CloudFlare节点2929
       - github.com/freefq-美国CloudFlare节点3030
-      - 美国CloudFlare节点1
-      - 美国CloudFlare公司CDN节点(shopify)2
-      - 美国CloudFlare节点4
+      - 安徽省合肥市+移动
+      - 美国CloudFlare节点2
+      - 英国V2CROSS.COM4
+      - 美国CloudFlare公司CDN节点(shopify)10
+      - 南非V2CROSS.COM13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1710,15 +1726,15 @@ proxy-groups:
       - CN_CN_speednode_0021
       - CN_CN_speednode_0039
       - CN_speednode_0059
-      - CN_CN_speednode_0062
+      - JP_CN_speednode_0062
       - CN_CN_speednode_0074
       - CN_CN_speednode_0077
-      - CN_CN_speednode_0081
+      - TW_CN_speednode_0081
       - CN_CN_speednode_0082
       - CN_CN_speednode_0085
       - CN_CN_speednode_0086
       - CN_CN_speednode_0087
-      - JP_CN_speednode_0088
+      - CN_CN_speednode_0088
       - CN_CN_speednode_0089
       - CN_CN_speednode_0091
       - CN_CN_speednode_0094
@@ -1849,9 +1865,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2727
       - github.com/freefq-美国CloudFlare节点2929
       - github.com/freefq-美国CloudFlare节点3030
-      - 美国CloudFlare节点1
-      - 美国CloudFlare公司CDN节点(shopify)2
-      - 美国CloudFlare节点4
+      - 安徽省合肥市+移动
+      - 美国CloudFlare节点2
+      - 英国V2CROSS.COM4
+      - 美国CloudFlare公司CDN节点(shopify)10
+      - 南非V2CROSS.COM13
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1863,15 +1881,15 @@ proxy-groups:
       - CN_CN_speednode_0021
       - CN_CN_speednode_0039
       - CN_speednode_0059
-      - CN_CN_speednode_0062
+      - JP_CN_speednode_0062
       - CN_CN_speednode_0074
       - CN_CN_speednode_0077
-      - CN_CN_speednode_0081
+      - TW_CN_speednode_0081
       - CN_CN_speednode_0082
       - CN_CN_speednode_0085
       - CN_CN_speednode_0086
       - CN_CN_speednode_0087
-      - JP_CN_speednode_0088
+      - CN_CN_speednode_0088
       - CN_CN_speednode_0089
       - CN_CN_speednode_0091
       - CN_CN_speednode_0094
@@ -2002,9 +2020,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2727
       - github.com/freefq-美国CloudFlare节点2929
       - github.com/freefq-美国CloudFlare节点3030
-      - 美国CloudFlare节点1
-      - 美国CloudFlare公司CDN节点(shopify)2
-      - 美国CloudFlare节点4
+      - 安徽省合肥市+移动
+      - 美国CloudFlare节点2
+      - 英国V2CROSS.COM4
+      - 美国CloudFlare公司CDN节点(shopify)10
+      - 南非V2CROSS.COM13
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2048,15 +2068,15 @@ proxy-groups:
       - CN_CN_speednode_0021
       - CN_CN_speednode_0039
       - CN_speednode_0059
-      - CN_CN_speednode_0062
+      - JP_CN_speednode_0062
       - CN_CN_speednode_0074
       - CN_CN_speednode_0077
-      - CN_CN_speednode_0081
+      - TW_CN_speednode_0081
       - CN_CN_speednode_0082
       - CN_CN_speednode_0085
       - CN_CN_speednode_0086
       - CN_CN_speednode_0087
-      - JP_CN_speednode_0088
+      - CN_CN_speednode_0088
       - CN_CN_speednode_0089
       - CN_CN_speednode_0091
       - CN_CN_speednode_0094
@@ -2187,9 +2207,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2727
       - github.com/freefq-美国CloudFlare节点2929
       - github.com/freefq-美国CloudFlare节点3030
-      - 美国CloudFlare节点1
-      - 美国CloudFlare公司CDN节点(shopify)2
-      - 美国CloudFlare节点4
+      - 安徽省合肥市+移动
+      - 美国CloudFlare节点2
+      - 英国V2CROSS.COM4
+      - 美国CloudFlare公司CDN节点(shopify)10
+      - 南非V2CROSS.COM13
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
