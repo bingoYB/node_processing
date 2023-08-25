@@ -1,4 +1,4 @@
-# 更新时间 2023-08-25T18:58:22.904Z
+# 更新时间 2023-08-25T19:15:31.218Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1277,25 +1277,6 @@ proxies:
     ws-opts:
       path: /shirker
       headers:
-        host: ca.ilovescp.com
-    server: 172.67.196.139
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: 香港+Amazon数据中心
-    server: 18.163.249.175
-    port: 443
-    password: ZFYOpKqD8uEClpZ2ya83cyCDalwSOYz3F3eCxnBD4eSXNSR5R0aAATj7I3x69g
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点3
-    ws-opts:
-      path: /shirker
-      headers:
         host: nl2.sharecentrepro.com
     server: 172.67.142.186
     port: 80
@@ -1303,6 +1284,65 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /shirker
+      headers:
+        host: nl.sharecentrepro.com
+    server: 162.159.253.39
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)4
+    ws-opts:
+      path: /dongtaiwang.com
+      headers:
+        host: d.freeh1.xyz
+    server: dongtaiwang3.com
+    port: 443
+    uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+    server: 162.159.240.97
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点7
+    ws-opts:
+      path: /
+      headers:
+        host: wxxjp.e5outllok.me
+    server: wxxjp.e5outllok.me
+    port: 80
+    uuid: f31c0b34-977b-4c2b-acfa-becfdfc1f267
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国加利福尼亚州洛杉矶Sharktech数据中心8
+    ws-opts:
+      path: /qwer
+    server: 64.32.21.241
+    port: 44313
+    uuid: 57f93e92-ebb9-4f16-9bdc-8225d2010995
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1411,8 +1451,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare公司CDN节点1515
       - 美国CloudFlare节点0
-      - 香港+Amazon数据中心
-      - 美国CloudFlare节点3
+      - 美国CloudFlare节点2
+      - 美国CloudFlare公司CDN节点(shopify)4
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点7
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1521,8 +1564,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare公司CDN节点1515
       - 美国CloudFlare节点0
-      - 香港+Amazon数据中心
-      - 美国CloudFlare节点3
+      - 美国CloudFlare节点2
+      - 美国CloudFlare公司CDN节点(shopify)4
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点7
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心8
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1630,8 +1676,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare公司CDN节点1515
       - 美国CloudFlare节点0
-      - 香港+Amazon数据中心
-      - 美国CloudFlare节点3
+      - 美国CloudFlare节点2
+      - 美国CloudFlare公司CDN节点(shopify)4
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点7
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心8
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1771,8 +1820,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare公司CDN节点1515
       - 美国CloudFlare节点0
-      - 香港+Amazon数据中心
-      - 美国CloudFlare节点3
+      - 美国CloudFlare节点2
+      - 美国CloudFlare公司CDN节点(shopify)4
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点7
+      - 美国加利福尼亚州洛杉矶Sharktech数据中心8
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
