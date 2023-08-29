@@ -1,4 +1,4 @@
-# 更新时间 2023-08-29T18:59:06.813Z
+# 更新时间 2023-08-29T19:15:54.536Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1209,89 +1209,78 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+    server: 172.67.49.8
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
     name: 美国CloudFlare节点1
     ws-opts:
       path: /shirker
       headers:
         host: dp3.scproxy.top
-    server: 172.67.134.209
+    server: 162.159.247.47
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点5
+    name: 美国CloudFlare节点2
     ws-opts:
       path: /shirker
       headers:
-        host: lv2.scproxy.top
-    server: 172.67.12.199
+        host: dp3.scproxy.top
+    server: 172.67.183.40
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点6
-    ws-opts:
-      path: /TG:@hkaa0
-      headers:
-        host: 7.wyhkaa0.gq
-    server: 7.wyhkaa0.gq
-    port: 2095
-    uuid: 2f334fd9-98f6-4995-ba45-bb9a8a28eea2
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点11
+    name: 澳大利亚悉尼OVH3
     ws-opts:
       path: /
       headers:
-        host: wxxjp.e5outllok.me
-    server: wxxjp.e5outllok.me
-    port: 80
-    uuid: f31c0b34-977b-4c2b-acfa-becfdfc1f267
+        host: 🇦🇺AU澳大利亚(youtube阿伟科技)
+    server: 139.99.245.164
+    port: 49921
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
-    network: ws
+    network: auto
   - type: vmess
-    name: 美国CloudFlare节点12
+    name: 美国CloudFlare节点7
     ws-opts:
       path: /shirker
       headers:
-        host: ca.ilovescp.com
-    server: 172.67.59.39
+        host: dp4.scproxy.top
+    server: 172.64.169.199
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点13
+    name: 美国CloudFlare公司CDN节点(shopify)13
     ws-opts:
-      path: /shirker
+      path: /dongtaiwang.com
       headers:
-        host: dp4.ilovescp.com
-    server: 172.64.193.37
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+        host: d.freeh1.xyz
+    server: 23.227.39.82
+    port: 443
+    uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 美国CloudFlare节点14
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
-    server: 172.67.120.174
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1395,13 +1384,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare节点2020
+      - 美国CloudFlare节点0
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点5
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点11
-      - 美国CloudFlare节点12
-      - 美国CloudFlare节点13
-      - 美国CloudFlare节点14
+      - 美国CloudFlare节点2
+      - 澳大利亚悉尼OVH3
+      - 美国CloudFlare节点7
+      - 美国CloudFlare公司CDN节点(shopify)13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1505,13 +1493,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare节点2020
+      - 美国CloudFlare节点0
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点5
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点11
-      - 美国CloudFlare节点12
-      - 美国CloudFlare节点13
-      - 美国CloudFlare节点14
+      - 美国CloudFlare节点2
+      - 澳大利亚悉尼OVH3
+      - 美国CloudFlare节点7
+      - 美国CloudFlare公司CDN节点(shopify)13
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1614,13 +1601,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare节点2020
+      - 美国CloudFlare节点0
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点5
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点11
-      - 美国CloudFlare节点12
-      - 美国CloudFlare节点13
-      - 美国CloudFlare节点14
+      - 美国CloudFlare节点2
+      - 澳大利亚悉尼OVH3
+      - 美国CloudFlare节点7
+      - 美国CloudFlare公司CDN节点(shopify)13
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1755,13 +1741,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare节点2020
+      - 美国CloudFlare节点0
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点5
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点11
-      - 美国CloudFlare节点12
-      - 美国CloudFlare节点13
-      - 美国CloudFlare节点14
+      - 美国CloudFlare节点2
+      - 澳大利亚悉尼OVH3
+      - 美国CloudFlare节点7
+      - 美国CloudFlare公司CDN节点(shopify)13
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
