@@ -1,4 +1,4 @@
-# 更新时间 2023-08-31T12:56:43.238Z
+# 更新时间 2023-08-31T13:20:29.398Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1557,12 +1557,24 @@ proxies:
   - type: vmess
     name: 美国CloudFlare节点0
     ws-opts:
-      path: /api01
+      path: /shirker
       headers:
-        host: schereswed.softwarenews.store
-    server: 172.64.153.211
+        host: dp4.ilovescp.com
+    server: 172.64.87.129
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /
+      headers:
+        host: 6.620720.xyz
+    server: 6.620720.xyz
     port: 443
-    uuid: 6e751712-9569-5187-86ea-8f585ad99105
+    uuid: ad0a2e96-189b-4ee2-86ed-1fb4052449e2
     alterId: 0
     cipher: auto
     network: ws
@@ -1572,40 +1584,23 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: zjg.shabijichang.com
-    server: fd.shabijichang.com
-    port: 80
-    uuid: df7abf48-196d-4dbd-b981-4d0c4f4bb446
+        host: us-1.acyun.tk
+    server: zfc.windowsupdate1.com
+    port: 443
+    uuid: 6abfe33a-1894-4f62-8879-83b71a35e5fd
     alterId: 0
     cipher: auto
     network: ws
-  - type: ss
-    name: 俄罗斯+V2CROSS.COM
-    server: 212.113.106.243
-    port: 12949
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpQMnp4WFBld2xWM0JsZnFxWWlTdGh2dExj
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 美国CloudFlare节点6
-    ws-opts:
-      path: /shirker
-      headers:
-        host: dp4.ilovescp.com
-    server: 162.159.194.228
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
+    tls: true
   - type: vmess
     name: 美国CloudFlare节点7
     ws-opts:
-      path: /zh-cn
+      path: /dongtaiwang.com
       headers:
-        host: us4.sanfencdn1.com
-    server: cfcdn2.sanfencdn.net
+        host: d.freeh1.xyz
+    server: singapore.com
     port: 443
-    uuid: 48843232-58e7-429f-90fb-3809074cc0bb
+    uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
     alterId: 0
     cipher: auto
     network: ws
@@ -1615,20 +1610,28 @@ proxies:
     ws-opts:
       path: /shirker
       headers:
-        host: dp3.scproxy.top
-    server: 172.64.168.28
+        host: dp4.ilovescp.com
+    server: 172.67.27.227
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点9
+    name: 香港电讯盈科有限公司9
+    server: kagoya.hkss.online
+    port: 443
+    uuid: 4664e760-f5f3-3cc2-8bb3-04f85aa7febb
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点10
     ws-opts:
       path: /shirker
       headers:
-        host: lv2.scproxy.top
-    server: cf-lt.sharecentre.online
+        host: ca.ilovescp.com
+    server: 172.67.92.119
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
@@ -1764,12 +1767,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2020
       - github.com/freefq-美国CloudFlare节点2121
       - 美国CloudFlare节点0
+      - 美国CloudFlare节点2
       - 美国CloudFlare节点4
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点6
       - 美国CloudFlare节点7
       - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
+      - 香港电讯盈科有限公司9
+      - 美国CloudFlare节点10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1900,12 +1903,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2020
       - github.com/freefq-美国CloudFlare节点2121
       - 美国CloudFlare节点0
+      - 美国CloudFlare节点2
       - 美国CloudFlare节点4
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点6
       - 美国CloudFlare节点7
       - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
+      - 香港电讯盈科有限公司9
+      - 美国CloudFlare节点10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2035,12 +2038,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2020
       - github.com/freefq-美国CloudFlare节点2121
       - 美国CloudFlare节点0
+      - 美国CloudFlare节点2
       - 美国CloudFlare节点4
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点6
       - 美国CloudFlare节点7
       - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
+      - 香港电讯盈科有限公司9
+      - 美国CloudFlare节点10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2202,12 +2205,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2020
       - github.com/freefq-美国CloudFlare节点2121
       - 美国CloudFlare节点0
+      - 美国CloudFlare节点2
       - 美国CloudFlare节点4
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点6
       - 美国CloudFlare节点7
       - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
+      - 香港电讯盈科有限公司9
+      - 美国CloudFlare节点10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
