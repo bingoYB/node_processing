@@ -1,4 +1,4 @@
-# 更新时间 2023-09-02T06:57:08.694Z
+# 更新时间 2023-09-02T07:15:18.846Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1372,15 +1372,8 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 日本+东京都Amazon数据中心
-    server: jp01.171713.xyz
-    port: 443
-    password: 432beda1-6577-494b-b811-f36021350f3b
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点2
+    name: 美国CloudFlare节点0
     ws-opts:
       path: /shirker
       headers:
@@ -1392,35 +1385,43 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 澳大利亚悉尼OVH4
-    server: 139.99.245.164
-    port: 49921
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 广东省深圳市移动5
-    server: 183.232.249.40
-    port: 54004
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 法国国际航空电讯集团公司(SITA)6
+    name: 美国CloudFlare节点5
     ws-opts:
-      path: /
+      path: /shirker
       headers:
-        host: uk2-vmess.greenssh.xyz
-    server: uk2-vmess.greenssh.xyz
+        host: dp3.scproxy.top
+    server: 172.67.57.119
     port: 80
-    uuid: 2076df30-81e3-4312-840b-3e1462c0b85e
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
     name: 美国CloudFlare节点7
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+    server: 172.64.105.187
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点8
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+    server: 172.67.10.151
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点10
     ws-opts:
       path: /shirker
       headers:
@@ -1432,55 +1433,17 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点8
+    name: 美国CloudFlare节点12
     ws-opts:
       path: /shirker
       headers:
         host: dp3.scproxy.top
-    server: 141.101.115.65
+    server: 162.159.240.97
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 香港+Amazon数据中心
-    server: 18.163.249.175
-    port: 443
-    password: ZFYOpKqD8uEClpZ2ya83cyCDalwSOYz3F3eCxnBD4eSXNSR5R0aAATj7I3x69g
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点10
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
-    server: 172.67.92.119
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点11
-    ws-opts:
-      path: /shirker
-      headers:
-        host: dp3.scproxy.top
-    server: 172.64.168.28
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: 台湾省+中华电信(HiNet)数据中心
-    server: gzdx0.171713.xyz
-    port: 14515
-    password: 432beda1-6577-494b-b811-f36021350f3b
-    udp: true
-    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1592,17 +1555,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2626
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点2828
-      - 日本+东京都Amazon数据中心
-      - 美国CloudFlare节点2
-      - 澳大利亚悉尼OVH4
-      - 广东省深圳市移动5
-      - 法国国际航空电讯集团公司(SITA)6
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
       - 美国CloudFlare节点7
       - 美国CloudFlare节点8
-      - 香港+Amazon数据中心
       - 美国CloudFlare节点10
-      - 美国CloudFlare节点11
-      - 台湾省+中华电信(HiNet)数据中心
+      - 美国CloudFlare节点12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1714,17 +1672,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2626
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点2828
-      - 日本+东京都Amazon数据中心
-      - 美国CloudFlare节点2
-      - 澳大利亚悉尼OVH4
-      - 广东省深圳市移动5
-      - 法国国际航空电讯集团公司(SITA)6
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
       - 美国CloudFlare节点7
       - 美国CloudFlare节点8
-      - 香港+Amazon数据中心
       - 美国CloudFlare节点10
-      - 美国CloudFlare节点11
-      - 台湾省+中华电信(HiNet)数据中心
+      - 美国CloudFlare节点12
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1835,17 +1788,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2626
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点2828
-      - 日本+东京都Amazon数据中心
-      - 美国CloudFlare节点2
-      - 澳大利亚悉尼OVH4
-      - 广东省深圳市移动5
-      - 法国国际航空电讯集团公司(SITA)6
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
       - 美国CloudFlare节点7
       - 美国CloudFlare节点8
-      - 香港+Amazon数据中心
       - 美国CloudFlare节点10
-      - 美国CloudFlare节点11
-      - 台湾省+中华电信(HiNet)数据中心
+      - 美国CloudFlare节点12
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1988,17 +1936,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2626
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点2828
-      - 日本+东京都Amazon数据中心
-      - 美国CloudFlare节点2
-      - 澳大利亚悉尼OVH4
-      - 广东省深圳市移动5
-      - 法国国际航空电讯集团公司(SITA)6
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
       - 美国CloudFlare节点7
       - 美国CloudFlare节点8
-      - 香港+Amazon数据中心
       - 美国CloudFlare节点10
-      - 美国CloudFlare节点11
-      - 台湾省+中华电信(HiNet)数据中心
+      - 美国CloudFlare节点12
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
