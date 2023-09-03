@@ -1,4 +1,4 @@
-# 更新时间 2023-09-03T18:56:45.414Z
+# 更新时间 2023-09-03T19:13:03.745Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -219,7 +219,7 @@ proxies:
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
     udp: true
-  - name: NU_speednode_0023
+  - name: GB_NU_speednode_0023
     server: btbu996.icu
     port: 443
     type: vmess
@@ -1128,77 +1128,85 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 上海市联通0
+    name: 美国V2CROSS.COM1
+    ws-opts:
+      path: /
+      headers:
+        host: us-1.acyun.tk
+    server: 104.31.16.196
+    port: 443
+    uuid: 6abfe33a-1894-4f62-8879-83b71a35e5fd
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 湖北省移动(全省通用)2
+    ws-opts:
+      path: /
+    server: 111.47.212.48
+    port: 46792
+    uuid: f11aa310-006b-3db4-910d-3f7217fbfa73
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 上海市联通3
     ws-opts:
       path: /
       headers:
         host: fusion.mlinuu.top
     server: fusion.mlinuu.top
-    port: 3504
+    port: 10008
     uuid: ce6c3ee0-e0bd-39d2-8b49-97c6add325c6
     alterId: 0
     cipher: auto
     network: auto
   - type: vmess
-    name: 美国CloudFlare节点1
-    ws-opts:
-      path: /
-      headers:
-        host: xby.daozhang.link
-    server: 172.64.172.9
-    port: 80
-    uuid: 59053634-8362-4312-9fcb-f85757cfe02a
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点2
+    name: 美国CloudFlare节点5
     ws-opts:
       path: /shirker
       headers:
-        host: dp4.ilovescp.com
-    server: 162.159.194.228
+        host: dp3.scproxy.top
+    server: 172.67.102.115
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点3
-    ws-opts:
-      path: /shirker
-      headers:
-        host: ca.ilovescp.com
-    server: 172.67.10.151
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点10
-    ws-opts:
-      path: /shirker
-      headers:
-        host: dp4.ilovescp.com
-    server: 172.64.132.22
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 广东省移动11
-    ws-opts:
-      path: /
-      headers:
-        host: campus.mlinuu.top
-    server: campus.mlinuu.top
-    port: 10103
-    uuid: ce6c3ee0-e0bd-39d2-8b49-97c6add325c6
+    name: 广东省深圳市移动8
+    server: 183.232.249.40
+    port: 54004
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: 美国CloudFlare节点9
+    ws-opts:
+      path: /nishikata
+      headers:
+        host: us2.icu2rip.eu.org
+    server: stock.hostmonit.com
+    port: 443
+    uuid: cd7f6a89-e86a-47ae-87d3-0277d205286f
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点11
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp4.ilovescp.com
+    server: 172.64.203.172
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1227,7 +1235,7 @@ proxy-groups:
       - US_KR_speednode_0020
       - US_NL_speednode_0021
       - NO_NO_speednode_0022
-      - NU_speednode_0023
+      - GB_NU_speednode_0023
       - NU_speednode_0024
       - NU_speednode_0025
       - US_SE_speednode_0026
@@ -1293,12 +1301,13 @@ proxy-groups:
       - github.com/freefq-广东省移动1616
       - github.com/freefq-英国伦敦CloudFlare节点1717
       - github.com/freefq-美国CloudFlare节点1919
-      - 上海市联通0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点10
-      - 广东省移动11
+      - 美国V2CROSS.COM1
+      - 湖北省移动(全省通用)2
+      - 上海市联通3
+      - 美国CloudFlare节点5
+      - 广东省深圳市移动8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1327,7 +1336,7 @@ proxy-groups:
       - US_KR_speednode_0020
       - US_NL_speednode_0021
       - NO_NO_speednode_0022
-      - NU_speednode_0023
+      - GB_NU_speednode_0023
       - NU_speednode_0024
       - NU_speednode_0025
       - US_SE_speednode_0026
@@ -1393,12 +1402,13 @@ proxy-groups:
       - github.com/freefq-广东省移动1616
       - github.com/freefq-英国伦敦CloudFlare节点1717
       - github.com/freefq-美国CloudFlare节点1919
-      - 上海市联通0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点10
-      - 广东省移动11
+      - 美国V2CROSS.COM1
+      - 湖北省移动(全省通用)2
+      - 上海市联通3
+      - 美国CloudFlare节点5
+      - 广东省深圳市移动8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1426,7 +1436,7 @@ proxy-groups:
       - US_KR_speednode_0020
       - US_NL_speednode_0021
       - NO_NO_speednode_0022
-      - NU_speednode_0023
+      - GB_NU_speednode_0023
       - NU_speednode_0024
       - NU_speednode_0025
       - US_SE_speednode_0026
@@ -1492,12 +1502,13 @@ proxy-groups:
       - github.com/freefq-广东省移动1616
       - github.com/freefq-英国伦敦CloudFlare节点1717
       - github.com/freefq-美国CloudFlare节点1919
-      - 上海市联通0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点10
-      - 广东省移动11
+      - 美国V2CROSS.COM1
+      - 湖北省移动(全省通用)2
+      - 上海市联通3
+      - 美国CloudFlare节点5
+      - 广东省深圳市移动8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1557,7 +1568,7 @@ proxy-groups:
       - US_KR_speednode_0020
       - US_NL_speednode_0021
       - NO_NO_speednode_0022
-      - NU_speednode_0023
+      - GB_NU_speednode_0023
       - NU_speednode_0024
       - NU_speednode_0025
       - US_SE_speednode_0026
@@ -1623,12 +1634,13 @@ proxy-groups:
       - github.com/freefq-广东省移动1616
       - github.com/freefq-英国伦敦CloudFlare节点1717
       - github.com/freefq-美国CloudFlare节点1919
-      - 上海市联通0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点10
-      - 广东省移动11
+      - 美国V2CROSS.COM1
+      - 湖北省移动(全省通用)2
+      - 上海市联通3
+      - 美国CloudFlare节点5
+      - 广东省深圳市移动8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
