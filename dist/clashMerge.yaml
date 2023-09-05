@@ -1,4 +1,4 @@
-# 更新时间 2023-09-05T18:59:29.212Z
+# 更新时间 2023-09-05T19:16:13.321Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -557,7 +557,7 @@ proxies:
       headers:
         Host: 5.wuxianliulianng.xyz
     udp: true
-  - name: JP_KR_speednode_0061
+  - name: GB_KR_speednode_0061
     server: b3.wuxianliulianng.xyz
     port: 443
     type: vmess
@@ -1303,13 +1303,74 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 日本+东京Amazon数据中心
-    server: gsawshk1.aiopen.cfd
-    port: 443
-    password: a30ba00c-802e-4a2d-bb93-aa15adaebc6d
-    udp: true
-    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+    server: 141.101.115.65
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+    server: 172.67.92.55
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+    server: 172.67.10.151
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /
+      headers:
+        host: fhc.shabijichang.com
+    server: 172.67.27.154
+    port: 80
+    uuid: 553128fc-df6d-4ff0-b608-67e4c625abcc
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点8
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+    server: 172.67.92.119
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 上海市联通12
+    server: 103.234.128.130
+    port: 58417
+    uuid: fd8023ea-8a91-3351-aace-905f3b4a3d6e
+    alterId: 0
+    cipher: auto
+    network: auto
   - type: ss
     name: 上海市+电信
     server: free.node.kk-proxy.pro
@@ -1318,12 +1379,12 @@ proxies:
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkMDliZTQzMS1hMzRiLTRhYjAtYTBmYy1hOTkxYTlkMTQ0ZmY=
     cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点12
+    name: 美国CloudFlare节点18
     ws-opts:
       path: /shirker
       headers:
         host: ca.ilovescp.com
-    server: 172.64.105.187
+    server: 172.64.161.58
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
@@ -1392,7 +1453,7 @@ proxy-groups:
       - JP_JP_speednode_0058
       - JP_JP_speednode_0059
       - CH_KR_speednode_0060
-      - JP_KR_speednode_0061
+      - GB_KR_speednode_0061
       - NU_speednode_0062
       - US_SE_speednode_0063
       - SE_SE_speednode_0064
@@ -1448,9 +1509,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 日本+东京Amazon数据中心
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点8
+      - 上海市联通12
       - 上海市+电信
-      - 美国CloudFlare节点12
+      - 美国CloudFlare节点18
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1514,7 +1580,7 @@ proxy-groups:
       - JP_JP_speednode_0058
       - JP_JP_speednode_0059
       - CH_KR_speednode_0060
-      - JP_KR_speednode_0061
+      - GB_KR_speednode_0061
       - NU_speednode_0062
       - US_SE_speednode_0063
       - SE_SE_speednode_0064
@@ -1570,9 +1636,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 日本+东京Amazon数据中心
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点8
+      - 上海市联通12
       - 上海市+电信
-      - 美国CloudFlare节点12
+      - 美国CloudFlare节点18
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1635,7 +1706,7 @@ proxy-groups:
       - JP_JP_speednode_0058
       - JP_JP_speednode_0059
       - CH_KR_speednode_0060
-      - JP_KR_speednode_0061
+      - GB_KR_speednode_0061
       - NU_speednode_0062
       - US_SE_speednode_0063
       - SE_SE_speednode_0064
@@ -1691,9 +1762,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 日本+东京Amazon数据中心
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点8
+      - 上海市联通12
       - 上海市+电信
-      - 美国CloudFlare节点12
+      - 美国CloudFlare节点18
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1788,7 +1864,7 @@ proxy-groups:
       - JP_JP_speednode_0058
       - JP_JP_speednode_0059
       - CH_KR_speednode_0060
-      - JP_KR_speednode_0061
+      - GB_KR_speednode_0061
       - NU_speednode_0062
       - US_SE_speednode_0063
       - SE_SE_speednode_0064
@@ -1844,9 +1920,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 日本+东京Amazon数据中心
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点8
+      - 上海市联通12
       - 上海市+电信
-      - 美国CloudFlare节点12
+      - 美国CloudFlare节点18
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
