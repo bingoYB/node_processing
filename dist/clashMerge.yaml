@@ -1,4 +1,4 @@
-# 更新时间 2023-09-06T12:57:49.968Z
+# 更新时间 2023-09-06T13:22:31.170Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -259,7 +259,7 @@ proxies:
       headers:
         Host: hostodo.galenet.online
     udp: true
-  - name: US_SG_speednode_0025
+  - name: SG_SG_speednode_0025
     server: sg-am3.eqsunshine.com
     port: 32001
     type: ssr
@@ -926,33 +926,48 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: scw-fr.iiio.wiki
+    server: scw-fr.iiio.wiki
+    port: 2082
+    uuid: 250f4331-8c3e-4b87-a86b-5c5fbf9ddba8
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 甘肃省兰州市移动5
+    ws-opts:
+      path: /
+      headers:
+        host: 39.kccic2pa.xyz
+    server: 39.kccic2pa.xyz
+    port: 50039
+    uuid: baefc389-72b1-4f23-bbad-3a85cf51fe8a
+    alterId: 0
+    cipher: auto
+    network: auto
   - type: ss
     name: 俄罗斯+V2CROSS.COM
     server: 185.39.204.69
     port: 51348
     password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpadHJYazY1R0ZkdzduaVFZRzlh
     cipher: aes-128-gcm
-  - type: vmess
-    name: 美国CloudFlare公司CDN节点(shopify)3
-    ws-opts:
-      path: /dongtaiwang.com
-      headers:
-        host: 3.freek1.xyz
-    server: 23.227.39.109
-    port: 443
-    uuid: 87a95522-985c-4a17-afea-9b7d7208bce5
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 上海市联通8
-    server: 103.234.128.130
-    port: 58417
-    uuid: fd8023ea-8a91-3351-aace-905f3b4a3d6e
-    alterId: 0
-    cipher: auto
-    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -982,7 +997,7 @@ proxy-groups:
       - SG_SG_speednode_0022
       - SG_SG_speednode_0023
       - SG_SG_speednode_0024
-      - US_SG_speednode_0025
+      - SG_SG_speednode_0025
       - US_US_speednode_0028
       - US_US_speednode_0029
       - US_US_speednode_0030
@@ -1030,9 +1045,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点2323
       - github.com/freefq-美国CloudFlare节点2424
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 甘肃省兰州市移动5
       - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare公司CDN节点(shopify)3
-      - 上海市联通8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1062,7 +1078,7 @@ proxy-groups:
       - SG_SG_speednode_0022
       - SG_SG_speednode_0023
       - SG_SG_speednode_0024
-      - US_SG_speednode_0025
+      - SG_SG_speednode_0025
       - US_US_speednode_0028
       - US_US_speednode_0029
       - US_US_speednode_0030
@@ -1110,9 +1126,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点2323
       - github.com/freefq-美国CloudFlare节点2424
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 甘肃省兰州市移动5
       - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare公司CDN节点(shopify)3
-      - 上海市联通8
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1141,7 +1158,7 @@ proxy-groups:
       - SG_SG_speednode_0022
       - SG_SG_speednode_0023
       - SG_SG_speednode_0024
-      - US_SG_speednode_0025
+      - SG_SG_speednode_0025
       - US_US_speednode_0028
       - US_US_speednode_0029
       - US_US_speednode_0030
@@ -1189,9 +1206,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点2323
       - github.com/freefq-美国CloudFlare节点2424
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 甘肃省兰州市移动5
       - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare公司CDN节点(shopify)3
-      - 上海市联通8
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1252,7 +1270,7 @@ proxy-groups:
       - SG_SG_speednode_0022
       - SG_SG_speednode_0023
       - SG_SG_speednode_0024
-      - US_SG_speednode_0025
+      - SG_SG_speednode_0025
       - US_US_speednode_0028
       - US_US_speednode_0029
       - US_US_speednode_0030
@@ -1300,9 +1318,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点2323
       - github.com/freefq-美国CloudFlare节点2424
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 甘肃省兰州市移动5
       - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare公司CDN节点(shopify)3
-      - 上海市联通8
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
