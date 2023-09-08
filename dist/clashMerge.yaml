@@ -1,4 +1,4 @@
-# 更新时间 2023-09-08T06:59:45.222Z
+# 更新时间 2023-09-08T07:18:16.098Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -958,21 +958,74 @@ proxies:
       path: /shirker
       headers:
         host: ca.ilovescp.com
-    server: 172.67.10.151
+    server: 172.64.90.186
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点8
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /ikun
+      headers:
+        host: lo.twittei.me
+    server: 172.67.51.152
+    port: 443
+    uuid: 8d2ba456-2f0d-4c13-b8a0-bff99c679709
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 湖南省移动9
+    server: 120.226.50.93
+    port: 40702
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: ss
+    name: 荷兰+V2CROSS.COM
+    server: xiongda006.daxiongda.top
+    port: 23333
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3MGE5M2ZjYi1mOGMwLTQ5MTYtOTZiNS04YzU0ZjMzOTQ3MDg=
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点11
     ws-opts:
       path: /shirker
       headers:
-        host: lv2.scproxy.top
-    server: cf-lt.sharecentre.online
+        host: ca.ilovescp.com
+    server: 172.67.92.119
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)12
+    ws-opts:
+      path: /dongtaiwang.com
+      headers:
+        host: 3.freek1.xyz
+    server: 23.227.39.109
+    port: 443
+    uuid: 87a95522-985c-4a17-afea-9b7d7208bce5
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 巴西圣保罗CloudFlare节点13
+    ws-opts:
+      path: /TG:@hkaa0
+      headers:
+        host: 3.wyhkaa0.gq
+    server: 188.114.97.203
+    port: 2095
+    uuid: 0150eac1-6e49-4329-9c06-50027c0b9ad7
     alterId: 0
     cipher: auto
     network: ws
@@ -1055,7 +1108,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点3131
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点8
+      - 美国CloudFlare节点6
+      - 湖南省移动9
+      - 荷兰+V2CROSS.COM
+      - 美国CloudFlare节点11
+      - 美国CloudFlare公司CDN节点(shopify)12
+      - 巴西圣保罗CloudFlare节点13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1135,7 +1193,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点3131
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点8
+      - 美国CloudFlare节点6
+      - 湖南省移动9
+      - 荷兰+V2CROSS.COM
+      - 美国CloudFlare节点11
+      - 美国CloudFlare公司CDN节点(shopify)12
+      - 巴西圣保罗CloudFlare节点13
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1214,7 +1277,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点3131
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点8
+      - 美国CloudFlare节点6
+      - 湖南省移动9
+      - 荷兰+V2CROSS.COM
+      - 美国CloudFlare节点11
+      - 美国CloudFlare公司CDN节点(shopify)12
+      - 巴西圣保罗CloudFlare节点13
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1325,7 +1393,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点3131
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点8
+      - 美国CloudFlare节点6
+      - 湖南省移动9
+      - 荷兰+V2CROSS.COM
+      - 美国CloudFlare节点11
+      - 美国CloudFlare公司CDN节点(shopify)12
+      - 巴西圣保罗CloudFlare节点13
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
