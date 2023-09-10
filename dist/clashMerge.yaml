@@ -1,4 +1,4 @@
-# 更新时间 2023-09-10T12:50:41.288Z
+# 更新时间 2023-09-10T13:06:39.115Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -974,15 +974,19 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国加利福尼亚州洛杉矶Sharktech数据中心0
-    server: 64.32.4.56
-    port: 43556
-    uuid: 8653004f-de67-44c2-9cce-e0830933fb03
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /zh-cn
+      headers:
+        host: jp1.sanfencdn2.com
+    server: cfcdn5.sanfencdn.net
+    port: 80
+    uuid: 90bce081-64ec-4ead-b31a-1cb33eabc8f8
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
   - type: vmess
-    name: 甘肃省兰州市移动4
+    name: 甘肃省兰州市移动3
     ws-opts:
       path: /zh-cn
       headers:
@@ -1084,8 +1088,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点2121
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心0
-      - 甘肃省兰州市移动4
+      - 美国CloudFlare节点0
+      - 甘肃省兰州市移动3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1177,8 +1181,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点2121
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心0
-      - 甘肃省兰州市移动4
+      - 美国CloudFlare节点0
+      - 甘肃省兰州市移动3
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1269,8 +1273,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点2121
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心0
-      - 甘肃省兰州市移动4
+      - 美国CloudFlare节点0
+      - 甘肃省兰州市移动3
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1393,8 +1397,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点2121
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心0
-      - 甘肃省兰州市移动4
+      - 美国CloudFlare节点0
+      - 甘肃省兰州市移动3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
