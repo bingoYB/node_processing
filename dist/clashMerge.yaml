@@ -1,4 +1,4 @@
-# 更新时间 2023-09-11T18:59:34.711Z
+# 更新时间 2023-09-11T19:16:02.319Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -692,21 +692,35 @@ proxies:
     password: f73092f3-6a42-46a3-8953-c629620b8ef8
     udp: true
     skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)0
+    ws-opts:
+      path: /dongtaiwang.com
+      headers:
+        host: 3.freek1.xyz
+    server: 23.227.39.109
+    port: 443
+    uuid: 87a95522-985c-4a17-afea-9b7d7208bce5
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
   - type: ss
-    name: 北京市+新国信通信有限公司
-    server: zjxc.pmxu.link
-    port: 37377
-    password: YWVzLTI1Ni1nY206WVgzd2dZV01wTEtZRW5obw==
+    name: 安徽省+移动数据上网公共出口
+    server: dx.ktmwan.top
+    port: 27252
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphOGM2MmExMi1kZjIzLTQzZTYtYmJmMC0zZjU4MDk1MGM1YmQ=
     cipher: aes-128-gcm
   - type: vmess
-    name: 美国V2CROSS.COM5
+    name: 美国CloudFlare节点5
     ws-opts:
-      path: /
+      path: /shirker
       headers:
-        host: gw.alicdn.com
-    server: v34.jiedian.stream
+        host: dp3.scproxy.top
+    server: 172.67.100.189
     port: 80
-    uuid: 13ea3b8a-a31d-4eff-b86d-fd35264c4c7f
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
@@ -723,12 +737,37 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点11
+    name: 美国CloudFlare公司CDN节点(shopify)9
+    ws-opts:
+      path: /dongtaiwang.com
+      headers:
+        host: d.freeh1.xyz
+    server: dongtaiwang3.com
+    port: 443
+    uuid: 6deddb7f-e557-42db-bfa0-cf40b36b27e2
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点12
     ws-opts:
       path: /shirker
       headers:
         host: ca.ilovescp.com
-    server: 172.64.161.58
+    server: 172.67.59.39
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点13
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+    server: 172.64.202.22
     port: 80
     uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
@@ -801,10 +840,13 @@ proxy-groups:
       - github.com/freefq-安徽省亳州市移动18
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国21
-      - 北京市+新国信通信有限公司
-      - 美国V2CROSS.COM5
+      - 美国CloudFlare公司CDN节点(shopify)0
+      - 安徽省+移动数据上网公共出口
+      - 美国CloudFlare节点5
       - 美国V2CROSS.COM7
-      - 美国CloudFlare节点11
+      - 美国CloudFlare公司CDN节点(shopify)9
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -872,10 +914,13 @@ proxy-groups:
       - github.com/freefq-安徽省亳州市移动18
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国21
-      - 北京市+新国信通信有限公司
-      - 美国V2CROSS.COM5
+      - 美国CloudFlare公司CDN节点(shopify)0
+      - 安徽省+移动数据上网公共出口
+      - 美国CloudFlare节点5
       - 美国V2CROSS.COM7
-      - 美国CloudFlare节点11
+      - 美国CloudFlare公司CDN节点(shopify)9
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -942,10 +987,13 @@ proxy-groups:
       - github.com/freefq-安徽省亳州市移动18
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国21
-      - 北京市+新国信通信有限公司
-      - 美国V2CROSS.COM5
+      - 美国CloudFlare公司CDN节点(shopify)0
+      - 安徽省+移动数据上网公共出口
+      - 美国CloudFlare节点5
       - 美国V2CROSS.COM7
-      - 美国CloudFlare节点11
+      - 美国CloudFlare公司CDN节点(shopify)9
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1044,10 +1092,13 @@ proxy-groups:
       - github.com/freefq-安徽省亳州市移动18
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国21
-      - 北京市+新国信通信有限公司
-      - 美国V2CROSS.COM5
+      - 美国CloudFlare公司CDN节点(shopify)0
+      - 安徽省+移动数据上网公共出口
+      - 美国CloudFlare节点5
       - 美国V2CROSS.COM7
-      - 美国CloudFlare节点11
+      - 美国CloudFlare公司CDN节点(shopify)9
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
