@@ -1,4 +1,4 @@
-# 更新时间 2023-09-12T18:58:11.809Z
+# 更新时间 2023-09-12T19:14:52.370Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -722,38 +722,47 @@ proxies:
   - type: vmess
     name: 美国CloudFlare节点0
     ws-opts:
-      path: /shirker
+      path: /huawei
       headers:
-        host: dp3.scproxy.top
-    server: 172.67.100.189
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点3
-    ws-opts:
-      path: /shirker
-      headers:
-        host: dp3.scproxy.top
-    server: 162.159.247.47
-    port: 80
-    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国华盛顿Cogent通信公司4
-    ws-opts:
-      path: /path/1691057598680
-    server: 38.63.0.89
+        host: cloudflare.piaole.me
+    server: cloudflare.piaole.me
     port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    uuid: fb3aef20-ef6d-44ea-8a5c-f38deab4424f
     alterId: 0
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: 台湾省台中市中华电信1
+    ws-opts:
+      path: /
+      headers:
+        host: pull.free.video.10010.com
+    server: tw98-1g-hinet.mytls888.com
+    port: 443
+    uuid: c78d7d2c-d93e-3cfd-98e0-e3d43cc1096d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 四川省泸州市+移动
+    server: 112.45.36.142
+    port: 44184
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxNjIzZGRlYi0xNjViLTQ4NDUtODZmYy1hMjU0YTk0NjRiMDQ=
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /shirker
+      headers:
+        host: dp3.scproxy.top
+    server: 172.67.95.171
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -827,8 +836,9 @@ proxy-groups:
       - github.com/freefq-广东省深圳市移动77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点3
-      - 美国华盛顿Cogent通信公司4
+      - 台湾省台中市中华电信1
+      - 四川省泸州市+移动
+      - 美国CloudFlare节点5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -902,8 +912,9 @@ proxy-groups:
       - github.com/freefq-广东省深圳市移动77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点3
-      - 美国华盛顿Cogent通信公司4
+      - 台湾省台中市中华电信1
+      - 四川省泸州市+移动
+      - 美国CloudFlare节点5
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -976,8 +987,9 @@ proxy-groups:
       - github.com/freefq-广东省深圳市移动77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点3
-      - 美国华盛顿Cogent通信公司4
+      - 台湾省台中市中华电信1
+      - 四川省泸州市+移动
+      - 美国CloudFlare节点5
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1082,8 +1094,9 @@ proxy-groups:
       - github.com/freefq-广东省深圳市移动77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点3
-      - 美国华盛顿Cogent通信公司4
+      - 台湾省台中市中华电信1
+      - 四川省泸州市+移动
+      - 美国CloudFlare节点5
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
