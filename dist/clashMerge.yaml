@@ -1,4 +1,4 @@
-# 更新时间 2023-09-16T18:57:33.722Z
+# 更新时间 2023-09-16T19:14:35.574Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1407,6 +1407,19 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /
+      headers:
+        host: jp.denny.cf
+    server: 162.159.137.22
+    port: 443
+    uuid: 5b655ae0-9937-4a07-8cd3-9ff50cdb2c48
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1520,6 +1533,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点55
       - github.com/freefq-安徽省亳州市移动6
       - github.com/freefq-美国CloudFlare公司CDN节点77
+      - 美国CloudFlare节点1
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1633,6 +1647,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点55
       - github.com/freefq-安徽省亳州市移动6
       - github.com/freefq-美国CloudFlare公司CDN节点77
+      - 美国CloudFlare节点1
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1745,6 +1760,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点55
       - github.com/freefq-安徽省亳州市移动6
       - github.com/freefq-美国CloudFlare公司CDN节点77
+      - 美国CloudFlare节点1
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1889,6 +1905,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点55
       - github.com/freefq-安徽省亳州市移动6
       - github.com/freefq-美国CloudFlare公司CDN节点77
+      - 美国CloudFlare节点1
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
