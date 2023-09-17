@@ -1,4 +1,4 @@
-# 更新时间 2023-09-17T06:57:56.567Z
+# 更新时间 2023-09-17T07:16:36.702Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -500,17 +500,26 @@ proxies:
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ODhjMDZiZi04M2IwLTQxODYtYjQ1ZC04OTY2ZWZjN2MzZmM
     cipher: aes-128-gcm
   - type: vmess
-    name: 美国V2CROSS.COM2
+    name: 美国CloudFlare节点1
     ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
+      path: /
       headers:
-        host: ca5.tehme100.fun
-    server: 104.31.16.46
-    port: 2082
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+        host: jp.denny.cf
+    server: 162.159.137.22
+    port: 443
+    uuid: 5b655ae0-9937-4a07-8cd3-9ff50cdb2c48
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
+  - type: vmess
+    name: 南非V2CROSS.COM4
+    server: 156.225.67.23
+    port: 51181
+    uuid: 375e70f0-5d46-476f-8d69-0fb35c5548a9
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -560,7 +569,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-安徽省亳州市移动12
-      - 美国V2CROSS.COM2
+      - 美国CloudFlare节点1
+      - 南非V2CROSS.COM4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -610,7 +620,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-安徽省亳州市移动12
-      - 美国V2CROSS.COM2
+      - 美国CloudFlare节点1
+      - 南非V2CROSS.COM4
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -659,7 +670,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-安徽省亳州市移动12
-      - 美国V2CROSS.COM2
+      - 美国CloudFlare节点1
+      - 南非V2CROSS.COM4
   - name: 📲 电报信息
     type: select
     proxies:
@@ -740,7 +752,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-安徽省亳州市移动12
-      - 美国V2CROSS.COM2
+      - 美国CloudFlare节点1
+      - 南非V2CROSS.COM4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
