@@ -1,4 +1,4 @@
-# 更新时间 2023-09-21T06:48:44.057Z
+# 更新时间 2023-09-21T07:01:25.159Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -895,31 +895,38 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 广东省移动1
+    name: 美国CloudFlare节点1
     ws-opts:
-      path: /
-    server: 183.240.232.81
-    port: 33271
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+    server: 172.64.90.186
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
-    network: auto
-  - type: trojan
-    name: 广东省深圳市+移动
-    server: rpete-1096-tr-3.r-kcd-e.iote.bond
-    port: 29989
-    password: LYaOvuNXdQGTZNonhlRUKqOJcKVihzKY
-    udp: true
-    skip-cert-verify: true
+    network: ws
   - type: vmess
-    name: 美国CloudFlare节点13
+    name: 美国CloudFlare节点2
     ws-opts:
-      path: /public?ed=4096
+      path: /shirker
       headers:
-        host: de.biqibao.site
-    server: datacenter.ct.01.biqibao.site
-    port: 2052
-    uuid: 4931e941-77c6-4144-a8b9-5c252ee36c30
+        host: ca.ilovescp.com
+    server: 172.67.196.139
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /shirker
+      headers:
+        host: ca.ilovescp.com
+    server: 172.67.92.119
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
     alterId: 0
     cipher: auto
     network: ws
@@ -1006,9 +1013,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2121
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点2323
-      - 广东省移动1
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点13
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1092,9 +1099,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2121
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点2323
-      - 广东省移动1
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点13
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点3
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1177,9 +1184,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2121
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点2323
-      - 广东省移动1
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点13
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点3
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1294,9 +1301,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点2121
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare公司CDN节点2323
-      - 广东省移动1
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点13
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
