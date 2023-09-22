@@ -1,4 +1,4 @@
-# 更新时间 2023-09-22T12:55:40.399Z
+# 更新时间 2023-09-22T13:19:09.888Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -761,6 +761,18 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /shirker
+      headers:
+        host: lv3.sharecentrepro.org
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 5f751c6e-50b1-4797-ba8e-6ffe324a0bce
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -831,6 +843,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
+      - 美国CloudFlare节点0
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -901,6 +914,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
+      - 美国CloudFlare节点0
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -970,6 +984,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
+      - 美国CloudFlare节点0
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1071,6 +1086,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
+      - 美国CloudFlare节点0
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
