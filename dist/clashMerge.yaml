@@ -1,4 +1,4 @@
-# 更新时间 2023-09-22T19:16:12.758Z
+# 更新时间 2023-09-23T01:10:50.999Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -6,27 +6,52 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - name: CN_CN_speednode_0001
-    server: hk1843.131jsq.one
-    port: 32001
+  - name: CA_CA_speednode_0001
+    server: fx3-108.181.10.17.nip.io
+    port: 2082
     type: vmess
-    uuid: 47d31242-26c7-42ab-8647-8c36e32cadcb
+    uuid: f37f7ce0-5550-11ee-b133-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: false
-    skip-cert-verify: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /V2RayyNGvpn
+      headers:
+        Host: internet.life.com.by
     udp: true
-  - name: CN_CN_speednode_0002
-    server: sgp1494.131jsq.one
-    port: 32004
+  - name: CA_CA_speednode_0002
+    server: fx4-108.181.10.17.nip.io
+    port: 8080
     type: vmess
-    uuid: 47d31242-26c7-42ab-8647-8c36e32cadcb
+    uuid: b2e93e40-5553-11ee-b033-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: false
-    skip-cert-verify: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: internet.life.com.by
     udp: true
   - name: CN_CN_speednode_0003
+    server: tg_mfbpn_s2.52vpn.eu.org
+    port: 18075
+    type: vmess
+    uuid: c8095540-e89f-31c2-aa29-db14f9068b98
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /soda
+      headers:
+        Host: www.alidns.com
+    udp: true
+  - name: CN_CN_speednode_0004
     server: 183.232.170.32
     port: 20013
     type: ss
@@ -42,17 +67,7 @@ proxies:
       tls: false
       mux: true
       skip-cert-verify: true
-  - name: CN_CN_speednode_0004
-    server: jp1074.131jsq.one
-    port: 32003
-    type: vmess
-    uuid: 47d31242-26c7-42ab-8647-8c36e32cadcb
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: US_CN_speednode_0006
+  - name: US_CN_speednode_0005
     server: v29.heduian.online
     port: 30866
     type: vmess
@@ -67,65 +82,56 @@ proxies:
       path: /oooo
       headers:
         Host: v29.heduian.online
-  - name: CN_CN_speednode_0007
-    server: us1698.131jsq.one
-    port: 32005
+  - name: GB_FR_speednode_0007
+    server: 54.38.79.75
+    port: 8880
     type: vmess
-    uuid: 47d31242-26c7-42ab-8647-8c36e32cadcb
+    uuid: bf55f0b0-592c-11ee-b339-205c6d5f5d78
     alterId: 0
     cipher: auto
     tls: false
-    skip-cert-verify: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /1904chgs
+      headers:
+        Host: teams.microsoft.com
     udp: true
-  - name: US_DE_speednode_0008
-    server: 3.79.121.219
-    port: 22222
-    type: trojan
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    udp: true
-  - name: NL_FR_speednode_0009
+  - name: NL_FR_speednode_0008
     server: 51.15.25.187
     port: 989
     type: ss
     cipher: aes-256-cfb
     password: f8f7aCzcPKbsF8p3
     udp: true
-  - name: IE_IE_speednode_0010
-    server: 3.254.43.72
-    port: 22222
-    type: trojan
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    udp: true
-  - name: IR_IR_speednode_0012
-    server: 78.39.56.7
-    port: 17681
-    type: vmess
-    uuid: d5982bd4-d74c-43b6-9dc2-b42be1cc9223
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    udp: true
-  - name: JP_JP_speednode_0013
-    server: 139.162.115.158
-    port: 8080
+  - name: US_HK_speednode_0009
+    server: 47.243.48.200
+    port: 443
     type: ss
-    cipher: chacha20-ietf-poly1305
-    password: t.me/OutlineVpnOfficial
+    cipher: aes-128-gcm
+    client-fingerprint: chrome
+    password: a-wym4ovY4Yw
+    plugin: v2ray-plugin
+    plugin-opts:
+      host: ''
+      mode: websocket
+      mux: true
+      path: ''
+      skip-cert-verify: true
+      tls: false
+    tfo: false
+  - name: HK_HK_speednode_0010
+    server: 150.107.46.21
+    port: 8083
+    type: ssr
+    cipher: aes-256-cfb
+    password: iFqnzSscN
+    protocol: origin
+    obfs: tls1.2_ticket_auth
+    protocol-param: ''
+    obfs-param: ''
     udp: true
-  - name: JP_JP_speednode_0014
-    server: >-
-      www.outline.network.qoa75t01yqv1wprsjj5be4ibpj4s51izfw7hiztoqjjzb5r04cihrx2uatfb8ot.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: t.me/OutlineVpnOfficial
-    udp: true
-  - name: KR_KR_speednode_0015
+  - name: KR_KR_speednode_0011
     server: 13.125.112.9
     port: 443
     type: ss
@@ -133,38 +139,43 @@ proxies:
     cipher: aes-256-cfb
     password: amazonskr05
     tfo: false
-  - name: ZA_US_speednode_0016
+  - name: RE_RE_speednode_0012
+    server: 45.59.170.13
+    port: 443
+    type: ss
+    client-fingerprint: chrome
+    cipher: aes-256-ctr
+    password: VNewBypasser2023
+    tfo: false
+  - name: ZA_US_speednode_0013
+    server: 156.225.67.48
+    port: 45493
+    type: vmess
+    alterId: 64
+    cipher: auto
+    network: tcp
+    skip-cert-verify: true
+    uuid: 3ca912da-6ac2-418f-b9cf-45b6f694579b
+  - name: ZA_US_speednode_0015
     server: 156.225.67.102
     port: 52792
     type: vmess
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
-    tls: false
-    skip-cert-verify: true
+    cipher: auto
     network: tcp
-  - name: US_US_speednode_0018
-    server: 216.52.183.245
-    port: 80
-    type: ss
-    client-fingerprint: chrome
-    cipher: aes-128-gcm
-    password: 83XvX4Vo%*3a
-    tfo: false
-    plugin: obfs
-    plugin-opts:
-      mode: http
-      host: None
-  - name: US_US_speednode_0020
+    skip-cert-verify: true
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  - name: US_US_speednode_0017
     server: 45.199.138.209
     port: 50447
     type: vmess
+    client-fingerprint: chrome
     uuid: 418048af-a293-4b99-9b0c-98ca4690dd24
     alterId: 64
     cipher: auto
     tls: false
+    tfo: false
     skip-cert-verify: false
-    udp: true
   - name: 🇺🇸_US_美国_1
     type: vmess
     server: 198.2.215.118
@@ -601,7 +612,7 @@ proxies:
     skip-cert-verify: true
     network: tcp
   - type: vmess
-    name: 更新于:09-2300:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:09-2308:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -609,7 +620,7 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-广东省广州市移动22
+    name: github.com/freefq-广东省广州市移动11
     ws-opts:
       path: /
     server: 183.233.187.233
@@ -619,64 +630,7 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点33
-    ws-opts:
-      path: /XQ2WCa29jfDM25GBcbnQ
-      headers:
-        host: poland.yj2022.gq
-    server: cdn.narutos.top
-    port: 8880
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点55
-    server: free4.6114514.xyz
-    port: 2052
-    uuid: 8204f631-8a71-4f6a-821d-6c117edaf0fa
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-广东省深圳市移动77
-    ws-opts:
-      path: /je5x3pBN1vez3NQudNkB
-      headers:
-        host: edge.cjhh.mom
-    server: vxyfa-1080-v2-2.d-kcd.tuil.xyz
-    port: 39928
-    uuid: a590e692-4c8d-42dd-ba80-b1765a34f699
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点99
-    ws-opts:
-      path: /
-      headers:
-        host: wnd.shabijichang.com
-    server: wnd.shabijichang.com
-    port: 80
-    uuid: 53701585-591f-48a3-9515-8831ed0524ac
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1010
-    ws-opts:
-      path: /
-      headers:
-        host: sls.shabijichang.com
-    server: 172.67.32.83
-    port: 80
-    uuid: 01754500-e814-447e-967a-5a4045fc388a
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-广东省深圳市移动1111
+    name: github.com/freefq-广东省深圳市移动66
     ws-opts:
       path: /je5x3pBN1vez3NQudNkB
       headers:
@@ -689,7 +643,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1212
+    name: github.com/freefq-美国CloudFlare节点77
     ws-opts:
       path: /
       headers:
@@ -701,68 +655,80 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1313
+    name: github.com/freefq-美国CloudFlare节点88
     ws-opts:
       path: /
       headers:
-        host: fhc.shabijichang.com
+        host: sls.shabijichang.com
+    server: 172.67.32.83
+    port: 80
+    uuid: 01754500-e814-447e-967a-5a4045fc388a
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点99
+    ws-opts:
+      path: /
     server: fhc.shabijichang.com
     port: 80
-    uuid: b10af5ff-4d04-4fc7-ab43-8a3b15481d19
+    uuid: 5e48a497-f4ae-4129-afd6-ba26d75b792a
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点0
+    name: github.com/freefq-美国CloudFlare公司CDN节点1111
     ws-opts:
       path: /
       headers:
-        host: downloads2.6114514.xyz
-    server: free2.6114514.xyz
-    port: 2052
-    uuid: 8204f631-8a71-4f6a-821d-6c117edaf0fa
+        host: ld.shabijichang.com
+    server: 104.20.224.95
+    port: 80
+    uuid: e6be60d7-8b79-4bd3-86ba-6291b1ead2f7
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+V2CROSS.COM
-    server: 209.216.77.26
-    port: 443
-    password: 3550ce3dec
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 南非V2CROSS.COM4
-    server: 156.225.67.48
-    port: 45493
-    uuid: 3ca912da-6ac2-418f-b9cf-45b6f694579b
+    name: github.com/freefq-美国CloudFlare节点1212
+    ws-opts:
+      path: /
+      headers:
+        host: wnd.shabijichang.com
+    server: wnd.shabijichang.com
+    port: 80
+    uuid: 53701585-591f-48a3-9515-8831ed0524ac
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
   - type: vmess
-    name: 广东省移动5
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /
+      headers:
+        host: bl.shabijichang.com
+    server: 104.21.75.246
+    port: 80
+    uuid: 81fc114e-44d7-44c7-9912-942453b03154
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 上海市+电信
+    server: free.node.kk-proxy.pro
+    port: 55928
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmMTQ5NzExZi0xOWZkLTRhZjUtOTJlYS01MjRiMWM0ZWZjYWM=
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 广东省移动6
     server: 183.240.232.81
     port: 33271
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: auto
-  - type: trojan
-    name: 英国+社会保险安全部
-    server: 51.91.11.29
-    port: 80
-    password: e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 广东省深圳市+移动
-    server: ufxeq-1080-tr-9.d-kcd.tuil.xyz
-    port: 39929
-    password: LYaOvuNXdQGTZNonhlRUKqOJcKVihzKY
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点10
+    name: 美国CloudFlare节点7
     ws-opts:
       path: /
       headers:
@@ -779,22 +745,20 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - CN_CN_speednode_0001
-      - CN_CN_speednode_0002
+      - CA_CA_speednode_0001
+      - CA_CA_speednode_0002
       - CN_CN_speednode_0003
       - CN_CN_speednode_0004
-      - US_CN_speednode_0006
-      - CN_CN_speednode_0007
-      - US_DE_speednode_0008
-      - NL_FR_speednode_0009
-      - IE_IE_speednode_0010
-      - IR_IR_speednode_0012
-      - JP_JP_speednode_0013
-      - JP_JP_speednode_0014
-      - KR_KR_speednode_0015
-      - ZA_US_speednode_0016
-      - US_US_speednode_0018
-      - US_US_speednode_0020
+      - US_CN_speednode_0005
+      - GB_FR_speednode_0007
+      - NL_FR_speednode_0008
+      - US_HK_speednode_0009
+      - HK_HK_speednode_0010
+      - KR_KR_speednode_0011
+      - RE_RE_speednode_0012
+      - ZA_US_speednode_0013
+      - ZA_US_speednode_0015
+      - US_US_speednode_0017
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
       - 🇯🇵_JP_日本
@@ -829,45 +793,38 @@ proxy-groups:
       - 🇺🇸_US_美国_23
       - 🇺🇸_US_美国_24
       - 🇺🇸_US_美国_25
-      - 更新于:09-2300:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-广东省广州市移动22
-      - github.com/freefq-美国CloudFlare公司CDN节点33
-      - github.com/freefq-美国CloudFlare公司CDN节点55
-      - github.com/freefq-广东省深圳市移动77
+      - 更新于:09-2308:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-广东省广州市移动11
+      - github.com/freefq-广东省深圳市移动66
+      - github.com/freefq-美国CloudFlare节点77
+      - github.com/freefq-美国CloudFlare节点88
       - github.com/freefq-美国CloudFlare节点99
-      - github.com/freefq-美国CloudFlare节点1010
-      - github.com/freefq-广东省深圳市移动1111
+      - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-美国CloudFlare节点1212
-      - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 美国CloudFlare节点0
-      - 美国+V2CROSS.COM
-      - 南非V2CROSS.COM4
-      - 广东省移动5
-      - 英国+社会保险安全部
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点10
+      - 美国CloudFlare节点2
+      - 上海市+电信
+      - 广东省移动6
+      - 美国CloudFlare节点7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - CN_CN_speednode_0001
-      - CN_CN_speednode_0002
+      - CA_CA_speednode_0001
+      - CA_CA_speednode_0002
       - CN_CN_speednode_0003
       - CN_CN_speednode_0004
-      - US_CN_speednode_0006
-      - CN_CN_speednode_0007
-      - US_DE_speednode_0008
-      - NL_FR_speednode_0009
-      - IE_IE_speednode_0010
-      - IR_IR_speednode_0012
-      - JP_JP_speednode_0013
-      - JP_JP_speednode_0014
-      - KR_KR_speednode_0015
-      - ZA_US_speednode_0016
-      - US_US_speednode_0018
-      - US_US_speednode_0020
+      - US_CN_speednode_0005
+      - GB_FR_speednode_0007
+      - NL_FR_speednode_0008
+      - US_HK_speednode_0009
+      - HK_HK_speednode_0010
+      - KR_KR_speednode_0011
+      - RE_RE_speednode_0012
+      - ZA_US_speednode_0013
+      - ZA_US_speednode_0015
+      - US_US_speednode_0017
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
       - 🇯🇵_JP_日本
@@ -902,44 +859,37 @@ proxy-groups:
       - 🇺🇸_US_美国_23
       - 🇺🇸_US_美国_24
       - 🇺🇸_US_美国_25
-      - 更新于:09-2300:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-广东省广州市移动22
-      - github.com/freefq-美国CloudFlare公司CDN节点33
-      - github.com/freefq-美国CloudFlare公司CDN节点55
-      - github.com/freefq-广东省深圳市移动77
+      - 更新于:09-2308:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-广东省广州市移动11
+      - github.com/freefq-广东省深圳市移动66
+      - github.com/freefq-美国CloudFlare节点77
+      - github.com/freefq-美国CloudFlare节点88
       - github.com/freefq-美国CloudFlare节点99
-      - github.com/freefq-美国CloudFlare节点1010
-      - github.com/freefq-广东省深圳市移动1111
+      - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-美国CloudFlare节点1212
-      - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 美国CloudFlare节点0
-      - 美国+V2CROSS.COM
-      - 南非V2CROSS.COM4
-      - 广东省移动5
-      - 英国+社会保险安全部
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点10
+      - 美国CloudFlare节点2
+      - 上海市+电信
+      - 广东省移动6
+      - 美国CloudFlare节点7
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - CN_CN_speednode_0001
-      - CN_CN_speednode_0002
+      - CA_CA_speednode_0001
+      - CA_CA_speednode_0002
       - CN_CN_speednode_0003
       - CN_CN_speednode_0004
-      - US_CN_speednode_0006
-      - CN_CN_speednode_0007
-      - US_DE_speednode_0008
-      - NL_FR_speednode_0009
-      - IE_IE_speednode_0010
-      - IR_IR_speednode_0012
-      - JP_JP_speednode_0013
-      - JP_JP_speednode_0014
-      - KR_KR_speednode_0015
-      - ZA_US_speednode_0016
-      - US_US_speednode_0018
-      - US_US_speednode_0020
+      - US_CN_speednode_0005
+      - GB_FR_speednode_0007
+      - NL_FR_speednode_0008
+      - US_HK_speednode_0009
+      - HK_HK_speednode_0010
+      - KR_KR_speednode_0011
+      - RE_RE_speednode_0012
+      - ZA_US_speednode_0013
+      - ZA_US_speednode_0015
+      - US_US_speednode_0017
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
       - 🇯🇵_JP_日本
@@ -974,23 +924,18 @@ proxy-groups:
       - 🇺🇸_US_美国_23
       - 🇺🇸_US_美国_24
       - 🇺🇸_US_美国_25
-      - 更新于:09-2300:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-广东省广州市移动22
-      - github.com/freefq-美国CloudFlare公司CDN节点33
-      - github.com/freefq-美国CloudFlare公司CDN节点55
-      - github.com/freefq-广东省深圳市移动77
+      - 更新于:09-2308:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-广东省广州市移动11
+      - github.com/freefq-广东省深圳市移动66
+      - github.com/freefq-美国CloudFlare节点77
+      - github.com/freefq-美国CloudFlare节点88
       - github.com/freefq-美国CloudFlare节点99
-      - github.com/freefq-美国CloudFlare节点1010
-      - github.com/freefq-广东省深圳市移动1111
+      - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-美国CloudFlare节点1212
-      - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 美国CloudFlare节点0
-      - 美国+V2CROSS.COM
-      - 南非V2CROSS.COM4
-      - 广东省移动5
-      - 英国+社会保险安全部
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点10
+      - 美国CloudFlare节点2
+      - 上海市+电信
+      - 广东省移动6
+      - 美国CloudFlare节点7
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1028,22 +973,20 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - CN_CN_speednode_0001
-      - CN_CN_speednode_0002
+      - CA_CA_speednode_0001
+      - CA_CA_speednode_0002
       - CN_CN_speednode_0003
       - CN_CN_speednode_0004
-      - US_CN_speednode_0006
-      - CN_CN_speednode_0007
-      - US_DE_speednode_0008
-      - NL_FR_speednode_0009
-      - IE_IE_speednode_0010
-      - IR_IR_speednode_0012
-      - JP_JP_speednode_0013
-      - JP_JP_speednode_0014
-      - KR_KR_speednode_0015
-      - ZA_US_speednode_0016
-      - US_US_speednode_0018
-      - US_US_speednode_0020
+      - US_CN_speednode_0005
+      - GB_FR_speednode_0007
+      - NL_FR_speednode_0008
+      - US_HK_speednode_0009
+      - HK_HK_speednode_0010
+      - KR_KR_speednode_0011
+      - RE_RE_speednode_0012
+      - ZA_US_speednode_0013
+      - ZA_US_speednode_0015
+      - US_US_speednode_0017
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
       - 🇯🇵_JP_日本
@@ -1078,23 +1021,18 @@ proxy-groups:
       - 🇺🇸_US_美国_23
       - 🇺🇸_US_美国_24
       - 🇺🇸_US_美国_25
-      - 更新于:09-2300:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-广东省广州市移动22
-      - github.com/freefq-美国CloudFlare公司CDN节点33
-      - github.com/freefq-美国CloudFlare公司CDN节点55
-      - github.com/freefq-广东省深圳市移动77
+      - 更新于:09-2308:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-广东省广州市移动11
+      - github.com/freefq-广东省深圳市移动66
+      - github.com/freefq-美国CloudFlare节点77
+      - github.com/freefq-美国CloudFlare节点88
       - github.com/freefq-美国CloudFlare节点99
-      - github.com/freefq-美国CloudFlare节点1010
-      - github.com/freefq-广东省深圳市移动1111
+      - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-美国CloudFlare节点1212
-      - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 美国CloudFlare节点0
-      - 美国+V2CROSS.COM
-      - 南非V2CROSS.COM4
-      - 广东省移动5
-      - 英国+社会保险安全部
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点10
+      - 美国CloudFlare节点2
+      - 上海市+电信
+      - 广东省移动6
+      - 美国CloudFlare节点7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
