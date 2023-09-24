@@ -1,4 +1,4 @@
-# 更新时间 2023-09-24T06:58:25.622Z
+# 更新时间 2023-09-24T07:16:22.385Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -721,14 +721,25 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 广东省深圳市+移动
+    server: ufxeq-1080-tr-9.d-kcd.tuil.xyz
+    port: 39929
+    password: LYaOvuNXdQGTZNonhlRUKqOJcKVihzKY
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 广东省移动5
-    server: 183.237.20.146
-    port: 44002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    name: 英国V2CROSS.COM3
+    ws-opts:
+      path: /2TokGE9A/
+      headers:
+        host: us6.cachexy.cf
+    server: cdn.chigua.tk
+    port: 80
+    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -800,7 +811,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
-      - 广东省移动5
+      - 广东省深圳市+移动
+      - 英国V2CROSS.COM3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -872,7 +884,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
-      - 广东省移动5
+      - 广东省深圳市+移动
+      - 英国V2CROSS.COM3
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -943,7 +956,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
-      - 广东省移动5
+      - 广东省深圳市+移动
+      - 英国V2CROSS.COM3
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1046,7 +1060,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
-      - 广东省移动5
+      - 广东省深圳市+移动
+      - 英国V2CROSS.COM3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
