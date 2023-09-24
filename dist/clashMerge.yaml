@@ -1,4 +1,4 @@
-# 更新时间 2023-09-24T12:51:10.636Z
+# 更新时间 2023-09-24T13:07:59.041Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -816,13 +816,30 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 广东省深圳市+移动
-    server: zjpvc-1083-tr-0.r-kcd-b.tuil.xyz
-    port: 29969
-    password: LYaOvuNXdQGTZNonhlRUKqOJcKVihzKY
-    udp: true
-    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /
+      headers:
+        host: bl.shabijichang.com
+    server: 104.21.75.246
+    port: 80
+    uuid: 81fc114e-44d7-44c7-9912-942453b03154
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 英国V2CROSS.COM6
+    ws-opts:
+      path: /2TokGE9A/
+      headers:
+        host: us6.cachexy.cf
+    server: cdn.chigua.tk
+    port: 80
+    uuid: 7e7f8398-bd39-49d8-9ce6-e48ffef463dd
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -903,7 +920,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare公司CDN节点2626
-      - 广东省深圳市+移动
+      - 美国CloudFlare节点2
+      - 英国V2CROSS.COM6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -984,7 +1002,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare公司CDN节点2626
-      - 广东省深圳市+移动
+      - 美国CloudFlare节点2
+      - 英国V2CROSS.COM6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1064,7 +1083,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare公司CDN节点2626
-      - 广东省深圳市+移动
+      - 美国CloudFlare节点2
+      - 英国V2CROSS.COM6
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1176,7 +1196,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare公司CDN节点2626
-      - 广东省深圳市+移动
+      - 美国CloudFlare节点2
+      - 英国V2CROSS.COM6
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
