@@ -1,4 +1,4 @@
-# 更新时间 2023-09-25T06:50:39.157Z
+# 更新时间 2023-09-25T07:05:17.592Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -814,44 +814,12 @@ proxies:
     network: ws
   - type: vmess
     name: 美国加利福尼亚州圣何塞MULTACOM机房3
-    server: 45.199.138.209
-    port: 50447
-    uuid: 418048af-a293-4b99-9b0c-98ca4690dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点4
-    ws-opts:
-      path: /
-      headers:
-        host: sls.shabijichang.com
-    server: sls.shabijichang.com
-    port: 80
-    uuid: 53701585-591f-48a3-9515-8831ed0524ac
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国加利福尼亚州圣何塞PEGTECH8
-    ws-opts:
-      path: /path/1695380351751
-      headers:
-        host: www.67023582.xyz
-    server: 142.4.112.150
-    port: 443
+    server: 45.199.138.194
+    port: 39351
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
-    network: ws
-    tls: true
-  - type: trojan
-    name: 广东省深圳市+移动
-    server: rpete-1096-tr-3.r-kcd-e.iote.bond
-    port: 29989
-    password: LYaOvuNXdQGTZNonhlRUKqOJcKVihzKY
-    udp: true
-    skip-cert-verify: true
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -932,9 +900,6 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2929
       - github.com/freefq-美国CloudFlare节点3131
       - 美国加利福尼亚州圣何塞MULTACOM机房3
-      - 美国CloudFlare节点4
-      - 美国加利福尼亚州圣何塞PEGTECH8
-      - 广东省深圳市+移动
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1015,9 +980,6 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2929
       - github.com/freefq-美国CloudFlare节点3131
       - 美国加利福尼亚州圣何塞MULTACOM机房3
-      - 美国CloudFlare节点4
-      - 美国加利福尼亚州圣何塞PEGTECH8
-      - 广东省深圳市+移动
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1097,9 +1059,6 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2929
       - github.com/freefq-美国CloudFlare节点3131
       - 美国加利福尼亚州圣何塞MULTACOM机房3
-      - 美国CloudFlare节点4
-      - 美国加利福尼亚州圣何塞PEGTECH8
-      - 广东省深圳市+移动
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1211,9 +1170,6 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2929
       - github.com/freefq-美国CloudFlare节点3131
       - 美国加利福尼亚州圣何塞MULTACOM机房3
-      - 美国CloudFlare节点4
-      - 美国加利福尼亚州圣何塞PEGTECH8
-      - 广东省深圳市+移动
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
