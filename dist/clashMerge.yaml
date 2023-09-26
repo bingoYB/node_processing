@@ -1,4 +1,4 @@
-# 更新时间 2023-09-26T06:49:37.731Z
+# 更新时间 2023-09-26T07:02:05.787Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1397,49 +1397,13 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 台湾省台北市中华电信2
-    ws-opts:
-      path: /?ed=2048
-    server: 1.164.147.203
-    port: 23000
-    uuid: 490d9feb-d679-3ad1-a358-7ebdf09e30a1
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点4
-    ws-opts:
-      path: /cloudconebbb
-      headers:
-        host: cloudconebbb.gorgorchicken.one
-    server: cloudconebbb.gorgorchicken.one
-    port: 8443
-    uuid: aa0c4744-9568-4bee-a08b-73668a9b2a42
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 台湾省台北市中华电信5
-    server: sneed-a.v2ok.cc
-    port: 23000
-    uuid: 490d9feb-d679-3ad1-a358-7ebdf09e30a1
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点7
-    ws-opts:
-      path: /
-      headers:
-        host: sls.shabijichang.com
-    server: 172.67.99.73
-    port: 80
-    uuid: 6278dc83-1389-4d16-8ebb-0b8590b03582
-    alterId: 0
-    cipher: auto
-    network: ws
+  - type: trojan
+    name: 广东省深圳市+移动
+    server: jjozz-1092-tr-8.r-kcd-b.iote.bond
+    port: 39919
+    password: LYaOvuNXdQGTZNonhlRUKqOJcKVihzKY
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1559,10 +1523,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3737
       - github.com/freefq-美国CloudFlare节点3838
       - github.com/freefq-美国CloudFlare公司CDN节点4040
-      - 台湾省台北市中华电信2
-      - 美国CloudFlare节点4
-      - 台湾省台北市中华电信5
-      - 美国CloudFlare节点7
+      - 广东省深圳市+移动
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1682,10 +1643,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3737
       - github.com/freefq-美国CloudFlare节点3838
       - github.com/freefq-美国CloudFlare公司CDN节点4040
-      - 台湾省台北市中华电信2
-      - 美国CloudFlare节点4
-      - 台湾省台北市中华电信5
-      - 美国CloudFlare节点7
+      - 广东省深圳市+移动
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1804,10 +1762,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3737
       - github.com/freefq-美国CloudFlare节点3838
       - github.com/freefq-美国CloudFlare公司CDN节点4040
-      - 台湾省台北市中华电信2
-      - 美国CloudFlare节点4
-      - 台湾省台北市中华电信5
-      - 美国CloudFlare节点7
+      - 广东省深圳市+移动
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1958,10 +1913,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3737
       - github.com/freefq-美国CloudFlare节点3838
       - github.com/freefq-美国CloudFlare公司CDN节点4040
-      - 台湾省台北市中华电信2
-      - 美国CloudFlare节点4
-      - 台湾省台北市中华电信5
-      - 美国CloudFlare节点7
+      - 广东省深圳市+移动
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
