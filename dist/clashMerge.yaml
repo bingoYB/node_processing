@@ -1,4 +1,4 @@
-# 更新时间 2023-09-26T18:49:23.255Z
+# 更新时间 2023-09-26T19:01:30.078Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1002,7 +1002,7 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点1
+    name: 美国CloudFlare节点2
     ws-opts:
       path: /
       headers:
@@ -1010,25 +1010,6 @@ proxies:
     server: Tokyo.mfa.ee
     port: 2052
     uuid: 992889a7-296e-4a44-98c2-0eb89af4411d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: 广东省深圳市+移动
-    server: jjozz-1092-tr-8.r-kcd-b.iote.bond
-    port: 39919
-    password: LYaOvuNXdQGTZNonhlRUKqOJcKVihzKY
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点4
-    ws-opts:
-      path: /
-      headers:
-        host: sls.shabijichang.com
-    server: 172.67.99.73
-    port: 80
-    uuid: 6278dc83-1389-4d16-8ebb-0b8590b03582
     alterId: 0
     cipher: auto
     network: ws
@@ -1118,9 +1099,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点2929
-      - 美国CloudFlare节点1
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点4
+      - 美国CloudFlare节点2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1207,9 +1186,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点2929
-      - 美国CloudFlare节点1
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点4
+      - 美国CloudFlare节点2
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1295,9 +1272,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点2929
-      - 美国CloudFlare节点1
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点4
+      - 美国CloudFlare节点2
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1415,9 +1390,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2727
       - github.com/freefq-美国CloudFlare节点2929
-      - 美国CloudFlare节点1
-      - 广东省深圳市+移动
-      - 美国CloudFlare节点4
+      - 美国CloudFlare节点2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
