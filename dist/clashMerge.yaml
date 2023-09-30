@@ -1,4 +1,4 @@
-# 更新时间 2023-09-30T18:57:58.821Z
+# 更新时间 2023-09-30T19:14:29.212Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -733,25 +733,44 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
-  - type: vmess
-    name: 美国CloudFlare节点4
-    ws-opts:
-      path: /
-      headers:
-        host: lu.wx.alue.link
-    server: 104.16.68.38
-    port: 2052
-    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: trojan
     name: 广东省深圳市+移动
-    server: tweju-1089-tr-4.r-kcd-b.tuil.xyz
-    port: 29959
+    server: zntqu-1082-tr-5.r-kcd-a.tuil.xyz
+    port: 39909
     password: PJUKhmVpDDqtAvMHDvmMpoQYChiuwjgv
     udp: true
     skip-cert-verify: true
+  - type: vmess
+    name: 美国V2CROSS.COM4
+    ws-opts:
+      path: /
+    server: 137.175.86.189
+    port: 37399
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国华盛顿Cogent通信公司10
+    ws-opts:
+      path: /path/053133263111
+      headers:
+        host: www.19458162.xyz
+    server: 38.63.0.71
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 广东省广州市移动12
+    server: 183.233.187.214
+    port: 51165
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -819,8 +838,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点3636
       - github.com/freefq-美国CloudFlare公司CDN节点3737
       - 广东省移动2
-      - 美国CloudFlare节点4
       - 广东省深圳市+移动
+      - 美国V2CROSS.COM4
+      - 美国华盛顿Cogent通信公司10
+      - 广东省广州市移动12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -888,8 +909,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点3636
       - github.com/freefq-美国CloudFlare公司CDN节点3737
       - 广东省移动2
-      - 美国CloudFlare节点4
       - 广东省深圳市+移动
+      - 美国V2CROSS.COM4
+      - 美国华盛顿Cogent通信公司10
+      - 广东省广州市移动12
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -956,8 +979,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点3636
       - github.com/freefq-美国CloudFlare公司CDN节点3737
       - 广东省移动2
-      - 美国CloudFlare节点4
       - 广东省深圳市+移动
+      - 美国V2CROSS.COM4
+      - 美国华盛顿Cogent通信公司10
+      - 广东省广州市移动12
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1056,8 +1081,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点3636
       - github.com/freefq-美国CloudFlare公司CDN节点3737
       - 广东省移动2
-      - 美国CloudFlare节点4
       - 广东省深圳市+移动
+      - 美国V2CROSS.COM4
+      - 美国华盛顿Cogent通信公司10
+      - 广东省广州市移动12
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
