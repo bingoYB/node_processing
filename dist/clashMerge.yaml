@@ -1,4 +1,4 @@
-# 更新时间 2023-09-30T06:59:01.663Z
+# 更新时间 2023-09-30T07:16:52.592Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -868,29 +868,27 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 台湾省桃园市+中华电信
-    server: pqhinet1.aiopen.cfd
-    port: 443
-    password: 8196dd4b-513f-4b2d-8631-56a4f0c8597d
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国加利福尼亚州圣何塞MULTACOM机房8
-    server: 45.199.138.227
-    port: 46833
-    uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 南非V2CROSS.COM12
-    server: 156.225.67.102
+    name: 南非V2CROSS.COM2
+    server: 156.225.67.101
     port: 52792
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: 美国V2CROSS.COM12
+    ws-opts:
+      path: /path/1693992821776
+      headers:
+        host: www.39838266.xyz
+    server: 38.26.135.18
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -972,9 +970,8 @@ proxy-groups:
       - github.com/freefq-欧盟3535
       - github.com/freefq-美国CloudFlare节点3737
       - github.com/freefq-美国CloudFlare节点3838
-      - 台湾省桃园市+中华电信
-      - 美国加利福尼亚州圣何塞MULTACOM机房8
-      - 南非V2CROSS.COM12
+      - 南非V2CROSS.COM2
+      - 美国V2CROSS.COM12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1056,9 +1053,8 @@ proxy-groups:
       - github.com/freefq-欧盟3535
       - github.com/freefq-美国CloudFlare节点3737
       - github.com/freefq-美国CloudFlare节点3838
-      - 台湾省桃园市+中华电信
-      - 美国加利福尼亚州圣何塞MULTACOM机房8
-      - 南非V2CROSS.COM12
+      - 南非V2CROSS.COM2
+      - 美国V2CROSS.COM12
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1139,9 +1135,8 @@ proxy-groups:
       - github.com/freefq-欧盟3535
       - github.com/freefq-美国CloudFlare节点3737
       - github.com/freefq-美国CloudFlare节点3838
-      - 台湾省桃园市+中华电信
-      - 美国加利福尼亚州圣何塞MULTACOM机房8
-      - 南非V2CROSS.COM12
+      - 南非V2CROSS.COM2
+      - 美国V2CROSS.COM12
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1254,9 +1249,8 @@ proxy-groups:
       - github.com/freefq-欧盟3535
       - github.com/freefq-美国CloudFlare节点3737
       - github.com/freefq-美国CloudFlare节点3838
-      - 台湾省桃园市+中华电信
-      - 美国加利福尼亚州圣何塞MULTACOM机房8
-      - 南非V2CROSS.COM12
+      - 南非V2CROSS.COM2
+      - 美国V2CROSS.COM12
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
