@@ -1,4 +1,4 @@
-# 更新时间 2023-10-03T18:50:17.311Z
+# 更新时间 2023-10-03T19:02:39.366Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -505,28 +505,43 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 广东省移动0
-    server: 183.240.232.82
-    port: 39971
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: ss
-    name: 美国+华盛顿Cogent通信公司
-    server: 38.68.134.9
-    port: 5600
-    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 美国CloudFlare节点5
+    name: 香港香港城市电讯(香港宽频)1
     ws-opts:
       path: /
       headers:
-        host: lu.wx.alue.link
-    server: cf.yx.alue.link
-    port: 2052
-    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+        host: hkbn1.411api-snisajdnjkndd.com
+    server: hkbn1.411api-snisajdnjkndd.com
+    port: 4443
+    uuid: f8be07e9-4455-463f-ab36-770c5c5a39bb
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 亚太地区V2CROSS.COM2
+    ws-opts:
+      path: /svip2.4ghatde.com
+    server: 103.161.173.56
+    port: 80
+    uuid: 7c810704-e3d7-4e14-92c1-a8e2f63dd52d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 美国+华盛顿Cogent通信公司
+    server: 38.68.134.9
+    port: 3306
+    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点9
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v005.ssrsub.com
+    server: ns1.v2-vip.fun
+    port: 80
+    uuid: bffa23aa-ae0a-4c02-af77-2a14c8c0b81c
     alterId: 0
     cipher: auto
     network: ws
@@ -580,9 +595,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-俄罗斯18
-      - 广东省移动0
+      - 香港香港城市电讯(香港宽频)1
+      - 亚太地区V2CROSS.COM2
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点5
+      - 美国CloudFlare节点9
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -633,9 +649,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-俄罗斯18
-      - 广东省移动0
+      - 香港香港城市电讯(香港宽频)1
+      - 亚太地区V2CROSS.COM2
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点5
+      - 美国CloudFlare节点9
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -685,9 +702,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-俄罗斯18
-      - 广东省移动0
+      - 香港香港城市电讯(香港宽频)1
+      - 亚太地区V2CROSS.COM2
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点5
+      - 美国CloudFlare节点9
   - name: 📲 电报信息
     type: select
     proxies:
@@ -769,9 +787,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-俄罗斯18
-      - 广东省移动0
+      - 香港香港城市电讯(香港宽频)1
+      - 亚太地区V2CROSS.COM2
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点5
+      - 美国CloudFlare节点9
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
