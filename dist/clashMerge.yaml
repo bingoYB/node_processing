@@ -1,4 +1,4 @@
-# 更新时间 2023-10-03T06:49:30.977Z
+# 更新时间 2023-10-03T07:01:56.940Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -625,6 +625,30 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /
+      headers:
+        host: bl.shabijichang.com
+    server: 941.outline-vpn.cloud
+    port: 80
+    uuid: a1a676e4-016e-4bf0-96fe-4b6aaf53abc2
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v03.ssrsub.com
+    server: singapore.com
+    port: 80
+    uuid: bffa23aa-ae0a-4c02-af77-2a14c8c0b81c
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -683,6 +707,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -741,6 +767,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点4
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -798,6 +826,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点4
   - name: 📲 电报信息
     type: select
     proxies:
@@ -887,6 +917,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
