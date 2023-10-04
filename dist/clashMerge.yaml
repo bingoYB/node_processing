@@ -1,4 +1,4 @@
-# 更新时间 2023-10-04T06:50:05.091Z
+# 更新时间 2023-10-04T07:02:43.198Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -454,34 +454,29 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 广东省移动0
-    server: 183.240.232.82
-    port: 40158
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 广东省移动2
-    server: 183.240.232.82
-    port: 39971
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国加利福尼亚州洛杉矶Sharktech数据中心3
+    name: 广东省深圳市移动0
     ws-opts:
-      path: /path/1694429908748
+      path: /zh-cn
       headers:
-        host: www.75409854.xyz
-    server: 67.21.90.5
-    port: 443
-    uuid: 28dd6c26-05a5-4bba-8a5d-052b70ac13b2
+        host: mf33fx.micloud.buzz
+    server: mf33fx.micloud.buzz
+    port: 46033
+    uuid: a824a85c-4bb0-4ab3-9d8a-bf9b02d9b20c
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /
+      headers:
+        host: wnd.shabijichang.com
+    server: 172.64.199.158
+    port: 80
+    uuid: 2e495227-58e3-4bea-a273-7a17bd8a804b
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -530,9 +525,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 广东省移动0
-      - 广东省移动2
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心3
+      - 广东省深圳市移动0
+      - 美国CloudFlare节点6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -581,9 +575,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 广东省移动0
-      - 广东省移动2
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心3
+      - 广东省深圳市移动0
+      - 美国CloudFlare节点6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -631,9 +624,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 广东省移动0
-      - 广东省移动2
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心3
+      - 广东省深圳市移动0
+      - 美国CloudFlare节点6
   - name: 📲 电报信息
     type: select
     proxies:
@@ -713,9 +705,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - github.com/freefq-美国CloudFlare节点2121
-      - 广东省移动0
-      - 广东省移动2
-      - 美国加利福尼亚州洛杉矶Sharktech数据中心3
+      - 广东省深圳市移动0
+      - 美国CloudFlare节点6
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
