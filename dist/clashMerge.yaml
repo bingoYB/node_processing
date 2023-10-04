@@ -1,4 +1,4 @@
-# 更新时间 2023-10-04T18:51:01.212Z
+# 更新时间 2023-10-04T19:05:43.244Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -436,6 +436,19 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国V2CROSS.COM2
+    ws-opts:
+      path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm
+      headers:
+        host: cold-dawn-9246.fly.dev
+    server: cold-dawn-9246.fly.dev
+    port: 443
+    uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -481,6 +494,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
+      - 美国V2CROSS.COM2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -526,6 +540,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
+      - 美国V2CROSS.COM2
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -570,6 +585,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
+      - 美国V2CROSS.COM2
   - name: 📲 电报信息
     type: select
     proxies:
@@ -646,6 +662,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
+      - 美国V2CROSS.COM2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
