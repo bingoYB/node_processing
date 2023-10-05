@@ -1,4 +1,4 @@
-# 更新时间 2023-10-05T13:00:16.469Z
+# 更新时间 2023-10-05T13:28:39.297Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -496,37 +496,30 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点2
+    name: 香港香港城市电讯(香港宽频)1
     ws-opts:
       path: /
-      headers:
-        host: dld.shabijichang.com
-    server: dld.shabijichang.com
-    port: 80
-    uuid: 53701585-591f-48a3-9515-8831ed0524ac
+    server: 183.178.194.228
+    port: 4443
+    uuid: f15ca202-7edc-4e36-bf34-fe29db9ec305
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 美国CloudFlare节点6
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v01.ssrsub.com
-    server: singapore.com
-    port: 80
-    uuid: bffa23aa-ae0a-4c02-af77-2a14c8c0b81c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 安徽省移动数据上网公共出口7
-    server: 112.29.94.22
-    port: 53737
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
+    tls: true
+  - type: ss
+    name: 江苏省镇江市+移动
+    server: foshan.chiguayun.cc
+    port: 27120
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0Y2Y3NTQwOC05NjdkLTQxYzQtYmY4OS04MDUxNzgwN2UyNmY=
+    cipher: aes-128-gcm
+  - type: ss
+    name: 安徽省+移动数据上网公共出口
+    server: yidong.liulangdiqiu.cyou
+    port: 10720
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0ZDlhZGNjNi05MTRjLTQwY2YtYWZlZC00MmNjOWI5ZjM4MWI=
+    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -576,9 +569,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点1919
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点6
-      - 安徽省移动数据上网公共出口7
+      - 香港香港城市电讯(香港宽频)1
+      - 江苏省镇江市+移动
+      - 安徽省+移动数据上网公共出口
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -628,9 +621,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点1919
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点6
-      - 安徽省移动数据上网公共出口7
+      - 香港香港城市电讯(香港宽频)1
+      - 江苏省镇江市+移动
+      - 安徽省+移动数据上网公共出口
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -679,9 +672,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点1919
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点6
-      - 安徽省移动数据上网公共出口7
+      - 香港香港城市电讯(香港宽频)1
+      - 江苏省镇江市+移动
+      - 安徽省+移动数据上网公共出口
   - name: 📲 电报信息
     type: select
     proxies:
@@ -762,9 +755,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare公司CDN节点1919
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点6
-      - 安徽省移动数据上网公共出口7
+      - 香港香港城市电讯(香港宽频)1
+      - 江苏省镇江市+移动
+      - 安徽省+移动数据上网公共出口
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
