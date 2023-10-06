@@ -1,4 +1,4 @@
-# 更新时间 2023-10-06T18:49:20.226Z
+# 更新时间 2023-10-06T19:01:34.591Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -435,24 +435,36 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /
+      headers:
+        host: bl.shabijichang.com
+    server: bl.shabijichang.com
+    port: 80
+    uuid: 53701585-591f-48a3-9515-8831ed0524ac
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: ss
-    name: 江苏省镇江市+移动
-    server: foshan.chiguayun.cc
+    name: 安徽省+移动数据上网公共出口
+    server: hefei.chiguayun.cc
     port: 27120
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0Y2Y3NTQwOC05NjdkLTQxYzQtYmY4OS04MDUxNzgwN2UyNmY=
     cipher: aes-128-gcm
   - type: ss
-    name: 安徽省+移动数据上网公共出口
-    server: hefei.chiguayun.cc
-    port: 27142
+    name: 美国+V2CROSS.COM
+    server: usshs2.gophers.gay
+    port: 20800
     password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0Y2Y3NTQwOC05NjdkLTQxYzQtYmY4OS04MDUxNzgwN2UyNmY=
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmNWQ5NTAwNS1iZTE0LTQwZmMtYmVkYy1lNGExMTMzYTU3MDE=
     cipher: aes-128-gcm
   - type: vmess
-    name: 广东省移动4
-    server: 183.240.232.82
-    port: 39971
+    name: 安徽省移动数据上网公共出口9
+    server: 112.29.94.22
+    port: 53737
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
@@ -504,9 +516,10 @@ proxy-groups:
       - github.com/freefq-台湾省台北市中华电信20
       - github.com/freefq-俄罗斯21
       - github.com/freefq-美国CloudFlare节点2323
-      - 江苏省镇江市+移动
+      - 美国CloudFlare节点1
       - 安徽省+移动数据上网公共出口
-      - 广东省移动4
+      - 美国+V2CROSS.COM
+      - 安徽省移动数据上网公共出口9
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -554,9 +567,10 @@ proxy-groups:
       - github.com/freefq-台湾省台北市中华电信20
       - github.com/freefq-俄罗斯21
       - github.com/freefq-美国CloudFlare节点2323
-      - 江苏省镇江市+移动
+      - 美国CloudFlare节点1
       - 安徽省+移动数据上网公共出口
-      - 广东省移动4
+      - 美国+V2CROSS.COM
+      - 安徽省移动数据上网公共出口9
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -603,9 +617,10 @@ proxy-groups:
       - github.com/freefq-台湾省台北市中华电信20
       - github.com/freefq-俄罗斯21
       - github.com/freefq-美国CloudFlare节点2323
-      - 江苏省镇江市+移动
+      - 美国CloudFlare节点1
       - 安徽省+移动数据上网公共出口
-      - 广东省移动4
+      - 美国+V2CROSS.COM
+      - 安徽省移动数据上网公共出口9
   - name: 📲 电报信息
     type: select
     proxies:
@@ -684,9 +699,10 @@ proxy-groups:
       - github.com/freefq-台湾省台北市中华电信20
       - github.com/freefq-俄罗斯21
       - github.com/freefq-美国CloudFlare节点2323
-      - 江苏省镇江市+移动
+      - 美国CloudFlare节点1
       - 安徽省+移动数据上网公共出口
-      - 广东省移动4
+      - 美国+V2CROSS.COM
+      - 安徽省移动数据上网公共出口9
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
