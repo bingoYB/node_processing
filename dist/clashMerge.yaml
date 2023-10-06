@@ -1,4 +1,4 @@
-# 更新时间 2023-10-06T06:49:58.677Z
+# 更新时间 2023-10-06T07:02:29.967Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -518,19 +518,18 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: ss
-    name: 江苏省盐城市+移动
-    server: jscm01.celerlink.one
-    port: 41026
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToyNzM5Y2U4NWQzYjllMTQ1
-    cipher: aes-128-gcm
-  - type: ss
-    name: 安徽省+移动数据上网公共出口
-    server: yidong.liulangdiqiu.cyou
-    port: 10719
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo0ZDlhZGNjNi05MTRjLTQwY2YtYWZlZC00MmNjOWI5ZjM4MWI=
-    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /
+      headers:
+        host: lu.wx.alue.link
+    server: 162.159.152.6
+    port: 2052
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -588,8 +587,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2727
-      - 江苏省盐城市+移动
-      - 安徽省+移动数据上网公共出口
+      - 美国CloudFlare节点4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -647,8 +645,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2727
-      - 江苏省盐城市+移动
-      - 安徽省+移动数据上网公共出口
+      - 美国CloudFlare节点4
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -705,8 +702,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2727
-      - 江苏省盐城市+移动
-      - 安徽省+移动数据上网公共出口
+      - 美国CloudFlare节点4
   - name: 📲 电报信息
     type: select
     proxies:
@@ -795,8 +791,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点2424
       - github.com/freefq-美国CloudFlare节点2525
       - github.com/freefq-美国CloudFlare节点2727
-      - 江苏省盐城市+移动
-      - 安徽省+移动数据上网公共出口
+      - 美国CloudFlare节点4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
