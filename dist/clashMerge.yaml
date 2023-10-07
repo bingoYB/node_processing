@@ -1,4 +1,4 @@
-# 更新时间 2023-10-07T18:57:50.206Z
+# 更新时间 2023-10-07T19:14:53.930Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -474,14 +474,14 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点0
+    name: 美国CloudFlare节点1
     ws-opts:
       path: /
       headers:
-        host: bl.shabijichang.com
-    server: bl.shabijichang.com
-    port: 80
-    uuid: 53701585-591f-48a3-9515-8831ed0524ac
+        host: lu.wx.alue.link
+    server: 162.159.152.6
+    port: 2052
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
     alterId: 0
     cipher: auto
     network: ws
@@ -490,13 +490,33 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: sls.shabijichang.com
-    server: 162.159.253.28
+        host: dld.shabijichang.com
+    server: dld.shabijichang.com
     port: 80
-    uuid: 073360d9-72cb-4ba5-9a40-8ac6cd918356
+    uuid: 53701585-591f-48a3-9515-8831ed0524ac
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v001.ssrsub.com
+    server: ns1.v2-vip.fun
+    port: 8080
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 安徽省移动数据上网公共出口6
+    server: 112.29.94.22
+    port: 53737
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -549,8 +569,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-台湾省台北市中华电信17
       - github.com/freefq-美国CloudFlare节点1818
-      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
       - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
+      - 安徽省移动数据上网公共出口6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -603,8 +625,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-台湾省台北市中华电信17
       - github.com/freefq-美国CloudFlare节点1818
-      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
       - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
+      - 安徽省移动数据上网公共出口6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -656,8 +680,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-台湾省台北市中华电信17
       - github.com/freefq-美国CloudFlare节点1818
-      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
       - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
+      - 安徽省移动数据上网公共出口6
   - name: 📲 电报信息
     type: select
     proxies:
@@ -741,8 +767,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-台湾省台北市中华电信17
       - github.com/freefq-美国CloudFlare节点1818
-      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
       - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
+      - 安徽省移动数据上网公共出口6
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
