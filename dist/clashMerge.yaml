@@ -1,4 +1,4 @@
-# 更新时间 2023-10-08T06:59:33.485Z
+# 更新时间 2023-10-08T07:17:02.113Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -811,6 +811,52 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 河南省郑州市+移动
+    server: zz.chaosu999.com
+    port: 40350
+    password: ff0675b0-c665-3d69-800b-f7fc29e1ead8
+    udp: true
+    skip-cert-verify: true
+  - type: ss
+    name: 美国+V2CROSS.COM
+    server: usshs2.gophers.gay
+    port: 20800
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmNWQ5NTAwNS1iZTE0LTQwZmMtYmVkYy1lNGExMTMzYTU3MDE=
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 北京市+移动
+    server: 36.137.198.17
+    port: 10823
+    password: 642e54bf-542f-4c30-9c29-e110587266d8
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /
+      headers:
+        host: lu.wx.alue.link
+    server: 162.159.152.6
+    port: 2052
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国加利福尼亚州洛杉矶PetaExpress9
+    ws-opts:
+      path: /path/1695032909164
+      headers:
+        host: www.65825524.xyz
+    server: 198.2.202.85
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -896,6 +942,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
+      - 河南省郑州市+移动
+      - 美国+V2CROSS.COM
+      - 北京市+移动
+      - 美国CloudFlare节点5
+      - 美国加利福尼亚州洛杉矶PetaExpress9
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -981,6 +1032,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
+      - 河南省郑州市+移动
+      - 美国+V2CROSS.COM
+      - 北京市+移动
+      - 美国CloudFlare节点5
+      - 美国加利福尼亚州洛杉矶PetaExpress9
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1065,6 +1121,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
+      - 河南省郑州市+移动
+      - 美国+V2CROSS.COM
+      - 北京市+移动
+      - 美国CloudFlare节点5
+      - 美国加利福尼亚州洛杉矶PetaExpress9
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1181,6 +1242,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare公司CDN节点1616
       - github.com/freefq-美国CloudFlare节点1717
+      - 河南省郑州市+移动
+      - 美国+V2CROSS.COM
+      - 北京市+移动
+      - 美国CloudFlare节点5
+      - 美国加利福尼亚州洛杉矶PetaExpress9
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
