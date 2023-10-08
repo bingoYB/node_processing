@@ -1,4 +1,4 @@
-# 更新时间 2023-10-07T19:14:53.930Z
+# 更新时间 2023-10-08T01:18:47.701Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -230,12 +230,68 @@ proxies:
       path: /
       tls: false
       mux: true
-  - name: 🇺🇸_US_美国_2
+  - name: 🇩🇪_DE_德国
+    type: trojan
+    server: 54.38.156.210
+    port: 443
+    udp: true
+    password: 1970a7f0-64c0-11ee-8afe-1239d0255272
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_1
     type: vmess
-    server: www.speedtest.net
-    port: 80
+    server: 45.199.138.222
+    port: 30000
     cipher: auto
-    uuid: 62515af2-1dd9-467b-9dd3-774abefb6a62
+    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1696251693048
+      headers:
+        host: www.19229362.xyz
+  - name: 🇭🇰_HK_香港->🇮🇱_IL_以色列
+    type: vmess
+    server: 103.48.169.166
+    port: 57754
+    cipher: auto
+    uuid: a783230b-cd66-4492-9517-7f6cf569e1c9
+    alterId: 0
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vm?ed=2048
+      headers:
+        host: ylsl.kxking.eu.org
+  - name: 🇺🇸_US_美国_2
+    type: trojan
+    server: 15.204.240.119
+    port: 443
+    udp: true
+    password: b53e3f90-64c1-11ee-98ee-1239d0255272
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_3
+    type: vmess
+    server: 67.21.90.5
+    port: 443
+    cipher: auto
+    uuid: 28dd6c26-05a5-4bba-8a5d-052b70ac13b2
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1694429908748
+  - name: 🇺🇸_US_美国->🇱🇺_LU_卢森堡
+    type: vmess
+    server: 104.16.68.38
+    port: 2052
+    cipher: auto
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
     alterId: 0
     tls: false
     skip-cert-verify: true
@@ -243,7 +299,35 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: hu1.xv2ray.net
+        host: lu.wx.alue.link
+  - name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+    type: vmess
+    server: 45.199.138.191
+    port: 30000
+    cipher: auto
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    tls: true
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /path/1696251522438
+      headers:
+        host: www.42077230.xyz
+  - name: 🇺🇸_US_美国_4
+    type: vmess
+    server: singapore.com
+    port: 8080
+    cipher: auto
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v01.ssrsub.com
   - name: 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
     type: vmess
     server: fd.shabijichang.com
@@ -258,90 +342,8 @@ proxies:
       path: /
       headers:
         host: mrb.shabijichang.com
-  - name: 🇺🇸_US_美国_4
-    type: vmess
-    server: 67.21.90.5
-    port: 443
-    cipher: auto
-    uuid: 28dd6c26-05a5-4bba-8a5d-052b70ac13b2
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1694429908748
-  - name: 🇺🇸_US_美国_5
-    type: vmess
-    server: singapore.com
-    port: 80
-    cipher: auto
-    uuid: bffa23aa-ae0a-4c02-af77-2a14c8c0b81c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v002.ssrsub.com
-  - name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-    type: vmess
-    server: 104.17.88.252
-    port: 2082
-    cipher: auto
-    uuid: 6388bd92-6cbc-4b72-a9a6-931f071d0ffa
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /phosphorylative.aurorainiceland.com/nimvws
-      headers:
-        host: erfannewfreenodes.vdmmswyzmzigonvnjk443.workers.dev
-  - name: 🇺🇸_US_美国_6
-    type: vmess
-    server: 45.199.138.222
-    port: 30000
-    cipher: auto
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1696251693048
-      headers:
-        host: www.19229362.xyz
-  - name: 🇺🇸_US_美国_7
-    type: vmess
-    server: lax.asoul-diana.xyz
-    port: 443
-    cipher: auto
-    uuid: 5f726fe3-d82e-4da5-a711-8af0cbb2b682
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /acetaffy
-      headers:
-        host: lax.asoul-diana.xyz
-  - name: 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
-    type: vmess
-    server: 45.199.138.191
-    port: 30000
-    cipher: auto
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1696251522438
-      headers:
-        host: www.42077230.xyz
   - type: vmess
-    name: 更新于:10-0800:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:10-0808:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -349,7 +351,7 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
+    name: github.com/freefq-美国加利福尼亚州圣何塞PEGTECH22
     ws-opts:
       path: /path/1696598013851
       headers:
@@ -362,7 +364,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress22
+    name: github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress33
     ws-opts:
       path: /path/1694859605321
       headers:
@@ -375,7 +377,44 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房44
+    name: github.com/freefq-美国华盛顿Cogent通信公司55
+    ws-opts:
+      path: /path/1696598013851
+      headers:
+        host: www.19458162.xyz
+    server: 38.63.0.80
+    port: 30000
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点77
+    ws-opts:
+      path: /
+      headers:
+        host: it1.xv2ray.net
+    server: www.speedtest.net
+    port: 80
+    uuid: bf75108e-7bec-4fe0-8db9-3d4985dd3bd6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点1111
+    ws-opts:
+      path: /
+      headers:
+        host: jdf.shabijichang.com
+    server: 104.16.117.47
+    port: 80
+    uuid: e8cc06f6-0eff-4c07-9038-8c640650a2ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
     ws-opts:
       path: /path/1696598013851
       headers:
@@ -388,33 +427,14 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点77
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v01.ssrsub.com
-    server: singapore.com
-    port: 8080
-    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: github.com/freefq-俄罗斯12
-    server: ru02.celerlink.one
-    port: 64000
-    password: f8be07e9-4455-463f-ab36-770c5c5a39bb
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1313
+    name: github.com/freefq-美国CloudFlare公司CDN节点1313
     ws-opts:
       path: /
       headers:
-        host: bl.shabijichang.com
-    server: 941.outline-vpn.cloud
+        host: dld.shabijichang.com
+    server: dld.shabijichang.com
     port: 80
-    uuid: a1a676e4-016e-4bf0-96fe-4b6aaf53abc2
+    uuid: 53701585-591f-48a3-9515-8831ed0524ac
     alterId: 0
     cipher: auto
     network: ws
@@ -430,18 +450,13 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1515
-    ws-opts:
-      path: /
-      headers:
-        host: jdf.shabijichang.com
-    server: 104.16.117.47
-    port: 80
-    uuid: e8cc06f6-0eff-4c07-9038-8c640650a2ce
-    alterId: 0
-    cipher: auto
-    network: ws
+  - type: trojan
+    name: github.com/freefq-俄罗斯15
+    server: ru02.celerlink.one
+    port: 64000
+    password: f8be07e9-4455-463f-ab36-770c5c5a39bb
+    udp: true
+    skip-cert-verify: true
   - type: vmess
     name: github.com/freefq-美国CloudFlare节点1616
     ws-opts:
@@ -454,69 +469,50 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: github.com/freefq-台湾省台北市中华电信17
-    server: tw3.411api-snisajdnjkndd.com
-    port: 64000
-    password: f8be07e9-4455-463f-ab36-770c5c5a39bb
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1818
+    name: github.com/freefq-美国CloudFlare节点1717
     ws-opts:
       path: /
       headers:
-        host: sdgrm.shabijichang.com
-    server: 172.67.99.73
+        host: bl.shabijichang.com
+    server: 941.outline-vpn.cloud
     port: 80
-    uuid: 03c88715-2d98-41ea-a327-40b56f1288cc
+    uuid: a1a676e4-016e-4bf0-96fe-4b6aaf53abc2
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 美国+V2CROSS.COM
+    server: usshs2.gophers.gay
+    port: 20800
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmNWQ5NTAwNS1iZTE0LTQwZmMtYmVkYy1lNGExMTMzYTU3MDE=
+    cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点1
+    name: 美国加利福尼亚州洛杉矶市SharkTech数据中心5
     ws-opts:
-      path: /
+      path: /path/080822272914
       headers:
-        host: lu.wx.alue.link
-    server: 162.159.152.6
-    port: 2052
-    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+        host: www.51109057.xyz
+    server: 107.167.16.85
+    port: 443
+    uuid: 7640a1e7-9701-428e-a4b2-19b3e7dd6f9f
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
   - type: vmess
-    name: 美国CloudFlare节点2
+    name: 美国CloudFlare节点6
     ws-opts:
       path: /
       headers:
-        host: dld.shabijichang.com
-    server: dld.shabijichang.com
+        host: fhc.shabijichang.com
+    server: fhc.shabijichang.com
     port: 80
-    uuid: 53701585-591f-48a3-9515-8831ed0524ac
+    uuid: 5e48a497-f4ae-4129-afd6-ba26d75b792a
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 美国CloudFlare节点4
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v001.ssrsub.com
-    server: ns1.v2-vip.fun
-    port: 8080
-    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 安徽省移动数据上网公共出口6
-    server: 112.29.94.22
-    port: 53737
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -549,30 +545,30 @@ proxy-groups:
       - SE_SE_speednode_0024
       - SE_SE_speednode_0025
       - US_US_speednode_0026
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_1
+      - 🇭🇰_HK_香港->🇮🇱_IL_以色列
       - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇱🇺_LU_卢森堡
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
-      - 更新于:10-0800:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-      - github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress22
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房44
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 更新于:10-0808:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH22
+      - github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress33
+      - github.com/freefq-美国华盛顿Cogent通信公司55
       - github.com/freefq-美国CloudFlare公司CDN节点77
-      - github.com/freefq-俄罗斯12
-      - github.com/freefq-美国CloudFlare节点1313
+      - github.com/freefq-美国CloudFlare公司CDN节点1111
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
+      - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1515
+      - github.com/freefq-俄罗斯15
       - github.com/freefq-美国CloudFlare节点1616
-      - github.com/freefq-台湾省台北市中华电信17
-      - github.com/freefq-美国CloudFlare节点1818
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点4
-      - 安徽省移动数据上网公共出口6
+      - github.com/freefq-美国CloudFlare节点1717
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心5
+      - 美国CloudFlare节点6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -605,30 +601,30 @@ proxy-groups:
       - SE_SE_speednode_0024
       - SE_SE_speednode_0025
       - US_US_speednode_0026
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_1
+      - 🇭🇰_HK_香港->🇮🇱_IL_以色列
       - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇱🇺_LU_卢森堡
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
-      - 更新于:10-0800:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-      - github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress22
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房44
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 更新于:10-0808:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH22
+      - github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress33
+      - github.com/freefq-美国华盛顿Cogent通信公司55
       - github.com/freefq-美国CloudFlare公司CDN节点77
-      - github.com/freefq-俄罗斯12
-      - github.com/freefq-美国CloudFlare节点1313
+      - github.com/freefq-美国CloudFlare公司CDN节点1111
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
+      - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1515
+      - github.com/freefq-俄罗斯15
       - github.com/freefq-美国CloudFlare节点1616
-      - github.com/freefq-台湾省台北市中华电信17
-      - github.com/freefq-美国CloudFlare节点1818
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点4
-      - 安徽省移动数据上网公共出口6
+      - github.com/freefq-美国CloudFlare节点1717
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心5
+      - 美国CloudFlare节点6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -660,30 +656,30 @@ proxy-groups:
       - SE_SE_speednode_0024
       - SE_SE_speednode_0025
       - US_US_speednode_0026
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_1
+      - 🇭🇰_HK_香港->🇮🇱_IL_以色列
       - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇱🇺_LU_卢森堡
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
-      - 更新于:10-0800:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-      - github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress22
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房44
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 更新于:10-0808:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH22
+      - github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress33
+      - github.com/freefq-美国华盛顿Cogent通信公司55
       - github.com/freefq-美国CloudFlare公司CDN节点77
-      - github.com/freefq-俄罗斯12
-      - github.com/freefq-美国CloudFlare节点1313
+      - github.com/freefq-美国CloudFlare公司CDN节点1111
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
+      - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1515
+      - github.com/freefq-俄罗斯15
       - github.com/freefq-美国CloudFlare节点1616
-      - github.com/freefq-台湾省台北市中华电信17
-      - github.com/freefq-美国CloudFlare节点1818
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点4
-      - 安徽省移动数据上网公共出口6
+      - github.com/freefq-美国CloudFlare节点1717
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心5
+      - 美国CloudFlare节点6
   - name: 📲 电报信息
     type: select
     proxies:
@@ -747,30 +743,30 @@ proxy-groups:
       - SE_SE_speednode_0024
       - SE_SE_speednode_0025
       - US_US_speednode_0026
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国_1
+      - 🇭🇰_HK_香港->🇮🇱_IL_以色列
       - 🇺🇸_US_美国_2
-      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国->🇱🇺_LU_卢森堡
+      - 🇺🇸_US_美国->🇳🇱_NL_荷兰
       - 🇺🇸_US_美国_4
-      - 🇺🇸_US_美国_5
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_1
-      - 🇺🇸_US_美国_6
-      - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇳🇱_NL_荷兰_2
-      - 更新于:10-0800:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
-      - github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress22
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房44
+      - 🇺🇸_US_美国->🇦🇺_AU_澳大利亚
+      - 更新于:10-0808:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH22
+      - github.com/freefq-美国加利福尼亚州洛杉矶PetaExpress33
+      - github.com/freefq-美国华盛顿Cogent通信公司55
       - github.com/freefq-美国CloudFlare公司CDN节点77
-      - github.com/freefq-俄罗斯12
-      - github.com/freefq-美国CloudFlare节点1313
+      - github.com/freefq-美国CloudFlare公司CDN节点1111
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
+      - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1515
+      - github.com/freefq-俄罗斯15
       - github.com/freefq-美国CloudFlare节点1616
-      - github.com/freefq-台湾省台北市中华电信17
-      - github.com/freefq-美国CloudFlare节点1818
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 美国CloudFlare节点4
-      - 安徽省移动数据上网公共出口6
+      - github.com/freefq-美国CloudFlare节点1717
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶市SharkTech数据中心5
+      - 美国CloudFlare节点6
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
