@@ -1,4 +1,4 @@
-# 更新时间 2023-10-09T06:51:46.104Z
+# 更新时间 2023-10-09T07:09:24.927Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -915,29 +915,52 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 法国+OVH机房SAS硬盘BGP主机
+    server: 149.202.82.172
+    port: 8080
+    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
+    cipher: aes-128-gcm
   - type: vmess
-    name: 德国法兰克福Oracle云计算数据中心0
+    name: 美国V2CROSS.COM6
     ws-opts:
-      path: /
-    server: 130.61.111.167
-    port: 21872
-    uuid: 9a7a75d4-ab7e-4ba0-bbfa-a4acddc18084
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国LeaseWeb数据中心5
-    ws-opts:
-      path: /footers
+      path: /path/1696339269262
       headers:
-        host: www.40587333.xyz
-    server: 23.108.100.103
-    port: 443
+        host: www.39838266.xyz
+    server: 38.26.135.24
+    port: 30000
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: 安徽省移动数据上网公共出口8
+    server: 112.29.94.22
+    port: 53737
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点9
+    ws-opts:
+      path: /
+      headers:
+        host: wnd.shabijichang.com
+    server: 172.64.199.158
+    port: 80
+    uuid: 2e495227-58e3-4bea-a273-7a17bd8a804b
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 英国+伦敦Oracle云计算数据中心
+    server: ukld2.gophers.gay
+    port: 20600
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmNWQ5NTAwNS1iZTE0LTQwZmMtYmVkYy1lNGExMTMzYTU3MDE=
+    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1032,8 +1055,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3131
       - github.com/freefq-美国CloudFlare公司CDN节点3232
       - github.com/freefq-美国CloudFlare节点3434
-      - 德国法兰克福Oracle云计算数据中心0
-      - 美国LeaseWeb数据中心5
+      - 法国+OVH机房SAS硬盘BGP主机
+      - 美国V2CROSS.COM6
+      - 安徽省移动数据上网公共出口8
+      - 美国CloudFlare节点9
+      - 英国+伦敦Oracle云计算数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1128,8 +1154,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3131
       - github.com/freefq-美国CloudFlare公司CDN节点3232
       - github.com/freefq-美国CloudFlare节点3434
-      - 德国法兰克福Oracle云计算数据中心0
-      - 美国LeaseWeb数据中心5
+      - 法国+OVH机房SAS硬盘BGP主机
+      - 美国V2CROSS.COM6
+      - 安徽省移动数据上网公共出口8
+      - 美国CloudFlare节点9
+      - 英国+伦敦Oracle云计算数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1223,8 +1252,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3131
       - github.com/freefq-美国CloudFlare公司CDN节点3232
       - github.com/freefq-美国CloudFlare节点3434
-      - 德国法兰克福Oracle云计算数据中心0
-      - 美国LeaseWeb数据中心5
+      - 法国+OVH机房SAS硬盘BGP主机
+      - 美国V2CROSS.COM6
+      - 安徽省移动数据上网公共出口8
+      - 美国CloudFlare节点9
+      - 英国+伦敦Oracle云计算数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1350,8 +1382,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点3131
       - github.com/freefq-美国CloudFlare公司CDN节点3232
       - github.com/freefq-美国CloudFlare节点3434
-      - 德国法兰克福Oracle云计算数据中心0
-      - 美国LeaseWeb数据中心5
+      - 法国+OVH机房SAS硬盘BGP主机
+      - 美国V2CROSS.COM6
+      - 安徽省移动数据上网公共出口8
+      - 美国CloudFlare节点9
+      - 英国+伦敦Oracle云计算数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
