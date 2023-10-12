@@ -1,4 +1,4 @@
-# 更新时间 2023-10-12T12:58:16.761Z
+# 更新时间 2023-10-12T13:27:53.037Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -201,7 +201,7 @@ proxies:
       path: /
       headers:
         Host: gw.alicdn.com
-  - name: CA_DE_speednode_0018
+  - name: US_DE_speednode_0018
     server: de4.jiedian.stream
     port: 81
     type: vmess
@@ -912,6 +912,13 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 台湾省+中华电信
+    server: bgptwtoora.uds-global.com
+    port: 48004
+    password: ccbdc122-db63-4d56-b995-f3e27fcf4de9
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -935,7 +942,7 @@ proxy-groups:
       - IR_DE_speednode_0015
       - IR_DE_speednode_0016
       - DE_DE_speednode_0017
-      - CA_DE_speednode_0018
+      - US_DE_speednode_0018
       - US_FR_speednode_0019
       - FR_FR_speednode_0020
       - FR_FR_speednode_0021
@@ -998,6 +1005,7 @@ proxy-groups:
       - github.com/freefq-俄罗斯26
       - github.com/freefq-美国CloudFlare公司CDN节点2727
       - github.com/freefq-美国CloudFlare节点2828
+      - 台湾省+中华电信
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1021,7 +1029,7 @@ proxy-groups:
       - IR_DE_speednode_0015
       - IR_DE_speednode_0016
       - DE_DE_speednode_0017
-      - CA_DE_speednode_0018
+      - US_DE_speednode_0018
       - US_FR_speednode_0019
       - FR_FR_speednode_0020
       - FR_FR_speednode_0021
@@ -1084,6 +1092,7 @@ proxy-groups:
       - github.com/freefq-俄罗斯26
       - github.com/freefq-美国CloudFlare公司CDN节点2727
       - github.com/freefq-美国CloudFlare节点2828
+      - 台湾省+中华电信
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1106,7 +1115,7 @@ proxy-groups:
       - IR_DE_speednode_0015
       - IR_DE_speednode_0016
       - DE_DE_speednode_0017
-      - CA_DE_speednode_0018
+      - US_DE_speednode_0018
       - US_FR_speednode_0019
       - FR_FR_speednode_0020
       - FR_FR_speednode_0021
@@ -1169,6 +1178,7 @@ proxy-groups:
       - github.com/freefq-俄罗斯26
       - github.com/freefq-美国CloudFlare公司CDN节点2727
       - github.com/freefq-美国CloudFlare节点2828
+      - 台湾省+中华电信
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1223,7 +1233,7 @@ proxy-groups:
       - IR_DE_speednode_0015
       - IR_DE_speednode_0016
       - DE_DE_speednode_0017
-      - CA_DE_speednode_0018
+      - US_DE_speednode_0018
       - US_FR_speednode_0019
       - FR_FR_speednode_0020
       - FR_FR_speednode_0021
@@ -1286,6 +1296,7 @@ proxy-groups:
       - github.com/freefq-俄罗斯26
       - github.com/freefq-美国CloudFlare公司CDN节点2727
       - github.com/freefq-美国CloudFlare节点2828
+      - 台湾省+中华电信
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
