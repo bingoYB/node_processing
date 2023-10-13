@@ -1,4 +1,4 @@
-# 更新时间 2023-10-13T18:50:02.277Z
+# 更新时间 2023-10-13T19:02:36.992Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -615,6 +615,25 @@ proxies:
     cipher: auto
     network: ws
     tls: true
+  - type: trojan
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 34.255.115.127
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /
+      headers:
+        host: lu.wx.alue.link
+    server: 162.159.140.6
+    port: 2052
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -674,6 +693,8 @@ proxy-groups:
       - github.com/freefq-福建省厦门市金桥网络通信有限公司1111
       - github.com/freefq-日本东京Amazon数据中心1313
       - github.com/freefq-美国CloudFlare节点1414
+      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -733,6 +754,8 @@ proxy-groups:
       - github.com/freefq-福建省厦门市金桥网络通信有限公司1111
       - github.com/freefq-日本东京Amazon数据中心1313
       - github.com/freefq-美国CloudFlare节点1414
+      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点4
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -791,6 +814,8 @@ proxy-groups:
       - github.com/freefq-福建省厦门市金桥网络通信有限公司1111
       - github.com/freefq-日本东京Amazon数据中心1313
       - github.com/freefq-美国CloudFlare节点1414
+      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点4
   - name: 📲 电报信息
     type: select
     proxies:
@@ -881,6 +906,8 @@ proxy-groups:
       - github.com/freefq-福建省厦门市金桥网络通信有限公司1111
       - github.com/freefq-日本东京Amazon数据中心1313
       - github.com/freefq-美国CloudFlare节点1414
+      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
