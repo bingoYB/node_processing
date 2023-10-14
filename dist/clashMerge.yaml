@@ -1,4 +1,4 @@
-# 更新时间 2023-10-14T12:52:06.138Z
+# 更新时间 2023-10-14T13:09:31.768Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -519,41 +519,47 @@ proxies:
     password: cb83adea-440d-4337-ac1c-46e77589051e
     udp: true
     skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /
+    server: mrb2.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /
+      headers:
+        host: sdyg2.shabijichang.com
+    server: sdyg2.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: ss
     name: 法国+国际航空电讯集团公司(SITA)
-    server: 57.128.198.193
+    server: >-
+      www.outline.network.ak1919.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 8388
     password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpZelF3WQ==
     cipher: aes-128-gcm
   - type: vmess
-    name: 安徽省移动数据上网公共出口2
-    server: 112.29.94.22
-    port: 53300
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    name: 美国CloudFlare节点7
+    ws-opts:
+      path: /
+      headers:
+        host: asb2.shabijichang.com
+    server: asb2.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
-    network: auto
-  - type: ss
-    name: 北京市+新国信通信有限公司
-    server: us01.shawbrothersstudio.com
-    port: 19922
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMYW02bWdJMFpuSXFUNDU5Q1RUT0pS
-    cipher: aes-128-gcm
-  - type: ss
-    name: 江苏省淮安市+移动
-    server: starspeed.tbh.iosds.com
-    port: 25854
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphNjkwYmE4MC04N2U5LTQ4ZGEtOTk0NC1lMWY2Y2U4MjM1NGY=
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 安徽省移动数据上网公共出口5
-    server: 112.29.94.22
-    port: 53737
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -608,11 +614,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1515
       - github.com/freefq-俄罗斯16
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点3
       - 法国+国际航空电讯集团公司(SITA)
-      - 安徽省移动数据上网公共出口2
-      - 北京市+新国信通信有限公司
-      - 江苏省淮安市+移动
-      - 安徽省移动数据上网公共出口5
+      - 美国CloudFlare节点7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -667,11 +672,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1515
       - github.com/freefq-俄罗斯16
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点3
       - 法国+国际航空电讯集团公司(SITA)
-      - 安徽省移动数据上网公共出口2
-      - 北京市+新国信通信有限公司
-      - 江苏省淮安市+移动
-      - 安徽省移动数据上网公共出口5
+      - 美国CloudFlare节点7
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -725,11 +729,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1515
       - github.com/freefq-俄罗斯16
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点3
       - 法国+国际航空电讯集团公司(SITA)
-      - 安徽省移动数据上网公共出口2
-      - 北京市+新国信通信有限公司
-      - 江苏省淮安市+移动
-      - 安徽省移动数据上网公共出口5
+      - 美国CloudFlare节点7
   - name: 📲 电报信息
     type: select
     proxies:
@@ -815,11 +818,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1515
       - github.com/freefq-俄罗斯16
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点3
       - 法国+国际航空电讯集团公司(SITA)
-      - 安徽省移动数据上网公共出口2
-      - 北京市+新国信通信有限公司
-      - 江苏省淮安市+移动
-      - 安徽省移动数据上网公共出口5
+      - 美国CloudFlare节点7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
