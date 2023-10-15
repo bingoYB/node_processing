@@ -1,4 +1,4 @@
-# 更新时间 2023-10-15T18:58:59.322Z
+# 更新时间 2023-10-15T19:15:09.894Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -571,6 +571,38 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: 甘肃省兰州市移动3
+    server: b.baozinet.top
+    port: 25010
+    uuid: 50b479e6-888d-42bb-b0dd-0ea9935f7a7e
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /
+      headers:
+        host: xn3.shabijichang.com
+    server: xn3.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /
+      headers:
+        host: hdlb3.shabijichang.com
+    server: hdlb3.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -627,6 +659,9 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市SharkTech数据中心99
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-广东省移动1212
+      - 甘肃省兰州市移动3
+      - 美国CloudFlare节点4
+      - 美国CloudFlare节点6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -683,6 +718,9 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市SharkTech数据中心99
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-广东省移动1212
+      - 甘肃省兰州市移动3
+      - 美国CloudFlare节点4
+      - 美国CloudFlare节点6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -738,6 +776,9 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市SharkTech数据中心99
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-广东省移动1212
+      - 甘肃省兰州市移动3
+      - 美国CloudFlare节点4
+      - 美国CloudFlare节点6
   - name: 📲 电报信息
     type: select
     proxies:
@@ -825,6 +866,9 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市SharkTech数据中心99
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-广东省移动1212
+      - 甘肃省兰州市移动3
+      - 美国CloudFlare节点4
+      - 美国CloudFlare节点6
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
