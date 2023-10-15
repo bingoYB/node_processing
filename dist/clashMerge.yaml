@@ -1,4 +1,4 @@
-# 更新时间 2023-10-15T06:59:29.245Z
+# 更新时间 2023-10-15T07:17:19.780Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -632,6 +632,18 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: 日本东京Amazon数据中心0
+    ws-opts:
+      path: /315d825893fc34aca0231ab967157986
+      headers:
+        host: jxhoisldy718922.starnetcn.top
+    server: kr-cdn-6273819.starnetcn.top
+    port: 31235
+    uuid: 8e73f50a-35cd-4235-9c18-a3e061e7bc9f
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -695,6 +707,7 @@ proxy-groups:
       - github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心1212
       - github.com/freefq-江苏省淮安市移动15
       - github.com/freefq-北京市移动1616
+      - 日本东京Amazon数据中心0
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -758,6 +771,7 @@ proxy-groups:
       - github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心1212
       - github.com/freefq-江苏省淮安市移动15
       - github.com/freefq-北京市移动1616
+      - 日本东京Amazon数据中心0
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -820,6 +834,7 @@ proxy-groups:
       - github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心1212
       - github.com/freefq-江苏省淮安市移动15
       - github.com/freefq-北京市移动1616
+      - 日本东京Amazon数据中心0
   - name: 📲 电报信息
     type: select
     proxies:
@@ -914,6 +929,7 @@ proxy-groups:
       - github.com/freefq-美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心1212
       - github.com/freefq-江苏省淮安市移动15
       - github.com/freefq-北京市移动1616
+      - 日本东京Amazon数据中心0
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
