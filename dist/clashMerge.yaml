@@ -1,4 +1,4 @@
-# 更新时间 2023-10-17T12:58:35.598Z
+# 更新时间 2023-10-17T13:24:01.440Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -323,7 +323,7 @@ proxies:
       path: ''
       tls: false
       mux: true
-  - name: US_JP_speednode_0034
+  - name: JP_JP_speednode_0034
     server: kr-cdn-6273819.starnetcn.top
     port: 53782
     type: vmess
@@ -889,35 +889,17 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点1
+    name: 美国CloudFlare节点4
     ws-opts:
-      path: /
-    server: yhnsb3.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v03.ssrsub.com
+    server: singapore.com
+    port: 8080
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
     alterId: 0
     cipher: auto
     network: ws
-  - type: ss
-    name: 广东省深圳市+移动
-    server: gzcm01.celerlink.one
-    port: 41035
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozNTI1NTg4ZWUxNGVhOTI0
-    cipher: aes-128-gcm
-  - type: ss
-    name: 广东省潮州市+电信
-    server: lmmy04.lma1b2.com
-    port: 50069
-    password: YWVzLTEyOC1nY206OTAxOTZlOWEtZDNmZC00NTBlLWFkNWQtOWJjNDMwZDU2M2Y0
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 安徽省移动数据上网公共出口5
-    server: 112.29.94.22
-    port: 53300
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -953,7 +935,7 @@ proxy-groups:
       - US_HK_speednode_0031
       - SG_HK_speednode_0032
       - SG_HK_speednode_0033
-      - US_JP_speednode_0034
+      - JP_JP_speednode_0034
       - JP_JP_speednode_0035
       - JP_KR_speednode_0036
       - US_NL_speednode_0037
@@ -999,10 +981,7 @@ proxy-groups:
       - github.com/freefq-广东省深圳市移动13
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare节点1515
-      - 美国CloudFlare节点1
-      - 广东省深圳市+移动
-      - 广东省潮州市+电信
-      - 安徽省移动数据上网公共出口5
+      - 美国CloudFlare节点4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1038,7 +1017,7 @@ proxy-groups:
       - US_HK_speednode_0031
       - SG_HK_speednode_0032
       - SG_HK_speednode_0033
-      - US_JP_speednode_0034
+      - JP_JP_speednode_0034
       - JP_JP_speednode_0035
       - JP_KR_speednode_0036
       - US_NL_speednode_0037
@@ -1084,10 +1063,7 @@ proxy-groups:
       - github.com/freefq-广东省深圳市移动13
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare节点1515
-      - 美国CloudFlare节点1
-      - 广东省深圳市+移动
-      - 广东省潮州市+电信
-      - 安徽省移动数据上网公共出口5
+      - 美国CloudFlare节点4
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1122,7 +1098,7 @@ proxy-groups:
       - US_HK_speednode_0031
       - SG_HK_speednode_0032
       - SG_HK_speednode_0033
-      - US_JP_speednode_0034
+      - JP_JP_speednode_0034
       - JP_JP_speednode_0035
       - JP_KR_speednode_0036
       - US_NL_speednode_0037
@@ -1168,10 +1144,7 @@ proxy-groups:
       - github.com/freefq-广东省深圳市移动13
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare节点1515
-      - 美国CloudFlare节点1
-      - 广东省深圳市+移动
-      - 广东省潮州市+电信
-      - 安徽省移动数据上网公共出口5
+      - 美国CloudFlare节点4
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1238,7 +1211,7 @@ proxy-groups:
       - US_HK_speednode_0031
       - SG_HK_speednode_0032
       - SG_HK_speednode_0033
-      - US_JP_speednode_0034
+      - JP_JP_speednode_0034
       - JP_JP_speednode_0035
       - JP_KR_speednode_0036
       - US_NL_speednode_0037
@@ -1284,10 +1257,7 @@ proxy-groups:
       - github.com/freefq-广东省深圳市移动13
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - github.com/freefq-美国CloudFlare节点1515
-      - 美国CloudFlare节点1
-      - 广东省深圳市+移动
-      - 广东省潮州市+电信
-      - 安徽省移动数据上网公共出口5
+      - 美国CloudFlare节点4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
