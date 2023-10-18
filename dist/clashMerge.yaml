@@ -1,4 +1,4 @@
-# 更新时间 2023-10-18T06:50:34.693Z
+# 更新时间 2023-10-18T07:05:48.955Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -970,6 +970,18 @@ proxies:
     port: 41040
     password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozNTI1NTg4ZWUxNGVhOTI0
     cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v001.ssrsub.com
+    server: cf-lt.sharecentre.online
+    port: 8080
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1065,6 +1077,7 @@ proxy-groups:
       - github.com/freefq-广东省移动1717
       - github.com/freefq-广东省移动1919
       - github.com/freefq-广东省深圳市移动20
+      - 美国CloudFlare节点0
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1160,6 +1173,7 @@ proxy-groups:
       - github.com/freefq-广东省移动1717
       - github.com/freefq-广东省移动1919
       - github.com/freefq-广东省深圳市移动20
+      - 美国CloudFlare节点0
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1254,6 +1268,7 @@ proxy-groups:
       - github.com/freefq-广东省移动1717
       - github.com/freefq-广东省移动1919
       - github.com/freefq-广东省深圳市移动20
+      - 美国CloudFlare节点0
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1380,6 +1395,7 @@ proxy-groups:
       - github.com/freefq-广东省移动1717
       - github.com/freefq-广东省移动1919
       - github.com/freefq-广东省深圳市移动20
+      - 美国CloudFlare节点0
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
