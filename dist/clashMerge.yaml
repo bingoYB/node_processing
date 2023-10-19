@@ -1,4 +1,4 @@
-# 更新时间 2023-10-19T12:58:27.818Z
+# 更新时间 2023-10-19T13:28:20.787Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1025,41 +1025,69 @@ proxies:
       path: /
       headers:
         host: se4.shabijichang.com
-    server: 162.159.130.234
+    server: 162.159.134.234
     port: 80
     uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点4
-    server: us-new03.gujuji.top
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v004.ssrsub.com
+    server: singapore.com
     port: 8080
-    uuid: 8f7948ce-2314-42c6-825a-035f0a3291fa
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点6
+    name: 日本东京Amazon数据中心4
     ws-opts:
-      path: /
+      path: /315d825893fc34aca0231ab967157986
       headers:
-        host: ml2.shabijichang.com
-    server: ml2.shabijichang.com
-    port: 80
-    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
+        host: xgui2agy3dq8y.starnetcn.top
+    server: kr-cdn-6273819.starnetcn.top
+    port: 28391
+    uuid: 8e73f50a-35cd-4235-9c18-a3e061e7bc9f
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点7
+    name: 美国CloudFlare节点9
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v002.ssrsub.com
+    server: 172.67.229.17
+    port: 8080
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点10
     ws-opts:
       path: /
       headers:
-        host: se5.shabijichang.com
-    server: se5.shabijichang.com
+        host: lu.wx.alue.link
+    server: 162.159.140.6
+    port: 2052
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点11
+    ws-opts:
+      path: /
+      headers:
+        host: xn3.shabijichang.com
+    server: xn3.shabijichang.com
     port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
     alterId: 0
     cipher: auto
     network: ws
@@ -1169,9 +1197,11 @@ proxy-groups:
       - github.com/freefq-广东省移动1414
       - github.com/freefq-美国CloudFlare节点1515
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点4
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点2
+      - 日本东京Amazon数据中心4
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1278,9 +1308,11 @@ proxy-groups:
       - github.com/freefq-广东省移动1414
       - github.com/freefq-美国CloudFlare节点1515
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点4
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点2
+      - 日本东京Amazon数据中心4
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1386,9 +1418,11 @@ proxy-groups:
       - github.com/freefq-广东省移动1414
       - github.com/freefq-美国CloudFlare节点1515
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点4
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点2
+      - 日本东京Amazon数据中心4
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1526,9 +1560,11 @@ proxy-groups:
       - github.com/freefq-广东省移动1414
       - github.com/freefq-美国CloudFlare节点1515
       - 美国CloudFlare节点0
-      - 美国CloudFlare节点4
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点2
+      - 日本东京Amazon数据中心4
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
