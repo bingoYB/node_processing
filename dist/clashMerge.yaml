@@ -1,4 +1,4 @@
-# 更新时间 2023-10-19T06:50:41.929Z
+# 更新时间 2023-10-19T07:05:41.127Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1016,14 +1016,26 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点7
+    name: 美国CloudFlare节点2
     ws-opts:
       path: /
       headers:
-        host: se4.shabijichang.com
-    server: se4.shabijichang.com
-    port: 80
-    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
+        host: lu.wx.alue.link
+    server: 162.159.140.6
+    port: 2052
+    uuid: fe5edf04-c2af-4ac5-84ee-16d43024decb
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v003.ssrsub.com
+    server: cf-lt.sharecentre.online
+    port: 8080
+    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
     alterId: 0
     cipher: auto
     network: ws
@@ -1132,7 +1144,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-广东省移动2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1238,7 +1251,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-广东省移动2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1343,7 +1357,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-广东省移动2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1480,7 +1495,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-广东省移动2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国CloudFlare节点7
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
