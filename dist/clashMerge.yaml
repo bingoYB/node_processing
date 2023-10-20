@@ -1,4 +1,4 @@
-# 更新时间 2023-10-20T12:57:16.792Z
+# 更新时间 2023-10-20T13:21:25.405Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1143,6 +1143,18 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /
+      headers:
+        host: vcus2.vpn66.eu.org
+    server: lt1.992688.xyz
+    port: 2052
+    uuid: fa5fc74f-0f0b-4221-82ba-dc7cd24e24e5
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1258,6 +1270,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-美国CloudFlare节点1111
       - github.com/freefq-美国CloudFlare节点1414
+      - 美国CloudFlare节点3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1373,6 +1386,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-美国CloudFlare节点1111
       - github.com/freefq-美国CloudFlare节点1414
+      - 美国CloudFlare节点3
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1487,6 +1501,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-美国CloudFlare节点1111
       - github.com/freefq-美国CloudFlare节点1414
+      - 美国CloudFlare节点3
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1633,6 +1648,7 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-美国CloudFlare节点1111
       - github.com/freefq-美国CloudFlare节点1414
+      - 美国CloudFlare节点3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
