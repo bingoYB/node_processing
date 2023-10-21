@@ -1,4 +1,4 @@
-# 更新时间 2023-10-21T06:59:01.985Z
+# 更新时间 2023-10-21T07:16:57.433Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -943,29 +943,50 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 美国CloudFlare节点1
+    name: 德国法尔肯施泰因Hetzner数据中心1
     ws-opts:
-      path: /api/v3/download.getFile
+      path: /MWaylnjCd9p2c5Wlg7tx5HRa
       headers:
-        host: ssrsub.v005.ssrsub.com
-    server: singapore.com
-    port: 8080
-    uuid: d3f830a2-205a-4bba-a7ca-5e87899ac04d
+        host: ir6.v-mizban.info
+    server: ir6.v-mizban.info
+    port: 443
+    uuid: ce400f3c-2ca5-4d4d-8deb-43ac02d5868f
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
   - type: vmess
-    name: 美国CloudFlare节点5
+    name: 美国CloudFlare节点2
     ws-opts:
-      path: /vmess
+      path: /
       headers:
-        host: dk1.xv2ray.net
-    server: 104.18.40.89
+        host: hdlb2.shabijichang.com
+    server: hdlb2.shabijichang.com
     port: 80
-    uuid: 12357ee8-39c0-4256-ad1a-155ea72235d9
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 日本+东京Amazon数据中心
+    server: jp1.downloadvip.cfd
+    port: 443
+    password: 3ed4d5f3-68e9-42fc-978a-22afc2523e5a
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国V2CROSS.COM5
+    ws-opts:
+      path: /
+      headers:
+        host: b5.iraniancp.click
+    server: 104.31.16.196
+    port: 2053
+    uuid: 72f76c36-3e3c-45b3-a61f-d8f017345958
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1064,8 +1085,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点66
       - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国88
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点5
+      - 德国法尔肯施泰因Hetzner数据中心1
+      - 美国CloudFlare节点2
+      - 日本+东京Amazon数据中心
+      - 美国V2CROSS.COM5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1164,8 +1187,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点66
       - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国88
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点5
+      - 德国法尔肯施泰因Hetzner数据中心1
+      - 美国CloudFlare节点2
+      - 日本+东京Amazon数据中心
+      - 美国V2CROSS.COM5
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1263,8 +1288,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点66
       - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国88
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点5
+      - 德国法尔肯施泰因Hetzner数据中心1
+      - 美国CloudFlare节点2
+      - 日本+东京Amazon数据中心
+      - 美国V2CROSS.COM5
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1394,8 +1421,10 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点66
       - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国88
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点5
+      - 德国法尔肯施泰因Hetzner数据中心1
+      - 美国CloudFlare节点2
+      - 日本+东京Amazon数据中心
+      - 美国V2CROSS.COM5
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
