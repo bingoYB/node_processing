@@ -1,4 +1,4 @@
-# 更新时间 2023-10-21T12:52:11.608Z
+# 更新时间 2023-10-21T13:10:26.385Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -953,38 +953,48 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+俄勒冈州波特兰Amazon数据中心
-    server: 52.88.96.195
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 香港阿里云3
+    name: 美国CloudFlare节点0
     ws-opts:
       path: /
       headers:
-        host: n1697765772.izwhvan.cn
-    server: n1697765772.izwhvan.cn
-    port: 443
-    uuid: ba984678-ca81-4443-a9da-58adea43d5b0
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点4
-    ws-opts:
-      path: /
-      headers:
-        host: ml3.shabijichang.com
-    server: ml3.shabijichang.com
+        host: ml2.shabijichang.com
+    server: ml2.shabijichang.com
     port: 80
     uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /
+      headers:
+        host: se5.shabijichang.com
+    server: se5.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /
+    server: hdlb3.shabijichang.com
+    port: 80
+    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 安徽省移动数据上网公共出口7
+    server: 112.29.94.22
+    port: 53300
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1084,9 +1094,10 @@ proxy-groups:
       - github.com/freefq-香港城市电讯有限公司77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - github.com/freefq-美国CloudFlare节点99
-      - 美国+俄勒冈州波特兰Amazon数据中心
-      - 香港阿里云3
-      - 美国CloudFlare节点4
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点6
+      - 安徽省移动数据上网公共出口7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1186,9 +1197,10 @@ proxy-groups:
       - github.com/freefq-香港城市电讯有限公司77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - github.com/freefq-美国CloudFlare节点99
-      - 美国+俄勒冈州波特兰Amazon数据中心
-      - 香港阿里云3
-      - 美国CloudFlare节点4
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点6
+      - 安徽省移动数据上网公共出口7
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1287,9 +1299,10 @@ proxy-groups:
       - github.com/freefq-香港城市电讯有限公司77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - github.com/freefq-美国CloudFlare节点99
-      - 美国+俄勒冈州波特兰Amazon数据中心
-      - 香港阿里云3
-      - 美国CloudFlare节点4
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点6
+      - 安徽省移动数据上网公共出口7
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1420,9 +1433,10 @@ proxy-groups:
       - github.com/freefq-香港城市电讯有限公司77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - github.com/freefq-美国CloudFlare节点99
-      - 美国+俄勒冈州波特兰Amazon数据中心
-      - 香港阿里云3
-      - 美国CloudFlare节点4
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点6
+      - 安徽省移动数据上网公共出口7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
