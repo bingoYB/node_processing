@@ -1,4 +1,4 @@
-# 更新时间 2023-10-22T06:59:38.205Z
+# 更新时间 2023-10-22T07:16:52.240Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -970,6 +970,19 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 瑞典+V2CROSS.COM
+    server: 167.88.61.175
+    port: 8080
+    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 美国+华盛顿Cogent通信公司
+    server: 38.54.33.93
+    port: 59774
+    password: UDjnMps8j7
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1070,6 +1083,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点44
       - github.com/freefq-美国CloudFlare节点55
       - github.com/freefq-美国CloudFlare公司CDN节点66
+      - 瑞典+V2CROSS.COM
+      - 美国+华盛顿Cogent通信公司
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1170,6 +1185,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点44
       - github.com/freefq-美国CloudFlare节点55
       - github.com/freefq-美国CloudFlare公司CDN节点66
+      - 瑞典+V2CROSS.COM
+      - 美国+华盛顿Cogent通信公司
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1269,6 +1286,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点44
       - github.com/freefq-美国CloudFlare节点55
       - github.com/freefq-美国CloudFlare公司CDN节点66
+      - 瑞典+V2CROSS.COM
+      - 美国+华盛顿Cogent通信公司
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1400,6 +1419,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点44
       - github.com/freefq-美国CloudFlare节点55
       - github.com/freefq-美国CloudFlare公司CDN节点66
+      - 瑞典+V2CROSS.COM
+      - 美国+华盛顿Cogent通信公司
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
