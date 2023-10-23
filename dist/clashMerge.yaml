@@ -1,4 +1,4 @@
-# 更新时间 2023-10-23T18:48:05.655Z
+# 更新时间 2023-10-23T19:01:08.938Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -296,7 +296,7 @@ proxies:
       path:
         - /
     udp: true
-  - name: US_US_speednode_0033
+  - name: US_speednode_0033
     server: cfcdn3.sanfencdn9.com
     port: 80
     type: vmess
@@ -752,23 +752,115 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: ss
-    name: 瑞典+V2CROSS.COM
-    server: 167.88.61.175
-    port: 5000
-    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
-    cipher: aes-128-gcm
   - type: vmess
-    name: 美国加利福尼亚州洛杉矶CoperationColoction数据中心7
+    name: 香港城市电讯有限公司0
+    ws-opts:
+      path: /hkbn
+      headers:
+        host: sanmao17.hkbn.n.optage.moe
+    server: hktddns.aikunapp.com
+    port: 80
+    uuid: 1e63f999-7553-46c0-93eb-65b6553e1bde
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点2
     ws-opts:
       path: /
-    server: rontall.com
-    port: 13856
-    uuid: 20be612e-3fcb-491e-85fb-477bca86a652
+      headers:
+        host: xjp3.shabijichang.com
+    server: xjp3.shabijichang.com
+    port: 80
+    uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /
+      headers:
+        host: a.109420.xyz
+    server: 104.17.18.26
+    port: 80
+    uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 广东省移动5
+    server: www.lp-airdrop.top
+    port: 12580
+    uuid: 1296f28f-fbc3-41a0-800d-84e236d33f16
     alterId: 0
     cipher: auto
     network: auto
     tls: true
+  - type: vmess
+    name: 乌克兰V2CROSS.COM6
+    ws-opts:
+      path: /
+    server: 5.182.37.119
+    port: 12581
+    uuid: 51554d87-7fd0-4dd1-9277-bcbb2d12b64b
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 香港阿里云9
+    ws-opts:
+      path: /
+      headers:
+        host: n1697765772.izwhvan.cn
+    server: n1697765772.izwhvan.cn
+    port: 443
+    uuid: ba984678-ca81-4443-a9da-58adea43d5b0
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国加利福尼亚州圣何塞PEGTECH10
+    server: 142.4.125.84
+    port: 59614
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国新泽西州皮斯卡特维Choopa数据中心13
+    ws-opts:
+      path: /ws234
+    server: britishhulu2023.xyz
+    port: 12515
+    uuid: c658f812-6b59-451d-b44a-bfe170895b5a
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点17
+    ws-opts:
+      path: /
+      headers:
+        host: fi1.xv2ray.net
+    server: 104.18.203.232
+    port: 80
+    uuid: 4d868558-0166-4083-baf0-720daf24f6e6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 安徽省移动数据上网公共出口18
+    ws-opts:
+      path: /
+    server: 112.29.94.22
+    port: 53300
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -804,7 +896,7 @@ proxy-groups:
       - TR_TR_speednode_0029
       - CN_US_speednode_0030
       - DE_US_speednode_0031
-      - US_US_speednode_0033
+      - US_speednode_0033
       - US_US_speednode_0034
       - US_US_speednode_0035
       - US_US_speednode_0036
@@ -839,8 +931,16 @@ proxy-groups:
       - github.com/freefq-美国AmazonEC2服务器77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - github.com/freefq-美国CloudFlare公司CDN节点1010
-      - 瑞典+V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心7
+      - 香港城市电讯有限公司0
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
+      - 广东省移动5
+      - 乌克兰V2CROSS.COM6
+      - 香港阿里云9
+      - 美国加利福尼亚州圣何塞PEGTECH10
+      - 美国新泽西州皮斯卡特维Choopa数据中心13
+      - 美国CloudFlare节点17
+      - 安徽省移动数据上网公共出口18
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -876,7 +976,7 @@ proxy-groups:
       - TR_TR_speednode_0029
       - CN_US_speednode_0030
       - DE_US_speednode_0031
-      - US_US_speednode_0033
+      - US_speednode_0033
       - US_US_speednode_0034
       - US_US_speednode_0035
       - US_US_speednode_0036
@@ -911,8 +1011,16 @@ proxy-groups:
       - github.com/freefq-美国AmazonEC2服务器77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - github.com/freefq-美国CloudFlare公司CDN节点1010
-      - 瑞典+V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心7
+      - 香港城市电讯有限公司0
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
+      - 广东省移动5
+      - 乌克兰V2CROSS.COM6
+      - 香港阿里云9
+      - 美国加利福尼亚州圣何塞PEGTECH10
+      - 美国新泽西州皮斯卡特维Choopa数据中心13
+      - 美国CloudFlare节点17
+      - 安徽省移动数据上网公共出口18
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -947,7 +1055,7 @@ proxy-groups:
       - TR_TR_speednode_0029
       - CN_US_speednode_0030
       - DE_US_speednode_0031
-      - US_US_speednode_0033
+      - US_speednode_0033
       - US_US_speednode_0034
       - US_US_speednode_0035
       - US_US_speednode_0036
@@ -982,8 +1090,16 @@ proxy-groups:
       - github.com/freefq-美国AmazonEC2服务器77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - github.com/freefq-美国CloudFlare公司CDN节点1010
-      - 瑞典+V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心7
+      - 香港城市电讯有限公司0
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
+      - 广东省移动5
+      - 乌克兰V2CROSS.COM6
+      - 香港阿里云9
+      - 美国加利福尼亚州圣何塞PEGTECH10
+      - 美国新泽西州皮斯卡特维Choopa数据中心13
+      - 美国CloudFlare节点17
+      - 安徽省移动数据上网公共出口18
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1050,7 +1166,7 @@ proxy-groups:
       - TR_TR_speednode_0029
       - CN_US_speednode_0030
       - DE_US_speednode_0031
-      - US_US_speednode_0033
+      - US_speednode_0033
       - US_US_speednode_0034
       - US_US_speednode_0035
       - US_US_speednode_0036
@@ -1085,8 +1201,16 @@ proxy-groups:
       - github.com/freefq-美国AmazonEC2服务器77
       - github.com/freefq-美国CloudFlare公司CDN节点88
       - github.com/freefq-美国CloudFlare公司CDN节点1010
-      - 瑞典+V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶CoperationColoction数据中心7
+      - 香港城市电讯有限公司0
+      - 美国CloudFlare节点2
+      - 美国CloudFlare节点4
+      - 广东省移动5
+      - 乌克兰V2CROSS.COM6
+      - 香港阿里云9
+      - 美国加利福尼亚州圣何塞PEGTECH10
+      - 美国新泽西州皮斯卡特维Choopa数据中心13
+      - 美国CloudFlare节点17
+      - 安徽省移动数据上网公共出口18
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
