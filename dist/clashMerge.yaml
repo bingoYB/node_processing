@@ -1,4 +1,4 @@
-# 更新时间 2023-10-25T12:56:21.464Z
+# 更新时间 2023-10-25T13:20:09.269Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -541,53 +541,37 @@ proxies:
       path: /
       headers:
         host: se5.shabijichang.com
-    server: 104.16.67.38
-    port: 80
-    uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 日本东京Amazon数据中心3
-    ws-opts:
-      path: /
-    server: jp6.lianpi.xyz
-    port: 23234
-    uuid: 9269fb97-4fa8-472a-9e77-76b6a641142a
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点5
-    ws-opts:
-      path: /
-      headers:
-        host: asb2.shabijichang.com
-    server: asb2.shabijichang.com
+    server: se5.shabijichang.com
     port: 80
     uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 美国滴滴盾CN2高防节点(dididun.com)10
-    ws-opts:
-      path: /path/1697980101249
-      headers:
-        host: www.37419052.xyz
-    server: 137.175.3.44
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
   - type: ss
     name: 瑞典+V2CROSS.COM
     server: 167.88.61.175
-    port: 5500
+    port: 8080
     password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
     cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
+      headers:
+        host: fr7.tehme100.fun
+    server: 172.67.229.31
+    port: 8880
+    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: 146.190.105.71
+    port: 57188
+    password: i3cr41dgw2
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -646,10 +630,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare公司CDN节点44
       - 美国CloudFlare节点1
-      - 日本东京Amazon数据中心3
-      - 美国CloudFlare节点5
-      - 美国滴滴盾CN2高防节点(dididun.com)10
       - 瑞典+V2CROSS.COM
+      - 美国CloudFlare节点6
+      - 美国+V2CROSS.COM
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -708,10 +691,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare公司CDN节点44
       - 美国CloudFlare节点1
-      - 日本东京Amazon数据中心3
-      - 美国CloudFlare节点5
-      - 美国滴滴盾CN2高防节点(dididun.com)10
       - 瑞典+V2CROSS.COM
+      - 美国CloudFlare节点6
+      - 美国+V2CROSS.COM
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -769,10 +751,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare公司CDN节点44
       - 美国CloudFlare节点1
-      - 日本东京Amazon数据中心3
-      - 美国CloudFlare节点5
-      - 美国滴滴盾CN2高防节点(dididun.com)10
       - 瑞典+V2CROSS.COM
+      - 美国CloudFlare节点6
+      - 美国+V2CROSS.COM
   - name: 📲 电报信息
     type: select
     proxies:
@@ -862,10 +843,9 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare公司CDN节点44
       - 美国CloudFlare节点1
-      - 日本东京Amazon数据中心3
-      - 美国CloudFlare节点5
-      - 美国滴滴盾CN2高防节点(dididun.com)10
       - 瑞典+V2CROSS.COM
+      - 美国CloudFlare节点6
+      - 美国+V2CROSS.COM
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
