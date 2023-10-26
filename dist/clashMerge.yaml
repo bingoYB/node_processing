@@ -1,4 +1,4 @@
-# 更新时间 2023-10-26T06:48:49.605Z
+# 更新时间 2023-10-26T07:02:18.489Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1174,7 +1174,25 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点0
+    name: 美国滴滴盾CN2高防节点(dididun.com)0
+    ws-opts:
+      path: /path/1697980101249
+    server: 137.175.3.44
+    port: 30000
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: trojan
+    name: 立陶宛+V2CROSS.COM
+    server: 212.24.103.3
+    port: 2053
+    password: 2228e29d-942a-4ee8-b3c0-f4a846e3f355
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点5
     ws-opts:
       path: /
       headers:
@@ -1186,65 +1204,14 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点1
-    ws-opts:
-      path: /
-      headers:
-        host: fi1.xv2ray.net
-    server: 104.18.203.232
-    port: 80
-    uuid: 4d868558-0166-4083-baf0-720daf24f6e6
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点3
-    ws-opts:
-      path: /speedtest/Kansas.bobbykotick.rip
-      headers:
-        host: telegram.surfboardv2ray8830.workers.dev
-    server: 104.26.13.54
-    port: 443
-    uuid: 1F7C900A-6AD7-41CF-A37E-85873E566C40
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点5
-    ws-opts:
-      path: /
-      headers:
-        host: se5.shabijichang.com
-    server: se5.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国V2CROSS.COM6
-    ws-opts:
-      path: /htxjvws
-      headers:
-        host: s3.folow-r18.cfd
-    server: Jolimolilap.com
-    port: 443
-    uuid: f56ac10a-dee3-4fa8-aee5-f16a20e442b1
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 安徽省移动数据上网公共出口9
-    ws-opts:
-      path: /
-    server: 112.29.94.22
-    port: 53300
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    name: 广东省移动6
+    server: www.lp-airdrop.top
+    port: 12580
+    uuid: 1296f28f-fbc3-41a0-800d-84e236d33f16
     alterId: 0
     cipher: auto
     network: auto
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1342,12 +1309,10 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1414
-      - 美国CloudFlare节点0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点3
+      - 美国滴滴盾CN2高防节点(dididun.com)0
+      - 立陶宛+V2CROSS.COM
       - 美国CloudFlare节点5
-      - 美国V2CROSS.COM6
-      - 安徽省移动数据上网公共出口9
+      - 广东省移动6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1445,12 +1410,10 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1414
-      - 美国CloudFlare节点0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点3
+      - 美国滴滴盾CN2高防节点(dididun.com)0
+      - 立陶宛+V2CROSS.COM
       - 美国CloudFlare节点5
-      - 美国V2CROSS.COM6
-      - 安徽省移动数据上网公共出口9
+      - 广东省移动6
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1547,12 +1510,10 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1414
-      - 美国CloudFlare节点0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点3
+      - 美国滴滴盾CN2高防节点(dididun.com)0
+      - 立陶宛+V2CROSS.COM
       - 美国CloudFlare节点5
-      - 美国V2CROSS.COM6
-      - 安徽省移动数据上网公共出口9
+      - 广东省移动6
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1681,12 +1642,10 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1414
-      - 美国CloudFlare节点0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点3
+      - 美国滴滴盾CN2高防节点(dididun.com)0
+      - 立陶宛+V2CROSS.COM
       - 美国CloudFlare节点5
-      - 美国V2CROSS.COM6
-      - 安徽省移动数据上网公共出口9
+      - 广东省移动6
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
