@@ -1,4 +1,4 @@
-# 更新时间 2023-10-27T01:12:32.174Z
+# 更新时间 2023-10-27T06:22:58.077Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -6,7 +6,7 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - name: DE_AU_speednode_0001
+  - name: AU_AU_speednode_0001
     server: masting.xyz
     port: 8080
     type: ss
@@ -415,20 +415,33 @@ proxies:
         Host: dl.kgvn.garenanow.com
   - name: 🇺🇸_US_美国_1
     type: vmess
-    server: fhc2.shabijichang.com
-    port: 80
+    server: 206.168.190.219
+    port: 2082
     cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: e31ca750-71f7-11ee-b920-1239d0255272
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      headers:
-        host: fhc2.shabijichang.com
-  - name: 🇺🇸_US_美国->🇬🇧_GB_英国
+      path: /vmws
+  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
     type: vmess
-    server: ld2.shabijichang.com
+    server: 192.203.230.229
+    port: 2052
+    cipher: auto
+    uuid: a4c481f0-1cf1-47b2-bf66-ab563daa29ba
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /public?ed=2048
+      headers:
+        host: de3.biqibao.site
+  - name: 🇺🇸_US_美国_2
+    type: vmess
+    server: 104.21.75.246
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -439,8 +452,8 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: ld2.shabijichang.com
-  - name: 🇺🇸_US_美国_2
+        host: sbl2.shabijichang.com
+  - name: 🇺🇸_US_美国_3
     type: vmess
     server: 107.167.16.85
     port: 443
@@ -454,18 +467,19 @@ proxies:
       path: /path/080822272914
       headers:
         host: www.51109057.xyz
-  - name: 🇬🇧_GB_英国
+  - name: 🇵🇰_PK_巴基斯坦
     type: trojan
-    server: 13.41.180.122
-    port: 22222
+    server: >-
+      hk1-reality.fp3kemyh-cm4s-2hak-2gb9-w3534umy2sq5.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 443
     udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
+    password: 7e23957d-535a-4dc6-9482-e6f44518da87
+    sni: 13-231-155-134.nhost.00cdn.com
     skip-cert-verify: true
     network: tcp
-  - name: 🇺🇸_US_美国_4
+  - name: 🇺🇸_US_美国->🇮🇳_IN_印度_1
     type: vmess
-    server: sbl2.shabijichang.com
+    server: hdlb2.shabijichang.com
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -476,7 +490,35 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: sbl2.shabijichang.com
+        host: hdlb2.shabijichang.com
+  - name: 🇺🇸_US_美国->🇮🇳_IN_印度_2
+    type: vmess
+    server: 104.26.8.44
+    port: 80
+    cipher: auto
+    uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: a.109420.xyz
+  - name: 🇺🇸_US_美国_4
+    type: vmess
+    server: cfcdn1.sanfencdn9.com
+    port: 2052
+    cipher: auto
+    uuid: ece26ec7-bcfe-4845-8cf1-3d93abc19ce1
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /video/nYAwpBbW
+      headers:
+        host: us5a3a71b5c.pkmkwvxqnn.xyz
   - name: 🇺🇸_US_美国_5
     type: vmess
     server: jd2.shabijichang.com
@@ -491,44 +533,23 @@ proxies:
       path: /
       headers:
         host: jd2.shabijichang.com
-  - name: 🇩🇪_DE_德国
-    type: trojan
-    server: 18.153.119.231
-    port: 22222
-    udp: true
-    password: telegram-id-directvpn
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇸_US_美国_6
+  - name: 🇺🇸_US_美国->🇮🇳_IN_印度_3
     type: vmess
-    server: 45.199.138.186
-    port: 30000
+    server: 104.17.18.26
+    port: 80
     cipher: auto
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 64
-    tls: true
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /path/1696682720138
-      headers:
-        host: www.19229362.xyz
-  - name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: cadld2.gophers.gay
-    port: 21106
-    cipher: auto
-    uuid: 6713cd03-2cd4-49e9-9d8a-b768ee0a72fb
+    uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
       path: /
-  - name: 🇺🇸_US_美国->🇩🇪_DE_德国
+      headers:
+        host: a.109420.xyz
+  - name: 🇺🇸_US_美国->🇮🇳_IN_印度_4
     type: vmess
-    server: flkf2.shabijichang.com
+    server: mm2.shabijichang.com
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -539,7 +560,44 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: flkf2.shabijichang.com
+        host: mm2.shabijichang.com
+  - name: 🇺🇸_US_美国->🇸🇦_SA_沙特阿拉伯
+    type: vmess
+    server: jd3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: jd3.shabijichang.com
+  - name: 🇩🇪_DE_德国
+    type: trojan
+    server: 3.120.63.163
+    port: 22222
+    udp: true
+    password: telegram-id-directvpn
+    sni: trj.rollingnext.co.uk
+    skip-cert-verify: true
+    network: tcp
+  - name: 🇺🇸_US_美国_6
+    type: vmess
+    server: wnd3.shabijichang.com
+    port: 80
+    cipher: auto
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        host: wnd3.shabijichang.com
   - name: 🇺🇸_US_美国_7
     type: vmess
     server: wnd2.shabijichang.com
@@ -554,36 +612,8 @@ proxies:
       path: /
       headers:
         host: wnd2.shabijichang.com
-  - name: 🇺🇸_US_美国->🇮🇳_IN_印度
-    type: vmess
-    server: mm3.shabijichang.com
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mm3.shabijichang.com
-  - name: 🇺🇸_US_美国_9
-    type: vmess
-    server: 104.21.75.246
-    port: 80
-    cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: sbl2.shabijichang.com
   - type: vmess
-    name: 更新于:10-2708:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:10-2712:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -591,20 +621,56 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点11
+    name: github.com/freefq-美国CloudFlare公司CDN节点55
     ws-opts:
-      path: /946915f4-b72d-4193-9c4f-1efeda1c0c21
+      path: /
       headers:
-        host: us2.wxgqlfx883.xyz
-    server: 104.19.168.117
+        host: fi1.xv2ray.net
+    server: 104.18.202.232
+    port: 80
+    uuid: 4d868558-0166-4083-baf0-720daf24f6e6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点66
+    ws-opts:
+      path: /jkypvws
+      headers:
+        host: s4.folow-r18.cfd
+    server: Jolimolilap.com
     port: 443
-    uuid: 946915f4-b72d-4193-9c4f-1efeda1c0c21
+    uuid: e7ecdfa4-3e09-44a6-91e9-0e34c140be3b
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房55
+    name: github.com/freefq-美国CloudFlare公司CDN节点77
+    ws-opts:
+      path: /
+      headers:
+        host: dk1.xv2ray.net
+    server: 104.18.40.89
+    port: 80
+    uuid: 12357ee8-39c0-4256-ad1a-155ea72235d9
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点88
+    ws-opts:
+      path: /
+      headers:
+        host: it1.xv2ray.net
+    server: www.speedtest.net
+    port: 80
+    uuid: bf75108e-7bec-4fe0-8db9-3d4985dd3bd6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1010
     ws-opts:
       path: /path/1696251522438
       headers:
@@ -617,74 +683,68 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点66
+    name: github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
     ws-opts:
-      path: /
-      headers:
-        host: hu1.xv2ray.net
-    server: www.speedtest.net
-    port: 80
-    uuid: 62515af2-1dd9-467b-9dd3-774abefb6a62
+      path: /path/1697376782879
+    server: 45.199.138.186
+    port: 30000
+    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点88
-    ws-opts:
-      path: /
-      headers:
-        host: a.109420.xyz
-    server: 104.17.18.26
-    port: 80
-    uuid: 5180444a-4756-43b4-960b-49eb9052e4e8
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1010
-    ws-opts:
-      path: /
-      headers:
-        host: fi1.xv2ray.net
-    server: 104.18.202.232
-    port: 80
-    uuid: 4d868558-0166-4083-baf0-720daf24f6e6
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1111
-    ws-opts:
-      path: /
-      headers:
-        host: se5.shabijichang.com
-    server: 104.16.67.38
-    port: 80
-    uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-广东省移动1313
-    server: www.lp-airdrop.top
-    port: 12580
-    uuid: 1296f28f-fbc3-41a0-800d-84e236d33f16
-    alterId: 0
-    cipher: auto
-    network: auto
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1414
+    name: github.com/freefq-印度1313
     ws-opts:
-      path: /
-    server: jd3.shabijichang.com
+      path: /vpngiare.net
+    server: 103.70.115.21
     port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: 831596b2-fed1-4239-af88-e0630394545a
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 瑞典+V2CROSS.COM
+    server: 167.88.61.175
+    port: 5004
+    password: YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: ca6.tehme100.fun
+    server: 172.67.229.34
+    port: 2086
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1616
+    name: 美国CloudFlare节点9
+    ws-opts:
+      path: /au1?ed=2048
+    server: au1.cou.gay
+    port: 443
+    uuid: 86e54c96-97b7-43a6-8f97-74d637887675
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点10
+    ws-opts:
+      path: /it1?ed=2048
+    server: it1.cou.gay
+    port: 443
+    uuid: 86e54c96-97b7-43a6-8f97-74d637887675
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点11
     ws-opts:
       path: /
       headers:
@@ -695,72 +755,64 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点12
+    ws-opts:
+      path: /
+      headers:
+        host: flkf2.shabijichang.com
+    server: flkf2.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国V2CROSS.COM13
+    ws-opts:
+      path: /path/1697980101249
+      headers:
+        host: www.39838266.xyz
+    server: 38.26.135.25
+    port: 30000
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
   - type: trojan
     name: 英国+伦敦Amazon数据中心
-    server: 52.56.170.248
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 德国+黑森州法兰克福Amazon数据中心
-    server: 35.157.14.187
+    server: 3.9.154.124
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 印度V2CROSS.COM4
+    name: 美国CloudFlare节点18
     ws-opts:
-      path: /vpngiare.net
-    server: 103.70.115.21
-    port: 80
-    uuid: 831596b2-fed1-4239-af88-e0630394545a
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 印度V2CROSS.COM6
-    ws-opts:
-      path: /vpngiare.net
-    server: 103.70.115.20
-    port: 80
-    uuid: 831596b2-fed1-4239-af88-e0630394545a
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点7
-    ws-opts:
-      path: /video/nYAwpBbW
+      path: /
       headers:
-        host: us5a3a71b5c.pkmkwvxqnn.xyz
-    server: cfcdn1.sanfencdn9.com
-    port: 2052
-    uuid: ece26ec7-bcfe-4845-8cf1-3d93abc19ce1
+        host: yhnsb3.shabijichang.com
+    server: yhnsb3.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
     network: ws
   - type: trojan
-    name: 美国+Xerox
-    server: 13.50.25.135
+    name: 美国+Amazon+EC2服务器
+    server: 3.75.31.251
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
-  - type: ss
-    name: 瑞典+V2CROSS.COM
-    server: 167.88.61.175
-    port: 8090
-    password: YWVzLTI1Ni1nY206UENubkg2U1FTbmZvUzI3
-    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - DE_AU_speednode_0001
+      - AU_AU_speednode_0001
       - CN_CN_speednode_0002
       - CN_CN_speednode_0003
       - CN_CN_speednode_0004
@@ -800,42 +852,45 @@ proxy-groups:
       - IN_speednode_0044
       - speednode_0045
       - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_3
+      - 🇵🇰_PK_巴基斯坦
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_1
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_2
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_3
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_4
+      - 🇺🇸_US_美国->🇸🇦_SA_沙特阿拉伯
       - 🇩🇪_DE_德国
       - 🇺🇸_US_美国_6
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇮🇳_IN_印度
-      - 🇺🇸_US_美国_9
-      - 更新于:10-2708:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国CloudFlare公司CDN节点11
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房55
+      - 更新于:10-2712:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国CloudFlare公司CDN节点55
       - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国CloudFlare公司CDN节点88
-      - github.com/freefq-美国CloudFlare公司CDN节点1010
-      - github.com/freefq-美国CloudFlare公司CDN节点1111
-      - github.com/freefq-广东省移动1313
-      - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1616
-      - 英国+伦敦Amazon数据中心
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 印度V2CROSS.COM4
-      - 印度V2CROSS.COM6
-      - 美国CloudFlare节点7
-      - 美国+Xerox
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1010
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
+      - github.com/freefq-印度1313
       - 瑞典+V2CROSS.COM
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点12
+      - 美国V2CROSS.COM13
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点18
+      - 美国+Amazon+EC2服务器
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - DE_AU_speednode_0001
+      - AU_AU_speednode_0001
       - CN_CN_speednode_0002
       - CN_CN_speednode_0003
       - CN_CN_speednode_0004
@@ -875,41 +930,44 @@ proxy-groups:
       - IN_speednode_0044
       - speednode_0045
       - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_3
+      - 🇵🇰_PK_巴基斯坦
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_1
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_2
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_3
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_4
+      - 🇺🇸_US_美国->🇸🇦_SA_沙特阿拉伯
       - 🇩🇪_DE_德国
       - 🇺🇸_US_美国_6
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇮🇳_IN_印度
-      - 🇺🇸_US_美国_9
-      - 更新于:10-2708:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国CloudFlare公司CDN节点11
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房55
+      - 更新于:10-2712:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国CloudFlare公司CDN节点55
       - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国CloudFlare公司CDN节点88
-      - github.com/freefq-美国CloudFlare公司CDN节点1010
-      - github.com/freefq-美国CloudFlare公司CDN节点1111
-      - github.com/freefq-广东省移动1313
-      - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1616
-      - 英国+伦敦Amazon数据中心
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 印度V2CROSS.COM4
-      - 印度V2CROSS.COM6
-      - 美国CloudFlare节点7
-      - 美国+Xerox
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1010
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
+      - github.com/freefq-印度1313
       - 瑞典+V2CROSS.COM
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点12
+      - 美国V2CROSS.COM13
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点18
+      - 美国+Amazon+EC2服务器
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - DE_AU_speednode_0001
+      - AU_AU_speednode_0001
       - CN_CN_speednode_0002
       - CN_CN_speednode_0003
       - CN_CN_speednode_0004
@@ -949,35 +1007,38 @@ proxy-groups:
       - IN_speednode_0044
       - speednode_0045
       - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_3
+      - 🇵🇰_PK_巴基斯坦
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_1
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_2
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_3
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_4
+      - 🇺🇸_US_美国->🇸🇦_SA_沙特阿拉伯
       - 🇩🇪_DE_德国
       - 🇺🇸_US_美国_6
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇮🇳_IN_印度
-      - 🇺🇸_US_美国_9
-      - 更新于:10-2708:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国CloudFlare公司CDN节点11
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房55
+      - 更新于:10-2712:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国CloudFlare公司CDN节点55
       - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国CloudFlare公司CDN节点88
-      - github.com/freefq-美国CloudFlare公司CDN节点1010
-      - github.com/freefq-美国CloudFlare公司CDN节点1111
-      - github.com/freefq-广东省移动1313
-      - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1616
-      - 英国+伦敦Amazon数据中心
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 印度V2CROSS.COM4
-      - 印度V2CROSS.COM6
-      - 美国CloudFlare节点7
-      - 美国+Xerox
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1010
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
+      - github.com/freefq-印度1313
       - 瑞典+V2CROSS.COM
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点12
+      - 美国V2CROSS.COM13
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点18
+      - 美国+Amazon+EC2服务器
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1015,7 +1076,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - DE_AU_speednode_0001
+      - AU_AU_speednode_0001
       - CN_CN_speednode_0002
       - CN_CN_speednode_0003
       - CN_CN_speednode_0004
@@ -1055,35 +1116,38 @@ proxy-groups:
       - IN_speednode_0044
       - speednode_0045
       - 🇺🇸_US_美国_1
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
+      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇬🇧_GB_英国
+      - 🇺🇸_US_美国_3
+      - 🇵🇰_PK_巴基斯坦
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_1
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_2
       - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国_5
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_3
+      - 🇺🇸_US_美国->🇮🇳_IN_印度_4
+      - 🇺🇸_US_美国->🇸🇦_SA_沙特阿拉伯
       - 🇩🇪_DE_德国
       - 🇺🇸_US_美国_6
-      - 🇨🇦_CA_加拿大
-      - 🇺🇸_US_美国->🇩🇪_DE_德国
       - 🇺🇸_US_美国_7
-      - 🇺🇸_US_美国->🇮🇳_IN_印度
-      - 🇺🇸_US_美国_9
-      - 更新于:10-2708:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国CloudFlare公司CDN节点11
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房55
+      - 更新于:10-2712:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国CloudFlare公司CDN节点55
       - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国CloudFlare公司CDN节点88
-      - github.com/freefq-美国CloudFlare公司CDN节点1010
-      - github.com/freefq-美国CloudFlare公司CDN节点1111
-      - github.com/freefq-广东省移动1313
-      - github.com/freefq-美国CloudFlare节点1414
-      - github.com/freefq-美国CloudFlare公司CDN节点1616
-      - 英国+伦敦Amazon数据中心
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 印度V2CROSS.COM4
-      - 印度V2CROSS.COM6
-      - 美国CloudFlare节点7
-      - 美国+Xerox
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1010
+      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房1212
+      - github.com/freefq-印度1313
       - 瑞典+V2CROSS.COM
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点12
+      - 美国V2CROSS.COM13
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点18
+      - 美国+Amazon+EC2服务器
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
