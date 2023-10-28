@@ -1,4 +1,4 @@
-# 更新时间 2023-10-28T12:50:45.662Z
+# 更新时间 2023-10-28T13:05:57.111Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -589,40 +589,43 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 美国+Amazon+EC2服务器
+    server: 3.67.20.234
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 亚太地区V2CROSS.COM0
+    name: 美国CloudFlare节点6
     ws-opts:
-      path: /vpngiare.net
-    server: 103.57.131.61
-    port: 80
-    uuid: 831596b2-fed1-4239-af88-e0630394545a
+      path: /xtsmol
+    server: brcf.duaaoped.xyz
+    port: 8443
+    uuid: 865897ad-8d07-4021-b7c3-d8eb4a29ee8d
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
   - type: vmess
-    name: 美国CloudFlare节点4
+    name: 美国CloudFlare节点7
     ws-opts:
       path: /
       headers:
-        host: it1.xv2ray.net
-    server: www.speedtest.net
-    port: 80
-    uuid: bf75108e-7bec-4fe0-8db9-3d4985dd3bd6
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点5
-    ws-opts:
-      path: /
-      headers:
-        host: cc2.shabijichang.com
-    server: cc2.shabijichang.com
+        host: xjp2.shabijichang.com
+    server: xjp2.shabijichang.com
     port: 80
     uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 18.153.127.223
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -678,9 +681,10 @@ proxy-groups:
       - github.com/freefq-印度44
       - github.com/freefq-台湾省安源通讯股份有限公司88
       - github.com/freefq-印度99
-      - 亚太地区V2CROSS.COM0
-      - 美国CloudFlare节点4
-      - 美国CloudFlare节点5
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点7
+      - 美国+Amazon数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -736,9 +740,10 @@ proxy-groups:
       - github.com/freefq-印度44
       - github.com/freefq-台湾省安源通讯股份有限公司88
       - github.com/freefq-印度99
-      - 亚太地区V2CROSS.COM0
-      - 美国CloudFlare节点4
-      - 美国CloudFlare节点5
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点7
+      - 美国+Amazon数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -793,9 +798,10 @@ proxy-groups:
       - github.com/freefq-印度44
       - github.com/freefq-台湾省安源通讯股份有限公司88
       - github.com/freefq-印度99
-      - 亚太地区V2CROSS.COM0
-      - 美国CloudFlare节点4
-      - 美国CloudFlare节点5
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点7
+      - 美国+Amazon数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -882,9 +888,10 @@ proxy-groups:
       - github.com/freefq-印度44
       - github.com/freefq-台湾省安源通讯股份有限公司88
       - github.com/freefq-印度99
-      - 亚太地区V2CROSS.COM0
-      - 美国CloudFlare节点4
-      - 美国CloudFlare节点5
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点6
+      - 美国CloudFlare节点7
+      - 美国+Amazon数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
