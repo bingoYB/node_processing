@@ -1,4 +1,4 @@
-# 更新时间 2023-10-29T06:58:17.891Z
+# 更新时间 2023-10-29T07:17:03.414Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -533,12 +533,30 @@ proxies:
     network: ws
     tls: true
   - type: trojan
-    name: 台湾省+安源通讯股份有限公司
-    server: 103.122.140.137
-    port: 443
-    password: 46764e31-8e0d-4dd7-afc9-0617cf9d0798
+    name: 德国+黑森州法兰克福Amazon数据中心
+    server: 52.57.104.203
+    port: 22222
+    password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
+  - type: trojan
+    name: 英国+伦敦Amazon数据中心
+    server: 3.10.105.212
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /xtsmol
+    server: brcf.duaaoped.xyz
+    port: 8443
+    uuid: 865897ad-8d07-4021-b7c3-d8eb4a29ee8d
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
   - type: trojan
     name: 美国+Amazon数据中心
     server: 13.37.52.242
@@ -546,20 +564,18 @@ proxies:
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
-  - type: trojan
-    name: 爱尔兰+都柏林Amazon数据中心
-    server: 54.155.230.106
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.142.157.164
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /vmess
+      headers:
+        host: ee1.xv2ray.net
+    server: sfmomastore.com
+    port: 80
+    uuid: 0580abe6-9aaf-40e2-ba33-0bc9f3b6ef2b
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -608,10 +624,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市SharkTech数据中心11
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare公司CDN节点33
-      - 台湾省+安源通讯股份有限公司
+      - 德国+黑森州法兰克福Amazon数据中心
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点2
       - 美国+Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -660,10 +677,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市SharkTech数据中心11
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare公司CDN节点33
-      - 台湾省+安源通讯股份有限公司
+      - 德国+黑森州法兰克福Amazon数据中心
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点2
       - 美国+Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点5
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -711,10 +729,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市SharkTech数据中心11
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare公司CDN节点33
-      - 台湾省+安源通讯股份有限公司
+      - 德国+黑森州法兰克福Amazon数据中心
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点2
       - 美国+Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点5
   - name: 📲 电报信息
     type: select
     proxies:
@@ -794,10 +813,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市SharkTech数据中心11
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare公司CDN节点33
-      - 台湾省+安源通讯股份有限公司
+      - 德国+黑森州法兰克福Amazon数据中心
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点2
       - 美国+Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点5
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
