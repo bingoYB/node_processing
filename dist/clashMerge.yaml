@@ -1,4 +1,4 @@
-# 更新时间 2023-10-30T12:56:08.952Z
+# 更新时间 2023-10-30T13:20:48.667Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -621,15 +621,20 @@ proxies:
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1OTZiMzI1Yi0xZjE0LTQ0ZWQtYjEyZC1lNmI1MmNjNjQ1Njc
     cipher: aes-128-gcm
+  - type: trojan
+    name: 美国+Amazon+EC2服务器
+    server: 3.77.126.93
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点0
+    name: 美国CloudFlare节点1
     ws-opts:
       path: /
-      headers:
-        host: ml2.shabijichang.com
-    server: ml2.shabijichang.com
-    port: 80
-    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
+    server: kr-01.gujuji.top
+    port: 8080
+    uuid: 118a89b2-a899-4900-9a03-cbad2ad3979b
     alterId: 0
     cipher: auto
     network: ws
@@ -703,7 +708,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-安徽省移动17
-      - 美国CloudFlare节点0
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点1
       - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
   - name: ♻️ 自动选择
     type: url-test
@@ -768,7 +774,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-安徽省移动17
-      - 美国CloudFlare节点0
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点1
       - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
   - name: 🌍 国外媒体
     type: select
@@ -832,7 +839,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-安徽省移动17
-      - 美国CloudFlare节点0
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点1
       - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
   - name: 📲 电报信息
     type: select
@@ -928,7 +936,8 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1515
       - github.com/freefq-美国CloudFlare节点1616
       - github.com/freefq-安徽省移动17
-      - 美国CloudFlare节点0
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点1
       - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
