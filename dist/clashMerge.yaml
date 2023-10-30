@@ -1,4 +1,4 @@
-# 更新时间 2023-10-30T06:49:29.656Z
+# 更新时间 2023-10-30T07:01:28.891Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -591,12 +591,25 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: ss
-    name: 美国+华盛顿Cogent通信公司
-    server: 38.121.43.71
-    port: 8000
-    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
-    cipher: aes-128-gcm
+  - type: trojan
+    name: 日本东京+Amazon数据中心
+    server: pqawsjp2.aiopen.cfd
+    port: 443
+    password: 6504a551-673d-44d6-85a9-b05f67fdf971
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 台湾省新北市中华电信1
+    ws-opts:
+      path: /
+      headers:
+        host: tms.dingtalk.com
+    server: 80412c42-0fb8-6b74-1eb8-d58b05e67e50.nachoneko.ltd
+    port: 80
+    uuid: 7a0816b2-3af5-4739-9784-941b75150e98
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: vmess
     name: 江西省移动数据上网公共出口2
     server: zfd-twv2.kunlun-one.com
@@ -606,35 +619,73 @@ proxies:
     cipher: auto
     network: auto
   - type: trojan
-    name: 日本+东京Amazon数据中心
-    server: jp8.421421.xyz
-    port: 20230
-    password: e7d1f4d0-f470-44d3-86b4-6eb4c22f1a79
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+惠普公司
-    server: 16.16.181.86
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+Amazon数据中心
-    server: 18.170.160.249
+    name: 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
+    server: 35.177.56.141
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
   - type: trojan
     name: 美国+Xerox
+    server: 13.50.171.89
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国V2CROSS.COM7
+    ws-opts:
+      path: /path/040717150113
+    server: 137.175.38.234
+    port: 30000
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国加利福尼亚州圣何塞PEGTECH8
+    ws-opts:
+      path: /path/050128082714
+    server: 142.4.118.232
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: trojan
+    name: 美国+麻省理工学院
     server: gsawssg1.aiopen.cfd
     port: 443
     password: 6504a551-673d-44d6-85a9-b05f67fdf971
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点9
+    name: 美国CloudFlare节点10
+    ws-opts:
+      path: /
+      headers:
+        host: ml3.shabijichang.com
+    server: ml3.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国加利福尼亚州圣何塞PEGTECH11
+    ws-opts:
+      path: /path/240522201927
+    server: 142.4.114.109
+    port: 30000
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点12
     ws-opts:
       path: /video/uubCdJtK
       headers:
@@ -645,42 +696,6 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.77.126.93
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 日本东京+Amazon数据中心
-    server: pqawsjp2.aiopen.cfd
-    port: 443
-    password: 6504a551-673d-44d6-85a9-b05f67fdf971
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国加利福尼亚州圣何塞PEGTECH数据中心13
-    ws-opts:
-      path: /path/092100120202
-    server: 192.74.224.164
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国加利福尼亚州洛杉矶PetaExpress15
-    ws-opts:
-      path: /path/231506202622
-    server: 198.2.218.13
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -741,17 +756,17 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-美国CloudFlare节点1111
-      - 美国+华盛顿Cogent通信公司
-      - 江西省移动数据上网公共出口2
-      - 日本+东京Amazon数据中心
-      - 美国+惠普公司
-      - 美国+Amazon数据中心
-      - 美国+Xerox
-      - 美国CloudFlare节点9
-      - 美国+Amazon+EC2服务器
       - 日本东京+Amazon数据中心
-      - 美国加利福尼亚州圣何塞PEGTECH数据中心13
-      - 美国加利福尼亚州洛杉矶PetaExpress15
+      - 台湾省新北市中华电信1
+      - 江西省移动数据上网公共出口2
+      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
+      - 美国+Xerox
+      - 美国V2CROSS.COM7
+      - 美国加利福尼亚州圣何塞PEGTECH8
+      - 美国+麻省理工学院
+      - 美国CloudFlare节点10
+      - 美国加利福尼亚州圣何塞PEGTECH11
+      - 美国CloudFlare节点12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -812,17 +827,17 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-美国CloudFlare节点1111
-      - 美国+华盛顿Cogent通信公司
-      - 江西省移动数据上网公共出口2
-      - 日本+东京Amazon数据中心
-      - 美国+惠普公司
-      - 美国+Amazon数据中心
-      - 美国+Xerox
-      - 美国CloudFlare节点9
-      - 美国+Amazon+EC2服务器
       - 日本东京+Amazon数据中心
-      - 美国加利福尼亚州圣何塞PEGTECH数据中心13
-      - 美国加利福尼亚州洛杉矶PetaExpress15
+      - 台湾省新北市中华电信1
+      - 江西省移动数据上网公共出口2
+      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
+      - 美国+Xerox
+      - 美国V2CROSS.COM7
+      - 美国加利福尼亚州圣何塞PEGTECH8
+      - 美国+麻省理工学院
+      - 美国CloudFlare节点10
+      - 美国加利福尼亚州圣何塞PEGTECH11
+      - 美国CloudFlare节点12
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -882,17 +897,17 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-美国CloudFlare节点1111
-      - 美国+华盛顿Cogent通信公司
-      - 江西省移动数据上网公共出口2
-      - 日本+东京Amazon数据中心
-      - 美国+惠普公司
-      - 美国+Amazon数据中心
-      - 美国+Xerox
-      - 美国CloudFlare节点9
-      - 美国+Amazon+EC2服务器
       - 日本东京+Amazon数据中心
-      - 美国加利福尼亚州圣何塞PEGTECH数据中心13
-      - 美国加利福尼亚州洛杉矶PetaExpress15
+      - 台湾省新北市中华电信1
+      - 江西省移动数据上网公共出口2
+      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
+      - 美国+Xerox
+      - 美国V2CROSS.COM7
+      - 美国加利福尼亚州圣何塞PEGTECH8
+      - 美国+麻省理工学院
+      - 美国CloudFlare节点10
+      - 美国加利福尼亚州圣何塞PEGTECH11
+      - 美国CloudFlare节点12
   - name: 📲 电报信息
     type: select
     proxies:
@@ -984,17 +999,17 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点99
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-美国CloudFlare节点1111
-      - 美国+华盛顿Cogent通信公司
-      - 江西省移动数据上网公共出口2
-      - 日本+东京Amazon数据中心
-      - 美国+惠普公司
-      - 美国+Amazon数据中心
-      - 美国+Xerox
-      - 美国CloudFlare节点9
-      - 美国+Amazon+EC2服务器
       - 日本东京+Amazon数据中心
-      - 美国加利福尼亚州圣何塞PEGTECH数据中心13
-      - 美国加利福尼亚州洛杉矶PetaExpress15
+      - 台湾省新北市中华电信1
+      - 江西省移动数据上网公共出口2
+      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
+      - 美国+Xerox
+      - 美国V2CROSS.COM7
+      - 美国加利福尼亚州圣何塞PEGTECH8
+      - 美国+麻省理工学院
+      - 美国CloudFlare节点10
+      - 美国加利福尼亚州圣何塞PEGTECH11
+      - 美国CloudFlare节点12
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
