@@ -1,4 +1,4 @@
-# 更新时间 2023-10-31T12:56:13.601Z
+# 更新时间 2023-10-31T13:19:33.267Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -728,80 +728,51 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+Amazon数据中心
-    server: 18.156.45.42
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
   - type: vmess
     name: 美国CloudFlare节点1
     ws-opts:
       path: /
-    server: kr-01.gujuji.top
-    port: 8080
-    uuid: 9390a0a1-c1c5-4ce3-b159-f00094d5e654
+    server: mm2.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点2
+    name: 乌克兰V2CROSS.COM2
     ws-opts:
-      path: /ezbkvws
+      path: /vmess
+    server: it1.xv2ray.net
+    port: 80
+    uuid: d22ecfe8-797b-4761-ad09-64c991f887c2
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 香港阿里云7
+    ws-opts:
+      path: /
       headers:
-        host: tj1.dalazhi.eu.org
-    server: cf3.dalazhi.eu.org
+        host: n1697765772.izwhvan.cn
+    server: n1697765772.izwhvan.cn
     port: 443
-    uuid: cc16020c-a851-4f63-85cf-fb1e8d0d1c48
+    uuid: ba984678-ca81-4443-a9da-58adea43d5b0
     alterId: 0
     cipher: auto
     network: ws
     tls: true
-  - type: ss
-    name: 法国+格拉沃利讷OVH数据中心
-    server: 54.36.174.181
-    port: 3389
-    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
-    cipher: aes-128-gcm
   - type: vmess
-    name: 美国加利福尼亚州洛杉矶市CoperationColoction数据中心7
+    name: 美国CloudFlare节点15
     ws-opts:
-      path: /path/133527190814
-    server: 172.247.148.93
-    port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: trojan
-    name: 俄罗斯+V2CROSS.COM
-    server: bphk3.mybestjj.com
-    port: 49487
-    password: 17bd8ea9-f1f4-4a9b-a318-99b62bd956ea
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点16
-    ws-opts:
-      path: /puijvws
+      path: /
       headers:
-        host: tj2.dalazhi.eu.org
-    server: cf.dalazhi.eu.org
-    port: 443
-    uuid: 4807b8ab-d74a-445e-9556-45a7ace4f6d6
+        host: xjp3.shabijichang.com
+    server: xjp3.shabijichang.com
+    port: 80
+    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
-  - type: trojan
-    name: 乌克兰+V2CROSS.COM
-    server: 94.131.13.159
-    port: 16128
-    password: zwbdPys6Va
-    udp: true
-    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -884,14 +855,10 @@ proxy-groups:
       - github.com/freefq-美国1919
       - github.com/freefq-江西省南昌市移动2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国+Amazon数据中心
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 法国+格拉沃利讷OVH数据中心
-      - 美国加利福尼亚州洛杉矶市CoperationColoction数据中心7
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点16
-      - 乌克兰+V2CROSS.COM
+      - 乌克兰V2CROSS.COM2
+      - 香港阿里云7
+      - 美国CloudFlare节点15
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -974,14 +941,10 @@ proxy-groups:
       - github.com/freefq-美国1919
       - github.com/freefq-江西省南昌市移动2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国+Amazon数据中心
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 法国+格拉沃利讷OVH数据中心
-      - 美国加利福尼亚州洛杉矶市CoperationColoction数据中心7
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点16
-      - 乌克兰+V2CROSS.COM
+      - 乌克兰V2CROSS.COM2
+      - 香港阿里云7
+      - 美国CloudFlare节点15
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1063,14 +1026,10 @@ proxy-groups:
       - github.com/freefq-美国1919
       - github.com/freefq-江西省南昌市移动2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国+Amazon数据中心
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 法国+格拉沃利讷OVH数据中心
-      - 美国加利福尼亚州洛杉矶市CoperationColoction数据中心7
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点16
-      - 乌克兰+V2CROSS.COM
+      - 乌克兰V2CROSS.COM2
+      - 香港阿里云7
+      - 美国CloudFlare节点15
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1184,14 +1143,10 @@ proxy-groups:
       - github.com/freefq-美国1919
       - github.com/freefq-江西省南昌市移动2020
       - github.com/freefq-美国CloudFlare公司CDN节点2121
-      - 美国+Amazon数据中心
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 法国+格拉沃利讷OVH数据中心
-      - 美国加利福尼亚州洛杉矶市CoperationColoction数据中心7
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点16
-      - 乌克兰+V2CROSS.COM
+      - 乌克兰V2CROSS.COM2
+      - 香港阿里云7
+      - 美国CloudFlare节点15
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
