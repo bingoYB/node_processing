@@ -1,4 +1,4 @@
-# 更新时间 2023-11-02T18:49:01.482Z
+# 更新时间 2023-11-02T19:01:05.745Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -262,29 +262,11 @@ proxies:
     name: 美国CloudFlare节点1
     ws-opts:
       path: /
-    server: kr-01.gujuji.top
-    port: 8080
-    uuid: f8bf8790-65d4-4839-a97d-326567f96846
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点3
-    ws-opts:
-      path: /
       headers:
-        host: mm2.shabijichang.com
-    server: mm2.shabijichang.com
+        host: hdlb2.shabijichang.com
+    server: hdlb2.shabijichang.com
     port: 80
     uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点4
-    server: ca-new01.gujuji.top
-    port: 8080
-    uuid: f8bf8790-65d4-4839-a97d-326567f96846
     alterId: 0
     cipher: auto
     network: ws
@@ -296,37 +278,61 @@ proxies:
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxZjNkNjdiNC02OTI5LTQ1OTgtOTBjYS04NGE4NDFiZjAyZTQ=
     cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点6
-    server: us-new03.gujuji.top
-    port: 8080
-    uuid: f8bf8790-65d4-4839-a97d-326567f96846
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点7
+    name: 广东省广州市移动5
     ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v004.ssrsub.com
-    server: singapore.com
-    port: 80
-    uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
+      path: /
+    server: 183.233.187.214
+    port: 49553
+    uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd
     alterId: 0
     cipher: auto
-    network: ws
+    network: auto
+  - type: trojan
+    name: 日本+东京都Amazon数据中心
+    server: jp2.421421.xyz
+    port: 20230
+    password: 7a10fed2-dab0-4b5a-a111-86c9e8065053
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+Amazon+EC2服务器
+    server: aws-uae-1.f1rocketnode.com
+    port: 443
+    password: your_password
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点9
+    name: 美国CloudFlare节点8
     ws-opts:
       path: /
       headers:
-        host: yhnsb3.shabijichang.com
-    server: yhnsb3.shabijichang.com
+        host: ml2.shabijichang.com
+    server: ml2.shabijichang.com
     port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 香港阿里云9
+    ws-opts:
+      path: /
+      headers:
+        host: n1697765772.izwhvan.cn
+    server: n1697765772.izwhvan.cn
+    port: 443
+    uuid: ba984678-ca81-4443-a9da-58adea43d5b0
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 13.41.97.85
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -358,12 +364,13 @@ proxy-groups:
       - github.com/freefq-亚太地区22
       - github.com/freefq-美国CloudFlare公司CDN节点33
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点4
       - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
-      - 美国CloudFlare节点9
+      - 广东省广州市移动5
+      - 日本+东京都Amazon数据中心
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点8
+      - 香港阿里云9
+      - 美国+Amazon数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -395,12 +402,13 @@ proxy-groups:
       - github.com/freefq-亚太地区22
       - github.com/freefq-美国CloudFlare公司CDN节点33
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点4
       - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
-      - 美国CloudFlare节点9
+      - 广东省广州市移动5
+      - 日本+东京都Amazon数据中心
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点8
+      - 香港阿里云9
+      - 美国+Amazon数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -431,12 +439,13 @@ proxy-groups:
       - github.com/freefq-亚太地区22
       - github.com/freefq-美国CloudFlare公司CDN节点33
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点4
       - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
-      - 美国CloudFlare节点9
+      - 广东省广州市移动5
+      - 日本+东京都Amazon数据中心
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点8
+      - 香港阿里云9
+      - 美国+Amazon数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -499,12 +508,13 @@ proxy-groups:
       - github.com/freefq-亚太地区22
       - github.com/freefq-美国CloudFlare公司CDN节点33
       - 美国CloudFlare节点1
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点4
       - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点6
-      - 美国CloudFlare节点7
-      - 美国CloudFlare节点9
+      - 广东省广州市移动5
+      - 日本+东京都Amazon数据中心
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点8
+      - 香港阿里云9
+      - 美国+Amazon数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
