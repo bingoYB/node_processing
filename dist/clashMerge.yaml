@@ -1,4 +1,4 @@
-# 更新时间 2023-11-04T06:58:25.094Z
+# 更新时间 2023-11-04T07:18:17.099Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1283,48 +1283,8 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.76.50.29
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点2
-    ws-opts:
-      path: /
-    server: mrb2.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国V2CROSS.COM6
-    ws-opts:
-      path: /
-    server: 162.251.62.115
-    port: 22324
-    uuid: 04621bae-ab36-11ec-b909-0242ac120002
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国V2CROSS.COM7
-    ws-opts:
-      path: /path/1698671600986
-      headers:
-        host: www.39838266.xyz
-    server: 38.26.135.27
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点9
+    name: 美国CloudFlare节点1
     ws-opts:
       path: /api/v3/download.getFile
       headers:
@@ -1332,6 +1292,38 @@ proxies:
     server: cf-lt.sharecentre.online
     port: 80
     uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 美国+Amazon+EC2服务器
+    server: 3.76.50.29
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: 146.190.108.227
+    port: 1
+    password: '1'
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 广东省移动7
+    server: 120.233.43.51
+    port: 26020
+    uuid: 54eac280-1192-3bda-8812-7acfdec61cfd
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点10
+    ws-opts:
+      path: /
+    server: mrb2.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
     network: ws
@@ -1457,11 +1449,11 @@ proxy-groups:
       - github.com/freefq-广东省移动1010
       - github.com/freefq-广东省广州市移动1111
       - github.com/freefq-亚太地区1212
+      - 美国CloudFlare节点1
       - 美国+Amazon+EC2服务器
-      - 美国CloudFlare节点2
-      - 美国V2CROSS.COM6
-      - 美国V2CROSS.COM7
-      - 美国CloudFlare节点9
+      - 美国+V2CROSS.COM
+      - 广东省移动7
+      - 美国CloudFlare节点10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1584,11 +1576,11 @@ proxy-groups:
       - github.com/freefq-广东省移动1010
       - github.com/freefq-广东省广州市移动1111
       - github.com/freefq-亚太地区1212
+      - 美国CloudFlare节点1
       - 美国+Amazon+EC2服务器
-      - 美国CloudFlare节点2
-      - 美国V2CROSS.COM6
-      - 美国V2CROSS.COM7
-      - 美国CloudFlare节点9
+      - 美国+V2CROSS.COM
+      - 广东省移动7
+      - 美国CloudFlare节点10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1710,11 +1702,11 @@ proxy-groups:
       - github.com/freefq-广东省移动1010
       - github.com/freefq-广东省广州市移动1111
       - github.com/freefq-亚太地区1212
+      - 美国CloudFlare节点1
       - 美国+Amazon+EC2服务器
-      - 美国CloudFlare节点2
-      - 美国V2CROSS.COM6
-      - 美国V2CROSS.COM7
-      - 美国CloudFlare节点9
+      - 美国+V2CROSS.COM
+      - 广东省移动7
+      - 美国CloudFlare节点10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1868,11 +1860,11 @@ proxy-groups:
       - github.com/freefq-广东省移动1010
       - github.com/freefq-广东省广州市移动1111
       - github.com/freefq-亚太地区1212
+      - 美国CloudFlare节点1
       - 美国+Amazon+EC2服务器
-      - 美国CloudFlare节点2
-      - 美国V2CROSS.COM6
-      - 美国V2CROSS.COM7
-      - 美国CloudFlare节点9
+      - 美国+V2CROSS.COM
+      - 广东省移动7
+      - 美国CloudFlare节点10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
