@@ -1,4 +1,4 @@
-# 更新时间 2023-11-05T18:57:27.448Z
+# 更新时间 2023-11-05T19:15:34.185Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -563,48 +563,48 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 美国+华盛顿Cogent通信公司
+    server: 38.143.66.187
+    port: 9101
+    password: YWVzLTI1Ni1nY206ZTRGQ1dyZ3BramkzUVk=
+    cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点0
-    server: fr-new01.gujuji.top
-    port: 8080
-    uuid: f01aea88-9486-401c-b0be-dc03e06330b6
+    name: 美国V2CROSS.COM2
+    ws-opts:
+      path: /
+    server: 162.251.62.115
+    port: 22324
+    uuid: 04621bae-ab36-11ec-b909-0242ac120002
     alterId: 0
     cipher: auto
-    network: ws
-  - type: trojan
-    name: 英国+社会保险安全部
-    server: 51.20.226.71
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
+    network: auto
   - type: vmess
     name: 美国CloudFlare节点3
     ws-opts:
+      path: /video/jebMFQkX
+      headers:
+        host: sg20a4ad42b.qcryechvqw.xyz
+    server: cfcdn2.sanfencdn9.com
+    port: 2052
+    uuid: d0b5d7a8-549d-4f24-8b49-deb829aa0a5c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点7
+    ws-opts:
       path: /
       headers:
-        host: ml2.shabijichang.com
-    server: ml2.shabijichang.com
+        host: xjp3.shabijichang.com
+    server: xjp3.shabijichang.com
     port: 80
     uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 香港阿里云5
-    ws-opts:
-      path: /
-      headers:
-        host: n1697765772.izwhvan.cn
-    server: n1697765772.izwhvan.cn
-    port: 443
-    uuid: ba984678-ca81-4443-a9da-58adea43d5b0
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 香港阿里云6
+    name: 香港阿里云10
     ws-opts:
       path: /
       headers:
@@ -616,24 +616,6 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: ss
-    name: 美国+华盛顿Cogent通信公司
-    server: 38.121.43.51
-    port: 2376
-    password: YWVzLTI1Ni1nY206ZmFCQW9ENTRrODdVSkc3
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 美国CloudFlare节点13
-    ws-opts:
-      path: /vmess
-      headers:
-        host: dk1.xv2ray.net
-    server: 104.18.40.89
-    port: 80
-    uuid: 12357ee8-39c0-4256-ad1a-155ea72235d9
-    alterId: 0
-    cipher: auto
-    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -691,13 +673,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1414
       - github.com/freefq-美国CloudFlare节点1515
-      - 美国CloudFlare节点0
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点3
-      - 香港阿里云5
-      - 香港阿里云6
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点13
+      - 美国V2CROSS.COM2
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点7
+      - 香港阿里云10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -755,13 +735,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1414
       - github.com/freefq-美国CloudFlare节点1515
-      - 美国CloudFlare节点0
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点3
-      - 香港阿里云5
-      - 香港阿里云6
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点13
+      - 美国V2CROSS.COM2
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点7
+      - 香港阿里云10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -818,13 +796,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1414
       - github.com/freefq-美国CloudFlare节点1515
-      - 美国CloudFlare节点0
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点3
-      - 香港阿里云5
-      - 香港阿里云6
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点13
+      - 美国V2CROSS.COM2
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点7
+      - 香港阿里云10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -913,13 +889,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare节点1414
       - github.com/freefq-美国CloudFlare节点1515
-      - 美国CloudFlare节点0
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点3
-      - 香港阿里云5
-      - 香港阿里云6
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点13
+      - 美国V2CROSS.COM2
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点7
+      - 香港阿里云10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
