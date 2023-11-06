@@ -1,4 +1,4 @@
-# 更新时间 2023-11-06T06:50:32.987Z
+# 更新时间 2023-11-06T07:07:39.099Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -846,19 +846,51 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
+    name: 德国+V2CROSS.COM
+    server: 213.202.216.14
+    port: 443
+    password: 5913c0e8-345b-4b38-9fec-ef564e360b0b
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
     name: 新加坡+Amazon数据中心
     server: sg1.421421.xyz
     port: 20230
     password: ea802ee7-f08d-420e-a8c2-4ab2366d4075
     udp: true
     skip-cert-verify: true
-  - type: trojan
-    name: 美国+V2CROSS.COM
-    server: 146.190.108.227
-    port: 1
-    password: '1'
-    udp: true
-    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v006.ssrsub.com
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 广东省移动4
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11002
+    uuid: 85db6652-a747-3a0a-a170-422736076410
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国V2CROSS.COM5
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: ca4.tehme2.fun
+    server: 104.31.16.28
+    port: 80
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -942,8 +974,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1111
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - 美国CloudFlare节点0
+      - 德国+V2CROSS.COM
       - 新加坡+Amazon数据中心
-      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点3
+      - 广东省移动4
+      - 美国V2CROSS.COM5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1027,8 +1062,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1111
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - 美国CloudFlare节点0
+      - 德国+V2CROSS.COM
       - 新加坡+Amazon数据中心
-      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点3
+      - 广东省移动4
+      - 美国V2CROSS.COM5
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1111,8 +1149,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1111
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - 美国CloudFlare节点0
+      - 德国+V2CROSS.COM
       - 新加坡+Amazon数据中心
-      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点3
+      - 广东省移动4
+      - 美国V2CROSS.COM5
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1227,8 +1268,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1111
       - github.com/freefq-美国CloudFlare公司CDN节点1414
       - 美国CloudFlare节点0
+      - 德国+V2CROSS.COM
       - 新加坡+Amazon数据中心
-      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点3
+      - 广东省移动4
+      - 美国V2CROSS.COM5
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
