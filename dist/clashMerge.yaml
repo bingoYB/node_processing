@@ -1,4 +1,4 @@
-# 更新时间 2023-11-06T12:59:03.779Z
+# 更新时间 2023-11-06T13:24:53.783Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -767,24 +767,53 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 安徽省移动数据上网公共出口0
-    ws-opts:
-      path: /
-    server: 112.29.94.23
-    port: 49004
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
+    name: 广东省移动0
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11013
+    uuid: 85db6652-a747-3a0a-a170-422736076410
     alterId: 0
     cipher: auto
     network: auto
-  - type: ss
-    name: 江苏省徐州市+移动
-    server: hefei.chiguayun.shop
-    port: 27135
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2ZTBiYjQ3OC0wMjkyLTQwMDAtYTQyNS1kYjBkOTI2N2NjOGI=
-    cipher: aes-128-gcm
   - type: vmess
-    name: 香港阿里云6
+    name: 广东省移动2
+    server: 120.233.43.47
+    port: 11013
+    uuid: 85db6652-a747-3a0a-a170-422736076410
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: 146.190.108.227
+    port: 1
+    password: '1'
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /it1?ed=2048
+    server: it1.cou.gay
+    port: 443
+    uuid: 2e2fbc71-d106-47a8-98eb-4ae381d8f376
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点9
+    ws-opts:
+      path: /
+      headers:
+        host: eu4.openxai.link
+    server: cf1.openxai.link
+    port: 8080
+    uuid: 218996e0-5a6e-4806-8106-6b7b42e6d0d6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 香港阿里云10
     ws-opts:
       path: /
       headers:
@@ -796,32 +825,6 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: trojan
-    name: 广东省+移动
-    server: tg_mfbpn_d4.52vpn.eu.org
-    port: 11015
-    password: 85db6652-a747-3a0a-a170-422736076410
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点9
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: buyvm.iiio.wiki
-    server: Singapore.MFA.EE
-    port: 80
-    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: ss
-    name: 安徽省+移动数据上网公共出口
-    server: foshan.chiguayun.shop
-    port: 27135
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2ZTBiYjQ3OC0wMjkyLTQwMDAtYTQyNS1kYjBkOTI2N2NjOGI=
-    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -898,12 +901,12 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市CoperationColoction数据中心11
       - github.com/freefq-广东省移动44
       - github.com/freefq-美国55
-      - 安徽省移动数据上网公共出口0
-      - 江苏省徐州市+移动
-      - 香港阿里云6
-      - 广东省+移动
+      - 广东省移动0
+      - 广东省移动2
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点6
       - 美国CloudFlare节点9
-      - 安徽省+移动数据上网公共出口
+      - 香港阿里云10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -980,12 +983,12 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市CoperationColoction数据中心11
       - github.com/freefq-广东省移动44
       - github.com/freefq-美国55
-      - 安徽省移动数据上网公共出口0
-      - 江苏省徐州市+移动
-      - 香港阿里云6
-      - 广东省+移动
+      - 广东省移动0
+      - 广东省移动2
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点6
       - 美国CloudFlare节点9
-      - 安徽省+移动数据上网公共出口
+      - 香港阿里云10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1061,12 +1064,12 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市CoperationColoction数据中心11
       - github.com/freefq-广东省移动44
       - github.com/freefq-美国55
-      - 安徽省移动数据上网公共出口0
-      - 江苏省徐州市+移动
-      - 香港阿里云6
-      - 广东省+移动
+      - 广东省移动0
+      - 广东省移动2
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点6
       - 美国CloudFlare节点9
-      - 安徽省+移动数据上网公共出口
+      - 香港阿里云10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1174,12 +1177,12 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州洛杉矶市CoperationColoction数据中心11
       - github.com/freefq-广东省移动44
       - github.com/freefq-美国55
-      - 安徽省移动数据上网公共出口0
-      - 江苏省徐州市+移动
-      - 香港阿里云6
-      - 广东省+移动
+      - 广东省移动0
+      - 广东省移动2
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点6
       - 美国CloudFlare节点9
-      - 安徽省+移动数据上网公共出口
+      - 香港阿里云10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
