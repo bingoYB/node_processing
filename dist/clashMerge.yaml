@@ -1,4 +1,4 @@
-# 更新时间 2023-11-06T18:49:32.050Z
+# 更新时间 2023-11-06T19:01:41.772Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -832,12 +832,61 @@ proxies:
     cipher: auto
     network: auto
   - type: trojan
+    name: 美国+V2CROSS.COM
+    server: 146.190.94.141
+    port: 20020
+    password: DsoTWAH9eC
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v004.ssrsub.com
+    server: singapore.com
+    port: 80
+    uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 美国+华盛顿Cogent通信公司
+    server: 38.121.43.51
+    port: 2376
+    password: YWVzLTI1Ni1nY206ZmFCQW9ENTRrODdVSkc3
+    cipher: aes-128-gcm
+  - type: trojan
     name: 广东省+移动
     server: tg_mfbpn_d4.52vpn.eu.org
     port: 11018
     password: 85db6652-a747-3a0a-a170-422736076410
     udp: true
     skip-cert-verify: true
+  - type: vmess
+    name: 香港阿里云5
+    ws-opts:
+      path: /
+      headers:
+        host: n1697555560.aaigefm.cn
+    server: n1697555560.aaigefm.cn
+    port: 443
+    uuid: 56691c3c-b9a5-440f-a678-478618854e75
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点8
+    ws-opts:
+      path: /xtsmol
+    server: brcf.duaaoped.xyz
+    port: 8443
+    uuid: 865897ad-8d07-4021-b7c3-d8eb4a29ee8d
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
   - type: ss
     name: 江苏省徐州市+移动
     server: hefei.chiguayun.shop
@@ -845,38 +894,6 @@ proxies:
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2ZTBiYjQ3OC0wMjkyLTQwMDAtYTQyNS1kYjBkOTI2N2NjOGI=
     cipher: aes-128-gcm
-  - type: trojan
-    name: 加拿大+V2CROSS.COM
-    server: sg1.421421.xyz
-    port: 20230
-    password: ea802ee7-f08d-420e-a8c2-4ab2366d4075
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 香港阿里云6
-    ws-opts:
-      path: /
-      headers:
-        host: n1698119642.izwhvan.cn
-    server: n1698119642.izwhvan.cn
-    port: 443
-    uuid: fe57e1f2-704b-4896-92b6-c256737e9739
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点13
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v006.ssrsub.com
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
-    alterId: 0
-    cipher: auto
-    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -959,11 +976,13 @@ proxy-groups:
       - github.com/freefq-安徽省亳州市移动9
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-广东省移动1313
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点1
+      - 美国+华盛顿Cogent通信公司
       - 广东省+移动
+      - 香港阿里云5
+      - 美国CloudFlare节点8
       - 江苏省徐州市+移动
-      - 加拿大+V2CROSS.COM
-      - 香港阿里云6
-      - 美国CloudFlare节点13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1046,11 +1065,13 @@ proxy-groups:
       - github.com/freefq-安徽省亳州市移动9
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-广东省移动1313
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点1
+      - 美国+华盛顿Cogent通信公司
       - 广东省+移动
+      - 香港阿里云5
+      - 美国CloudFlare节点8
       - 江苏省徐州市+移动
-      - 加拿大+V2CROSS.COM
-      - 香港阿里云6
-      - 美国CloudFlare节点13
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1132,11 +1153,13 @@ proxy-groups:
       - github.com/freefq-安徽省亳州市移动9
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-广东省移动1313
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点1
+      - 美国+华盛顿Cogent通信公司
       - 广东省+移动
+      - 香港阿里云5
+      - 美国CloudFlare节点8
       - 江苏省徐州市+移动
-      - 加拿大+V2CROSS.COM
-      - 香港阿里云6
-      - 美国CloudFlare节点13
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1250,11 +1273,13 @@ proxy-groups:
       - github.com/freefq-安徽省亳州市移动9
       - github.com/freefq-美国CloudFlare公司CDN节点1010
       - github.com/freefq-广东省移动1313
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点1
+      - 美国+华盛顿Cogent通信公司
       - 广东省+移动
+      - 香港阿里云5
+      - 美国CloudFlare节点8
       - 江苏省徐州市+移动
-      - 加拿大+V2CROSS.COM
-      - 香港阿里云6
-      - 美国CloudFlare节点13
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
