@@ -1,4 +1,4 @@
-# 更新时间 2023-11-07T19:00:16.754Z
+# 更新时间 2023-11-07T19:16:48.649Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -460,7 +460,7 @@ proxies:
       tls: true
       mux: true
     udp: true
-  - name: IT_IT_speednode_0056
+  - name: US_IT_speednode_0056
     server: it.fanqiecloud.top
     port: 22802
     type: ss
@@ -1008,13 +1008,26 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
-  - type: trojan
-    name: 加拿大+V2CROSS.COM
-    server: 108.181.24.37
+  - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /bugpath/Izul1/vmess
+      headers:
+        host: xsgdo.rcvpn.net
+    server: 104.21.233.134
     port: 443
-    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
-    udp: true
-    skip-cert-verify: true
+    uuid: 3129dc41-cc7b-4379-aebf-2841f7385ff0
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: ss
+    name: 江苏省徐州市+移动
+    server: hefei.chiguayun.shop
+    port: 27132
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2ZTBiYjQ3OC0wMjkyLTQwMDAtYTQyNS1kYjBkOTI2N2NjOGI=
+    cipher: aes-128-gcm
   - type: trojan
     name: 广东省+移动
     server: tg_mfbpn_d4.52vpn.eu.org
@@ -1022,44 +1035,57 @@ proxies:
     password: 85db6652-a747-3a0a-a170-422736076410
     udp: true
     skip-cert-verify: true
+  - type: trojan
+    name: 越南+V2CROSS.COM
+    server: 103.81.85.238
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
   - type: ss
-    name: 江苏省徐州市+移动
-    server: hefei.chiguayun.shop
-    port: 27130
+    name: 安徽省+移动数据上网公共出口
+    server: foshan.chiguayun.shop
+    port: 27110
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2ZTBiYjQ3OC0wMjkyLTQwMDAtYTQyNS1kYjBkOTI2N2NjOGI=
     cipher: aes-128-gcm
   - type: trojan
-    name: 新加坡+Amazon数据中心
-    server: sg1.421421.xyz
-    port: 20230
-    password: ea802ee7-f08d-420e-a8c2-4ab2366d4075
+    name: 加拿大+V2CROSS.COM
+    server: 108.181.24.37
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点6
+    name: 广东省移动10
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11005
+    uuid: 85db6652-a747-3a0a-a170-422736076410
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点12
     ws-opts:
-      path: /
-    server: us-new03.gujuji.top
-    port: 8080
-    uuid: 9a221cc6-53e5-4d3b-9ca8-d320386fd32a
+      path: /us1?ed=2048
+      headers:
+        host: us1.cou.gay
+    server: us1.cou.gay
+    port: 443
+    uuid: 2e2fbc71-d106-47a8-98eb-4ae381d8f376
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 德国+V2CROSS.COM
-    server: 213.202.216.14
-    port: 443
-    password: 23391d1e-3567-4555-9e40-de87569d74f6
-    udp: true
-    skip-cert-verify: true
+    tls: true
   - type: vmess
-    name: 美国CloudFlare节点8
+    name: 美国CloudFlare节点16
     ws-opts:
-      path: /
-    server: fr-new01.gujuji.top
-    port: 8080
-    uuid: 9a221cc6-53e5-4d3b-9ca8-d320386fd32a
+      path: /526-dekDP6Otf
+      headers:
+        host: v118a.ai88888.top
+    server: v118a.ai88888.top
+    port: 80
+    uuid: c97cf46e-1554-36cb-8b36-c3556b883dc4
     alterId: 0
     cipher: auto
     network: ws
@@ -1115,7 +1141,7 @@ proxy-groups:
       - HK_HK_speednode_0052
       - SG_HK_speednode_0053
       - HK_HK_speednode_0055
-      - IT_IT_speednode_0056
+      - US_IT_speednode_0056
       - US_JP_speednode_0057
       - JP_JP_speednode_0058
       - JP_KR_speednode_0059
@@ -1162,13 +1188,15 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1212
       - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-广东省移动1414
-      - 加拿大+V2CROSS.COM
-      - 广东省+移动
+      - 美国CloudFlare节点0
       - 江苏省徐州市+移动
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点6
-      - 德国+V2CROSS.COM
-      - 美国CloudFlare节点8
+      - 广东省+移动
+      - 越南+V2CROSS.COM
+      - 安徽省+移动数据上网公共出口
+      - 加拿大+V2CROSS.COM
+      - 广东省移动10
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点16
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1221,7 +1249,7 @@ proxy-groups:
       - HK_HK_speednode_0052
       - SG_HK_speednode_0053
       - HK_HK_speednode_0055
-      - IT_IT_speednode_0056
+      - US_IT_speednode_0056
       - US_JP_speednode_0057
       - JP_JP_speednode_0058
       - JP_KR_speednode_0059
@@ -1268,13 +1296,15 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1212
       - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-广东省移动1414
-      - 加拿大+V2CROSS.COM
-      - 广东省+移动
+      - 美国CloudFlare节点0
       - 江苏省徐州市+移动
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点6
-      - 德国+V2CROSS.COM
-      - 美国CloudFlare节点8
+      - 广东省+移动
+      - 越南+V2CROSS.COM
+      - 安徽省+移动数据上网公共出口
+      - 加拿大+V2CROSS.COM
+      - 广东省移动10
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点16
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1326,7 +1356,7 @@ proxy-groups:
       - HK_HK_speednode_0052
       - SG_HK_speednode_0053
       - HK_HK_speednode_0055
-      - IT_IT_speednode_0056
+      - US_IT_speednode_0056
       - US_JP_speednode_0057
       - JP_JP_speednode_0058
       - JP_KR_speednode_0059
@@ -1373,13 +1403,15 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1212
       - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-广东省移动1414
-      - 加拿大+V2CROSS.COM
-      - 广东省+移动
+      - 美国CloudFlare节点0
       - 江苏省徐州市+移动
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点6
-      - 德国+V2CROSS.COM
-      - 美国CloudFlare节点8
+      - 广东省+移动
+      - 越南+V2CROSS.COM
+      - 安徽省+移动数据上网公共出口
+      - 加拿大+V2CROSS.COM
+      - 广东省移动10
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点16
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1463,7 +1495,7 @@ proxy-groups:
       - HK_HK_speednode_0052
       - SG_HK_speednode_0053
       - HK_HK_speednode_0055
-      - IT_IT_speednode_0056
+      - US_IT_speednode_0056
       - US_JP_speednode_0057
       - JP_JP_speednode_0058
       - JP_KR_speednode_0059
@@ -1510,13 +1542,15 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1212
       - github.com/freefq-美国CloudFlare公司CDN节点1313
       - github.com/freefq-广东省移动1414
-      - 加拿大+V2CROSS.COM
-      - 广东省+移动
+      - 美国CloudFlare节点0
       - 江苏省徐州市+移动
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点6
-      - 德国+V2CROSS.COM
-      - 美国CloudFlare节点8
+      - 广东省+移动
+      - 越南+V2CROSS.COM
+      - 安徽省+移动数据上网公共出口
+      - 加拿大+V2CROSS.COM
+      - 广东省移动10
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点16
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
