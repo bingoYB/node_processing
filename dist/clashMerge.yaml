@@ -1,4 +1,4 @@
-# 更新时间 2023-11-08T19:00:44.640Z
+# 更新时间 2023-11-08T19:17:00.399Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -935,18 +935,20 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
-  - type: vmess
-    name: 美国CloudFlare节点1
-    ws-opts:
-      path: /
-      headers:
-        host: xjp3.shabijichang.com
-    server: xjp3.shabijichang.com
-    port: 80
-    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
-    alterId: 0
-    cipher: auto
-    network: ws
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: 146.190.94.141
+    port: 20020
+    password: DsoTWAH9eC
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 广东省+移动
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11018
+    password: 85db6652-a747-3a0a-a170-422736076410
+    udp: true
+    skip-cert-verify: true
   - type: trojan
     name: 美国加利福尼亚州圣克拉拉+腾讯云
     server: www.91caidog.cn
@@ -954,93 +956,59 @@ proxies:
     password: tUfiv2o6gs
     udp: true
     skip-cert-verify: true
-  - type: trojan
-    name: 广东省+移动
-    server: tg_mfbpn_d4.52vpn.eu.org
-    port: 11015
-    password: 85db6652-a747-3a0a-a170-422736076410
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 德国+黑森州法兰克福Amazon数据中心
-    server: 18.194.160.193
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
   - type: ss
-    name: 安徽省+移动数据上网公共出口
-    server: foshan.chiguayun.shop
-    port: 27110
+    name: 江苏省徐州市+移动
+    server: hefei.chiguayun.shop
+    port: 27132
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo2ZTBiYjQ3OC0wMjkyLTQwMDAtYTQyNS1kYjBkOTI2N2NjOGI=
     cipher: aes-128-gcm
   - type: trojan
-    name: 英国+社会保险安全部
-    server: 51.20.21.130
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 52.16.120.126
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
+  - type: trojan
+    name: 香港+电讯盈科有限公司
+    server: 203.198.16.119
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点9
+    name: 美国CloudFlare节点13
     ws-opts:
       path: /
-      headers:
-        host: yhnsb3.shabijichang.com
-    server: yhnsb3.shabijichang.com
+    server: ml3.shabijichang.com
     port: 80
     uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 香港阿里云10
-    ws-opts:
-      path: /
-      headers:
-        host: n1697685464.aaigefm.cn
-    server: n1697685464.aaigefm.cn
-    port: 443
-    uuid: 187002fd-b8ad-4d36-b4fb-1a3224cc99e2
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
   - type: trojan
-    name: 香港+阿里云
-    server: xg107.npv4.com
+    name: 越南+V2CROSS.COM
+    server: 103.81.85.238
     port: 443
-    password: 50b0e2cf-6785-3a7c-973a-ec4cc30fef92
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+麻省理工学院
+    server: 18.135.107.32
+    port: 22222
+    password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 广东省移动14
+    name: 广东省移动18
     server: tg_mfbpn_d4.52vpn.eu.org
-    port: 11005
+    port: 11013
     uuid: 85db6652-a747-3a0a-a170-422736076410
     alterId: 0
     cipher: auto
     network: auto
-  - type: ss
-    name: 美国+华盛顿州
-    server: >-
-      www.outline.network.ak1949.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
-    port: 443
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpSOVhjNGRIWEd2M2M=
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 美国CloudFlare节点16
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: buyvm.iiio.wiki
-    server: Singapore.MFA.EE
-    port: 80
-    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
-    alterId: 0
-    cipher: auto
-    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1144,18 +1112,16 @@ proxy-groups:
       - 更新于:11-0900:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
       - github.com/freefq-广东省移动66
-      - 美国CloudFlare节点1
-      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国+V2CROSS.COM
       - 广东省+移动
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 安徽省+移动数据上网公共出口
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点9
-      - 香港阿里云10
-      - 香港+阿里云
-      - 广东省移动14
-      - 美国+华盛顿州
-      - 美国CloudFlare节点16
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 江苏省徐州市+移动
+      - 爱尔兰+都柏林Amazon数据中心
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点13
+      - 越南+V2CROSS.COM
+      - 美国+麻省理工学院
+      - 广东省移动18
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1259,18 +1225,16 @@ proxy-groups:
       - 更新于:11-0900:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
       - github.com/freefq-广东省移动66
-      - 美国CloudFlare节点1
-      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国+V2CROSS.COM
       - 广东省+移动
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 安徽省+移动数据上网公共出口
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点9
-      - 香港阿里云10
-      - 香港+阿里云
-      - 广东省移动14
-      - 美国+华盛顿州
-      - 美国CloudFlare节点16
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 江苏省徐州市+移动
+      - 爱尔兰+都柏林Amazon数据中心
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点13
+      - 越南+V2CROSS.COM
+      - 美国+麻省理工学院
+      - 广东省移动18
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1373,18 +1337,16 @@ proxy-groups:
       - 更新于:11-0900:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
       - github.com/freefq-广东省移动66
-      - 美国CloudFlare节点1
-      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国+V2CROSS.COM
       - 广东省+移动
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 安徽省+移动数据上网公共出口
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点9
-      - 香港阿里云10
-      - 香港+阿里云
-      - 广东省移动14
-      - 美国+华盛顿州
-      - 美国CloudFlare节点16
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 江苏省徐州市+移动
+      - 爱尔兰+都柏林Amazon数据中心
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点13
+      - 越南+V2CROSS.COM
+      - 美国+麻省理工学院
+      - 广东省移动18
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1519,18 +1481,16 @@ proxy-groups:
       - 更新于:11-0900:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH11
       - github.com/freefq-广东省移动66
-      - 美国CloudFlare节点1
-      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国+V2CROSS.COM
       - 广东省+移动
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 安徽省+移动数据上网公共出口
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点9
-      - 香港阿里云10
-      - 香港+阿里云
-      - 广东省移动14
-      - 美国+华盛顿州
-      - 美国CloudFlare节点16
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 江苏省徐州市+移动
+      - 爱尔兰+都柏林Amazon数据中心
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点13
+      - 越南+V2CROSS.COM
+      - 美国+麻省理工学院
+      - 广东省移动18
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
