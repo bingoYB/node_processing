@@ -1,4 +1,4 @@
-# 更新时间 2023-11-10T12:56:31.423Z
+# 更新时间 2023-11-10T13:20:21.264Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -546,15 +546,37 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v006.ssrsub.com
+    server: 198.41.223.14
+    port: 80
+    uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /forwardv2ray
+    server: forwardv2ray2.star-one.cfd
+    port: 2082
+    uuid: db2f7e2b-6a85-44d6-9dc9-d45eba241570
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: trojan
-    name: 广东省+移动
-    server: tg_mfbpn_d4.52vpn.eu.org
-    port: 11008
+    name: 湖南省+联通
+    server: tg_mfbpn_d5.52vpn.eu.org
+    port: 11033
     password: 85db6652-a747-3a0a-a170-422736076410
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点5
+    name: 美国CloudFlare节点6
     ws-opts:
       path: /
     server: sgp-2.888401.xyz
@@ -563,49 +585,46 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 台湾省新北市中华电信7
+    ws-opts:
+      path: /
+      headers:
+        host: tms.dingtalk.com
+    server: 80412c42-0fb8-6b74-1eb8-d58b05e67e50.nachoneko.ltd
+    port: 80
+    uuid: 7a0816b2-3af5-4739-9784-941b75150e98
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: trojan
-    name: 香港+电讯盈科有限公司
-    server: download1hkt.windowsupdatea.com
+    name: 广东省+移动
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11018
+    password: 85db6652-a747-3a0a-a170-422736076410
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 德国+V2CROSS.COM
+    server: 89.163.220.99
     port: 443
     password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点10
-    ws-opts:
-      path: /xwdn8sj2aw
-      headers:
-        host: de-1.8080.eu.org
-    server: de-1.8080.eu.org
+  - type: trojan
+    name: 越南+V2CROSS.COM
+    server: 103.81.85.238
     port: 443
-    uuid: 03bad296-8170-4756-a6be-760198f13413
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点14
-    ws-opts:
-      path: /it1?ed=2048
-    server: it1.cou.gay
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 香港+电讯盈科有限公司
+    server: 112.120.127.9
     port: 443
-    uuid: 5d45a046-2328-481f-ac9e-90dfb7bb4027
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点17
-    ws-opts:
-      path: /vmess
-      headers:
-        host: ee1.xv2ray.net
-    server: sfmomastore.com
-    port: 80
-    uuid: 0580abe6-9aaf-40e2-ba33-0bc9f3b6ef2b
-    alterId: 0
-    cipher: auto
-    network: ws
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -659,12 +678,15 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动99
       - github.com/freefq-湖南省联通10
       - github.com/freefq-广东省移动1414
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点4
+      - 湖南省+联通
+      - 美国CloudFlare节点6
+      - 台湾省新北市中华电信7
       - 广东省+移动
-      - 美国CloudFlare节点5
+      - 德国+V2CROSS.COM
+      - 越南+V2CROSS.COM
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点10
-      - 美国CloudFlare节点14
-      - 美国CloudFlare节点17
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -718,12 +740,15 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动99
       - github.com/freefq-湖南省联通10
       - github.com/freefq-广东省移动1414
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点4
+      - 湖南省+联通
+      - 美国CloudFlare节点6
+      - 台湾省新北市中华电信7
       - 广东省+移动
-      - 美国CloudFlare节点5
+      - 德国+V2CROSS.COM
+      - 越南+V2CROSS.COM
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点10
-      - 美国CloudFlare节点14
-      - 美国CloudFlare节点17
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -776,12 +801,15 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动99
       - github.com/freefq-湖南省联通10
       - github.com/freefq-广东省移动1414
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点4
+      - 湖南省+联通
+      - 美国CloudFlare节点6
+      - 台湾省新北市中华电信7
       - 广东省+移动
-      - 美国CloudFlare节点5
+      - 德国+V2CROSS.COM
+      - 越南+V2CROSS.COM
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点10
-      - 美国CloudFlare节点14
-      - 美国CloudFlare节点17
   - name: 📲 电报信息
     type: select
     proxies:
@@ -866,12 +894,15 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动99
       - github.com/freefq-湖南省联通10
       - github.com/freefq-广东省移动1414
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点4
+      - 湖南省+联通
+      - 美国CloudFlare节点6
+      - 台湾省新北市中华电信7
       - 广东省+移动
-      - 美国CloudFlare节点5
+      - 德国+V2CROSS.COM
+      - 越南+V2CROSS.COM
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点10
-      - 美国CloudFlare节点14
-      - 美国CloudFlare节点17
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
