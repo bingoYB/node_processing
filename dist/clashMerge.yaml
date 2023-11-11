@@ -1,4 +1,4 @@
-# 更新时间 2023-11-11T12:52:39.497Z
+# 更新时间 2023-11-11T13:10:47.315Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -998,19 +998,57 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 美国CloudFlare节点2
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /vmess
+      headers:
+        host: ee1.xv2ray.net
+    server: sfmomastore.com
+    port: 80
+    uuid: 0580abe6-9aaf-40e2-ba33-0bc9f3b6ef2b
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点3
     ws-opts:
       path: /
       headers:
-        host: ca-new01.gujuji.top
-    server: ca-new01.gujuji.top
+        host: uk-new01.gujuji.top
+    server: uk-new01.gujuji.top
     port: 8080
     uuid: bfa931af-553e-4c85-a45f-d143e5162fa0
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 香港+电讯盈科有限公司
+    server: download2hkt.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 广东省广州市移动5
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
+      headers:
+        host: fr7.tehme100.fun
+    server: 172.67.229.22
+    port: 8880
+    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 法国+巴黎Amazon数据中心
+    server: 52.47.68.172
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 广东省广州市移动8
     ws-opts:
       path: /5f2ea531-29e4-4836-c60a-a739b8e6b0a3
     server: 183.233.187.214
@@ -1019,75 +1057,69 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 18.202.94.23
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 香港阿里云7
+    name: 土耳其V2CROSS.COM11
+    ws-opts:
+      path: /
+    server: 212.64.193.50
+    port: 2087
+    uuid: d22ae4d6-863b-4501-920a-99ac4a3c751b
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 香港阿里云12
     ws-opts:
       path: /
       headers:
-        host: n1698814076.izwhvan.cn
-    server: n1698814076.izwhvan.cn
+        host: n1697555560.aaigefm.cn
+    server: n1697555560.aaigefm.cn
     port: 443
-    uuid: 2484ab4b-e997-45f3-9f0d-456640d967ef
+    uuid: 56691c3c-b9a5-440f-a678-478618854e75
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: 美国CloudFlare节点10
+    name: 美国CloudFlare节点14
     ws-opts:
       path: /
       headers:
-        host: cc2.shabijichang.com
-    server: 172.67.184.13
-    port: 80
-    uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
+        host: dIGIkAlA.ONlINeviSioNsTore.sITE
+    server: docs.digitalocean.com
+    port: 443
+    uuid: d8d3482e-6d58-4e86-b870-e7fbe893d8b9
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 广东省+移动
+    tls: true
+  - type: vmess
+    name: 广东省移动16
     server: tg_mfbpn_d4.52vpn.eu.org
-    port: 11017
+    port: 11002
+    uuid: 85db6652-a747-3a0a-a170-422736076410
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: trojan
+    name: 湖南省+联通
+    server: tg_mfbpn_d5.52vpn.eu.org
+    port: 11033
     password: 85db6652-a747-3a0a-a170-422736076410
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 美国+RF+Engineering
-    server: 141.193.68.81
+    name: 德国+V2CROSS.COM
+    server: 89.163.220.99
     port: 443
     password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点21
-    ws-opts:
-      path: /
-      headers:
-        host: cc3.shabijichang.com
-    server: cc3.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点22
-    ws-opts:
-      path: /eisasqa
-      headers:
-        host: foxlux.fovi.tk
-    server: cf.fovi.tk
-    port: 443
-    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: trojan
-    name: 法国+巴黎Amazon数据中心
-    server: 52.47.68.172
-    port: 22222
-    password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
 proxy-groups:
@@ -1182,15 +1214,19 @@ proxy-groups:
       - github.com/freefq-广东省移动1313
       - github.com/freefq-广东省移动1515
       - github.com/freefq-香港BGP.NETCN2数据中心1616
-      - 美国CloudFlare节点2
-      - 广东省广州市移动5
-      - 香港阿里云7
-      - 美国CloudFlare节点10
-      - 广东省+移动
-      - 美国+RF+Engineering
-      - 美国CloudFlare节点21
-      - 美国CloudFlare节点22
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点3
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点5
       - 法国+巴黎Amazon数据中心
+      - 广东省广州市移动8
+      - 美国+Amazon数据中心
+      - 土耳其V2CROSS.COM11
+      - 香港阿里云12
+      - 美国CloudFlare节点14
+      - 广东省移动16
+      - 湖南省+联通
+      - 德国+V2CROSS.COM
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1283,15 +1319,19 @@ proxy-groups:
       - github.com/freefq-广东省移动1313
       - github.com/freefq-广东省移动1515
       - github.com/freefq-香港BGP.NETCN2数据中心1616
-      - 美国CloudFlare节点2
-      - 广东省广州市移动5
-      - 香港阿里云7
-      - 美国CloudFlare节点10
-      - 广东省+移动
-      - 美国+RF+Engineering
-      - 美国CloudFlare节点21
-      - 美国CloudFlare节点22
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点3
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点5
       - 法国+巴黎Amazon数据中心
+      - 广东省广州市移动8
+      - 美国+Amazon数据中心
+      - 土耳其V2CROSS.COM11
+      - 香港阿里云12
+      - 美国CloudFlare节点14
+      - 广东省移动16
+      - 湖南省+联通
+      - 德国+V2CROSS.COM
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1383,15 +1423,19 @@ proxy-groups:
       - github.com/freefq-广东省移动1313
       - github.com/freefq-广东省移动1515
       - github.com/freefq-香港BGP.NETCN2数据中心1616
-      - 美国CloudFlare节点2
-      - 广东省广州市移动5
-      - 香港阿里云7
-      - 美国CloudFlare节点10
-      - 广东省+移动
-      - 美国+RF+Engineering
-      - 美国CloudFlare节点21
-      - 美国CloudFlare节点22
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点3
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点5
       - 法国+巴黎Amazon数据中心
+      - 广东省广州市移动8
+      - 美国+Amazon数据中心
+      - 土耳其V2CROSS.COM11
+      - 香港阿里云12
+      - 美国CloudFlare节点14
+      - 广东省移动16
+      - 湖南省+联通
+      - 德国+V2CROSS.COM
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1515,15 +1559,19 @@ proxy-groups:
       - github.com/freefq-广东省移动1313
       - github.com/freefq-广东省移动1515
       - github.com/freefq-香港BGP.NETCN2数据中心1616
-      - 美国CloudFlare节点2
-      - 广东省广州市移动5
-      - 香港阿里云7
-      - 美国CloudFlare节点10
-      - 广东省+移动
-      - 美国+RF+Engineering
-      - 美国CloudFlare节点21
-      - 美国CloudFlare节点22
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点3
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点5
       - 法国+巴黎Amazon数据中心
+      - 广东省广州市移动8
+      - 美国+Amazon数据中心
+      - 土耳其V2CROSS.COM11
+      - 香港阿里云12
+      - 美国CloudFlare节点14
+      - 广东省移动16
+      - 湖南省+联通
+      - 德国+V2CROSS.COM
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
