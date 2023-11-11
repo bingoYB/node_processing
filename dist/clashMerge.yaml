@@ -1,4 +1,4 @@
-# 更新时间 2023-11-11T06:58:30.421Z
+# 更新时间 2023-11-11T07:17:06.355Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -673,6 +673,75 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
+  - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v006.ssrsub.com
+    server: 198.41.223.14
+    port: 80
+    uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /
+    server: sgp-2.888401.xyz
+    port: 80
+    uuid: fb512649-3738-493c-887b-a93eb5fc1f60
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 香港ADCDATA数据中心7
+    server: 194.156.98.179
+    port: 80
+    uuid: 0855b410-0e96-4d0a-9b6e-80830edec462
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 广东省移动9
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11002
+    uuid: 85db6652-a747-3a0a-a170-422736076410
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: trojan
+    name: 广东省+移动
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11015
+    password: 85db6652-a747-3a0a-a170-422736076410
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点11
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: ca6.tehme100.fun
+    server: 172.67.229.38
+    port: 2086
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点16
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: buyvm.iiio.wiki
+    server: freeyx.cloudflare88.eu.org
+    port: 80
+    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -742,6 +811,13 @@ proxy-groups:
       - github.com/freefq-香港BGP.NETCN2数据中心1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-广东省移动1818
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
+      - 香港ADCDATA数据中心7
+      - 广东省移动9
+      - 广东省+移动
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点16
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -811,6 +887,13 @@ proxy-groups:
       - github.com/freefq-香港BGP.NETCN2数据中心1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-广东省移动1818
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
+      - 香港ADCDATA数据中心7
+      - 广东省移动9
+      - 广东省+移动
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点16
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -879,6 +962,13 @@ proxy-groups:
       - github.com/freefq-香港BGP.NETCN2数据中心1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-广东省移动1818
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
+      - 香港ADCDATA数据中心7
+      - 广东省移动9
+      - 广东省+移动
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点16
   - name: 📲 电报信息
     type: select
     proxies:
@@ -979,6 +1069,13 @@ proxy-groups:
       - github.com/freefq-香港BGP.NETCN2数据中心1616
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-广东省移动1818
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点5
+      - 香港ADCDATA数据中心7
+      - 广东省移动9
+      - 广东省+移动
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点16
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
