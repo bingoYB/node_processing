@@ -1,4 +1,4 @@
-# 更新时间 2023-11-11T18:57:44.394Z
+# 更新时间 2023-11-11T19:14:56.320Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -933,34 +933,51 @@ proxies:
     cipher: auto
     network: auto
   - type: trojan
-    name: 香港+阿里云
-    server: 47.76.34.107
-    port: 443
-    password: 6a96b7c2-c918-3bb6-94b5-9861d13f9a00
+    name: 湖南省+联通
+    server: tg_mfbpn_d5.52vpn.eu.org
+    port: 11032
+    password: 85db6652-a747-3a0a-a170-422736076410
     udp: true
     skip-cert-verify: true
   - type: trojan
     name: 美国+Amazon数据中心
-    server: 13.39.45.140
+    server: 18.157.173.86
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点5
+    name: 广东省移动5
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11005
+    uuid: 85db6652-a747-3a0a-a170-422736076410
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 香港阿里云6
     ws-opts:
-      path: /api/v3/download.getFile
+      path: /
       headers:
-        host: ssrsub.v005.ssrsub.com
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
+        host: n1699253769.aaigefm.cn
+    server: n1699253769.aaigefm.cn
+    port: 443
+    uuid: 982fadd1-3e5f-4aa3-8552-ed6fda23414a
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
+  - type: vmess
+    name: 广东省移动7
+    server: tg_mfbpn_d4.52vpn.eu.org
+    port: 11002
+    uuid: 85db6652-a747-3a0a-a170-422736076410
+    alterId: 0
+    cipher: auto
+    network: auto
   - type: trojan
-    name: 英国+伦敦Amazon数据中心
-    server: 18.130.101.110
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 34.249.127.158
     port: 22222
     password: telegram-id-privatevpns
     udp: true
@@ -973,8 +990,8 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 香港+电讯盈科有限公司
-    server: 112.120.127.9
+    name: 德国+V2CROSS.COM
+    server: 89.163.220.99
     port: 443
     password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
@@ -982,52 +999,21 @@ proxies:
   - type: trojan
     name: 广东省+移动
     server: tg_mfbpn_d4.52vpn.eu.org
-    port: 11018
+    port: 11015
     password: 85db6652-a747-3a0a-a170-422736076410
     udp: true
     skip-cert-verify: true
-  - type: trojan
-    name: 台湾省新北市+中华电信
-    server: download1tw.windowsupdatea.com
-    port: 443
-    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 香港ADCDATA数据中心16
-    server: 194.156.98.179
-    port: 80
-    uuid: 0855b410-0e96-4d0a-9b6e-80830edec462
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点17
+    name: 美国LeaseWeb数据中心18
     ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v004.ssrsub.com
-    server: singapore.com
-    port: 80
-    uuid: 3d761afc-6dfd-49d9-9d0f-b79341391f26
+      path: /footers
+    server: 23.108.100.101
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+RF+Engineering
-    server: 141.193.68.81
-    port: 443
-    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 广东省移动19
-    server: tg_mfbpn_d4.52vpn.eu.org
-    port: 11002
-    uuid: 85db6652-a747-3a0a-a170-422736076410
-    alterId: 0
-    cipher: auto
-    network: auto
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1114,18 +1100,16 @@ proxy-groups:
       - github.com/freefq-乌克兰55
       - github.com/freefq-香港阿里云66
       - github.com/freefq-广东省移动77
-      - 香港+阿里云
+      - 湖南省+联通
       - 美国+Amazon数据中心
-      - 美国CloudFlare节点5
-      - 英国+伦敦Amazon数据中心
+      - 广东省移动5
+      - 香港阿里云6
+      - 广东省移动7
+      - 爱尔兰+都柏林Amazon数据中心
       - 美国+惠普公司
-      - 香港+电讯盈科有限公司
+      - 德国+V2CROSS.COM
       - 广东省+移动
-      - 台湾省新北市+中华电信
-      - 香港ADCDATA数据中心16
-      - 美国CloudFlare节点17
-      - 美国+RF+Engineering
-      - 广东省移动19
+      - 美国LeaseWeb数据中心18
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1212,18 +1196,16 @@ proxy-groups:
       - github.com/freefq-乌克兰55
       - github.com/freefq-香港阿里云66
       - github.com/freefq-广东省移动77
-      - 香港+阿里云
+      - 湖南省+联通
       - 美国+Amazon数据中心
-      - 美国CloudFlare节点5
-      - 英国+伦敦Amazon数据中心
+      - 广东省移动5
+      - 香港阿里云6
+      - 广东省移动7
+      - 爱尔兰+都柏林Amazon数据中心
       - 美国+惠普公司
-      - 香港+电讯盈科有限公司
+      - 德国+V2CROSS.COM
       - 广东省+移动
-      - 台湾省新北市+中华电信
-      - 香港ADCDATA数据中心16
-      - 美国CloudFlare节点17
-      - 美国+RF+Engineering
-      - 广东省移动19
+      - 美国LeaseWeb数据中心18
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1309,18 +1291,16 @@ proxy-groups:
       - github.com/freefq-乌克兰55
       - github.com/freefq-香港阿里云66
       - github.com/freefq-广东省移动77
-      - 香港+阿里云
+      - 湖南省+联通
       - 美国+Amazon数据中心
-      - 美国CloudFlare节点5
-      - 英国+伦敦Amazon数据中心
+      - 广东省移动5
+      - 香港阿里云6
+      - 广东省移动7
+      - 爱尔兰+都柏林Amazon数据中心
       - 美国+惠普公司
-      - 香港+电讯盈科有限公司
+      - 德国+V2CROSS.COM
       - 广东省+移动
-      - 台湾省新北市+中华电信
-      - 香港ADCDATA数据中心16
-      - 美国CloudFlare节点17
-      - 美国+RF+Engineering
-      - 广东省移动19
+      - 美国LeaseWeb数据中心18
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1438,18 +1418,16 @@ proxy-groups:
       - github.com/freefq-乌克兰55
       - github.com/freefq-香港阿里云66
       - github.com/freefq-广东省移动77
-      - 香港+阿里云
+      - 湖南省+联通
       - 美国+Amazon数据中心
-      - 美国CloudFlare节点5
-      - 英国+伦敦Amazon数据中心
+      - 广东省移动5
+      - 香港阿里云6
+      - 广东省移动7
+      - 爱尔兰+都柏林Amazon数据中心
       - 美国+惠普公司
-      - 香港+电讯盈科有限公司
+      - 德国+V2CROSS.COM
       - 广东省+移动
-      - 台湾省新北市+中华电信
-      - 香港ADCDATA数据中心16
-      - 美国CloudFlare节点17
-      - 美国+RF+Engineering
-      - 广东省移动19
+      - 美国LeaseWeb数据中心18
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
