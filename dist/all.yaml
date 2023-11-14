@@ -1,5 +1,5 @@
 
-    # 更新时间 2023-11-14T07:05:05.419Z
+    # 更新时间 2023-11-14T12:33:38.983Z
 
 port: 7890
 socks-port: 7891
@@ -9,7 +9,7 @@ log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
   - type: vmess
-    name: 更新于:11-1412:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:11-1420:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -17,37 +17,44 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-台湾省新竹市中华电信11
+    name: github.com/freefq-台湾省中华电信(HiNet)数据中心11
     ws-opts:
-      path: /b24
+      path: /b23
       headers:
-        host: b24.ntbq.dynu.net
-    server: b24.ntbq.dynu.net
+        host: b23.ntbq.dynu.net
+    server: b23.ntbq.dynu.net
+    port: 443
+    uuid: 6152dab2-5a09-44fe-9c14-3ece9dbbc4b8
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-台湾省中华电信(HiNet)数据中心22
+    ws-opts:
+      path: /b23
+      headers:
+        host: b23.ntbq.dynu.net
+    server: b23.ntbq.dynu.net
+    port: 443
+    uuid: 18a4f80a-e6ba-4763-80da-7188fdee9abb
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-台湾省中华电信(HiNet)数据中心33
+    ws-opts:
+      path: /b23
+      headers:
+        host: b23.ntbq.dynu.net
+    server: b23.ntbq.dynu.net
     port: 443
     uuid: 2e3f1868-eeff-4a5c-995e-9e1a2cdf1bf3
     alterId: 0
     cipher: auto
     network: ws
     tls: true
-  - type: trojan
-    name: github.com/freefq-香港阿里云2
-    server: xg107.npv4.com
-    port: 443
-    password: 6a96b7c2-c918-3bb6-94b5-9861d13f9a00
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点33
-    ws-opts:
-      path: /vmess
-      headers:
-        host: ee1.xv2ray.net
-    server: sfmomastore.com
-    port: 80
-    uuid: 0580abe6-9aaf-40e2-ba33-0bc9f3b6ef2b
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: vmess
     name: github.com/freefq-美国CloudFlare节点44
     ws-opts:
@@ -62,63 +69,58 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-乌克兰55
+    name: github.com/freefq-台湾省桃园市中华电信55
     ws-opts:
-      path: /vmess
+      path: /b24
       headers:
-        host: il1.xv2ray.net
-    server: 95.164.61.27
-    port: 80
-    uuid: 73f51947-ce77-4d19-a652-467863492634
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-台湾省台北市中华电信66
-    ws-opts:
-      path: /b23
-      headers:
-        host: b23.ntbq.dynu.net
-    server: b23.ntbq.dynu.net
+        host: b24.ntbq.dynu.net
+    server: b24.ntbq.dynu.net
     port: 443
-    uuid: b91e2e5c-47cd-4cb1-bff3-f4a063c2bfd7
+    uuid: 2e3f1868-eeff-4a5c-995e-9e1a2cdf1bf3
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点77
+    name: github.com/freefq-美国CloudFlare公司CDN节点66
+    ws-opts:
+      path: /
+    server: us-new04.gujuji.top
+    port: 8080
+    uuid: b8845e4b-3211-4898-9636-96cdf01f63fa
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-台湾省桃园市中华电信77
+    ws-opts:
+      path: /b24
+    server: b24.ntbq.dynu.net
+    port: 443
+    uuid: d6bc538d-2496-4818-b160-2d5875ba9a91
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-俄罗斯88
+    ws-opts:
+      path: /
+    server: 80.92.205.112
+    port: 443
+    uuid: 4c90ba75-230b-4f8b-bbff-8efa0eb0415f
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点99
     ws-opts:
       path: /
       headers:
-        host: eu2.openxai.link
-    server: cf1.openxai.link
-    port: 8080
-    uuid: 94242109-0930-427f-f899-15d34021130c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点88
-    ws-opts:
-      path: /centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Minimal-2009.iso
-      headers:
-        host: sg3-amazonwebservices.ispeed.tk
-    server: cname.ispeed.tk
-    port: 80
-    uuid: ebc8ef6e-961d-4315-9258-46fb81605bd7
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房99
-    ws-opts:
-      path: /path/1699280099138
-      headers:
-        host: www.42077230.xyz
-    server: 45.199.138.191
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+        host: dIGIkAlA.ONlINeviSioNsTore.sITE
+    server: docs.digitalocean.com
+    port: 443
+    uuid: d8d3482e-6d58-4e86-b870-e7fbe893d8b9
     alterId: 0
     cipher: auto
     network: ws
@@ -130,20 +132,31 @@ proxies:
     password: YWVzLTI1Ni1nY206NWM4YjIxMGEtMmYwMC00MjkyLTk2NGItMDUyODFjN2FkNWQx
     cipher: aes-128-gcm
   - type: vmess
-    name: github.com/freefq-香港阿里云1111
+    name: github.com/freefq-台湾省新北市中华电信1111
     ws-opts:
-      path: /
+      path: /b21
       headers:
-        host: n1699253769.aaigefm.cn
-    server: n1699253769.aaigefm.cn
+        host: b21.ntbq.dynu.net
+    server: b21.ntbq.dynu.net
     port: 443
-    uuid: 982fadd1-3e5f-4aa3-8552-ed6fda23414a
+    uuid: 38ff99d8-dbaf-430a-867e-200b89f4c70a
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-香港阿里云1212
+    name: github.com/freefq-台湾省台北市中华电信1212
+    ws-opts:
+      path: /b12
+    server: nbq12.ntbq.dynu.net
+    port: 443
+    uuid: 42246552-d778-440f-bbb5-8f0f14139c50
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-香港阿里云1313
     ws-opts:
       path: /
       headers:
@@ -156,20 +169,98 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-香港阿里云1313
+    name: github.com/freefq-美国CloudFlare节点1414
     ws-opts:
       path: /
-      headers:
-        host: n1698814075.aaigefm.cn
-    server: n1698814075.aaigefm.cn
+    server: ml2.shabijichang.com
+    port: 80
+    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点1515
+    ws-opts:
+      path: /
+    server: ml3.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-台湾省台北市中华电信1616
+    ws-opts:
+      path: /b13
+    server: nbq13.ntbq.dynu.net
     port: 443
-    uuid: f5d1e638-f78d-4e1b-90af-cc7944ea2de0
+    uuid: d6bc538d-2496-4818-b160-2d5875ba9a91
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-台湾省中华电信(HiNet)数据中心1414
+    name: github.com/freefq-美国CloudFlare节点1717
+    ws-opts:
+      path: /
+      headers:
+        host: eu1.openxai.link
+    server: 198.41.192.4
+    port: 8080
+    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点1818
+    ws-opts:
+      path: /
+      headers:
+        host: aktw.daozhang.love
+    server: hytron.io
+    port: 8080
+    uuid: 010c265f-5455-4141-ca23-4d69357ded0d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-捷克1919
+    ws-opts:
+      path: /
+    server: 176.126.120.38
+    port: 55007
+    uuid: 46840da4-9dbe-476c-bc44-05ea3b7c7a87
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-香港阿里云2020
+    ws-opts:
+      path: /
+      headers:
+        host: n1697555560.aaigefm.cn
+    server: n1697555560.aaigefm.cn
+    port: 443
+    uuid: 56691c3c-b9a5-440f-a678-478618854e75
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-台湾省台北市中华电信2121
+    ws-opts:
+      path: /b13
+      headers:
+        host: nbq13.ntbq.dynu.net
+    server: nbq13.ntbq.dynu.net
+    port: 443
+    uuid: 44209e14-2acf-4d62-ac06-5f7fe43e3591
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-台湾省中华电信(HiNet)数据中心2222
     ws-opts:
       path: /b11
       headers:
@@ -182,42 +273,7 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1515
-    ws-opts:
-      path: /path/1699624723213
-      headers:
-        host: www.39838266.xyz
-    server: 142.4.97.65
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1616
-    ws-opts:
-      path: /
-      headers:
-        host: eu1.openxai.link
-    server: 198.41.192.4
-    port: 8080
-    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-广东省广州市移动1717
-    ws-opts:
-      path: /
-    server: 183.233.187.214
-    port: 38962
-    uuid: 770ee730-2450-4e3c-a6c6-3932bd32afbd
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: github.com/freefq-广东省移动1818
+    name: github.com/freefq-广东省移动2323
     server: 120.233.43.47
     port: 11013
     uuid: 85db6652-a747-3a0a-a170-422736076410
@@ -225,7 +281,7 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-广东省移动1919
+    name: github.com/freefq-广东省移动2424
     server: tg_mfbpn_d4.52vpn.eu.org
     port: 11002
     uuid: 85db6652-a747-3a0a-a170-422736076410
@@ -686,26 +742,31 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 更新于:11-1412:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-台湾省新竹市中华电信11
-      - github.com/freefq-香港阿里云2
-      - github.com/freefq-美国CloudFlare节点33
+      - 更新于:11-1420:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心11
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心22
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心33
       - github.com/freefq-美国CloudFlare节点44
-      - github.com/freefq-乌克兰55
-      - github.com/freefq-台湾省台北市中华电信66
-      - github.com/freefq-美国CloudFlare公司CDN节点77
-      - github.com/freefq-美国CloudFlare公司CDN节点88
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房99
+      - github.com/freefq-台湾省桃园市中华电信55
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-台湾省桃园市中华电信77
+      - github.com/freefq-俄罗斯88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-湖南省联通10
-      - github.com/freefq-香港阿里云1111
-      - github.com/freefq-香港阿里云1212
+      - github.com/freefq-台湾省新北市中华电信1111
+      - github.com/freefq-台湾省台北市中华电信1212
       - github.com/freefq-香港阿里云1313
-      - github.com/freefq-台湾省中华电信(HiNet)数据中心1414
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1515
-      - github.com/freefq-美国CloudFlare节点1616
-      - github.com/freefq-广东省广州市移动1717
-      - github.com/freefq-广东省移动1818
-      - github.com/freefq-广东省移动1919
+      - github.com/freefq-美国CloudFlare节点1414
+      - github.com/freefq-美国CloudFlare公司CDN节点1515
+      - github.com/freefq-台湾省台北市中华电信1616
+      - github.com/freefq-美国CloudFlare节点1717
+      - github.com/freefq-美国CloudFlare公司CDN节点1818
+      - github.com/freefq-捷克1919
+      - github.com/freefq-香港阿里云2020
+      - github.com/freefq-台湾省台北市中华电信2121
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心2222
+      - github.com/freefq-广东省移动2323
+      - github.com/freefq-广东省移动2424
       - 🇯🇵_JP_日本
       - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国8
@@ -750,26 +811,31 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 更新于:11-1412:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-台湾省新竹市中华电信11
-      - github.com/freefq-香港阿里云2
-      - github.com/freefq-美国CloudFlare节点33
+      - 更新于:11-1420:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心11
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心22
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心33
       - github.com/freefq-美国CloudFlare节点44
-      - github.com/freefq-乌克兰55
-      - github.com/freefq-台湾省台北市中华电信66
-      - github.com/freefq-美国CloudFlare公司CDN节点77
-      - github.com/freefq-美国CloudFlare公司CDN节点88
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房99
+      - github.com/freefq-台湾省桃园市中华电信55
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-台湾省桃园市中华电信77
+      - github.com/freefq-俄罗斯88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-湖南省联通10
-      - github.com/freefq-香港阿里云1111
-      - github.com/freefq-香港阿里云1212
+      - github.com/freefq-台湾省新北市中华电信1111
+      - github.com/freefq-台湾省台北市中华电信1212
       - github.com/freefq-香港阿里云1313
-      - github.com/freefq-台湾省中华电信(HiNet)数据中心1414
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1515
-      - github.com/freefq-美国CloudFlare节点1616
-      - github.com/freefq-广东省广州市移动1717
-      - github.com/freefq-广东省移动1818
-      - github.com/freefq-广东省移动1919
+      - github.com/freefq-美国CloudFlare节点1414
+      - github.com/freefq-美国CloudFlare公司CDN节点1515
+      - github.com/freefq-台湾省台北市中华电信1616
+      - github.com/freefq-美国CloudFlare节点1717
+      - github.com/freefq-美国CloudFlare公司CDN节点1818
+      - github.com/freefq-捷克1919
+      - github.com/freefq-香港阿里云2020
+      - github.com/freefq-台湾省台北市中华电信2121
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心2222
+      - github.com/freefq-广东省移动2323
+      - github.com/freefq-广东省移动2424
       - 🇯🇵_JP_日本
       - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国8
@@ -813,26 +879,31 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
-      - 更新于:11-1412:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-台湾省新竹市中华电信11
-      - github.com/freefq-香港阿里云2
-      - github.com/freefq-美国CloudFlare节点33
+      - 更新于:11-1420:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心11
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心22
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心33
       - github.com/freefq-美国CloudFlare节点44
-      - github.com/freefq-乌克兰55
-      - github.com/freefq-台湾省台北市中华电信66
-      - github.com/freefq-美国CloudFlare公司CDN节点77
-      - github.com/freefq-美国CloudFlare公司CDN节点88
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房99
+      - github.com/freefq-台湾省桃园市中华电信55
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-台湾省桃园市中华电信77
+      - github.com/freefq-俄罗斯88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-湖南省联通10
-      - github.com/freefq-香港阿里云1111
-      - github.com/freefq-香港阿里云1212
+      - github.com/freefq-台湾省新北市中华电信1111
+      - github.com/freefq-台湾省台北市中华电信1212
       - github.com/freefq-香港阿里云1313
-      - github.com/freefq-台湾省中华电信(HiNet)数据中心1414
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1515
-      - github.com/freefq-美国CloudFlare节点1616
-      - github.com/freefq-广东省广州市移动1717
-      - github.com/freefq-广东省移动1818
-      - github.com/freefq-广东省移动1919
+      - github.com/freefq-美国CloudFlare节点1414
+      - github.com/freefq-美国CloudFlare公司CDN节点1515
+      - github.com/freefq-台湾省台北市中华电信1616
+      - github.com/freefq-美国CloudFlare节点1717
+      - github.com/freefq-美国CloudFlare公司CDN节点1818
+      - github.com/freefq-捷克1919
+      - github.com/freefq-香港阿里云2020
+      - github.com/freefq-台湾省台北市中华电信2121
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心2222
+      - github.com/freefq-广东省移动2323
+      - github.com/freefq-广东省移动2424
       - 🇯🇵_JP_日本
       - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国8
@@ -908,26 +979,31 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 更新于:11-1412:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-台湾省新竹市中华电信11
-      - github.com/freefq-香港阿里云2
-      - github.com/freefq-美国CloudFlare节点33
+      - 更新于:11-1420:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心11
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心22
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心33
       - github.com/freefq-美国CloudFlare节点44
-      - github.com/freefq-乌克兰55
-      - github.com/freefq-台湾省台北市中华电信66
-      - github.com/freefq-美国CloudFlare公司CDN节点77
-      - github.com/freefq-美国CloudFlare公司CDN节点88
-      - github.com/freefq-美国加利福尼亚州圣何塞MULTACOM机房99
+      - github.com/freefq-台湾省桃园市中华电信55
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-台湾省桃园市中华电信77
+      - github.com/freefq-俄罗斯88
+      - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-湖南省联通10
-      - github.com/freefq-香港阿里云1111
-      - github.com/freefq-香港阿里云1212
+      - github.com/freefq-台湾省新北市中华电信1111
+      - github.com/freefq-台湾省台北市中华电信1212
       - github.com/freefq-香港阿里云1313
-      - github.com/freefq-台湾省中华电信(HiNet)数据中心1414
-      - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1515
-      - github.com/freefq-美国CloudFlare节点1616
-      - github.com/freefq-广东省广州市移动1717
-      - github.com/freefq-广东省移动1818
-      - github.com/freefq-广东省移动1919
+      - github.com/freefq-美国CloudFlare节点1414
+      - github.com/freefq-美国CloudFlare公司CDN节点1515
+      - github.com/freefq-台湾省台北市中华电信1616
+      - github.com/freefq-美国CloudFlare节点1717
+      - github.com/freefq-美国CloudFlare公司CDN节点1818
+      - github.com/freefq-捷克1919
+      - github.com/freefq-香港阿里云2020
+      - github.com/freefq-台湾省台北市中华电信2121
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心2222
+      - github.com/freefq-广东省移动2323
+      - github.com/freefq-广东省移动2424
       - 🇯🇵_JP_日本
       - 🇸🇬_SG_新加坡
       - 🇺🇸_US_美国8
