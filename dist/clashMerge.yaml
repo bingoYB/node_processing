@@ -1,4 +1,4 @@
-# 更新时间 2023-11-15T12:58:40.603Z
+# 更新时间 2023-11-15T13:25:21.153Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1049,11 +1049,11 @@ proxies:
   - type: ss
     name: 法国+格拉沃利讷OVH数据中心
     server: 54.36.174.181
-    port: 2376
-    password: YWVzLTI1Ni1nY206ZmFCQW9ENTRrODdVSkc3
+    port: 9102
+    password: YWVzLTI1Ni1nY206ZTRGQ1dyZ3BramkzUVk=
     cipher: aes-128-gcm
   - type: vmess
-    name: 巴西圣保罗CloudFlare节点4
+    name: 巴西圣保罗CloudFlare节点1
     ws-opts:
       path: /cloudconebbb
       headers:
@@ -1065,68 +1065,78 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: trojan
-    name: 俄罗斯+V2CROSS.COM
-    server: 212.192.15.68
-    port: 49487
-    password: 1cb996c8-e5bf-40d2-9a3c-149b3b721c5f
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点9
+    name: 美国CloudFlare节点5
     ws-opts:
-      path: /
+      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
       headers:
-        host: eu1.openxai.link
-    server: 198.41.192.4
-    port: 8080
-    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
+        host: fr7.tehme100.fun
+    server: 172.67.229.15
+    port: 8880
+    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点12
+    name: 美国CloudFlare节点7
     ws-opts:
-      path: /
+      path: 024de607-d840-470f-877c-a909152e5441-vm
       headers:
-        host: eu1.openxai.link
-    server: cf2.openxai.link
-    port: 8080
-    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点15
-    ws-opts:
-      path: /A2Es7dtagy5GzWC
-      headers:
-        host: ch5p.isecurity.site
-    server: ch5p.isecurity.site
+        host: spotlight-nascar-detector-vsnet.trycloudflare.com
+    server: www.wto.org
     port: 443
-    uuid: 502bee38-d439-4a2e-9b70-8221eb06efb2
+    uuid: 024de607-d840-470f-877c-a909152e5441
     alterId: 0
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: 美国CloudFlare节点8
+    ws-opts:
+      path: /
+    server: ml3.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点10
+    ws-opts:
+      path: /vmess
+      headers:
+        host: ca2.xv2ray.net
+    server: www.speedtest.net
+    port: 80
+    uuid: 0239b1ce-468c-45b3-8d2a-85b1c0b274d9
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)14
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: azstutr.iiio.wiki
+    server: shop.app
+    port: 8080
+    uuid: dea35652-2439-426a-86a7-5b2e535e934d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 甘肃省兰州市+移动
+    server: zjcm2.r1u.cn
+    port: 35783
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTplYzQ4YzllMC03N2U2LTRhNzYtYTUxOS00YTUxY2JlNTJjNTk=
+    cipher: aes-128-gcm
   - type: ss
     name: 美国+华盛顿Cogent通信公司
     server: 38.68.134.69
     port: 2376
     password: YWVzLTI1Ni1nY206ZmFCQW9ENTRrODdVSkc3
     cipher: aes-128-gcm
-  - type: vmess
-    name: 美国CloudFlare节点24
-    ws-opts:
-      path: /vmess
-      headers:
-        host: ca2.xv2ray.net
-    server: ip.nofiltering2.sbs
-    port: 80
-    uuid: 0239b1ce-468c-45b3-8d2a-85b1c0b274d9
-    alterId: 0
-    cipher: auto
-    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1227,13 +1237,14 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信1616
       - github.com/freefq-法国格拉沃利讷OVH数据中心17
       - 法国+格拉沃利讷OVH数据中心
-      - 巴西圣保罗CloudFlare节点4
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点12
-      - 美国CloudFlare节点15
+      - 巴西圣保罗CloudFlare节点1
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点7
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点10
+      - 美国CloudFlare公司CDN节点(shopify)14
+      - 甘肃省兰州市+移动
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点24
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1334,13 +1345,14 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信1616
       - github.com/freefq-法国格拉沃利讷OVH数据中心17
       - 法国+格拉沃利讷OVH数据中心
-      - 巴西圣保罗CloudFlare节点4
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点12
-      - 美国CloudFlare节点15
+      - 巴西圣保罗CloudFlare节点1
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点7
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点10
+      - 美国CloudFlare公司CDN节点(shopify)14
+      - 甘肃省兰州市+移动
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点24
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1440,13 +1452,14 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信1616
       - github.com/freefq-法国格拉沃利讷OVH数据中心17
       - 法国+格拉沃利讷OVH数据中心
-      - 巴西圣保罗CloudFlare节点4
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点12
-      - 美国CloudFlare节点15
+      - 巴西圣保罗CloudFlare节点1
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点7
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点10
+      - 美国CloudFlare公司CDN节点(shopify)14
+      - 甘肃省兰州市+移动
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点24
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1578,13 +1591,14 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信1616
       - github.com/freefq-法国格拉沃利讷OVH数据中心17
       - 法国+格拉沃利讷OVH数据中心
-      - 巴西圣保罗CloudFlare节点4
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点12
-      - 美国CloudFlare节点15
+      - 巴西圣保罗CloudFlare节点1
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点7
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点10
+      - 美国CloudFlare公司CDN节点(shopify)14
+      - 甘肃省兰州市+移动
       - 美国+华盛顿Cogent通信公司
-      - 美国CloudFlare节点24
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
