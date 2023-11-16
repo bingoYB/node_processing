@@ -1,4 +1,4 @@
-# 更新时间 2023-11-16T06:51:18.711Z
+# 更新时间 2023-11-16T07:08:52.230Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -989,15 +989,46 @@ proxies:
     port: 33952
     password: YWVzLTI1Ni1nY206NWM4YjIxMGEtMmYwMC00MjkyLTk2NGItMDUyODFjN2FkNWQx
     cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
+      headers:
+        host: fr7.tehme100.fun
+    server: 172.67.229.24
+    port: 8880
+    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /vmess
+      headers:
+        host: ee1.xv2ray.net
+    server: sfmomastore.com
+    port: 80
+    uuid: 0580abe6-9aaf-40e2-ba33-0bc9f3b6ef2b
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: trojan
-    name: 香港+电讯盈科有限公司
-    server: download1hkt.windowsupdatea.com
+    name: 德国+V2CROSS.COM
+    server: 89.163.220.99
     port: 443
     password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
     skip-cert-verify: true
+  - type: trojan
+    name: 俄罗斯+V2CROSS.COM
+    server: hk3.visaapp.top
+    port: 49487
+    password: 1cb996c8-e5bf-40d2-9a3c-149b3b721c5f
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点3
+    name: 美国CloudFlare节点5
     ws-opts:
       path: /
       headers:
@@ -1010,43 +1041,32 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 美国CloudFlare节点8
+    name: 美国CloudFlare节点7
     ws-opts:
-      path: /A2Es7dtagy5GzWC
+      path: /
       headers:
-        host: ch5p.isecurity.site
-    server: ch5p.isecurity.site
-    port: 443
-    uuid: 502bee38-d439-4a2e-9b70-8221eb06efb2
+        host: eu1.openxai.link
+    server: cf2.openxai.link
+    port: 8080
+    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
   - type: vmess
-    name: 美国CloudFlare节点9
-    ws-opts:
-      path: 024de607-d840-470f-877c-a909152e5441-vm
-      headers:
-        host: spotlight-nascar-detector-vsnet.trycloudflare.com
-    server: www.wto.org
+    name: 广东省移动9
+    server: 183.237.20.154
+    port: 40095
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: trojan
+    name: 香港+电讯盈科有限公司
+    server: download2hkt.windowsupdatea.com
     port: 443
-    uuid: 024de607-d840-470f-877c-a909152e5441
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点10
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: buyvm.iiio.wiki
-    server: 172.67.68.136
-    port: 80
-    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
-    alterId: 0
-    cipher: auto
-    network: ws
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1145,11 +1165,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点11
       - github.com/freefq-美国CloudFlare公司CDN节点22
       - github.com/freefq-湖南省联通3
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 德国+V2CROSS.COM
+      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点7
+      - 广东省移动9
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1248,11 +1271,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点11
       - github.com/freefq-美国CloudFlare公司CDN节点22
       - github.com/freefq-湖南省联通3
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 德国+V2CROSS.COM
+      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点7
+      - 广东省移动9
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1350,11 +1376,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点11
       - github.com/freefq-美国CloudFlare公司CDN节点22
       - github.com/freefq-湖南省联通3
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 德国+V2CROSS.COM
+      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点7
+      - 广东省移动9
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1484,11 +1513,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点11
       - github.com/freefq-美国CloudFlare公司CDN节点22
       - github.com/freefq-湖南省联通3
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 德国+V2CROSS.COM
+      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点5
+      - 美国CloudFlare节点7
+      - 广东省移动9
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点3
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
