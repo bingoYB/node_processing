@@ -1,4 +1,4 @@
-# 更新时间 2023-11-16T19:02:15.311Z
+# 更新时间 2023-11-17T01:17:48.360Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -950,7 +950,7 @@ proxies:
     skip-cert-verify: true
     network: tcp
   - type: vmess
-    name: 更新于:11-1700:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:11-1708:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -958,39 +958,38 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: 美国CloudFlare节点0
+    name: github.com/freefq-亚太地区11
+    ws-opts:
+      path: /vmess
+    server: 103.167.35.12
+    port: 80
+    uuid: 781adf87-0afa-420c-875f-879162a2bce1
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-香港阿里云22
     ws-opts:
       path: /
       headers:
-        host: eu1.openxai.link
-    server: 198.41.192.4
-    port: 8080
-    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
+        host: n1698814075.aaigefm.cn
+    server: n1698814075.aaigefm.cn
+    port: 443
+    uuid: f5d1e638-f78d-4e1b-90af-cc7944ea2de0
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
   - type: vmess
-    name: 美国CloudFlare公司CDN节点(shopify)1
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: azstutr.iiio.wiki
-    server: shop.app
-    port: 8080
-    uuid: dea35652-2439-426a-86a7-5b2e535e934d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 北京市移动2
-    server: 33.kccic2pa.xyz
-    port: 50033
-    uuid: 1b5a5163-baf1-4b34-a426-6060b2ca359e
+    name: github.com/freefq-香港ADCDATA数据中心33
+    server: 194.156.98.179
+    port: 80
+    uuid: 0855b410-0e96-4d0a-9b6e-80830edec462
     alterId: 0
     cipher: auto
     network: auto
   - type: vmess
-    name: 美国CloudFlare节点3
+    name: github.com/freefq-美国CloudFlare节点44
     ws-opts:
       path: /
       headers:
@@ -1002,17 +1001,47 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点6
+    name: github.com/freefq-美国CloudFlare节点55
     ws-opts:
-      path: /vmess
-      headers:
-        host: ca2.xv2ray.net
-    server: ip.nofiltering2.sbs
+      path: /
+    server: ml2.shabijichang.com
     port: 80
-    uuid: 0239b1ce-468c-45b3-8d2a-85b1c0b274d9
+    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 俄罗斯+V2CROSS.COM
+    server: 212.192.15.68
+    port: 49487
+    password: 1cb996c8-e5bf-40d2-9a3c-149b3b721c5f
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /public
+      headers:
+        host: de2.biqibao.site
+    server: iran01.biqibao.site
+    port: 2052
+    uuid: 89998636-cea2-41a4-8604-34655fbbc6d7
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /
+      headers:
+        host: dIGIkAlA.ONlINeviSioNsTore.sITE
+    server: 104.18.154.42
+    port: 443
+    uuid: d8d3482e-6d58-4e86-b870-e7fbe893d8b9
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1107,10 +1136,13 @@ proxy-groups:
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
       - 🇬🇧_GB_英国
-      - 更新于:11-1700:00-byBuLink.xyz-以下节点不计流量0
-      - 美国CloudFlare节点0
-      - 美国CloudFlare公司CDN节点(shopify)1
-      - 北京市移动2
+      - 更新于:11-1708:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-亚太地区11
+      - github.com/freefq-香港阿里云22
+      - github.com/freefq-香港ADCDATA数据中心33
+      - github.com/freefq-美国CloudFlare节点44
+      - github.com/freefq-美国CloudFlare节点55
+      - 俄罗斯+V2CROSS.COM
       - 美国CloudFlare节点3
       - 美国CloudFlare节点6
   - name: ♻️ 自动选择
@@ -1207,10 +1239,13 @@ proxy-groups:
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
       - 🇬🇧_GB_英国
-      - 更新于:11-1700:00-byBuLink.xyz-以下节点不计流量0
-      - 美国CloudFlare节点0
-      - 美国CloudFlare公司CDN节点(shopify)1
-      - 北京市移动2
+      - 更新于:11-1708:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-亚太地区11
+      - github.com/freefq-香港阿里云22
+      - github.com/freefq-香港ADCDATA数据中心33
+      - github.com/freefq-美国CloudFlare节点44
+      - github.com/freefq-美国CloudFlare节点55
+      - 俄罗斯+V2CROSS.COM
       - 美国CloudFlare节点3
       - 美国CloudFlare节点6
   - name: 🌍 国外媒体
@@ -1306,10 +1341,13 @@ proxy-groups:
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
       - 🇬🇧_GB_英国
-      - 更新于:11-1700:00-byBuLink.xyz-以下节点不计流量0
-      - 美国CloudFlare节点0
-      - 美国CloudFlare公司CDN节点(shopify)1
-      - 北京市移动2
+      - 更新于:11-1708:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-亚太地区11
+      - github.com/freefq-香港阿里云22
+      - github.com/freefq-香港ADCDATA数据中心33
+      - github.com/freefq-美国CloudFlare节点44
+      - github.com/freefq-美国CloudFlare节点55
+      - 俄罗斯+V2CROSS.COM
       - 美国CloudFlare节点3
       - 美国CloudFlare节点6
   - name: 📲 电报信息
@@ -1437,10 +1475,13 @@ proxy-groups:
       - 🇺🇸_US_美国_3
       - 🇺🇸_US_美国_4
       - 🇬🇧_GB_英国
-      - 更新于:11-1700:00-byBuLink.xyz-以下节点不计流量0
-      - 美国CloudFlare节点0
-      - 美国CloudFlare公司CDN节点(shopify)1
-      - 北京市移动2
+      - 更新于:11-1708:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-亚太地区11
+      - github.com/freefq-香港阿里云22
+      - github.com/freefq-香港ADCDATA数据中心33
+      - github.com/freefq-美国CloudFlare节点44
+      - github.com/freefq-美国CloudFlare节点55
+      - 俄罗斯+V2CROSS.COM
       - 美国CloudFlare节点3
       - 美国CloudFlare节点6
 rules:
