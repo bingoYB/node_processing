@@ -1,4 +1,4 @@
-# 更新时间 2023-11-17T12:57:47.312Z
+# 更新时间 2023-11-17T13:23:21.263Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1586,7 +1586,31 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国V2CROSS.COM0
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /
+      headers:
+        host: yhnsb3.shabijichang.com
+    server: yhnsb3.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)2
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: azstutr.iiio.wiki
+    server: shop.app
+    port: 8080
+    uuid: dea35652-2439-426a-86a7-5b2e535e934d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国V2CROSS.COM3
     ws-opts:
       path: /IOebhLMhl1CTbFHbL95myfRX2
       headers:
@@ -1598,49 +1622,25 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点5
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: buyvm.iiio.wiki
-    server: freeyx.cloudflare88.eu.org
-    port: 80
-    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点7
+    name: 美国CloudFlare节点8
     ws-opts:
       path: /
       headers:
-        host: ml3.shabijichang.com
-    server: ml3.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+        host: eu4.openxai.link
+    server: cf1.openxai.link
+    port: 8080
+    uuid: 218996e0-5a6e-4806-8106-6b7b42e6d0d6
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 广东省移动8
-    server: 183.237.20.148
-    port: 50707
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    name: 安徽省移动数据上网公共出口9
+    server: 112.29.94.23
+    port: 49223
+    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
     alterId: 0
     cipher: auto
     network: auto
-  - type: vmess
-    name: 美国CloudFlare节点9
-    ws-opts:
-      path: /public
-      headers:
-        host: uk1.vvv123.store
-    server: 104.18.239.202
-    port: 2052
-    uuid: 375ae503-faca-4bc6-a1d5-50c23b083768
-    alterId: 0
-    cipher: auto
-    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1795,11 +1795,11 @@ proxy-groups:
       - 更新于:11-1720:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare节点33
-      - 美国V2CROSS.COM0
-      - 美国CloudFlare节点5
-      - 美国CloudFlare节点7
-      - 广东省移动8
-      - 美国CloudFlare节点9
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)2
+      - 美国V2CROSS.COM3
+      - 美国CloudFlare节点8
+      - 安徽省移动数据上网公共出口9
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1954,11 +1954,11 @@ proxy-groups:
       - 更新于:11-1720:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare节点33
-      - 美国V2CROSS.COM0
-      - 美国CloudFlare节点5
-      - 美国CloudFlare节点7
-      - 广东省移动8
-      - 美国CloudFlare节点9
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)2
+      - 美国V2CROSS.COM3
+      - 美国CloudFlare节点8
+      - 安徽省移动数据上网公共出口9
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2112,11 +2112,11 @@ proxy-groups:
       - 更新于:11-1720:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare节点33
-      - 美国V2CROSS.COM0
-      - 美国CloudFlare节点5
-      - 美国CloudFlare节点7
-      - 广东省移动8
-      - 美国CloudFlare节点9
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)2
+      - 美国V2CROSS.COM3
+      - 美国CloudFlare节点8
+      - 安徽省移动数据上网公共出口9
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2302,11 +2302,11 @@ proxy-groups:
       - 更新于:11-1720:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-美国CloudFlare节点22
       - github.com/freefq-美国CloudFlare节点33
-      - 美国V2CROSS.COM0
-      - 美国CloudFlare节点5
-      - 美国CloudFlare节点7
-      - 广东省移动8
-      - 美国CloudFlare节点9
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)2
+      - 美国V2CROSS.COM3
+      - 美国CloudFlare节点8
+      - 安徽省移动数据上网公共出口9
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
