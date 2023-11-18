@@ -1,4 +1,4 @@
-# 更新时间 2023-11-18T06:59:01.278Z
+# 更新时间 2023-11-18T07:18:12.850Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1629,49 +1629,31 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 安徽省移动数据上网公共出口0
-    ws-opts:
-      path: /
-    server: 112.29.94.23
-    port: 49223
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点1
-    ws-opts:
-      path: /eisasqa
-      headers:
-        host: foxpol.fovi.tk
-    server: cf.fovi.tk
-    port: 443
-    uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点2
+    name: 美国CloudFlare节点0
     ws-opts:
       path: /
       headers:
-        host: dIGIkAlA.ONlINeviSioNsTore.sITE
-    server: 104.18.154.42
-    port: 443
-    uuid: d8d3482e-6d58-4e86-b870-e7fbe893d8b9
+        host: eu1.openxai.link
+    server: 198.41.192.4
+    port: 8080
+    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
-  - type: ss
-    name: 法国+格拉沃利讷OVH数据中心
-    server: 54.36.174.181
-    port: 7307
-    password: YWVzLTI1Ni1nY206Rm9PaUdsa0FBOXlQRUdQ
-    cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点15
+    name: 美国CloudFlare节点3
+    ws-opts:
+      path: /
+      headers:
+        host: eu4.openxai.link
+    server: cf1.openxai.link
+    port: 8080
+    uuid: 218996e0-5a6e-4806-8106-6b7b42e6d0d6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点11
     ws-opts:
       path: /
       headers:
@@ -1683,6 +1665,18 @@ proxies:
     cipher: auto
     network: ws
     tls: true
+  - type: vmess
+    name: 美国CloudFlare节点14
+    ws-opts:
+      path: /vmess
+      headers:
+        host: ca2.xv2ray.net
+    server: ip.nofiltering2.sbs
+    port: 80
+    uuid: 0239b1ce-468c-45b3-8d2a-85b1c0b274d9
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1843,11 +1837,10 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心8
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-美国CloudFlare节点1010
-      - 安徽省移动数据上网公共出口0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点15
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点14
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -2008,11 +2001,10 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心8
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-美国CloudFlare节点1010
-      - 安徽省移动数据上网公共出口0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点15
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点14
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2172,11 +2164,10 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心8
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-美国CloudFlare节点1010
-      - 安徽省移动数据上网公共出口0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点15
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点14
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2368,11 +2359,10 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心8
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-美国CloudFlare节点1010
-      - 安徽省移动数据上网公共出口0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点15
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点3
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点14
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
