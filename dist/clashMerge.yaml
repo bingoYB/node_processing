@@ -1,4 +1,4 @@
-# 更新时间 2023-11-18T18:58:28.050Z
+# 更新时间 2023-11-18T19:15:38.368Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1408,21 +1408,78 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /
+      headers:
+        host: dIGIkAlA.ONlINeviSioNsTore.sITE
+    server: 104.18.154.42
+    port: 443
+    uuid: d8d3482e-6d58-4e86-b870-e7fbe893d8b9
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
   - type: ss
     name: 法国+格拉沃利讷OVH数据中心
     server: 54.36.174.181
-    port: 7001
-    password: YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH
+    port: 5001
+    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
     cipher: aes-128-gcm
+  - type: trojan
+    name: 俄罗斯+V2CROSS.COM
+    server: hk3.visaapp.top
+    port: 49487
+    password: 1cb996c8-e5bf-40d2-9a3c-149b3b721c5f
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点12
+    name: 美国CloudFlare节点8
+    ws-opts:
+      path: /
+      headers:
+        host: dIGIkAlA.ONlINeviSioNsTore.sITE
+    server: 104.18.155.42
+    port: 443
+    uuid: d8d3482e-6d58-4e86-b870-e7fbe893d8b9
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点9
+    ws-opts:
+      path: /
+      headers:
+        host: eu4.openxai.link
+    server: cf1.openxai.link
+    port: 8080
+    uuid: 218996e0-5a6e-4806-8106-6b7b42e6d0d6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点11
     ws-opts:
       path: /aries?ed=2048
       headers:
         host: buyvm.iiio.wiki
-    server: freeyx.cloudflare88.eu.org
+    server: 172.67.68.136
     port: 80
     uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点15
+    ws-opts:
+      path: /
+      headers:
+        host: mrb2.shabijichang.com
+    server: mrb2.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
     network: ws
@@ -1562,8 +1619,13 @@ proxy-groups:
       - github.com/freefq-南非77
       - github.com/freefq-台湾省花莲县中华电信88
       - github.com/freefq-美国CloudFlare公司CDN节点1111
+      - 美国CloudFlare节点1
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点12
+      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点15
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1700,8 +1762,13 @@ proxy-groups:
       - github.com/freefq-南非77
       - github.com/freefq-台湾省花莲县中华电信88
       - github.com/freefq-美国CloudFlare公司CDN节点1111
+      - 美国CloudFlare节点1
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点12
+      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点15
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1837,8 +1904,13 @@ proxy-groups:
       - github.com/freefq-南非77
       - github.com/freefq-台湾省花莲县中华电信88
       - github.com/freefq-美国CloudFlare公司CDN节点1111
+      - 美国CloudFlare节点1
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点12
+      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点15
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2006,8 +2078,13 @@ proxy-groups:
       - github.com/freefq-南非77
       - github.com/freefq-台湾省花莲县中华电信88
       - github.com/freefq-美国CloudFlare公司CDN节点1111
+      - 美国CloudFlare节点1
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点12
+      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点15
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
