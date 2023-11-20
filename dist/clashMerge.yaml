@@ -1,4 +1,4 @@
-# 更新时间 2023-11-20T01:18:32.343Z
+# 更新时间 2023-11-20T06:24:56.718Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -727,9 +727,9 @@ proxies:
     cipher: aes-256-cfb
     password: amazonskr05
     udp: true
-  - name: 🇺🇸_US_美国_1
+  - name: 🇺🇸_US_美国->🇮🇳_IN_印度
     type: vmess
-    server: mm3.shabijichang.com
+    server: mm2.shabijichang.com
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -740,20 +740,10 @@ proxies:
     ws-opts:
       path: /
       headers:
-        host: mm3.shabijichang.com
-  - name: 🇮🇷_IR_伊朗->🇫🇷_FR_法国
+        host: mm2.shabijichang.com
+  - name: 🇺🇸_US_美国_1
     type: vmess
-    server: 78.39.56.6
-    port: 46585
-    cipher: auto
-    uuid: 05af75d7-4c45-4222-b245-d36c5618135d
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.21.75.246
+    server: sbl2.shabijichang.com
     port: 80
     cipher: auto
     uuid: c458695d-6908-45c3-9512-e0c46418454c
@@ -765,32 +755,36 @@ proxies:
       path: /
       headers:
         host: sbl2.shabijichang.com
-  - name: 🇹🇷_TR_土耳其
+  - name: 🇺🇸_US_美国_2
     type: vmess
-    server: 193.46.56.210
-    port: 8443
+    server: a7.wxlljc520.com
+    port: 443
     cipher: auto
-    uuid: b72694db-ed21-46c1-8923-325305fa787f
+    uuid: b0e43362-72b7-49ac-8eb6-fff69e07cfae
     alterId: 0
     tls: true
     skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    network: ws
+    ws-opts:
+      path: /apple
+      headers:
+        host: 777.golinkwuxian.top
+  - name: 🇺🇸_US_美国_3
     type: vmess
-    server: ld2.shabijichang.com
-    port: 80
+    server: a8.wxlljc520.com
+    port: 443
     cipher: auto
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    uuid: b0e43362-72b7-49ac-8eb6-fff69e07cfae
     alterId: 0
-    tls: false
+    tls: true
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /apple
       headers:
-        host: ld2.shabijichang.com
+        host: 777.golinkwuxian.top
   - type: vmess
-    name: 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:11-2012:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -798,68 +792,7 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-台湾省新竹市中华电信11
-    ws-opts:
-      path: /b23
-      headers:
-        host: b23.ntbq.dynu.net
-    server: b23.ntbq.dynu.net
-    port: 443
-    uuid: 6b2e0602-bc1a-4ec3-88da-4238a6955ddd
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-台湾省桃园市中华电信22
-    ws-opts:
-      path: /b22
-      headers:
-        host: b22.ntbq.dynu.net
-    server: b22.ntbq.dynu.net
-    port: 443
-    uuid: b4224a4d-6754-47e5-99ef-124697d24b4e
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: github.com/freefq-安徽省合肥市移动44
-    ws-opts:
-      path: /
-    server: 112.29.94.23
-    port: 49223
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: github.com/freefq-台湾省中华电信(HiNet)数据中心55
-    ws-opts:
-      path: /b12
-      headers:
-        host: nbq12.ntbq.dynu.net
-    server: nbq12.ntbq.dynu.net
-    port: 443
-    uuid: b4224a4d-6754-47e5-99ef-124697d24b4e
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: ss
-    name: github.com/freefq-湖南省联通7
-    server: bjcu.xzyunjiasu.icu
-    port: 33952
-    password: YWVzLTI1Ni1nY206NWM4YjIxMGEtMmYwMC00MjkyLTk2NGItMDUyODFjN2FkNWQx
-    cipher: aes-128-gcm
-  - type: ss
-    name: github.com/freefq-法国格拉沃利讷OVH数据中心8
-    server: 54.36.174.181
-    port: 7307
-    password: YWVzLTI1Ni1nY206Rm9PaUdsa0FBOXlQRUdQ
-    cipher: aes-128-gcm
-  - type: vmess
-    name: github.com/freefq-台湾省新北市中华电信99
+    name: github.com/freefq-台湾省台北市中华电信11
     ws-opts:
       path: /b24
       headers:
@@ -872,7 +805,20 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-台湾省苗栗县中华电信1010
+    name: github.com/freefq-台湾省台北市中华电信22
+    ws-opts:
+      path: /b12
+      headers:
+        host: nbq12.ntbq.dynu.net
+    server: nbq12.ntbq.dynu.net
+    port: 443
+    uuid: 6b2e0602-bc1a-4ec3-88da-4238a6955ddd
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-台湾省苗栗县中华电信33
     ws-opts:
       path: /vbub1
     server: tc11.kq1.dynu.net
@@ -882,55 +828,76 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: vmess
-    name: github.com/freefq-美国Choopa公司数据中心1313
-    ws-opts:
-      path: /
-    server: 104.238.158.152
-    port: 2083
-    uuid: ce03a832-d6bb-45a3-9121-f7bd6f189469
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: ss
-    name: github.com/freefq-法国格拉沃利讷OVH数据中心14
-    server: 54.36.174.181
-    port: 6379
-    password: YWVzLTI1Ni1nY206ekROVmVkUkZQUWV4Rzl2
+    name: github.com/freefq-湖南省联通4
+    server: bjcu.xzyunjiasu.icu
+    port: 33952
+    password: YWVzLTI1Ni1nY206NWM4YjIxMGEtMmYwMC00MjkyLTk2NGItMDUyODFjN2FkNWQx
     cipher: aes-128-gcm
   - type: ss
-    name: github.com/freefq-法国格拉沃利讷OVH数据中心15
+    name: github.com/freefq-法国格拉沃利讷OVH数据中心5
     server: >-
       www.outline.network.ak1941.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
     port: 7001
     password: YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH
     cipher: aes-128-gcm
   - type: vmess
-    name: github.com/freefq-美国CloudFlare公司CDN节点1717
+    name: github.com/freefq-美国CloudFlare公司CDN节点66
     ws-opts:
       path: /
       headers:
-        host: eu1.openxai.link
+        host: cc2.shabijichang.com
+    server: cc2.shabijichang.com
+    port: 80
+    uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-台湾省中华电信(HiNet)数据中心77
+    ws-opts:
+      path: /b22
+      headers:
+        host: b22.ntbq.dynu.net
+    server: b22.ntbq.dynu.net
+    port: 443
+    uuid: b4224a4d-6754-47e5-99ef-124697d24b4e
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点88
+    ws-opts:
+      path: /
+      headers:
+        host: eu3.openxai.link
     server: cf2.openxai.link
     port: 8080
-    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
+    uuid: 47396f9c-365d-4b99-ad1f-f7927164b4c5
     alterId: 0
     cipher: auto
     network: ws
   - type: ss
-    name: github.com/freefq-法国格拉沃利讷OVH数据中心18
+    name: github.com/freefq-法国格拉沃利讷OVH数据中心9
     server: 54.36.174.181
-    port: 5000
-    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M
-    cipher: aes-128-gcm
-  - type: ss
-    name: 法国+格拉沃利讷OVH数据中心
-    server: 54.36.174.181
-    port: 6697
-    password: YWVzLTI1Ni1nY206VEV6amZBWXEySWp0dW9T
+    port: 7307
+    password: YWVzLTI1Ni1nY206Rm9PaUdsa0FBOXlQRUdQ
     cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare公司CDN节点(shopify)4
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: buyvm.iiio.wiki
+    server: Singapore.MFA.EE
+    port: 80
+    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare公司CDN节点(shopify)1
     ws-opts:
       path: /aries?ed=2048
       headers:
@@ -941,43 +908,29 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 美国CloudFlare节点5
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: buyvm.iiio.wiki
-    server: 172.67.68.136
-    port: 80
-    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
-    alterId: 0
-    cipher: auto
-    network: ws
+  - type: ss
+    name: 法国+格拉沃利讷OVH数据中心
+    server: 54.36.174.181
+    port: 5601
+    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
+    cipher: aes-128-gcm
   - type: vmess
     name: 美国CloudFlare节点10
     ws-opts:
-      path: /apple
-      headers:
-        host: 222.golinkwuxian.top
-    server: c2.wuxianliulianng.xyz
-    port: 443
-    uuid: b0e43362-72b7-49ac-8eb6-fff69e07cfae
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点13
-    ws-opts:
       path: /
-      headers:
-        host: mm2.shabijichang.com
-    server: mm2.shabijichang.com
+    server: ml2.shabijichang.com
     port: 80
     uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 意大利+V2CROSS.COM
+    server: >-
+      ak1793.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: 443
+    password: YWVzLTEyOC1nY206c2hhZG93c29ja3M=
+    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1051,30 +1004,25 @@ proxy-groups:
       - JP_KR_speednode_0076
       - NZ_speednode_0077
       - US_SG_speednode_0079
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
       - 🇺🇸_US_美国_1
-      - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇹🇷_TR_土耳其
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-台湾省新竹市中华电信11
-      - github.com/freefq-台湾省桃园市中华电信22
-      - github.com/freefq-安徽省合肥市移动44
-      - github.com/freefq-台湾省中华电信(HiNet)数据中心55
-      - github.com/freefq-湖南省联通7
-      - github.com/freefq-法国格拉沃利讷OVH数据中心8
-      - github.com/freefq-台湾省新北市中华电信99
-      - github.com/freefq-台湾省苗栗县中华电信1010
-      - github.com/freefq-美国Choopa公司数据中心1313
-      - github.com/freefq-法国格拉沃利讷OVH数据中心14
-      - github.com/freefq-法国格拉沃利讷OVH数据中心15
-      - github.com/freefq-美国CloudFlare公司CDN节点1717
-      - github.com/freefq-法国格拉沃利讷OVH数据中心18
+      - 🇺🇸_US_美国_3
+      - 更新于:11-2012:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-台湾省台北市中华电信11
+      - github.com/freefq-台湾省台北市中华电信22
+      - github.com/freefq-台湾省苗栗县中华电信33
+      - github.com/freefq-湖南省联通4
+      - github.com/freefq-法国格拉沃利讷OVH数据中心5
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心77
+      - github.com/freefq-美国CloudFlare公司CDN节点88
+      - github.com/freefq-法国格拉沃利讷OVH数据中心9
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)1
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare公司CDN节点(shopify)4
-      - 美国CloudFlare节点5
       - 美国CloudFlare节点10
-      - 美国CloudFlare节点13
+      - 意大利+V2CROSS.COM
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1148,30 +1096,25 @@ proxy-groups:
       - JP_KR_speednode_0076
       - NZ_speednode_0077
       - US_SG_speednode_0079
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
       - 🇺🇸_US_美国_1
-      - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇹🇷_TR_土耳其
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-台湾省新竹市中华电信11
-      - github.com/freefq-台湾省桃园市中华电信22
-      - github.com/freefq-安徽省合肥市移动44
-      - github.com/freefq-台湾省中华电信(HiNet)数据中心55
-      - github.com/freefq-湖南省联通7
-      - github.com/freefq-法国格拉沃利讷OVH数据中心8
-      - github.com/freefq-台湾省新北市中华电信99
-      - github.com/freefq-台湾省苗栗县中华电信1010
-      - github.com/freefq-美国Choopa公司数据中心1313
-      - github.com/freefq-法国格拉沃利讷OVH数据中心14
-      - github.com/freefq-法国格拉沃利讷OVH数据中心15
-      - github.com/freefq-美国CloudFlare公司CDN节点1717
-      - github.com/freefq-法国格拉沃利讷OVH数据中心18
+      - 🇺🇸_US_美国_3
+      - 更新于:11-2012:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-台湾省台北市中华电信11
+      - github.com/freefq-台湾省台北市中华电信22
+      - github.com/freefq-台湾省苗栗县中华电信33
+      - github.com/freefq-湖南省联通4
+      - github.com/freefq-法国格拉沃利讷OVH数据中心5
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心77
+      - github.com/freefq-美国CloudFlare公司CDN节点88
+      - github.com/freefq-法国格拉沃利讷OVH数据中心9
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)1
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare公司CDN节点(shopify)4
-      - 美国CloudFlare节点5
       - 美国CloudFlare节点10
-      - 美国CloudFlare节点13
+      - 意大利+V2CROSS.COM
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1244,30 +1187,25 @@ proxy-groups:
       - JP_KR_speednode_0076
       - NZ_speednode_0077
       - US_SG_speednode_0079
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
       - 🇺🇸_US_美国_1
-      - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇹🇷_TR_土耳其
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-台湾省新竹市中华电信11
-      - github.com/freefq-台湾省桃园市中华电信22
-      - github.com/freefq-安徽省合肥市移动44
-      - github.com/freefq-台湾省中华电信(HiNet)数据中心55
-      - github.com/freefq-湖南省联通7
-      - github.com/freefq-法国格拉沃利讷OVH数据中心8
-      - github.com/freefq-台湾省新北市中华电信99
-      - github.com/freefq-台湾省苗栗县中华电信1010
-      - github.com/freefq-美国Choopa公司数据中心1313
-      - github.com/freefq-法国格拉沃利讷OVH数据中心14
-      - github.com/freefq-法国格拉沃利讷OVH数据中心15
-      - github.com/freefq-美国CloudFlare公司CDN节点1717
-      - github.com/freefq-法国格拉沃利讷OVH数据中心18
+      - 🇺🇸_US_美国_3
+      - 更新于:11-2012:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-台湾省台北市中华电信11
+      - github.com/freefq-台湾省台北市中华电信22
+      - github.com/freefq-台湾省苗栗县中华电信33
+      - github.com/freefq-湖南省联通4
+      - github.com/freefq-法国格拉沃利讷OVH数据中心5
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心77
+      - github.com/freefq-美国CloudFlare公司CDN节点88
+      - github.com/freefq-法国格拉沃利讷OVH数据中心9
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)1
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare公司CDN节点(shopify)4
-      - 美国CloudFlare节点5
       - 美国CloudFlare节点10
-      - 美国CloudFlare节点13
+      - 意大利+V2CROSS.COM
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1372,30 +1310,25 @@ proxy-groups:
       - JP_KR_speednode_0076
       - NZ_speednode_0077
       - US_SG_speednode_0079
+      - 🇺🇸_US_美国->🇮🇳_IN_印度
       - 🇺🇸_US_美国_1
-      - 🇮🇷_IR_伊朗->🇫🇷_FR_法国
       - 🇺🇸_US_美国_2
-      - 🇹🇷_TR_土耳其
-      - 🇺🇸_US_美国->🇬🇧_GB_英国
-      - 更新于:11-2008:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-台湾省新竹市中华电信11
-      - github.com/freefq-台湾省桃园市中华电信22
-      - github.com/freefq-安徽省合肥市移动44
-      - github.com/freefq-台湾省中华电信(HiNet)数据中心55
-      - github.com/freefq-湖南省联通7
-      - github.com/freefq-法国格拉沃利讷OVH数据中心8
-      - github.com/freefq-台湾省新北市中华电信99
-      - github.com/freefq-台湾省苗栗县中华电信1010
-      - github.com/freefq-美国Choopa公司数据中心1313
-      - github.com/freefq-法国格拉沃利讷OVH数据中心14
-      - github.com/freefq-法国格拉沃利讷OVH数据中心15
-      - github.com/freefq-美国CloudFlare公司CDN节点1717
-      - github.com/freefq-法国格拉沃利讷OVH数据中心18
+      - 🇺🇸_US_美国_3
+      - 更新于:11-2012:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-台湾省台北市中华电信11
+      - github.com/freefq-台湾省台北市中华电信22
+      - github.com/freefq-台湾省苗栗县中华电信33
+      - github.com/freefq-湖南省联通4
+      - github.com/freefq-法国格拉沃利讷OVH数据中心5
+      - github.com/freefq-美国CloudFlare公司CDN节点66
+      - github.com/freefq-台湾省中华电信(HiNet)数据中心77
+      - github.com/freefq-美国CloudFlare公司CDN节点88
+      - github.com/freefq-法国格拉沃利讷OVH数据中心9
+      - 美国CloudFlare节点0
+      - 美国CloudFlare公司CDN节点(shopify)1
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare公司CDN节点(shopify)4
-      - 美国CloudFlare节点5
       - 美国CloudFlare节点10
-      - 美国CloudFlare节点13
+      - 意大利+V2CROSS.COM
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
