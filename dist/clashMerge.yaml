@@ -1,4 +1,4 @@
-# 更新时间 2023-11-20T13:00:19.895Z
+# 更新时间 2023-11-20T13:26:23.666Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1062,49 +1062,43 @@ proxies:
   - type: ss
     name: 法国+格拉沃利讷OVH数据中心
     server: 54.36.174.181
-    port: 8118
-    password: YWVzLTI1Ni1nY206Y2RCSURWNDJEQ3duZklO
+    port: 8000
+    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
     cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点2
+    name: 美国CloudFlare节点3
     ws-opts:
-      path: /aries?ed=2048
+      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
       headers:
-        host: buyvm.iiio.wiki
-    server: Singapore.MFA.EE
-    port: 80
-    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
+        host: fr7.tehme100.fun
+    server: ip.nofiltering2.sbs
+    port: 8880
+    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 俄罗斯+V2CROSS.COM
+    server: 212.113.106.243
+    port: 12949
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpQMnp4WFBld2xWM0JsZnFxWWlTdGh2dExj
+    cipher: aes-128-gcm
   - type: vmess
-    name: 广东省深圳市移动5
-    server: 11.kccic2pa.xyz
-    port: 50011
-    uuid: 0d5dc15e-0b62-4e7a-821c-d462d8e35ea2
+    name: 奥地利V2CROSS.COM7
+    server: 193.46.56.210
+    port: 8443
+    uuid: b72694db-ed21-46c1-8923-325305fa787f
     alterId: 0
     cipher: auto
     network: auto
-  - type: vmess
-    name: 广东省广州市电信IDC机房6
-    server: 49.kccic2pa.xyz
-    port: 50049
-    uuid: 0d5dc15e-0b62-4e7a-821c-d462d8e35ea2
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点8
-    ws-opts:
-      path: /
-      headers:
-        host: eu3.openxai.link
-    server: cf2.openxai.link
-    port: 8080
-    uuid: 47396f9c-365d-4b99-ad1f-f7927164b4c5
-    alterId: 0
-    cipher: auto
-    network: ws
+    tls: true
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 13.43.253.29
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1210,10 +1204,10 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心12
       - github.com/freefq-美国CloudFlare节点1313
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点2
-      - 广东省深圳市移动5
-      - 广东省广州市电信IDC机房6
-      - 美国CloudFlare节点8
+      - 美国CloudFlare节点3
+      - 俄罗斯+V2CROSS.COM
+      - 奥地利V2CROSS.COM7
+      - 美国+Amazon数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1319,10 +1313,10 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心12
       - github.com/freefq-美国CloudFlare节点1313
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点2
-      - 广东省深圳市移动5
-      - 广东省广州市电信IDC机房6
-      - 美国CloudFlare节点8
+      - 美国CloudFlare节点3
+      - 俄罗斯+V2CROSS.COM
+      - 奥地利V2CROSS.COM7
+      - 美国+Amazon数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1427,10 +1421,10 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心12
       - github.com/freefq-美国CloudFlare节点1313
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点2
-      - 广东省深圳市移动5
-      - 广东省广州市电信IDC机房6
-      - 美国CloudFlare节点8
+      - 美国CloudFlare节点3
+      - 俄罗斯+V2CROSS.COM
+      - 奥地利V2CROSS.COM7
+      - 美国+Amazon数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1567,10 +1561,10 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心12
       - github.com/freefq-美国CloudFlare节点1313
       - 法国+格拉沃利讷OVH数据中心
-      - 美国CloudFlare节点2
-      - 广东省深圳市移动5
-      - 广东省广州市电信IDC机房6
-      - 美国CloudFlare节点8
+      - 美国CloudFlare节点3
+      - 俄罗斯+V2CROSS.COM
+      - 奥地利V2CROSS.COM7
+      - 美国+Amazon数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
