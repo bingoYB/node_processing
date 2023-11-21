@@ -1,4 +1,4 @@
-# 更新时间 2023-11-21T06:51:31.820Z
+# 更新时间 2023-11-21T07:08:46.204Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1251,32 +1251,18 @@ proxies:
     port: 8119
     password: YWVzLTI1Ni1nY206Y2RCSURWNDJEQ3duZklO
     cipher: aes-128-gcm
-  - type: trojan
-    name: 新加坡+Amazon数据中心
-    server: sg7.421421.xyz
-    port: 20230
-    password: 3869cf51-5c65-4dac-a4ef-33e49b6ebb4b
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点18
+    name: 美国CloudFlare节点12
     ws-opts:
-      path: /aries?ed=2048
+      path: /
       headers:
-        host: buyvm.iiio.wiki
-    server: freeyx.cloudflare88.eu.org
-    port: 80
-    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
+        host: eu1.openxai.link
+    server: 198.41.192.4
+    port: 8080
+    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+Amazon数据中心
-    server: 18.159.181.95
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1402,9 +1388,7 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心19
       - github.com/freefq-美国CloudFlare公司CDN节点2121
       - github.com/freefq-法国格拉沃利讷OVH数据中心22
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点18
-      - 美国+Amazon数据中心
+      - 美国CloudFlare节点12
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1530,9 +1514,7 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心19
       - github.com/freefq-美国CloudFlare公司CDN节点2121
       - github.com/freefq-法国格拉沃利讷OVH数据中心22
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点18
-      - 美国+Amazon数据中心
+      - 美国CloudFlare节点12
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1657,9 +1639,7 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心19
       - github.com/freefq-美国CloudFlare公司CDN节点2121
       - github.com/freefq-法国格拉沃利讷OVH数据中心22
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点18
-      - 美国+Amazon数据中心
+      - 美国CloudFlare节点12
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1816,9 +1796,7 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心19
       - github.com/freefq-美国CloudFlare公司CDN节点2121
       - github.com/freefq-法国格拉沃利讷OVH数据中心22
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点18
-      - 美国+Amazon数据中心
+      - 美国CloudFlare节点12
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
