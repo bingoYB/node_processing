@@ -1,4 +1,4 @@
-# 更新时间 2023-11-23T12:57:35.507Z
+# 更新时间 2023-11-23T13:28:12.686Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1054,6 +1054,31 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 美国+华盛顿Cogent通信公司
+    server: 38.121.43.71
+    port: 5500
+    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
+    cipher: aes-128-gcm
+  - type: ss
+    name: 法国+格拉沃利讷OVH数据中心
+    server: 54.36.174.181
+    port: 5003
+    password: YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 香港阿里云5
+    ws-opts:
+      path: /
+      headers:
+        host: n1700303374.aaigefm.cn
+    server: n1700303374.aaigefm.cn
+    port: 443
+    uuid: 07121b6c-fffe-46a6-a951-baa3776fe46f
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
   - type: vmess
     name: 甘肃省兰州市移动9
     ws-opts:
@@ -1064,21 +1089,37 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
-  - type: ss
-    name: 广东省广州市+移动
-    server: service.ouluyun9803.com
-    port: 20009
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowMTM1OGFiNC0zNTIyLTQyMzMtYjZhNi1jOGVkYjA3M2I5YTE=
-    cipher: aes-128-gcm
   - type: vmess
-    name: 安徽省移动数据上网公共出口20
-    server: 112.29.94.23
-    port: 43526
-    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
+    name: 美国CloudFlare节点12
+    ws-opts:
+      path: /
+      headers:
+        host: eu3.openxai.link
+    server: cf2.openxai.link
+    port: 8080
+    uuid: 47396f9c-365d-4b99-ad1f-f7927164b4c5
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: 146.190.87.61
+    port: 2
+    password: 24END
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国V2CROSS.COM20
+    ws-opts:
+      path: /
+      headers:
+        host: kryx.651568.xyz
+    server: 131.186.24.58
+    port: 25706
+    uuid: fe8e865f-ee99-4bb3-bab5-396a3a9cc93b
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1198,9 +1239,13 @@ proxy-groups:
       - github.com/freefq-美国1010
       - github.com/freefq-法国格拉沃利讷OVH数据中心12
       - github.com/freefq-新加坡Amazon数据中心1313
+      - 美国+华盛顿Cogent通信公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 香港阿里云5
       - 甘肃省兰州市移动9
-      - 广东省广州市+移动
-      - 安徽省移动数据上网公共出口20
+      - 美国CloudFlare节点12
+      - 美国+V2CROSS.COM
+      - 美国V2CROSS.COM20
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1320,9 +1365,13 @@ proxy-groups:
       - github.com/freefq-美国1010
       - github.com/freefq-法国格拉沃利讷OVH数据中心12
       - github.com/freefq-新加坡Amazon数据中心1313
+      - 美国+华盛顿Cogent通信公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 香港阿里云5
       - 甘肃省兰州市移动9
-      - 广东省广州市+移动
-      - 安徽省移动数据上网公共出口20
+      - 美国CloudFlare节点12
+      - 美国+V2CROSS.COM
+      - 美国V2CROSS.COM20
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1441,9 +1490,13 @@ proxy-groups:
       - github.com/freefq-美国1010
       - github.com/freefq-法国格拉沃利讷OVH数据中心12
       - github.com/freefq-新加坡Amazon数据中心1313
+      - 美国+华盛顿Cogent通信公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 香港阿里云5
       - 甘肃省兰州市移动9
-      - 广东省广州市+移动
-      - 安徽省移动数据上网公共出口20
+      - 美国CloudFlare节点12
+      - 美国+V2CROSS.COM
+      - 美国V2CROSS.COM20
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1594,9 +1647,13 @@ proxy-groups:
       - github.com/freefq-美国1010
       - github.com/freefq-法国格拉沃利讷OVH数据中心12
       - github.com/freefq-新加坡Amazon数据中心1313
+      - 美国+华盛顿Cogent通信公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 香港阿里云5
       - 甘肃省兰州市移动9
-      - 广东省广州市+移动
-      - 安徽省移动数据上网公共出口20
+      - 美国CloudFlare节点12
+      - 美国+V2CROSS.COM
+      - 美国V2CROSS.COM20
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
