@@ -1,4 +1,4 @@
-# 更新时间 2023-11-23T19:01:00.868Z
+# 更新时间 2023-11-23T19:17:17.464Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1085,16 +1085,33 @@ proxies:
   - type: ss
     name: 法国+格拉沃利讷OVH数据中心
     server: 54.36.174.181
-    port: 5000
-    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
+    port: 9102
+    password: YWVzLTI1Ni1nY206ZTRGQ1dyZ3BramkzUVk=
     cipher: aes-128-gcm
-  - type: trojan
-    name: 俄罗斯+V2CROSS.COM
-    server: hk3.visaapp.top
-    port: 49487
-    password: 1cb996c8-e5bf-40d2-9a3c-149b3b721c5f
-    udp: true
-    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点8
+    ws-opts:
+      path: /
+      headers:
+        host: cc2.shabijichang.com
+    server: cc2.shabijichang.com
+    port: 80
+    uuid: 56278a1a-c7cc-459f-b00c-3037e4f99590
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点14
+    ws-opts:
+      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
+      headers:
+        host: fr7.tehme100.fun
+    server: ip.nofiltering2.sbs
+    port: 8880
+    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1219,7 +1236,8 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心14
       - github.com/freefq-新加坡Amazon数据中心1515
       - 法国+格拉沃利讷OVH数据中心
-      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点14
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1344,7 +1362,8 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心14
       - github.com/freefq-新加坡Amazon数据中心1515
       - 法国+格拉沃利讷OVH数据中心
-      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点14
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1468,7 +1487,8 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心14
       - github.com/freefq-新加坡Amazon数据中心1515
       - 法国+格拉沃利讷OVH数据中心
-      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点14
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1624,7 +1644,8 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心14
       - github.com/freefq-新加坡Amazon数据中心1515
       - 法国+格拉沃利讷OVH数据中心
-      - 俄罗斯+V2CROSS.COM
+      - 美国CloudFlare节点8
+      - 美国CloudFlare节点14
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
