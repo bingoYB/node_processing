@@ -1,4 +1,4 @@
-# 更新时间 2023-11-24T12:56:31.894Z
+# 更新时间 2023-11-24T13:20:58.840Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -733,34 +733,43 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: vmess
-    name: 美国CloudFlare节点0
-    ws-opts:
-      path: /aries?ed=2048
-      headers:
-        host: buyvm.iiio.wiki
-    server: freeyx.cloudflare88.eu.org
-    port: 80
-    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: ss
-    name: 法国+OVH机房SAS硬盘BGP主机
-    server: 149.202.82.172
-    port: 443
-    password: YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN
+    name: 俄罗斯+V2CROSS.COM
+    server: 212.113.106.243
+    port: 13022
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp3NWRyQUw3UGZDSXdRMnljVXVvRHNWMkxz
     cipher: aes-128-gcm
   - type: vmess
-    name: 新加坡亚马逊(Amazon)公司数据中心5
+    name: 安徽省移动数据上网公共出口3
     ws-opts:
       path: /
-    server: sg04.xpoti.online
-    port: 80
-    uuid: 226973d9-42db-4430-9bd0-d582dee7785c
+    server: 112.29.94.23
+    port: 59137
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 广东省移动4
+    server: 183.237.20.146
+    port: 49502
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 台湾省台北市中华电信6
+    ws-opts:
+      path: /b13
+      headers:
+        host: nbq13.ntbq.dynu.net
+    server: nbq13.ntbq.dynu.net
+    port: 443
+    uuid: f2f304d9-cb53-4d7f-a76c-3f396f1f5512
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
   - type: trojan
     name: 美国+V2CROSS.COM
     server: 146.190.108.227
@@ -768,44 +777,6 @@ proxies:
     password: '1'
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点7
-    ws-opts:
-      path: /IOebhLMhl1CTbFHbL95myfRX2
-      headers:
-        host: ca6.tehme100.fun
-    server: 172.67.229.37
-    port: 2086
-    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: ss
-    name: 俄罗斯+V2CROSS.COM
-    server: 212.113.106.243
-    port: 12949
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpQMnp4WFBld2xWM0JsZnFxWWlTdGh2dExj
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 香港Amazon数据中心13
-    ws-opts:
-      path: /
-    server: hk03.xpoti.online
-    port: 80
-    uuid: 226973d9-42db-4430-9bd0-d582dee7785c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心16
-    ws-opts:
-      path: /
-    server: us01.xpoti.online
-    port: 80
-    uuid: 226973d9-42db-4430-9bd0-d582dee7785c
-    alterId: 0
-    cipher: auto
-    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -887,14 +858,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-香港阿里云1212
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1313
-      - 美国CloudFlare节点0
-      - 法国+OVH机房SAS硬盘BGP主机
-      - 新加坡亚马逊(Amazon)公司数据中心5
-      - 美国+V2CROSS.COM
-      - 美国CloudFlare节点7
       - 俄罗斯+V2CROSS.COM
-      - 香港Amazon数据中心13
-      - 美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心16
+      - 安徽省移动数据上网公共出口3
+      - 广东省移动4
+      - 台湾省台北市中华电信6
+      - 美国+V2CROSS.COM
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -976,14 +944,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-香港阿里云1212
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1313
-      - 美国CloudFlare节点0
-      - 法国+OVH机房SAS硬盘BGP主机
-      - 新加坡亚马逊(Amazon)公司数据中心5
-      - 美国+V2CROSS.COM
-      - 美国CloudFlare节点7
       - 俄罗斯+V2CROSS.COM
-      - 香港Amazon数据中心13
-      - 美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心16
+      - 安徽省移动数据上网公共出口3
+      - 广东省移动4
+      - 台湾省台北市中华电信6
+      - 美国+V2CROSS.COM
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1064,14 +1029,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-香港阿里云1212
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1313
-      - 美国CloudFlare节点0
-      - 法国+OVH机房SAS硬盘BGP主机
-      - 新加坡亚马逊(Amazon)公司数据中心5
-      - 美国+V2CROSS.COM
-      - 美国CloudFlare节点7
       - 俄罗斯+V2CROSS.COM
-      - 香港Amazon数据中心13
-      - 美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心16
+      - 安徽省移动数据上网公共出口3
+      - 广东省移动4
+      - 台湾省台北市中华电信6
+      - 美国+V2CROSS.COM
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1184,14 +1146,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-香港阿里云1212
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1313
-      - 美国CloudFlare节点0
-      - 法国+OVH机房SAS硬盘BGP主机
-      - 新加坡亚马逊(Amazon)公司数据中心5
-      - 美国+V2CROSS.COM
-      - 美国CloudFlare节点7
       - 俄罗斯+V2CROSS.COM
-      - 香港Amazon数据中心13
-      - 美国华盛顿州西雅图市亚马逊(Amazon)公司数据中心16
+      - 安徽省移动数据上网公共出口3
+      - 广东省移动4
+      - 台湾省台北市中华电信6
+      - 美国+V2CROSS.COM
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
