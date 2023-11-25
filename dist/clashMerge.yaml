@@ -1,4 +1,4 @@
-# 更新时间 2023-11-25T18:58:56.808Z
+# 更新时间 2023-11-25T19:16:02.600Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1622,9 +1622,28 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: buyvm.iiio.wiki
+    server: 172.67.68.136
+    port: 80
+    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: trojan
     name: 香港+电讯盈科有限公司
-    server: download1hkt.windowsupdatea.com
+    server: download2hkt.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 台湾省桃园市+中华电信
+    server: download1tw.windowsupdatea.com
     port: 443
     password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
@@ -1632,33 +1651,11 @@ proxies:
   - type: ss
     name: 法国+格拉沃利讷OVH数据中心
     server: 54.36.174.181
-    port: 3389
+    port: 5601
     password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
     cipher: aes-128-gcm
-  - type: trojan
-    name: 台湾省台北市+中华电信
-    server: 111.243.94.97
-    port: 443
-    password: d33df23a-8b9e-468e-bc33-dd3643008ced
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+V2CROSS.COM
-    server: 146.190.87.61
-    port: 2
-    password: 24END
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 广东省移动7
-    server: 183.237.20.146
-    port: 49502
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点8
+    name: 美国CloudFlare节点15
     ws-opts:
       path: /vmess
       headers:
@@ -1670,59 +1667,38 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点9
+    name: 越南V2CROSS.COM23
     ws-opts:
-      path: /apple
-      headers:
-        host: 4444.golinkwuxian.top
-    server: bb4.wuxianliulianng.xyz
+      path: /zingfast.vn
+    server: 103.232.53.86
+    port: 80
+    uuid: 057177db-f003-40dc-a14b-488e8ceefcaa
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 越南+V2CROSS.COM
+    server: 103.74.102.192
     port: 443
-    uuid: 4d7732ee-986a-4c25-8443-d6fefa8d2190
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
+    password: 057177db-f003-40dc-a14b-488e8ceefcaa
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 加拿大+V2CROSS.COM
+    server: 108.181.22.161
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点11
+    name: 美国CloudFlare节点28
     ws-opts:
-      path: /
+      path: /IOebhLMhl1CTbFHbL95myfRX2
       headers:
-        host: ml3.shabijichang.com
-    server: ml3.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点12
-    ws-opts:
-      path: /vmess
-      headers:
-        host: no1-vmess.sshmax.xyz
-    server: 172.67.204.84
-    port: 80
-    uuid: 753d0d83-3f5b-4821-860e-082f0b3db609
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 安徽省移动数据上网公共出口19
-    server: 112.29.94.23
-    port: 59137
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点31
-    ws-opts:
-      path: /
-      headers:
-        host: mm2.shabijichang.com
-    server: mm2.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+        host: ca6.tehme100.fun
+    server: 172.67.229.37
+    port: 2086
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
     alterId: 0
     cipher: auto
     network: ws
@@ -1922,17 +1898,15 @@ proxy-groups:
       - github.com/freefq-北京市移动38
       - github.com/freefq-香港特别行政区3939
       - github.com/freefq-美国CloudFlare节点4040
+      - 美国CloudFlare节点0
       - 香港+电讯盈科有限公司
+      - 台湾省桃园市+中华电信
       - 法国+格拉沃利讷OVH数据中心
-      - 台湾省台北市+中华电信
-      - 美国+V2CROSS.COM
-      - 广东省移动7
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点11
-      - 美国CloudFlare节点12
-      - 安徽省移动数据上网公共出口19
-      - 美国CloudFlare节点31
+      - 美国CloudFlare节点15
+      - 越南V2CROSS.COM23
+      - 越南+V2CROSS.COM
+      - 加拿大+V2CROSS.COM
+      - 美国CloudFlare节点28
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -2129,17 +2103,15 @@ proxy-groups:
       - github.com/freefq-北京市移动38
       - github.com/freefq-香港特别行政区3939
       - github.com/freefq-美国CloudFlare节点4040
+      - 美国CloudFlare节点0
       - 香港+电讯盈科有限公司
+      - 台湾省桃园市+中华电信
       - 法国+格拉沃利讷OVH数据中心
-      - 台湾省台北市+中华电信
-      - 美国+V2CROSS.COM
-      - 广东省移动7
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点11
-      - 美国CloudFlare节点12
-      - 安徽省移动数据上网公共出口19
-      - 美国CloudFlare节点31
+      - 美国CloudFlare节点15
+      - 越南V2CROSS.COM23
+      - 越南+V2CROSS.COM
+      - 加拿大+V2CROSS.COM
+      - 美国CloudFlare节点28
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2335,17 +2307,15 @@ proxy-groups:
       - github.com/freefq-北京市移动38
       - github.com/freefq-香港特别行政区3939
       - github.com/freefq-美国CloudFlare节点4040
+      - 美国CloudFlare节点0
       - 香港+电讯盈科有限公司
+      - 台湾省桃园市+中华电信
       - 法国+格拉沃利讷OVH数据中心
-      - 台湾省台北市+中华电信
-      - 美国+V2CROSS.COM
-      - 广东省移动7
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点11
-      - 美国CloudFlare节点12
-      - 安徽省移动数据上网公共出口19
-      - 美国CloudFlare节点31
+      - 美国CloudFlare节点15
+      - 越南V2CROSS.COM23
+      - 越南+V2CROSS.COM
+      - 加拿大+V2CROSS.COM
+      - 美国CloudFlare节点28
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2573,17 +2543,15 @@ proxy-groups:
       - github.com/freefq-北京市移动38
       - github.com/freefq-香港特别行政区3939
       - github.com/freefq-美国CloudFlare节点4040
+      - 美国CloudFlare节点0
       - 香港+电讯盈科有限公司
+      - 台湾省桃园市+中华电信
       - 法国+格拉沃利讷OVH数据中心
-      - 台湾省台北市+中华电信
-      - 美国+V2CROSS.COM
-      - 广东省移动7
-      - 美国CloudFlare节点8
-      - 美国CloudFlare节点9
-      - 美国CloudFlare节点11
-      - 美国CloudFlare节点12
-      - 安徽省移动数据上网公共出口19
-      - 美国CloudFlare节点31
+      - 美国CloudFlare节点15
+      - 越南V2CROSS.COM23
+      - 越南+V2CROSS.COM
+      - 加拿大+V2CROSS.COM
+      - 美国CloudFlare节点28
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
