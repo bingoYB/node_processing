@@ -1,4 +1,4 @@
-# 更新时间 2023-11-25T07:00:14.191Z
+# 更新时间 2023-11-25T07:18:37.592Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1540,6 +1540,80 @@ proxies:
     cipher: auto
     network: ws
     tls: true
+  - type: trojan
+    name: 越南+V2CROSS.COM
+    server: 103.74.102.192
+    port: 443
+    password: 057177db-f003-40dc-a14b-488e8ceefcaa
+    udp: true
+    skip-cert-verify: true
+  - type: ss
+    name: 法国+格拉沃利讷OVH数据中心
+    server: 54.36.174.181
+    port: 5003
+    password: YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /
+      headers:
+        host: eu3.openxai.link
+    server: cf2.openxai.link
+    port: 8080
+    uuid: 47396f9c-365d-4b99-ad1f-f7927164b4c5
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 香港+电讯盈科有限公司
+    server: download2hkt.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 甘肃省兰州市移动16
+    ws-opts:
+      path: /
+    server: 36.141.40.59
+    port: 34996
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点18
+    ws-opts:
+      path: /aries?ed=2048
+      headers:
+        host: buyvm.iiio.wiki
+    server: freeyx.cloudflare88.eu.org
+    port: 80
+    uuid: 08b2ceb1-5917-42da-b02c-0f942754aac6
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 台湾省桃园市+中华电信
+    server: 36.228.203.34
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国V2CROSS.COM20
+    ws-opts:
+      path: /vmess
+      headers:
+        host: pmsc.pubgmobile.com
+    server: ukmws.mainssh.xyz
+    port: 443
+    uuid: 59341904-14e4-47e0-b89b-077795482ee2
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1727,6 +1801,14 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心11
       - github.com/freefq-香港阿里云1212
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1313
+      - 越南+V2CROSS.COM
+      - 法国+格拉沃利讷OVH数据中心
+      - 美国CloudFlare节点5
+      - 香港+电讯盈科有限公司
+      - 甘肃省兰州市移动16
+      - 美国CloudFlare节点18
+      - 台湾省桃园市+中华电信
+      - 美国V2CROSS.COM20
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1914,6 +1996,14 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心11
       - github.com/freefq-香港阿里云1212
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1313
+      - 越南+V2CROSS.COM
+      - 法国+格拉沃利讷OVH数据中心
+      - 美国CloudFlare节点5
+      - 香港+电讯盈科有限公司
+      - 甘肃省兰州市移动16
+      - 美国CloudFlare节点18
+      - 台湾省桃园市+中华电信
+      - 美国V2CROSS.COM20
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -2100,6 +2190,14 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心11
       - github.com/freefq-香港阿里云1212
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1313
+      - 越南+V2CROSS.COM
+      - 法国+格拉沃利讷OVH数据中心
+      - 美国CloudFlare节点5
+      - 香港+电讯盈科有限公司
+      - 甘肃省兰州市移动16
+      - 美国CloudFlare节点18
+      - 台湾省桃园市+中华电信
+      - 美国V2CROSS.COM20
   - name: 📲 电报信息
     type: select
     proxies:
@@ -2318,6 +2416,14 @@ proxy-groups:
       - github.com/freefq-法国格拉沃利讷OVH数据中心11
       - github.com/freefq-香港阿里云1212
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH1313
+      - 越南+V2CROSS.COM
+      - 法国+格拉沃利讷OVH数据中心
+      - 美国CloudFlare节点5
+      - 香港+电讯盈科有限公司
+      - 甘肃省兰州市移动16
+      - 美国CloudFlare节点18
+      - 台湾省桃园市+中华电信
+      - 美国V2CROSS.COM20
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
