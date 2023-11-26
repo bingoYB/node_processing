@@ -1,4 +1,4 @@
-# 更新时间 2023-11-26T06:59:15.185Z
+# 更新时间 2023-11-26T07:18:38.639Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -930,14 +930,50 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
+    name: 台湾省桃园市+中华电信
+    server: 36.228.203.34
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /
+      headers:
+        host: ml2.shabijichang.com
+    server: ml2.shabijichang.com
+    port: 80
+    uuid: 10ea3b2a-b615-45f1-b1b7-c62bafe8c80c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
     name: 越南+V2CROSS.COM
-    server: 103.232.53.86
+    server: 103.74.102.192
     port: 443
     password: 057177db-f003-40dc-a14b-488e8ceefcaa
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 越南V2CROSS.COM8
+    name: 美国V2CROSS.COM11
+    ws-opts:
+      path: /zingfast.vn
+    server: 170.64.175.15
+    port: 80
+    uuid: 057177db-f003-40dc-a14b-488e8ceefcaa
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 日本+东京Amazon数据中心
+    server: jp2.djjsvip.cfd
+    port: 443
+    password: d33df23a-8b9e-468e-bc33-dd3643008ced
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 越南V2CROSS.COM16
     ws-opts:
       path: /
       headers:
@@ -945,26 +981,6 @@ proxies:
     server: yntow.yunjisuan.cf
     port: 80
     uuid: c75b345e-bb05-4a44-88e1-ca026ffe965d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 安徽省移动数据上网公共出口12
-    ws-opts:
-      path: /
-    server: 112.29.94.23
-    port: 59137
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点14
-    ws-opts:
-      path: /
-    server: ld2.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
     cipher: auto
     network: ws
@@ -1058,10 +1074,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
+      - 台湾省桃园市+中华电信
+      - 美国CloudFlare节点5
       - 越南+V2CROSS.COM
-      - 越南V2CROSS.COM8
-      - 安徽省移动数据上网公共出口12
-      - 美国CloudFlare节点14
+      - 美国V2CROSS.COM11
+      - 日本+东京Amazon数据中心
+      - 越南V2CROSS.COM16
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1152,10 +1170,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
+      - 台湾省桃园市+中华电信
+      - 美国CloudFlare节点5
       - 越南+V2CROSS.COM
-      - 越南V2CROSS.COM8
-      - 安徽省移动数据上网公共出口12
-      - 美国CloudFlare节点14
+      - 美国V2CROSS.COM11
+      - 日本+东京Amazon数据中心
+      - 越南V2CROSS.COM16
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1245,10 +1265,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
+      - 台湾省桃园市+中华电信
+      - 美国CloudFlare节点5
       - 越南+V2CROSS.COM
-      - 越南V2CROSS.COM8
-      - 安徽省移动数据上网公共出口12
-      - 美国CloudFlare节点14
+      - 美国V2CROSS.COM11
+      - 日本+东京Amazon数据中心
+      - 越南V2CROSS.COM16
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1370,10 +1392,12 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点1717
       - github.com/freefq-美国CloudFlare节点1818
       - github.com/freefq-美国CloudFlare节点1919
+      - 台湾省桃园市+中华电信
+      - 美国CloudFlare节点5
       - 越南+V2CROSS.COM
-      - 越南V2CROSS.COM8
-      - 安徽省移动数据上网公共出口12
-      - 美国CloudFlare节点14
+      - 美国V2CROSS.COM11
+      - 日本+东京Amazon数据中心
+      - 越南V2CROSS.COM16
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
