@@ -1,4 +1,4 @@
-# 更新时间 2023-11-27T18:49:39.520Z
+# 更新时间 2023-11-27T19:01:54.544Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -599,56 +599,21 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: vmess
-    name: 甘肃省兰州市移动1
-    ws-opts:
-      path: /
-    server: 36.141.40.59
-    port: 34996
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: trojan
-    name: 俄罗斯+V2CROSS.COM
-    server: 212.192.15.68
-    port: 49487
-    password: 1cb996c8-e5bf-40d2-9a3c-149b3b721c5f
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点6
-    ws-opts:
-      path: /
-      headers:
-        host: ml3.shabijichang.com
-    server: ml3.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: trojan
     name: 香港+电讯盈科有限公司
-    server: download2hkt.windowsupdatea.com
+    server: download1hkt.windowsupdatea.com
     port: 443
     password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
     skip-cert-verify: true
+  - type: ss
+    name: 法国+格拉沃利讷OVH数据中心
+    server: 54.36.174.181
+    port: 9102
+    password: YWVzLTI1Ni1nY206ZTRGQ1dyZ3BramkzUVk=
+    cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点15
-    ws-opts:
-      path: /
-      headers:
-        host: eu1.openxai.link
-    server: cf2.openxai.link
-    port: 8080
-    uuid: f440527e-5243-4ca8-890c-5e05e4b3bb41
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点16
+    name: 美国CloudFlare节点4
     ws-opts:
       path: /9sTFt5L554kPVWmuJ2k8baS4bEY83PZ66xb4twoBBtsiMPK2b
     server: fra.yj2022.gq
@@ -657,6 +622,26 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 香港阿里云10
+    ws-opts:
+      path: /
+      headers:
+        host: n1700303374.aaigefm.cn
+    server: n1700303374.aaigefm.cn
+    port: 443
+    uuid: 07121b6c-fffe-46a6-a951-baa3776fe46f
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: trojan
+    name: 美国+RF+Engineering
+    server: 141.193.68.81
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -723,12 +708,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH66
       - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国88
-      - 甘肃省兰州市移动1
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点6
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点15
-      - 美国CloudFlare节点16
+      - 法国+格拉沃利讷OVH数据中心
+      - 美国CloudFlare节点4
+      - 香港阿里云10
+      - 美国+RF+Engineering
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -795,12 +779,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH66
       - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国88
-      - 甘肃省兰州市移动1
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点6
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点15
-      - 美国CloudFlare节点16
+      - 法国+格拉沃利讷OVH数据中心
+      - 美国CloudFlare节点4
+      - 香港阿里云10
+      - 美国+RF+Engineering
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -866,12 +849,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH66
       - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国88
-      - 甘肃省兰州市移动1
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点6
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点15
-      - 美国CloudFlare节点16
+      - 法国+格拉沃利讷OVH数据中心
+      - 美国CloudFlare节点4
+      - 香港阿里云10
+      - 美国+RF+Engineering
   - name: 📲 电报信息
     type: select
     proxies:
@@ -969,12 +951,11 @@ proxy-groups:
       - github.com/freefq-美国加利福尼亚州圣何塞PEGTECH66
       - github.com/freefq-美国CloudFlare公司CDN节点77
       - github.com/freefq-美国88
-      - 甘肃省兰州市移动1
-      - 俄罗斯+V2CROSS.COM
-      - 美国CloudFlare节点6
       - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点15
-      - 美国CloudFlare节点16
+      - 法国+格拉沃利讷OVH数据中心
+      - 美国CloudFlare节点4
+      - 香港阿里云10
+      - 美国+RF+Engineering
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
