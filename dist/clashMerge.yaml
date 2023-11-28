@@ -1,4 +1,4 @@
-# 更新时间 2023-11-28T06:51:05.131Z
+# 更新时间 2023-11-28T07:08:28.238Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1201,6 +1201,54 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 香港+电讯盈科有限公司
+    server: download1hkt.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+Amazon+EC2服务器
+    server: 3.79.124.103
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: ss
+    name: 俄罗斯+V2CROSS.COM
+    server: 212.113.106.243
+    port: 12949
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpQMnp4WFBld2xWM0JsZnFxWWlTdGh2dExj
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 台湾省桃园市+中华电信
+    server: 36.228.203.34
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 安徽省移动数据上网公共出口9
+    server: 112.29.94.23
+    port: 43526
+    uuid: 21a9bff2-72de-4e62-93ff-8b159f66d875
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 香港阿里云13
+    ws-opts:
+      path: /
+      headers:
+        host: n1700303376.izwhvan.cn
+    server: n1700303376.izwhvan.cn
+    port: 443
+    uuid: ee65c32d-afc8-4d54-b91e-b334354fa5c2
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1314,6 +1362,12 @@ proxy-groups:
       - github.com/freefq-香港阿里云2020
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare节点2323
+      - 香港+电讯盈科有限公司
+      - 美国+Amazon+EC2服务器
+      - 俄罗斯+V2CROSS.COM
+      - 台湾省桃园市+中华电信
+      - 安徽省移动数据上网公共出口9
+      - 香港阿里云13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1427,6 +1481,12 @@ proxy-groups:
       - github.com/freefq-香港阿里云2020
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare节点2323
+      - 香港+电讯盈科有限公司
+      - 美国+Amazon+EC2服务器
+      - 俄罗斯+V2CROSS.COM
+      - 台湾省桃园市+中华电信
+      - 安徽省移动数据上网公共出口9
+      - 香港阿里云13
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1539,6 +1599,12 @@ proxy-groups:
       - github.com/freefq-香港阿里云2020
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare节点2323
+      - 香港+电讯盈科有限公司
+      - 美国+Amazon+EC2服务器
+      - 俄罗斯+V2CROSS.COM
+      - 台湾省桃园市+中华电信
+      - 安徽省移动数据上网公共出口9
+      - 香港阿里云13
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1683,6 +1749,12 @@ proxy-groups:
       - github.com/freefq-香港阿里云2020
       - github.com/freefq-美国CloudFlare节点2222
       - github.com/freefq-美国CloudFlare节点2323
+      - 香港+电讯盈科有限公司
+      - 美国+Amazon+EC2服务器
+      - 俄罗斯+V2CROSS.COM
+      - 台湾省桃园市+中华电信
+      - 安徽省移动数据上网公共出口9
+      - 香港阿里云13
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
