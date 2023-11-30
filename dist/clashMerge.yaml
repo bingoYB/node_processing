@@ -1,4 +1,4 @@
-# 更新时间 2023-11-30T06:50:58.291Z
+# 更新时间 2023-11-30T07:08:24.623Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1118,8 +1118,33 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 美国+Amazon数据中心
+    server: series-a1.samanehha.co
+    port: 443
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 香港+电讯盈科有限公司
+    server: download1hkt.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国华盛顿Cogent通信公司4
+    name: 美国CloudFlare节点7
+    ws-opts:
+      path: /vmess
+      headers:
+        host: ee1.xv2ray.net
+    server: sfmomastore.com
+    port: 80
+    uuid: 0580abe6-9aaf-40e2-ba33-0bc9f3b6ef2b
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国华盛顿Cogent通信公司15
     ws-opts:
       path: /path/1701091133409
       headers:
@@ -1131,25 +1156,14 @@ proxies:
     cipher: auto
     network: ws
     tls: true
-  - type: trojan
-    name: 日本+V2CROSS.COM
-    server: 103.245.237.126
-    port: 443
-    password: cd039512-e335-44ba-bef5-4c70c70f5786
-    udp: true
-    skip-cert-verify: true
-  - type: ss
-    name: 英国+V2CROSS.COM
-    server: 145.239.1.100
-    port: 8091
-    password: YWVzLTI1Ni1nY206UENubkg2U1FTbmZvUzI3
-    cipher: aes-128-gcm
-  - type: ss
-    name: 美国+Microsoft公司
-    server: 13.87.74.71
-    port: 14564
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpRMXFsUmtub045UHdHZUV4V1Z5VEtn
-    cipher: aes-128-gcm
+  - type: vmess
+    name: 广东省东莞市移动16
+    server: 183.232.238.77
+    port: 10008
+    uuid: ab537195-b74c-3df5-a3a1-d504345e80bb
+    alterId: 0
+    cipher: auto
+    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1253,10 +1267,11 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信(HiNet)数据中心2525
       - github.com/freefq-美国CloudFlare公司CDN节点2626
       - github.com/freefq-日本东京Choopa数据中心2727
-      - 美国华盛顿Cogent通信公司4
-      - 日本+V2CROSS.COM
-      - 英国+V2CROSS.COM
-      - 美国+Microsoft公司
+      - 美国+Amazon数据中心
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点7
+      - 美国华盛顿Cogent通信公司15
+      - 广东省东莞市移动16
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1360,10 +1375,11 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信(HiNet)数据中心2525
       - github.com/freefq-美国CloudFlare公司CDN节点2626
       - github.com/freefq-日本东京Choopa数据中心2727
-      - 美国华盛顿Cogent通信公司4
-      - 日本+V2CROSS.COM
-      - 英国+V2CROSS.COM
-      - 美国+Microsoft公司
+      - 美国+Amazon数据中心
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点7
+      - 美国华盛顿Cogent通信公司15
+      - 广东省东莞市移动16
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1466,10 +1482,11 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信(HiNet)数据中心2525
       - github.com/freefq-美国CloudFlare公司CDN节点2626
       - github.com/freefq-日本东京Choopa数据中心2727
-      - 美国华盛顿Cogent通信公司4
-      - 日本+V2CROSS.COM
-      - 英国+V2CROSS.COM
-      - 美国+Microsoft公司
+      - 美国+Amazon数据中心
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点7
+      - 美国华盛顿Cogent通信公司15
+      - 广东省东莞市移动16
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1604,10 +1621,11 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信(HiNet)数据中心2525
       - github.com/freefq-美国CloudFlare公司CDN节点2626
       - github.com/freefq-日本东京Choopa数据中心2727
-      - 美国华盛顿Cogent通信公司4
-      - 日本+V2CROSS.COM
-      - 英国+V2CROSS.COM
-      - 美国+Microsoft公司
+      - 美国+Amazon数据中心
+      - 香港+电讯盈科有限公司
+      - 美国CloudFlare节点7
+      - 美国华盛顿Cogent通信公司15
+      - 广东省东莞市移动16
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
