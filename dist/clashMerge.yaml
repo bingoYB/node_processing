@@ -1,4 +1,4 @@
-# 更新时间 2023-12-13T12:58:31.697Z
+# 更新时间 2023-12-13T13:25:38.401Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -514,85 +514,72 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
-    name: 爱尔兰+V2CROSS.COM
-    server: 54.247.173.195
-    port: 22222
-    password: telegram-id-directvpn
+    name: 香港+电讯盈科有限公司
+    server: download2hkt.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点1
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v03.ssrsub.com
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
-    alterId: 0
-    cipher: auto
-    network: ws
+  - type: ss
+    name: 法国+格拉沃利讷OVH数据中心
+    server: 54.36.174.181
+    port: 5004
+    password: YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk
+    cipher: aes-128-gcm
   - type: trojan
-    name: 美国科罗拉多州布隆菲尔德市+Level3
-    server: other.kunlun-ppg.com
-    port: 10835
-    password: 49ac075b-c562-476e-834d-fdd14de2ab6b
+    name: 台湾省台北市+中华电信
+    server: download1tw.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
     skip-cert-verify: true
   - type: ss
     name: 广东省广州市+移动
     server: service.ouluyun9803.com
-    port: 20007
+    port: 26666
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkODljYTM3MS1lOTRiLTRkZmUtYWQ2Zi0wMmJkMTNlZGY3YzQ=
     cipher: aes-128-gcm
   - type: vmess
-    name: 台湾省中华电信(HiNet)数据中心12
+    name: 台湾省新北市中华电信18
     ws-opts:
-      path: /b13
+      path: /cache
       headers:
-        host: nbq13.ntbq.dynu.net
-    server: nbq13.ntbq.dynu.net
+        host: mirai.route76.net
+    server: mirai.route76.net
     port: 443
-    uuid: f269e2fa-6c84-43fe-8e69-a240b8449e79
+    uuid: ccf295c0-cdb7-43f1-9dca-7f15752704b4
+    alterId: 0
+    cipher: auto
+    network: h2
+    tls: true
+  - type: trojan
+    name: 越南+V2CROSS.COM
+    server: inet.5gsieutocdo.com
+    port: 443
+    password: c95357eb-2869-4511-8940-f0dc5e1ec9b1
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: >-
+      UNLK1.LVWF8N-HH8E-2300-NMOO-D2E9NAOBEACN.9D8F269F96B25232-759CBB36D6548597.KAUFEN
+    port: 20152
+    password: d56cb8dc-e932-4d57-bd90-1381a1245f90
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点26
+    ws-opts:
+      path: /
+      headers:
+        host: eu4.openxai.link
+    server: 104.17.129.28
+    port: 8080
+    uuid: 218996e0-5a6e-4806-8106-6b7b42e6d0d6
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
-  - type: ss
-    name: 美国+华盛顿Cogent通信公司
-    server: 38.91.107.37
-    port: 7001
-    password: YWVzLTI1Ni1nY206UmV4bkJnVTdFVjVBRHhH
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 广东省移动15
-    server: 183.240.232.93
-    port: 34001
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: ss
-    name: 俄罗斯+V2CROSS.COM
-    server: 85.239.52.174
-    port: 51348
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkYXRkR0ZlNExrTU43MTBhSGVkeQ==
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 韩国+KT电信
-    server: hk.kunlun-ppg.com
-    port: 10809
-    password: 49ac075b-c562-476e-834d-fdd14de2ab6b
-    udp: true
-    skip-cert-verify: true
-  - type: ss
-    name: 甘肃省兰州市+移动
-    server: 91d71684cea0a49a.cdn.jiashule.com
-    port: 13907
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozZjlkYzVjNC04NWFkLTQ2MWEtOTVhZi02ODcxMmViNmFkNzQ=
-    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -655,16 +642,14 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动14
       - github.com/freefq-法国格拉沃利讷OVH数据中心15
       - github.com/freefq-美国CloudFlare节点1616
-      - 爱尔兰+V2CROSS.COM
-      - 美国CloudFlare节点1
-      - 美国科罗拉多州布隆菲尔德市+Level3
+      - 香港+电讯盈科有限公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 台湾省台北市+中华电信
       - 广东省广州市+移动
-      - 台湾省中华电信(HiNet)数据中心12
-      - 美国+华盛顿Cogent通信公司
-      - 广东省移动15
-      - 俄罗斯+V2CROSS.COM
-      - 韩国+KT电信
-      - 甘肃省兰州市+移动
+      - 台湾省新北市中华电信18
+      - 越南+V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点26
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -727,16 +712,14 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动14
       - github.com/freefq-法国格拉沃利讷OVH数据中心15
       - github.com/freefq-美国CloudFlare节点1616
-      - 爱尔兰+V2CROSS.COM
-      - 美国CloudFlare节点1
-      - 美国科罗拉多州布隆菲尔德市+Level3
+      - 香港+电讯盈科有限公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 台湾省台北市+中华电信
       - 广东省广州市+移动
-      - 台湾省中华电信(HiNet)数据中心12
-      - 美国+华盛顿Cogent通信公司
-      - 广东省移动15
-      - 俄罗斯+V2CROSS.COM
-      - 韩国+KT电信
-      - 甘肃省兰州市+移动
+      - 台湾省新北市中华电信18
+      - 越南+V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点26
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -798,16 +781,14 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动14
       - github.com/freefq-法国格拉沃利讷OVH数据中心15
       - github.com/freefq-美国CloudFlare节点1616
-      - 爱尔兰+V2CROSS.COM
-      - 美国CloudFlare节点1
-      - 美国科罗拉多州布隆菲尔德市+Level3
+      - 香港+电讯盈科有限公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 台湾省台北市+中华电信
       - 广东省广州市+移动
-      - 台湾省中华电信(HiNet)数据中心12
-      - 美国+华盛顿Cogent通信公司
-      - 广东省移动15
-      - 俄罗斯+V2CROSS.COM
-      - 韩国+KT电信
-      - 甘肃省兰州市+移动
+      - 台湾省新北市中华电信18
+      - 越南+V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点26
   - name: 📲 电报信息
     type: select
     proxies:
@@ -901,16 +882,14 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动14
       - github.com/freefq-法国格拉沃利讷OVH数据中心15
       - github.com/freefq-美国CloudFlare节点1616
-      - 爱尔兰+V2CROSS.COM
-      - 美国CloudFlare节点1
-      - 美国科罗拉多州布隆菲尔德市+Level3
+      - 香港+电讯盈科有限公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 台湾省台北市+中华电信
       - 广东省广州市+移动
-      - 台湾省中华电信(HiNet)数据中心12
-      - 美国+华盛顿Cogent通信公司
-      - 广东省移动15
-      - 俄罗斯+V2CROSS.COM
-      - 韩国+KT电信
-      - 甘肃省兰州市+移动
+      - 台湾省新北市中华电信18
+      - 越南+V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国CloudFlare节点26
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
