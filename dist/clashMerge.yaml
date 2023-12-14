@@ -1,4 +1,4 @@
-# 更新时间 2023-12-14T18:50:35.634Z
+# 更新时间 2023-12-14T19:04:05.998Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -449,50 +449,119 @@ proxies:
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkODljYTM3MS1lOTRiLTRkZmUtYWQ2Zi0wMmJkMTNlZGY3YzQ
     cipher: aes-128-gcm
-  - type: ss
-    name: 广东省广州市+移动
-    server: service.ouluyun9803.com
-    port: 26666
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkODljYTM3MS1lOTRiLTRkZmUtYWQ2Zi0wMmJkMTNlZGY3YzQ=
-    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /
+      headers:
+        host: cc3.shabijichang.com
+    server: cc3.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v03.ssrsub.com
+    server: singapore.com
+    port: 80
+    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /
+      headers:
+        host: kryx.651568.xyz
+    server: zfc.windowsupdate1.com
+    port: 8080
+    uuid: f32fb637-67eb-48be-9f29-4523c4720de7
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: trojan
     name: 美国+Amazon数据中心
-    server: 18.171.79.232
+    server: 13.38.200.183
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
   - type: trojan
+    name: 美国+CloudFlare节点
+    server: amini2.ddns.net
+    port: 2096
+    password: biwe49r2Tv
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点6
+    ws-opts:
+      path: /@FORWARDV2RAY
+    server: XXX101.FORWARDV2RAYTELEGRAMCHANNEL.FUN
+    port: 80
+    uuid: 0c61cea2-4906-4901-86c2-c0988af7b0a3
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 浙江省+移动数据上网公共出口
+    server: p1.bxy-fun3.com
+    port: 23100
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkN2JlZTgzMC0wOWFhLTQzYjItODk0NS0zYjM0MWI4Nzg3ZGI=
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 美国+俄亥俄州都柏林Amazon数据中心
+    server: 18.218.26.134
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点10
+    ws-opts:
+      path: /
+      headers:
+        host: kryx.651568.xyz
+    server: scadn.yydsii.com
+    port: 8080
+    uuid: f32fb637-67eb-48be-9f29-4523c4720de7
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
     name: 香港+电讯盈科有限公司
-    server: download2hkt.windowsupdatea.com
+    server: download1hkt.windowsupdatea.com
     port: 443
     password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
     skip-cert-verify: true
+  - type: ss
+    name: 美国+V2CROSS.COM
+    server: 162.247.153.108
+    port: 28896
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpqRkRwVW9LVURaUEVHVEJKUmlMWmdv
+    cipher: aes-128-gcm
   - type: trojan
-    name: 美国+宾夕法尼亚州Coudersport
-    server: frontend.kuangbiaoyun.com
-    port: 40004
-    password: 57edfecf-5694-4a34-8072-54a4f0636a62
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 新加坡+Amazon数据中心
-    server: sg4.421421.xyz
-    port: 20230
-    password: 6536ad97-a4a9-443a-9488-6f7a0f280068
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 54.170.21.134
+    port: 22222
+    password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点13
+    name: 美国CloudFlare节点14
     ws-opts:
-      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
-      headers:
-        host: fr7.tehme100.fun
-    server: 172.67.229.39
-    port: 8880
-    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
+      path: /@FORWARDV2RAY
+    server: XXX153.FORWARDV2RAYTELEGRAMCHANNEL.FUN
+    port: 2095
+    uuid: d59aa585-8da0-40b6-8720-0f76f1357a65
     alterId: 0
     cipher: auto
     network: ws
@@ -554,12 +623,19 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动5
       - github.com/freefq-广东省广州市移动6
       - github.com/freefq-广东省广州市移动7
-      - 广东省广州市+移动
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
       - 美国+Amazon数据中心
+      - 美国+CloudFlare节点
+      - 美国CloudFlare节点6
+      - 浙江省+移动数据上网公共出口
+      - 美国+俄亥俄州都柏林Amazon数据中心
+      - 美国CloudFlare节点10
       - 香港+电讯盈科有限公司
-      - 美国+宾夕法尼亚州Coudersport
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点13
+      - 美国+V2CROSS.COM
+      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点14
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -618,12 +694,19 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动5
       - github.com/freefq-广东省广州市移动6
       - github.com/freefq-广东省广州市移动7
-      - 广东省广州市+移动
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
       - 美国+Amazon数据中心
+      - 美国+CloudFlare节点
+      - 美国CloudFlare节点6
+      - 浙江省+移动数据上网公共出口
+      - 美国+俄亥俄州都柏林Amazon数据中心
+      - 美国CloudFlare节点10
       - 香港+电讯盈科有限公司
-      - 美国+宾夕法尼亚州Coudersport
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点13
+      - 美国+V2CROSS.COM
+      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点14
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -681,12 +764,19 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动5
       - github.com/freefq-广东省广州市移动6
       - github.com/freefq-广东省广州市移动7
-      - 广东省广州市+移动
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
       - 美国+Amazon数据中心
+      - 美国+CloudFlare节点
+      - 美国CloudFlare节点6
+      - 浙江省+移动数据上网公共出口
+      - 美国+俄亥俄州都柏林Amazon数据中心
+      - 美国CloudFlare节点10
       - 香港+电讯盈科有限公司
-      - 美国+宾夕法尼亚州Coudersport
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点13
+      - 美国+V2CROSS.COM
+      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点14
   - name: 📲 电报信息
     type: select
     proxies:
@@ -776,12 +866,19 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动5
       - github.com/freefq-广东省广州市移动6
       - github.com/freefq-广东省广州市移动7
-      - 广东省广州市+移动
+      - 美国CloudFlare节点0
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
       - 美国+Amazon数据中心
+      - 美国+CloudFlare节点
+      - 美国CloudFlare节点6
+      - 浙江省+移动数据上网公共出口
+      - 美国+俄亥俄州都柏林Amazon数据中心
+      - 美国CloudFlare节点10
       - 香港+电讯盈科有限公司
-      - 美国+宾夕法尼亚州Coudersport
-      - 新加坡+Amazon数据中心
-      - 美国CloudFlare节点13
+      - 美国+V2CROSS.COM
+      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点14
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
