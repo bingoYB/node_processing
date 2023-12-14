@@ -1,4 +1,4 @@
-# 更新时间 2023-12-14T13:28:32.264Z
+# 更新时间 2023-12-14T18:24:10.817Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -387,7 +387,7 @@ proxies:
     ws-opts:
       path: /pq/us4
   - type: vmess
-    name: 更新于:12-1420:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:12-1500:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -405,7 +405,7 @@ proxies:
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点22
+    name: github.com/freefq-美国CloudFlare公司CDN节点22
     ws-opts:
       path: /
       headers:
@@ -417,38 +417,52 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-美国CloudFlare节点33
+    name: github.com/freefq-美国CloudFlare节点44
     ws-opts:
-      path: /
+      path: /api/v3/download.getFile
       headers:
-        host: jpyx.651568.xyz
-    server: zfc.windowsupdate1.com
+        host: ssrsub.v005.ssrsub.com
+    server: cf-lt.sharecentre.online
     port: 80
-    uuid: f32fb637-67eb-48be-9f29-4523c4720de7
+    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
     alterId: 0
     cipher: auto
     network: ws
   - type: ss
-    name: github.com/freefq-广东省广州市移动4
-    server: service.ouluyun9803.com
-    port: 20001
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkODljYTM3MS1lOTRiLTRkZmUtYWQ2Zi0wMmJkMTNlZGY3YzQ
-    cipher: aes-128-gcm
-  - type: ss
     name: github.com/freefq-广东省广州市移动5
     server: service.ouluyun9803.com
-    port: 26667
+    port: 50001
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkODljYTM3MS1lOTRiLTRkZmUtYWQ2Zi0wMmJkMTNlZGY3YzQ
     cipher: aes-128-gcm
   - type: ss
     name: github.com/freefq-广东省广州市移动6
     server: service.ouluyun9803.com
-    port: 50001
+    port: 26667
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkODljYTM3MS1lOTRiLTRkZmUtYWQ2Zi0wMmJkMTNlZGY3YzQ
     cipher: aes-128-gcm
+  - type: ss
+    name: github.com/freefq-广东省广州市移动7
+    server: service.ouluyun9803.com
+    port: 20001
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkODljYTM3MS1lOTRiLTRkZmUtYWQ2Zi0wMmJkMTNlZGY3YzQ
+    cipher: aes-128-gcm
+  - type: ss
+    name: 广东省广州市+移动
+    server: service.ouluyun9803.com
+    port: 26666
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpkODljYTM3MS1lOTRiLTRkZmUtYWQ2Zi0wMmJkMTNlZGY3YzQ=
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 18.171.79.232
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
   - type: trojan
     name: 香港+电讯盈科有限公司
     server: download2hkt.windowsupdatea.com
@@ -457,12 +471,31 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.71.132.91
-    port: 22222
-    password: telegram-id-privatevpns
+    name: 美国+宾夕法尼亚州Coudersport
+    server: frontend.kuangbiaoyun.com
+    port: 40004
+    password: 57edfecf-5694-4a34-8072-54a4f0636a62
     udp: true
     skip-cert-verify: true
+  - type: trojan
+    name: 新加坡+Amazon数据中心
+    server: sg4.421421.xyz
+    port: 20230
+    password: 6536ad97-a4a9-443a-9488-6f7a0f280068
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点13
+    ws-opts:
+      path: /Jnv8ViZOUVgijjOh0p5uGjHnXIiY
+      headers:
+        host: fr7.tehme100.fun
+    server: 172.67.229.39
+    port: 8880
+    uuid: 617c9bc4-4116-41c6-99e0-ace49a38fcdb
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -514,15 +547,19 @@ proxy-groups:
       - 🇨🇦_CA_加拿大->🇺🇸_US_美国
       - 🇪🇸_ES_西班牙
       - 🇺🇸_US_美国_4
-      - 更新于:12-1420:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:12-1500:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-广东省移动11
-      - github.com/freefq-美国CloudFlare节点22
-      - github.com/freefq-美国CloudFlare节点33
-      - github.com/freefq-广东省广州市移动4
+      - github.com/freefq-美国CloudFlare公司CDN节点22
+      - github.com/freefq-美国CloudFlare节点44
       - github.com/freefq-广东省广州市移动5
       - github.com/freefq-广东省广州市移动6
+      - github.com/freefq-广东省广州市移动7
+      - 广东省广州市+移动
+      - 美国+Amazon数据中心
       - 香港+电讯盈科有限公司
-      - 美国+Amazon+EC2服务器
+      - 美国+宾夕法尼亚州Coudersport
+      - 新加坡+Amazon数据中心
+      - 美国CloudFlare节点13
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -574,15 +611,19 @@ proxy-groups:
       - 🇨🇦_CA_加拿大->🇺🇸_US_美国
       - 🇪🇸_ES_西班牙
       - 🇺🇸_US_美国_4
-      - 更新于:12-1420:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:12-1500:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-广东省移动11
-      - github.com/freefq-美国CloudFlare节点22
-      - github.com/freefq-美国CloudFlare节点33
-      - github.com/freefq-广东省广州市移动4
+      - github.com/freefq-美国CloudFlare公司CDN节点22
+      - github.com/freefq-美国CloudFlare节点44
       - github.com/freefq-广东省广州市移动5
       - github.com/freefq-广东省广州市移动6
+      - github.com/freefq-广东省广州市移动7
+      - 广东省广州市+移动
+      - 美国+Amazon数据中心
       - 香港+电讯盈科有限公司
-      - 美国+Amazon+EC2服务器
+      - 美国+宾夕法尼亚州Coudersport
+      - 新加坡+Amazon数据中心
+      - 美国CloudFlare节点13
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -633,15 +674,19 @@ proxy-groups:
       - 🇨🇦_CA_加拿大->🇺🇸_US_美国
       - 🇪🇸_ES_西班牙
       - 🇺🇸_US_美国_4
-      - 更新于:12-1420:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:12-1500:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-广东省移动11
-      - github.com/freefq-美国CloudFlare节点22
-      - github.com/freefq-美国CloudFlare节点33
-      - github.com/freefq-广东省广州市移动4
+      - github.com/freefq-美国CloudFlare公司CDN节点22
+      - github.com/freefq-美国CloudFlare节点44
       - github.com/freefq-广东省广州市移动5
       - github.com/freefq-广东省广州市移动6
+      - github.com/freefq-广东省广州市移动7
+      - 广东省广州市+移动
+      - 美国+Amazon数据中心
       - 香港+电讯盈科有限公司
-      - 美国+Amazon+EC2服务器
+      - 美国+宾夕法尼亚州Coudersport
+      - 新加坡+Amazon数据中心
+      - 美国CloudFlare节点13
   - name: 📲 电报信息
     type: select
     proxies:
@@ -724,15 +769,19 @@ proxy-groups:
       - 🇨🇦_CA_加拿大->🇺🇸_US_美国
       - 🇪🇸_ES_西班牙
       - 🇺🇸_US_美国_4
-      - 更新于:12-1420:00-byBuLink.xyz-以下节点不计流量0
+      - 更新于:12-1500:00-byBuLink.xyz-以下节点不计流量0
       - github.com/freefq-广东省移动11
-      - github.com/freefq-美国CloudFlare节点22
-      - github.com/freefq-美国CloudFlare节点33
-      - github.com/freefq-广东省广州市移动4
+      - github.com/freefq-美国CloudFlare公司CDN节点22
+      - github.com/freefq-美国CloudFlare节点44
       - github.com/freefq-广东省广州市移动5
       - github.com/freefq-广东省广州市移动6
+      - github.com/freefq-广东省广州市移动7
+      - 广东省广州市+移动
+      - 美国+Amazon数据中心
       - 香港+电讯盈科有限公司
-      - 美国+Amazon+EC2服务器
+      - 美国+宾夕法尼亚州Coudersport
+      - 新加坡+Amazon数据中心
+      - 美国CloudFlare节点13
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
