@@ -1,4 +1,4 @@
-# 更新时间 2023-12-15T06:50:39.479Z
+# 更新时间 2023-12-15T07:06:13.832Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -519,75 +519,38 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
-    name: 美国+麻省理工学院
-    server: 18.135.206.171
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
     name: 美国+Amazon+EC2服务器
-    server: 3.65.180.210
+    server: 3.78.235.121
     port: 22222
-    password: telegram-id-directvpn
+    password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 广东省移动3
-    ws-opts:
-      path: /
-    server: 183.240.232.93
-    port: 34001
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
   - type: ss
     name: 法国+格拉沃利讷OVH数据中心
     server: 54.36.174.181
-    port: 8009
-    password: YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ=
+    port: 7306
+    password: YWVzLTI1Ni1nY206Rm9PaUdsa0FBOXlQRUdQ
+    cipher: aes-128-gcm
+  - type: ss
+    name: 法国+OVH
+    server: 51.77.53.200
+    port: 8080
+    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
     cipher: aes-128-gcm
   - type: vmess
-    name: 四川省联通数据上网公共出口7
-    ws-opts:
-      path: /
-      headers:
-        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
-    server: yes.cnmjcn.net
-    port: 16648
-    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 广东省移动10
-    server: 120.233.43.37
-    port: 52629
+    name: 广东省广州市移动14
+    server: 183.233.187.214
+    port: 50965
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: auto
-  - type: trojan
-    name: 香港+电讯盈科有限公司
-    server: download2hkt.windowsupdatea.com
-    port: 443
-    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
-    udp: true
-    skip-cert-verify: true
   - type: ss
     name: 俄罗斯+V2CROSS.COM
     server: 185.231.205.80
     port: 1443
     password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpNR1F3TlRndw==
     cipher: aes-128-gcm
-  - type: trojan
-    name: 台湾省+中华电信(HiNet)数据中心
-    server: hinet.lxjc.app
-    port: 443
-    password: 4c59870d-9206-4097-8dea-a58891bf1286
-    udp: true
-    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -650,15 +613,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点55
       - github.com/freefq-法国格拉沃利讷OVH数据中心6
       - github.com/freefq-美国CloudFlare节点77
-      - 美国+麻省理工学院
       - 美国+Amazon+EC2服务器
-      - 广东省移动3
       - 法国+格拉沃利讷OVH数据中心
-      - 四川省联通数据上网公共出口7
-      - 广东省移动10
-      - 香港+电讯盈科有限公司
+      - 法国+OVH
+      - 广东省广州市移动14
       - 俄罗斯+V2CROSS.COM
-      - 台湾省+中华电信(HiNet)数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -721,15 +680,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点55
       - github.com/freefq-法国格拉沃利讷OVH数据中心6
       - github.com/freefq-美国CloudFlare节点77
-      - 美国+麻省理工学院
       - 美国+Amazon+EC2服务器
-      - 广东省移动3
       - 法国+格拉沃利讷OVH数据中心
-      - 四川省联通数据上网公共出口7
-      - 广东省移动10
-      - 香港+电讯盈科有限公司
+      - 法国+OVH
+      - 广东省广州市移动14
       - 俄罗斯+V2CROSS.COM
-      - 台湾省+中华电信(HiNet)数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -791,15 +746,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点55
       - github.com/freefq-法国格拉沃利讷OVH数据中心6
       - github.com/freefq-美国CloudFlare节点77
-      - 美国+麻省理工学院
       - 美国+Amazon+EC2服务器
-      - 广东省移动3
       - 法国+格拉沃利讷OVH数据中心
-      - 四川省联通数据上网公共出口7
-      - 广东省移动10
-      - 香港+电讯盈科有限公司
+      - 法国+OVH
+      - 广东省广州市移动14
       - 俄罗斯+V2CROSS.COM
-      - 台湾省+中华电信(HiNet)数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -893,15 +844,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点55
       - github.com/freefq-法国格拉沃利讷OVH数据中心6
       - github.com/freefq-美国CloudFlare节点77
-      - 美国+麻省理工学院
       - 美国+Amazon+EC2服务器
-      - 广东省移动3
       - 法国+格拉沃利讷OVH数据中心
-      - 四川省联通数据上网公共出口7
-      - 广东省移动10
-      - 香港+电讯盈科有限公司
+      - 法国+OVH
+      - 广东省广州市移动14
       - 俄罗斯+V2CROSS.COM
-      - 台湾省+中华电信(HiNet)数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
