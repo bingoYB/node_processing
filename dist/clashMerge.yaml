@@ -1,4 +1,4 @@
-# 更新时间 2023-12-16T12:53:46.796Z
+# 更新时间 2023-12-16T13:12:59.348Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -544,7 +544,25 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 四川省联通数据上网公共出口0
+    name: 美国CloudFlare节点0
+    ws-opts:
+      path: /
+      headers:
+        host: kr-01.gujuji.top
+    server: kr-01.gujuji.top
+    port: 8080
+    uuid: 19de9747-b4b0-4b6c-9697-26cb1310f2cf
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 加拿大+V2CROSS.COM
+    server: 142.202.48.99
+    port: 5003
+    password: YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 四川省联通数据上网公共出口2
     ws-opts:
       path: /
       headers:
@@ -556,27 +574,33 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点1
+    name: 美国V2CROSS.COM4
     ws-opts:
       path: /
       headers:
-        host: us-new04.gujuji.top
-    server: us-new04.gujuji.top
-    port: 8080
-    uuid: 2dbd709e-ba48-4bb3-8181-40995c18fa1f
+        host: tms.dingtalk.com
+    server: 45.155.249.151
+    port: 80
+    uuid: 9d5e69d2-46cf-4865-95fe-a2ee8c52a013
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点2
-    ws-opts:
-      path: /
-    server: fr-new01.gujuji.top
-    port: 8080
-    uuid: 19de9747-b4b0-4b6c-9697-26cb1310f2cf
+    name: 广东省佛山市移动5
+    server: 183.232.195.146
+    port: 45801
+    uuid: 7ad68894-08cc-494a-9cdf-1e5e967f6da0
     alterId: 0
     cipher: auto
-    network: ws
+    network: auto
+  - type: vmess
+    name: 美国加利福尼亚州洛杉矶RamNode数据中心6
+    server: 168.235.72.221
+    port: 15551
+    uuid: 69510633-6acb-4291-a98e-0cdcc9bd5c51
+    alterId: 0
+    cipher: auto
+    network: auto
   - type: trojan
     name: 香港+电讯盈科有限公司
     server: download2hkt.windowsupdatea.com
@@ -585,68 +609,7 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国加利福尼亚州洛杉矶RamNode数据中心4
-    server: 168.235.72.221
-    port: 15551
-    uuid: 69510633-6acb-4291-a98e-0cdcc9bd5c51
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 广东省佛山市移动5
-    server: 183.232.195.146
-    port: 45800
-    uuid: 7ad68894-08cc-494a-9cdf-1e5e967f6da0
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点8
-    ws-opts:
-      path: /
-      headers:
-        host: ca-new01.gujuji.top
-    server: ca-new01.gujuji.top
-    port: 8080
-    uuid: 2dbd709e-ba48-4bb3-8181-40995c18fa1f
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: ss
-    name: 法国+OVH机房SAS硬盘BGP主机
-    server: 149.202.82.172
-    port: 3389
-    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 美国华盛顿Cogent通信公司11
-    ws-opts:
-      path: /path/1702215223320
-      headers:
-        host: www.73664999.xyz
-    server: 38.54.185.113
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: ss
-    name: 美国+V2CROSS.COM
-    server: 162.247.153.108
-    port: 28896
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpqRkRwVW9LVURaUEVHVEJKUmlMWmdv
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 韩国+首尔Oracle云计算数据中心
-    server: >-
-      unlk4.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
-    port: 21152
-    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 湖南省联通15
+    name: 湖南省联通9
     ws-opts:
       path: /
       headers:
@@ -654,6 +617,62 @@ proxies:
     server: yes.cnmjcn.net
     port: 16616
     uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点10
+    ws-opts:
+      path: /
+    server: us-new02.gujuji.top
+    port: 8080
+    uuid: 19de9747-b4b0-4b6c-9697-26cb1310f2cf
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点11
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v005.ssrsub.com
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点12
+    ws-opts:
+      path: /
+      headers:
+        host: de-new01.gujuji.top
+    server: de-new01.gujuji.top
+    port: 8080
+    uuid: 2dbd709e-ba48-4bb3-8181-40995c18fa1f
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点13
+    ws-opts:
+      path: /
+    server: fr-new01.gujuji.top
+    port: 8080
+    uuid: 19de9747-b4b0-4b6c-9697-26cb1310f2cf
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点15
+    ws-opts:
+      path: /
+      headers:
+        host: uk-new01.gujuji.top
+    server: uk-new01.gujuji.top
+    port: 8080
+    uuid: 2dbd709e-ba48-4bb3-8181-40995c18fa1f
     alterId: 0
     cipher: auto
     network: ws
@@ -716,18 +735,19 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-美国CloudFlare公司CDN节点1212
       - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 四川省联通数据上网公共出口0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 香港+电讯盈科有限公司
-      - 美国加利福尼亚州洛杉矶RamNode数据中心4
+      - 美国CloudFlare节点0
+      - 加拿大+V2CROSS.COM
+      - 四川省联通数据上网公共出口2
+      - 美国V2CROSS.COM4
       - 广东省佛山市移动5
-      - 美国CloudFlare节点8
-      - 法国+OVH机房SAS硬盘BGP主机
-      - 美国华盛顿Cogent通信公司11
-      - 美国+V2CROSS.COM
-      - 韩国+首尔Oracle云计算数据中心
-      - 湖南省联通15
+      - 美国加利福尼亚州洛杉矶RamNode数据中心6
+      - 香港+电讯盈科有限公司
+      - 湖南省联通9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
+      - 美国CloudFlare节点15
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -787,18 +807,19 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-美国CloudFlare公司CDN节点1212
       - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 四川省联通数据上网公共出口0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 香港+电讯盈科有限公司
-      - 美国加利福尼亚州洛杉矶RamNode数据中心4
+      - 美国CloudFlare节点0
+      - 加拿大+V2CROSS.COM
+      - 四川省联通数据上网公共出口2
+      - 美国V2CROSS.COM4
       - 广东省佛山市移动5
-      - 美国CloudFlare节点8
-      - 法国+OVH机房SAS硬盘BGP主机
-      - 美国华盛顿Cogent通信公司11
-      - 美国+V2CROSS.COM
-      - 韩国+首尔Oracle云计算数据中心
-      - 湖南省联通15
+      - 美国加利福尼亚州洛杉矶RamNode数据中心6
+      - 香港+电讯盈科有限公司
+      - 湖南省联通9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
+      - 美国CloudFlare节点15
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -857,18 +878,19 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-美国CloudFlare公司CDN节点1212
       - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 四川省联通数据上网公共出口0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 香港+电讯盈科有限公司
-      - 美国加利福尼亚州洛杉矶RamNode数据中心4
+      - 美国CloudFlare节点0
+      - 加拿大+V2CROSS.COM
+      - 四川省联通数据上网公共出口2
+      - 美国V2CROSS.COM4
       - 广东省佛山市移动5
-      - 美国CloudFlare节点8
-      - 法国+OVH机房SAS硬盘BGP主机
-      - 美国华盛顿Cogent通信公司11
-      - 美国+V2CROSS.COM
-      - 韩国+首尔Oracle云计算数据中心
-      - 湖南省联通15
+      - 美国加利福尼亚州洛杉矶RamNode数据中心6
+      - 香港+电讯盈科有限公司
+      - 湖南省联通9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
+      - 美国CloudFlare节点15
   - name: 📲 电报信息
     type: select
     proxies:
@@ -959,18 +981,19 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-美国CloudFlare公司CDN节点1212
       - github.com/freefq-美国CloudFlare公司CDN节点1313
-      - 四川省联通数据上网公共出口0
-      - 美国CloudFlare节点1
-      - 美国CloudFlare节点2
-      - 香港+电讯盈科有限公司
-      - 美国加利福尼亚州洛杉矶RamNode数据中心4
+      - 美国CloudFlare节点0
+      - 加拿大+V2CROSS.COM
+      - 四川省联通数据上网公共出口2
+      - 美国V2CROSS.COM4
       - 广东省佛山市移动5
-      - 美国CloudFlare节点8
-      - 法国+OVH机房SAS硬盘BGP主机
-      - 美国华盛顿Cogent通信公司11
-      - 美国+V2CROSS.COM
-      - 韩国+首尔Oracle云计算数据中心
-      - 湖南省联通15
+      - 美国加利福尼亚州洛杉矶RamNode数据中心6
+      - 香港+电讯盈科有限公司
+      - 湖南省联通9
+      - 美国CloudFlare节点10
+      - 美国CloudFlare节点11
+      - 美国CloudFlare节点12
+      - 美国CloudFlare节点13
+      - 美国CloudFlare节点15
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
