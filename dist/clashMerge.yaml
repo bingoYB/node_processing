@@ -1,4 +1,4 @@
-# 更新时间 2023-12-16T18:58:31.257Z
+# 更新时间 2023-12-16T19:16:12.351Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -494,18 +494,37 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 英国+V2CROSS.COM
-    server: 141.94.221.127
-    port: 80
-    password: 65c3941e-46b9-42f6-9c89-daedf472b6db
-    udp: true
-    skip-cert-verify: true
   - type: ss
     name: 法国+OVH机房SAS硬盘BGP主机
     server: 149.202.82.172
-    port: 8008
-    password: YWVzLTI1Ni1nY206WEtGS2wyclVMaklwNzQ=
+    port: 9102
+    password: YWVzLTI1Ni1nY206ZTRGQ1dyZ3BramkzUVk=
+    cipher: aes-128-gcm
+  - type: ss
+    name: 美国+华盛顿Cogent通信公司
+    server: 38.75.137.9
+    port: 8080
+    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: 131.186.18.237
+    port: 20152
+    password: 928dc6ee-495b-446f-9f20-883dedce564a
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 台湾省台北市+中华电信
+    server: download1tw.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: ss
+    name: 俄罗斯+V2CROSS.COM
+    server: 91.194.161.7
+    port: 8388
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpPV0psWWpZeQ==
     cipher: aes-128-gcm
   - type: ss
     name: 加拿大+V2CROSS.COM
@@ -513,63 +532,6 @@ proxies:
     port: 8090
     password: YWVzLTI1Ni1nY206UENubkg2U1FTbmZvUzI3
     cipher: aes-128-gcm
-  - type: ss
-    name: 乌克兰+V2CROSS.COM
-    server: 94.131.12.58
-    port: 26669
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpCMHJ5NTZYMkF4ZkZnY2dJN3NIRFdE
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 日本+V2CROSS.COM
-    server: crispy.koreanbbq.link
-    port: 443
-    password: EAeReaI2cyzTnjuK8SS6NOgpxCZRl3p0AO8DXSF3B4aq93CyZ3aDxFYCY5Dwl7
-    udp: true
-    skip-cert-verify: true
-  - type: ss
-    name: 英国+社会保险安全部
-    server: 51.178.87.37
-    port: 804
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8=
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 美国CloudFlare节点9
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v005.ssrsub.com
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 四川省联通数据上网公共出口10
-    ws-opts:
-      path: /
-      headers:
-        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
-    server: yes.cnmjcn.net
-    port: 16618
-    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: ss
-    name: 意大利+V2CROSS.COM
-    server: 212.102.53.79
-    port: 443
-    password: YWVzLTEyOC1nY206c2hhZG93c29ja3M=
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 韩国+首尔Oracle云计算数据中心
-    server: >-
-      unlk4.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
-    port: 21152
-    password: ff981c01-9f9a-4b27-bb09-0d98b7a4b7fa
-    udp: true
-    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -624,16 +586,12 @@ proxy-groups:
       - github.com/freefq-加拿大6
       - github.com/freefq-广东省广州市移动7
       - github.com/freefq-美国CloudFlare节点88
-      - 英国+V2CROSS.COM
       - 法国+OVH机房SAS硬盘BGP主机
+      - 美国+华盛顿Cogent通信公司
+      - 美国+V2CROSS.COM
+      - 台湾省台北市+中华电信
+      - 俄罗斯+V2CROSS.COM
       - 加拿大+V2CROSS.COM
-      - 乌克兰+V2CROSS.COM
-      - 日本+V2CROSS.COM
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点9
-      - 四川省联通数据上网公共出口10
-      - 意大利+V2CROSS.COM
-      - 韩国+首尔Oracle云计算数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -688,16 +646,12 @@ proxy-groups:
       - github.com/freefq-加拿大6
       - github.com/freefq-广东省广州市移动7
       - github.com/freefq-美国CloudFlare节点88
-      - 英国+V2CROSS.COM
       - 法国+OVH机房SAS硬盘BGP主机
+      - 美国+华盛顿Cogent通信公司
+      - 美国+V2CROSS.COM
+      - 台湾省台北市+中华电信
+      - 俄罗斯+V2CROSS.COM
       - 加拿大+V2CROSS.COM
-      - 乌克兰+V2CROSS.COM
-      - 日本+V2CROSS.COM
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点9
-      - 四川省联通数据上网公共出口10
-      - 意大利+V2CROSS.COM
-      - 韩国+首尔Oracle云计算数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -751,16 +705,12 @@ proxy-groups:
       - github.com/freefq-加拿大6
       - github.com/freefq-广东省广州市移动7
       - github.com/freefq-美国CloudFlare节点88
-      - 英国+V2CROSS.COM
       - 法国+OVH机房SAS硬盘BGP主机
+      - 美国+华盛顿Cogent通信公司
+      - 美国+V2CROSS.COM
+      - 台湾省台北市+中华电信
+      - 俄罗斯+V2CROSS.COM
       - 加拿大+V2CROSS.COM
-      - 乌克兰+V2CROSS.COM
-      - 日本+V2CROSS.COM
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点9
-      - 四川省联通数据上网公共出口10
-      - 意大利+V2CROSS.COM
-      - 韩国+首尔Oracle云计算数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -846,16 +796,12 @@ proxy-groups:
       - github.com/freefq-加拿大6
       - github.com/freefq-广东省广州市移动7
       - github.com/freefq-美国CloudFlare节点88
-      - 英国+V2CROSS.COM
       - 法国+OVH机房SAS硬盘BGP主机
+      - 美国+华盛顿Cogent通信公司
+      - 美国+V2CROSS.COM
+      - 台湾省台北市+中华电信
+      - 俄罗斯+V2CROSS.COM
       - 加拿大+V2CROSS.COM
-      - 乌克兰+V2CROSS.COM
-      - 日本+V2CROSS.COM
-      - 英国+社会保险安全部
-      - 美国CloudFlare节点9
-      - 四川省联通数据上网公共出口10
-      - 意大利+V2CROSS.COM
-      - 韩国+首尔Oracle云计算数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
