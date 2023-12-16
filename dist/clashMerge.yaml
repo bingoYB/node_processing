@@ -1,4 +1,4 @@
-# 更新时间 2023-12-16T07:00:02.882Z
+# 更新时间 2023-12-16T07:17:53.099Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -537,40 +537,20 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
-    name: 台湾省台北市+中华电信
-    server: download1tw.windowsupdatea.com
-    port: 443
-    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+Amazon数据中心
-    server: 18.171.93.134
+    name: 美国+Xerox
+    server: 13.51.35.221
     port: 22222
-    password: telegram-id-privatevpns
+    password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
-  - type: trojan
-    name: 美国+V2CROSS.COM
-    server: 131.186.18.237
-    port: 20152
-    password: 928dc6ee-495b-446f-9f20-883dedce564a
-    udp: true
-    skip-cert-verify: true
+  - type: ss
+    name: 美国+华盛顿Cogent通信公司
+    server: 38.75.136.135
+    port: 5500
+    password: YWVzLTI1Ni1nY206S2l4THZLendqZWtHMDBybQ==
+    cipher: aes-128-gcm
   - type: vmess
-    name: 四川省联通数据上网公共出口9
-    ws-opts:
-      path: /
-      headers:
-        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
-    server: yes.cnmjcn.net
-    port: 16618
-    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点10
+    name: 美国CloudFlare节点4
     ws-opts:
       path: /
       headers:
@@ -581,6 +561,41 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 美国+宾夕法尼亚州Coudersport
+    server: frontend.kuangbiaoyun.com
+    port: 40007
+    password: 57edfecf-5694-4a34-8072-54a4f0636a62
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 香港+电讯盈科有限公司
+    server: download2hkt.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 18.202.162.200
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+惠普公司
+    server: 15.237.225.216
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 台湾省台北市+中华电信
+    server: download1tw.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -639,11 +654,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1212
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1414
-      - 台湾省台北市+中华电信
+      - 美国+Xerox
+      - 美国+华盛顿Cogent通信公司
+      - 美国CloudFlare节点4
+      - 美国+宾夕法尼亚州Coudersport
+      - 香港+电讯盈科有限公司
       - 美国+Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 四川省联通数据上网公共出口9
-      - 美国CloudFlare节点10
+      - 美国+惠普公司
+      - 台湾省台北市+中华电信
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -702,11 +720,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1212
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1414
-      - 台湾省台北市+中华电信
+      - 美国+Xerox
+      - 美国+华盛顿Cogent通信公司
+      - 美国CloudFlare节点4
+      - 美国+宾夕法尼亚州Coudersport
+      - 香港+电讯盈科有限公司
       - 美国+Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 四川省联通数据上网公共出口9
-      - 美国CloudFlare节点10
+      - 美国+惠普公司
+      - 台湾省台北市+中华电信
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -764,11 +785,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1212
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1414
-      - 台湾省台北市+中华电信
+      - 美国+Xerox
+      - 美国+华盛顿Cogent通信公司
+      - 美国CloudFlare节点4
+      - 美国+宾夕法尼亚州Coudersport
+      - 香港+电讯盈科有限公司
       - 美国+Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 四川省联通数据上网公共出口9
-      - 美国CloudFlare节点10
+      - 美国+惠普公司
+      - 台湾省台北市+中华电信
   - name: 📲 电报信息
     type: select
     proxies:
@@ -858,11 +882,14 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1212
       - github.com/freefq-美国CloudFlare节点1313
       - github.com/freefq-美国CloudFlare公司CDN节点1414
-      - 台湾省台北市+中华电信
+      - 美国+Xerox
+      - 美国+华盛顿Cogent通信公司
+      - 美国CloudFlare节点4
+      - 美国+宾夕法尼亚州Coudersport
+      - 香港+电讯盈科有限公司
       - 美国+Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 四川省联通数据上网公共出口9
-      - 美国CloudFlare节点10
+      - 美国+惠普公司
+      - 台湾省台北市+中华电信
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
