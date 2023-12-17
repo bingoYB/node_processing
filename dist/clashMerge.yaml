@@ -1,4 +1,4 @@
-# 更新时间 2023-12-17T06:48:50.821Z
+# 更新时间 2023-12-17T07:00:18.856Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -626,28 +626,38 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国加利福尼亚州洛杉矶RamNode数据中心2
+    ws-opts:
+      path: /
+    server: 168.235.72.221
+    port: 15551
+    uuid: 69510633-6acb-4291-a98e-0cdcc9bd5c51
+    alterId: 0
+    cipher: auto
+    network: auto
   - type: trojan
-    name: 美国+麻省理工学院
-    server: 18.135.52.54
-    port: 22222
-    password: telegram-id-directvpn
+    name: 美国科罗拉多州布隆菲尔德市+Level3
+    server: jp3.421421.xyz
+    port: 20230
+    password: 94c3eeeb-a2ed-4645-922e-f8fc6bda7fbd
     udp: true
     skip-cert-verify: true
+  - type: ss
+    name: 广东省广州市+移动
+    server: service.ouluyun9803.com
+    port: 20009
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjZmExN2EwZC01ZTdkLTQ4NzEtOTc2ZS1mMTE2ZTA4MTgxMjM=
+    cipher: aes-128-gcm
   - type: ss
     name: 瑞典+V2CROSS.COM
     server: 167.88.61.175
     port: 7307
     password: YWVzLTI1Ni1nY206Rm9PaUdsa0FBOXlQRUdQ
     cipher: aes-128-gcm
-  - type: trojan
-    name: 美国+Amazon数据中心
-    server: 18.159.117.189
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 广东省移动5
+    name: 广东省移动8
     ws-opts:
       path: /
       headers:
@@ -658,15 +668,20 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 香港+电讯盈科有限公司
-    server: download2hkt.windowsupdatea.com
-    port: 443
-    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点12
+    name: 美国CloudFlare节点9
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: ca6.tehme100.fun
+    server: 172.67.229.33
+    port: 2086
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点11
     ws-opts:
       path: /@FreeVPNHomes@FreeVPNHomes
       headers:
@@ -745,12 +760,13 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动10
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-美国CloudFlare节点1212
-      - 美国+麻省理工学院
+      - 美国加利福尼亚州洛杉矶RamNode数据中心2
+      - 美国科罗拉多州布隆菲尔德市+Level3
+      - 广东省广州市+移动
       - 瑞典+V2CROSS.COM
-      - 美国+Amazon数据中心
-      - 广东省移动5
-      - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点12
+      - 广东省移动8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -818,12 +834,13 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动10
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-美国CloudFlare节点1212
-      - 美国+麻省理工学院
+      - 美国加利福尼亚州洛杉矶RamNode数据中心2
+      - 美国科罗拉多州布隆菲尔德市+Level3
+      - 广东省广州市+移动
       - 瑞典+V2CROSS.COM
-      - 美国+Amazon数据中心
-      - 广东省移动5
-      - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点12
+      - 广东省移动8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -890,12 +907,13 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动10
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-美国CloudFlare节点1212
-      - 美国+麻省理工学院
+      - 美国加利福尼亚州洛杉矶RamNode数据中心2
+      - 美国科罗拉多州布隆菲尔德市+Level3
+      - 广东省广州市+移动
       - 瑞典+V2CROSS.COM
-      - 美国+Amazon数据中心
-      - 广东省移动5
-      - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点12
+      - 广东省移动8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
   - name: 📲 电报信息
     type: select
     proxies:
@@ -994,12 +1012,13 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动10
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-美国CloudFlare节点1212
-      - 美国+麻省理工学院
+      - 美国加利福尼亚州洛杉矶RamNode数据中心2
+      - 美国科罗拉多州布隆菲尔德市+Level3
+      - 广东省广州市+移动
       - 瑞典+V2CROSS.COM
-      - 美国+Amazon数据中心
-      - 广东省移动5
-      - 香港+电讯盈科有限公司
-      - 美国CloudFlare节点12
+      - 广东省移动8
+      - 美国CloudFlare节点9
+      - 美国CloudFlare节点11
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
