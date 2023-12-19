@@ -1,4 +1,4 @@
-# 更新时间 2023-12-19T01:17:26.393Z
+# 更新时间 2023-12-19T06:24:45.141Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -324,7 +324,7 @@ proxies:
     password: 96f625d7-f202-46b0-b679-34f8289c6945
     skip-cert-verify: true
     network: tcp
-  - name: US_US_speednode_0040
+  - name: SG_US_speednode_0040
     server: esjs.liangyuandiancloud.com
     port: 443
     type: trojan
@@ -346,7 +346,7 @@ proxies:
     type: ss
     cipher: chacha20-ietf-poly1305
     password: OTI5ZDhk
-  - name: US_US_speednode_0043
+  - name: SG_US_speednode_0043
     server: nljs.liangyuandiancloud.com
     port: 443
     type: trojan
@@ -354,50 +354,16 @@ proxies:
     password: 96f625d7-f202-46b0-b679-34f8289c6945
     skip-cert-verify: true
     network: tcp
-  - name: 🇹🇷_TR_土耳其
-    type: vmess
-    server: 193.46.56.210
-    port: 8443
-    cipher: auto
-    uuid: 56354ec0-cadc-49e1-8144-8a1b20571b4f
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇮🇳_IN_印度
-    type: vmess
-    server: 103.113.68.57
-    port: 8443
-    cipher: auto
-    uuid: 01fd0618-8ac2-48e4-b008-3b2bc2653b60
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇭🇰_HK_香港->🇺🇸_US_美国
+  - name: 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
     type: trojan
-    server: us01.trojanyyds.xyz
+    server: ru01.trojanyyds.xyz
     port: 443
     udp: true
     password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    sni: us01.trojanyyds.xyz
+    sni: ru01.trojanyyds.xyz
     skip-cert-verify: true
     network: tcp
   - name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 94.131.10.135
-    port: 8080
-    cipher: auto
-    uuid: e2021c91-6e29-49d6-9641-14a8f2600e05
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /vmess
-      headers:
-        host: internet.life.com.by
-  - name: 🇺🇸_US_美国_2
     type: vmess
     server: 104.21.75.246
     port: 80
@@ -411,70 +377,29 @@ proxies:
       path: /
       headers:
         host: sbl2.shabijichang.com
-  - name: 🇩🇪_DE_德国
-    type: vmess
-    server: arshatheroad8pippahotelsinestra.irandarkpro.gq
-    port: 2082
-    cipher: auto
-    uuid: 37eb0303-8420-4691-a773-54ae4a009d36
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: http
-  - name: 🇨🇦_CA_加拿大
-    type: vmess
-    server: 193.203.203.88
-    port: 8443
-    cipher: auto
-    uuid: 012a4853-55fe-4eef-b8c2-e87f8fd178e5
-    alterId: 0
-    tls: true
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇭🇰_HK_香港->🇷🇺_RU_俄罗斯联邦
+  - name: 🇺🇸_US_美国_2
     type: trojan
-    server: ru01.trojanyyds.xyz
+    server: us01.trojanyyds.xyz
     port: 443
     udp: true
     password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    sni: ru01.trojanyyds.xyz
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇨🇦_CA_加拿大->🇺🇸_US_美国
-    type: trojan
-    server: frontend.kuangbiaoyun.com
-    port: 40007
-    udp: true
-    password: 9737c85e-ad5c-48f5-93f6-9bdb0361d04c
+    sni: us01.trojanyyds.xyz
     skip-cert-verify: true
     network: tcp
   - name: 🇺🇸_US_美国_3
     type: vmess
-    server: us3.36routes.online
+    server: singapore.com
     port: 80
     cipher: auto
-    uuid: 8efc7e9d-716e-440c-8573-5c52e8c503e3
+    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
     alterId: 0
     tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /
+      path: /api/v3/download.getFile
       headers:
-        host: us3.36routes.online
-  - name: 🇺🇸_US_美国_4
-    type: trojan
-    server: >-
-      8Ka1hu4r3g@cf.network383.online:8443?type=grpc&sni=ams-trojan-grpc.carfin.tech&allowInsecure=1&serviceName=@apt_mahdi
-    port: 8443
-    udp: true
-    password: >-
-      8Ka1hu4r3g@cf.network383.online:8443?type=grpc&sni=ams-trojan-grpc.carfin.tech&allowInsecure=1&serviceName=
-    sni: ams-trojan-grpc.carfin.tech
-    skip-cert-verify: true
-    network: grpc
-    grpc-opts:
-      grpc-service-name: '@apt_mahdi'
+        host: ssrsub.v005.ssrsub.com
   - name: 🇺🇸_US_美国->🇫🇮_FI_芬兰
     type: vmess
     server: 162.159.192.244
@@ -489,39 +414,237 @@ proxies:
       path: /673ba378-840f-4928-81f2-203148d07350
       headers:
         host: cowochtmtrkers.turbo021.link
+  - name: 🇺🇸_US_美国_4
+    type: trojan
+    server: >-
+      8Ka1hu4r3g@cf.network383.online:8443?type=grpc&sni=ams-trojan-grpc.carfin.tech&allowInsecure=1&serviceName=@apt_mahdi
+    port: 8443
+    udp: true
+    password: >-
+      8Ka1hu4r3g@cf.network383.online:8443?type=grpc&sni=ams-trojan-grpc.carfin.tech&allowInsecure=1&serviceName=
+    sni: ams-trojan-grpc.carfin.tech
+    skip-cert-verify: true
+    network: grpc
+    grpc-opts:
+      grpc-service-name: '@apt_mahdi'
+  - name: 🇩🇪_DE_德国
+    type: trojan
+    server: 5.104.107.143
+    port: 443
+    udp: true
+    password: 6befeeb3-702b-4948-9028-f9e072f2da98
+    skip-cert-verify: true
+    network: tcp
   - name: 🇺🇸_US_美国_5
     type: vmess
-    server: afrhms16v.bestxray.buzz
-    port: 443
+    server: sbl2.shabijichang.com
+    port: 80
     cipher: auto
-    uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
     alterId: 0
-    tls: true
+    tls: false
     skip-cert-verify: true
     network: ws
     ws-opts:
-      path: /linkws
+      path: /
       headers:
-        host: afrhms16v.bestxray.buzz
-  - name: 🇳🇿_NZ_新西兰
-    type: trojan
-    server: 216.73.156.230
-    port: 443
-    udp: true
-    password: 11e247e5-136d-45f1-844a-a7f054d36bab
-    sni: 216.73.156.230
+        host: sbl2.shabijichang.com
+  - name: 🇺🇸_US_美国_6
+    type: vmess
+    server: ns1.v2-vip.fun
+    port: 80
+    cipher: auto
+    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /api/v3/download.getFile
+      headers:
+        host: ssrsub.v004.ssrsub.com
+  - name: 🇺🇦_UA_乌克兰
+    type: vmess
+    server: 193.238.153.14
+    port: 8443
+    cipher: auto
+    uuid: 159693e0-5146-482d-9e46-8c4f2fc865b1
+    alterId: 0
+    tls: true
     skip-cert-verify: true
     network: tcp
   - type: vmess
-    name: 更新于:12-1908:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:12-1912:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
     alterId: 0
     cipher: auto
     network: auto
+  - type: ss
+    name: github.com/freefq-欧盟1
+    server: 45.87.154.143
+    port: 1165
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowY0FPVE51T3FaUXVLMWM5LW1DWEpR
+    cipher: aes-128-gcm
   - type: vmess
-    name: github.com/freefq-美国22
+    name: github.com/freefq-湖南省联通22
+    ws-opts:
+      path: /
+      headers:
+        host: cu.awslcn.info
+    server: cu.awslcn.info
+    port: 25280
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: github.com/freefq-乌克兰3
+    server: 94.131.115.129
+    port: 38108
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiTlVlMGpSOXJ6c3ZMRXpmUG1JNE9m
+    cipher: aes-128-gcm
+  - type: vmess
+    name: github.com/freefq-广东省广州市移动55
+    ws-opts:
+      path: /
+      headers:
+        host: cm.awslcn.info
+    server: cm.awslcn.info
+    port: 25218
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-广东省广州市移动66
+    ws-opts:
+      path: /
+      headers:
+        host: sg1.awslcn.info
+    server: sg1.awslcn.info
+    port: 25282
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: github.com/freefq-美国亚特兰大7
+    server: sk01.trojanyyds.xyz
+    port: 443
+    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: github.com/freefq-伊朗88
+    server: 81.12.27.6
+    port: 56295
+    uuid: dfcc1500-70c4-410b-b5fe-2052a011014e
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: trojan
+    name: github.com/freefq-日本9
+    server: crispy.koreanbbq.link
+    port: 443
+    password: EAeReaI2cyzTnjuK8SS6NOgpxCZRl3p0AO8DXSF3B4aq93CyZ3aDxFYCY5Dwl7
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: github.com/freefq-乌克兰1010
+    ws-opts:
+      path: /vmess
+      headers:
+        host: internet.life.com.by
+    server: 94.131.97.10
+    port: 8880
+    uuid: 13c4fa1d-c558-4cd0-8108-c1f64cd399ff
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-乌克兰1111
+    ws-opts:
+      path: /vmess
+    server: 94.131.8.32
+    port: 2095
+    uuid: 57e37a74-badc-4b71-87c7-5b9e20879b58
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1212
+    ws-opts:
+      path: /IOebhLMhl1CTbFHbL95myfRX2
+      headers:
+        host: ca6.tehme100.fun
+    server: 172.67.229.39
+    port: 2086
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare节点1313
+    ws-opts:
+      path: /2v2rayTEAM
+      headers:
+        host: docs2.obneh247.ir
+    server: 198.41.202.5
+    port: 2087
+    uuid: 7eb055b2-c1c1-450a-8199-be7553fdc108
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: trojan
+    name: github.com/freefq-日本14
+    server: octopus.koreanbbq.link
+    port: 443
+    password: 8wOSlN5I8uAFRe3ZjZE3AyFBaD23yYCCCX0DaSO67aT4zpc39YlpexSDRqnKxg
+    udp: true
+    skip-cert-verify: true
+  - type: ss
+    name: github.com/freefq-广东省广州市移动16
+    server: service.ouluyun9803.com
+    port: 26666
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjZmExN2EwZC01ZTdkLTQ4NzEtOTc2ZS1mMTE2ZTA4MTgxMjM
+    cipher: aes-128-gcm
+  - type: vmess
+    name: github.com/freefq-广西河池市联通1717
+    ws-opts:
+      path: /
+      headers:
+        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
+    server: yes.cnmjcn.net
+    port: 16616
+    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: github.com/freefq-广东省广州市移动18
+    server: service.ouluyun9803.com
+    port: 20001
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjZmExN2EwZC01ZTdkLTQ4NzEtOTc2ZS1mMTE2ZTA4MTgxMjM
+    cipher: aes-128-gcm
+  - type: vmess
+    name: github.com/freefq-广东省移动2020
+    ws-opts:
+      path: /
+      headers:
+        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
+    server: m.cnmjcn.com
+    port: 16616
+    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国2121
     ws-opts:
       path: /
       headers:
@@ -533,53 +656,7 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-台湾省桃园市中华电信33
-    ws-opts:
-      path: /b11
-      headers:
-        host: nb11.ntbq.dynu.net
-    server: nb11.ntbq.dynu.net
-    port: 443
-    uuid: cd8fd89b-096f-49a0-afe4-908734e32a99
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: ss
-    name: github.com/freefq-俄罗斯4
-    server: 185.231.205.80
-    port: 1443
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpNR1F3TlRndw
-    cipher: aes-128-gcm
-  - type: vmess
-    name: github.com/freefq-广东省移动55
-    server: 120.233.43.37
-    port: 52629
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: github.com/freefq-美国66
-    ws-opts:
-      path: /
-      headers:
-        host: kr123.yydsii.com
-    server: kr123.yydsii.com
-    port: 22050
-    uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: ss
-    name: github.com/freefq-广东省广州市移动7
-    server: service.ouluyun9803.com
-    port: 26668
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjZmExN2EwZC01ZTdkLTQ4NzEtOTc2ZS1mMTE2ZTA4MTgxMjM
-    cipher: aes-128-gcm
-  - type: vmess
-    name: github.com/freefq-乌克兰88
+    name: github.com/freefq-乌克兰2222
     ws-opts:
       path: /vmess
       headers:
@@ -591,132 +668,46 @@ proxies:
     cipher: auto
     network: ws
   - type: ss
-    name: github.com/freefq-广东省广州市移动9
+    name: github.com/freefq-广东省广州市移动23
     server: service.ouluyun9803.com
-    port: 26666
+    port: 26668
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjZmExN2EwZC01ZTdkLTQ4NzEtOTc2ZS1mMTE2ZTA4MTgxMjM
     cipher: aes-128-gcm
   - type: vmess
-    name: github.com/freefq-乌克兰1010
-    ws-opts:
-      path: /vmess
-    server: 94.131.8.32
-    port: 2095
-    uuid: 57e37a74-badc-4b71-87c7-5b9e20879b58
+    name: github.com/freefq-广东省移动2525
+    server: 120.233.43.37
+    port: 52629
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
-    network: ws
+    network: auto
   - type: vmess
-    name: github.com/freefq-湖南省联通1111
+    name: github.com/freefq-美国2727
     ws-opts:
       path: /
       headers:
-        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
-    server: t.cnmjcn.cyou
-    port: 16616
-    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
+        host: kr123.yydsii.com
+    server: kr123.yydsii.com
+    port: 22050
+    uuid: b551aa22-22af-11ee-b8d8-f23c932eb68d
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: github.com/freefq-湖北省武汉市移动1212
+    name: 广东省广州市移动0
     ws-opts:
       path: /
       headers:
-        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
-    server: m.cnmjcn.com
-    port: 16616
-    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: ss
-    name: github.com/freefq-广东省广州市移动13
-    server: service.ouluyun9803.com
-    port: 20001
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjZmExN2EwZC01ZTdkLTQ4NzEtOTc2ZS1mMTE2ZTA4MTgxMjM
-    cipher: aes-128-gcm
-  - type: vmess
-    name: github.com/freefq-广西河池市联通1414
-    ws-opts:
-      path: /
-      headers:
-        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
-    server: yes.cnmjcn.net
-    port: 16616
-    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1515
-    ws-opts:
-      path: /search
-    server: 1208.ssfree.ru
-    port: 443
-    uuid: 800c9064-9dbe-11ee-b41b-00163e49219e
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: trojan
-    name: github.com/freefq-日本16
-    server: crispy.koreanbbq.link
-    port: 443
-    password: EAeReaI2cyzTnjuK8SS6NOgpxCZRl3p0AO8DXSF3B4aq93CyZ3aDxFYCY5Dwl7
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: github.com/freefq-日本17
-    server: octopus.koreanbbq.link
-    port: 443
-    password: 8wOSlN5I8uAFRe3ZjZE3AyFBaD23yYCCCX0DaSO67aT4zpc39YlpexSDRqnKxg
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1818
-    ws-opts:
-      path: /api/v3/download.getFile
-      headers:
-        host: ssrsub.v005.ssrsub.com
-    server: singapore.com
-    port: 80
-    uuid: b1e30339-a603-47d1-b31c-1d0ceb59952e
+        host: us2.awslcn.info
+    server: us2.awslcn.info
+    port: 25257
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
     name: 乌克兰V2CROSS.COM4
-    server: 193.238.153.14
-    port: 8443
-    uuid: 159693e0-5146-482d-9e46-8c4f2fc865b1
-    alterId: 0
-    cipher: auto
-    network: auto
-    tls: true
-  - type: trojan
-    name: 爱尔兰都柏林+亚马逊云
-    server: 3.251.101.115
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 乌克兰V2CROSS.COM6
-    ws-opts:
-      path: /vmess
-      headers:
-        host: internet.life.com.by
-    server: 95.164.44.203
-    port: 8880
-    uuid: 6f0cca5e-cf21-4279-871e-ca26d9c955a0
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 乌克兰V2CROSS.COM7
     ws-opts:
       path: /vmess
       headers:
@@ -727,26 +718,37 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: ss
-    name: 欧盟+V2CROSS.COM
-    server: 45.87.154.143
-    port: 1165
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowY0FPVE51T3FaUXVLMWM5LW1DWEpR
-    cipher: aes-128-gcm
   - type: vmess
-    name: 乌克兰V2CROSS.COM12
+    name: 湖南省联通5
     ws-opts:
-      path: /vmess
-      headers:
-        host: internet.life.com.by
-    server: 94.131.97.10
-    port: 8880
-    uuid: 13c4fa1d-c558-4cd0-8108-c1f64cd399ff
+      path: /
+    server: us1.awslcn.info
+    port: 25256
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点14
+    name: 广西河池市联通6
+    ws-opts:
+      path: /
+      headers:
+        host: d4d028243c73047d9171bacb9b0439e8.mobgslb.tbcache.com
+    server: yes.cnmjcn.net
+    port: 16618
+    uuid: c2c76420-257f-492a-b20f-6560f3bfa78d
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 美国+亚特兰大
+    server: hk03.trojanyyds.xyz
+    port: 443
+    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点8
     ws-opts:
       path: /IOebhLMhl1CTbFHbL95myfRX2
       headers:
@@ -757,42 +759,145 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 意大利+V2CROSS.COM
-    server: 185.151.146.186
-    port: 443
-    password: df6f27115ac04e4494b2ddd034259611
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 乌克兰V2CROSS.COM16
+    name: 浙江省移动数据上网公共出口10
     ws-opts:
-      path: /vmess
-    server: 94.131.97.10
-    port: 2082
-    uuid: 13c4fa1d-c558-4cd0-8108-c1f64cd399ff
+      path: /debian
+      headers:
+        host: data-us-v1.shwjfkw.cn
+    server: data-us-v1.shwjfkw.cn
+    port: 20401
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点17
+    name: 广东省广州市移动11
     ws-opts:
       path: /
       headers:
-        host: sbl2.shabijichang.com
-    server: sbl2.shabijichang.com
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+        host: cm1.awslcn.info
+    server: cm1.awslcn.info
+    port: 25286
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
     alterId: 0
     cipher: auto
     network: ws
   - type: trojan
-    name: 新加坡+Amazon数据中心
-    server: sg7.421421.xyz
-    port: 20230
-    password: 749ab9c3-db0c-4a1d-a20f-dd4e15d928d1
+    name: 香港+电讯盈科有限公司
+    server: download2hkt.windowsupdatea.com
+    port: 443
+    password: 29ea82cf-f956-42b2-a5dc-35feea39e7ff
     udp: true
     skip-cert-verify: true
+  - type: ss
+    name: 法国+格拉沃利讷OVH数据中心
+    server: 54.36.174.181
+    port: 3389
+    password: YWVzLTI1Ni1nY206WTZSOXBBdHZ4eHptR0M=
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 香港+Microsoft数据中心
+    server: uk01.trojanyyds.xyz
+    port: 443
+    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 广东省+移动
+    server: gbs.pptv-tv.store
+    port: 17728
+    password: 299a6171-b4ce-403a-8157-c3dad55ef3a2
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 广东省广州市移动19
+    ws-opts:
+      path: /
+      headers:
+        host: cm1.awslcn.info
+    server: cm1.awslcn.info
+    port: 25233
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 爱尔兰都柏林+亚马逊云
+    server: 3.251.101.115
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 湖南省联通23
+    ws-opts:
+      path: /
+      headers:
+        host: cu.awslcn.info
+    server: cu.awslcn.info
+    port: 25228
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 广东省广州市移动25
+    ws-opts:
+      path: /
+      headers:
+        host: cm.awslcn.info
+    server: cm.awslcn.info
+    port: 25233
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 广东省广州市移动28
+    ws-opts:
+      path: /
+      headers:
+        host: cm1.awslcn.info
+    server: cm1.awslcn.info
+    port: 25285
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: >-
+      unlk5.lvwf8n-hh8e-2300-nmoo-d2e9naobeacn.9d8f269f96b25232-759cbb36d6548597.kaufen
+    port: 25002
+    password: 37d2266b-d239-47ea-8d26-35583da9e3d5
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 湖南省联通31
+    ws-opts:
+      path: /
+      headers:
+        host: us1.awslcn.info
+    server: us1.awslcn.info
+    port: 25239
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点34
+    ws-opts:
+      path: /kwhmvws
+      headers:
+        host: daqehwiv.site
+    server: daqehwiv.site
+    port: 443
+    uuid: 4fa35ea4-668e-4d7b-9bbc-b83681060617
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -830,53 +935,63 @@ proxy-groups:
       - US_US_speednode_0036
       - US_US_speednode_0038
       - US_US_speednode_0039
-      - US_US_speednode_0040
+      - SG_US_speednode_0040
       - US_US_speednode_0041
       - UA_US_speednode_0042
-      - US_US_speednode_0043
-      - 🇹🇷_TR_土耳其
-      - 🇮🇳_IN_印度
-      - 🇭🇰_HK_香港->🇺🇸_US_美国
+      - SG_US_speednode_0043
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国
-      - 🇨🇦_CA_加拿大
-      - 🇭🇰_HK_香港->🇷🇺_RU_俄罗斯联邦
-      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国->🇫🇮_FI_芬兰
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国_5
-      - 🇳🇿_NZ_新西兰
-      - 更新于:12-1908:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国22
-      - github.com/freefq-台湾省桃园市中华电信33
-      - github.com/freefq-俄罗斯4
-      - github.com/freefq-广东省移动55
-      - github.com/freefq-美国66
-      - github.com/freefq-广东省广州市移动7
-      - github.com/freefq-乌克兰88
-      - github.com/freefq-广东省广州市移动9
+      - 🇺🇸_US_美国_6
+      - 🇺🇦_UA_乌克兰
+      - 更新于:12-1912:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-欧盟1
+      - github.com/freefq-湖南省联通22
+      - github.com/freefq-乌克兰3
+      - github.com/freefq-广东省广州市移动55
+      - github.com/freefq-广东省广州市移动66
+      - github.com/freefq-美国亚特兰大7
+      - github.com/freefq-伊朗88
+      - github.com/freefq-日本9
       - github.com/freefq-乌克兰1010
-      - github.com/freefq-湖南省联通1111
-      - github.com/freefq-湖北省武汉市移动1212
-      - github.com/freefq-广东省广州市移动13
-      - github.com/freefq-广西河池市联通1414
-      - github.com/freefq-美国CloudFlare节点1515
-      - github.com/freefq-日本16
-      - github.com/freefq-日本17
-      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-乌克兰1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国CloudFlare节点1313
+      - github.com/freefq-日本14
+      - github.com/freefq-广东省广州市移动16
+      - github.com/freefq-广西河池市联通1717
+      - github.com/freefq-广东省广州市移动18
+      - github.com/freefq-广东省移动2020
+      - github.com/freefq-美国2121
+      - github.com/freefq-乌克兰2222
+      - github.com/freefq-广东省广州市移动23
+      - github.com/freefq-广东省移动2525
+      - github.com/freefq-美国2727
+      - 广东省广州市移动0
       - 乌克兰V2CROSS.COM4
+      - 湖南省联通5
+      - 广西河池市联通6
+      - 美国+亚特兰大
+      - 美国CloudFlare节点8
+      - 浙江省移动数据上网公共出口10
+      - 广东省广州市移动11
+      - 香港+电讯盈科有限公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 香港+Microsoft数据中心
+      - 广东省+移动
+      - 广东省广州市移动19
       - 爱尔兰都柏林+亚马逊云
-      - 乌克兰V2CROSS.COM6
-      - 乌克兰V2CROSS.COM7
-      - 欧盟+V2CROSS.COM
-      - 乌克兰V2CROSS.COM12
-      - 美国CloudFlare节点14
-      - 意大利+V2CROSS.COM
-      - 乌克兰V2CROSS.COM16
-      - 美国CloudFlare节点17
-      - 新加坡+Amazon数据中心
+      - 湖南省联通23
+      - 广东省广州市移动25
+      - 广东省广州市移动28
+      - 美国+V2CROSS.COM
+      - 湖南省联通31
+      - 美国CloudFlare节点34
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -914,53 +1029,63 @@ proxy-groups:
       - US_US_speednode_0036
       - US_US_speednode_0038
       - US_US_speednode_0039
-      - US_US_speednode_0040
+      - SG_US_speednode_0040
       - US_US_speednode_0041
       - UA_US_speednode_0042
-      - US_US_speednode_0043
-      - 🇹🇷_TR_土耳其
-      - 🇮🇳_IN_印度
-      - 🇭🇰_HK_香港->🇺🇸_US_美国
+      - SG_US_speednode_0043
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国
-      - 🇨🇦_CA_加拿大
-      - 🇭🇰_HK_香港->🇷🇺_RU_俄罗斯联邦
-      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国->🇫🇮_FI_芬兰
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国_5
-      - 🇳🇿_NZ_新西兰
-      - 更新于:12-1908:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国22
-      - github.com/freefq-台湾省桃园市中华电信33
-      - github.com/freefq-俄罗斯4
-      - github.com/freefq-广东省移动55
-      - github.com/freefq-美国66
-      - github.com/freefq-广东省广州市移动7
-      - github.com/freefq-乌克兰88
-      - github.com/freefq-广东省广州市移动9
+      - 🇺🇸_US_美国_6
+      - 🇺🇦_UA_乌克兰
+      - 更新于:12-1912:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-欧盟1
+      - github.com/freefq-湖南省联通22
+      - github.com/freefq-乌克兰3
+      - github.com/freefq-广东省广州市移动55
+      - github.com/freefq-广东省广州市移动66
+      - github.com/freefq-美国亚特兰大7
+      - github.com/freefq-伊朗88
+      - github.com/freefq-日本9
       - github.com/freefq-乌克兰1010
-      - github.com/freefq-湖南省联通1111
-      - github.com/freefq-湖北省武汉市移动1212
-      - github.com/freefq-广东省广州市移动13
-      - github.com/freefq-广西河池市联通1414
-      - github.com/freefq-美国CloudFlare节点1515
-      - github.com/freefq-日本16
-      - github.com/freefq-日本17
-      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-乌克兰1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国CloudFlare节点1313
+      - github.com/freefq-日本14
+      - github.com/freefq-广东省广州市移动16
+      - github.com/freefq-广西河池市联通1717
+      - github.com/freefq-广东省广州市移动18
+      - github.com/freefq-广东省移动2020
+      - github.com/freefq-美国2121
+      - github.com/freefq-乌克兰2222
+      - github.com/freefq-广东省广州市移动23
+      - github.com/freefq-广东省移动2525
+      - github.com/freefq-美国2727
+      - 广东省广州市移动0
       - 乌克兰V2CROSS.COM4
+      - 湖南省联通5
+      - 广西河池市联通6
+      - 美国+亚特兰大
+      - 美国CloudFlare节点8
+      - 浙江省移动数据上网公共出口10
+      - 广东省广州市移动11
+      - 香港+电讯盈科有限公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 香港+Microsoft数据中心
+      - 广东省+移动
+      - 广东省广州市移动19
       - 爱尔兰都柏林+亚马逊云
-      - 乌克兰V2CROSS.COM6
-      - 乌克兰V2CROSS.COM7
-      - 欧盟+V2CROSS.COM
-      - 乌克兰V2CROSS.COM12
-      - 美国CloudFlare节点14
-      - 意大利+V2CROSS.COM
-      - 乌克兰V2CROSS.COM16
-      - 美国CloudFlare节点17
-      - 新加坡+Amazon数据中心
+      - 湖南省联通23
+      - 广东省广州市移动25
+      - 广东省广州市移动28
+      - 美国+V2CROSS.COM
+      - 湖南省联通31
+      - 美国CloudFlare节点34
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -997,53 +1122,63 @@ proxy-groups:
       - US_US_speednode_0036
       - US_US_speednode_0038
       - US_US_speednode_0039
-      - US_US_speednode_0040
+      - SG_US_speednode_0040
       - US_US_speednode_0041
       - UA_US_speednode_0042
-      - US_US_speednode_0043
-      - 🇹🇷_TR_土耳其
-      - 🇮🇳_IN_印度
-      - 🇭🇰_HK_香港->🇺🇸_US_美国
+      - SG_US_speednode_0043
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国
-      - 🇨🇦_CA_加拿大
-      - 🇭🇰_HK_香港->🇷🇺_RU_俄罗斯联邦
-      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国->🇫🇮_FI_芬兰
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国_5
-      - 🇳🇿_NZ_新西兰
-      - 更新于:12-1908:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国22
-      - github.com/freefq-台湾省桃园市中华电信33
-      - github.com/freefq-俄罗斯4
-      - github.com/freefq-广东省移动55
-      - github.com/freefq-美国66
-      - github.com/freefq-广东省广州市移动7
-      - github.com/freefq-乌克兰88
-      - github.com/freefq-广东省广州市移动9
+      - 🇺🇸_US_美国_6
+      - 🇺🇦_UA_乌克兰
+      - 更新于:12-1912:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-欧盟1
+      - github.com/freefq-湖南省联通22
+      - github.com/freefq-乌克兰3
+      - github.com/freefq-广东省广州市移动55
+      - github.com/freefq-广东省广州市移动66
+      - github.com/freefq-美国亚特兰大7
+      - github.com/freefq-伊朗88
+      - github.com/freefq-日本9
       - github.com/freefq-乌克兰1010
-      - github.com/freefq-湖南省联通1111
-      - github.com/freefq-湖北省武汉市移动1212
-      - github.com/freefq-广东省广州市移动13
-      - github.com/freefq-广西河池市联通1414
-      - github.com/freefq-美国CloudFlare节点1515
-      - github.com/freefq-日本16
-      - github.com/freefq-日本17
-      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-乌克兰1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国CloudFlare节点1313
+      - github.com/freefq-日本14
+      - github.com/freefq-广东省广州市移动16
+      - github.com/freefq-广西河池市联通1717
+      - github.com/freefq-广东省广州市移动18
+      - github.com/freefq-广东省移动2020
+      - github.com/freefq-美国2121
+      - github.com/freefq-乌克兰2222
+      - github.com/freefq-广东省广州市移动23
+      - github.com/freefq-广东省移动2525
+      - github.com/freefq-美国2727
+      - 广东省广州市移动0
       - 乌克兰V2CROSS.COM4
+      - 湖南省联通5
+      - 广西河池市联通6
+      - 美国+亚特兰大
+      - 美国CloudFlare节点8
+      - 浙江省移动数据上网公共出口10
+      - 广东省广州市移动11
+      - 香港+电讯盈科有限公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 香港+Microsoft数据中心
+      - 广东省+移动
+      - 广东省广州市移动19
       - 爱尔兰都柏林+亚马逊云
-      - 乌克兰V2CROSS.COM6
-      - 乌克兰V2CROSS.COM7
-      - 欧盟+V2CROSS.COM
-      - 乌克兰V2CROSS.COM12
-      - 美国CloudFlare节点14
-      - 意大利+V2CROSS.COM
-      - 乌克兰V2CROSS.COM16
-      - 美国CloudFlare节点17
-      - 新加坡+Amazon数据中心
+      - 湖南省联通23
+      - 广东省广州市移动25
+      - 广东省广州市移动28
+      - 美国+V2CROSS.COM
+      - 湖南省联通31
+      - 美国CloudFlare节点34
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1112,53 +1247,63 @@ proxy-groups:
       - US_US_speednode_0036
       - US_US_speednode_0038
       - US_US_speednode_0039
-      - US_US_speednode_0040
+      - SG_US_speednode_0040
       - US_US_speednode_0041
       - UA_US_speednode_0042
-      - US_US_speednode_0043
-      - 🇹🇷_TR_土耳其
-      - 🇮🇳_IN_印度
-      - 🇭🇰_HK_香港->🇺🇸_US_美国
+      - SG_US_speednode_0043
+      - 🇺🇸_US_美国->🇷🇺_RU_俄罗斯联邦
       - 🇺🇸_US_美国_1
       - 🇺🇸_US_美国_2
-      - 🇩🇪_DE_德国
-      - 🇨🇦_CA_加拿大
-      - 🇭🇰_HK_香港->🇷🇺_RU_俄罗斯联邦
-      - 🇨🇦_CA_加拿大->🇺🇸_US_美国
       - 🇺🇸_US_美国_3
-      - 🇺🇸_US_美国_4
       - 🇺🇸_US_美国->🇫🇮_FI_芬兰
+      - 🇺🇸_US_美国_4
+      - 🇩🇪_DE_德国
       - 🇺🇸_US_美国_5
-      - 🇳🇿_NZ_新西兰
-      - 更新于:12-1908:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-美国22
-      - github.com/freefq-台湾省桃园市中华电信33
-      - github.com/freefq-俄罗斯4
-      - github.com/freefq-广东省移动55
-      - github.com/freefq-美国66
-      - github.com/freefq-广东省广州市移动7
-      - github.com/freefq-乌克兰88
-      - github.com/freefq-广东省广州市移动9
+      - 🇺🇸_US_美国_6
+      - 🇺🇦_UA_乌克兰
+      - 更新于:12-1912:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-欧盟1
+      - github.com/freefq-湖南省联通22
+      - github.com/freefq-乌克兰3
+      - github.com/freefq-广东省广州市移动55
+      - github.com/freefq-广东省广州市移动66
+      - github.com/freefq-美国亚特兰大7
+      - github.com/freefq-伊朗88
+      - github.com/freefq-日本9
       - github.com/freefq-乌克兰1010
-      - github.com/freefq-湖南省联通1111
-      - github.com/freefq-湖北省武汉市移动1212
-      - github.com/freefq-广东省广州市移动13
-      - github.com/freefq-广西河池市联通1414
-      - github.com/freefq-美国CloudFlare节点1515
-      - github.com/freefq-日本16
-      - github.com/freefq-日本17
-      - github.com/freefq-美国CloudFlare节点1818
+      - github.com/freefq-乌克兰1111
+      - github.com/freefq-美国CloudFlare节点1212
+      - github.com/freefq-美国CloudFlare节点1313
+      - github.com/freefq-日本14
+      - github.com/freefq-广东省广州市移动16
+      - github.com/freefq-广西河池市联通1717
+      - github.com/freefq-广东省广州市移动18
+      - github.com/freefq-广东省移动2020
+      - github.com/freefq-美国2121
+      - github.com/freefq-乌克兰2222
+      - github.com/freefq-广东省广州市移动23
+      - github.com/freefq-广东省移动2525
+      - github.com/freefq-美国2727
+      - 广东省广州市移动0
       - 乌克兰V2CROSS.COM4
+      - 湖南省联通5
+      - 广西河池市联通6
+      - 美国+亚特兰大
+      - 美国CloudFlare节点8
+      - 浙江省移动数据上网公共出口10
+      - 广东省广州市移动11
+      - 香港+电讯盈科有限公司
+      - 法国+格拉沃利讷OVH数据中心
+      - 香港+Microsoft数据中心
+      - 广东省+移动
+      - 广东省广州市移动19
       - 爱尔兰都柏林+亚马逊云
-      - 乌克兰V2CROSS.COM6
-      - 乌克兰V2CROSS.COM7
-      - 欧盟+V2CROSS.COM
-      - 乌克兰V2CROSS.COM12
-      - 美国CloudFlare节点14
-      - 意大利+V2CROSS.COM
-      - 乌克兰V2CROSS.COM16
-      - 美国CloudFlare节点17
-      - 新加坡+Amazon数据中心
+      - 湖南省联通23
+      - 广东省广州市移动25
+      - 广东省广州市移动28
+      - 美国+V2CROSS.COM
+      - 湖南省联通31
+      - 美国CloudFlare节点34
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
