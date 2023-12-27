@@ -1,4 +1,4 @@
-# 更新时间 2023-12-27T12:55:16.427Z
+# 更新时间 2023-12-27T13:16:24.006Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1008,7 +1008,7 @@ proxies:
     type: ss
     cipher: chacha20-ietf-poly1305
     password: kYlKGnPRNwVk4RQEi7oqQs
-  - name: US_GB_speednode_0103
+  - name: GB_GB_speednode_0103
     server: de01.trojanyyds.xyz
     port: 443
     type: trojan
@@ -1043,7 +1043,7 @@ proxies:
     password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
     sni: sg01.trojanyyds.xyz
     skip-cert-verify: true
-  - name: US_HK_speednode_0107
+  - name: JP_HK_speednode_0107
     server: in01.trojanyyds.xyz
     port: 443
     type: trojan
@@ -1062,7 +1062,7 @@ proxies:
     tfo: false
     skip-cert-verify: true
     udp: true
-  - name: US_JP_speednode_0110
+  - name: GB_JP_speednode_0110
     server: hk04.trojanyyds.xyz
     port: 443
     type: trojan
@@ -1083,7 +1083,7 @@ proxies:
     password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
     sni: us01.trojanyyds.xyz
     skip-cert-verify: true
-  - name: US_JP_speednode_0113
+  - name: JP_JP_speednode_0113
     server: uk01.trojanyyds.xyz
     port: 443
     type: trojan
@@ -2211,12 +2211,18 @@ proxies:
     alterId: 0
     cipher: auto
     network: auto
-  - type: ss
-    name: 意大利+V2CROSS.COM
-    server: 185.151.146.169
-    port: 38935
-    password: YWVzLTI1Ni1nY206Y2hHMEMyMFBhYg==
-    cipher: aes-128-gcm
+  - type: vmess
+    name: 孟加拉V2CROSS.COM0
+    ws-opts:
+      path: /network
+      headers:
+        host: vn5.network.io.vn
+    server: vn5.network.io.vn
+    port: 80
+    uuid: a3467009-2d14-4dfe-98e8-ad5bb4ddbe4c
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: vmess
     name: 美国CloudFlare节点1
     ws-opts:
@@ -2224,49 +2230,141 @@ proxies:
       headers:
         host: mehdi28.goodbyefilteringchannel.space
     server: mehdi28.goodbyefilteringchannel.space
-    port: 2053
+    port: 8443
     uuid: 819aa317-b82f-45a4-8226-c1de31361f97
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: vmess
-    name: 美国V2CROSS.COM3
+    name: 美国华盛顿Cogent通信公司3
     ws-opts:
-      path: /5gtocdocao.com
+      path: /zh-cn
+    server: jp3.s2fjeyeeyafe.bond
+    port: 80
+    uuid: 65d79be3-7327-45f8-86fc-bd7f27948eec
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /
+      headers:
+        host: us-new04.gujuji.top
+    server: us-new04.gujuji.top
+    port: 8080
+    uuid: 568f7780-cfc6-4ddb-96a6-81498724b529
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 美国+Amazon+EC2服务器
+    server: 3.68.15.195
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 孟加拉V2CROSS.COM7
+    ws-opts:
+      path: /anti9.5gtocdocao.com
       headers:
         host: dl.kgvn.garenanow.com
-    server: UK99.5GTOCDOCAO.COM
+    server: vn2.5gtocdocao.com
     port: 80
     uuid: 7a2c5296-683d-48db-9856-373cafac48b5
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国加利福尼亚州洛杉矶PetaExpress4
+    name: 广东省广州市移动9
     ws-opts:
-      path: /path/1702215223320
-    server: 198.2.200.37
+      path: /
+      headers:
+        host: cm1.awslcn.info
+    server: cm1.awslcn.info
+    port: 25233
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 德国黑森州法兰克福Amazon数据中心12
+    ws-opts:
+      path: /
+    server: de1.36routes.online
+    port: 80
+    uuid: 8efc7e9d-716e-440c-8573-5c52e8c503e3
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 广东省+移动
+    server: gbs.pptv-tv.store
+    port: 17728
+    password: 299a6171-b4ce-403a-8157-c3dad55ef3a2
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 越南+V2CROSS.COM
+    server: 103.82.133.201
+    port: 443
+    password: bfb9f927-eef3-4dfd-adbe-05bcc8279b41
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点25
+    ws-opts:
+      path: /forwardv2ray1forwardv2ray4
+      headers:
+        host: mehdi22.goodbyefilteringchannel.space
+    server: mehdi22.goodbyefilteringchannel.space
+    port: 2052
+    uuid: 819aa317-b82f-45a4-8226-c1de31361f97
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点30
+    ws-opts:
+      path: /forwardv2ray1forwardv2ray4
+      headers:
+        host: mehdi10.goodbyefilteringchannel.space
+    server: mehdi10.goodbyefilteringchannel.space
+    port: 8880
+    uuid: 819aa317-b82f-45a4-8226-c1de31361f97
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国华盛顿Cogent通信公司32
+    ws-opts:
+      path: /path/1701091133409
+      headers:
+        host: www.73664999.xyz
+    server: 38.54.185.112
     port: 30000
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: ws
     tls: true
-  - type: ss
-    name: 广东省广州市+移动
-    server: service.ouluyun9803.com
-    port: 50002
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTowNTdiZjNhYy1mZGExLTQ0YzMtYWE4ZS0wN2VlZDdkZGM1YjY=
-    cipher: aes-128-gcm
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 13.41.95.52
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点12
+    name: 美国CloudFlare节点37
     ws-opts:
       path: /forwardv2ray1forwardv2ray4
       headers:
-        host: mehdi27.goodbyefilteringchannel.space
-    server: mehdi27.goodbyefilteringchannel.space
+        host: mehdi26.goodbyefilteringchannel.space
+    server: mehdi26.goodbyefilteringchannel.space
     port: 2083
     uuid: 819aa317-b82f-45a4-8226-c1de31361f97
     alterId: 0
@@ -2274,27 +2372,28 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 日本东京都Amazon数据中心13
+    name: 美国CloudFlare节点38
     ws-opts:
       path: /
-    server: jp2.36routes.online
-    port: 80
-    uuid: 8efc7e9d-716e-440c-8573-5c52e8c503e3
+      headers:
+        host: us-new01.gujuji.top
+    server: us-new01.gujuji.top
+    port: 8080
+    uuid: 568f7780-cfc6-4ddb-96a6-81498724b529
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.20.49.241
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
+  - type: ss
+    name: 北美地区+V2CROSS.COM
+    server: 104.234.202.187
+    port: 24422
+    password: YWVzLTI1Ni1nY206cXc3bG5RMnpqMw==
+    cipher: aes-128-gcm
   - type: vmess
-    name: 新加坡Amazon数据中心23
+    name: 欧洲V2CROSS.COM42
     ws-opts:
       path: /zh-cn
-    server: sg1.s2fjeyeeyafe.bond
+    server: jp200m.s2fjeyeeyafe.bond
     port: 80
     uuid: 65d79be3-7327-45f8-86fc-bd7f27948eec
     alterId: 0
@@ -2302,101 +2401,106 @@ proxies:
     network: ws
     tls: true
   - type: trojan
-    name: 美国+V2CROSS.COM
-    server: t5.583181.xyz
-    port: 1272
-    password: 62b31bc3-b6f8-4d11-8064-eea6472e88a7
+    name: 美国+AOL美国在线公司
+    server: my02.trojanyyds.xyz
+    port: 443
+    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 日本+V2CROSS.COM
+    server: 43.201.255.129
+    port: 443
+    password: 8wOSlN5I8uAFRe3ZjZE3AyFBaD23yYCCCX0DaSO67aT4zpc39YlpexSDRqnKxg
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国俄勒冈州波特兰Amazon数据中心26
-    ws-opts:
-      path: /
-    server: us4.36routes.online
-    port: 80
-    uuid: 8efc7e9d-716e-440c-8573-5c52e8c503e3
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点28
+    name: 广东省广州市移动56
     ws-opts:
       path: /
       headers:
-        host: us-new03.gujuji.top
-    server: us-new03.gujuji.top
+        host: cm.awslcn.info
+    server: cm.awslcn.info
+    port: 25218
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 印度+V2CROSS.COM
+    server: 103.70.115.113
+    port: 443
+    password: baa85f59-844b-4aa6-95e6-1747d9b78e8a
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点62
+    ws-opts:
+      path: /forwardv2ray1forwardv2ray4
+      headers:
+        host: mehdi9.goodbyefilteringchannel.space
+    server: mehdi9.goodbyefilteringchannel.space
+    port: 2083
+    uuid: 819aa317-b82f-45a4-8226-c1de31361f97
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: 广东省广州市移动63
+    ws-opts:
+      path: /
+      headers:
+        host: sg1.awslcn.info
+    server: sg1.awslcn.info
+    port: 25283
+    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 亚太地区+V2CROSS.COM
+    server: 103.166.185.11
+    port: 443
+    password: mothai3456789080898
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点65
+    ws-opts:
+      path: /
+      headers:
+        host: uk-new01.gujuji.top
+    server: uk-new01.gujuji.top
     port: 8080
     uuid: 568f7780-cfc6-4ddb-96a6-81498724b529
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国V2CROSS.COM36
+    name: 乌克兰V2CROSS.COM66
     ws-opts:
-      path: /cloudconebbb
-      headers:
-        host: cloudconebbb.gorgorchicken.one
-    server: 104.31.16.120
-    port: 8443
-    uuid: aa0c4744-9568-4bee-a08b-73668a9b2a42
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点38
-    ws-opts:
-      path: /forwardv2ray1forwardv2ray4
-      headers:
-        host: mehdi15.goodbyefilteringchannel.space
-    server: mehdi15.goodbyefilteringchannel.space
-    port: 443
-    uuid: 819aa317-b82f-45a4-8226-c1de31361f97
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: ss
-    name: 美国+3COM公司企业网
-    server: kr.colacloud.site
-    port: 20352
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1OWRkMTVhZi04YzczLTRjNTYtYjhjYS1mNTlmMjIzMjI5NjQ=
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 美国俄勒冈州波特兰Amazon数据中心44
-    ws-opts:
-      path: /
-    server: us1.36routes.online
-    port: 80
-    uuid: 8efc7e9d-716e-440c-8573-5c52e8c503e3
+      path: /vmess
+    server: 94.131.96.137
+    port: 2082
+    uuid: 900fbb93-4dba-40c1-be96-9aef165a7c2e
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 新加坡亚马逊(Amazon)公司数据中心46
-    ws-opts:
-      path: /
-    server: sg4.36routes.online
-    port: 80
-    uuid: 8efc7e9d-716e-440c-8573-5c52e8c503e3
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点47
+    name: 美国CloudFlare节点67
     ws-opts:
       path: /
       headers:
-        host: sbl2.shabijichang.com
-    server: 104.21.75.246
-    port: 80
-    uuid: c458695d-6908-45c3-9512-e0c46418454c
+        host: de-new01.gujuji.top
+    server: de-new01.gujuji.top
+    port: 8080
+    uuid: 568f7780-cfc6-4ddb-96a6-81498724b529
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点49
+    name: 美国CloudFlare节点69
     ws-opts:
       path: /forwardv2ray1forwardv2ray4
       headers:
@@ -2409,203 +2513,68 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: 韩国首尔Amazon数据中心50
-    ws-opts:
-      path: /
-    server: kr1.36routes.online
-    port: 80
-    uuid: 8efc7e9d-716e-440c-8573-5c52e8c503e3
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国加利福尼亚州圣何塞PEGTECH62
-    ws-opts:
-      path: /path/1699624723213
-      headers:
-        host: www.39838266.xyz
-    server: 142.4.97.65
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点67
-    ws-opts:
-      path: /forwardv2ray1forwardv2ray4
-      headers:
-        host: mehdi21.goodbyefilteringchannel.space
-    server: mehdi21.goodbyefilteringchannel.space
-    port: 443
-    uuid: 819aa317-b82f-45a4-8226-c1de31361f97
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 孟加拉V2CROSS.COM69
-    ws-opts:
-      path: /network
-      headers:
-        host: vn5.network.io.vn
-    server: vn5.network.io.vn
-    port: 80
-    uuid: a3467009-2d14-4dfe-98e8-ad5bb4ddbe4c
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: 爱尔兰+都柏林Amazon数据中心
-    server: 54.170.190.236
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点71
-    ws-opts:
-      path: /forwardv2ray1forwardv2ray4
-      headers:
-        host: mehdi1.goodbyefilteringchannel.space
-    server: mehdi1.goodbyefilteringchannel.space
-    port: 443
-    uuid: 819aa317-b82f-45a4-8226-c1de31361f97
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国AmazonEC2服务器75
-    ws-opts:
-      path: /
-    server: kr4.36routes.online
-    port: 80
-    uuid: 8efc7e9d-716e-440c-8573-5c52e8c503e3
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 广东省广州市移动77
+    name: 广东省广州市移动71
     ws-opts:
       path: /
       headers:
-        host: cm.awslcn.info
-    server: cm.awslcn.info
-    port: 25275
+        host: cm1.awslcn.info
+    server: cm1.awslcn.info
+    port: 25230
     uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点78
+    name: 美国CloudFlare节点72
     ws-opts:
-      path: /
+      path: /IOebhLMhl1CTbFHbL95myfRX2
       headers:
-        host: us-new02.gujuji.top
-    server: us-new02.gujuji.top
-    port: 8080
-    uuid: 568f7780-cfc6-4ddb-96a6-81498724b529
+        host: ca6.tehme100.fun
+    server: 172.67.229.34
+    port: 2086
+    uuid: 58fe1542-5290-40ad-815a-77707a81afe5
     alterId: 0
     cipher: auto
     network: ws
   - type: vmess
-    name: 乌克兰V2CROSS.COM81
+    name: 亚太地区V2CROSS.COM73
     ws-opts:
-      path: /vmess
-    server: 94.131.96.137
-    port: 2082
-    uuid: 900fbb93-4dba-40c1-be96-9aef165a7c2e
+      path: /name
+    server: yn2.huaxia666.top
+    port: 80
+    uuid: 65d79be3-7327-45f8-86fc-bd7f27948eec
     alterId: 0
     cipher: auto
     network: ws
+    tls: true
   - type: vmess
-    name: 上海市电信82
-    ws-opts:
-      path: /cctv1.m3u8
-    server: free-relay.themars.top
-    port: 32202
-    uuid: 640d9903-11e2-436a-aa22-837e79c1aa33
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 日本东京Choopa数据中心83
-    ws-opts:
-      path: /
-    server: 149.28.19.63
-    port: 42280
-    uuid: 823ca0d4-a7f8-4e99-8090-2351f718d106
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 广东省广州市移动87
-    ws-opts:
-      path: /
-      headers:
-        host: cm.awslcn.info
-    server: cm.awslcn.info
-    port: 25240
-    uuid: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: 德国+黑森州法兰克福Amazon数据中心
-    server: 3.126.149.209
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国CloudFlare节点95
+    name: 美国CloudFlare节点80
     ws-opts:
       path: /forwardv2ray1forwardv2ray4
       headers:
-        host: mehdi13.goodbyefilteringchannel.space
-    server: mehdi13.goodbyefilteringchannel.space
-    port: 8880
-    uuid: 819aa317-b82f-45a4-8226-c1de31361f97
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点97
-    ws-opts:
-      path: /forwardv2ray1forwardv2ray4
-      headers:
-        host: mehdi32.goodbyefilteringchannel.space
-    server: mehdi32.goodbyefilteringchannel.space
-    port: 443
+        host: mehdi26.goodbyefilteringchannel.space
+    server: mehdi26.goodbyefilteringchannel.space
+    port: 2053
     uuid: 819aa317-b82f-45a4-8226-c1de31361f97
     alterId: 0
     cipher: auto
     network: ws
     tls: true
   - type: trojan
-    name: 日本+V2CROSS.COM
-    server: 43.201.255.129
-    port: 443
-    password: 8wOSlN5I8uAFRe3ZjZE3AyFBaD23yYCCCX0DaSO67aT4zpc39YlpexSDRqnKxg
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 日本+东京Microsoft数据中心
-    server: ru01.trojanyyds.xyz
-    port: 443
-    password: 93ec7261-1c92-4149-848a-26b6fb9fc4ce
+    name: 江苏省+移动
+    server: east.eeeeeef998.buzz
+    port: 15003
+    password: 414dff55-922a-4dc8-b5d3-b6517942b25a
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点109
+    name: 美国CloudFlare节点84
     ws-opts:
       path: /forwardv2ray1forwardv2ray4
       headers:
         host: mehdi22.goodbyefilteringchannel.space
     server: mehdi22.goodbyefilteringchannel.space
-    port: 2086
+    port: 80
     uuid: 819aa317-b82f-45a4-8226-c1de31361f97
     alterId: 0
     cipher: auto
@@ -2703,16 +2672,16 @@ proxy-groups:
       - GB_GB_speednode_0100
       - GB_GB_speednode_0101
       - GB_GB_speednode_0102
-      - US_GB_speednode_0103
+      - GB_GB_speednode_0103
       - HK_HK_speednode_0104
       - JP_HK_speednode_0105
       - GB_HK_speednode_0106
-      - US_HK_speednode_0107
+      - JP_HK_speednode_0107
       - IN_IN_speednode_0109
-      - US_JP_speednode_0110
+      - GB_JP_speednode_0110
       - US_JP_speednode_0111
       - JP_JP_speednode_0112
-      - US_JP_speednode_0113
+      - JP_JP_speednode_0113
       - RU_LV_speednode_0114
       - NL_NL_speednode_0115
       - _NL_speednode_0116
@@ -2821,46 +2790,46 @@ proxy-groups:
       - github.com/freefq-美国107108
       - github.com/freefq-美国加利福尼亚108109
       - github.com/freefq-台湾省109110
-      - 意大利+V2CROSS.COM
+      - 孟加拉V2CROSS.COM0
       - 美国CloudFlare节点1
-      - 美国V2CROSS.COM3
-      - 美国加利福尼亚州洛杉矶PetaExpress4
-      - 广东省广州市+移动
-      - 美国+惠普HP
-      - 美国CloudFlare节点12
-      - 日本东京都Amazon数据中心13
+      - 美国华盛顿Cogent通信公司3
+      - 美国CloudFlare节点4
       - 美国+Amazon+EC2服务器
-      - 新加坡Amazon数据中心23
-      - 美国+V2CROSS.COM
-      - 美国俄勒冈州波特兰Amazon数据中心26
-      - 美国CloudFlare节点28
-      - 美国V2CROSS.COM36
+      - 孟加拉V2CROSS.COM7
+      - 广东省广州市移动9
+      - 德国黑森州法兰克福Amazon数据中心12
+      - 美国+惠普公司
+      - 广东省+移动
+      - 越南+V2CROSS.COM
+      - 美国CloudFlare节点25
+      - 台湾省新北市+中华电信
+      - 美国CloudFlare节点30
+      - 美国华盛顿Cogent通信公司32
+      - 美国+Amazon数据中心
+      - 美国CloudFlare节点37
       - 美国CloudFlare节点38
-      - 美国+3COM公司企业网
-      - 美国俄勒冈州波特兰Amazon数据中心44
-      - 新加坡亚马逊(Amazon)公司数据中心46
-      - 美国CloudFlare节点47
-      - 美国CloudFlare节点49
-      - 韩国首尔Amazon数据中心50
-      - 亚太地区+V2CROSS.COM
-      - 美国加利福尼亚州圣何塞PEGTECH62
-      - 美国CloudFlare节点67
-      - 孟加拉V2CROSS.COM69
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国CloudFlare节点71
-      - 美国AmazonEC2服务器75
-      - 广东省广州市移动77
-      - 美国CloudFlare节点78
-      - 乌克兰V2CROSS.COM81
-      - 上海市电信82
-      - 日本东京Choopa数据中心83
-      - 广东省广州市移动87
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 美国CloudFlare节点95
-      - 美国CloudFlare节点97
+      - 北美地区+V2CROSS.COM
+      - 香港+电讯盈科有限公司
+      - 欧洲V2CROSS.COM42
+      - 美国+AOL美国在线公司
       - 日本+V2CROSS.COM
-      - 日本+东京Microsoft数据中心
-      - 美国CloudFlare节点109
+      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 广东省广州市移动56
+      - 印度+V2CROSS.COM
+      - 美国CloudFlare节点62
+      - 广东省广州市移动63
+      - 亚太地区+V2CROSS.COM
+      - 美国CloudFlare节点65
+      - 乌克兰V2CROSS.COM66
+      - 美国CloudFlare节点67
+      - 美国CloudFlare节点69
+      - 广东省广州市移动71
+      - 美国CloudFlare节点72
+      - 亚太地区V2CROSS.COM73
+      - 美国CloudFlare节点80
+      - 江苏省+移动
+      - 美国CloudFlare节点84
+      - 美国+惠普HP
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -2954,16 +2923,16 @@ proxy-groups:
       - GB_GB_speednode_0100
       - GB_GB_speednode_0101
       - GB_GB_speednode_0102
-      - US_GB_speednode_0103
+      - GB_GB_speednode_0103
       - HK_HK_speednode_0104
       - JP_HK_speednode_0105
       - GB_HK_speednode_0106
-      - US_HK_speednode_0107
+      - JP_HK_speednode_0107
       - IN_IN_speednode_0109
-      - US_JP_speednode_0110
+      - GB_JP_speednode_0110
       - US_JP_speednode_0111
       - JP_JP_speednode_0112
-      - US_JP_speednode_0113
+      - JP_JP_speednode_0113
       - RU_LV_speednode_0114
       - NL_NL_speednode_0115
       - _NL_speednode_0116
@@ -3072,46 +3041,46 @@ proxy-groups:
       - github.com/freefq-美国107108
       - github.com/freefq-美国加利福尼亚108109
       - github.com/freefq-台湾省109110
-      - 意大利+V2CROSS.COM
+      - 孟加拉V2CROSS.COM0
       - 美国CloudFlare节点1
-      - 美国V2CROSS.COM3
-      - 美国加利福尼亚州洛杉矶PetaExpress4
-      - 广东省广州市+移动
-      - 美国+惠普HP
-      - 美国CloudFlare节点12
-      - 日本东京都Amazon数据中心13
+      - 美国华盛顿Cogent通信公司3
+      - 美国CloudFlare节点4
       - 美国+Amazon+EC2服务器
-      - 新加坡Amazon数据中心23
-      - 美国+V2CROSS.COM
-      - 美国俄勒冈州波特兰Amazon数据中心26
-      - 美国CloudFlare节点28
-      - 美国V2CROSS.COM36
+      - 孟加拉V2CROSS.COM7
+      - 广东省广州市移动9
+      - 德国黑森州法兰克福Amazon数据中心12
+      - 美国+惠普公司
+      - 广东省+移动
+      - 越南+V2CROSS.COM
+      - 美国CloudFlare节点25
+      - 台湾省新北市+中华电信
+      - 美国CloudFlare节点30
+      - 美国华盛顿Cogent通信公司32
+      - 美国+Amazon数据中心
+      - 美国CloudFlare节点37
       - 美国CloudFlare节点38
-      - 美国+3COM公司企业网
-      - 美国俄勒冈州波特兰Amazon数据中心44
-      - 新加坡亚马逊(Amazon)公司数据中心46
-      - 美国CloudFlare节点47
-      - 美国CloudFlare节点49
-      - 韩国首尔Amazon数据中心50
-      - 亚太地区+V2CROSS.COM
-      - 美国加利福尼亚州圣何塞PEGTECH62
-      - 美国CloudFlare节点67
-      - 孟加拉V2CROSS.COM69
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国CloudFlare节点71
-      - 美国AmazonEC2服务器75
-      - 广东省广州市移动77
-      - 美国CloudFlare节点78
-      - 乌克兰V2CROSS.COM81
-      - 上海市电信82
-      - 日本东京Choopa数据中心83
-      - 广东省广州市移动87
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 美国CloudFlare节点95
-      - 美国CloudFlare节点97
+      - 北美地区+V2CROSS.COM
+      - 香港+电讯盈科有限公司
+      - 欧洲V2CROSS.COM42
+      - 美国+AOL美国在线公司
       - 日本+V2CROSS.COM
-      - 日本+东京Microsoft数据中心
-      - 美国CloudFlare节点109
+      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 广东省广州市移动56
+      - 印度+V2CROSS.COM
+      - 美国CloudFlare节点62
+      - 广东省广州市移动63
+      - 亚太地区+V2CROSS.COM
+      - 美国CloudFlare节点65
+      - 乌克兰V2CROSS.COM66
+      - 美国CloudFlare节点67
+      - 美国CloudFlare节点69
+      - 广东省广州市移动71
+      - 美国CloudFlare节点72
+      - 亚太地区V2CROSS.COM73
+      - 美国CloudFlare节点80
+      - 江苏省+移动
+      - 美国CloudFlare节点84
+      - 美国+惠普HP
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -3204,16 +3173,16 @@ proxy-groups:
       - GB_GB_speednode_0100
       - GB_GB_speednode_0101
       - GB_GB_speednode_0102
-      - US_GB_speednode_0103
+      - GB_GB_speednode_0103
       - HK_HK_speednode_0104
       - JP_HK_speednode_0105
       - GB_HK_speednode_0106
-      - US_HK_speednode_0107
+      - JP_HK_speednode_0107
       - IN_IN_speednode_0109
-      - US_JP_speednode_0110
+      - GB_JP_speednode_0110
       - US_JP_speednode_0111
       - JP_JP_speednode_0112
-      - US_JP_speednode_0113
+      - JP_JP_speednode_0113
       - RU_LV_speednode_0114
       - NL_NL_speednode_0115
       - _NL_speednode_0116
@@ -3322,46 +3291,46 @@ proxy-groups:
       - github.com/freefq-美国107108
       - github.com/freefq-美国加利福尼亚108109
       - github.com/freefq-台湾省109110
-      - 意大利+V2CROSS.COM
+      - 孟加拉V2CROSS.COM0
       - 美国CloudFlare节点1
-      - 美国V2CROSS.COM3
-      - 美国加利福尼亚州洛杉矶PetaExpress4
-      - 广东省广州市+移动
-      - 美国+惠普HP
-      - 美国CloudFlare节点12
-      - 日本东京都Amazon数据中心13
+      - 美国华盛顿Cogent通信公司3
+      - 美国CloudFlare节点4
       - 美国+Amazon+EC2服务器
-      - 新加坡Amazon数据中心23
-      - 美国+V2CROSS.COM
-      - 美国俄勒冈州波特兰Amazon数据中心26
-      - 美国CloudFlare节点28
-      - 美国V2CROSS.COM36
+      - 孟加拉V2CROSS.COM7
+      - 广东省广州市移动9
+      - 德国黑森州法兰克福Amazon数据中心12
+      - 美国+惠普公司
+      - 广东省+移动
+      - 越南+V2CROSS.COM
+      - 美国CloudFlare节点25
+      - 台湾省新北市+中华电信
+      - 美国CloudFlare节点30
+      - 美国华盛顿Cogent通信公司32
+      - 美国+Amazon数据中心
+      - 美国CloudFlare节点37
       - 美国CloudFlare节点38
-      - 美国+3COM公司企业网
-      - 美国俄勒冈州波特兰Amazon数据中心44
-      - 新加坡亚马逊(Amazon)公司数据中心46
-      - 美国CloudFlare节点47
-      - 美国CloudFlare节点49
-      - 韩国首尔Amazon数据中心50
-      - 亚太地区+V2CROSS.COM
-      - 美国加利福尼亚州圣何塞PEGTECH62
-      - 美国CloudFlare节点67
-      - 孟加拉V2CROSS.COM69
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国CloudFlare节点71
-      - 美国AmazonEC2服务器75
-      - 广东省广州市移动77
-      - 美国CloudFlare节点78
-      - 乌克兰V2CROSS.COM81
-      - 上海市电信82
-      - 日本东京Choopa数据中心83
-      - 广东省广州市移动87
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 美国CloudFlare节点95
-      - 美国CloudFlare节点97
+      - 北美地区+V2CROSS.COM
+      - 香港+电讯盈科有限公司
+      - 欧洲V2CROSS.COM42
+      - 美国+AOL美国在线公司
       - 日本+V2CROSS.COM
-      - 日本+东京Microsoft数据中心
-      - 美国CloudFlare节点109
+      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 广东省广州市移动56
+      - 印度+V2CROSS.COM
+      - 美国CloudFlare节点62
+      - 广东省广州市移动63
+      - 亚太地区+V2CROSS.COM
+      - 美国CloudFlare节点65
+      - 乌克兰V2CROSS.COM66
+      - 美国CloudFlare节点67
+      - 美国CloudFlare节点69
+      - 广东省广州市移动71
+      - 美国CloudFlare节点72
+      - 亚太地区V2CROSS.COM73
+      - 美国CloudFlare节点80
+      - 江苏省+移动
+      - 美国CloudFlare节点84
+      - 美国+惠普HP
   - name: 📲 电报信息
     type: select
     proxies:
@@ -3486,16 +3455,16 @@ proxy-groups:
       - GB_GB_speednode_0100
       - GB_GB_speednode_0101
       - GB_GB_speednode_0102
-      - US_GB_speednode_0103
+      - GB_GB_speednode_0103
       - HK_HK_speednode_0104
       - JP_HK_speednode_0105
       - GB_HK_speednode_0106
-      - US_HK_speednode_0107
+      - JP_HK_speednode_0107
       - IN_IN_speednode_0109
-      - US_JP_speednode_0110
+      - GB_JP_speednode_0110
       - US_JP_speednode_0111
       - JP_JP_speednode_0112
-      - US_JP_speednode_0113
+      - JP_JP_speednode_0113
       - RU_LV_speednode_0114
       - NL_NL_speednode_0115
       - _NL_speednode_0116
@@ -3604,46 +3573,46 @@ proxy-groups:
       - github.com/freefq-美国107108
       - github.com/freefq-美国加利福尼亚108109
       - github.com/freefq-台湾省109110
-      - 意大利+V2CROSS.COM
+      - 孟加拉V2CROSS.COM0
       - 美国CloudFlare节点1
-      - 美国V2CROSS.COM3
-      - 美国加利福尼亚州洛杉矶PetaExpress4
-      - 广东省广州市+移动
-      - 美国+惠普HP
-      - 美国CloudFlare节点12
-      - 日本东京都Amazon数据中心13
+      - 美国华盛顿Cogent通信公司3
+      - 美国CloudFlare节点4
       - 美国+Amazon+EC2服务器
-      - 新加坡Amazon数据中心23
-      - 美国+V2CROSS.COM
-      - 美国俄勒冈州波特兰Amazon数据中心26
-      - 美国CloudFlare节点28
-      - 美国V2CROSS.COM36
+      - 孟加拉V2CROSS.COM7
+      - 广东省广州市移动9
+      - 德国黑森州法兰克福Amazon数据中心12
+      - 美国+惠普公司
+      - 广东省+移动
+      - 越南+V2CROSS.COM
+      - 美国CloudFlare节点25
+      - 台湾省新北市+中华电信
+      - 美国CloudFlare节点30
+      - 美国华盛顿Cogent通信公司32
+      - 美国+Amazon数据中心
+      - 美国CloudFlare节点37
       - 美国CloudFlare节点38
-      - 美国+3COM公司企业网
-      - 美国俄勒冈州波特兰Amazon数据中心44
-      - 新加坡亚马逊(Amazon)公司数据中心46
-      - 美国CloudFlare节点47
-      - 美国CloudFlare节点49
-      - 韩国首尔Amazon数据中心50
-      - 亚太地区+V2CROSS.COM
-      - 美国加利福尼亚州圣何塞PEGTECH62
-      - 美国CloudFlare节点67
-      - 孟加拉V2CROSS.COM69
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国CloudFlare节点71
-      - 美国AmazonEC2服务器75
-      - 广东省广州市移动77
-      - 美国CloudFlare节点78
-      - 乌克兰V2CROSS.COM81
-      - 上海市电信82
-      - 日本东京Choopa数据中心83
-      - 广东省广州市移动87
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 美国CloudFlare节点95
-      - 美国CloudFlare节点97
+      - 北美地区+V2CROSS.COM
+      - 香港+电讯盈科有限公司
+      - 欧洲V2CROSS.COM42
+      - 美国+AOL美国在线公司
       - 日本+V2CROSS.COM
-      - 日本+东京Microsoft数据中心
-      - 美国CloudFlare节点109
+      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 广东省广州市移动56
+      - 印度+V2CROSS.COM
+      - 美国CloudFlare节点62
+      - 广东省广州市移动63
+      - 亚太地区+V2CROSS.COM
+      - 美国CloudFlare节点65
+      - 乌克兰V2CROSS.COM66
+      - 美国CloudFlare节点67
+      - 美国CloudFlare节点69
+      - 广东省广州市移动71
+      - 美国CloudFlare节点72
+      - 亚太地区V2CROSS.COM73
+      - 美国CloudFlare节点80
+      - 江苏省+移动
+      - 美国CloudFlare节点84
+      - 美国+惠普HP
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
