@@ -1,4 +1,4 @@
-# 更新时间 2024-01-07T19:17:07.753Z
+# 更新时间 2024-01-08T01:18:46.280Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -444,14 +444,20 @@ proxies:
     Inc. - 38: None
     cipher: aes-256-cfb
     password: amazonskr05
-  - name: 🇩🇪_DE_德国
-    type: trojan
-    server: 5.104.108.120
-    port: 443
-    udp: true
-    password: e86e242e-b5d5-46ae-a410-3684f7d70ac2
+  - name: 🇺🇸_US_美国->🇬🇧_GB_英国
+    type: vmess
+    server: 104.17.110.63
+    port: 80
+    cipher: auto
+    uuid: f9ab87c5-c542-4c10-a486-b59c91550787
+    alterId: 0
+    tls: false
     skip-cert-verify: true
-    network: tcp
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: PARspacK51.eSMAIlkOrEA.sHoP
   - name: 🇺🇸_US_美国->🇩🇪_DE_德国_1
     type: vmess
     server: 104.19.154.92
@@ -466,73 +472,6 @@ proxies:
       path: /snsk
       headers:
         host: PAneljadid.mookoMEilz.homes
-  - name: 🇫🇷_FR_法国
-    type: trojan
-    server: 13.39.1.177
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇳🇿_NZ_新西兰
-    type: vmess
-    server: 141.11.123.205
-    port: 30870
-    cipher: auto
-    uuid: f8e7c07a-4c32-4fc7-9169-073669416331
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-  - name: 🇺🇸_US_美国_1
-    type: vmess
-    server: 104.17.171.34
-    port: 80
-    cipher: auto
-    uuid: 60be5ddb-c9f1-48ec-b0ee-f6bd4364b3ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ccs.hostmjj.com
-  - name: 🇮🇪_IE_爱尔兰
-    type: trojan
-    server: 18.200.62.178
-    port: 22222
-    udp: true
-    password: telegram-id-privatevpns
-    sni: trj.rollingnext.co.uk
-    skip-cert-verify: true
-    network: tcp
-  - name: 🇺🇸_US_美国_2
-    type: vmess
-    server: 104.17.184.241
-    port: 80
-    cipher: auto
-    uuid: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: mg_cdn.yunjisuan.cf
-  - name: 🇷🇺_RU_俄罗斯联邦
-    type: trojan
-    server: els_trojanone.yunjisuan.cf
-    port: 14866
-    udp: true
-    password: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
-    sni: els_trojanone.yunjisuan.cf
-    skip-cert-verify: true
-    network: tcp
   - name: 🇺🇸_US_美国->🇩🇪_DE_德国_2
     type: vmess
     server: 2bbiozh7wbc.servecounterstrike.com
@@ -547,7 +486,7 @@ proxies:
       path: /snsk
       headers:
         host: PAneljadid.mookoMEilz.homes
-  - name: 🇺🇸_US_美国_6
+  - name: 🇺🇸_US_美国_3
     type: vmess
     server: 45.58.153.24
     port: 30000
@@ -561,21 +500,7 @@ proxies:
       path: /path/1702392255355
       headers:
         host: www.77935707.xyz
-  - name: 🇺🇸_US_美国_7
-    type: vmess
-    server: 162.159.38.136
-    port: 80
-    cipher: auto
-    uuid: 60be5ddb-c9f1-48ec-b0ee-f6bd4364b3ce
-    alterId: 0
-    tls: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        host: ccs.hostmjj.com
-  - name: 🇺🇸_US_美国_8
+  - name: 🇺🇸_US_美国_4
     type: vmess
     server: 45.58.153.25
     port: 30000
@@ -587,7 +512,21 @@ proxies:
     network: ws
     ws-opts:
       path: /path/1702961716738
-  - name: 🇺🇸_US_美国_9
+  - name: 🇺🇸_US_美国_5
+    type: vmess
+    server: 94.131.14.177
+    port: 80
+    cipher: auto
+    uuid: 2c5fee13-f08b-4ba8-86db-27dd51cb9781
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        host: lt2-vmess.sshmax.xyz
+  - name: 🇺🇸_US_美国_7
     type: vmess
     server: 94.131.14.177
     port: 2082
@@ -599,10 +538,22 @@ proxies:
     network: ws
     ws-opts:
       path: /vmess
+  - name: 🇺🇸_US_美国_8
+    type: vmess
+    server: 104.17.184.241
+    port: 80
+    cipher: auto
+    uuid: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
+    alterId: 0
+    tls: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /
       headers:
-        host: 94.131.14.177
+        host: mg_cdn.yunjisuan.cf
   - type: vmess
-    name: 更新于:01-0800:00-byBuLink.xyz-以下节点不计流量0
+    name: 更新于:01-0808:00-byBuLink.xyz-以下节点不计流量0
     server: 使用前记得更新订阅
     port: 0
     uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
@@ -610,10 +561,10 @@ proxies:
     cipher: auto
     network: auto
   - type: ss
-    name: github.com/freefq-英国伦敦Microsoft公司1
-    server: 51.145.68.57
-    port: 13751
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpLbEpsWFhlOUtqUVg0bWg0eEMwNWM5
+    name: github.com/freefq-美国华盛顿Cogent通信公司1
+    server: 38.68.134.202
+    port: 2375
+    password: YWVzLTI1Ni1nY206ZmFCQW9ENTRrODdVSkc3
     cipher: aes-128-gcm
   - type: ss
     name: github.com/freefq-英国伦敦Microsoft公司2
@@ -622,157 +573,70 @@ proxies:
     password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp0QW9XenVLdk5PUHJzTGM0ZkFFT25v
     cipher: aes-128-gcm
   - type: ss
-    name: github.com/freefq-欧盟3
-    server: 45.87.153.246
-    port: 6199
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmN0VJMGRHV1FNNDJUOGd3TjlDWklq
+    name: github.com/freefq-英国伦敦Microsoft公司4
+    server: 51.145.68.57
+    port: 13751
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpLbEpsWFhlOUtqUVg0bWg0eEMwNWM5
     cipher: aes-128-gcm
   - type: ss
-    name: github.com/freefq-美国华盛顿Cogent通信公司4
-    server: 38.68.134.202
-    port: 2375
-    password: YWVzLTI1Ni1nY206ZmFCQW9ENTRrODdVSkc3
-    cipher: aes-128-gcm
-  - type: ss
-    name: github.com/freefq-美国Amazon数据中心5
-    server: series-a2-me.samanehha.co
-    port: 443
-    password: Y2hhY2hhMjAtcG9seTEzMDU6Qm9nMEVMbU1NOURTeERkUQ
-    cipher: aes-128-gcm
-  - type: vmess
-    name: github.com/freefq-法国66
-    ws-opts:
-      path: /
-    server: 141.11.123.205
-    port: 32902
-    uuid: f7388a5e-8ae2-4e5a-bdbe-b8b29e172ec2
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-印度77
-    ws-opts:
-      path: /vmess
-      headers:
-        host: ru1-vmess.sshmax.xyz
-    server: ru1-vmess.sshmax.xyz
-    port: 80
-    uuid: fddb3781-7e15-4731-a933-94db110b4bbc
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-捷克99
-    ws-opts:
-      path: /takeshi.wiki
-      headers:
-        host: dl.kgvn.garenanow.com
-    server: jp.takeshi.wiki
-    port: 80
-    uuid: 59517e0b-ae1c-41d3-9c44-c44cea6f7546
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-浙江省移动1010
-    ws-opts:
-      path: /debian
-      headers:
-        host: data-us-v1.shwjfkw.cn
-    server: data-us-v1.shwjfkw.cn
-    port: 20401
-    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-捷克1111
-    ws-opts:
-      path: /takeshi.wiki
-      headers:
-        host: internet.life.com.by
-    server: 109.123.230.157
-    port: 80
-    uuid: 59517e0b-ae1c-41d3-9c44-c44cea6f7546
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: github.com/freefq-越南1212
-    ws-opts:
-      path: /5gsieutocdo.club
-      headers:
-        host: vn7.5gsieutocdo.com
-    server: vn7.5gsieutocdo.com
-    port: 80
-    uuid: c95357eb-2869-4511-8940-f0dc5e1ec9b1
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: ss
-    name: github.com/freefq-美国华盛顿Cogent通信公司13
+    name: github.com/freefq-美国华盛顿Cogent通信公司5
     server: 38.68.134.202
     port: 8091
     password: YWVzLTI1Ni1nY206UENubkg2U1FTbmZvUzI3
     cipher: aes-128-gcm
-  - type: vmess
-    name: github.com/freefq-美国CloudFlare节点1818
-    ws-opts:
-      path: /
-      headers:
-        host: kryx.651568.xyz
-    server: v4.cfnode.eu.org
-    port: 8080
-    uuid: 2dbeeb76-a71f-493f-bd92-33f0193291c5
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: ss
-    name: github.com/freefq-法国巴黎OnlineS.A.S21
-    server: 51.158.150.168
-    port: 4444
-    password: YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN
-    cipher: aes-128-gcm
-  - type: ss
-    name: github.com/freefq-美国Amazon数据中心22
-    server: series-a2.samanehha.co
-    port: 443
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptcHMzRndtRGpMcldhT1Zn
-    cipher: aes-128-gcm
-  - type: ss
-    name: github.com/freefq-美国华盛顿Cogent通信公司23
+    name: github.com/freefq-美国华盛顿Cogent通信公司7
     server: 38.68.134.202
     port: 5003
     password: YWVzLTI1Ni1nY206ZzVNZUQ2RnQzQ1dsSklk
     cipher: aes-128-gcm
   - type: vmess
-    name: github.com/freefq-日本东京都品川区Linode数据中心2424
+    name: github.com/freefq-日本东京Choopa数据中心88
     ws-opts:
       path: /
-    server: 139.162.125.97
-    port: 49499
-    uuid: 3ce1d2e3-0e1b-4b00-921b-fcc0f8abe1f6
+    server: 167.179.111.237
+    port: 14935
+    uuid: e961894f-8e90-472f-98d3-09402e4be453
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: ss
+    name: github.com/freefq-美国麻省理工学院9
+    server: series-a2-me.samanehha.co
+    port: 443
+    password: Y2hhY2hhMjAtcG9seTEzMDU6Qm9nMEVMbU1NOURTeERkUQ
+    cipher: aes-128-gcm
+  - type: ss
+    name: github.com/freefq-法国巴黎OnlineS.A.S10
+    server: 51.158.150.168
+    port: 4444
+    password: YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN
+    cipher: aes-128-gcm
+  - type: vmess
+    name: github.com/freefq-美国华盛顿Cogent通信公司1111
+    ws-opts:
+      path: /path/1701091133409
+      headers:
+        host: www.73664999.xyz
+    server: 38.54.185.112
+    port: 30000
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
+  - type: vmess
+    name: github.com/freefq-安徽省合肥市移动1313
+    ws-opts:
+      path: /
+    server: 112.28.208.10
+    port: 46602
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 0
     cipher: auto
     network: auto
   - type: vmess
-    name: github.com/freefq-印度2525
-    ws-opts:
-      path: /vmess
-    server: 103.113.68.233
-    port: 80
-    uuid: fddb3781-7e15-4731-a933-94db110b4bbc
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: ss
-    name: github.com/freefq-美国华盛顿Cogent通信公司27
-    server: 38.54.108.222
-    port: 8119
-    password: YWVzLTI1Ni1nY206Y2RCSURWNDJEQ3duZklO
-    cipher: aes-128-gcm
-  - type: vmess
-    name: github.com/freefq-美国华盛顿Cogent通信公司2828
+    name: github.com/freefq-美国华盛顿Cogent通信公司1616
     ws-opts:
       path: /path/1700657625181
       headers:
@@ -785,41 +649,83 @@ proxies:
     network: ws
     tls: true
   - type: vmess
-    name: github.com/freefq-美国华盛顿Cogent通信公司2929
+    name: github.com/freefq-印度1919
     ws-opts:
-      path: /path/1701091133409
+      path: /vmess
       headers:
-        host: www.73664999.xyz
-    server: 38.54.185.112
-    port: 30000
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+        host: ru1-vmess.sshmax.xyz
+    server: ru1-vmess.sshmax.xyz
+    port: 80
+    uuid: fddb3781-7e15-4731-a933-94db110b4bbc
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
-  - type: trojan
-    name: 美国+Amazon数据中心
-    server: 18.169.195.55
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 广东省广州市+移动
-    server: xibaozi.19890604.day
-    port: 10835
-    password: 69944d51-c68e-4bc9-b542-064d1cd94158
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-    server: 35.176.231.230
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 乌兹别克斯坦V2CROSS.COM8
+    name: github.com/freefq-捷克2222
+    ws-opts:
+      path: /takeshi.wiki
+      headers:
+        host: dl.kgvn.garenanow.com
+    server: 109.123.230.157
+    port: 80
+    uuid: 877aa2a8-5854-4cb2-9aba-4a1413a6b2de
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: github.com/freefq-欧盟23
+    server: 45.87.153.246
+    port: 6199
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmN0VJMGRHV1FNNDJUOGd3TjlDWklq
+    cipher: aes-128-gcm
+  - type: vmess
+    name: github.com/freefq-印度2424
+    ws-opts:
+      path: /vmess
+    server: 103.113.68.233
+    port: 80
+    uuid: fddb3781-7e15-4731-a933-94db110b4bbc
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-捷克2626
+    ws-opts:
+      path: /takeshi.wiki
+      headers:
+        host: dl.kgvn.garenanow.com
+    server: jp.takeshi.wiki
+    port: 80
+    uuid: a19f357b-c836-4cf6-9e43-72390e6a00df
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-越南3030
+    ws-opts:
+      path: /5gsieutocdo.club
+      headers:
+        host: vn7.5gsieutocdo.com
+    server: vn7.5gsieutocdo.com
+    port: 80
+    uuid: c95357eb-2869-4511-8940-f0dc5e1ec9b1
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-美国CloudFlare公司CDN节点3232
+    ws-opts:
+      path: /
+      headers:
+        host: kryx.651568.xyz
+    server: v4.cfnode.eu.org
+    port: 8080
+    uuid: 2dbeeb76-a71f-493f-bd92-33f0193291c5
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-乌兹别克斯坦3333
     ws-opts:
       path: /@forwardv2ray
       headers:
@@ -830,57 +736,73 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 英国+伦敦Amazon数据中心
-    server: 18.130.197.99
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 乌克兰+V2CROSS.COM
-    server: 95.164.69.115
-    port: 17728
-    password: 299a6171-b4ce-403a-8157-c3dad55ef3a2
-    udp: true
-    skip-cert-verify: true
   - type: ss
-    name: 福建省厦门市+联通
+    name: github.com/freefq-福建省厦门市联通34
     server: ad.cutecloud.link
     port: 33567
     password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1NjYzMzY4Ny0zYzM1LTRiYWUtOWExNS1lZmZmOGViNjdmOTg=
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1NjYzMzY4Ny0zYzM1LTRiYWUtOWExNS1lZmZmOGViNjdmOTg
     cipher: aes-128-gcm
   - type: vmess
-    name: 荷兰阿姆斯特丹Choopa数据中心22
+    name: github.com/freefq-浙江省移动3636
+    ws-opts:
+      path: /debian
+      headers:
+        host: data-us-v1.shwjfkw.cn
+    server: data-us-v1.shwjfkw.cn
+    port: 20401
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: github.com/freefq-利比亚3838
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: mizban888.servecounterstrike.com
+    server: 197.215.140.234
+    port: 80
+    uuid: 22aa72b1-605b-4807-8a81-fb414cbb409c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: github.com/freefq-美国华盛顿Cogent通信公司39
+    server: 38.54.108.222
+    port: 8119
+    password: YWVzLTI1Ni1nY206Y2RCSURWNDJEQ3duZklO
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 印度+V2CROSS.COM
+    server: 103.197.184.41
+    port: 443
+    password: b379fd8e-75c6-4bd6-8a5b-88f3e64bb3fa
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 荷兰阿姆斯特丹Choopa数据中心1
     ws-opts:
       path: /Av8czorIlYicU6D349brWUw6a
-      headers:
-        host: 95.179.128.114
     server: 95.179.128.114
     port: 80
     uuid: a6292090-afe1-4640-97a7-4f1d1d877cf1
     alterId: 0
     cipher: auto
     network: ws
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 18.193.52.43
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 乌克兰V2CROSS.COM24
+    name: 印度V2CROSS.COM4
     ws-opts:
       path: /vmess
       headers:
-        host: lt2-vmess.sshmax.xyz
-    server: 94.131.14.177
-    port: 80
-    uuid: 2c5fee13-f08b-4ba8-86db-27dd51cb9781
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 印度V2CROSS.COM25
-    ws-opts:
-      path: /vmess
-      headers:
-        host: 103.113.68.233
+        host: '%7B%22host%22:%22103.113.68.233%22%7D'
     server: 103.113.68.233
     port: 8880
     uuid: fddb3781-7e15-4731-a933-94db110b4bbc
@@ -888,20 +810,7 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 美国CloudFlare节点27
-    ws-opts:
-      path: /linkws
-      headers:
-        host: glweidf.cfd
-    server: glweidf.cfd
-    port: 443
-    uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 美国CloudFlare节点28
+    name: 美国CloudFlare节点5
     ws-opts:
       path: /
       headers:
@@ -913,12 +822,64 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
-    name: 英国+社会保险安全部
-    server: 51.20.159.163
+    name: 美国+Amazon+EC2服务器
+    server: 3.69.239.243
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 台湾省V2CROSS.COM18
+    server: 45.121.48.196
+    port: 10001
+    uuid: 0ed35629-919a-4891-ba0f-13cd198f863b
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点21
+    ws-opts:
+      path: /
+      headers:
+        host: sbl2.shabijichang.com
+    server: sbl2.shabijichang.com
+    port: 80
+    uuid: c458695d-6908-45c3-9512-e0c46418454c
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 52.30.248.186
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 瑞典+斯德哥尔摩Amazon数据中心
+    server: 13.49.52.12
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
+  - type: ss
+    name: 英国+V2CROSS.COM
+    server: 145.239.6.202
+    port: 4444
+    password: YWVzLTI1Ni1nY206cEtFVzhKUEJ5VFZUTHRN
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点36
+    ws-opts:
+      path: /
+      headers:
+        host: sgyx.651568.xyz
+    server: zfc.windowsupdate1.com
+    port: 8080
+    uuid: 2dbeeb76-a71f-493f-bd92-33f0193291c5
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -981,54 +942,50 @@ proxy-groups:
       - US_speednode_0055
       - US_speednode_0056
       - US_speednode_0057
-      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
       - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 🇫🇷_FR_法国
-      - 🇳🇿_NZ_新西兰
-      - 🇺🇸_US_美国_1
-      - 🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国_2
-      - 🇷🇺_RU_俄罗斯联邦
       - 🇺🇸_US_美国->🇩🇪_DE_德国_2
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_7
       - 🇺🇸_US_美国_8
-      - 🇺🇸_US_美国_9
-      - 更新于:01-0800:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-英国伦敦Microsoft公司1
+      - 更新于:01-0808:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国华盛顿Cogent通信公司1
       - github.com/freefq-英国伦敦Microsoft公司2
-      - github.com/freefq-欧盟3
-      - github.com/freefq-美国华盛顿Cogent通信公司4
-      - github.com/freefq-美国Amazon数据中心5
-      - github.com/freefq-法国66
-      - github.com/freefq-印度77
-      - github.com/freefq-捷克99
-      - github.com/freefq-浙江省移动1010
-      - github.com/freefq-捷克1111
-      - github.com/freefq-越南1212
-      - github.com/freefq-美国华盛顿Cogent通信公司13
-      - github.com/freefq-美国CloudFlare节点1818
-      - github.com/freefq-法国巴黎OnlineS.A.S21
-      - github.com/freefq-美国Amazon数据中心22
-      - github.com/freefq-美国华盛顿Cogent通信公司23
-      - github.com/freefq-日本东京都品川区Linode数据中心2424
-      - github.com/freefq-印度2525
-      - github.com/freefq-美国华盛顿Cogent通信公司27
-      - github.com/freefq-美国华盛顿Cogent通信公司2828
-      - github.com/freefq-美国华盛顿Cogent通信公司2929
+      - github.com/freefq-英国伦敦Microsoft公司4
+      - github.com/freefq-美国华盛顿Cogent通信公司5
+      - github.com/freefq-美国华盛顿Cogent通信公司7
+      - github.com/freefq-日本东京Choopa数据中心88
+      - github.com/freefq-美国麻省理工学院9
+      - github.com/freefq-法国巴黎OnlineS.A.S10
+      - github.com/freefq-美国华盛顿Cogent通信公司1111
+      - github.com/freefq-安徽省合肥市移动1313
+      - github.com/freefq-美国华盛顿Cogent通信公司1616
+      - github.com/freefq-印度1919
+      - github.com/freefq-捷克2222
+      - github.com/freefq-欧盟23
+      - github.com/freefq-印度2424
+      - github.com/freefq-捷克2626
+      - github.com/freefq-越南3030
+      - github.com/freefq-美国CloudFlare公司CDN节点3232
+      - github.com/freefq-乌兹别克斯坦3333
+      - github.com/freefq-福建省厦门市联通34
+      - github.com/freefq-浙江省移动3636
+      - github.com/freefq-利比亚3838
+      - github.com/freefq-美国华盛顿Cogent通信公司39
+      - 印度+V2CROSS.COM
+      - 荷兰阿姆斯特丹Choopa数据中心1
       - 美国+Amazon数据中心
-      - 广东省广州市+移动
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 乌兹别克斯坦V2CROSS.COM8
-      - 英国+伦敦Amazon数据中心
-      - 乌克兰+V2CROSS.COM
-      - 福建省厦门市+联通
-      - 荷兰阿姆斯特丹Choopa数据中心22
-      - 乌克兰V2CROSS.COM24
-      - 印度V2CROSS.COM25
-      - 美国CloudFlare节点27
-      - 美国CloudFlare节点28
-      - 英国+社会保险安全部
+      - 印度V2CROSS.COM4
+      - 美国CloudFlare节点5
+      - 美国+Amazon+EC2服务器
+      - 台湾省V2CROSS.COM18
+      - 美国CloudFlare节点21
+      - 爱尔兰+都柏林Amazon数据中心
+      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 英国+V2CROSS.COM
+      - 美国CloudFlare节点36
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1091,54 +1048,50 @@ proxy-groups:
       - US_speednode_0055
       - US_speednode_0056
       - US_speednode_0057
-      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
       - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 🇫🇷_FR_法国
-      - 🇳🇿_NZ_新西兰
-      - 🇺🇸_US_美国_1
-      - 🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国_2
-      - 🇷🇺_RU_俄罗斯联邦
       - 🇺🇸_US_美国->🇩🇪_DE_德国_2
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_7
       - 🇺🇸_US_美国_8
-      - 🇺🇸_US_美国_9
-      - 更新于:01-0800:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-英国伦敦Microsoft公司1
+      - 更新于:01-0808:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国华盛顿Cogent通信公司1
       - github.com/freefq-英国伦敦Microsoft公司2
-      - github.com/freefq-欧盟3
-      - github.com/freefq-美国华盛顿Cogent通信公司4
-      - github.com/freefq-美国Amazon数据中心5
-      - github.com/freefq-法国66
-      - github.com/freefq-印度77
-      - github.com/freefq-捷克99
-      - github.com/freefq-浙江省移动1010
-      - github.com/freefq-捷克1111
-      - github.com/freefq-越南1212
-      - github.com/freefq-美国华盛顿Cogent通信公司13
-      - github.com/freefq-美国CloudFlare节点1818
-      - github.com/freefq-法国巴黎OnlineS.A.S21
-      - github.com/freefq-美国Amazon数据中心22
-      - github.com/freefq-美国华盛顿Cogent通信公司23
-      - github.com/freefq-日本东京都品川区Linode数据中心2424
-      - github.com/freefq-印度2525
-      - github.com/freefq-美国华盛顿Cogent通信公司27
-      - github.com/freefq-美国华盛顿Cogent通信公司2828
-      - github.com/freefq-美国华盛顿Cogent通信公司2929
+      - github.com/freefq-英国伦敦Microsoft公司4
+      - github.com/freefq-美国华盛顿Cogent通信公司5
+      - github.com/freefq-美国华盛顿Cogent通信公司7
+      - github.com/freefq-日本东京Choopa数据中心88
+      - github.com/freefq-美国麻省理工学院9
+      - github.com/freefq-法国巴黎OnlineS.A.S10
+      - github.com/freefq-美国华盛顿Cogent通信公司1111
+      - github.com/freefq-安徽省合肥市移动1313
+      - github.com/freefq-美国华盛顿Cogent通信公司1616
+      - github.com/freefq-印度1919
+      - github.com/freefq-捷克2222
+      - github.com/freefq-欧盟23
+      - github.com/freefq-印度2424
+      - github.com/freefq-捷克2626
+      - github.com/freefq-越南3030
+      - github.com/freefq-美国CloudFlare公司CDN节点3232
+      - github.com/freefq-乌兹别克斯坦3333
+      - github.com/freefq-福建省厦门市联通34
+      - github.com/freefq-浙江省移动3636
+      - github.com/freefq-利比亚3838
+      - github.com/freefq-美国华盛顿Cogent通信公司39
+      - 印度+V2CROSS.COM
+      - 荷兰阿姆斯特丹Choopa数据中心1
       - 美国+Amazon数据中心
-      - 广东省广州市+移动
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 乌兹别克斯坦V2CROSS.COM8
-      - 英国+伦敦Amazon数据中心
-      - 乌克兰+V2CROSS.COM
-      - 福建省厦门市+联通
-      - 荷兰阿姆斯特丹Choopa数据中心22
-      - 乌克兰V2CROSS.COM24
-      - 印度V2CROSS.COM25
-      - 美国CloudFlare节点27
-      - 美国CloudFlare节点28
-      - 英国+社会保险安全部
+      - 印度V2CROSS.COM4
+      - 美国CloudFlare节点5
+      - 美国+Amazon+EC2服务器
+      - 台湾省V2CROSS.COM18
+      - 美国CloudFlare节点21
+      - 爱尔兰+都柏林Amazon数据中心
+      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 英国+V2CROSS.COM
+      - 美国CloudFlare节点36
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1200,54 +1153,50 @@ proxy-groups:
       - US_speednode_0055
       - US_speednode_0056
       - US_speednode_0057
-      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
       - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 🇫🇷_FR_法国
-      - 🇳🇿_NZ_新西兰
-      - 🇺🇸_US_美国_1
-      - 🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国_2
-      - 🇷🇺_RU_俄罗斯联邦
       - 🇺🇸_US_美国->🇩🇪_DE_德国_2
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_7
       - 🇺🇸_US_美国_8
-      - 🇺🇸_US_美国_9
-      - 更新于:01-0800:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-英国伦敦Microsoft公司1
+      - 更新于:01-0808:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国华盛顿Cogent通信公司1
       - github.com/freefq-英国伦敦Microsoft公司2
-      - github.com/freefq-欧盟3
-      - github.com/freefq-美国华盛顿Cogent通信公司4
-      - github.com/freefq-美国Amazon数据中心5
-      - github.com/freefq-法国66
-      - github.com/freefq-印度77
-      - github.com/freefq-捷克99
-      - github.com/freefq-浙江省移动1010
-      - github.com/freefq-捷克1111
-      - github.com/freefq-越南1212
-      - github.com/freefq-美国华盛顿Cogent通信公司13
-      - github.com/freefq-美国CloudFlare节点1818
-      - github.com/freefq-法国巴黎OnlineS.A.S21
-      - github.com/freefq-美国Amazon数据中心22
-      - github.com/freefq-美国华盛顿Cogent通信公司23
-      - github.com/freefq-日本东京都品川区Linode数据中心2424
-      - github.com/freefq-印度2525
-      - github.com/freefq-美国华盛顿Cogent通信公司27
-      - github.com/freefq-美国华盛顿Cogent通信公司2828
-      - github.com/freefq-美国华盛顿Cogent通信公司2929
+      - github.com/freefq-英国伦敦Microsoft公司4
+      - github.com/freefq-美国华盛顿Cogent通信公司5
+      - github.com/freefq-美国华盛顿Cogent通信公司7
+      - github.com/freefq-日本东京Choopa数据中心88
+      - github.com/freefq-美国麻省理工学院9
+      - github.com/freefq-法国巴黎OnlineS.A.S10
+      - github.com/freefq-美国华盛顿Cogent通信公司1111
+      - github.com/freefq-安徽省合肥市移动1313
+      - github.com/freefq-美国华盛顿Cogent通信公司1616
+      - github.com/freefq-印度1919
+      - github.com/freefq-捷克2222
+      - github.com/freefq-欧盟23
+      - github.com/freefq-印度2424
+      - github.com/freefq-捷克2626
+      - github.com/freefq-越南3030
+      - github.com/freefq-美国CloudFlare公司CDN节点3232
+      - github.com/freefq-乌兹别克斯坦3333
+      - github.com/freefq-福建省厦门市联通34
+      - github.com/freefq-浙江省移动3636
+      - github.com/freefq-利比亚3838
+      - github.com/freefq-美国华盛顿Cogent通信公司39
+      - 印度+V2CROSS.COM
+      - 荷兰阿姆斯特丹Choopa数据中心1
       - 美国+Amazon数据中心
-      - 广东省广州市+移动
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 乌兹别克斯坦V2CROSS.COM8
-      - 英国+伦敦Amazon数据中心
-      - 乌克兰+V2CROSS.COM
-      - 福建省厦门市+联通
-      - 荷兰阿姆斯特丹Choopa数据中心22
-      - 乌克兰V2CROSS.COM24
-      - 印度V2CROSS.COM25
-      - 美国CloudFlare节点27
-      - 美国CloudFlare节点28
-      - 英国+社会保险安全部
+      - 印度V2CROSS.COM4
+      - 美国CloudFlare节点5
+      - 美国+Amazon+EC2服务器
+      - 台湾省V2CROSS.COM18
+      - 美国CloudFlare节点21
+      - 爱尔兰+都柏林Amazon数据中心
+      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 英国+V2CROSS.COM
+      - 美国CloudFlare节点36
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1341,54 +1290,50 @@ proxy-groups:
       - US_speednode_0055
       - US_speednode_0056
       - US_speednode_0057
-      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇬🇧_GB_英国
       - 🇺🇸_US_美国->🇩🇪_DE_德国_1
-      - 🇫🇷_FR_法国
-      - 🇳🇿_NZ_新西兰
-      - 🇺🇸_US_美国_1
-      - 🇮🇪_IE_爱尔兰
-      - 🇺🇸_US_美国_2
-      - 🇷🇺_RU_俄罗斯联邦
       - 🇺🇸_US_美国->🇩🇪_DE_德国_2
-      - 🇺🇸_US_美国_6
+      - 🇺🇸_US_美国_3
+      - 🇺🇸_US_美国_4
+      - 🇺🇸_US_美国_5
       - 🇺🇸_US_美国_7
       - 🇺🇸_US_美国_8
-      - 🇺🇸_US_美国_9
-      - 更新于:01-0800:00-byBuLink.xyz-以下节点不计流量0
-      - github.com/freefq-英国伦敦Microsoft公司1
+      - 更新于:01-0808:00-byBuLink.xyz-以下节点不计流量0
+      - github.com/freefq-美国华盛顿Cogent通信公司1
       - github.com/freefq-英国伦敦Microsoft公司2
-      - github.com/freefq-欧盟3
-      - github.com/freefq-美国华盛顿Cogent通信公司4
-      - github.com/freefq-美国Amazon数据中心5
-      - github.com/freefq-法国66
-      - github.com/freefq-印度77
-      - github.com/freefq-捷克99
-      - github.com/freefq-浙江省移动1010
-      - github.com/freefq-捷克1111
-      - github.com/freefq-越南1212
-      - github.com/freefq-美国华盛顿Cogent通信公司13
-      - github.com/freefq-美国CloudFlare节点1818
-      - github.com/freefq-法国巴黎OnlineS.A.S21
-      - github.com/freefq-美国Amazon数据中心22
-      - github.com/freefq-美国华盛顿Cogent通信公司23
-      - github.com/freefq-日本东京都品川区Linode数据中心2424
-      - github.com/freefq-印度2525
-      - github.com/freefq-美国华盛顿Cogent通信公司27
-      - github.com/freefq-美国华盛顿Cogent通信公司2828
-      - github.com/freefq-美国华盛顿Cogent通信公司2929
+      - github.com/freefq-英国伦敦Microsoft公司4
+      - github.com/freefq-美国华盛顿Cogent通信公司5
+      - github.com/freefq-美国华盛顿Cogent通信公司7
+      - github.com/freefq-日本东京Choopa数据中心88
+      - github.com/freefq-美国麻省理工学院9
+      - github.com/freefq-法国巴黎OnlineS.A.S10
+      - github.com/freefq-美国华盛顿Cogent通信公司1111
+      - github.com/freefq-安徽省合肥市移动1313
+      - github.com/freefq-美国华盛顿Cogent通信公司1616
+      - github.com/freefq-印度1919
+      - github.com/freefq-捷克2222
+      - github.com/freefq-欧盟23
+      - github.com/freefq-印度2424
+      - github.com/freefq-捷克2626
+      - github.com/freefq-越南3030
+      - github.com/freefq-美国CloudFlare公司CDN节点3232
+      - github.com/freefq-乌兹别克斯坦3333
+      - github.com/freefq-福建省厦门市联通34
+      - github.com/freefq-浙江省移动3636
+      - github.com/freefq-利比亚3838
+      - github.com/freefq-美国华盛顿Cogent通信公司39
+      - 印度+V2CROSS.COM
+      - 荷兰阿姆斯特丹Choopa数据中心1
       - 美国+Amazon数据中心
-      - 广东省广州市+移动
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 乌兹别克斯坦V2CROSS.COM8
-      - 英国+伦敦Amazon数据中心
-      - 乌克兰+V2CROSS.COM
-      - 福建省厦门市+联通
-      - 荷兰阿姆斯特丹Choopa数据中心22
-      - 乌克兰V2CROSS.COM24
-      - 印度V2CROSS.COM25
-      - 美国CloudFlare节点27
-      - 美国CloudFlare节点28
-      - 英国+社会保险安全部
+      - 印度V2CROSS.COM4
+      - 美国CloudFlare节点5
+      - 美国+Amazon+EC2服务器
+      - 台湾省V2CROSS.COM18
+      - 美国CloudFlare节点21
+      - 爱尔兰+都柏林Amazon数据中心
+      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 英国+V2CROSS.COM
+      - 美国CloudFlare节点36
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
