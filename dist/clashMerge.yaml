@@ -1,4 +1,4 @@
-# 更新时间 2024-01-09T18:56:38.573Z
+# 更新时间 2024-01-09T19:14:26.376Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -904,16 +904,13 @@ proxies:
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZjgyMWZmOC0yZWYyLTQ0MzMtYjgxMC1mMGNlNzdmZDU0OTE
     cipher: aes-128-gcm
-  - type: vmess
-    name: 美国CloudFlare节点0
-    ws-opts:
-      path: /@forwardv2ray
-    server: mehdi12.mehdimoghaddam.fun
-    port: 2052
-    uuid: f4b9203b-78df-425b-ab70-5ab006405884
-    alterId: 0
-    cipher: auto
-    network: ws
+  - type: ss
+    name: 广东省广州市+移动
+    server: service.ouluyun9803.com
+    port: 50002
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZjgyMWZmOC0yZWYyLTQ0MzMtYjgxMC1mMGNlNzdmZDU0OTE=
+    cipher: aes-128-gcm
   - type: trojan
     name: 英国+伦敦Amazon数据中心
     server: 52.56.188.32
@@ -921,6 +918,25 @@ proxies:
     password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
+  - type: trojan
+    name: 美国+Amazon+EC2服务器
+    server: 3.77.77.255
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: mehdi4.mehdimoghaddam.fun
+    server: mehdi4.mehdimoghaddam.fun
+    port: 8080
+    uuid: 69ec0fdb-b959-43d0-9004-45e310147b5a
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: vmess
     name: 台湾省台北市UCloud7
     ws-opts:
@@ -931,28 +947,23 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: trojan
-    name: 爱尔兰+V2CROSS.COM
-    server: 99.81.35.151
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 美国亚利桑那州凤凰城Oracle云计算数据中心11
+    name: 塞尔维亚V2CROSS.COM10
     ws-opts:
-      path: /
-    server: 158.101.7.8
-    port: 80
-    uuid: 95b45c49-f5c0-4959-bb64-2b8fbc4a869c
+      path: /imzcc
+      headers:
+        host: dm.imzcc.com
+    server: dm.imzcc.com
+    port: 59492
+    uuid: 3cd1a2f0-499f-4eb0-862a-cdd0ecd821c7
     alterId: 0
     cipher: auto
     network: ws
   - type: trojan
-    name: 瑞典+斯德哥尔摩Amazon数据中心
-    server: 201-Join.V2RayTz.sbs
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 54.76.70.58
     port: 22222
-    password: telegram-id-directvpn
+    password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
 proxy-groups:
@@ -1069,12 +1080,13 @@ proxy-groups:
       - github.com/freefq-塞尔维亚22
       - github.com/freefq-浙江省移动44
       - github.com/freefq-广东省广州市移动5
-      - 美国CloudFlare节点0
+      - 广东省广州市+移动
       - 英国+伦敦Amazon数据中心
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点4
       - 台湾省台北市UCloud7
-      - 爱尔兰+V2CROSS.COM
-      - 美国亚利桑那州凤凰城Oracle云计算数据中心11
-      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 塞尔维亚V2CROSS.COM10
+      - 爱尔兰+都柏林Amazon数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1189,12 +1201,13 @@ proxy-groups:
       - github.com/freefq-塞尔维亚22
       - github.com/freefq-浙江省移动44
       - github.com/freefq-广东省广州市移动5
-      - 美国CloudFlare节点0
+      - 广东省广州市+移动
       - 英国+伦敦Amazon数据中心
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点4
       - 台湾省台北市UCloud7
-      - 爱尔兰+V2CROSS.COM
-      - 美国亚利桑那州凤凰城Oracle云计算数据中心11
-      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 塞尔维亚V2CROSS.COM10
+      - 爱尔兰+都柏林Amazon数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1308,12 +1321,13 @@ proxy-groups:
       - github.com/freefq-塞尔维亚22
       - github.com/freefq-浙江省移动44
       - github.com/freefq-广东省广州市移动5
-      - 美国CloudFlare节点0
+      - 广东省广州市+移动
       - 英国+伦敦Amazon数据中心
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点4
       - 台湾省台北市UCloud7
-      - 爱尔兰+V2CROSS.COM
-      - 美国亚利桑那州凤凰城Oracle云计算数据中心11
-      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 塞尔维亚V2CROSS.COM10
+      - 爱尔兰+都柏林Amazon数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1459,12 +1473,13 @@ proxy-groups:
       - github.com/freefq-塞尔维亚22
       - github.com/freefq-浙江省移动44
       - github.com/freefq-广东省广州市移动5
-      - 美国CloudFlare节点0
+      - 广东省广州市+移动
       - 英国+伦敦Amazon数据中心
+      - 美国+Amazon+EC2服务器
+      - 美国CloudFlare节点4
       - 台湾省台北市UCloud7
-      - 爱尔兰+V2CROSS.COM
-      - 美国亚利桑那州凤凰城Oracle云计算数据中心11
-      - 瑞典+斯德哥尔摩Amazon数据中心
+      - 塞尔维亚V2CROSS.COM10
+      - 爱尔兰+都柏林Amazon数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
