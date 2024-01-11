@@ -1,4 +1,4 @@
-# 更新时间 2024-01-11T12:58:24.273Z
+# 更新时间 2024-01-11T13:23:42.595Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -623,57 +623,27 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: vmess
-    name: 美国CloudFlare节点0
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: mehdi18.mehdimoghaddam.fun
-    server: mehdi18.mehdimoghaddam.fun
-    port: 8080
-    uuid: 69ec0fdb-b959-43d0-9004-45e310147b5a
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 塞尔维亚V2CROSS.COM1
-    ws-opts:
-      path: /imzcc
-      headers:
-        host: dm.imzcc.com
-    server: 89.23.86.189
-    port: 59492
-    uuid: 3cd1a2f0-499f-4eb0-862a-cdd0ecd821c7
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: trojan
     name: 广东省广州市+移动
-    server: tank.19890604.day
-    port: 10827
+    server: tiananmen.19890604.day
+    port: 10806
     password: 50e2a9ae-fdf9-427e-957b-4b28d5e4a93f
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.66.37.63
+    name: 美国+惠普公司
+    server: 16.16.21.93
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 保加利亚V2CROSS.COM7
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: yasoft8889.zapto.org
-    server: 93.123.17.133
-    port: 443
-    uuid: 7282d494-b506-4f34-9950-fb0c18820439
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
+  - type: trojan
+    name: 法国+巴黎Amazon数据中心
+    server: 35.181.199.51
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
   - type: vmess
     name: 美国CloudFlare节点8
     ws-opts:
@@ -687,72 +657,19 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
-    name: 法国+巴黎Amazon数据中心
-    server: 369-Join.V2RayTz.sbs
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 罗马尼亚V2CROSS.COM10
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: tabyan205.serveftp.com
-    server: 94.176.183.12
-    port: 443
-    uuid: f21bcdb6-5dc6-4c4b-9a34-3b185f6747c4
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
-  - type: vmess
-    name: 伊朗V2CROSS.COM20
-    server: 78.109.198.37
-    port: 2053
-    uuid: 3aaa336f-0784-4dc9-a795-127764fbffe1
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 美国CloudFlare节点26
-    ws-opts:
-      path: /geg/45?ed=2048
-      headers:
-        host: jpli.edge.233.tw
-    server: ap-northeast-anycast.lnaspiring.com
-    port: 80
-    uuid: ad47096a-041a-4420-8b01-d839d3439cf8
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: 美国+惠普公司
-    server: 16.16.21.93
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
     name: 英国+伦敦Amazon数据中心
     server: 18.130.206.126
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 保加利亚V2CROSS.COM38
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: soft99.gotdns.ch
-    server: 93.123.11.11
-    port: 443
-    uuid: 8dbd3db3-c530-4ec0-a929-be4da535f663
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
+  - type: trojan
+    name: 美国+Amazon数据中心
+    server: 18.199.9.224
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -839,19 +756,12 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-乌克兰1212
       - github.com/freefq-塞尔维亚1313
-      - 美国CloudFlare节点0
-      - 塞尔维亚V2CROSS.COM1
       - 广东省广州市+移动
-      - 美国+Amazon+EC2服务器
-      - 保加利亚V2CROSS.COM7
-      - 美国CloudFlare节点8
-      - 法国+巴黎Amazon数据中心
-      - 罗马尼亚V2CROSS.COM10
-      - 伊朗V2CROSS.COM20
-      - 美国CloudFlare节点26
       - 美国+惠普公司
+      - 法国+巴黎Amazon数据中心
+      - 美国CloudFlare节点8
       - 英国+伦敦Amazon数据中心
-      - 保加利亚V2CROSS.COM38
+      - 美国+Amazon数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -938,19 +848,12 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-乌克兰1212
       - github.com/freefq-塞尔维亚1313
-      - 美国CloudFlare节点0
-      - 塞尔维亚V2CROSS.COM1
       - 广东省广州市+移动
-      - 美国+Amazon+EC2服务器
-      - 保加利亚V2CROSS.COM7
-      - 美国CloudFlare节点8
-      - 法国+巴黎Amazon数据中心
-      - 罗马尼亚V2CROSS.COM10
-      - 伊朗V2CROSS.COM20
-      - 美国CloudFlare节点26
       - 美国+惠普公司
+      - 法国+巴黎Amazon数据中心
+      - 美国CloudFlare节点8
       - 英国+伦敦Amazon数据中心
-      - 保加利亚V2CROSS.COM38
+      - 美国+Amazon数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1036,19 +939,12 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-乌克兰1212
       - github.com/freefq-塞尔维亚1313
-      - 美国CloudFlare节点0
-      - 塞尔维亚V2CROSS.COM1
       - 广东省广州市+移动
-      - 美国+Amazon+EC2服务器
-      - 保加利亚V2CROSS.COM7
-      - 美国CloudFlare节点8
-      - 法国+巴黎Amazon数据中心
-      - 罗马尼亚V2CROSS.COM10
-      - 伊朗V2CROSS.COM20
-      - 美国CloudFlare节点26
       - 美国+惠普公司
+      - 法国+巴黎Amazon数据中心
+      - 美国CloudFlare节点8
       - 英国+伦敦Amazon数据中心
-      - 保加利亚V2CROSS.COM38
+      - 美国+Amazon数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1166,19 +1062,12 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-乌克兰1212
       - github.com/freefq-塞尔维亚1313
-      - 美国CloudFlare节点0
-      - 塞尔维亚V2CROSS.COM1
       - 广东省广州市+移动
-      - 美国+Amazon+EC2服务器
-      - 保加利亚V2CROSS.COM7
-      - 美国CloudFlare节点8
-      - 法国+巴黎Amazon数据中心
-      - 罗马尼亚V2CROSS.COM10
-      - 伊朗V2CROSS.COM20
-      - 美国CloudFlare节点26
       - 美国+惠普公司
+      - 法国+巴黎Amazon数据中心
+      - 美国CloudFlare节点8
       - 英国+伦敦Amazon数据中心
-      - 保加利亚V2CROSS.COM38
+      - 美国+Amazon数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
