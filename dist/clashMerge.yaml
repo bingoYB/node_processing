@@ -1,4 +1,4 @@
-# 更新时间 2024-01-13T12:54:46.595Z
+# 更新时间 2024-01-13T13:15:18.998Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -566,6 +566,13 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: ss
+    name: 广东省广州市+移动
+    server: service.ouluyun9803.com
+    port: 26666
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZjgyMWZmOC0yZWYyLTQ0MzMtYjgxMC1mMGNlNzdmZDU0OTE=
+    cipher: aes-128-gcm
   - type: trojan
     name: 台湾省+中华电信(HiNet)数据中心
     server: hinet.lxjc.app
@@ -573,25 +580,6 @@ proxies:
     password: 2e0cb061-2d9c-412e-aa8b-f35aa3aa00c3
     udp: true
     skip-cert-verify: true
-  - type: ss
-    name: 广东省广州市+移动
-    server: service.ouluyun9803.com
-    port: 20109
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZjgyMWZmOC0yZWYyLTQ0MzMtYjgxMC1mMGNlNzdmZDU0OTE=
-    cipher: aes-128-gcm
-  - type: vmess
-    name: 广东省移动5
-    ws-opts:
-      path: /debian
-      headers:
-        host: data-us-v1.shwjfkw.cn
-    server: data-us-v1.shwjfkw.cn
-    port: 20401
-    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
-    alterId: 0
-    cipher: auto
-    network: ws
   - type: trojan
     name: 法国+OVH数据中心
     server: 54.38.156.210
@@ -600,23 +588,43 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 北美地区+V2CROSS.COM
-    server: los16.ttddd.xyz
+    name: 英国+社会保险安全部
+    server: 51.20.199.124
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 加拿大+V2CROSS.COM
+    server: sg1.lxjc.app
     port: 443
-    password: 27876_t7d7f4e3f
+    password: 2e0cb061-2d9c-412e-aa8b-f35aa3aa00c3
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点12
+    name: 美国CloudFlare节点9
     ws-opts:
-      path: /@forwardv2ray
-    server: mehdi19.mehdimoghaddam.fun
-    port: 2096
-    uuid: 1207c544-8199-45b8-befe-23fdd03630c0
+      path: /
+      headers:
+        host: mg_cdn.yunjisuan.cf
+    server: 104.17.184.241
+    port: 80
+    uuid: bf3d038a-93a2-4e24-886c-6bc64e3c3a90
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
+  - type: vmess
+    name: 印度V2CROSS.COM17
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: mizban888.servecounterstrike.com
+    server: 202.78.162.4
+    port: 80
+    uuid: 22aa72b1-605b-4807-8a81-fb414cbb409c
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -687,12 +695,13 @@ proxy-groups:
       - github.com/freefq-北京市移动15
       - github.com/freefq-广东省广州市移动16
       - github.com/freefq-美国CloudFlare节点1919
-      - 台湾省+中华电信(HiNet)数据中心
       - 广东省广州市+移动
-      - 广东省移动5
+      - 台湾省+中华电信(HiNet)数据中心
       - 法国+OVH数据中心
-      - 北美地区+V2CROSS.COM
-      - 美国CloudFlare节点12
+      - 英国+社会保险安全部
+      - 加拿大+V2CROSS.COM
+      - 美国CloudFlare节点9
+      - 印度V2CROSS.COM17
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -763,12 +772,13 @@ proxy-groups:
       - github.com/freefq-北京市移动15
       - github.com/freefq-广东省广州市移动16
       - github.com/freefq-美国CloudFlare节点1919
-      - 台湾省+中华电信(HiNet)数据中心
       - 广东省广州市+移动
-      - 广东省移动5
+      - 台湾省+中华电信(HiNet)数据中心
       - 法国+OVH数据中心
-      - 北美地区+V2CROSS.COM
-      - 美国CloudFlare节点12
+      - 英国+社会保险安全部
+      - 加拿大+V2CROSS.COM
+      - 美国CloudFlare节点9
+      - 印度V2CROSS.COM17
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -838,12 +848,13 @@ proxy-groups:
       - github.com/freefq-北京市移动15
       - github.com/freefq-广东省广州市移动16
       - github.com/freefq-美国CloudFlare节点1919
-      - 台湾省+中华电信(HiNet)数据中心
       - 广东省广州市+移动
-      - 广东省移动5
+      - 台湾省+中华电信(HiNet)数据中心
       - 法国+OVH数据中心
-      - 北美地区+V2CROSS.COM
-      - 美国CloudFlare节点12
+      - 英国+社会保险安全部
+      - 加拿大+V2CROSS.COM
+      - 美国CloudFlare节点9
+      - 印度V2CROSS.COM17
   - name: 📲 电报信息
     type: select
     proxies:
@@ -945,12 +956,13 @@ proxy-groups:
       - github.com/freefq-北京市移动15
       - github.com/freefq-广东省广州市移动16
       - github.com/freefq-美国CloudFlare节点1919
-      - 台湾省+中华电信(HiNet)数据中心
       - 广东省广州市+移动
-      - 广东省移动5
+      - 台湾省+中华电信(HiNet)数据中心
       - 法国+OVH数据中心
-      - 北美地区+V2CROSS.COM
-      - 美国CloudFlare节点12
+      - 英国+社会保险安全部
+      - 加拿大+V2CROSS.COM
+      - 美国CloudFlare节点9
+      - 印度V2CROSS.COM17
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
