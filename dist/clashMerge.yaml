@@ -1,4 +1,4 @@
-# 更新时间 2024-01-14T18:59:08.219Z
+# 更新时间 2024-01-14T19:17:08.122Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -971,19 +971,7 @@ proxies:
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZjgyMWZmOC0yZWYyLTQ0MzMtYjgxMC1mMGNlNzdmZDU0OTE
     cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点0
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: mehdi20.mehdimoghaddam.fun
-    server: mehdi20.mehdimoghaddam.fun
-    port: 2086
-    uuid: 6d695795-2fd7-42ae-91ab-0eff97edec92
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: vmess
-    name: 美国CloudFlare节点3
+    name: 美国CloudFlare节点1
     ws-opts:
       path: /video/bYdJ7Vc2We
       headers:
@@ -994,27 +982,69 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点2
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: mehdi20.mehdimoghaddam.fun
+    server: mehdi20.mehdimoghaddam.fun
+    port: 2086
+    uuid: 6d695795-2fd7-42ae-91ab-0eff97edec92
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 广东省广州市+移动
+    server: service.ouluyun9803.com
+    port: 26666
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo3ZjgyMWZmOC0yZWYyLTQ0MzMtYjgxMC1mMGNlNzdmZDU0OTE=
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 印度V2CROSS.COM4
+    ws-opts:
+      path: /bs
+      headers:
+        host: bs1.loadingip.com
+    server: bs1.loadingip.com
+    port: 80
+    uuid: 9e5999ba-870a-46b1-8500-37c640371ec6
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: trojan
-    name: 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-    server: 35.177.29.94
+    name: 美国+惠普公司
+    server: 16.16.12.199
     port: 22222
-    password: telegram-id-privatevpns
+    password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
-  - type: trojan
-    name: 江苏省+移动
-    server: east.eeeeeef998.buzz
-    port: 15005
-    password: 414dff55-922a-4dc8-b5d3-b6517942b25a
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 爱尔兰+都柏林Amazon数据中心
-    server: 34.249.143.248
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
+  - type: vmess
+    name: 台湾省台北市中华电信6
+    ws-opts:
+      path: /
+      headers:
+        host: b23.ntbq.dynu.net
+    server: b23.ntbq.dynu.net
+    port: 2024
+    uuid: 14327f86-7734-4d5b-9561-b58ad95cbcfb
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: vmess
+    name: 美国CloudFlare节点10
+    ws-opts:
+      path: /@forwardv2ray
+      headers:
+        host: mehdi5.mehdimoghaddam.fun
+    server: mehdi5.mehdimoghaddam.fun
+    port: 2096
+    uuid: 1207c544-8199-45b8-befe-23fdd03630c0
+    alterId: 0
+    cipher: auto
+    network: ws
+    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1130,11 +1160,13 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动9
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-广东省广州市移动12
-      - 美国CloudFlare节点0
-      - 美国CloudFlare节点3
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 江苏省+移动
-      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 广东省广州市+移动
+      - 印度V2CROSS.COM4
+      - 美国+惠普公司
+      - 台湾省台北市中华电信6
+      - 美国CloudFlare节点10
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1250,11 +1282,13 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动9
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-广东省广州市移动12
-      - 美国CloudFlare节点0
-      - 美国CloudFlare节点3
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 江苏省+移动
-      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 广东省广州市+移动
+      - 印度V2CROSS.COM4
+      - 美国+惠普公司
+      - 台湾省台北市中华电信6
+      - 美国CloudFlare节点10
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1369,11 +1403,13 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动9
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-广东省广州市移动12
-      - 美国CloudFlare节点0
-      - 美国CloudFlare节点3
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 江苏省+移动
-      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 广东省广州市+移动
+      - 印度V2CROSS.COM4
+      - 美国+惠普公司
+      - 台湾省台北市中华电信6
+      - 美国CloudFlare节点10
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1520,11 +1556,13 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动9
       - github.com/freefq-广东省广州市移动11
       - github.com/freefq-广东省广州市移动12
-      - 美国CloudFlare节点0
-      - 美国CloudFlare节点3
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 江苏省+移动
-      - 爱尔兰+都柏林Amazon数据中心
+      - 美国CloudFlare节点1
+      - 美国CloudFlare节点2
+      - 广东省广州市+移动
+      - 印度V2CROSS.COM4
+      - 美国+惠普公司
+      - 台湾省台北市中华电信6
+      - 美国CloudFlare节点10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
