@@ -1,4 +1,4 @@
-# 更新时间 2024-01-17T12:58:12.688Z
+# 更新时间 2024-01-17T13:23:55.324Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -657,36 +657,31 @@ proxies:
     network: ws
   - type: trojan
     name: 广东省广州市+移动
-    server: 183.236.51.6
-    port: 10828
-    password: 1c61d5b7-6d42-47e7-9514-490a6e76ce2c
+    server: 183.236.51.7
+    port: 10807
+    password: a22dea2a-b7db-4a0f-94dc-950fb036dd42
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 台湾省台北市中华电信2
-    server: nb24.ntbq.dynu.net
-    port: 4443
-    uuid: 2e2a2655-0ac1-4b1d-a777-de98bea4aa0a
+    name: 美国CloudFlare节点1
+    ws-opts:
+      path: /jp1
+    server: jp1.t1csyun.shop
+    port: 443
+    uuid: 4048f0d2-8ae6-4efa-9e0f-d0c0c0da9103
     alterId: 0
     cipher: auto
-    network: auto
+    network: ws
+    tls: true
   - type: ss
-    name: 德国+V2CROSS.COM
-    server: 194.233.165.55
-    port: 80
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTphRnprSkppNE42SUxWU3NTVXpwb1A0
+    name: 美国+Amazon数据中心
+    server: series-a2.samanehha.co
+    port: 443
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptcHMzRndtRGpMcldhT1Zn
     cipher: aes-128-gcm
-  - type: vmess
-    name: 台湾省新竹市中华电信9
-    server: b23.ntbq.dynu.net
-    port: 2024
-    uuid: 2e2a2655-0ac1-4b1d-a777-de98bea4aa0a
-    alterId: 0
-    cipher: auto
-    network: auto
   - type: trojan
-    name: 美国+惠普HP
-    server: 16.170.56.59
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 34.251.240.2
     port: 22222
     password: telegram-id-directvpn
     udp: true
@@ -698,56 +693,6 @@ proxies:
     password: cc83520b-f30e-4c84-93b0-187587156902
     udp: true
     skip-cert-verify: true
-  - type: ss
-    name: 英国伦敦+Linode数据中心
-    server: 178.79.187.120
-    port: 80
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1Zk1iWWFSTmZtT3pGZkF6NTVDaHcz
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 美国+Amazon数据中心
-    server: 13.39.130.142
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.78.106.221
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 法国+巴黎Amazon数据中心
-    server: 35.181.250.110
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 安徽省移动数据上网公共出口21
-    ws-opts:
-      path: /
-    server: 112.28.208.14
-    port: 40702
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 韩国BGP.NET数据中心22
-    ws-opts:
-      path: /path/143534141104
-      headers:
-        host: www.98355923.xyz
-    server: 27.124.8.132
-    port: 443
-    uuid: 9e338965-6a07-4a5f-ad97-d57f4a6e6fd3
-    alterId: 0
-    cipher: auto
-    network: ws
-    tls: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -829,17 +774,10 @@ proxy-groups:
       - github.com/freefq-乌克兰1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - 广东省广州市+移动
-      - 台湾省台北市中华电信2
-      - 德国+V2CROSS.COM
-      - 台湾省新竹市中华电信9
-      - 美国+惠普HP
-      - 台湾省新北市+中华电信
-      - 英国伦敦+Linode数据中心
+      - 美国CloudFlare节点1
       - 美国+Amazon数据中心
-      - 美国+Amazon+EC2服务器
-      - 法国+巴黎Amazon数据中心
-      - 安徽省移动数据上网公共出口21
-      - 韩国BGP.NET数据中心22
+      - 爱尔兰+都柏林Amazon数据中心
+      - 台湾省新北市+中华电信
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -921,17 +859,10 @@ proxy-groups:
       - github.com/freefq-乌克兰1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - 广东省广州市+移动
-      - 台湾省台北市中华电信2
-      - 德国+V2CROSS.COM
-      - 台湾省新竹市中华电信9
-      - 美国+惠普HP
-      - 台湾省新北市+中华电信
-      - 英国伦敦+Linode数据中心
+      - 美国CloudFlare节点1
       - 美国+Amazon数据中心
-      - 美国+Amazon+EC2服务器
-      - 法国+巴黎Amazon数据中心
-      - 安徽省移动数据上网公共出口21
-      - 韩国BGP.NET数据中心22
+      - 爱尔兰+都柏林Amazon数据中心
+      - 台湾省新北市+中华电信
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1012,17 +943,10 @@ proxy-groups:
       - github.com/freefq-乌克兰1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - 广东省广州市+移动
-      - 台湾省台北市中华电信2
-      - 德国+V2CROSS.COM
-      - 台湾省新竹市中华电信9
-      - 美国+惠普HP
-      - 台湾省新北市+中华电信
-      - 英国伦敦+Linode数据中心
+      - 美国CloudFlare节点1
       - 美国+Amazon数据中心
-      - 美国+Amazon+EC2服务器
-      - 法国+巴黎Amazon数据中心
-      - 安徽省移动数据上网公共出口21
-      - 韩国BGP.NET数据中心22
+      - 爱尔兰+都柏林Amazon数据中心
+      - 台湾省新北市+中华电信
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1135,17 +1059,10 @@ proxy-groups:
       - github.com/freefq-乌克兰1919
       - github.com/freefq-美国CloudFlare公司CDN节点2020
       - 广东省广州市+移动
-      - 台湾省台北市中华电信2
-      - 德国+V2CROSS.COM
-      - 台湾省新竹市中华电信9
-      - 美国+惠普HP
-      - 台湾省新北市+中华电信
-      - 英国伦敦+Linode数据中心
+      - 美国CloudFlare节点1
       - 美国+Amazon数据中心
-      - 美国+Amazon+EC2服务器
-      - 法国+巴黎Amazon数据中心
-      - 安徽省移动数据上网公共出口21
-      - 韩国BGP.NET数据中心22
+      - 爱尔兰+都柏林Amazon数据中心
+      - 台湾省新北市+中华电信
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
