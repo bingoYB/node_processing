@@ -1,4 +1,4 @@
-# 更新时间 2024-01-18T06:52:55.300Z
+# 更新时间 2024-01-18T07:11:49.389Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -45,7 +45,7 @@ proxies:
     cipher: chacha20-ietf-poly1305
     password: Bog0ELmMM9DSxDdQ
     udp: true
-  - name: US_speednode_0006
+  - name: HK_speednode_0006
     server: jp.mjt000.com
     port: 443
     type: trojan
@@ -53,7 +53,7 @@ proxies:
     sni: jp.mjt000.com
     skip-cert-verify: true
     udp: true
-  - name: US_speednode_0007
+  - name: HK_speednode_0007
     server: vn.mjt000.com
     port: 443
     type: trojan
@@ -61,7 +61,7 @@ proxies:
     sni: vn.mjt000.com
     skip-cert-verify: true
     udp: true
-  - name: US_speednode_0008
+  - name: HK_speednode_0008
     server: au.mjt000.com
     port: 443
     type: trojan
@@ -69,7 +69,7 @@ proxies:
     sni: au.mjt000.com
     skip-cert-verify: true
     udp: true
-  - name: US_speednode_0009
+  - name: HK_speednode_0009
     server: ch.mjt000.com
     port: 443
     type: trojan
@@ -84,7 +84,7 @@ proxies:
     password: 078f4183-2897-4720-a561-66ddbfb396c8
     skip-cert-verify: true
     udp: true
-  - name: US_speednode_0011
+  - name: HK_speednode_0011
     server: uk.mjt000.com
     port: 443
     type: trojan
@@ -108,7 +108,7 @@ proxies:
     password: 078f4183-2897-4720-a561-66ddbfb396c8
     skip-cert-verify: true
     udp: true
-  - name: US_speednode_0014
+  - name: HK_speednode_0014
     server: usla.mjt000.com
     port: 443
     type: trojan
@@ -467,31 +467,18 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 安徽省移动数据上网公共出口2
-    ws-opts:
-      path: /
-    server: 112.28.208.14
-    port: 41702
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 新加坡Amazon数据中心4
-    ws-opts:
-      path: /
-    server: >-
-      00000000000000000000000000000000000000000000000000000000000032.agroup-node-for-bigairport.sbs
-    port: 443
-    uuid: 843764ed-637a-4085-856e-72c507df3447
+    name: 广东省广州市移动1
+    server: iepl2.airtcp.vip
+    port: 1002
+    uuid: 229ccd44-c56c-3947-88de-849dd70c180d
     alterId: 0
     cipher: auto
     network: auto
   - type: trojan
     name: 广东省广州市+移动
-    server: 183.236.51.6
-    port: 10808
-    password: 55ed7f3f-86d1-455b-b4d0-43342de056c7
+    server: xibaozi.19890604.day
+    port: 10848
+    password: 66c899df-785c-4290-9c10-74a62b3ddd2b
     udp: true
     skip-cert-verify: true
   - type: trojan
@@ -501,29 +488,54 @@ proxies:
     password: a6292090-afe1-4640-97a7-4f1d1d877cf1
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 广东省广州市移动13
-    ws-opts:
-      path: /
-    server: iepl2.airtcp.vip
-    port: 1002
-    uuid: 229ccd44-c56c-3947-88de-849dd70c180d
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 保加利亚V2CROSS.COM18
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: sazgar22.zapto.org
-    server: 93.123.17.140
+  - type: trojan
+    name: 越南+V2CROSS.COM
+    server: skyht2.vpndata.vn
     port: 443
-    uuid: 14bb927f-a4ec-4de7-90fb-388c1f69dbc1
+    password: fbccfed7-1aeb-416a-a4fd-7af1747f9f3b
+    udp: true
+    skip-cert-verify: true
+  - type: ss
+    name: 广东省+移动
+    server: nc.cn2.go002.xyz
+    port: 19511
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo4OTM1NjJkMi0yZTM2LTRjODctYWViYy0zY2EzZmM3OGRlM2U=
+    cipher: aes-128-gcm
+  - type: vmess
+    name: 乌克兰V2CROSS.COM11
+    ws-opts:
+      path: /vmess
+    server: 94.131.8.32
+    port: 80
+    uuid: 57e37a74-badc-4b71-87c7-5b9e20879b58
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
+  - type: vmess
+    name: 美国CloudFlare节点15
+    ws-opts:
+      path: /@forwardv2ray
+    server: world10.star-one.cfd
+    port: 2095
+    uuid: 85d1f66d-6e21-4301-be7a-ab8b8749d563
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: trojan
+    name: 美国+CloudFlare节点
+    server: 104.21.69.44
+    port: 443
+    password: Z0WkxNpiSVEFa9fCO4K8LQ
+    udp: true
+    skip-cert-verify: true
+  - type: ss
+    name: 美国+V2CROSS.COM
+    server: sg.sg02.763998.top
+    port: 51053
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpiNDAzY2MzNC0xYmQ0LTQxZjgtYWI3YS02NDhmODg3MDU3YWM=
+    cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -535,15 +547,15 @@ proxy-groups:
       - CN_speednode_0003
       - JP_speednode_0004
       - GB_speednode_0005
-      - US_speednode_0006
-      - US_speednode_0007
-      - US_speednode_0008
-      - US_speednode_0009
+      - HK_speednode_0006
+      - HK_speednode_0007
+      - HK_speednode_0008
+      - HK_speednode_0009
       - US_speednode_0010
-      - US_speednode_0011
+      - HK_speednode_0011
       - CN_speednode_0012
       - US_speednode_0013
-      - US_speednode_0014
+      - HK_speednode_0014
       - US_speednode_0015
       - US_speednode_0016
       - IR_speednode_0017
@@ -586,12 +598,15 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-新加坡亚马逊(Amazon)公司数据中心1313
-      - 安徽省移动数据上网公共出口2
-      - 新加坡Amazon数据中心4
+      - 广东省广州市移动1
       - 广东省广州市+移动
       - 巴西圣保罗+CloudFlare节点
-      - 广东省广州市移动13
-      - 保加利亚V2CROSS.COM18
+      - 越南+V2CROSS.COM
+      - 广东省+移动
+      - 乌克兰V2CROSS.COM11
+      - 美国CloudFlare节点15
+      - 美国+CloudFlare节点
+      - 美国+V2CROSS.COM
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -603,15 +618,15 @@ proxy-groups:
       - CN_speednode_0003
       - JP_speednode_0004
       - GB_speednode_0005
-      - US_speednode_0006
-      - US_speednode_0007
-      - US_speednode_0008
-      - US_speednode_0009
+      - HK_speednode_0006
+      - HK_speednode_0007
+      - HK_speednode_0008
+      - HK_speednode_0009
       - US_speednode_0010
-      - US_speednode_0011
+      - HK_speednode_0011
       - CN_speednode_0012
       - US_speednode_0013
-      - US_speednode_0014
+      - HK_speednode_0014
       - US_speednode_0015
       - US_speednode_0016
       - IR_speednode_0017
@@ -654,12 +669,15 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-新加坡亚马逊(Amazon)公司数据中心1313
-      - 安徽省移动数据上网公共出口2
-      - 新加坡Amazon数据中心4
+      - 广东省广州市移动1
       - 广东省广州市+移动
       - 巴西圣保罗+CloudFlare节点
-      - 广东省广州市移动13
-      - 保加利亚V2CROSS.COM18
+      - 越南+V2CROSS.COM
+      - 广东省+移动
+      - 乌克兰V2CROSS.COM11
+      - 美国CloudFlare节点15
+      - 美国+CloudFlare节点
+      - 美国+V2CROSS.COM
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -670,15 +688,15 @@ proxy-groups:
       - CN_speednode_0003
       - JP_speednode_0004
       - GB_speednode_0005
-      - US_speednode_0006
-      - US_speednode_0007
-      - US_speednode_0008
-      - US_speednode_0009
+      - HK_speednode_0006
+      - HK_speednode_0007
+      - HK_speednode_0008
+      - HK_speednode_0009
       - US_speednode_0010
-      - US_speednode_0011
+      - HK_speednode_0011
       - CN_speednode_0012
       - US_speednode_0013
-      - US_speednode_0014
+      - HK_speednode_0014
       - US_speednode_0015
       - US_speednode_0016
       - IR_speednode_0017
@@ -721,12 +739,15 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-新加坡亚马逊(Amazon)公司数据中心1313
-      - 安徽省移动数据上网公共出口2
-      - 新加坡Amazon数据中心4
+      - 广东省广州市移动1
       - 广东省广州市+移动
       - 巴西圣保罗+CloudFlare节点
-      - 广东省广州市移动13
-      - 保加利亚V2CROSS.COM18
+      - 越南+V2CROSS.COM
+      - 广东省+移动
+      - 乌克兰V2CROSS.COM11
+      - 美国CloudFlare节点15
+      - 美国+CloudFlare节点
+      - 美国+V2CROSS.COM
   - name: 📲 电报信息
     type: select
     proxies:
@@ -769,15 +790,15 @@ proxy-groups:
       - CN_speednode_0003
       - JP_speednode_0004
       - GB_speednode_0005
-      - US_speednode_0006
-      - US_speednode_0007
-      - US_speednode_0008
-      - US_speednode_0009
+      - HK_speednode_0006
+      - HK_speednode_0007
+      - HK_speednode_0008
+      - HK_speednode_0009
       - US_speednode_0010
-      - US_speednode_0011
+      - HK_speednode_0011
       - CN_speednode_0012
       - US_speednode_0013
-      - US_speednode_0014
+      - HK_speednode_0014
       - US_speednode_0015
       - US_speednode_0016
       - IR_speednode_0017
@@ -820,12 +841,15 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1010
       - github.com/freefq-美国CloudFlare公司CDN节点1111
       - github.com/freefq-新加坡亚马逊(Amazon)公司数据中心1313
-      - 安徽省移动数据上网公共出口2
-      - 新加坡Amazon数据中心4
+      - 广东省广州市移动1
       - 广东省广州市+移动
       - 巴西圣保罗+CloudFlare节点
-      - 广东省广州市移动13
-      - 保加利亚V2CROSS.COM18
+      - 越南+V2CROSS.COM
+      - 广东省+移动
+      - 乌克兰V2CROSS.COM11
+      - 美国CloudFlare节点15
+      - 美国+CloudFlare节点
+      - 美国+V2CROSS.COM
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
