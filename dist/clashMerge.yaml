@@ -1,4 +1,4 @@
-# 更新时间 2024-01-19T06:51:47.854Z
+# 更新时间 2024-01-19T07:10:23.486Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -648,12 +648,22 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 美国+CloudFlare节点
-    server: 104.18.202.232
-    port: 2095
-    password: '2'
+    name: 台湾省新北市+中华电信
+    server: 36.228.205.189
+    port: 443
+    password: e0ca72b2-eb7c-4498-b05e-28a3681bacbf
     udp: true
     skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点5
+    ws-opts:
+      path: /@forwardv2ray
+    server: world17.star-one.cfd
+    port: 8880
+    uuid: 2569453f-0bcb-45db-a096-ae9e7297e2cf
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: trojan
     name: 巴西圣保罗+CloudFlare节点
     server: 188.114.97.247
@@ -662,30 +672,17 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: ss
-    name: 甘肃省兰州市+移动
-    server: gaosu.laotiehj6.top
-    port: 42336
-    password: YWVzLTEyOC1nY206ZjBhMzgzYjgtN2MwZS00MjlkLWJkYTgtMDZkMWNmMDhiMGY1
+    name: 台湾省台中市+中华电信
+    server: 36.232.143.214
+    port: 3234
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozMjhhMDlhYy0wMmE2LTRiM2UtODcxYy0yZjBlMGM2NDRkODI=
     cipher: aes-128-gcm
   - type: trojan
-    name: 爱尔兰+都柏林Amazon数据中心
-    server: 52.19.65.39
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 江苏省+移动
-    server: east.eeeeeef998.buzz
-    port: 15005
-    password: 414dff55-922a-4dc8-b5d3-b6517942b25a
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 广东省广州市+移动
-    server: 183.236.51.7
-    port: 10806
-    password: c4037eb8-428a-479a-abc7-42203d991b4c
+    name: 美国+CloudFlare节点
+    server: 104.18.202.232
+    port: 2095
+    password: '2'
     udp: true
     skip-cert-verify: true
 proxy-groups:
@@ -767,12 +764,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-美国10
       - 亚太地区+V2CROSS.COM
-      - 美国+CloudFlare节点
+      - 台湾省新北市+中华电信
+      - 美国CloudFlare节点5
       - 巴西圣保罗+CloudFlare节点
-      - 甘肃省兰州市+移动
-      - 爱尔兰+都柏林Amazon数据中心
-      - 江苏省+移动
-      - 广东省广州市+移动
+      - 台湾省台中市+中华电信
+      - 美国+CloudFlare节点
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -852,12 +848,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-美国10
       - 亚太地区+V2CROSS.COM
-      - 美国+CloudFlare节点
+      - 台湾省新北市+中华电信
+      - 美国CloudFlare节点5
       - 巴西圣保罗+CloudFlare节点
-      - 甘肃省兰州市+移动
-      - 爱尔兰+都柏林Amazon数据中心
-      - 江苏省+移动
-      - 广东省广州市+移动
+      - 台湾省台中市+中华电信
+      - 美国+CloudFlare节点
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -936,12 +931,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-美国10
       - 亚太地区+V2CROSS.COM
-      - 美国+CloudFlare节点
+      - 台湾省新北市+中华电信
+      - 美国CloudFlare节点5
       - 巴西圣保罗+CloudFlare节点
-      - 甘肃省兰州市+移动
-      - 爱尔兰+都柏林Amazon数据中心
-      - 江苏省+移动
-      - 广东省广州市+移动
+      - 台湾省台中市+中华电信
+      - 美国+CloudFlare节点
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1052,12 +1046,11 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare公司CDN节点99
       - github.com/freefq-美国10
       - 亚太地区+V2CROSS.COM
-      - 美国+CloudFlare节点
+      - 台湾省新北市+中华电信
+      - 美国CloudFlare节点5
       - 巴西圣保罗+CloudFlare节点
-      - 甘肃省兰州市+移动
-      - 爱尔兰+都柏林Amazon数据中心
-      - 江苏省+移动
-      - 广东省广州市+移动
+      - 台湾省台中市+中华电信
+      - 美国+CloudFlare节点
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
