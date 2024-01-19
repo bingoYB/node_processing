@@ -1,4 +1,4 @@
-# 更新时间 2024-01-19T12:58:15.875Z
+# 更新时间 2024-01-19T13:23:31.484Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -646,52 +646,55 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
-  - type: ss
-    name: 英国+伦敦Amazon数据中心
-    server: series-a2.samanehha.co
-    port: 443
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTptcHMzRndtRGpMcldhT1Zn
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 亚太地区+V2CROSS.COM
-    server: 103.154.62.23
-    port: 443
-    password: 5bae27f5-3b8e-48f3-b91f-30fc680ea78f
-    udp: true
-    skip-cert-verify: true
   - type: trojan
     name: 法国+巴黎Amazon数据中心
-    server: 35.181.182.47
+    server: 35.180.94.81
     port: 22222
     password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
-  - type: ss
-    name: 美国+华盛顿Cogent通信公司
-    server: 38.121.43.97
-    port: 6697
-    password: YWVzLTI1Ni1nY206VEV6amZBWXEySWp0dW9T
-    cipher: aes-128-gcm
   - type: trojan
     name: 美国+CloudFlare节点
-    server: 104.18.202.232
-    port: 80
-    password: '1'
+    server: 104.18.203.232
+    port: 2095
+    password: '2'
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 巴西圣保罗+CloudFlare节点
-    server: 188.114.99.29
+    name: 爱尔兰+V2CROSS.COM
+    server: 63.33.147.183
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点4
+    ws-opts:
+      path: /
+    server: s1c.v2.v001sss.xyz
+    port: 2082
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: ss
+    name: 英国+伦敦Amazon数据中心
+    server: series-a1.samanehha.co
     port: 443
-    password: a6292090-afe1-4640-97a7-4f1d1d877cf1
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 亚太地区+V2CROSS.COM
+    server: 103.154.62.22
+    port: 443
+    password: 5bae27f5-3b8e-48f3-b91f-30fc680ea78f
     udp: true
     skip-cert-verify: true
   - type: ss
-    name: 台湾省台中市+中华电信
-    server: 36.232.143.214
-    port: 3234
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozMjhhMDlhYy0wMmE2LTRiM2UtODcxYy0yZjBlMGM2NDRkODI=
+    name: 美国+麻省理工学院
+    server: series-a2-mec.samanehha.co
+    port: 443
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1MTdUM0J2cFlhYWl1VzJj
     cipher: aes-128-gcm
 proxy-groups:
   - name: 🚀 节点选择
@@ -771,13 +774,13 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1010
       - github.com/freefq-美国11
       - github.com/freefq-广东省移动1212
+      - 法国+巴黎Amazon数据中心
+      - 美国+CloudFlare节点
+      - 爱尔兰+V2CROSS.COM
+      - 美国CloudFlare节点4
       - 英国+伦敦Amazon数据中心
       - 亚太地区+V2CROSS.COM
-      - 法国+巴黎Amazon数据中心
-      - 美国+华盛顿Cogent通信公司
-      - 美国+CloudFlare节点
-      - 巴西圣保罗+CloudFlare节点
-      - 台湾省台中市+中华电信
+      - 美国+麻省理工学院
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -856,13 +859,13 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1010
       - github.com/freefq-美国11
       - github.com/freefq-广东省移动1212
+      - 法国+巴黎Amazon数据中心
+      - 美国+CloudFlare节点
+      - 爱尔兰+V2CROSS.COM
+      - 美国CloudFlare节点4
       - 英国+伦敦Amazon数据中心
       - 亚太地区+V2CROSS.COM
-      - 法国+巴黎Amazon数据中心
-      - 美国+华盛顿Cogent通信公司
-      - 美国+CloudFlare节点
-      - 巴西圣保罗+CloudFlare节点
-      - 台湾省台中市+中华电信
+      - 美国+麻省理工学院
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -940,13 +943,13 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1010
       - github.com/freefq-美国11
       - github.com/freefq-广东省移动1212
+      - 法国+巴黎Amazon数据中心
+      - 美国+CloudFlare节点
+      - 爱尔兰+V2CROSS.COM
+      - 美国CloudFlare节点4
       - 英国+伦敦Amazon数据中心
       - 亚太地区+V2CROSS.COM
-      - 法国+巴黎Amazon数据中心
-      - 美国+华盛顿Cogent通信公司
-      - 美国+CloudFlare节点
-      - 巴西圣保罗+CloudFlare节点
-      - 台湾省台中市+中华电信
+      - 美国+麻省理工学院
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1056,13 +1059,13 @@ proxy-groups:
       - github.com/freefq-美国CloudFlare节点1010
       - github.com/freefq-美国11
       - github.com/freefq-广东省移动1212
+      - 法国+巴黎Amazon数据中心
+      - 美国+CloudFlare节点
+      - 爱尔兰+V2CROSS.COM
+      - 美国CloudFlare节点4
       - 英国+伦敦Amazon数据中心
       - 亚太地区+V2CROSS.COM
-      - 法国+巴黎Amazon数据中心
-      - 美国+华盛顿Cogent通信公司
-      - 美国+CloudFlare节点
-      - 巴西圣保罗+CloudFlare节点
-      - 台湾省台中市+中华电信
+      - 美国+麻省理工学院
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
