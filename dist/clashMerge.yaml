@@ -1,4 +1,4 @@
-# 更新时间 2024-01-20T12:54:50.820Z
+# 更新时间 2024-01-20T13:15:03.668Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -836,40 +836,33 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
+    name: 英国+社会保险安全部
+    server: 51.21.114.225
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
     name: 美国+CloudFlare节点
-    server: 104.25.255.254
+    server: 104.20.219.67
+    port: 2096
+    password: DUvWfvC7xH
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 巴西圣保罗+CloudFlare节点
+    server: 188.114.98.0
     port: 443
-    password: a6292090-afe1-4640-97a7-4f1d1d877cf1
+    password: 01596265-168b-46a7-bcb7-25662c7a9546
     udp: true
     skip-cert-verify: true
-  - type: trojan
-    name: 爱尔兰+都柏林Amazon数据中心
-    server: 54.229.97.58
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.73.245.33
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 越南+V2CROSS.COM
-    server: skyht2.vpndata.vn
-    port: 443
-    password: fbccfed7-1aeb-416a-a4fd-7af1747f9f3b
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: undefined
-    server: 185.94.99.205
-    port: 60302
-    password: 3933e566-6e2d-460f-9363-48e2fa9ca103
-    udp: true
-    skip-cert-verify: true
+  - type: ss
+    name: 广东省广州市+移动
+    server: service.ouluyun9803.com
+    port: 21003
+    password: >-
+      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjZmExN2EwZC01ZTdkLTQ4NzEtOTc2ZS1mMTE2ZTA4MTgxMjM=
+    cipher: aes-128-gcm
   - type: trojan
     name: 亚太地区+V2CROSS.COM
     server: 103.154.62.23
@@ -877,12 +870,21 @@ proxies:
     password: 5bae27f5-3b8e-48f3-b91f-30fc680ea78f
     udp: true
     skip-cert-verify: true
-  - type: ss
-    name: 美国+麻省理工学院
-    server: 18.134.66.197
-    port: 443
-    password: Y2hhY2hhMjAtcG9seTEzMDU6Qm9nMEVMbU1NOURTeERkUQ==
-    cipher: aes-128-gcm
+  - type: vmess
+    name: 台湾省中华电信(HiNet)数据中心12
+    server: 118.167.71.177
+    port: 12002
+    uuid: df2add0d-5f99-4a3f-a135-0259541b87e1
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: trojan
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 34.248.8.33
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -992,13 +994,13 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信(HiNet)数据中心66
       - github.com/freefq-美国CloudFlare节点88
       - github.com/freefq-广东省移动99
+      - 英国+社会保险安全部
       - 美国+CloudFlare节点
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+Amazon+EC2服务器
-      - 越南+V2CROSS.COM
-      - undefined
+      - 巴西圣保罗+CloudFlare节点
+      - 广东省广州市+移动
       - 亚太地区+V2CROSS.COM
-      - 美国+麻省理工学院
+      - 台湾省中华电信(HiNet)数据中心12
+      - 爱尔兰+都柏林Amazon数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1108,13 +1110,13 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信(HiNet)数据中心66
       - github.com/freefq-美国CloudFlare节点88
       - github.com/freefq-广东省移动99
+      - 英国+社会保险安全部
       - 美国+CloudFlare节点
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+Amazon+EC2服务器
-      - 越南+V2CROSS.COM
-      - undefined
+      - 巴西圣保罗+CloudFlare节点
+      - 广东省广州市+移动
       - 亚太地区+V2CROSS.COM
-      - 美国+麻省理工学院
+      - 台湾省中华电信(HiNet)数据中心12
+      - 爱尔兰+都柏林Amazon数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1223,13 +1225,13 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信(HiNet)数据中心66
       - github.com/freefq-美国CloudFlare节点88
       - github.com/freefq-广东省移动99
+      - 英国+社会保险安全部
       - 美国+CloudFlare节点
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+Amazon+EC2服务器
-      - 越南+V2CROSS.COM
-      - undefined
+      - 巴西圣保罗+CloudFlare节点
+      - 广东省广州市+移动
       - 亚太地区+V2CROSS.COM
-      - 美国+麻省理工学院
+      - 台湾省中华电信(HiNet)数据中心12
+      - 爱尔兰+都柏林Amazon数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1370,13 +1372,13 @@ proxy-groups:
       - github.com/freefq-台湾省中华电信(HiNet)数据中心66
       - github.com/freefq-美国CloudFlare节点88
       - github.com/freefq-广东省移动99
+      - 英国+社会保险安全部
       - 美国+CloudFlare节点
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+Amazon+EC2服务器
-      - 越南+V2CROSS.COM
-      - undefined
+      - 巴西圣保罗+CloudFlare节点
+      - 广东省广州市+移动
       - 亚太地区+V2CROSS.COM
-      - 美国+麻省理工学院
+      - 台湾省中华电信(HiNet)数据中心12
+      - 爱尔兰+都柏林Amazon数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
