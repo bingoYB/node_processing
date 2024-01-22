@@ -1,4 +1,4 @@
-# 更新时间 2024-01-22T12:59:23.406Z
+# 更新时间 2024-01-22T13:26:53.627Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -673,7 +673,7 @@ proxies:
     tls: true
     udp: true
     uuid: 01596265-168b-46a7-bcb7-25662c7a9546
-  - name: US_US_speednode_0216
+  - name: US_speednode_0216
     server: cm.dongtaiwang3.com
     port: 443
     type: vmess
@@ -1026,8 +1026,35 @@ proxies:
     password: >-
       Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpjZmExN2EwZC01ZTdkLTQ4NzEtOTc2ZS1mMTE2ZTA4MTgxMjM
     cipher: aes-128-gcm
+  - type: trojan
+    name: 巴西圣保罗+CloudFlare节点
+    server: 188.114.99.29
+    port: 443
+    password: a6292090-afe1-4640-97a7-4f1d1d877cf1
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 广东省广州市+移动
+    server: xibaozi.19890604.day
+    port: 10850
+    password: 8c20a85b-f70f-48aa-a607-92d57eddc92f
+    udp: true
+    skip-cert-verify: true
+  - type: ss
+    name: 美国+Amazon数据中心
+    server: 13.42.246.37
+    port: 443
+    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpCb2cwRUxtTU05RFN4RGRR
+    cipher: aes-128-gcm
+  - type: trojan
+    name: 美国+惠普公司
+    server: 15.236.22.130
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点0
+    name: 美国CloudFlare节点9
     ws-opts:
       path: /video/ibCT6z55
       headers:
@@ -1039,58 +1066,27 @@ proxies:
     cipher: auto
     network: ws
   - type: vmess
-    name: 台湾省中华电信(HiNet)数据中心2
+    name: 台湾省中华电信(HiNet)数据中心14
     server: 118.167.73.7
     port: 4443
     uuid: ef3841cf-2556-4d9c-ac8d-c0e5e978ab86
     alterId: 0
     cipher: auto
     network: auto
-  - type: trojan
-    name: 美国+Amazon数据中心
-    server: 18.171.124.136
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
   - type: vmess
-    name: 台湾省中华电信(HiNet)数据中心6
-    server: b23.ntbq.dynu.net
-    port: 2024
-    uuid: 2358c269-178a-43c0-a208-c6cc52d398f9
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: vmess
-    name: 广东省广州市移动8
-    server: 183.236.48.169
-    port: 1002
-    uuid: 229ccd44-c56c-3947-88de-849dd70c180d
-    alterId: 0
-    cipher: auto
-    network: auto
-  - type: trojan
-    name: 美国+CloudFlare节点
-    server: 104.18.213.21
-    port: 2096
-    password: DUvWfvC7xH
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 俄罗斯V2CROSS.COM14
+    name: 香港Amazon数据中心15
     ws-opts:
-      path: /@forwardv2ray
+      path: /geg/45?ed=2048
       headers:
-        host: sahar2.serveminecraft.net
-    server: 5.101.222.5
-    port: 443
-    uuid: a09e13dc-cbbf-4585-b46b-2d86de0e9d3f
+        host: jpli.edge.233.tw
+    server: 13.226.120.0
+    port: 80
+    uuid: 84e1bb62-e4b4-451e-aa9c-a3bb6f41fac3
     alterId: 0
     cipher: auto
     network: ws
-    tls: true
   - type: vmess
-    name: 美国CloudFlare节点17
+    name: 美国CloudFlare节点16
     ws-opts:
       path: /video/c9efxRCi
       headers:
@@ -1098,6 +1094,16 @@ proxies:
     server: cfcdn2.sanfencdn9.com
     port: 2052
     uuid: d0a3e08a-d26f-45bd-ba3c-6387f9182633
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 英国V2CROSS.COM18
+    ws-opts:
+      path: /4regrdfvx
+    server: 82.153.1.40
+    port: 80
+    uuid: 8fa261c0-ae8d-4aee-8f8b-1604b6f78f4a
     alterId: 0
     cipher: auto
     network: ws
@@ -1177,7 +1183,7 @@ proxy-groups:
       - US_US_speednode_0212
       - US_US_speednode_0213
       - US_US_speednode_0215
-      - US_US_speednode_0216
+      - US_speednode_0216
       - VN_speednode_0217
       - VN_VN_speednode_0218
       - VN_VN_speednode_0219
@@ -1209,14 +1215,15 @@ proxy-groups:
       - github.com/freefq-利比亚1313
       - github.com/freefq-美国CloudFlare节点1414
       - github.com/freefq-广东省广州市移动15
-      - 美国CloudFlare节点0
-      - 台湾省中华电信(HiNet)数据中心2
+      - 巴西圣保罗+CloudFlare节点
+      - 广东省广州市+移动
       - 美国+Amazon数据中心
-      - 台湾省中华电信(HiNet)数据中心6
-      - 广东省广州市移动8
-      - 美国+CloudFlare节点
-      - 俄罗斯V2CROSS.COM14
-      - 美国CloudFlare节点17
+      - 美国+惠普公司
+      - 美国CloudFlare节点9
+      - 台湾省中华电信(HiNet)数据中心14
+      - 香港Amazon数据中心15
+      - 美国CloudFlare节点16
+      - 英国V2CROSS.COM18
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1293,7 +1300,7 @@ proxy-groups:
       - US_US_speednode_0212
       - US_US_speednode_0213
       - US_US_speednode_0215
-      - US_US_speednode_0216
+      - US_speednode_0216
       - VN_speednode_0217
       - VN_VN_speednode_0218
       - VN_VN_speednode_0219
@@ -1325,14 +1332,15 @@ proxy-groups:
       - github.com/freefq-利比亚1313
       - github.com/freefq-美国CloudFlare节点1414
       - github.com/freefq-广东省广州市移动15
-      - 美国CloudFlare节点0
-      - 台湾省中华电信(HiNet)数据中心2
+      - 巴西圣保罗+CloudFlare节点
+      - 广东省广州市+移动
       - 美国+Amazon数据中心
-      - 台湾省中华电信(HiNet)数据中心6
-      - 广东省广州市移动8
-      - 美国+CloudFlare节点
-      - 俄罗斯V2CROSS.COM14
-      - 美国CloudFlare节点17
+      - 美国+惠普公司
+      - 美国CloudFlare节点9
+      - 台湾省中华电信(HiNet)数据中心14
+      - 香港Amazon数据中心15
+      - 美国CloudFlare节点16
+      - 英国V2CROSS.COM18
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1408,7 +1416,7 @@ proxy-groups:
       - US_US_speednode_0212
       - US_US_speednode_0213
       - US_US_speednode_0215
-      - US_US_speednode_0216
+      - US_speednode_0216
       - VN_speednode_0217
       - VN_VN_speednode_0218
       - VN_VN_speednode_0219
@@ -1440,14 +1448,15 @@ proxy-groups:
       - github.com/freefq-利比亚1313
       - github.com/freefq-美国CloudFlare节点1414
       - github.com/freefq-广东省广州市移动15
-      - 美国CloudFlare节点0
-      - 台湾省中华电信(HiNet)数据中心2
+      - 巴西圣保罗+CloudFlare节点
+      - 广东省广州市+移动
       - 美国+Amazon数据中心
-      - 台湾省中华电信(HiNet)数据中心6
-      - 广东省广州市移动8
-      - 美国+CloudFlare节点
-      - 俄罗斯V2CROSS.COM14
-      - 美国CloudFlare节点17
+      - 美国+惠普公司
+      - 美国CloudFlare节点9
+      - 台湾省中华电信(HiNet)数据中心14
+      - 香港Amazon数据中心15
+      - 美国CloudFlare节点16
+      - 英国V2CROSS.COM18
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1555,7 +1564,7 @@ proxy-groups:
       - US_US_speednode_0212
       - US_US_speednode_0213
       - US_US_speednode_0215
-      - US_US_speednode_0216
+      - US_speednode_0216
       - VN_speednode_0217
       - VN_VN_speednode_0218
       - VN_VN_speednode_0219
@@ -1587,14 +1596,15 @@ proxy-groups:
       - github.com/freefq-利比亚1313
       - github.com/freefq-美国CloudFlare节点1414
       - github.com/freefq-广东省广州市移动15
-      - 美国CloudFlare节点0
-      - 台湾省中华电信(HiNet)数据中心2
+      - 巴西圣保罗+CloudFlare节点
+      - 广东省广州市+移动
       - 美国+Amazon数据中心
-      - 台湾省中华电信(HiNet)数据中心6
-      - 广东省广州市移动8
-      - 美国+CloudFlare节点
-      - 俄罗斯V2CROSS.COM14
-      - 美国CloudFlare节点17
+      - 美国+惠普公司
+      - 美国CloudFlare节点9
+      - 台湾省中华电信(HiNet)数据中心14
+      - 香港Amazon数据中心15
+      - 美国CloudFlare节点16
+      - 英国V2CROSS.COM18
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
