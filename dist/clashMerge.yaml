@@ -1,4 +1,4 @@
-# 更新时间 2024-01-26T12:52:50.235Z
+# 更新时间 2024-01-26T13:11:38.643Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -2430,6 +2430,28 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 台湾省中华电信(HiNet)数据中心0
+    server: 118.167.76.233
+    port: 2024
+    uuid: d20b031e-a477-45f1-8bfc-4cbea413a44e
+    alterId: 0
+    cipher: auto
+    network: auto
+  - type: trojan
+    name: 美国+惠普公司
+    server: 15.236.143.50
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+CloudFlare节点
+    server: 190.93.245.187
+    port: 2083
+    password: 1YcFVMZWx_OiEBEvnEMtrg
+    udp: true
+    skip-cert-verify: true
   - type: trojan
     name: 美国+惠普HP
     server: 16.171.202.73
@@ -2438,63 +2460,12 @@ proxies:
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 美国+CloudFlare节点
-    server: 104.18.203.232
-    port: 2095
-    password: wzZ-GniK9AYHUjn7LmoAmw
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 德国+黑森州法兰克福Amazon数据中心
-    server: 3.124.59.183
+    name: 美国+Amazon数据中心
+    server: 13.37.81.241
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
-  - type: trojan
-    name: 爱尔兰+都柏林Amazon数据中心
-    server: 34.246.126.130
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+V2CROSS.COM
-    server: 167.235.154.147
-    port: 8080
-    password: Telegram-join-v2ray_kasra
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 保加利亚V2CROSS.COM13
-    ws-opts:
-      path: /@forwardv2ray
-      headers:
-        host: saman8888.servecounterstrike.com
-    server: 93.123.17.132
-    port: 80
-    uuid: f0028153-2a2d-45fe-b44e-a1a6dbd0c65e
-    alterId: 0
-    cipher: auto
-    network: ws
-  - type: trojan
-    name: 英国+伦敦Amazon数据中心
-    server: 3.11.191.199
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: vmess
-    name: 美国V2CROSS.COM15
-    ws-opts:
-      path: /
-    server: 45.159.250.78
-    port: 8443
-    uuid: f3a14df7-6140-45d7-9b36-9cbac435c0a9
-    alterId: 0
-    cipher: auto
-    network: auto
-    tls: true
   - type: trojan
     name: 美国+Amazon+EC2服务器
     server: 3.79.147.209
@@ -2502,6 +2473,39 @@ proxies:
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
+  - type: trojan
+    name: 爱尔兰+V2CROSS.COM
+    server: 63.33.87.40
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 韩国+蘑菇主机BGP数据中心
+    server: 103.214.68.57
+    port: 10003
+    password: 6x8HcghsjS
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+俄勒冈州波特兰Amazon数据中心
+    server: 54.200.222.173
+    port: 22222
+    password: telegram-id-directvpn
+    udp: true
+    skip-cert-verify: true
+  - type: vmess
+    name: 美国CloudFlare节点16
+    ws-opts:
+      path: /
+      headers:
+        host: s1c.v2.v001sss.xyz
+    server: s1c.v2.v001sss.xyz
+    port: 2082
+    uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -2716,15 +2720,16 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动17
       - github.com/freefq-台湾省中华电信(HiNet)数据中心1919
       - github.com/freefq-广东省移动2020
-      - 美国+惠普HP
+      - 台湾省中华电信(HiNet)数据中心0
+      - 美国+惠普公司
       - 美国+CloudFlare节点
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 保加利亚V2CROSS.COM13
-      - 英国+伦敦Amazon数据中心
-      - 美国V2CROSS.COM15
+      - 美国+惠普HP
+      - 美国+Amazon数据中心
       - 美国+Amazon+EC2服务器
+      - 爱尔兰+V2CROSS.COM
+      - 韩国+蘑菇主机BGP数据中心
+      - 美国+俄勒冈州波特兰Amazon数据中心
+      - 美国CloudFlare节点16
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -2939,15 +2944,16 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动17
       - github.com/freefq-台湾省中华电信(HiNet)数据中心1919
       - github.com/freefq-广东省移动2020
-      - 美国+惠普HP
+      - 台湾省中华电信(HiNet)数据中心0
+      - 美国+惠普公司
       - 美国+CloudFlare节点
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 保加利亚V2CROSS.COM13
-      - 英国+伦敦Amazon数据中心
-      - 美国V2CROSS.COM15
+      - 美国+惠普HP
+      - 美国+Amazon数据中心
       - 美国+Amazon+EC2服务器
+      - 爱尔兰+V2CROSS.COM
+      - 韩国+蘑菇主机BGP数据中心
+      - 美国+俄勒冈州波特兰Amazon数据中心
+      - 美国CloudFlare节点16
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -3161,15 +3167,16 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动17
       - github.com/freefq-台湾省中华电信(HiNet)数据中心1919
       - github.com/freefq-广东省移动2020
-      - 美国+惠普HP
+      - 台湾省中华电信(HiNet)数据中心0
+      - 美国+惠普公司
       - 美国+CloudFlare节点
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 保加利亚V2CROSS.COM13
-      - 英国+伦敦Amazon数据中心
-      - 美国V2CROSS.COM15
+      - 美国+惠普HP
+      - 美国+Amazon数据中心
       - 美国+Amazon+EC2服务器
+      - 爱尔兰+V2CROSS.COM
+      - 韩国+蘑菇主机BGP数据中心
+      - 美国+俄勒冈州波特兰Amazon数据中心
+      - 美国CloudFlare节点16
   - name: 📲 电报信息
     type: select
     proxies:
@@ -3415,15 +3422,16 @@ proxy-groups:
       - github.com/freefq-广东省广州市移动17
       - github.com/freefq-台湾省中华电信(HiNet)数据中心1919
       - github.com/freefq-广东省移动2020
-      - 美国+惠普HP
+      - 台湾省中华电信(HiNet)数据中心0
+      - 美国+惠普公司
       - 美国+CloudFlare节点
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 爱尔兰+都柏林Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 保加利亚V2CROSS.COM13
-      - 英国+伦敦Amazon数据中心
-      - 美国V2CROSS.COM15
+      - 美国+惠普HP
+      - 美国+Amazon数据中心
       - 美国+Amazon+EC2服务器
+      - 爱尔兰+V2CROSS.COM
+      - 韩国+蘑菇主机BGP数据中心
+      - 美国+俄勒冈州波特兰Amazon数据中心
+      - 美国CloudFlare节点16
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
