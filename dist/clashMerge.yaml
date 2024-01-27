@@ -1,4 +1,4 @@
-# 更新时间 2024-01-27T06:58:16.291Z
+# 更新时间 2024-01-27T07:17:39.450Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -727,44 +727,24 @@ proxies:
     cipher: auto
     network: ws
   - type: trojan
-    name: 美国+Amazon数据中心
-    server: 18.199.44.198
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: ss
-    name: 美国+V2CROSS.COM
-    server: 158.101.71.166
-    port: 21853
-    password: >-
-      Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxNGY3NDliYi1mZmM1LTRmNmItOTZlNy1hYjQ3OGVlYjQ5Njk=
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 德国+黑森州法兰克福Amazon数据中心
-    server: 35.158.252.181
-    port: 22222
-    password: telegram-id-privatevpns
-    udp: true
-    skip-cert-verify: true
-  - type: ss
-    name: 英国+伦敦Amazon数据中心
-    server: series-a1.samanehha.co
-    port: 443
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 美国+加利福尼亚州圣克拉拉Microsoft公司
-    server: tw02.trojanyyds.xyz
-    port: 443
-    password: 62ce224c-3ae9-47bb-9ef6-c4f3d233fd08
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
     name: 广东省广州市+移动
     server: xibaozi.19890604.day
-    port: 10837
+    port: 10838
     password: 329d1d2a-c4f5-471d-abd3-3f6f234947bb
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+V2CROSS.COM
+    server: 167.71.79.61
+    port: 443
+    password: b6961fb7-2ada-4e48-af71-c47fe3513314
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 爱尔兰+都柏林Amazon数据中心
+    server: 54.78.37.252
+    port: 22222
+    password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
   - type: trojan
@@ -774,39 +754,37 @@ proxies:
     password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
+  - type: vmess
+    name: 甘肃省兰州市移动8
+    ws-opts:
+      path: /
+      headers:
+        host: gz.daxun.cyou
+    server: gz.daxun.cyou
+    port: 38011
+    uuid: ac5852df-8caf-4d86-8c77-93a7092f66f1
+    alterId: 0
+    cipher: auto
+    network: auto
   - type: trojan
-    name: 美国+CloudFlare节点
-    server: 104.16.149.118
-    port: 443
-    password: 7d618f20-bbc7-11ee-a803-1239d0255272
-    udp: true
-    skip-cert-verify: true
-  - type: trojan
-    name: 美国+Xerox
-    server: 13.51.226.183
+    name: 英国+伦敦Amazon数据中心
+    server: 3.11.37.196
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
-  - type: ss
-    name: 河北省+中移铁通
-    server: 36.212.148.208
-    port: 10024
-    password: YWVzLTEyOC1nY206OTE0OTE3OTItNzdCMS00RUQ2LUJEMDEtNTJEQzQ2QjgxQUQw
-    cipher: aes-128-gcm
-  - type: trojan
-    name: 美国+惠普公司
-    server: 16.16.163.252
-    port: 22222
-    password: telegram-id-directvpn
-    udp: true
-    skip-cert-verify: true
-  - type: ss
-    name: 乌克兰+V2CROSS.COM
-    server: 95.164.69.152
-    port: 1443
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpNekZpWQ==
-    cipher: aes-128-gcm
+  - type: vmess
+    name: 美国CloudFlare节点16
+    ws-opts:
+      path: /
+      headers:
+        host: etc.tellss.ir
+    server: 104.18.202.232
+    port: 2052
+    uuid: 33316b88-907c-4562-ac4e-75aecbc0d8a0
+    alterId: 0
+    cipher: auto
+    network: ws
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -887,18 +865,13 @@ proxy-groups:
       - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心1111
       - github.com/freefq-广东省移动1212
       - github.com/freefq-西班牙1515
-      - 美国+Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 英国+伦敦Amazon数据中心
-      - 美国+加利福尼亚州圣克拉拉Microsoft公司
       - 广东省广州市+移动
+      - 美国+V2CROSS.COM
+      - 爱尔兰+都柏林Amazon数据中心
       - 法国+巴黎Amazon数据中心
-      - 美国+CloudFlare节点
-      - 美国+Xerox
-      - 河北省+中移铁通
-      - 美国+惠普公司
-      - 乌克兰+V2CROSS.COM
+      - 甘肃省兰州市移动8
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点16
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -979,18 +952,13 @@ proxy-groups:
       - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心1111
       - github.com/freefq-广东省移动1212
       - github.com/freefq-西班牙1515
-      - 美国+Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 英国+伦敦Amazon数据中心
-      - 美国+加利福尼亚州圣克拉拉Microsoft公司
       - 广东省广州市+移动
+      - 美国+V2CROSS.COM
+      - 爱尔兰+都柏林Amazon数据中心
       - 法国+巴黎Amazon数据中心
-      - 美国+CloudFlare节点
-      - 美国+Xerox
-      - 河北省+中移铁通
-      - 美国+惠普公司
-      - 乌克兰+V2CROSS.COM
+      - 甘肃省兰州市移动8
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点16
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1070,18 +1038,13 @@ proxy-groups:
       - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心1111
       - github.com/freefq-广东省移动1212
       - github.com/freefq-西班牙1515
-      - 美国+Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 英国+伦敦Amazon数据中心
-      - 美国+加利福尼亚州圣克拉拉Microsoft公司
       - 广东省广州市+移动
+      - 美国+V2CROSS.COM
+      - 爱尔兰+都柏林Amazon数据中心
       - 法国+巴黎Amazon数据中心
-      - 美国+CloudFlare节点
-      - 美国+Xerox
-      - 河北省+中移铁通
-      - 美国+惠普公司
-      - 乌克兰+V2CROSS.COM
+      - 甘肃省兰州市移动8
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点16
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1193,18 +1156,13 @@ proxy-groups:
       - github.com/freefq-美国弗吉尼亚州阿什本NVNEXT数据中心1111
       - github.com/freefq-广东省移动1212
       - github.com/freefq-西班牙1515
-      - 美国+Amazon数据中心
-      - 美国+V2CROSS.COM
-      - 德国+黑森州法兰克福Amazon数据中心
-      - 英国+伦敦Amazon数据中心
-      - 美国+加利福尼亚州圣克拉拉Microsoft公司
       - 广东省广州市+移动
+      - 美国+V2CROSS.COM
+      - 爱尔兰+都柏林Amazon数据中心
       - 法国+巴黎Amazon数据中心
-      - 美国+CloudFlare节点
-      - 美国+Xerox
-      - 河北省+中移铁通
-      - 美国+惠普公司
-      - 乌克兰+V2CROSS.COM
+      - 甘肃省兰州市移动8
+      - 英国+伦敦Amazon数据中心
+      - 美国CloudFlare节点16
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
