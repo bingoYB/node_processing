@@ -1,4 +1,4 @@
-# 更新时间 2024-02-01T12:52:45.471Z
+# 更新时间 2024-02-01T13:11:47.265Z
 port: 7890
 socks-port: 7891
 allow-lan: true
@@ -1041,52 +1041,45 @@ proxies:
     cipher: auto
     network: auto
   - type: trojan
-    name: 瑞典+斯德哥尔摩Amazon数据中心
-    server: 13.53.72.120
+    name: 美国+Xerox
+    server: 13.50.254.217
+    port: 22222
+    password: telegram-id-privatevpns
+    udp: true
+    skip-cert-verify: true
+  - type: trojan
+    name: 美国+俄亥俄州都柏林Amazon数据中心
+    server: 18.191.24.3
     port: 22222
     password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
   - type: trojan
-    name: 香港+香港城市电讯(香港宽频)
-    server: 183.179.168.53
-    port: 443
-    password: 0daacf462cdd4de19168d09c4373a980
+    name: 美国+Amazon数据中心
+    server: 13.43.185.197
+    port: 22222
+    password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
-  - type: ss
-    name: 美国+麻省理工学院
-    server: 18.132.109.185
-    port: 443
-    password: Y2hhY2hhMjAtcG9seTEzMDU6Qm9nMEVMbU1NOURTeERkUQ==
-    cipher: aes-128-gcm
   - type: vmess
-    name: 美国CloudFlare节点5
+    name: 美国纽约市DigitalOcean云公司14
     ws-opts:
-      path: /
-      headers:
-        host: server21.beheshtbaneh.com
-    server: server21.beheshtbaneh.com
-    port: 8880
-    uuid: 11cd2b93-a102-49a2-97be-27c33c743618
+      path: /vmess
+    server: 207.154.217.22
+    port: 80
+    uuid: 1d6c331c-a7d1-40a0-b609-1dd418f4b170
     alterId: 0
     cipher: auto
     network: ws
-  - type: ss
-    name: 美国+Amazon数据中心
-    server: java.ct.arvancode.eu.Org
-    port: 443
-    password: Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpXNzRYRkFMTEx1dzZtNUlB
-    cipher: aes-128-gcm
   - type: trojan
-    name: 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-    server: 35.176.195.111
+    name: 美国+俄勒冈州波特兰Amazon数据中心
+    server: 34.211.8.63
     port: 22222
-    password: telegram-id-privatevpns
+    password: telegram-id-directvpn
     udp: true
     skip-cert-verify: true
   - type: vmess
-    name: 美国CloudFlare节点25
+    name: 美国CloudFlare节点17
     ws-opts:
       path: /?ed=2048
       headers:
@@ -1097,23 +1090,37 @@ proxies:
     alterId: 0
     cipher: auto
     network: ws
+  - type: vmess
+    name: 美国CloudFlare节点18
+    ws-opts:
+      path: /
+      headers:
+        host: server21.beheshtbaneh.com
+    server: server21.beheshtbaneh.com
+    port: 8880
+    uuid: 11cd2b93-a102-49a2-97be-27c33c743618
+    alterId: 0
+    cipher: auto
+    network: ws
+  - type: vmess
+    name: 美国CloudFlare节点20
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        host: eu3.openxai.link
+    server: cf.openxai.link
+    port: 8080
+    uuid: 477af724-de79-40dc-80ef-bf3bca0be3ce
+    alterId: 0
+    cipher: auto
+    network: ws
   - type: trojan
-    name: 美国+Amazon+EC2服务器
-    server: 3.79.122.118
+    name: 德国+黑森州法兰克福Amazon数据中心
+    server: 52.58.85.26
     port: 22222
     password: telegram-id-privatevpns
     udp: true
     skip-cert-verify: true
-  - type: vmess
-    name: 伊朗V2CROSS.COM27
-    ws-opts:
-      path: /
-    server: 94.182.129.164
-    port: 20636
-    uuid: cb263749-d00c-4919-a79c-a144a71ceceb
-    alterId: 0
-    cipher: auto
-    network: auto
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -1220,15 +1227,16 @@ proxy-groups:
       - github.com/freefq-广东省江门市移动24
       - github.com/freefq-美国Amazon数据中心28
       - github.com/freefq-广东省佛山市移动2929
-      - 瑞典+斯德哥尔摩Amazon数据中心
-      - 香港+香港城市电讯(香港宽频)
-      - 美国+麻省理工学院
-      - 美国CloudFlare节点5
+      - 美国+Xerox
+      - 美国+俄亥俄州都柏林Amazon数据中心
       - 美国+Amazon数据中心
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 美国CloudFlare节点25
-      - 美国+Amazon+EC2服务器
-      - 伊朗V2CROSS.COM27
+      - 美国+V2CROSS.COM
+      - 美国纽约市DigitalOcean云公司14
+      - 美国+俄勒冈州波特兰Amazon数据中心
+      - 美国CloudFlare节点17
+      - 美国CloudFlare节点18
+      - 美国CloudFlare节点20
+      - 德国+黑森州法兰克福Amazon数据中心
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -1335,15 +1343,16 @@ proxy-groups:
       - github.com/freefq-广东省江门市移动24
       - github.com/freefq-美国Amazon数据中心28
       - github.com/freefq-广东省佛山市移动2929
-      - 瑞典+斯德哥尔摩Amazon数据中心
-      - 香港+香港城市电讯(香港宽频)
-      - 美国+麻省理工学院
-      - 美国CloudFlare节点5
+      - 美国+Xerox
+      - 美国+俄亥俄州都柏林Amazon数据中心
       - 美国+Amazon数据中心
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 美国CloudFlare节点25
-      - 美国+Amazon+EC2服务器
-      - 伊朗V2CROSS.COM27
+      - 美国+V2CROSS.COM
+      - 美国纽约市DigitalOcean云公司14
+      - 美国+俄勒冈州波特兰Amazon数据中心
+      - 美国CloudFlare节点17
+      - 美国CloudFlare节点18
+      - 美国CloudFlare节点20
+      - 德国+黑森州法兰克福Amazon数据中心
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -1449,15 +1458,16 @@ proxy-groups:
       - github.com/freefq-广东省江门市移动24
       - github.com/freefq-美国Amazon数据中心28
       - github.com/freefq-广东省佛山市移动2929
-      - 瑞典+斯德哥尔摩Amazon数据中心
-      - 香港+香港城市电讯(香港宽频)
-      - 美国+麻省理工学院
-      - 美国CloudFlare节点5
+      - 美国+Xerox
+      - 美国+俄亥俄州都柏林Amazon数据中心
       - 美国+Amazon数据中心
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 美国CloudFlare节点25
-      - 美国+Amazon+EC2服务器
-      - 伊朗V2CROSS.COM27
+      - 美国+V2CROSS.COM
+      - 美国纽约市DigitalOcean云公司14
+      - 美国+俄勒冈州波特兰Amazon数据中心
+      - 美国CloudFlare节点17
+      - 美国CloudFlare节点18
+      - 美国CloudFlare节点20
+      - 德国+黑森州法兰克福Amazon数据中心
   - name: 📲 电报信息
     type: select
     proxies:
@@ -1595,15 +1605,16 @@ proxy-groups:
       - github.com/freefq-广东省江门市移动24
       - github.com/freefq-美国Amazon数据中心28
       - github.com/freefq-广东省佛山市移动2929
-      - 瑞典+斯德哥尔摩Amazon数据中心
-      - 香港+香港城市电讯(香港宽频)
-      - 美国+麻省理工学院
-      - 美国CloudFlare节点5
+      - 美国+Xerox
+      - 美国+俄亥俄州都柏林Amazon数据中心
       - 美国+Amazon数据中心
-      - 美国+华盛顿州西雅图市亚马逊(Amazon)公司数据中心
-      - 美国CloudFlare节点25
-      - 美国+Amazon+EC2服务器
-      - 伊朗V2CROSS.COM27
+      - 美国+V2CROSS.COM
+      - 美国纽约市DigitalOcean云公司14
+      - 美国+俄勒冈州波特兰Amazon数据中心
+      - 美国CloudFlare节点17
+      - 美国CloudFlare节点18
+      - 美国CloudFlare节点20
+      - 德国+黑森州法兰克福Amazon数据中心
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
